@@ -445,122 +445,205 @@
 
   /* ===== Scenario Planning ===== */
   .sc-meta-bar {
-    display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
-    padding: 10px 16px; background: var(--card); border-radius: 10px;
+    display: flex; flex-wrap: wrap; gap: 16px; align-items: center;
+    padding: 14px 20px; background: var(--card); border-radius: 12px;
     border: 1px solid var(--border); font-size: 0.8rem; color: var(--text-muted);
+    box-shadow: 0 1px 6px rgba(120,60,40,0.04);
   }
   .sc-meta-bar strong { color: var(--text); }
+  .sc-meta-bar span { display: inline-flex; align-items: center; gap: 4px; }
+
+  .sc-axes-legend {
+    display: flex; gap: 16px; margin-bottom: 16px; flex-wrap: wrap;
+    padding: 12px 16px; background: var(--bg); border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+  .sc-axes-legend-item {
+    font-size: 0.8rem; color: var(--text-muted);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .sc-axes-legend-item strong { color: var(--accent); font-weight: 700; }
+  .sc-axes-legend-arrow { color: var(--accent-warm); font-weight: 500; }
 
   .sc-matrix-wrapper {
-    position: relative; max-width: 640px; margin: 0 auto;
-    padding: 28px 8px 32px 8px;
+    position: relative; max-width: 680px; margin: 0 auto;
+    padding: 36px 16px 40px 16px;
   }
   .sc-matrix {
     display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
-    gap: 8px;
+    gap: 12px;
+    position: relative;
+  }
+  /* Cross-hair lines through the matrix center */
+  .sc-matrix::before, .sc-matrix::after {
+    content: ''; position: absolute; z-index: 0; pointer-events: none;
+  }
+  .sc-matrix::before {
+    left: 50%; top: 4px; bottom: 4px; width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--border) 20%, var(--border) 80%, transparent);
+  }
+  .sc-matrix::after {
+    top: 50%; left: 4px; right: 4px; height: 1px;
+    background: linear-gradient(to right, transparent, var(--border) 20%, var(--border) 80%, transparent);
   }
   .sc-quadrant {
-    padding: 20px 16px; border-radius: 12px; cursor: pointer; min-height: 120px;
+    padding: 22px 18px; border-radius: 14px; cursor: pointer; min-height: 130px;
     border: 2px solid var(--border); background: var(--card);
-    transition: all 0.2s; display: flex; flex-direction: column; justify-content: center;
+    transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative; z-index: 1; overflow: hidden;
   }
-  .sc-quadrant:hover { transform: scale(1.02); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
-  .sc-quadrant.active { border-width: 3px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+  .sc-quadrant::before {
+    content: ''; position: absolute; inset: 0; border-radius: 14px;
+    opacity: 0; transition: opacity 0.25s;
+    background: linear-gradient(135deg, currentColor 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .sc-quadrant:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 8px 24px rgba(120,60,40,0.12);
+  }
+  .sc-quadrant:hover::before { opacity: 0.04; }
+  .sc-quadrant.active {
+    border-width: 2.5px;
+    box-shadow: 0 8px 28px rgba(120,60,40,0.18);
+    transform: translateY(-2px);
+  }
+  .sc-quadrant.active::before { opacity: 0.06; }
   .sc-quadrant-name {
-    font-size: 0.92rem; font-weight: 700; margin-bottom: 6px; line-height: 1.4;
+    font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; line-height: 1.4;
     display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
   }
-  .sc-quadrant-sub { font-size: 0.73rem; color: var(--text-muted); line-height: 1.3;
+  .sc-quadrant-sub { font-size: 0.75rem; color: var(--text-muted); line-height: 1.4;
     display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .sc-quadrant-position {
+    position: absolute; top: 8px; right: 10px; font-size: 0.6rem; font-weight: 600;
+    color: var(--text-muted); opacity: 0.5; letter-spacing: 0.02em;
+  }
 
   .sc-axis-label {
-    position: absolute; font-size: 0.68rem; font-weight: 500;
-    color: var(--text-muted); text-align: center; white-space: nowrap;
+    position: absolute; font-size: 0.7rem; font-weight: 600;
+    color: var(--accent); text-align: center; white-space: nowrap;
     overflow: hidden; text-overflow: ellipsis; max-width: 45%;
+    letter-spacing: 0.02em;
   }
-  .sc-axis-x-pos { bottom: -20px; right: 8px; text-align: right; }
-  .sc-axis-x-neg { bottom: -20px; left: 8px; text-align: left; }
-  .sc-axis-y-pos { top: -20px; left: 50%; transform: translateX(-50%); }
+  .sc-axis-x-pos { bottom: -24px; right: 8px; text-align: right; }
+  .sc-axis-x-neg { bottom: -24px; left: 8px; text-align: left; }
+  .sc-axis-y-pos { top: -26px; left: 50%; transform: translateX(-50%); }
   .sc-axis-y-neg { display: none; }
 
+  .sc-detail-wrapper {
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+    padding: 0; overflow: hidden; box-shadow: 0 2px 12px rgba(120,60,40,0.06);
+  }
+  .sc-detail-header {
+    padding: 20px 24px 16px; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 14px;
+  }
+  .sc-detail-header-color {
+    width: 5px; height: 48px; border-radius: 3px; flex-shrink: 0;
+  }
+  .sc-detail-header-text h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 2px; }
+  .sc-detail-header-text p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; }
+  .sc-detail-body { padding: 0 24px 24px; }
+
   .sc-detail-tabs {
-    display: flex; gap: 0; margin-bottom: 16px; border-bottom: 2px solid var(--border);
+    display: flex; gap: 0; margin-bottom: 0; border-bottom: 2px solid var(--border);
     overflow-x: auto; -webkit-overflow-scrolling: touch;
+    background: linear-gradient(to bottom, var(--bg), transparent);
+    padding: 0 8px;
   }
   .sc-detail-tab {
-    padding: 10px 14px; font-size: 0.8rem; font-weight: 500; white-space: nowrap;
+    padding: 12px 16px; font-size: 0.8rem; font-weight: 500; white-space: nowrap;
     border: none; background: none; cursor: pointer; color: var(--text-muted);
-    border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.15s;
+    border-bottom: 2.5px solid transparent; margin-bottom: -2px; transition: all 0.2s;
     flex-shrink: 0; max-width: 200px; overflow: hidden; text-overflow: ellipsis;
   }
-  .sc-detail-tab:hover { color: var(--text); }
-  .sc-detail-tab.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+  .sc-detail-tab:hover { color: var(--text); background: rgba(120,60,40,0.03); }
+  .sc-detail-tab.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 700; }
 
   .sc-narrative {
-    font-size: 1.02rem; line-height: 1.9; padding: 20px 0;
-    border-bottom: 1px solid var(--border); margin-bottom: 20px;
+    font-size: 1rem; line-height: 2; padding: 24px 0 20px;
+    border-bottom: 1px solid var(--border); margin-bottom: 24px;
+    color: var(--text);
   }
 
-  .sc-cla-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+  .sc-cla-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
   .sc-cla-card {
-    padding: 14px; border-radius: 10px; border-left: 4px solid;
-    background: var(--card); font-size: 0.83rem; line-height: 1.6;
+    padding: 16px 18px; border-radius: 12px; border-left: 4px solid;
+    background: var(--card); font-size: 0.83rem; line-height: 1.7;
+    border: 1px solid var(--border); border-left-width: 4px;
+    transition: box-shadow 0.2s;
   }
-  .sc-cla-label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; margin-bottom: 4px; }
+  .sc-cla-card:hover { box-shadow: 0 2px 12px rgba(120,60,40,0.08); }
+  .sc-cla-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.05em; }
 
-  .sc-timeline { position: relative; padding-left: 24px; margin-bottom: 20px; }
+  .sc-timeline { position: relative; padding-left: 28px; margin-bottom: 24px; }
   .sc-timeline::before {
-    content: ''; position: absolute; left: 8px; top: 0; bottom: 0;
-    width: 2px; background: var(--border);
+    content: ''; position: absolute; left: 9px; top: 4px; bottom: 4px;
+    width: 2px; background: linear-gradient(to bottom, var(--accent-warm), var(--border));
+    border-radius: 1px;
   }
-  .sc-timeline-item { position: relative; padding: 8px 0; }
+  .sc-timeline-item { position: relative; padding: 10px 0; }
   .sc-timeline-item::before {
-    content: ''; position: absolute; left: -20px; top: 14px;
+    content: ''; position: absolute; left: -23px; top: 16px;
     width: 10px; height: 10px; border-radius: 50%; background: var(--accent);
+    box-shadow: 0 0 0 3px rgba(120,60,40,0.12);
   }
   .sc-timeline-year { font-size: 0.78rem; font-weight: 700; color: var(--accent); }
-  .sc-timeline-event { font-size: 0.85rem; margin-top: 2px; }
+  .sc-timeline-event { font-size: 0.85rem; margin-top: 3px; line-height: 1.6; }
 
-  .sc-signpost-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin-bottom: 16px; }
-  .sc-signpost-table th { text-align: left; padding: 8px 10px; background: var(--bg); font-weight: 600;
-    font-size: 0.75rem; color: var(--text-muted); border-bottom: 1px solid var(--border); }
-  .sc-signpost-table td { padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .sc-signpost-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin-bottom: 16px; border-radius: 10px; overflow: hidden; }
+  .sc-signpost-table th { text-align: left; padding: 10px 12px; background: var(--bg); font-weight: 700;
+    font-size: 0.72rem; color: var(--text-muted); border-bottom: 1px solid var(--border); text-transform: uppercase; letter-spacing: 0.04em; }
+  .sc-signpost-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .sc-signpost-table tr:last-child td { border-bottom: none; }
+  .sc-signpost-table tr:hover td { background: rgba(120,60,40,0.02); }
 
   .sc-section-title {
-    font-size: 0.85rem; font-weight: 600; color: var(--accent);
-    margin: 20px 0 10px; padding-bottom: 4px; border-bottom: 1px solid var(--border);
+    font-size: 0.82rem; font-weight: 700; color: var(--accent);
+    margin: 28px 0 14px; padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+    letter-spacing: 0.03em; text-transform: uppercase;
   }
 
-  .sc-implications li { padding: 4px 0; font-size: 0.85rem; }
+  .sc-implications { padding-left: 18px; }
+  .sc-implications li { padding: 5px 0; font-size: 0.85rem; line-height: 1.6; }
+  .sc-implications li::marker { color: var(--accent-warm); }
 
-  .sc-wildcards { padding: 10px 14px; background: #fff8f0; border-radius: 8px;
-    border-left: 3px solid var(--highlight); font-size: 0.83rem; margin-bottom: 16px; }
+  .sc-wildcards { padding: 14px 18px; background: #fff8f0; border-radius: 10px;
+    border-left: 4px solid var(--highlight); font-size: 0.83rem; margin-bottom: 16px; line-height: 1.6; }
 
   /* DF Map */
   .sc-df-map {
     position: relative; width: 100%; max-width: 600px; margin: 0 auto;
-    aspect-ratio: 1; background: var(--card); border-radius: 12px;
+    aspect-ratio: 1; background: var(--card); border-radius: 14px;
     border: 1px solid var(--border); overflow: hidden;
+    box-shadow: 0 2px 12px rgba(120,60,40,0.06);
   }
   .sc-df-dot {
     position: absolute; border-radius: 50%; cursor: pointer;
-    transition: transform 0.15s; display: flex; align-items: center; justify-content: center;
-    font-size: 0.65rem; font-weight: 600; color: white;
+    transition: transform 0.2s cubic-bezier(0.4,0,0.2,1), box-shadow 0.2s;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.65rem; font-weight: 700; color: white;
   }
-  .sc-df-dot:hover { transform: scale(1.3); z-index: 10; }
+  .sc-df-dot:hover { transform: scale(1.35); z-index: 10; box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
   .sc-df-tooltip {
     display: none; position: absolute; background: var(--text); color: white;
-    padding: 8px 12px; border-radius: 8px; font-size: 0.78rem; max-width: 260px;
-    z-index: 20; pointer-events: none; line-height: 1.4;
+    padding: 10px 14px; border-radius: 10px; font-size: 0.78rem; max-width: 280px;
+    z-index: 20; pointer-events: none; line-height: 1.5;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
   }
-  .sc-df-map-axis { position: absolute; font-size: 0.7rem; color: var(--text-muted); }
-  .sc-df-map-line { position: absolute; background: var(--border); }
+  .sc-df-map-axis { position: absolute; font-size: 0.7rem; color: var(--text-muted); font-weight: 500; }
+  .sc-df-map-line { position: absolute; background: var(--border); opacity: 0.6; }
 
   .sc-no-regret {
-    padding: 16px; background: var(--card); border-radius: 10px;
-    border: 1px solid var(--border); margin-top: 20px;
+    padding: 20px 24px; background: var(--card); border-radius: 14px;
+    border: 1px solid var(--border); margin-top: 24px;
+    box-shadow: 0 2px 12px rgba(120,60,40,0.06);
   }
-  .sc-no-regret li { padding: 4px 0; font-size: 0.85rem; }
+  .sc-no-regret li { padding: 5px 0; font-size: 0.85rem; line-height: 1.6; }
+  .sc-no-regret li::marker { color: var(--accent-warm); }
 
   /* Custom Axes Panel */
   .sc-custom-panel {
@@ -646,17 +729,22 @@
   }
 
   @media (max-width: 900px) {
-    .sc-matrix-wrapper { padding: 24px 4px 28px; }
+    .sc-matrix-wrapper { padding: 28px 8px 32px; }
     .sc-cla-grid { grid-template-columns: 1fr; }
+    .sc-detail-body { padding: 0 16px 20px; }
+    .sc-detail-header { padding: 16px; }
   }
   @media (max-width: 480px) {
-    .sc-matrix-wrapper { padding: 20px 2px 28px; }
-    .sc-quadrant { padding: 10px; min-height: 90px; }
-    .sc-quadrant-name { font-size: 0.8rem; }
-    .sc-axis-label { font-size: 0.6rem; }
-    .sc-detail-tab { padding: 8px 10px; font-size: 0.75rem; max-width: 140px; }
-    .sc-narrative { font-size: 0.9rem; }
+    .sc-matrix-wrapper { padding: 24px 4px 32px; }
+    .sc-matrix { gap: 8px; }
+    .sc-quadrant { padding: 14px 12px; min-height: 100px; }
+    .sc-quadrant-name { font-size: 0.82rem; }
+    .sc-axis-label { font-size: 0.62rem; }
+    .sc-detail-tab { padding: 10px 12px; font-size: 0.75rem; max-width: 140px; }
+    .sc-narrative { font-size: 0.92rem; line-height: 1.85; }
     .sc-df-map { aspect-ratio: auto; min-height: 300px; }
+    .sc-axes-legend { flex-direction: column; gap: 8px; }
+    .sc-detail-body { padding: 0 12px 16px; }
   }
 </style>
 </head>
@@ -749,15 +837,15 @@
 
   <!-- ===== SCENARIOS ===== -->
   <div class="tab-panel" id="tab-scenarios">
-    <div style="margin-bottom:16px">
-      <h3 style="font-size:1rem;color:var(--accent);margin-bottom:4px" data-i18n="scenarios_title">シナリオプランニング</h3>
-      <p style="font-size:0.8rem;color:var(--text-muted)" data-i18n="scenarios_desc">PESTLE分析とCLAメタ解析から導出された4つの蓋然性のある未来シナリオ</p>
+    <div style="margin-bottom:20px">
+      <h3 style="font-size:1.1rem;color:var(--accent);margin-bottom:6px;font-weight:700" data-i18n="scenarios_title">シナリオプランニング</h3>
+      <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6" data-i18n="scenarios_desc">PESTLE分析とCLAメタ解析から導出された4つの蓋然性のある未来シナリオ</p>
     </div>
     <div id="scenariosCustomPanel"></div>
-    <div id="scenariosMeta" style="margin-bottom:16px"></div>
-    <div id="scenariosMatrix" style="margin-bottom:32px"></div>
+    <div id="scenariosMeta" style="margin-bottom:20px"></div>
+    <div id="scenariosMatrix" style="margin-bottom:40px"></div>
     <div id="scenariosDetail"></div>
-    <div id="scenariosDFMap" style="margin-top:32px"></div>
+    <div id="scenariosDFMap" style="margin-top:40px"></div>
   </div>
 
   <!-- ===== WEAK SIGNALS ===== -->
@@ -1748,13 +1836,14 @@ function renderScenarios() {
   // 2x2 Matrix
   const ax = S.axes;
   const quadrantOrder = ['top_left', 'top_right', 'bottom_left', 'bottom_right'];
+  const quadrantLabels = { top_left: 'Y+ / X-', top_right: 'Y+ / X+', bottom_left: 'Y- / X-', bottom_right: 'Y- / X+' };
   const scMap = {};
   S.scenarios.forEach(sc => { scMap[sc.quadrant] = sc; });
 
   let matrixHtml = `
-    <div style="display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap">
-      <div style="font-size:0.8rem;color:var(--text-muted)"><strong style="color:var(--accent)">${esc(tf(ax.x.label, ax.x.label_en))}</strong>: ${esc(tf(ax.x.pole_negative, ax.x.pole_negative_en))} &harr; ${esc(tf(ax.x.pole_positive, ax.x.pole_positive_en))}</div>
-      <div style="font-size:0.8rem;color:var(--text-muted)"><strong style="color:var(--accent)">${esc(tf(ax.y.label, ax.y.label_en))}</strong>: ${esc(tf(ax.y.pole_negative, ax.y.pole_negative_en))} &harr; ${esc(tf(ax.y.pole_positive, ax.y.pole_positive_en))}</div>
+    <div class="sc-axes-legend">
+      <div class="sc-axes-legend-item"><strong>X:</strong> ${esc(tf(ax.x.label, ax.x.label_en))} <span class="sc-axes-legend-arrow">${esc(tf(ax.x.pole_negative, ax.x.pole_negative_en))} &harr; ${esc(tf(ax.x.pole_positive, ax.x.pole_positive_en))}</span></div>
+      <div class="sc-axes-legend-item"><strong>Y:</strong> ${esc(tf(ax.y.label, ax.y.label_en))} <span class="sc-axes-legend-arrow">${esc(tf(ax.y.pole_negative, ax.y.pole_negative_en))} &harr; ${esc(tf(ax.y.pole_positive, ax.y.pole_positive_en))}</span></div>
     </div>
     <div class="sc-matrix-wrapper">
     <div class="sc-axis-label sc-axis-y-pos">${tf(ax.y.pole_positive, ax.y.pole_positive_en)}</div>
@@ -1766,8 +1855,9 @@ function renderScenarios() {
   quadrantOrder.forEach(q => {
     const sc = scMap[q];
     if (!sc) { matrixHtml += '<div class="sc-quadrant"></div>'; return; }
-    matrixHtml += `<div class="sc-quadrant" id="scq-${q}" style="border-color:${sc.color}40"
+    matrixHtml += `<div class="sc-quadrant" id="scq-${q}" style="border-color:${sc.color}50;color:${sc.color}"
       onclick="showScenarioDetail('${q}')">
+      <span class="sc-quadrant-position">${quadrantLabels[q]}</span>
       <div class="sc-quadrant-name" style="color:${sc.color}">${tf(sc.name, sc.name_en)}</div>
       <div class="sc-quadrant-sub">${esc(sc.subtitle || '')}</div>
     </div>`;
@@ -1817,7 +1907,16 @@ function showScenarioDetail(quadrant) {
 
   // Narrative
   const narrative = tf(sc.narrative, sc.narrative_en) || '';
-  let html = tabsHtml;
+  let html = '<div class="sc-detail-wrapper">';
+  html += tabsHtml;
+  html += `<div class="sc-detail-header">
+    <div class="sc-detail-header-color" style="background:${sc.color}"></div>
+    <div class="sc-detail-header-text">
+      <h4 style="color:${sc.color}">${tf(sc.name, sc.name_en)}</h4>
+      <p>${esc(sc.subtitle || '')}</p>
+    </div>
+  </div>`;
+  html += '<div class="sc-detail-body">';
   html += `<div class="sc-narrative">${esc(narrative).replace(/\n/g, '<br>')}</div>`;
 
   // CLA
@@ -1888,6 +1987,8 @@ function showScenarioDetail(quadrant) {
       <ul class="sc-implications">${S.no_regret_moves.map(m => `<li>${esc(m)}</li>`).join('')}</ul>
     </div>`;
   }
+
+  html += '</div></div>'; // close sc-detail-body and sc-detail-wrapper
 
   document.getElementById('scenariosDetail').innerHTML = html;
 }
@@ -2029,10 +2130,6 @@ function getApiKey() {
 
 function renderCustomAxesPanel() {
   const panel = document.getElementById('scenariosCustomPanel');
-  if (!panel) return;
-  panel.style.display = 'none'; // Phase 2 feature — hidden for now
-  panel.innerHTML = '';
-  return;
   if (!SCENARIOS_DATA?.driving_forces?.length) { panel.innerHTML = ''; return; }
 
   const lang = LANG;
