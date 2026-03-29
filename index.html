@@ -459,8 +459,13 @@
 
   <!-- ===== PESTLE ===== -->
   <div class="tab-panel" id="tab-pestle">
-    <div class="search-bar">
-      <input class="search-input" id="pestleSearch" data-i18n-placeholder="search_news" placeholder="ニュースを検索..." oninput="renderPestle()">
+    <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;align-items:center">
+      <input class="search-input" id="pestleSearch" data-i18n-placeholder="search_news" placeholder="ニュースを検索..." oninput="renderPestle()" style="flex:1;min-width:180px">
+      <select id="pestleYearFilter" onchange="renderPestle()" style="padding:8px 12px;border:1px solid var(--border);border-radius:8px;background:var(--card);font-size:0.85rem">
+        <option value="latest">最新（当日）</option>
+        <option value="all">全期間</option>
+      </select>
+      <span id="pestleTotalCount" style="font-size:0.78rem;color:var(--text-muted)"></span>
     </div>
     <div class="pestle-grid" id="pestleGrid"></div>
   </div>
@@ -533,6 +538,7 @@ let NEWS_DATA = null;
 let PAPERS_DATA = [];
 let AI_DATA = null;
 let ALERTS_DATA = null;
+let PESTLE_HISTORY = null;
 let PAPERS_TRANS = {};  // index -> {title_ja, summary_ja}
 let LANG = 'ja';
 
@@ -852,8 +858,12 @@ function renderOverview() {
   const fields = {};
   PAPERS_DATA.forEach(p => { fields[p.field] = (fields[p.field] || 0) + 1; });
 
+  // Total from DB (via latest.json total_fetched)
+  const dbTotal = NEWS_DATA.total_fetched || totalNews;
+  const historyQuarters = PESTLE_HISTORY ? Object.keys(PESTLE_HISTORY).length : 0;
+
   document.getElementById('overviewStats').innerHTML = `
-    <div class="stat-card"><div class="stat-label">${t('stat_news')}</div><div class="stat-value">${totalNews}</div><div class="stat-sub">${t('stat_sub_news')}</div></div>
+    <div class="stat-card"><div class="stat-label">${t('stat_news')}</div><div class="stat-value">${dbTotal.toLocaleString()}</div><div class="stat-sub">${historyQuarters > 0 ? '1990年〜 ' + historyQuarters + '四半期' : t('stat_sub_news')}</div></div>
     <div class="stat-card"><div class="stat-label">${t('stat_papers')}</div><div class="stat-value">${totalPapers}</div><div class="stat-sub">${Object.keys(fields).length} ${t('field')}</div></div>
     <div class="stat-card"><div class="stat-label">${t('stat_sources')}</div><div class="stat-value">${sources.size}</div><div class="stat-sub">${t('stat_sub_sources')}</div></div>
     <div class="stat-card"><div class="stat-label">${t('stat_date')}</div><div class="stat-value" style="font-size:1rem">${NEWS_DATA.date}</div><div class="stat-sub">${NEWS_DATA.total_fetched}${t('from_selected')}</div></div>
@@ -916,35 +926,85 @@ function renderOverview() {
 function renderPestle() {
   if (!NEWS_DATA) return;
   const q = (document.getElementById('pestleSearch').value || '').toLowerCase();
+  const yearFilter = document.getElementById('pestleYearFilter')?.value || 'latest';
 
+  // Populate year filter options from PESTLE_HISTORY if available
+  const sel = document.getElementById('pestleYearFilter');
+  if (sel && sel.options.length <= 2 && PESTLE_HISTORY) {
+    const years = new Set();
+    Object.keys(PESTLE_HISTORY).forEach(qk => {
+      const y = qk.substring(0, 4);
+      years.add(y);
+    });
+    [...years].sort().reverse().forEach(y => {
+      const opt = document.createElement('option');
+      opt.value = y;
+      opt.textContent = y + '年';
+      sel.appendChild(opt);
+    });
+  }
+
+  // Build article data based on filter
+  let pestleData = {};
+  if (yearFilter === 'latest') {
+    // Use latest.json (current day's data)
+    for (const [cat, info] of Object.entries(NEWS_DATA.pestle)) {
+      pestleData[cat] = info.articles || [];
+    }
+  } else if (yearFilter === 'all' && PESTLE_HISTORY) {
+    // Merge all quarters
+    for (const [qk, cats] of Object.entries(PESTLE_HISTORY)) {
+      for (const [cat, info] of Object.entries(cats)) {
+        if (!pestleData[cat]) pestleData[cat] = [];
+        pestleData[cat].push(...(info.articles || []));
+      }
+    }
+  } else if (PESTLE_HISTORY) {
+    // Filter by specific year
+    for (const [qk, cats] of Object.entries(PESTLE_HISTORY)) {
+      if (qk.startsWith(yearFilter)) {
+        for (const [cat, info] of Object.entries(cats)) {
+          if (!pestleData[cat]) pestleData[cat] = [];
+          pestleData[cat].push(...(info.articles || []));
+        }
+      }
+    }
+  }
+
+  let totalCount = 0;
   let html = '';
   for (const [cat, meta] of Object.entries(PESTLE_META)) {
-    const info = NEWS_DATA.pestle[cat];
-    if (!info) continue;
-    const filtered = q ? info.articles.filter(a => (a.title + a.summary + a.source).toLowerCase().includes(q)) : info.articles;
+    let articles = pestleData[cat] || [];
+    if (q) articles = articles.filter(a => ((a.title||'') + (a.summary||'') + (a.source||'')).toLowerCase().includes(q));
+    totalCount += articles.length;
+
+    // Sort by date desc
+    articles.sort((a, b) => ((b.published_date||'').localeCompare(a.published_date||'')));
 
     html += `
       <div class="pestle-section">
         <div class="pestle-header">
           <div class="pestle-badge" style="background:${meta.color}"></div>
-          ${meta.icon} ${meta.ja} (${cat})
-          <span class="pestle-count">${filtered.length}件</span>
+          ${meta.icon} ${meta.ja}
+          <span class="pestle-count">${articles.length.toLocaleString()}件</span>
         </div>
         <div class="article-list">
-          ${filtered.map((a, i) => {
-            const origIdx = info.articles.indexOf(a);
-            return `
-              <div class="article-item" onclick="showArticle('${cat}', ${origIdx})">
-                <div class="article-title">${esc(localizedTitle(a, cat, origIdx))}</div>
+          ${articles.slice(0, 50).map((a, i) => `
+              <div class="article-item" ${yearFilter === 'latest' ? `onclick="showArticle('${cat}', ${i})"` : ''}>
+                <div class="article-title">${esc(a.title)}</div>
                 <div class="article-meta">
                   <span class="article-source">${esc(a.source)}</span>
                   ${a.published_date ? `<span style="font-size:0.7rem;color:var(--text-muted)">${esc(a.published_date)}</span>` : ''}
                 </div>
-              </div>`;
-          }).join('')}
+              </div>`
+          ).join('')}
+          ${articles.length > 50 ? `<div style="padding:10px;text-align:center;color:var(--text-muted);font-size:0.8rem">他 ${(articles.length - 50).toLocaleString()}件</div>` : ''}
         </div>
       </div>`;
   }
+
+  const countEl = document.getElementById('pestleTotalCount');
+  if (countEl) countEl.textContent = `計 ${totalCount.toLocaleString()}件`;
   document.getElementById('pestleGrid').innerHTML = html;
 }
 
@@ -1299,6 +1359,13 @@ async function loadData() {
     ALERTS_DATA = await alertsResp.json();
   } catch (e) {
     console.warn('Alerts data not found:', e);
+  }
+
+  try {
+    const histResp = await fetch('data/pestle_history.json?v=' + Date.now());
+    PESTLE_HISTORY = await histResp.json();
+  } catch (e) {
+    console.warn('PESTLE history not found:', e);
   }
 
   applyI18n();
