@@ -1020,7 +1020,7 @@ function localizedPaperSummary(paper, idx) {
 // === Load data ===
 async function loadData() {
   try {
-    const newsResp = await fetch('data/latest.json');
+    const newsResp = await fetch('data/latest.json?v=' + Date.now());
     NEWS_DATA = await newsResp.json();
     document.getElementById('lastUpdated').textContent = `${t('last_updated')}: ${NEWS_DATA.date}`;
   } catch (e) {
@@ -1028,21 +1028,21 @@ async function loadData() {
   }
 
   try {
-    const papersResp = await fetch('data/papers.json');
+    const papersResp = await fetch('data/papers.json?v=' + Date.now());
     PAPERS_DATA = await papersResp.json();
   } catch (e) {
     console.warn('Papers data not found:', e);
   }
 
   try {
-    const aiResp = await fetch('data/ai_analysis.json');
+    const aiResp = await fetch('data/ai_analysis.json?v=' + Date.now());
     AI_DATA = await aiResp.json();
   } catch (e) {
     console.warn('AI analysis data not found:', e);
   }
 
   try {
-    const ptResp = await fetch('data/papers_translations.json');
+    const ptResp = await fetch('data/papers_translations.json?v=' + Date.now());
     const ptData = await ptResp.json();
     ptData.forEach(t => { PAPERS_TRANS[t.index] = t; });
   } catch (e) {
@@ -1050,7 +1050,7 @@ async function loadData() {
   }
 
   try {
-    const alertsResp = await fetch('data/alerts.json');
+    const alertsResp = await fetch('data/alerts.json?v=' + Date.now());
     ALERTS_DATA = await alertsResp.json();
   } catch (e) {
     console.warn('Alerts data not found:', e);
