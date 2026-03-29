@@ -56,14 +56,14 @@ FIELDS = {
     },
     "芸術": {
         "concept_ids": [
-            "C52119013",    # Art history (level 1, 6.8M works)
+            "C52119013",    # Art history (level 1, 6.9M works)
             "C153349607",   # Visual arts (level 1, 5M works)
-            "C136764020",   # Art History (level 2)
-            "C195592381",   # Art (level 0)
-            "C163286209",   # Performing arts
-            "C2983467063",  # Media arts
+            "C107038049",   # Aesthetics (level 1, 3.7M works)
+            "C163286209",   # Performing arts (level 2, 72K works)
+            "C554144382",   # Performance art (level 2, 450K works)
+            "C119657128",   # Photography (level 2, 964K works)
         ],
-        "openalex_filter": "concept.id:C52119013|C153349607|C136764020|C195592381|C163286209|C2983467063",
+        "openalex_filter": "concept.id:C52119013|C153349607|C107038049|C163286209|C554144382|C119657128",
     },
 }
 
