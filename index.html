@@ -585,19 +585,6 @@
   .sc-matrix {
     display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
     gap: 12px;
-    position: relative;
-  }
-  /* Cross-hair lines through the matrix center */
-  .sc-matrix::before, .sc-matrix::after {
-    content: ''; position: absolute; z-index: 0; pointer-events: none;
-  }
-  .sc-matrix::before {
-    left: 50%; top: 4px; bottom: 4px; width: 1px;
-    background: linear-gradient(to bottom, transparent, var(--border) 20%, var(--border) 80%, transparent);
-  }
-  .sc-matrix::after {
-    top: 50%; left: 4px; right: 4px; height: 1px;
-    background: linear-gradient(to right, transparent, var(--border) 20%, var(--border) 80%, transparent);
   }
   .sc-quadrant {
     padding: 22px 18px; border-radius: 14px; cursor: pointer; min-height: 130px;
