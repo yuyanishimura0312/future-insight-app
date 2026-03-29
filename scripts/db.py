@@ -343,18 +343,29 @@ def export_papers_json(output_path: Path) -> int:
 
     papers = []
     for r in rows:
+        # Parse insight_tags from JSON string to list
+        tags = r["insight_tags"]
+        if isinstance(tags, str):
+            try:
+                tags = json.loads(tags)
+            except (json.JSONDecodeError, TypeError):
+                tags = []
+
+        # Clean summary: remove carriage returns and HTML entities
+        summary = (r["summary"] or "").replace("&#13;", "").replace("\r", "").replace("\\n", " ").strip()
+
         papers.append({
             "title": r["title"],
             "authors": r["authors"],
             "source_url": r["source_url"],
             "doi": r["doi"],
-            "summary": r["summary"],
+            "summary": summary,
             "field": r["field"],
             "subfield": r["subfield"],
             "source_name": r["source_name"],
             "published_date": r["published_date"],
             "language": r["language"],
-            "insight_tags": r["insight_tags"],
+            "insight_tags": tags,
             "relevance_score": r["relevance_score"],
         })
 

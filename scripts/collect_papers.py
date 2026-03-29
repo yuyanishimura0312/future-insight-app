@@ -23,9 +23,8 @@ FIELDS = {
             "C138885662",   # Philosophy
             "C95457728",    # History
             "C162324750",   # Classics
-            "C17744445",    # Political Science (partly)
         ],
-        "openalex_filter": "concept.id:C138885662|C95457728|C162324750|C142362112",
+        "openalex_filter": "concept.id:C138885662|C95457728|C162324750",
     },
     "社会科学": {
         "concept_ids": [
@@ -57,11 +56,10 @@ FIELDS = {
     },
     "芸術": {
         "concept_ids": [
-            "C142362112",   # Art
             "C136764020",   # Art History
-            "C33923547",    # Design-related
+            "C195592381",   # Art
         ],
-        "openalex_filter": "concept.id:C142362112|C136764020|C195592381",
+        "openalex_filter": "concept.id:C136764020|C195592381",
     },
 }
 
