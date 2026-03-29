@@ -18,7 +18,7 @@ from db import get_connection
 
 client = anthropic.Anthropic()
 MODEL = "claude-haiku-4-5-20251001"
-BATCH_SIZE = 50
+BATCH_SIZE = 100
 
 
 def get_untranslated(limit=None):
@@ -46,16 +46,21 @@ def translate_batch(titles: list[tuple[int, str]]) -> dict[int, str]:
 
 {numbered}"""
 
-    try:
-        resp = client.messages.create(
-            model=MODEL,
-            max_tokens=4000,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        text = resp.content[0].text.strip()
-    except Exception as e:
-        print(f"  [ERROR] API call failed: {e}")
-        return {}
+    for attempt in range(3):
+        try:
+            resp = client.messages.create(
+                model=MODEL,
+                max_tokens=8000,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            text = resp.content[0].text.strip()
+            break
+        except Exception as e:
+            if attempt < 2:
+                time.sleep(2)
+                continue
+            print(f"  [ERROR] API call failed after 3 retries: {e}")
+            return {}
 
     # Parse numbered responses
     results = {}
