@@ -631,12 +631,14 @@ function renderAlerts() {
       return `<span class="alert-cat-tag" style="border-left:2px solid ${color}">${label}</span>`;
     }).join('');
 
+    const title = LANG === 'ja' ? (a.alert_title || a.topic) : (a.alert_title_en || a.topic);
+
     html += `
       <div class="alert-item">
         <div class="alert-icon ${typeCls}">${icon}</div>
         <div class="alert-body">
           <div class="alert-topic">
-            ${esc(a.topic)}
+            ${esc(title)}
             <span class="alert-type-badge ${typeCls}">${typeLabel}</span>
             ${detail}
           </div>
