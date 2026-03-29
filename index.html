@@ -853,8 +853,8 @@ function renderGlobalSearch() {
 }
 
 // === Render CLA ===
-let claQuarterIdx = 0; // 0 = current, 1 = 3mo ago, 2 = 6mo ago, 3 = 9mo ago
-const CLA_HISTORY = []; // Will be populated from ai_analysis files
+let claCatFilter = 'Overall'; // Default to Overall
+let claViewMode = 'timeline'; // 'single' or 'timeline'
 
 function renderCLA() {
   if (!AI_DATA || !AI_DATA.cla) {
@@ -862,51 +862,100 @@ function renderCLA() {
     return;
   }
 
-  // Build quarter navigation
-  const currentDate = AI_DATA.date || new Date().toISOString().slice(0,10);
-  const quarters = [];
-  for (let i = 0; i < 4; i++) {
-    const d = new Date(currentDate);
-    d.setMonth(d.getMonth() - i * 3);
-    quarters.push(d.toISOString().slice(0, 7));
-  }
+  // Collect all available quarters, sorted chronologically
+  const qcla = AI_DATA.quarterly_cla || {};
+  const quarters = Object.keys(qcla).sort();
+  if (quarters.length === 0) quarters.push(AI_DATA.date?.slice(0,7) || '2026-03');
+
+  // Category options: Overall + 6 PESTLE
+  const catOptions = [
+    { key: 'Overall', label: '全体', icon: '🌐', color: 'var(--accent)' },
+    ...Object.entries(PESTLE_META).map(([k, m]) => ({ key: k, label: m.ja, icon: m.icon, color: m.color }))
+  ];
 
   let html = '';
 
-  // Quarter navigation bar
-  html += `<div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center">
-    <span style="font-size:0.82rem;color:var(--text-muted);font-weight:600">四半期:</span>`;
-  quarters.forEach((q, i) => {
-    const isActive = i === claQuarterIdx;
-    const label = q.replace('-', '年') + '月';
-    html += `<button onclick="claQuarterIdx=${i};renderCLA()" style="padding:6px 14px;border:1px solid ${isActive ? 'var(--accent)' : 'var(--border)'};border-radius:6px;background:${isActive ? 'var(--accent)' : 'var(--card)'};color:${isActive ? '#fff' : 'var(--text)'};cursor:pointer;font-size:0.82rem">${label}${i === 0 ? '（現在）' : ''}</button>`;
+  // Category filter
+  html += `<div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap;align-items:center">
+    <span style="font-size:0.82rem;color:var(--text-muted);font-weight:600">分野:</span>`;
+  catOptions.forEach(opt => {
+    const isActive = claCatFilter === opt.key;
+    html += `<button onclick="claCatFilter='${opt.key}';renderCLA()" style="padding:5px 12px;border:1px solid ${isActive ? opt.color : 'var(--border)'};border-radius:6px;background:${isActive ? opt.color : 'var(--card)'};color:${isActive ? '#fff' : 'var(--text)'};cursor:pointer;font-size:0.8rem">${opt.icon} ${opt.label}</button>`;
   });
   html += `</div>`;
 
-  // Show current CLA data (only current quarter has real data for now)
-  // Determine CLA data source: quarterly_cla or current cla
-  const selectedQuarter = quarters[claQuarterIdx];
-  const qClaData = (AI_DATA.quarterly_cla && AI_DATA.quarterly_cla[selectedQuarter])
-    ? AI_DATA.quarterly_cla[selectedQuarter]
-    : (claQuarterIdx === 0 ? AI_DATA.cla : null);
+  // View mode toggle
+  html += `<div style="display:flex;gap:6px;margin-bottom:16px;align-items:center">
+    <span style="font-size:0.82rem;color:var(--text-muted);font-weight:600">表示:</span>
+    <button onclick="claViewMode='timeline';renderCLA()" style="padding:5px 12px;border:1px solid ${claViewMode==='timeline'?'var(--accent)':'var(--border)'};border-radius:6px;background:${claViewMode==='timeline'?'var(--accent)':'var(--card)'};color:${claViewMode==='timeline'?'#fff':'var(--text)'};cursor:pointer;font-size:0.8rem">📊 変遷一覧</button>
+    <button onclick="claViewMode='single';renderCLA()" style="padding:5px 12px;border:1px solid ${claViewMode==='single'?'var(--accent)':'var(--border)'};border-radius:6px;background:${claViewMode==='single'?'var(--accent)':'var(--card)'};color:${claViewMode==='single'?'#fff':'var(--text)'};cursor:pointer;font-size:0.8rem">📋 個別表示</button>
+  </div>`;
 
-  if (!qClaData) {
-    html += `<div style="padding:24px;text-align:center;color:var(--text-muted);background:var(--card);border-radius:10px;">
-      <div style="font-size:1.5rem;margin-bottom:8px">📊</div>
-      <div style="font-size:0.92rem">${selectedQuarter.replace('-','年')}月のCLA分析データ</div>
-      <div style="font-size:0.82rem;margin-top:4px">データ収集中 — 次回の四半期分析で更新されます</div>
-    </div>`;
+  if (claViewMode === 'timeline') {
+    // === Horizontal timeline comparison ===
+    html += `<div style="overflow-x:auto;margin-bottom:20px">`;
+    html += `<table style="border-collapse:collapse;width:100%;min-width:${quarters.length * 220}px">`;
+
+    // Header row: quarter labels
+    html += `<thead><tr><th style="padding:8px 12px;text-align:left;font-size:0.82rem;color:var(--text-muted);border-bottom:2px solid var(--border);min-width:100px;position:sticky;left:0;background:var(--bg);z-index:1">CLA層</th>`;
+    quarters.forEach(q => {
+      const label = q.replace('-0', '年').replace('-1', '年1').replace('-', '年') + '月';
+      const isCurrent = q === quarters[quarters.length - 1];
+      html += `<th style="padding:8px 12px;text-align:left;font-size:0.82rem;border-bottom:2px solid var(--border);min-width:200px;${isCurrent ? 'color:var(--accent);font-weight:700' : 'color:var(--text-muted)'}">${label}${isCurrent ? '（現在）' : ''}</th>`;
+    });
+    html += `</tr></thead><tbody>`;
+
+    // Rows: one per CLA layer
+    const layers = [
+      { key: 'litany', label: t('layer1'), bg: 'var(--cla-litany)', tc: 'var(--text)' },
+      { key: 'systemic_causes', label: t('layer2'), bg: 'var(--cla-systemic)', tc: 'var(--text)' },
+      { key: 'worldview', label: t('layer3'), bg: 'var(--cla-worldview)', tc: '#fff' },
+      { key: 'myth_metaphor', label: t('layer4'), bg: 'var(--cla-myth)', tc: '#fff' },
+      { key: 'key_tension', label: '⚡ 核心的緊張', bg: 'transparent', tc: 'var(--accent)' },
+      { key: 'emerging_narrative', label: '→ 新たな物語', bg: 'transparent', tc: 'var(--accent)' },
+    ];
+
+    layers.forEach(layer => {
+      html += `<tr>`;
+      html += `<td style="padding:8px 12px;font-size:0.78rem;font-weight:600;vertical-align:top;border-bottom:1px solid var(--border);background:${layer.bg};color:${layer.tc};position:sticky;left:0;z-index:1;min-width:100px">${layer.label}</td>`;
+      quarters.forEach(q => {
+        const data = qcla[q];
+        const catData = data ? data[claCatFilter] : null;
+        const text = catData ? (catData[layer.key] || '') : '';
+        const cellBg = (layer.key === 'key_tension' || layer.key === 'emerging_narrative') ? 'transparent' : layer.bg;
+        html += `<td style="padding:8px 12px;font-size:0.78rem;vertical-align:top;border-bottom:1px solid var(--border);background:${cellBg};color:${layer.tc};line-height:1.5">${esc(text)}</td>`;
+      });
+      html += `</tr>`;
+    });
+
+    html += `</tbody></table></div>`;
+
   } else {
-    for (const [cat, meta] of Object.entries(PESTLE_META)) {
-      const cla = qClaData[cat];
-      if (!cla) continue;
+    // === Single quarter view ===
+    html += `<div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center">
+      <span style="font-size:0.82rem;color:var(--text-muted);font-weight:600">四半期:</span>`;
+    quarters.forEach((q, i) => {
+      const isActive = i === (window._claSingleIdx || quarters.length - 1);
+      const label = q.replace('-0', '年').replace('-1', '年1').replace('-', '年') + '月';
+      html += `<button onclick="window._claSingleIdx=${i};renderCLA()" style="padding:5px 12px;border:1px solid ${isActive ? 'var(--accent)' : 'var(--border)'};border-radius:6px;background:${isActive ? 'var(--accent)' : 'var(--card)'};color:${isActive ? '#fff' : 'var(--text)'};cursor:pointer;font-size:0.8rem">${label}</button>`;
+    });
+    html += `</div>`;
 
+    const selIdx = window._claSingleIdx ?? quarters.length - 1;
+    const selQ = quarters[selIdx];
+    const data = qcla[selQ] || (selIdx === quarters.length - 1 ? AI_DATA.cla : null);
+
+    if (!data || !data[claCatFilter]) {
+      html += `<div style="padding:24px;text-align:center;color:var(--text-muted);background:var(--card);border-radius:10px;">データなし</div>`;
+    } else {
+      const cla = data[claCatFilter];
+      const opt = catOptions.find(o => o.key === claCatFilter);
       html += `
         <div class="cla-card">
           <div class="cla-cat-header">
-            <div class="pestle-badge" style="background:${meta.color}"></div>
-            ${meta.icon} ${meta.ja}
-            <span style="font-size:0.72rem;color:var(--text-muted);margin-left:auto">${selectedQuarter}</span>
+            <div class="pestle-badge" style="background:${opt?.color || 'var(--accent)'}"></div>
+            ${opt?.icon || ''} ${opt?.label || claCatFilter}
+            <span style="font-size:0.72rem;color:var(--text-muted);margin-left:auto">${selQ}</span>
           </div>
           <div class="cla-layer litany">
             <div class="cla-layer-label">${t('layer1')}</div>
