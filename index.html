@@ -918,6 +918,16 @@ const FIELD_COLORS = {
 
 function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
 
+// Format published date to YYYY-MM-DD for display
+function formatPubDate(s) {
+  if (!s) return '';
+  // Already YYYY-MM-DD
+  if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return s;
+  const d = new Date(s);
+  if (isNaN(d.getTime())) return s;
+  return d.toISOString().slice(0, 10);
+}
+
 // === Tab switching ===
 const VALID_TABS = ['overview','pestle','papers','cla','scenarios','signals','search'];
 function switchTab(name, pushState) {
@@ -1304,7 +1314,7 @@ async function renderPestle() {
                 ${snippet ? `<div class="article-snippet">${esc(snippet)}${summary.length > 120 ? '...' : ''}</div>` : ''}
                 <div class="article-meta">
                   <span class="article-source">${esc(a.source)}</span>
-                  ${a.published_date ? `<span>${esc(a.published_date)}</span>` : ''}
+                  ${(a.published_date || a.published) ? `<span>${esc(formatPubDate(a.published_date || a.published))}</span>` : ''}
                   ${relScore ? `<span class="article-relevance"><span class="article-relevance-bar"><span class="article-relevance-fill" style="width:${relPct}%;background:${meta.color}"></span></span>${relScore}</span>` : ''}
                 </div>
               </div>`;
