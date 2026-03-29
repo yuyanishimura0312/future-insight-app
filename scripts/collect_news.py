@@ -248,7 +248,7 @@ def main():
 
     # 2. Classify & Select
     print("2. Classifying into PESTLE categories...")
-    result = select_top_articles(articles, per_category=20)
+    result = select_top_articles(articles, per_category=10)
 
     for cat, info in result.items():
         print(f"   {info['label_ja']} ({cat}): {info['count']} articles")
@@ -263,7 +263,7 @@ def main():
     }
 
     total_selected = sum(info["count"] for info in result.values())
-    print(f"\n   Total selected: {total_selected} / 120 target")
+    print(f"\n   Total selected: {total_selected} / 60 target")
 
     # 4. Save
     with open(output_file, "w", encoding="utf-8") as f:
