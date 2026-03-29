@@ -12,6 +12,7 @@ import hashlib
 from datetime import datetime, timezone
 from pathlib import Path
 from collections import defaultdict
+from db import save_collection, get_stats
 
 # === PESTLE Categories ===
 PESTLE = {
@@ -274,6 +275,15 @@ def main():
     with open(latest_file, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
     print(f"   Saved to {latest_file}")
+
+    # 5. Save to SQLite database
+    print("\n4. Saving to database...")
+    inserted = save_collection(output)
+    print(f"   {inserted} articles saved to SQLite")
+
+    # Show DB stats
+    stats = get_stats()
+    print(f"   DB: {stats['total_collections']} collections, {stats['total_articles']} total articles")
 
     print("\n✓ Done!")
 
