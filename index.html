@@ -580,7 +580,7 @@
 
   .sc-matrix-wrapper {
     position: relative; max-width: 680px; margin: 0 auto;
-    padding: 36px 16px 40px 16px;
+    padding: 42px 16px 40px 16px;
   }
   .sc-matrix {
     display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
@@ -623,13 +623,13 @@
 
   .sc-axis-label {
     position: absolute; font-size: 0.7rem; font-weight: 600;
-    color: var(--accent); text-align: center; white-space: nowrap;
-    overflow: hidden; text-overflow: ellipsis; max-width: 45%;
+    color: var(--accent); text-align: center;
+    max-width: 45%; line-height: 1.4;
     letter-spacing: 0.02em;
   }
-  .sc-axis-x-pos { bottom: -24px; right: 8px; text-align: right; }
-  .sc-axis-x-neg { bottom: -24px; left: 8px; text-align: left; }
-  .sc-axis-y-pos { top: -26px; left: 50%; transform: translateX(-50%); }
+  .sc-axis-x-pos { bottom: -28px; right: 8px; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sc-axis-x-neg { bottom: -28px; left: 8px; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sc-axis-y-pos { top: -30px; left: 10%; right: 10%; max-width: 80%; text-align: center; }
   .sc-axis-y-neg { display: none; }
 
   .sc-detail-wrapper {
@@ -1216,6 +1216,61 @@ const FIELD_COLORS = {
   '工学': '#2c8acc', '芸術': '#7c5a96',
 };
 
+// Subfield Japanese translations for common fields
+const SUBFIELD_JA = {
+  'Molecular Biology': '分子生物学', 'Artificial Intelligence': '人工知能',
+  'Sociology and Political Science': '社会学・政治学',
+  'Electrical and Electronic Engineering': '電気・電子工学',
+  'Computer Vision and Pattern Recognition': 'コンピュータビジョン・パターン認識',
+  'Materials Chemistry': '材料化学', 'Economics and Econometrics': '経済学・計量経済学',
+  'Renewable Energy, Sustainability and the Environment': '再生可能エネルギー・環境持続性',
+  'Cognitive Neuroscience': '認知神経科学', 'Education': '教育学',
+  'Computer Networks and Communications': 'コンピュータネットワーク・通信',
+  'Information Systems': '情報システム', 'Social Psychology': '社会心理学',
+  'Biomedical Engineering': '生体医工学', 'Strategy and Management': '戦略・経営',
+  'Political Science and International Relations': '政治学・国際関係',
+  'Clinical Psychology': '臨床心理学', 'Health Informatics': '医療情報学',
+  'Astronomy and Astrophysics': '天文学・宇宙物理学',
+  'General Health Professions': '医療専門職', 'Oncology': '腫瘍学',
+  'Organizational Behavior and Human Resource Management': '組織行動・人的資源管理',
+  'Global and Planetary Change': '地球規模変動', 'Genetics': '遺伝学',
+  'Experimental and Cognitive Psychology': '実験・認知心理学',
+  'Mechanical Engineering': '機械工学',
+  'Atomic and Molecular Physics, and Optics': '原子・分子物理学・光学',
+  'Management Science and Operations Research': '経営科学・オペレーションズリサーチ',
+  'Plant Science': '植物科学', 'Literature and Literary Theory': '文学・文学理論',
+  'Physiology': '生理学', 'Epidemiology': '疫学',
+  'Electronic, Optical and Magnetic Materials': '電子・光学・磁性材料',
+  'Computational Theory and Mathematics': '計算理論・数学', 'Philosophy': '哲学',
+  'Industrial and Manufacturing Engineering': '産業・製造工学',
+  'Public Health, Environmental and Occupational Health': '公衆衛生・環境衛生',
+  'Organic Chemistry': '有機化学', 'Control and Systems Engineering': '制御・システム工学',
+  'Ecology': '生態学', 'Developmental and Educational Psychology': '発達・教育心理学',
+  'Marketing': 'マーケティング', 'Finance': 'ファイナンス',
+  'Statistics, Probability and Uncertainty': '統計・確率・不確実性',
+  'Statistical and Nonlinear Physics': '統計・非線形物理学',
+  'Cardiology and Cardiovascular Medicine': '循環器学',
+  'Accounting': '会計学', 'Statistics and Probability': '統計・確率',
+  'Management Information Systems': '経営情報システム',
+  'Computer Science': 'コンピュータ科学', 'General Computer Science': 'コンピュータ科学一般',
+  'General Medicine': '一般医学', 'General Engineering': '工学一般',
+  'General Mathematics': '数学一般', 'General Physics and Astronomy': '物理学・天文学一般',
+  'General Chemistry': '化学一般', 'General Social Sciences': '社会科学一般',
+  'Law': '法学', 'History': '歴史学', 'Anthropology': '人類学',
+  'Linguistics and Language': '言語学', 'Geography, Planning and Development': '地理・都市計画・開発',
+  'Environmental Science': '環境科学', 'Neuroscience': '神経科学',
+  'Biochemistry': '生化学', 'Cell Biology': '細胞生物学',
+  'Applied Mathematics': '応用数学', 'Computer Science Applications': 'コンピュータ科学応用',
+  'Software': 'ソフトウェア', 'Hardware and Architecture': 'ハードウェア・アーキテクチャ',
+  'Signal Processing': '信号処理', 'General Arts and Humanities': '人文学一般',
+  'Visual Arts and Performing Arts': '視覚芸術・舞台芸術', 'Music': '音楽',
+};
+function localizedSubfield(sf) {
+  if (!sf) return '';
+  if (LANG === 'ja' && SUBFIELD_JA[sf]) return SUBFIELD_JA[sf];
+  return sf;
+}
+
 function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
 
 // Format published date to YYYY-MM-DD for display
@@ -1788,7 +1843,7 @@ function renderPapers() {
               <div class="paper-meta">
                 <span class="paper-authors">${esc((p.authors || '').substring(0, 80))}${(p.authors || '').length > 80 ? '...' : ''}</span>
                 ${p.published_date ? `<span class="paper-date">${esc(p.published_date)}</span>` : ''}
-                ${p.subfield ? `<span class="paper-subfield-tag">${esc(p.subfield)}</span>` : ''}
+                ${p.subfield ? `<span class="paper-subfield-tag">${esc(localizedSubfield(p.subfield))}</span>` : ''}
               </div>
             </div>`;
           }).join('')}
