@@ -992,10 +992,11 @@ async function renderPestle() {
       }
     }
   }
-  // Fallback to NEWS_DATA if no history
-  if (Object.keys(pestleData).length === 0 && NEWS_DATA) {
+  // Use NEWS_DATA for "latest" view (no need for heavy history file)
+  if ((yearFilter === 'latest' || Object.keys(pestleData).length === 0) && NEWS_DATA) {
+    pestleData = {};
     for (const [cat, info] of Object.entries(NEWS_DATA.pestle)) {
-      pestleData[cat] = (info.articles || []).filter(langFilter);
+      pestleData[cat] = (info.articles || []);
     }
   }
 
@@ -1017,15 +1018,17 @@ async function renderPestle() {
           <span class="pestle-count">${articles.length.toLocaleString()}件</span>
         </div>
         <div class="article-list">
-          ${articles.slice(0, 50).map((a, i) => `
-              <div class="article-item" ${yearFilter === 'latest' ? `onclick="showArticle('${cat}', ${i})"` : ''}>
-                <div class="article-title">${esc(a.title)}</div>
+          ${articles.slice(0, 50).map((a, i) => {
+            const title = (yearFilter === 'latest') ? localizedTitle(a, cat, i) : a.title;
+            return `
+              <div class="article-item" ${yearFilter === 'latest' ? `onclick="showArticle('${cat}', ${i})"` : (a.url ? `onclick="window.open('${esc(a.url)}','_blank')" style="cursor:pointer"` : '')}>
+                <div class="article-title">${esc(title)}</div>
                 <div class="article-meta">
                   <span class="article-source">${esc(a.source)}</span>
                   ${a.published_date ? `<span style="font-size:0.7rem;color:var(--text-muted)">${esc(a.published_date)}</span>` : ''}
                 </div>
-              </div>`
-          ).join('')}
+              </div>`;
+          }).join('')}
           ${articles.length > 50 ? `<div style="padding:10px;text-align:center;color:var(--text-muted);font-size:0.8rem">他 ${(articles.length - 50).toLocaleString()}件</div>` : ''}
         </div>
       </div>`;
