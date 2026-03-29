@@ -860,11 +860,12 @@ function renderOverview() {
 
   // Total from DB (via latest.json total_fetched)
   const dbTotal = NEWS_DATA.total_fetched || totalNews;
-  const historyQuarters = PESTLE_HISTORY ? Object.keys(PESTLE_HISTORY).length : 0;
+  const historyQuarters = PESTLE_HISTORY?._quarterCount || 0;
+  const papersTotal = PAPERS_STATS?.total || PAPERS_DATA.length;
 
   document.getElementById('overviewStats').innerHTML = `
     <div class="stat-card"><div class="stat-label">${t('stat_news')}</div><div class="stat-value">${dbTotal.toLocaleString()}</div><div class="stat-sub">${historyQuarters > 0 ? '1990年〜 ' + historyQuarters + '四半期' : t('stat_sub_news')}</div></div>
-    <div class="stat-card"><div class="stat-label">${t('stat_papers')}</div><div class="stat-value">${totalPapers}</div><div class="stat-sub">${Object.keys(fields).length} ${t('field')}</div></div>
+    <div class="stat-card"><div class="stat-label">${t('stat_papers')}</div><div class="stat-value">${papersTotal.toLocaleString()}</div><div class="stat-sub">${Object.keys(PAPERS_STATS?.by_field || fields).length} ${t('field')}</div></div>
     <div class="stat-card"><div class="stat-label">${t('stat_sources')}</div><div class="stat-value">${sources.size}</div><div class="stat-sub">${t('stat_sub_sources')}</div></div>
     <div class="stat-card"><div class="stat-label">${t('stat_date')}</div><div class="stat-value" style="font-size:1rem">${NEWS_DATA.date}</div><div class="stat-sub">${NEWS_DATA.total_fetched}${t('from_selected')}</div></div>
     <div class="stat-card"><div class="stat-label">${t('stat_fields')}</div><div class="stat-value">${Object.keys(fields).length}</div><div class="stat-sub">${Object.entries(fields).map(([f,n]) => f + ':' + n).join(', ')}</div></div>
@@ -923,19 +924,33 @@ function renderOverview() {
 }
 
 // === Render PESTLE ===
-function renderPestle() {
+async function ensurePestleHistoryLoaded() {
+  if (_pestleHistoryLoaded) return;
+  try {
+    const resp = await fetch('data/pestle_history.json?v=' + Date.now());
+    const full = await resp.json();
+    PESTLE_HISTORY = { ...PESTLE_HISTORY, ...full };
+    _pestleHistoryLoaded = true;
+  } catch (e) { console.warn('Failed to load history:', e); }
+}
+
+async function renderPestle() {
   if (!NEWS_DATA) return;
   const q = (document.getElementById('pestleSearch').value || '').toLowerCase();
   const yearFilter = document.getElementById('pestleYearFilter')?.value || 'latest';
 
-  // Populate year filter options from PESTLE_HISTORY if available
+  // Lazy load full history when needed
+  if (yearFilter !== 'latest' && !_pestleHistoryLoaded) {
+    document.getElementById('pestleGrid').innerHTML = '<div style="padding:40px;text-align:center;color:var(--text-muted)">データを読み込み中...</div>';
+    await ensurePestleHistoryLoaded();
+  }
+
+  // Populate year filter from index
   const sel = document.getElementById('pestleYearFilter');
-  if (sel && sel.options.length <= 2 && PESTLE_HISTORY) {
+  const idx = PESTLE_HISTORY?._index;
+  if (sel && sel.options.length <= 2 && idx) {
     const years = new Set();
-    Object.keys(PESTLE_HISTORY).forEach(qk => {
-      const y = qk.substring(0, 4);
-      years.add(y);
-    });
+    Object.keys(idx).forEach(qk => { if (qk.length >= 4) years.add(qk.substring(0, 4)); });
     [...years].sort().reverse().forEach(y => {
       const opt = document.createElement('option');
       opt.value = y;
@@ -1321,51 +1336,51 @@ function localizedPaperSummary(paper, idx) {
   return paper.summary;
 }
 
-// === Load data ===
+// === Load data (lazy loading for performance) ===
+let PAPERS_STATS = null;
+let _pestleHistoryLoaded = false;
+let _papersFullLoaded = false;
+
 async function loadData() {
-  try {
-    const newsResp = await fetch('data/latest.json?v=' + Date.now());
-    NEWS_DATA = await newsResp.json();
+  const v = Date.now();
+
+  // Phase 1: Load lightweight data first (overview needs these)
+  const [newsResp, papersLightResp, aiResp, statsResp] = await Promise.allSettled([
+    fetch('data/latest.json?v=' + v),
+    fetch('data/papers_light.json?v=' + v),
+    fetch('data/ai_analysis.json?v=' + v),
+    fetch('data/papers_stats.json?v=' + v),
+  ]);
+
+  if (newsResp.status === 'fulfilled') {
+    NEWS_DATA = await newsResp.value.json();
     document.getElementById('lastUpdated').textContent = `${t('last_updated')}: ${NEWS_DATA.date}`;
-  } catch (e) {
-    console.warn('News data not found:', e);
+  }
+  if (papersLightResp.status === 'fulfilled') {
+    PAPERS_DATA = await papersLightResp.value.json();
+  }
+  if (aiResp.status === 'fulfilled') {
+    AI_DATA = await aiResp.value.json();
+  }
+  if (statsResp.status === 'fulfilled') {
+    PAPERS_STATS = await statsResp.value.json();
   }
 
+  // Phase 2: Load alerts (small file)
   try {
-    const papersResp = await fetch('data/papers.json?v=' + Date.now());
-    PAPERS_DATA = await papersResp.json();
-  } catch (e) {
-    console.warn('Papers data not found:', e);
-  }
-
-  try {
-    const aiResp = await fetch('data/ai_analysis.json?v=' + Date.now());
-    AI_DATA = await aiResp.json();
-  } catch (e) {
-    console.warn('AI analysis data not found:', e);
-  }
-
-  try {
-    const ptResp = await fetch('data/papers_translations.json?v=' + Date.now());
-    const ptData = await ptResp.json();
-    ptData.forEach(t => { PAPERS_TRANS[t.index] = t; });
-  } catch (e) {
-    console.warn('Papers translations not found:', e);
-  }
-
-  try {
-    const alertsResp = await fetch('data/alerts.json?v=' + Date.now());
+    const alertsResp = await fetch('data/alerts.json?v=' + v);
     ALERTS_DATA = await alertsResp.json();
-  } catch (e) {
-    console.warn('Alerts data not found:', e);
-  }
+  } catch (e) {}
 
+  // Phase 3: Load pestle_index (13KB, for overview stats)
   try {
-    const histResp = await fetch('data/pestle_history.json?v=' + Date.now());
-    PESTLE_HISTORY = await histResp.json();
-  } catch (e) {
-    console.warn('PESTLE history not found:', e);
-  }
+    const idxResp = await fetch('data/pestle_index.json?v=' + v);
+    const idx = await idxResp.json();
+    // Store quarter count for stats
+    if (!PESTLE_HISTORY) PESTLE_HISTORY = {};
+    PESTLE_HISTORY._index = idx;
+    PESTLE_HISTORY._quarterCount = Object.keys(idx).length;
+  } catch (e) {}
 
   applyI18n();
   renderOverview();
