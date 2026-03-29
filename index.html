@@ -452,41 +452,46 @@
   .sc-meta-bar strong { color: var(--text); }
 
   .sc-matrix-wrapper {
-    position: relative; max-width: 700px; margin: 0 auto;
-    padding: 40px 60px 40px 60px;
+    position: relative; max-width: 640px; margin: 0 auto;
+    padding: 28px 8px 32px 8px;
   }
   .sc-matrix {
     display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
-    gap: 8px; aspect-ratio: 1;
+    gap: 8px;
   }
   .sc-quadrant {
-    padding: 20px; border-radius: 12px; cursor: pointer;
+    padding: 20px 16px; border-radius: 12px; cursor: pointer; min-height: 120px;
     border: 2px solid var(--border); background: var(--card);
     transition: all 0.2s; display: flex; flex-direction: column; justify-content: center;
   }
-  .sc-quadrant:hover { transform: scale(1.03); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+  .sc-quadrant:hover { transform: scale(1.02); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
   .sc-quadrant.active { border-width: 3px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
-  .sc-quadrant-name { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
-  .sc-quadrant-sub { font-size: 0.78rem; color: var(--text-muted); }
+  .sc-quadrant-name {
+    font-size: 0.92rem; font-weight: 700; margin-bottom: 6px; line-height: 1.4;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .sc-quadrant-sub { font-size: 0.73rem; color: var(--text-muted); line-height: 1.3;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
   .sc-axis-label {
-    position: absolute; font-size: 0.75rem; font-weight: 600;
-    color: var(--accent); white-space: nowrap;
+    position: absolute; font-size: 0.68rem; font-weight: 500;
+    color: var(--text-muted); text-align: center; white-space: nowrap;
+    overflow: hidden; text-overflow: ellipsis; max-width: 45%;
   }
-  .sc-axis-x-pos { bottom: 8px; right: 60px; text-align: right; }
-  .sc-axis-x-neg { bottom: 8px; left: 60px; }
-  .sc-axis-y-pos { top: 8px; left: 50%; transform: translateX(-50%); }
-  .sc-axis-y-neg { bottom: 8px; left: 50%; transform: translateX(-50%); }
-  .sc-axis-x-label { position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%);
-    font-size: 0.7rem; color: var(--text-muted); }
-  .sc-axis-y-label { position: absolute; top: 50%; left: -6px; transform: translateY(-50%) rotate(-90deg);
-    font-size: 0.7rem; color: var(--text-muted); white-space: nowrap; }
+  .sc-axis-x-pos { bottom: -22px; right: 20px; }
+  .sc-axis-x-neg { bottom: -22px; left: 20px; }
+  .sc-axis-y-pos { top: -22px; left: 50%; transform: translateX(-50%); }
+  .sc-axis-y-neg { bottom: -22px; left: 50%; transform: translateX(-50%); display: none; }
 
-  .sc-detail-tabs { display: flex; gap: 0; margin-bottom: 16px; border-bottom: 2px solid var(--border); }
+  .sc-detail-tabs {
+    display: flex; gap: 0; margin-bottom: 16px; border-bottom: 2px solid var(--border);
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+  }
   .sc-detail-tab {
-    padding: 10px 18px; font-size: 0.85rem; font-weight: 500;
+    padding: 10px 14px; font-size: 0.8rem; font-weight: 500; white-space: nowrap;
     border: none; background: none; cursor: pointer; color: var(--text-muted);
     border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.15s;
+    flex-shrink: 0; max-width: 200px; overflow: hidden; text-overflow: ellipsis;
   }
   .sc-detail-tab:hover { color: var(--text); }
   .sc-detail-tab.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
@@ -557,17 +562,58 @@
   }
   .sc-no-regret li { padding: 4px 0; font-size: 0.85rem; }
 
+  /* Custom Axes Panel */
+  .sc-custom-panel {
+    padding: 16px; background: var(--card); border-radius: 10px;
+    border: 1px solid var(--border); margin-bottom: 16px;
+  }
+  .sc-custom-panel summary {
+    cursor: pointer; font-size: 0.88rem; font-weight: 600; color: var(--accent);
+    list-style: none; display: flex; align-items: center; gap: 6px;
+  }
+  .sc-custom-panel summary::-webkit-details-marker { display: none; }
+  .sc-custom-panel summary::before { content: '\25B6'; font-size: 0.7rem; transition: transform 0.2s; }
+  .sc-custom-panel[open] summary::before { transform: rotate(90deg); }
+  .sc-custom-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    margin-top: 12px;
+  }
+  @media (max-width: 600px) { .sc-custom-grid { grid-template-columns: 1fr; } }
+  .sc-custom-grid label { font-size: 0.78rem; font-weight: 500; color: var(--text-muted); display: block; margin-bottom: 4px; }
+  .sc-custom-grid select, .sc-custom-apikey input {
+    width: 100%; padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px;
+    background: var(--bg); color: var(--text); font-size: 0.82rem;
+  }
+  .sc-custom-apikey { margin-top: 12px; }
+  .sc-custom-apikey label { font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 4px; }
+  .sc-custom-actions { margin-top: 14px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .sc-custom-btn {
+    padding: 8px 20px; border: none; border-radius: 8px; font-size: 0.82rem;
+    font-weight: 600; cursor: pointer; transition: all 0.15s;
+  }
+  .sc-custom-btn-primary { background: var(--accent); color: white; }
+  .sc-custom-btn-primary:hover { filter: brightness(1.1); }
+  .sc-custom-btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+  .sc-custom-btn-reset { background: var(--border); color: var(--text); }
+  .sc-custom-btn-reset:hover { background: var(--text-muted); color: white; }
+  .sc-custom-status { font-size: 0.78rem; color: var(--text-muted); }
+  .sc-custom-status.error { color: #b92a38; }
+  .sc-custom-pole {
+    margin-top: 4px; font-size: 0.72rem; color: var(--text-muted); line-height: 1.4;
+  }
+
   @media (max-width: 900px) {
-    .sc-matrix-wrapper { padding: 30px 40px; }
+    .sc-matrix-wrapper { padding: 24px 4px 28px; }
     .sc-cla-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 480px) {
-    .sc-matrix-wrapper { padding: 24px 8px; }
-    .sc-quadrant { padding: 12px; }
-    .sc-quadrant-name { font-size: 0.85rem; }
-    .sc-axis-label { font-size: 0.65rem; }
-    .sc-detail-tab { padding: 8px 10px; font-size: 0.78rem; }
-    .sc-narrative { font-size: 0.92rem; }
+    .sc-matrix-wrapper { padding: 20px 2px 28px; }
+    .sc-quadrant { padding: 10px; min-height: 90px; }
+    .sc-quadrant-name { font-size: 0.8rem; }
+    .sc-axis-label { font-size: 0.6rem; }
+    .sc-detail-tab { padding: 8px 10px; font-size: 0.75rem; max-width: 140px; }
+    .sc-narrative { font-size: 0.9rem; }
+    .sc-df-map { aspect-ratio: auto; min-height: 300px; }
   }
 </style>
 </head>
@@ -664,6 +710,7 @@
       <h3 style="font-size:1rem;color:var(--accent);margin-bottom:4px" data-i18n="scenarios_title">シナリオプランニング</h3>
       <p style="font-size:0.8rem;color:var(--text-muted)" data-i18n="scenarios_desc">PESTLE分析とCLAメタ解析から導出された4つの蓋然性のある未来シナリオ</p>
     </div>
+    <div id="scenariosCustomPanel"></div>
     <div id="scenariosMeta" style="margin-bottom:16px"></div>
     <div id="scenariosMatrix" style="margin-bottom:32px"></div>
     <div id="scenariosDetail"></div>
@@ -727,6 +774,16 @@ const I18N = {
     scenarios_desc: 'PESTLE分析とCLAメタ解析から導出された4つの蓋然性のある未来シナリオ',
     scenarios_focal: '焦点課題', scenarios_horizon: '時間軸',
     scenarios_generated: '生成日', scenarios_dfs: 'ドライビングフォース',
+    scenarios_custom: '軸をカスタマイズ', scenarios_custom_desc: '既存のドライビングフォースから2軸を選択し、シナリオを再生成できます',
+    scenarios_x_axis: 'X軸（横軸）', scenarios_y_axis: 'Y軸（縦軸）',
+    scenarios_select_df: '-- ドライビングフォースを選択 --',
+    scenarios_generate: 'シナリオ生成', scenarios_reset: '元に戻す',
+    scenarios_generating: '生成中... (30秒ほどかかります)',
+    scenarios_apikey: 'Anthropic APIキー（ブラウザに保存）',
+    scenarios_pole_pos: '+', scenarios_pole_neg: '-',
+    scenarios_same_axis_error: 'X軸とY軸には異なるドライビングフォースを選んでください',
+    scenarios_no_apikey: 'APIキーを入力してください',
+    scenarios_custom_label: 'カスタム生成',
 
     stat_news: 'PESTLEニュース', stat_papers: '学術論文', stat_sources: 'ニュースソース',
     stat_date: '収集日', stat_fields: '論文分野',
@@ -765,6 +822,16 @@ const I18N = {
     scenarios_desc: 'Four plausible future scenarios derived from PESTLE analysis and CLA meta-analysis',
     scenarios_focal: 'Focal Question', scenarios_horizon: 'Time Horizon',
     scenarios_generated: 'Generated', scenarios_dfs: 'Driving Forces',
+    scenarios_custom: 'Customize Axes', scenarios_custom_desc: 'Select 2 driving forces as axes to regenerate scenarios',
+    scenarios_x_axis: 'X-Axis (Horizontal)', scenarios_y_axis: 'Y-Axis (Vertical)',
+    scenarios_select_df: '-- Select a driving force --',
+    scenarios_generate: 'Generate Scenarios', scenarios_reset: 'Reset',
+    scenarios_generating: 'Generating... (about 30 seconds)',
+    scenarios_apikey: 'Anthropic API Key (saved in browser)',
+    scenarios_pole_pos: '+', scenarios_pole_neg: '-',
+    scenarios_same_axis_error: 'Please select different driving forces for X and Y axes',
+    scenarios_no_apikey: 'Please enter an API key',
+    scenarios_custom_label: 'Custom',
 
     stat_news: 'PESTLE News', stat_papers: 'Academic Papers', stat_sources: 'News Sources',
     stat_date: 'Collection Date', stat_fields: 'Paper Fields',
@@ -1594,13 +1661,16 @@ function renderScenarios() {
   const scMap = {};
   S.scenarios.forEach(sc => { scMap[sc.quadrant] = sc; });
 
-  let matrixHtml = `<div class="sc-matrix-wrapper">
+  let matrixHtml = `
+    <div style="display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap">
+      <div style="font-size:0.8rem;color:var(--text-muted)"><strong style="color:var(--accent)">${esc(tf(ax.x.label, ax.x.label_en))}</strong>: ${esc(tf(ax.x.pole_negative, ax.x.pole_negative_en))} &harr; ${esc(tf(ax.x.pole_positive, ax.x.pole_positive_en))}</div>
+      <div style="font-size:0.8rem;color:var(--text-muted)"><strong style="color:var(--accent)">${esc(tf(ax.y.label, ax.y.label_en))}</strong>: ${esc(tf(ax.y.pole_negative, ax.y.pole_negative_en))} &harr; ${esc(tf(ax.y.pole_positive, ax.y.pole_positive_en))}</div>
+    </div>
+    <div class="sc-matrix-wrapper">
     <div class="sc-axis-label sc-axis-y-pos">${tf(ax.y.pole_positive, ax.y.pole_positive_en)}</div>
     <div class="sc-axis-label sc-axis-y-neg">${tf(ax.y.pole_negative, ax.y.pole_negative_en)}</div>
     <div class="sc-axis-label sc-axis-x-neg">${tf(ax.x.pole_negative, ax.x.pole_negative_en)}</div>
     <div class="sc-axis-label sc-axis-x-pos">${tf(ax.x.pole_positive, ax.x.pole_positive_en)}</div>
-    <div class="sc-axis-y-label">${tf(ax.y.label, ax.y.label_en)}</div>
-    <div class="sc-axis-x-label">${tf(ax.x.label, ax.x.label_en)}</div>
     <div class="sc-matrix">`;
 
   quadrantOrder.forEach(q => {
@@ -1620,6 +1690,18 @@ function renderScenarios() {
 
   // DF Map
   renderDFMap();
+
+  // Custom axes panel — preserve open state across re-renders
+  const wasOpen = document.getElementById('scCustomDetails')?.open;
+  renderCustomAxesPanel();
+  if (wasOpen) {
+    const details = document.getElementById('scCustomDetails');
+    if (details) details.open = true;
+  }
+  if (ORIGINAL_SCENARIOS_DATA) {
+    const resetBtn = document.getElementById('scResetBtn');
+    if (resetBtn) resetBtn.style.display = '';
+  }
 }
 
 function showScenarioDetail(quadrant) {
@@ -1749,22 +1831,29 @@ function renderDFMap() {
   // Tooltip
   html += '<div class="sc-df-tooltip" id="dfTooltip"></div>';
 
-  // Plot dots
+  // Plot dots — auto-scale to spread across available space
+  const impacts = S.driving_forces.map(d => d.impact || 5);
+  const uncerts = S.driving_forces.map(d => d.uncertainty || 5);
+  const minI = Math.min(...impacts), maxI = Math.max(...impacts);
+  const minU = Math.min(...uncerts), maxU = Math.max(...uncerts);
+  const rangeI = maxI - minI || 1, rangeU = maxU - minU || 1;
+
   S.driving_forces.forEach((df, i) => {
     const impact = df.impact || 5;
     const uncertainty = df.uncertainty || 5;
-    // Map 1-10 to 5%-95% of container
-    const x = 5 + (impact - 1) * 10; // percentage from left
-    const y = 95 - (uncertainty - 1) * 10; // percentage from top (inverted)
+    // Normalize to 10%-90% range for better spread
+    const x = 10 + ((impact - minI) / rangeI) * 80;
+    const y = 90 - ((uncertainty - minU) / rangeU) * 80;
     const cats = df.pestle_categories || [];
     const mainColor = catColors[cats[0]] || 'var(--accent)';
-    const size = 16 + cats.length * 4;
+    const size = 24 + cats.length * 3;
     const isAxis = S.axes.x.driving_force_id === df.id || S.axes.y.driving_force_id === df.id;
     const border = isAxis ? '3px solid var(--accent)' : '2px solid rgba(255,255,255,0.8)';
+    const shadow = isAxis ? 'box-shadow:0 0 0 3px var(--accent),0 2px 8px rgba(0,0,0,0.2);' : '';
     const idx = i + 1;
 
     html += `<div class="sc-df-dot" style="left:calc(${x}% - ${size/2}px);top:calc(${y}% - ${size/2}px);
-      width:${size}px;height:${size}px;background:${mainColor};border:${border}"
+      width:${size}px;height:${size}px;background:${mainColor};border:${border};${shadow}"
       onmouseenter="showDFTooltip(event,${i})" onmouseleave="hideDFTooltip()"
       onclick="showDFDetail(${i})">${idx}</div>`;
   });
@@ -1838,6 +1927,299 @@ function showDFDetail(idx) {
     body += '</ul></div>';
   }
   openModal(tf(df.name, df.name_en), body);
+}
+
+// === Custom Scenario Generation ===
+let ORIGINAL_SCENARIOS_DATA = null;  // backup of auto-generated data
+
+function renderCustomAxesPanel() {
+  const panel = document.getElementById('scenariosCustomPanel');
+  if (!SCENARIOS_DATA?.driving_forces?.length) { panel.innerHTML = ''; return; }
+
+  const lang = LANG;
+  const tf = (ja, en) => lang === 'en' && en ? en : ja;
+  const dfs = SCENARIOS_DATA.driving_forces;
+  const savedKey = localStorage.getItem('fi_anthropic_key') || '';
+
+  let optionsHtml = `<option value="">${t('scenarios_select_df')}</option>`;
+  dfs.forEach((df, i) => {
+    const label = tf(df.name, df.name_en);
+    const cats = (df.pestle_categories || []).join(', ');
+    optionsHtml += `<option value="${i}">${df.id}: ${label} [${cats}]</option>`;
+  });
+
+  panel.innerHTML = `
+    <details class="sc-custom-panel" id="scCustomDetails">
+      <summary>${t('scenarios_custom')}</summary>
+      <p style="font-size:0.78rem;color:var(--text-muted);margin-top:8px">${t('scenarios_custom_desc')}</p>
+      <div class="sc-custom-grid">
+        <div>
+          <label>${t('scenarios_x_axis')}</label>
+          <select id="scCustomX" onchange="updateAxisPreview('x')">${optionsHtml}</select>
+          <div class="sc-custom-pole" id="scCustomXPole"></div>
+        </div>
+        <div>
+          <label>${t('scenarios_y_axis')}</label>
+          <select id="scCustomY" onchange="updateAxisPreview('y')">${optionsHtml}</select>
+          <div class="sc-custom-pole" id="scCustomYPole"></div>
+        </div>
+      </div>
+      <div class="sc-custom-apikey">
+        <label>${t('scenarios_apikey')}</label>
+        <input type="password" id="scApiKey" value="${esc(savedKey)}" placeholder="sk-ant-..." onchange="localStorage.setItem('fi_anthropic_key', this.value)">
+      </div>
+      <div class="sc-custom-actions">
+        <button class="sc-custom-btn sc-custom-btn-primary" id="scGenerateBtn" onclick="generateCustomScenarios()">${t('scenarios_generate')}</button>
+        <button class="sc-custom-btn sc-custom-btn-reset" id="scResetBtn" onclick="resetToOriginalScenarios()" style="display:none">${t('scenarios_reset')}</button>
+        <span class="sc-custom-status" id="scCustomStatus"></span>
+      </div>
+    </details>`;
+}
+
+function updateAxisPreview(axis) {
+  const sel = document.getElementById(axis === 'x' ? 'scCustomX' : 'scCustomY');
+  const poleEl = document.getElementById(axis === 'x' ? 'scCustomXPole' : 'scCustomYPole');
+  const idx = parseInt(sel.value);
+  if (isNaN(idx)) { poleEl.innerHTML = ''; return; }
+  const df = SCENARIOS_DATA.driving_forces[idx];
+  const lang = LANG;
+  const tf = (ja, en) => lang === 'en' && en ? en : ja;
+  poleEl.innerHTML = `<span style="color:#4a8c5c">+ ${esc(df.direction_positive || '')}</span><br>
+    <span style="color:#b92a38">- ${esc(df.direction_negative || '')}</span>`;
+}
+
+async function generateCustomScenarios() {
+  const xIdx = parseInt(document.getElementById('scCustomX').value);
+  const yIdx = parseInt(document.getElementById('scCustomY').value);
+  const apiKey = document.getElementById('scApiKey').value.trim();
+  const statusEl = document.getElementById('scCustomStatus');
+  const btn = document.getElementById('scGenerateBtn');
+
+  // Validation
+  if (isNaN(xIdx) || isNaN(yIdx)) {
+    statusEl.className = 'sc-custom-status error';
+    statusEl.textContent = t('scenarios_select_df');
+    return;
+  }
+  if (xIdx === yIdx) {
+    statusEl.className = 'sc-custom-status error';
+    statusEl.textContent = t('scenarios_same_axis_error');
+    return;
+  }
+  if (!apiKey) {
+    statusEl.className = 'sc-custom-status error';
+    statusEl.textContent = t('scenarios_no_apikey');
+    return;
+  }
+
+  // Save original data for reset
+  if (!ORIGINAL_SCENARIOS_DATA) {
+    ORIGINAL_SCENARIOS_DATA = JSON.parse(JSON.stringify(SCENARIOS_DATA));
+  }
+
+  const dfs = SCENARIOS_DATA.driving_forces;
+  const dfX = dfs[xIdx];
+  const dfY = dfs[yIdx];
+  const lang = LANG;
+  const tf = (ja, en) => lang === 'en' && en ? en : ja;
+
+  btn.disabled = true;
+  statusEl.className = 'sc-custom-status';
+  statusEl.textContent = t('scenarios_generating');
+
+  // Build axes structure
+  const customAxes = {
+    x: {
+      driving_force_id: dfX.id,
+      label: dfX.name || dfX.name_en,
+      label_en: dfX.name_en || dfX.name,
+      pole_positive: dfX.direction_positive,
+      pole_negative: dfX.direction_negative,
+      pole_positive_en: dfX.direction_positive_en || dfX.direction_positive,
+      pole_negative_en: dfX.direction_negative_en || dfX.direction_negative
+    },
+    y: {
+      driving_force_id: dfY.id,
+      label: dfY.name || dfY.name_en,
+      label_en: dfY.name_en || dfY.name,
+      pole_positive: dfY.direction_positive,
+      pole_negative: dfY.direction_negative,
+      pole_positive_en: dfY.direction_positive_en || dfY.direction_positive,
+      pole_negative_en: dfY.direction_negative_en || dfY.direction_negative
+    }
+  };
+
+  // Build CLA context from ai_analysis data
+  let claContext = '';
+  if (AI_DATA?.cla) {
+    for (const cat of ['Political','Economic','Social','Technological','Legal','Environmental','Overall']) {
+      const c = AI_DATA.cla[cat];
+      if (!c) continue;
+      claContext += `\n### ${cat}\n`;
+      for (const f of ['litany','systemic_causes','worldview','myth_metaphor','key_tension','emerging_narrative']) {
+        if (c[f]) claContext += `- ${f}: ${c[f]}\n`;
+      }
+    }
+  }
+
+  // Build predetermined elements from existing data
+  const predetermined = JSON.stringify(SCENARIOS_DATA.predetermined_elements || [], null, 2);
+
+  // Build DF summary for context
+  const dfSummary = dfs.map(d => `- ${d.id}: ${d.name} (${(d.pestle_categories||[]).join(',')})`).join('\n');
+
+  const prompt = `あなたはシナリオプランニングの専門家であり、優れたナラティブライターです。
+以下の2軸定義に基づき、4つのシナリオを生成してください。
+
+## シナリオの2軸
+
+${JSON.stringify(customAxes, null, 2)}
+
+## 確定要素（全シナリオ共通）
+
+${predetermined}
+
+## CLA分析（全7領域・全層）— シナリオの深層構造
+
+${claContext}
+
+## 全ドライビングフォース（参考）
+
+${dfSummary}
+
+## 時間軸
+
+2030年（4年後）
+
+## 指示
+
+4つのシナリオを生成してください。各シナリオは2x2マトリクスの1象限に対応します。
+
+**シナリオの質の基準:**
+- ナラティブは500-800字の散文形式（箇条書きではなく文章で記述）
+- 「この世界はどう見えるか」（litanyレベルの具体的描写）
+- 「どのようにしてこうなったか」（systemic_causesレベルの経路説明）
+- 「我々にとって何を意味するか」（worldviewレベルの意味づけ）
+- 現在のCLAの myth_metaphor を参照し、各シナリオがどの深層的物語の上に成り立つかを示す
+
+## 出力形式
+
+以下のJSON配列で返してください。JSONのみ、説明は不要です。
+
+\`\`\`json
+[
+  {
+    "id": "sc_01",
+    "quadrant": "top_right",
+    "name": "シナリオ名（印象的かつ本質を突いた日本語名）",
+    "name_en": "English scenario name",
+    "subtitle": "X軸の極 × Y軸の極（短い説明）",
+    "narrative": "500-800字の散文形式ナラティブ",
+    "narrative_en": "English narrative (300-500 words)",
+    "cla": {
+      "litany": "このシナリオ世界の表層的な出来事・状況（2-3文）",
+      "systemic_causes": "この世界を生み出した構造的要因（2-3文）",
+      "worldview": "この世界を支える暗黙の前提（2-3文）",
+      "myth_metaphor": "この世界の深層にある文化的物語（1-2文）"
+    },
+    "key_events": [
+      {"year": 2027, "event": "出来事の説明", "event_en": "English"},
+      {"year": 2028, "event": "出来事の説明", "event_en": "English"},
+      {"year": 2030, "event": "出来事の説明", "event_en": "English"}
+    ],
+    "implications": ["戦略的含意1", "戦略的含意2", "戦略的含意3"],
+    "implications_en": ["Strategic implication 1", "Strategic implication 2", "Strategic implication 3"],
+    "signposts": [
+      {
+        "indicator": "早期警戒指標の名称",
+        "indicator_en": "English indicator name",
+        "current_state": "現在の状態",
+        "trigger_condition": "このシナリオが展開中であることを示す条件",
+        "monitoring_keywords": ["keyword1", "keyword2"]
+      }
+    ],
+    "wild_cards": ["予期せぬ出来事でこのシナリオを加速/破壊するもの"]
+  },
+  {"id": "sc_02", "quadrant": "top_left", "...": "同じ構造"},
+  {"id": "sc_03", "quadrant": "bottom_right", "...": "同じ構造"},
+  {"id": "sc_04", "quadrant": "bottom_left", "...": "同じ構造"}
+]
+\`\`\`
+
+**重要:** top_right = X正×Y正, top_left = X負×Y正, bottom_right = X正×Y負, bottom_left = X負×Y負`;
+
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 16000,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+
+    if (!response.ok) {
+      const err = await response.json().catch(() => ({}));
+      throw new Error(err.error?.message || `API error: ${response.status}`);
+    }
+
+    const result = await response.json();
+    const text = result.content[0].text;
+
+    // Extract JSON from response
+    let scenarios;
+    try {
+      // Try code block extraction first
+      const codeMatch = text.match(/```(?:json)?\s*([\s\S]*?)```/);
+      if (codeMatch) {
+        scenarios = JSON.parse(codeMatch[1].trim());
+      } else {
+        // Try direct parse
+        const jsonStart = text.indexOf('[');
+        const jsonEnd = text.lastIndexOf(']');
+        scenarios = JSON.parse(text.substring(jsonStart, jsonEnd + 1));
+      }
+    } catch (parseErr) {
+      throw new Error('Failed to parse scenario JSON from API response');
+    }
+
+    // Apply colors
+    const colorMap = { top_right: '#4a8c5c', top_left: '#2c8acc', bottom_right: '#cd8a32', bottom_left: '#b92a38' };
+    scenarios.forEach(sc => { sc.color = colorMap[sc.quadrant] || '#783c28'; });
+
+    // Update SCENARIOS_DATA with new axes and scenarios
+    SCENARIOS_DATA.axes = customAxes;
+    SCENARIOS_DATA.scenarios = scenarios;
+    SCENARIOS_DATA.generated_at = new Date().toISOString();
+
+    // Re-render
+    renderScenarios();
+
+    statusEl.className = 'sc-custom-status';
+    statusEl.textContent = '';
+    document.getElementById('scResetBtn').style.display = '';
+
+  } catch (err) {
+    statusEl.className = 'sc-custom-status error';
+    statusEl.textContent = err.message;
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+function resetToOriginalScenarios() {
+  if (ORIGINAL_SCENARIOS_DATA) {
+    SCENARIOS_DATA = JSON.parse(JSON.stringify(ORIGINAL_SCENARIOS_DATA));
+    renderScenarios();
+    document.getElementById('scResetBtn').style.display = 'none';
+    document.getElementById('scCustomStatus').textContent = '';
+  }
 }
 
 // === Load data (lazy loading for performance) ===
