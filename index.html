@@ -442,7 +442,9 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
 function showArticle(category, idx) {
   const a = NEWS_DATA.pestle[category].articles[idx];
   const meta = PESTLE_META[category];
-  openModal(a.title, `
+  const displayTitle = localizedTitle(a, category, idx);
+  const displaySummary = localizedSummary(a, category, idx);
+  openModal(displayTitle, `
     <div class="modal-field">
       <div class="modal-label">${t('category')}</div>
       <div class="modal-value" style="color:${meta.color}">${meta.ja} (${category})</div>
@@ -454,8 +456,9 @@ function showArticle(category, idx) {
     ${a.published ? `<div class="modal-field"><div class="modal-label">${t('published')}</div><div class="modal-value">${esc(a.published)}</div></div>` : ''}
     <div class="modal-field">
       <div class="modal-label">${t('summary')}</div>
-      <div class="modal-value">${esc(a.summary)}</div>
+      <div class="modal-value">${esc(displaySummary)}</div>
     </div>
+    ${a.lang === 'en' && LANG === 'ja' ? `<div class="modal-field"><div class="modal-label">Original</div><div class="modal-value" style="font-size:0.78rem;color:var(--text-muted)">${esc(a.title)}<br>${esc(a.summary)}</div></div>` : ''}
     <div class="modal-field">
       <div class="modal-label">${t('link')}</div>
       <div class="modal-value"><a href="${esc(a.url)}" target="_blank">${esc(a.url)}</a></div>
@@ -525,7 +528,7 @@ function renderOverview() {
         <div class="article-list">
           ${info.articles.slice(0, 3).map((a, i) => `
             <div class="article-item" onclick="showArticle('${cat}', ${i})">
-              <div class="article-title">${esc(a.title)}</div>
+              <div class="article-title">${esc(localizedTitle(a, cat, i))}</div>
               <div class="article-meta">
                 <span class="article-source">${esc(a.source)}</span>
                 <span class="lang-badge">${a.lang === 'ja' ? 'JA' : 'EN'}</span>
@@ -581,15 +584,12 @@ function renderPestle() {
         <div class="article-list">
           ${filtered.map((a, i) => {
             const origIdx = info.articles.indexOf(a);
-            const trans = getTranslation(cat, origIdx);
             return `
               <div class="article-item" onclick="showArticle('${cat}', ${origIdx})">
-                <div class="article-title">${esc(a.title)}</div>
-                ${trans ? `<div class="translated-text" id="trans-${cat}-${origIdx}">${esc(trans.title_translated)}</div>` : ''}
+                <div class="article-title">${esc(localizedTitle(a, cat, origIdx))}</div>
                 <div class="article-meta">
                   <span class="article-source">${esc(a.source)}</span>
                   <span class="lang-badge">${a.lang === 'ja' ? 'JA' : 'EN'}</span>
-                  ${trans ? `<button class="translate-btn" onclick="event.stopPropagation();toggleTranslation('${cat}',${origIdx})">訳</button>` : ''}
                 </div>
               </div>`;
           }).join('')}
@@ -640,12 +640,14 @@ function renderGlobalSearch() {
 
   let results = [];
 
-  // Search news
+  // Search news (search both original and translated text)
   if (NEWS_DATA) {
     for (const [cat, info] of Object.entries(NEWS_DATA.pestle)) {
       info.articles.forEach((a, i) => {
-        if ((a.title + a.summary).toLowerCase().includes(q)) {
-          results.push({ type: 'news', category: cat, title: a.title, sub: a.source, idx: i });
+        const tr = getTranslation(cat, i);
+        const searchText = [a.title, a.summary, tr?.title_translated, tr?.summary_translated].filter(Boolean).join(' ').toLowerCase();
+        if (searchText.includes(q)) {
+          results.push({ type: 'news', category: cat, title: localizedTitle(a, cat, i), sub: a.source, idx: i });
         }
       });
     }
@@ -751,15 +753,28 @@ function renderSignals() {
   `).join('');
 }
 
-// === Translation toggle in PESTLE articles ===
-function toggleTranslation(cat, idx) {
-  const el = document.getElementById(`trans-${cat}-${idx}`);
-  if (el) el.classList.toggle('show');
-}
-
+// === Translation helpers ===
 function getTranslation(cat, idx) {
   if (!AI_DATA || !AI_DATA.translations || !AI_DATA.translations[cat]) return null;
   return AI_DATA.translations[cat].find(t => t.index === idx);
+}
+
+function localizedTitle(article, cat, idx) {
+  // In JA mode: if article is English, show translated title
+  // In EN mode: show original title
+  if (LANG === 'ja' && article.lang === 'en') {
+    const tr = getTranslation(cat, idx);
+    if (tr && tr.title_translated) return tr.title_translated;
+  }
+  return article.title;
+}
+
+function localizedSummary(article, cat, idx) {
+  if (LANG === 'ja' && article.lang === 'en') {
+    const tr = getTranslation(cat, idx);
+    if (tr && tr.summary_translated) return tr.summary_translated;
+  }
+  return article.summary;
 }
 
 // === Load data ===
