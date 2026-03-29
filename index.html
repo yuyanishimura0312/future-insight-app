@@ -6,6 +6,7 @@
 <title>未来洞察支援アプリ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <style>
   :root {
     --bg: #f0e9e1;
@@ -95,19 +96,51 @@
 
   .pestle-section {
     background: var(--card); border: 1px solid var(--border); border-radius: 12px;
-    overflow: hidden;
+    overflow: hidden; transition: box-shadow 0.15s;
   }
+  .pestle-section:hover { box-shadow: 0 4px 16px rgba(120,60,40,0.08); }
   .pestle-header {
     padding: 14px 18px; font-weight: 700; font-size: 0.9rem;
     display: flex; align-items: center; gap: 10px;
     border-bottom: 1px solid var(--border);
+    color: #fff;
   }
   .pestle-badge {
     width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+    background: rgba(255,255,255,0.8);
   }
   .pestle-count {
-    margin-left: auto; font-size: 0.75rem; color: var(--text-muted); font-weight: 400;
+    margin-left: auto; font-size: 0.75rem; color: rgba(255,255,255,0.85); font-weight: 400;
   }
+
+  /* PESTLE dimension filter */
+  .pestle-dim-filters { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .pestle-dim-btn {
+    padding: 5px 14px; border-radius: 20px; font-size: 0.78rem; font-weight: 600;
+    cursor: pointer; transition: all 0.15s; border: 2px solid;
+  }
+  .pestle-dim-btn.active { color: #fff; }
+  .pestle-dim-btn:not(.active) { background: var(--card); }
+
+  /* Trend chart container */
+  .pestle-chart-container {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 20px; margin-bottom: 20px;
+  }
+  .pestle-chart-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 12px; flex-wrap: wrap; gap: 8px;
+  }
+  .pestle-chart-title { font-size: 0.9rem; font-weight: 700; color: var(--accent); }
+  .pestle-chart-range {
+    display: flex; gap: 4px;
+  }
+  .pestle-chart-range button {
+    padding: 4px 10px; border: 1px solid var(--border); border-radius: 6px;
+    background: var(--card); color: var(--text-muted); font-size: 0.72rem;
+    cursor: pointer; transition: all 0.15s;
+  }
+  .pestle-chart-range button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
 
   .article-list { max-height: 400px; overflow-y: auto; }
   .article-item {
@@ -117,11 +150,24 @@
   .article-item:hover { background: var(--card-hover); }
   .article-item:last-child { border-bottom: none; }
   .article-title { font-size: 0.82rem; font-weight: 500; line-height: 1.4; }
+  .article-snippet {
+    font-size: 0.73rem; color: var(--text-muted); margin-top: 3px;
+    line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; overflow: hidden;
+  }
   .article-meta {
     font-size: 0.7rem; color: var(--text-muted); margin-top: 3px;
     display: flex; gap: 8px; align-items: center;
   }
   .article-source { color: var(--accent); font-weight: 500; }
+  .article-relevance {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 0.65rem; color: var(--text-muted);
+  }
+  .article-relevance-bar {
+    width: 40px; height: 4px; border-radius: 2px; background: var(--border); overflow: hidden;
+  }
+  .article-relevance-fill { height: 100%; border-radius: 2px; }
   .lang-badge {
     font-size: 0.6rem; padding: 1px 5px; border-radius: 3px;
     background: #ffe8d7; color: var(--accent);
@@ -280,7 +326,7 @@
   /* Alert badge on PESTLE headers */
   .pestle-alert-badge {
     font-size: 0.6rem; padding: 1px 6px; border-radius: 8px;
-    background: var(--highlight); color: white; font-weight: 600;
+    background: rgba(255,255,255,0.9); color: var(--highlight); font-weight: 600;
     animation: alert-pulse 2s ease-in-out infinite;
   }
   @keyframes alert-pulse {
@@ -459,7 +505,21 @@
 
   <!-- ===== PESTLE ===== -->
   <div class="tab-panel" id="tab-pestle">
-    <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;align-items:center">
+    <!-- Trend Chart -->
+    <div class="pestle-chart-container" id="pestleChartContainer">
+      <div class="pestle-chart-header">
+        <span class="pestle-chart-title" data-i18n="pestle_trend">PESTLE トレンド</span>
+        <div class="pestle-chart-range" id="pestleChartRange">
+          <button onclick="setPestleChartRange('5y')" class="active">5Y</button>
+          <button onclick="setPestleChartRange('10y')">10Y</button>
+          <button onclick="setPestleChartRange('all')">ALL</button>
+        </div>
+      </div>
+      <canvas id="pestleTrendChart" height="200"></canvas>
+    </div>
+
+    <!-- Filters -->
+    <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center">
       <input class="search-input" id="pestleSearch" data-i18n-placeholder="search_news" placeholder="ニュースを検索..." oninput="renderPestle()" style="flex:1;min-width:180px">
       <select id="pestleYearFilter" onchange="renderPestle()" style="padding:8px 12px;border:1px solid var(--border);border-radius:8px;background:var(--card);font-size:0.85rem">
         <option value="latest">最新（当日）</option>
@@ -467,6 +527,7 @@
       </select>
       <span id="pestleTotalCount" style="font-size:0.78rem;color:var(--text-muted)"></span>
     </div>
+    <div class="pestle-dim-filters" id="pestleDimFilters" style="margin-bottom:16px"></div>
     <div class="pestle-grid" id="pestleGrid"></div>
   </div>
 
@@ -556,6 +617,7 @@ const I18N = {
     cla_desc: 'PESTLE各分野のニュースを4つの深度で分析: リタニー（表層）→ 社会的原因 → 世界観 → 神話/メタファー',
     signals_title: 'ウィークシグナル',
     signals_desc: 'ニュースと学術論文から抽出された、将来大きな変化をもたらす可能性のある兆し',
+    pestle_trend: 'PESTLE トレンド',
     stat_news: 'PESTLEニュース', stat_papers: '学術論文', stat_sources: 'ニュースソース',
     stat_date: '収集日', stat_fields: '論文分野',
     stat_sub_news: '6分野 × 20件', stat_sub_sources: '世界各国メディア',
@@ -589,6 +651,7 @@ const I18N = {
     cla_desc: 'Analyzing news through 4 layers: Litany (surface) → Systemic Causes → Worldview → Myth/Metaphor',
     signals_title: 'Weak Signals',
     signals_desc: 'Emerging signs of potential future change extracted from news and academic papers',
+    pestle_trend: 'PESTLE Trends',
     stat_news: 'PESTLE News', stat_papers: 'Academic Papers', stat_sources: 'News Sources',
     stat_date: 'Collection Date', stat_fields: 'Paper Fields',
     stat_sub_news: '6 categories × 20 articles', stat_sub_sources: 'Global media',
@@ -646,6 +709,95 @@ const PESTLE_META = {
   Legal:          { ja: '法律',   color: '#7c5a96', icon: '&#9878;' },
   Environmental:  { ja: '環境',   color: '#3a8c78', icon: '&#127793;' },
 };
+
+// === PESTLE Trend Chart ===
+let pestleChart = null;
+let pestleChartRange = '5y';
+let pestleDimVisible = { Political: true, Economic: true, Social: true, Technological: true, Legal: true, Environmental: true };
+
+function setPestleChartRange(range) {
+  pestleChartRange = range;
+  document.querySelectorAll('#pestleChartRange button').forEach(b => b.classList.remove('active'));
+  document.querySelector(`#pestleChartRange button[onclick*="${range}"]`)?.classList.add('active');
+  renderPestleChart();
+}
+
+function togglePestleDim(dim) {
+  pestleDimVisible[dim] = !pestleDimVisible[dim];
+  renderPestleDimFilters();
+  renderPestle();
+  renderPestleChart();
+}
+
+function renderPestleDimFilters() {
+  const container = document.getElementById('pestleDimFilters');
+  if (!container) return;
+  let html = '';
+  for (const [cat, meta] of Object.entries(PESTLE_META)) {
+    const active = pestleDimVisible[cat];
+    html += `<button class="pestle-dim-btn ${active ? 'active' : ''}" style="border-color:${meta.color};${active ? 'background:' + meta.color : 'color:' + meta.color}" onclick="togglePestleDim('${cat}')">${meta.ja}</button>`;
+  }
+  container.innerHTML = html;
+}
+
+function renderPestleChart() {
+  const idx = PESTLE_HISTORY?._index;
+  if (!idx) return;
+
+  const quarters = Object.keys(idx).filter(k => /^\d{4}Q\d$/.test(k)).sort();
+  if (quarters.length === 0) return;
+
+  // Apply range filter
+  let filtered = quarters;
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  if (pestleChartRange === '5y') {
+    filtered = quarters.filter(q => parseInt(q) >= currentYear - 5);
+  } else if (pestleChartRange === '10y') {
+    filtered = quarters.filter(q => parseInt(q) >= currentYear - 10);
+  }
+
+  const labels = filtered.map(q => q.replace('Q', ' Q'));
+
+  const datasets = [];
+  for (const [cat, meta] of Object.entries(PESTLE_META)) {
+    if (!pestleDimVisible[cat]) continue;
+    datasets.push({
+      label: meta.ja,
+      data: filtered.map(q => idx[q]?.[cat] || 0),
+      borderColor: meta.color,
+      backgroundColor: meta.color + '18',
+      borderWidth: 2,
+      pointRadius: filtered.length > 40 ? 0 : 3,
+      pointHoverRadius: 5,
+      tension: 0.3,
+      fill: false,
+    });
+  }
+
+  const canvas = document.getElementById('pestleTrendChart');
+  if (!canvas) return;
+
+  if (pestleChart) pestleChart.destroy();
+
+  pestleChart = new Chart(canvas, {
+    type: 'line',
+    data: { labels, datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { position: 'bottom', labels: { usePointStyle: true, pointStyle: 'circle', padding: 16, font: { size: 11 } } },
+        tooltip: { backgroundColor: 'rgba(41,29,23,0.9)', titleFont: { size: 12 }, bodyFont: { size: 11 } },
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 10 }, maxTicksLimit: 20 } },
+        y: { beginAtZero: true, grid: { color: '#e0d5cc40' }, ticks: { font: { size: 10 } } },
+      },
+    },
+  });
+}
 
 const FIELD_COLORS = {
   '人文学': '#b92a38', '社会科学': '#cd8a32', '自然科学': '#4a8c5c',
@@ -903,8 +1055,8 @@ function renderOverview() {
     const alertBadge = alertCounts[cat] ? `<span class="pestle-alert-badge">\u26a0 ${alertCounts[cat]}</span>` : '';
     pestleHtml += `
       <div class="pestle-section">
-        <div class="pestle-header">
-          <div class="pestle-badge" style="background:${meta.color}"></div>
+        <div class="pestle-header" style="background:linear-gradient(135deg, ${meta.color} 0%, ${meta.color}cc 100%)">
+          <div class="pestle-badge"></div>
           ${meta.icon} ${meta.ja} ${alertBadge}
           <span class="pestle-count">${info.count}件</span>
         </div>
@@ -1006,9 +1158,13 @@ async function renderPestle() {
     }
   }
 
+  // Render dimension filters
+  renderPestleDimFilters();
+
   let totalCount = 0;
   let html = '';
   for (const [cat, meta] of Object.entries(PESTLE_META)) {
+    if (!pestleDimVisible[cat]) continue;
     let articles = pestleData[cat] || [];
     if (q) articles = articles.filter(a => ((a.title||'') + (a.summary||'') + (a.source||'')).toLowerCase().includes(q));
     totalCount += articles.length;
@@ -1018,20 +1174,26 @@ async function renderPestle() {
 
     html += `
       <div class="pestle-section">
-        <div class="pestle-header">
-          <div class="pestle-badge" style="background:${meta.color}"></div>
+        <div class="pestle-header" style="background:linear-gradient(135deg, ${meta.color} 0%, ${meta.color}cc 100%)">
+          <div class="pestle-badge"></div>
           ${meta.icon} <strong>${meta.ja}</strong>
           <span class="pestle-count">${articles.length.toLocaleString()}件</span>
         </div>
         <div class="article-list">
           ${articles.slice(0, 50).map((a, i) => {
             const title = (yearFilter === 'latest') ? localizedTitle(a, cat, i) : a.title;
+            const summary = (yearFilter === 'latest') ? localizedSummary(a, cat, i) : (a.summary || '');
+            const snippet = (summary || '').substring(0, 120);
+            const relScore = a.relevance_score || 0;
+            const relPct = Math.min(relScore / 10 * 100, 100);
             return `
               <div class="article-item" ${yearFilter === 'latest' ? `onclick="showArticle('${cat}', ${i})"` : (a.url ? `onclick="window.open('${esc(a.url)}','_blank')" style="cursor:pointer"` : '')}>
                 <div class="article-title">${esc(title)}</div>
+                ${snippet ? `<div class="article-snippet">${esc(snippet)}${summary.length > 120 ? '...' : ''}</div>` : ''}
                 <div class="article-meta">
                   <span class="article-source">${esc(a.source)}</span>
-                  ${a.published_date ? `<span style="font-size:0.7rem;color:var(--text-muted)">${esc(a.published_date)}</span>` : ''}
+                  ${a.published_date ? `<span>${esc(a.published_date)}</span>` : ''}
+                  ${relScore ? `<span class="article-relevance"><span class="article-relevance-bar"><span class="article-relevance-fill" style="width:${relPct}%;background:${meta.color}"></span></span>${relScore}</span>` : ''}
                 </div>
               </div>`;
           }).join('')}
@@ -1409,6 +1571,7 @@ async function loadData() {
   renderOverview();
   renderAlerts();
   renderPestle();
+  renderPestleChart();
   renderPapers();
   renderCLA();
   renderSignals();
