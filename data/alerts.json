@@ -1,0 +1,585 @@
+{
+  "generated_at": "2026-03-29T10:30:03.143773+00:00",
+  "total_articles_analyzed": 21165,
+  "alert_counts": {
+    "emergence": 15,
+    "surge": 15,
+    "crossover": 10,
+    "total": 40
+  },
+  "alerts": [
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "portland",
+      "mentions": 23,
+      "ratio": 72.8,
+      "historical_avg": 0.1,
+      "categories": [
+        "Social",
+        "Political"
+      ],
+      "description": "「portland」が過去平均の72.8倍に急増（月平均 0.1→7.7）",
+      "description_en": "\"portland\" surged 72.8x vs historical avg (0.1 → 7.7 per month)"
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "mamdani",
+      "mentions": 21,
+      "ratio": 133.0,
+      "historical_avg": 0.1,
+      "categories": [
+        "Social",
+        "Political",
+        "Economic",
+        "Legal"
+      ],
+      "description": "「mamdani」が過去平均の133.0倍に急増（月平均 0.1→7.0）",
+      "description_en": "\"mamdani\" surged 133.0x vs historical avg (0.1 → 7.0 per month)"
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "grammy",
+      "mentions": 19,
+      "ratio": 60.2,
+      "historical_avg": 0.1,
+      "categories": [
+        "Social",
+        "Political"
+      ],
+      "description": "「grammy」が過去平均の60.2倍に急増（月平均 0.1→6.3）",
+      "description_en": "\"grammy\" surged 60.2x vs historical avg (0.1 → 6.3 per month)"
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "resort",
+      "mentions": 18,
+      "ratio": 114.0,
+      "historical_avg": 0.1,
+      "categories": [
+        "Political",
+        "Economic",
+        "Environmental"
+      ],
+      "description": "「resort」が過去平均の114.0倍に急増（月平均 0.1→6.0）",
+      "description_en": "\"resort\" surged 114.0x vs historical avg (0.1 → 6.0 per month)"
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "ski resort",
+      "mentions": 16,
+      "categories": [
+        "Political",
+        "Economic",
+        "Environmental"
+      ],
+      "description": "「ski resort」が過去に例のない頻度で出現（直近3ヶ月で16回）",
+      "description_en": "\"ski resort\" emerged with 16 mentions in last 3 months (no prior history)"
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "conference exhibition",
+      "mentions": 16,
+      "categories": [
+        "Social",
+        "Technological",
+        "Legal",
+        "Environmental"
+      ],
+      "description": "「conference exhibition」が過去に例のない頻度で出現（直近3ヶ月で16回）",
+      "description_en": "\"conference exhibition\" emerged with 16 mentions in last 3 months (no prior history)"
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "throughout",
+      "mentions": 16,
+      "ratio": 101.3,
+      "historical_avg": 0.1,
+      "categories": [
+        "Social",
+        "Economic"
+      ],
+      "description": "「throughout」が過去平均の101.3倍に急増（月平均 0.1→5.3）",
+      "description_en": "\"throughout\" surged 101.3x vs historical avg (0.1 → 5.3 per month)"
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "exhibition",
+      "mentions": 16,
+      "ratio": 50.7,
+      "historical_avg": 0.1,
+      "categories": [
+        "Social",
+        "Technological",
+        "Legal",
+        "Environmental"
+      ],
+      "description": "「exhibition」が過去平均の50.7倍に急増（月平均 0.1→5.3）",
+      "description_en": "\"exhibition\" surged 50.7x vs historical avg (0.1 → 5.3 per month)"
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "national guard",
+      "mentions": 15,
+      "categories": [
+        "Social",
+        "Political"
+      ],
+      "description": "「national guard」が過去に例のない頻度で出現（直近3ヶ月で15回）",
+      "description_en": "\"national guard\" emerged with 15 mentions in last 3 months (no prior history)"
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "cement",
+      "mentions": 15,
+      "ratio": 47.5,
+      "historical_avg": 0.1,
+      "categories": [
+        "Technological",
+        "Legal",
+        "Environmental"
+      ],
+      "description": "「cement」が過去平均の47.5倍に急増（月平均 0.1→5.0）",
+      "description_en": "\"cement\" surged 47.5x vs historical avg (0.1 → 5.0 per month)"
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "protests iran",
+      "mentions": 14,
+      "categories": [
+        "Political",
+        "Economic",
+        "Legal"
+      ],
+      "description": "「protests iran」が過去に例のない頻度で出現（直近3ヶ月で14回）",
+      "description_en": "\"protests iran\" emerged with 14 mentions in last 3 months (no prior history)"
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "opinion sussan",
+      "mentions": 14,
+      "categories": [
+        "Social",
+        "Environmental"
+      ],
+      "description": "「opinion sussan」が過去に例のない頻度で出現（直近3ヶ月で14回）",
+      "description_en": "\"opinion sussan\" emerged with 14 mentions in last 3 months (no prior history)"
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "sussan ley",
+      "mentions": 14,
+      "categories": [
+        "Social",
+        "Environmental"
+      ],
+      "description": "「sussan ley」が過去に例のない頻度で出現（直近3ヶ月で14回）",
+      "description_en": "\"sussan ley\" emerged with 14 mentions in last 3 months (no prior history)"
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "ley leadership",
+      "mentions": 14,
+      "categories": [
+        "Social",
+        "Environmental"
+      ],
+      "description": "「ley leadership」が過去に例のない頻度で出現（直近3ヶ月で14回）",
+      "description_en": "\"ley leadership\" emerged with 14 mentions in last 3 months (no prior history)"
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "leadership crisis",
+      "mentions": 14,
+      "categories": [
+        "Social",
+        "Environmental"
+      ],
+      "description": "「leadership crisis」が過去に例のない頻度で出現（直近3ヶ月で14回）",
+      "description_en": "\"leadership crisis\" emerged with 14 mentions in last 3 months (no prior history)"
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "crisis liberal",
+      "mentions": 14,
+      "categories": [
+        "Social",
+        "Environmental"
+      ],
+      "description": "「crisis liberal」が過去に例のない頻度で出現（直近3ヶ月で14回）",
+      "description_en": "\"crisis liberal\" emerged with 14 mentions in last 3 months (no prior history)"
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "liberal party",
+      "mentions": 14,
+      "categories": [
+        "Social",
+        "Environmental"
+      ],
+      "description": "「liberal party」が過去に例のない頻度で出現（直近3ヶ月で14回）",
+      "description_en": "\"liberal party\" emerged with 14 mentions in last 3 months (no prior history)"
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "federal agents",
+      "mentions": 14,
+      "ratio": 88.7,
+      "historical_avg": 0.1,
+      "categories": [
+        "Social",
+        "Political"
+      ],
+      "description": "「federal agents」が過去平均の88.7倍に急増（月平均 0.1→4.7）",
+      "description_en": "\"federal agents\" surged 88.7x vs historical avg (0.1 → 4.7 per month)"
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "during widening",
+      "mentions": 13,
+      "categories": [
+        "Political",
+        "Economic",
+        "Legal"
+      ],
+      "description": "「during widening」が過去に例のない頻度で出現（直近3ヶ月で13回）",
+      "description_en": "\"during widening\" emerged with 13 mentions in last 3 months (no prior history)"
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "widening protests",
+      "mentions": 13,
+      "categories": [
+        "Political",
+        "Economic",
+        "Legal"
+      ],
+      "description": "「widening protests」が過去に例のない頻度で出現（直近3ヶ月で13回）",
+      "description_en": "\"widening protests\" emerged with 13 mentions in last 3 months (no prior history)"
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "trump withdraw",
+      "mentions": 13,
+      "categories": [
+        "Social"
+      ],
+      "description": "「trump withdraw」が過去に例のない頻度で出現（直近3ヶ月で13回）",
+      "description_en": "\"trump withdraw\" emerged with 13 mentions in last 3 months (no prior history)"
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "withdraw national",
+      "mentions": 13,
+      "categories": [
+        "Social"
+      ],
+      "description": "「withdraw national」が過去に例のない頻度で出現（直近3ヶ月で13回）",
+      "description_en": "\"withdraw national\" emerged with 13 mentions in last 3 months (no prior history)"
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "guard troops",
+      "mentions": 13,
+      "categories": [
+        "Social"
+      ],
+      "description": "「guard troops」が過去に例のない頻度で出現（直近3ヶ月で13回）",
+      "description_en": "\"guard troops\" emerged with 13 mentions in last 3 months (no prior history)"
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "fungus",
+      "mentions": 13,
+      "ratio": 82.3,
+      "historical_avg": 0.1,
+      "categories": [
+        "Social"
+      ],
+      "description": "「fungus」が過去平均の82.3倍に急増（月平均 0.1→4.3）",
+      "description_en": "\"fungus\" surged 82.3x vs historical avg (0.1 → 4.3 per month)"
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "immigration crackdown",
+      "mentions": 13,
+      "ratio": 41.2,
+      "historical_avg": 0.1,
+      "categories": [
+        "Social",
+        "Political",
+        "Legal"
+      ],
+      "description": "「immigration crackdown」が過去平均の41.2倍に急増（月平均 0.1→4.3）",
+      "description_en": "\"immigration crackdown\" surged 41.2x vs historical avg (0.1 → 4.3 per month)"
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "ailing",
+      "mentions": 11,
+      "ratio": 69.7,
+      "historical_avg": 0.1,
+      "categories": [
+        "Political",
+        "Economic",
+        "Legal"
+      ],
+      "description": "「ailing」が過去平均の69.7倍に急増（月平均 0.1→3.7）",
+      "description_en": "\"ailing\" surged 69.7x vs historical avg (0.1 → 3.7 per month)"
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "tako",
+      "mentions": 11,
+      "ratio": 69.7,
+      "historical_avg": 0.1,
+      "categories": [
+        "Social",
+        "Environmental"
+      ],
+      "description": "「tako」が過去平均の69.7倍に急増（月平均 0.1→3.7）",
+      "description_en": "\"tako\" surged 69.7x vs historical avg (0.1 → 3.7 per month)"
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "obamacare",
+      "mentions": 10,
+      "ratio": 63.3,
+      "historical_avg": 0.1,
+      "categories": [
+        "Political",
+        "Legal"
+      ],
+      "description": "「obamacare」が過去平均の63.3倍に急増（月平均 0.1→3.3）",
+      "description_en": "\"obamacare\" surged 63.3x vs historical avg (0.1 → 3.3 per month)"
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "crisi",
+      "mentions": 9,
+      "ratio": 57.0,
+      "historical_avg": 0.1,
+      "categories": [
+        "Political",
+        "Economic",
+        "Legal",
+        "Environmental"
+      ],
+      "description": "「crisi」が過去平均の57.0倍に急増（月平均 0.1→3.0）",
+      "description_en": "\"crisi\" surged 57.0x vs historical avg (0.1 → 3.0 per month)"
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "clima",
+      "mentions": 8,
+      "ratio": 50.7,
+      "historical_avg": 0.1,
+      "categories": [
+        "Political",
+        "Technological",
+        "Environmental"
+      ],
+      "description": "「clima」が過去平均の50.7倍に急増（月平均 0.1→2.7）",
+      "description_en": "\"clima\" surged 50.7x vs historical avg (0.1 → 2.7 per month)"
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "medium",
+      "topic": "iran",
+      "mentions": 101,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "description": "「iran」が6分野に横断的に出現（Economic, Environmental, Legal, Political, Social, Technological）",
+      "description_en": "\"iran\" appears across 6 PESTLE categories (Economic, Environmental, Legal, Political, Social, Technological)"
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "medium",
+      "topic": "trump",
+      "mentions": 81,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "description": "「trump」が6分野に横断的に出現（Economic, Environmental, Legal, Political, Social, Technological）",
+      "description_en": "\"trump\" appears across 6 PESTLE categories (Economic, Environmental, Legal, Political, Social, Technological)"
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "medium",
+      "topic": "budget",
+      "mentions": 48,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "description": "「budget」が6分野に横断的に出現（Economic, Environmental, Legal, Political, Social, Technological）",
+      "description_en": "\"budget\" appears across 6 PESTLE categories (Economic, Environmental, Legal, Political, Social, Technological)"
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "medium",
+      "topic": "across",
+      "mentions": 27,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "description": "「across」が6分野に横断的に出現（Economic, Environmental, Legal, Political, Social, Technological）",
+      "description_en": "\"across\" appears across 6 PESTLE categories (Economic, Environmental, Legal, Political, Social, Technological)"
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "medium",
+      "topic": "world",
+      "mentions": 27,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "description": "「world」が6分野に横断的に出現（Economic, Environmental, Legal, Political, Social, Technological）",
+      "description_en": "\"world\" appears across 6 PESTLE categories (Economic, Environmental, Legal, Political, Social, Technological)"
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "medium",
+      "topic": "march",
+      "mentions": 27,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "description": "「march」が6分野に横断的に出現（Economic, Environmental, Legal, Political, Social, Technological）",
+      "description_en": "\"march\" appears across 6 PESTLE categories (Economic, Environmental, Legal, Political, Social, Technological)"
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "medium",
+      "topic": "government",
+      "mentions": 24,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "description": "「government」が6分野に横断的に出現（Economic, Environmental, Legal, Political, Social, Technological）",
+      "description_en": "\"government\" appears across 6 PESTLE categories (Economic, Environmental, Legal, Political, Social, Technological)"
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "medium",
+      "topic": "plan",
+      "mentions": 23,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "description": "「plan」が6分野に横断的に出現（Economic, Environmental, Legal, Political, Social, Technological）",
+      "description_en": "\"plan\" appears across 6 PESTLE categories (Economic, Environmental, Legal, Political, Social, Technological)"
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "medium",
+      "topic": "india",
+      "mentions": 23,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "description": "「india」が6分野に横断的に出現（Economic, Environmental, Legal, Political, Social, Technological）",
+      "description_en": "\"india\" appears across 6 PESTLE categories (Economic, Environmental, Legal, Political, Social, Technological)"
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "medium",
+      "topic": "contra",
+      "mentions": 23,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "description": "「contra」が6分野に横断的に出現（Economic, Environmental, Legal, Political, Social, Technological）",
+      "description_en": "\"contra\" appears across 6 PESTLE categories (Economic, Environmental, Legal, Political, Social, Technological)"
+    }
+  ]
+}

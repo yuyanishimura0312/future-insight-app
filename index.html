@@ -217,6 +217,69 @@
   .translated-text { font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; font-style: italic; display: none; }
   .translated-text.show { display: block; }
 
+  /* Alerts */
+  .alerts-panel {
+    margin-bottom: 24px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    overflow: hidden;
+  }
+  .alerts-panel-header {
+    padding: 14px 18px; font-weight: 700; font-size: 0.95rem;
+    display: flex; align-items: center; gap: 10px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(90deg, #fdf0e8 0%, var(--card) 100%);
+  }
+  .alerts-panel-header .alert-total-badge {
+    margin-left: auto; font-size: 0.7rem; font-weight: 600;
+    padding: 2px 10px; border-radius: 10px;
+    background: var(--highlight); color: white;
+  }
+  .alert-list { max-height: 480px; overflow-y: auto; }
+  .alert-item {
+    padding: 12px 18px; border-bottom: 1px solid var(--border);
+    display: flex; align-items: flex-start; gap: 12px;
+    transition: background 0.1s;
+  }
+  .alert-item:hover { background: var(--card-hover); }
+  .alert-item:last-child { border-bottom: none; }
+  .alert-icon {
+    flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem;
+  }
+  .alert-icon.emergence { background: #fde8e8; }
+  .alert-icon.surge { background: #fff3e0; }
+  .alert-icon.crossover { background: #e8f0ff; }
+  .alert-body { flex: 1; min-width: 0; }
+  .alert-topic {
+    font-size: 0.88rem; font-weight: 700; color: var(--accent);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .alert-type-badge {
+    font-size: 0.6rem; padding: 1px 6px; border-radius: 4px;
+    font-weight: 600; text-transform: uppercase;
+  }
+  .alert-type-badge.emergence { background: #fde8e8; color: #b92a38; }
+  .alert-type-badge.surge { background: #fff3e0; color: #cd8a32; }
+  .alert-type-badge.crossover { background: #e8f0ff; color: #2c68a0; }
+  .alert-desc { font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; line-height: 1.5; }
+  .alert-cats { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 5px; }
+  .alert-cat-tag {
+    font-size: 0.6rem; padding: 1px 6px; border-radius: 3px;
+    background: #ffe8d7; color: var(--accent);
+  }
+
+  /* Alert badge on PESTLE headers */
+  .pestle-alert-badge {
+    font-size: 0.6rem; padding: 1px 6px; border-radius: 8px;
+    background: var(--highlight); color: white; font-weight: 600;
+    animation: alert-pulse 2s ease-in-out infinite;
+  }
+  @keyframes alert-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+
   /* Scrollbar */
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: transparent; }
@@ -256,6 +319,9 @@
   <!-- ===== OVERVIEW ===== -->
   <div class="tab-panel active" id="tab-overview">
     <div class="stats-row" id="overviewStats"></div>
+
+    <!-- Alert Panel -->
+    <div id="alertsPanel"></div>
 
     <h3 style="font-size:0.9rem;color:var(--text-muted);margin-bottom:14px" data-i18n="pestle_summary">PESTLEサマリー</h3>
     <div class="pestle-grid" id="overviewPestle"></div>
@@ -322,6 +388,7 @@
 let NEWS_DATA = null;
 let PAPERS_DATA = [];
 let AI_DATA = null;
+let ALERTS_DATA = null;
 let PAPERS_TRANS = {};  // index -> {title_ja, summary_ja}
 let LANG = 'ja';
 
@@ -351,6 +418,13 @@ const I18N = {
     summary: '要約・メモ', link: 'リンク', relevance: '関連度スコア',
     field: '分野', authors: '著者', unknown: '不明',
     last_updated: '最終更新',
+    alerts_title: '新兆候アラート',
+    alerts_desc: '過去2年の蓄積データと比較して検出された、新たな変化の兆候',
+    alert_emergence: '初出',
+    alert_surge: '急増',
+    alert_crossover: '横断',
+    alert_mentions: '回出現',
+    alert_ratio: '倍に急増',
   },
   en: {
     app_title: 'Future Insight App',
@@ -377,6 +451,13 @@ const I18N = {
     summary: 'Summary', link: 'Link', relevance: 'Relevance Score',
     field: 'Field', authors: 'Authors', unknown: 'Unknown',
     last_updated: 'Last updated',
+    alerts_title: 'Emerging Signal Alerts',
+    alerts_desc: 'New change signals detected by comparing against 2 years of historical data',
+    alert_emergence: 'NEW',
+    alert_surge: 'SURGE',
+    alert_crossover: 'CROSS',
+    alert_mentions: ' mentions',
+    alert_ratio: 'x surge',
   }
 };
 
@@ -387,6 +468,7 @@ function toggleLang() {
   document.getElementById('langToggleBtn').textContent = LANG === 'ja' ? 'EN' : 'JA';
   applyI18n();
   renderOverview();
+  renderAlerts();
   renderPestle();
   renderPapers();
   renderCLA();
@@ -499,6 +581,87 @@ function showPaper(idx) {
 }
 
 // === Render Overview ===
+// === Render Alerts ===
+function renderAlerts() {
+  const panel = document.getElementById('alertsPanel');
+  if (!ALERTS_DATA || !ALERTS_DATA.alerts || ALERTS_DATA.alerts.length === 0) {
+    panel.innerHTML = '';
+    return;
+  }
+
+  const alerts = ALERTS_DATA.alerts;
+  const icons = { EMERGENCE: '\u26a0\ufe0f', SURGE: '\ud83d\udcc8', CROSSOVER: '\ud83d\udd00' };
+  const typeLabels = { EMERGENCE: t('alert_emergence'), SURGE: t('alert_surge'), CROSSOVER: t('alert_crossover') };
+  const catColors = {
+    Political: 'var(--P)', Economic: 'var(--E)', Social: 'var(--S)',
+    Technological: 'var(--T)', Legal: 'var(--L)', Environmental: 'var(--En)',
+  };
+  const catJa = {
+    Political: '\u653f\u6cbb', Economic: '\u7d4c\u6e08', Social: '\u793e\u4f1a',
+    Technological: '\u6280\u8853', Legal: '\u6cd5\u5f8b', Environmental: '\u74b0\u5883',
+  };
+
+  let html = `
+    <div class="alerts-panel">
+      <div class="alerts-panel-header">
+        \u26a0\ufe0f ${t('alerts_title')}
+        <span style="font-size:0.75rem;font-weight:400;color:var(--text-muted);margin-left:8px">${t('alerts_desc')}</span>
+        <span class="alert-total-badge">${alerts.length}</span>
+      </div>
+      <div class="alert-list">`;
+
+  for (const a of alerts) {
+    const typeCls = a.type.toLowerCase();
+    const icon = icons[a.type] || '\u26a0\ufe0f';
+    const typeLabel = typeLabels[a.type] || a.type;
+    const desc = LANG === 'ja' ? a.description : (a.description_en || a.description);
+
+    let detail = '';
+    if (a.type === 'SURGE' && a.ratio) {
+      detail = `<span style="color:var(--highlight);font-weight:600">${a.ratio}${t('alert_ratio')}</span>`;
+    } else if (a.type === 'EMERGENCE') {
+      detail = `<span style="color:#b92a38;font-weight:600">${a.mentions}${t('alert_mentions')}</span>`;
+    } else if (a.type === 'CROSSOVER') {
+      detail = `<span style="color:#2c68a0;font-weight:600">${a.n_categories} categories</span>`;
+    }
+
+    const catTags = (a.categories || []).map(c => {
+      const label = LANG === 'ja' ? (catJa[c] || c) : c;
+      const color = catColors[c] || 'var(--accent)';
+      return `<span class="alert-cat-tag" style="border-left:2px solid ${color}">${label}</span>`;
+    }).join('');
+
+    html += `
+      <div class="alert-item">
+        <div class="alert-icon ${typeCls}">${icon}</div>
+        <div class="alert-body">
+          <div class="alert-topic">
+            ${esc(a.topic)}
+            <span class="alert-type-badge ${typeCls}">${typeLabel}</span>
+            ${detail}
+          </div>
+          <div class="alert-desc">${esc(desc)}</div>
+          <div class="alert-cats">${catTags}</div>
+        </div>
+      </div>`;
+  }
+
+  html += '</div></div>';
+  panel.innerHTML = html;
+}
+
+// Count alerts per PESTLE category for badge display
+function getAlertCountByCategory() {
+  if (!ALERTS_DATA || !ALERTS_DATA.alerts) return {};
+  const counts = {};
+  for (const a of ALERTS_DATA.alerts) {
+    for (const cat of (a.categories || [])) {
+      counts[cat] = (counts[cat] || 0) + 1;
+    }
+  }
+  return counts;
+}
+
 function renderOverview() {
   if (!NEWS_DATA) return;
 
@@ -522,11 +685,13 @@ function renderOverview() {
   for (const [cat, meta] of Object.entries(PESTLE_META)) {
     const info = NEWS_DATA.pestle[cat];
     if (!info) continue;
+    const alertCounts = getAlertCountByCategory();
+    const alertBadge = alertCounts[cat] ? `<span class="pestle-alert-badge">\u26a0 ${alertCounts[cat]}</span>` : '';
     pestleHtml += `
       <div class="pestle-section">
         <div class="pestle-header">
           <div class="pestle-badge" style="background:${meta.color}"></div>
-          ${meta.icon} ${meta.ja}
+          ${meta.icon} ${meta.ja} ${alertBadge}
           <span class="pestle-count">${info.count}件</span>
         </div>
         <div class="article-list">
@@ -717,15 +882,21 @@ function renderCLA() {
   html += `</div>`;
 
   // Show current CLA data (only current quarter has real data for now)
-  if (claQuarterIdx > 0) {
+  // Determine CLA data source: quarterly_cla or current cla
+  const selectedQuarter = quarters[claQuarterIdx];
+  const qClaData = (AI_DATA.quarterly_cla && AI_DATA.quarterly_cla[selectedQuarter])
+    ? AI_DATA.quarterly_cla[selectedQuarter]
+    : (claQuarterIdx === 0 ? AI_DATA.cla : null);
+
+  if (!qClaData) {
     html += `<div style="padding:24px;text-align:center;color:var(--text-muted);background:var(--card);border-radius:10px;">
       <div style="font-size:1.5rem;margin-bottom:8px">📊</div>
-      <div style="font-size:0.92rem">${quarters[claQuarterIdx].replace('-','年')}月のCLA分析データ</div>
+      <div style="font-size:0.92rem">${selectedQuarter.replace('-','年')}月のCLA分析データ</div>
       <div style="font-size:0.82rem;margin-top:4px">データ収集中 — 次回の四半期分析で更新されます</div>
     </div>`;
   } else {
     for (const [cat, meta] of Object.entries(PESTLE_META)) {
-      const cla = AI_DATA.cla[cat];
+      const cla = qClaData[cat];
       if (!cla) continue;
 
       html += `
@@ -733,7 +904,7 @@ function renderCLA() {
           <div class="cla-cat-header">
             <div class="pestle-badge" style="background:${meta.color}"></div>
             ${meta.icon} ${meta.ja}
-            <span style="font-size:0.72rem;color:var(--text-muted);margin-left:auto">${currentDate}</span>
+            <span style="font-size:0.72rem;color:var(--text-muted);margin-left:auto">${selectedQuarter}</span>
           </div>
           <div class="cla-layer litany">
             <div class="cla-layer-label">${t('layer1')}</div>
@@ -876,8 +1047,16 @@ async function loadData() {
     console.warn('Papers translations not found:', e);
   }
 
+  try {
+    const alertsResp = await fetch('data/alerts.json');
+    ALERTS_DATA = await alertsResp.json();
+  } catch (e) {
+    console.warn('Alerts data not found:', e);
+  }
+
   applyI18n();
   renderOverview();
+  renderAlerts();
   renderPestle();
   renderPapers();
   renderCLA();
