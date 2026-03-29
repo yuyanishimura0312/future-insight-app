@@ -322,6 +322,7 @@
 let NEWS_DATA = null;
 let PAPERS_DATA = [];
 let AI_DATA = null;
+let PAPERS_TRANS = {};  // index -> {title_ja, summary_ja}
 let LANG = 'ja';
 
 const I18N = {
@@ -472,7 +473,9 @@ function showArticle(category, idx) {
 
 function showPaper(idx) {
   const p = PAPERS_DATA[idx];
-  openModal(p.title, `
+  const displayTitle = localizedPaperTitle(p, idx);
+  const displaySummary = localizedPaperSummary(p, idx);
+  openModal(displayTitle, `
     <div class="modal-field">
       <div class="modal-label">${t('field')}</div>
       <div class="modal-value"><span class="paper-field-badge" style="background:${FIELD_COLORS[p.field] || 'var(--accent)'}">${esc(p.field)}</span>${p.subfield ? ' / ' + esc(p.subfield) : ''}</div>
@@ -483,11 +486,12 @@ function showPaper(idx) {
     </div>
     <div class="modal-field">
       <div class="modal-label">${t('summary')}</div>
-      <div class="modal-value">${esc(p.summary)}</div>
+      <div class="modal-value">${esc(displaySummary)}</div>
     </div>
-    ${p.published_date ? `<div class="modal-field"><div class="modal-label">公開日</div><div class="modal-value">${esc(p.published_date)}</div></div>` : ''}
+    ${(p.language || 'en') === 'en' && LANG === 'ja' && PAPERS_TRANS[idx] ? `<div class="modal-field"><div class="modal-label">Original</div><div class="modal-value" style="font-size:0.78rem;color:var(--text-muted)">${esc(p.title)}<br>${esc(p.summary)}</div></div>` : ''}
+    ${p.published_date ? `<div class="modal-field"><div class="modal-label">${t('published')}</div><div class="modal-value">${esc(p.published_date)}</div></div>` : ''}
     <div class="modal-field">
-      <div class="modal-label">リンク</div>
+      <div class="modal-label">${t('link')}</div>
       <div class="modal-value"><a href="${esc(p.source_url)}" target="_blank">${esc(p.source_url)}</a></div>
     </div>
     ${p.doi ? `<div class="modal-field"><div class="modal-label">DOI</div><div class="modal-value"><a href="https://doi.org/${esc(p.doi)}" target="_blank">${esc(p.doi)}</a></div></div>` : ''}
@@ -554,7 +558,7 @@ function renderOverview() {
         </div>
         ${papers.slice(0, 2).map(p => `
           <div class="paper-item" style="cursor:pointer" onclick="showPaper(${p._idx})">
-            <div class="paper-title">${esc(p.title)}</div>
+            <div class="paper-title">${esc(localizedPaperTitle(p, p._idx))}</div>
             <div class="paper-authors">${esc((p.authors || '').substring(0, 80))}${(p.authors || '').length > 80 ? '...' : ''}</div>
           </div>
         `).join('')}
@@ -620,7 +624,7 @@ function renderPapers() {
         <div class="article-list">
           ${papers.map(p => `
             <div class="paper-item" style="cursor:pointer" onclick="showPaper(${p._idx})">
-              <div class="paper-title">${esc(p.title)}</div>
+              <div class="paper-title">${esc(localizedPaperTitle(p, p._idx))}</div>
               <div class="paper-authors">${esc((p.authors || '').substring(0, 100))}</div>
             </div>
           `).join('')}
@@ -653,10 +657,12 @@ function renderGlobalSearch() {
     }
   }
 
-  // Search papers
+  // Search papers (search both original and translated text)
   PAPERS_DATA.forEach((p, i) => {
-    if ((p.title + p.summary + p.authors).toLowerCase().includes(q)) {
-      results.push({ type: 'paper', category: p.field, title: p.title, sub: (p.authors || '').substring(0, 60), idx: i });
+    const ptr = PAPERS_TRANS[i];
+    const searchText = [p.title, p.summary, p.authors, ptr?.title_ja, ptr?.summary_ja].filter(Boolean).join(' ').toLowerCase();
+    if (searchText.includes(q)) {
+      results.push({ type: 'paper', category: p.field, title: localizedPaperTitle(p, i), sub: (p.authors || '').substring(0, 60), idx: i });
     }
   });
 
@@ -777,6 +783,22 @@ function localizedSummary(article, cat, idx) {
   return article.summary;
 }
 
+function localizedPaperTitle(paper, idx) {
+  if (LANG === 'ja' && (paper.language || 'en') === 'en') {
+    const tr = PAPERS_TRANS[idx];
+    if (tr && tr.title_ja) return tr.title_ja;
+  }
+  return paper.title;
+}
+
+function localizedPaperSummary(paper, idx) {
+  if (LANG === 'ja' && (paper.language || 'en') === 'en') {
+    const tr = PAPERS_TRANS[idx];
+    if (tr && tr.summary_ja) return tr.summary_ja;
+  }
+  return paper.summary;
+}
+
 // === Load data ===
 async function loadData() {
   try {
@@ -799,6 +821,14 @@ async function loadData() {
     AI_DATA = await aiResp.json();
   } catch (e) {
     console.warn('AI analysis data not found:', e);
+  }
+
+  try {
+    const ptResp = await fetch('data/papers_translations.json');
+    const ptData = await ptResp.json();
+    ptData.forEach(t => { PAPERS_TRANS[t.index] = t; });
+  } catch (e) {
+    console.warn('Papers translations not found:', e);
   }
 
   applyI18n();

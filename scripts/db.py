@@ -2,6 +2,7 @@
 SQLite database module for Future Insight App.
 Unified DB for PESTLE news + academic papers + trends.
 """
+from __future__ import annotations
 
 import sqlite3
 import json
