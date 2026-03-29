@@ -931,6 +931,7 @@
         <option value="en" data-i18n="papers_lang_en">英語</option>
         <option value="ja" data-i18n="papers_lang_ja">日本語</option>
       </select>
+      <button class="papers-sort-btn" id="papersTransFilter" onclick="toggleTransFilter()" data-i18n="papers_ja_only">日本語訳のみ</button>
       <button class="papers-sort-btn active" id="papersSortDate" onclick="setPapersSort('date')" data-i18n="papers_sort_date">新しい順</button>
       <button class="papers-sort-btn" id="papersSortTitle" onclick="setPapersSort('title')" data-i18n="papers_sort_title">タイトル順</button>
     </div>
@@ -1059,6 +1060,7 @@ const I18N = {
     papers_no_results: '条件に一致する論文がありません',
     papers_no_results_sub: '検索条件やフィルタを変更してみてください',
     papers_subfield: 'サブ分野', papers_language: '言語',
+    papers_ja_only: '日本語訳のみ',
     field_humanities: '人文学', field_social: '社会科学', field_natural: '自然科学',
     field_engineering: '工学', field_arts: '芸術',
     search_min: '2文字以上で検索してください', found: '件見つかりました',
@@ -1136,6 +1138,7 @@ const I18N = {
     papers_no_results_sub: 'Try adjusting your search or filters',
     papers_subfield: 'Subfield', papers_language: 'Language',
     field_humanities: 'Humanities', field_social: 'Social Sciences', field_natural: 'Natural Sciences',
+    papers_ja_only: 'Japanese only',
     field_engineering: 'Engineering', field_arts: 'Arts',
     search_min: 'Enter at least 2 characters', found: ' results found',
     layer1: 'Layer 1: Litany (Surface)', layer2: 'Layer 2: Systemic Causes',
@@ -1400,7 +1403,7 @@ async function showPaper(idx) {
   openModal(displayTitle, `
     <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;">
       <span class="paper-field-badge" style="background:${color}">${esc(full.field)}</span>
-      ${full.subfield ? `<span class="paper-subfield-tag">${esc(full.subfield)}</span>` : ''}
+      ${full.subfield ? `<span class="paper-subfield-tag">${esc(localizedSubfield(full.subfield))}</span>` : ''}
       <span class="paper-lang-badge${lang === 'ja' ? ' ja' : ''}">${lang.toUpperCase()}</span>
       ${full.published_date ? `<span style="font-size:0.72rem;color:var(--text-muted);padding:2px 0;margin-left:auto">${esc(full.published_date)}</span>` : ''}
     </div>
@@ -1736,6 +1739,13 @@ function filterByField(field) {
   renderPapers();
 }
 
+let _papersJaOnly = false;
+function toggleTransFilter() {
+  _papersJaOnly = !_papersJaOnly;
+  document.getElementById('papersTransFilter').classList.toggle('active', _papersJaOnly);
+  renderPapers();
+}
+
 function renderPapersStats(byField, totalShown) {
   const statsGrid = document.getElementById('papersStatsGrid');
   if (!statsGrid) return;
@@ -1777,11 +1787,16 @@ function renderPapers() {
     if (q) {
       const tr = PAPERS_TRANS[i];
       const searchable = (p.title + ' ' + (p.summary || '') + ' ' + (p.authors || '') + ' ' + p.field + ' ' + (p.subfield || '') +
+        ' ' + (p.title_ja || '') + ' ' + (p.summary_ja || '') +
         (tr ? ' ' + (tr.title_ja || '') + ' ' + (tr.summary_ja || '') : '')).toLowerCase();
       if (!searchable.includes(q)) return;
     }
     if (fieldFilter && p.field !== fieldFilter) return;
     if (langFilter && (p.language || 'en') !== langFilter) return;
+    if (_papersJaOnly) {
+      const hasJa = (p.language === 'ja') || p.title_ja || (PAPERS_TRANS[i] && PAPERS_TRANS[i].title_ja);
+      if (!hasJa) return;
+    }
     if (decade) {
       const yr = parseInt((p.published_date || '').substring(0, 4));
       const d = parseInt(decade);
@@ -2102,7 +2117,9 @@ function localizedSummary(article, cat, idx) {
 }
 
 function localizedPaperTitle(paper, idx) {
-  if (LANG === 'ja' && (paper.language || 'en') === 'en') {
+  if (LANG === 'ja' && (paper.language || 'en') !== 'ja') {
+    // Check inline translation first, then external translations
+    if (paper.title_ja) return paper.title_ja;
     const tr = PAPERS_TRANS[idx];
     if (tr && tr.title_ja) return tr.title_ja;
   }
@@ -2110,7 +2127,8 @@ function localizedPaperTitle(paper, idx) {
 }
 
 function localizedPaperSummary(paper, idx) {
-  if (LANG === 'ja' && (paper.language || 'en') === 'en') {
+  if (LANG === 'ja' && (paper.language || 'en') !== 'ja') {
+    if (paper.summary_ja) return paper.summary_ja;
     const tr = PAPERS_TRANS[idx];
     if (tr && tr.summary_ja) return tr.summary_ja;
   }
