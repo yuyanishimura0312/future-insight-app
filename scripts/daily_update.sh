@@ -45,13 +45,18 @@ log "Step 3: Detecting alerts..."
 python3 detect_alerts.py >> "$LOG_FILE" 2>&1
 log "  Alert detection done."
 
-# Step 4: Update history files from database
-log "Step 4: Updating history from database..."
+# Step 4: Collect historical data (1 year per day, 1900-2025 cycling)
+log "Step 4: Collecting historical PESTLE data..."
+python3 collect_historical_daily.py >> "$LOG_FILE" 2>&1
+log "  Historical collection done."
+
+# Step 5: Update history files from database
+log "Step 5: Updating history from database..."
 python3 update_history.py >> "$LOG_FILE" 2>&1
 log "  History update done."
 
-# Step 5: Git commit and push
-log "Step 5: Deploying to GitHub Pages..."
+# Step 6: Git commit and push
+log "Step 6: Deploying to GitHub Pages..."
 cd "$PROJECT_DIR"
 
 # Only commit if data files changed
