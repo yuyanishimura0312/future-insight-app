@@ -536,6 +536,7 @@
 // === Data (injected by build script) ===
 let NEWS_DATA = null;
 let PAPERS_DATA = [];
+let PAPERS_FULL = null;  // full data loaded on demand
 let AI_DATA = null;
 let ALERTS_DATA = null;
 let PESTLE_HISTORY = null;
@@ -737,30 +738,46 @@ function showArticle(category, idx) {
   `);
 }
 
-function showPaper(idx) {
+async function showPaper(idx) {
   const p = PAPERS_DATA[idx];
-  const displayTitle = localizedPaperTitle(p, idx);
-  const displaySummary = localizedPaperSummary(p, idx);
+  // Load full data on first click
+  if (!PAPERS_FULL) {
+    openModal(p.title, `<div style="padding:20px;color:var(--text-muted)">詳細データを読み込み中...</div>`);
+    try {
+      const resp = await fetch('data/papers.json?v=' + Date.now());
+      PAPERS_FULL = await resp.json();
+    } catch (e) {
+      openModal(p.title, `<div style="padding:20px">
+        <div class="modal-field"><div class="modal-label">${t('field')}</div><div class="modal-value">${esc(p.field)}</div></div>
+        <div class="modal-field"><div class="modal-label">${t('authors')}</div><div class="modal-value">${esc(p.authors || t('unknown'))}</div></div>
+        <div class="modal-field"><div class="modal-label">${t('link')}</div><div class="modal-value"><a href="${esc(p.source_url)}" target="_blank">${esc(p.source_url)}</a></div></div>
+      </div>`);
+      return;
+    }
+  }
+  const full = PAPERS_FULL[idx] || p;
+  const displayTitle = localizedPaperTitle(full, idx);
+  const displaySummary = localizedPaperSummary(full, idx);
   openModal(displayTitle, `
     <div class="modal-field">
       <div class="modal-label">${t('field')}</div>
-      <div class="modal-value"><span class="paper-field-badge" style="background:${FIELD_COLORS[p.field] || 'var(--accent)'}">${esc(p.field)}</span>${p.subfield ? ' / ' + esc(p.subfield) : ''}</div>
+      <div class="modal-value"><span class="paper-field-badge" style="background:${FIELD_COLORS[full.field] || 'var(--accent)'}">${esc(full.field)}</span>${full.subfield ? ' / ' + esc(full.subfield) : ''}</div>
     </div>
     <div class="modal-field">
       <div class="modal-label">${t('authors')}</div>
-      <div class="modal-value">${esc(p.authors || t('unknown'))}</div>
+      <div class="modal-value">${esc(full.authors || t('unknown'))}</div>
     </div>
     <div class="modal-field">
       <div class="modal-label">${t('summary')}</div>
       <div class="modal-value">${esc(displaySummary)}</div>
     </div>
-    ${(p.language || 'en') === 'en' && LANG === 'ja' && PAPERS_TRANS[idx] ? `<div class="modal-field"><div class="modal-label">Original</div><div class="modal-value" style="font-size:0.78rem;color:var(--text-muted)">${esc(p.title)}<br>${esc(p.summary)}</div></div>` : ''}
-    ${p.published_date ? `<div class="modal-field"><div class="modal-label">${t('published')}</div><div class="modal-value">${esc(p.published_date)}</div></div>` : ''}
+    ${(full.language || 'en') === 'en' && LANG === 'ja' && PAPERS_TRANS[idx] ? `<div class="modal-field"><div class="modal-label">Original</div><div class="modal-value" style="font-size:0.78rem;color:var(--text-muted)">${esc(full.title)}<br>${esc(full.summary)}</div></div>` : ''}
+    ${full.published_date ? `<div class="modal-field"><div class="modal-label">${t('published')}</div><div class="modal-value">${esc(full.published_date)}</div></div>` : ''}
     <div class="modal-field">
       <div class="modal-label">${t('link')}</div>
-      <div class="modal-value"><a href="${esc(p.source_url)}" target="_blank">${esc(p.source_url)}</a></div>
+      <div class="modal-value"><a href="${esc(full.source_url)}" target="_blank">${esc(full.source_url)}</a></div>
     </div>
-    ${p.doi ? `<div class="modal-field"><div class="modal-label">DOI</div><div class="modal-value"><a href="https://doi.org/${esc(p.doi)}" target="_blank">${esc(p.doi)}</a></div></div>` : ''}
+    ${full.doi ? `<div class="modal-field"><div class="modal-label">DOI</div><div class="modal-value"><a href="https://doi.org/${esc(full.doi)}" target="_blank">${esc(full.doi)}</a></div></div>` : ''}
   `);
 }
 
@@ -963,18 +980,15 @@ async function renderPestle() {
   let pestleData = {};
   const langFilter = (a) => !a.lang || a.lang === 'ja' || a.lang === 'en';
 
-  if (PESTLE_HISTORY) {
-    for (const [qk, cats] of Object.entries(PESTLE_HISTORY)) {
-      if (qk === 'unknown') continue;
-      if (yearFilter !== 'latest' && yearFilter !== 'all' && !qk.startsWith(yearFilter)) continue;
-      if (yearFilter === 'latest') {
-        // Show only most recent quarter
-        const sortedQs = Object.keys(PESTLE_HISTORY).filter(k => k !== 'unknown').sort();
-        if (qk !== sortedQs[sortedQs.length - 1]) continue;
-      }
+  if (PESTLE_HISTORY && _pestleHistoryLoaded) {
+    const validQs = Object.keys(PESTLE_HISTORY).filter(k => /^\d{4}Q\d$/.test(k)).sort();
+    for (const qk of validQs) {
+      if (yearFilter !== 'all' && yearFilter !== 'latest' && !qk.startsWith(yearFilter)) continue;
+      if (yearFilter === 'latest' && qk !== validQs[validQs.length - 1]) continue;
+      const cats = PESTLE_HISTORY[qk];
       for (const [cat, info] of Object.entries(cats)) {
         if (!pestleData[cat]) pestleData[cat] = [];
-        pestleData[cat].push(...(info.articles || []).filter(langFilter));
+        pestleData[cat].push(...(info.articles || []));
       }
     }
   }
