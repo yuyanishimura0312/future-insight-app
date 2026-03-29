@@ -9,7 +9,7 @@ import feedparser
 import json
 import re
 import hashlib
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from collections import defaultdict
 from db import save_collection, get_stats
@@ -236,7 +236,9 @@ def main():
     output_dir = Path(__file__).parent.parent / "data"
     output_dir.mkdir(exist_ok=True)
 
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    # Use JST (UTC+9) so the date matches the local calendar day in Japan
+    JST = timezone(timedelta(hours=9))
+    today = datetime.now(JST).strftime("%Y-%m-%d")
     output_file = output_dir / f"pestle_{today}.json"
 
     print(f"=== PESTLE News Collector ({today}) ===\n")
