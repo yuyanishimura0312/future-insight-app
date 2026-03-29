@@ -2029,6 +2029,10 @@ function getApiKey() {
 
 function renderCustomAxesPanel() {
   const panel = document.getElementById('scenariosCustomPanel');
+  if (!panel) return;
+  panel.style.display = 'none'; // Phase 2 feature — hidden for now
+  panel.innerHTML = '';
+  return;
   if (!SCENARIOS_DATA?.driving_forces?.length) { panel.innerHTML = ''; return; }
 
   const lang = LANG;
