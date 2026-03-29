@@ -182,6 +182,41 @@
   }
   .modal-close:hover { color: var(--text); }
 
+  /* CLA */
+  .cla-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .cla-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  .cla-cat-header { font-size: 0.95rem; font-weight: 700; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .cla-layer { margin-bottom: 12px; padding-left: 14px; border-left: 3px solid var(--border); }
+  .cla-layer-label { font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; }
+  .cla-layer-text { font-size: 0.82rem; line-height: 1.6; }
+  .cla-layer.litany { border-color: var(--accent-warm); }
+  .cla-layer.systemic { border-color: var(--accent-light); }
+  .cla-layer.worldview { border-color: var(--accent); }
+  .cla-layer.myth { border-color: #2c8acc; }
+  .cla-tension { font-size: 0.8rem; color: var(--highlight); margin-top: 8px; font-style: italic; }
+  .cla-narrative { font-size: 0.8rem; color: var(--accent); margin-top: 4px; }
+
+  /* Weak Signals */
+  .signals-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 14px; }
+  .signal-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px; transition: box-shadow 0.15s; }
+  .signal-card:hover { box-shadow: 0 4px 12px rgba(120,60,40,0.1); }
+  .signal-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+  .signal-name { font-size: 0.9rem; font-weight: 700; color: var(--accent); }
+  .signal-impact { font-size: 0.65rem; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+  .signal-impact.high { background: #fde8e8; color: #b92a38; }
+  .signal-impact.medium { background: #fff3e0; color: #cd8a32; }
+  .signal-impact.low { background: #e8f5e9; color: #4a8c5c; }
+  .signal-desc { font-size: 0.82rem; color: var(--text); margin-bottom: 8px; line-height: 1.6; }
+  .signal-meta { display: flex; gap: 6px; flex-wrap: wrap; font-size: 0.7rem; }
+  .signal-horizon { background: #ffe8d7; color: var(--accent); padding: 2px 8px; border-radius: 4px; }
+  .signal-counter { font-size: 0.75rem; color: var(--text-muted); margin-top: 6px; font-style: italic; }
+
+  /* Translation toggle */
+  .translate-btn { font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; background: #ffe8d7; color: var(--accent); border: none; cursor: pointer; }
+  .translate-btn:hover { background: var(--accent); color: white; }
+  .translated-text { font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; font-style: italic; display: none; }
+  .translated-text.show { display: block; }
+
   /* Scrollbar */
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: transparent; }
@@ -212,6 +247,8 @@
     <button class="tab-btn active" onclick="switchTab('overview')">Overview</button>
     <button class="tab-btn" onclick="switchTab('pestle')">PESTLE ニュース</button>
     <button class="tab-btn" onclick="switchTab('papers')">学術論文</button>
+    <button class="tab-btn" onclick="switchTab('cla')">CLA分析</button>
+    <button class="tab-btn" onclick="switchTab('signals')">ウィークシグナル</button>
     <button class="tab-btn" onclick="switchTab('search')">横断検索</button>
   </div>
 
@@ -242,6 +279,24 @@
     <div class="papers-grid" id="papersGrid"></div>
   </div>
 
+  <!-- ===== CLA ===== -->
+  <div class="tab-panel" id="tab-cla">
+    <div style="margin-bottom:16px">
+      <h3 style="font-size:1rem;color:var(--accent);margin-bottom:4px">因果階層分析（CLA）</h3>
+      <p style="font-size:0.8rem;color:var(--text-muted)">PESTLE各分野のニュースを4つの深度で分析: リタニー（表層）→ 社会的原因 → 世界観 → 神話/メタファー</p>
+    </div>
+    <div class="cla-grid" id="claGrid"></div>
+  </div>
+
+  <!-- ===== WEAK SIGNALS ===== -->
+  <div class="tab-panel" id="tab-signals">
+    <div style="margin-bottom:16px">
+      <h3 style="font-size:1rem;color:var(--accent);margin-bottom:4px">ウィークシグナル</h3>
+      <p style="font-size:0.8rem;color:var(--text-muted)">ニュースと学術論文から抽出された、将来大きな変化をもたらす可能性のある兆し</p>
+    </div>
+    <div class="signals-grid" id="signalsGrid"></div>
+  </div>
+
   <!-- ===== SEARCH ===== -->
   <div class="tab-panel" id="tab-search">
     <div class="search-bar">
@@ -265,6 +320,7 @@
 // === Data (injected by build script) ===
 let NEWS_DATA = null;
 let PAPERS_DATA = [];
+let AI_DATA = null;
 
 const PESTLE_META = {
   Political:      { ja: '政治',   color: '#b92a38', icon: '&#127987;' },
@@ -443,13 +499,15 @@ function renderPestle() {
         <div class="article-list">
           ${filtered.map((a, i) => {
             const origIdx = info.articles.indexOf(a);
+            const trans = getTranslation(cat, origIdx);
             return `
               <div class="article-item" onclick="showArticle('${cat}', ${origIdx})">
                 <div class="article-title">${esc(a.title)}</div>
+                ${trans ? `<div class="translated-text" id="trans-${cat}-${origIdx}">${esc(trans.title_translated)}</div>` : ''}
                 <div class="article-meta">
                   <span class="article-source">${esc(a.source)}</span>
                   <span class="lang-badge">${a.lang === 'ja' ? 'JA' : 'EN'}</span>
-                  <span>score: ${a.relevance_score}</span>
+                  ${trans ? `<button class="translate-btn" onclick="event.stopPropagation();toggleTranslation('${cat}',${origIdx})">訳</button>` : ''}
                 </div>
               </div>`;
           }).join('')}
@@ -537,6 +595,91 @@ function renderGlobalSearch() {
   document.getElementById('searchResults').innerHTML = html;
 }
 
+// === Render CLA ===
+function renderCLA() {
+  if (!AI_DATA || !AI_DATA.cla) {
+    document.getElementById('claGrid').innerHTML = '<div style="color:var(--text-muted);padding:20px;">AI分析データがありません。ai_analyze.pyを実行してください。</div>';
+    return;
+  }
+
+  let html = '';
+  for (const [cat, meta] of Object.entries(PESTLE_META)) {
+    const cla = AI_DATA.cla[cat];
+    if (!cla) continue;
+
+    html += `
+      <div class="cla-card">
+        <div class="cla-cat-header">
+          <div class="pestle-badge" style="background:${meta.color}"></div>
+          ${meta.icon} ${meta.ja}
+        </div>
+        <div class="cla-layer litany">
+          <div class="cla-layer-label">Layer 1: リタニー（表層）</div>
+          <div class="cla-layer-text">${esc(cla.litany || '')}</div>
+        </div>
+        <div class="cla-layer systemic">
+          <div class="cla-layer-label">Layer 2: 社会的・システム的原因</div>
+          <div class="cla-layer-text">${esc(cla.systemic_causes || '')}</div>
+        </div>
+        <div class="cla-layer worldview">
+          <div class="cla-layer-label">Layer 3: 世界観・ディスコース</div>
+          <div class="cla-layer-text">${esc(cla.worldview || '')}</div>
+        </div>
+        <div class="cla-layer myth">
+          <div class="cla-layer-label">Layer 4: 神話・メタファー</div>
+          <div class="cla-layer-text">${esc(cla.myth_metaphor || '')}</div>
+        </div>
+        ${cla.key_tension ? `<div class="cla-tension">⚡ ${esc(cla.key_tension)}</div>` : ''}
+        ${cla.emerging_narrative ? `<div class="cla-narrative">→ ${esc(cla.emerging_narrative)}</div>` : ''}
+      </div>`;
+  }
+  document.getElementById('claGrid').innerHTML = html;
+}
+
+// === Render Weak Signals ===
+function renderSignals() {
+  if (!AI_DATA || !AI_DATA.weak_signals || AI_DATA.weak_signals.length === 0) {
+    document.getElementById('signalsGrid').innerHTML = '<div style="color:var(--text-muted);padding:20px;">ウィークシグナルデータがありません。</div>';
+    return;
+  }
+
+  document.getElementById('signalsGrid').innerHTML = AI_DATA.weak_signals.map(s => `
+    <div class="signal-card">
+      <div class="signal-header">
+        <div class="signal-name">${esc(s.signal)}</div>
+        <span class="signal-impact ${(s.potential_impact || '').toLowerCase()}">${esc(s.potential_impact || '?')}</span>
+      </div>
+      <div class="signal-desc">${esc(s.description)}</div>
+      <div class="signal-meta">
+        <span class="signal-horizon">${esc(s.time_horizon || '?')}</span>
+        ${(s.pestle_categories || []).map(c => {
+          const m = PESTLE_META[c];
+          return m ? `<span style="font-size:0.65rem;padding:2px 6px;border-radius:3px;background:${m.color};color:white">${m.ja}</span>` : `<span class="lang-badge">${esc(c)}</span>`;
+        }).join('')}
+      </div>
+      ${s.counter_trend ? `<div class="signal-counter">↔ ${esc(s.counter_trend)}</div>` : ''}
+      ${s.related_headlines && s.related_headlines.length > 0 ? `
+        <details style="margin-top:8px;font-size:0.75rem;color:var(--text-muted)">
+          <summary style="cursor:pointer">関連記事 (${s.related_headlines.length})</summary>
+          <ul style="margin-top:4px;padding-left:16px">
+            ${s.related_headlines.map(h => `<li>${esc(h)}</li>`).join('')}
+          </ul>
+        </details>` : ''}
+    </div>
+  `).join('');
+}
+
+// === Translation toggle in PESTLE articles ===
+function toggleTranslation(cat, idx) {
+  const el = document.getElementById(`trans-${cat}-${idx}`);
+  if (el) el.classList.toggle('show');
+}
+
+function getTranslation(cat, idx) {
+  if (!AI_DATA || !AI_DATA.translations || !AI_DATA.translations[cat]) return null;
+  return AI_DATA.translations[cat].find(t => t.index === idx);
+}
+
 // === Load data ===
 async function loadData() {
   try {
@@ -554,9 +697,18 @@ async function loadData() {
     console.warn('Papers data not found:', e);
   }
 
+  try {
+    const aiResp = await fetch('data/ai_analysis.json');
+    AI_DATA = await aiResp.json();
+  } catch (e) {
+    console.warn('AI analysis data not found:', e);
+  }
+
   renderOverview();
   renderPestle();
   renderPapers();
+  renderCLA();
+  renderSignals();
 }
 
 loadData();
