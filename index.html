@@ -352,7 +352,7 @@
       <h3 style="font-size:1rem;color:var(--accent);margin-bottom:4px" data-i18n="cla_title">因果階層分析（CLA）</h3>
       <p style="font-size:0.8rem;color:var(--text-muted)" data-i18n="cla_desc">PESTLE各分野のニュースを4つの深度で分析: リタニー（表層）→ 社会的原因 → 世界観 → 神話/メタファー</p>
     </div>
-    <div class="cla-grid" id="claGrid"></div>
+    <div id="claGrid"></div>
   </div>
 
   <!-- ===== WEAK SIGNALS ===== -->
@@ -892,43 +892,33 @@ function renderCLA() {
   </div>`;
 
   if (claViewMode === 'timeline') {
-    // === Horizontal timeline comparison ===
-    html += `<div style="overflow-x:auto;margin-bottom:20px">`;
-    html += `<table style="border-collapse:collapse;width:100%;min-width:${quarters.length * 220}px">`;
-
-    // Header row: quarter labels
-    html += `<thead><tr><th style="padding:8px 12px;text-align:left;font-size:0.82rem;color:var(--text-muted);border-bottom:2px solid var(--border);min-width:100px;position:sticky;left:0;background:var(--bg);z-index:1">CLA層</th>`;
-    quarters.forEach(q => {
-      const label = q.replace('-0', '年').replace('-1', '年1').replace('-', '年') + '月';
-      const isCurrent = q === quarters[quarters.length - 1];
-      html += `<th style="padding:8px 12px;text-align:left;font-size:0.82rem;border-bottom:2px solid var(--border);min-width:200px;${isCurrent ? 'color:var(--accent);font-weight:700' : 'color:var(--text-muted)'}">${label}${isCurrent ? '（現在）' : ''}</th>`;
-    });
-    html += `</tr></thead><tbody>`;
-
-    // Rows: one per CLA layer
+    // === Horizontal timeline comparison (card-based) ===
     const layers = [
-      { key: 'litany', label: t('layer1'), bg: 'var(--cla-litany)', tc: 'var(--text)' },
-      { key: 'systemic_causes', label: t('layer2'), bg: 'var(--cla-systemic)', tc: 'var(--text)' },
-      { key: 'worldview', label: t('layer3'), bg: 'var(--cla-worldview)', tc: '#fff' },
-      { key: 'myth_metaphor', label: t('layer4'), bg: 'var(--cla-myth)', tc: '#fff' },
-      { key: 'key_tension', label: '⚡ 核心的緊張', bg: 'transparent', tc: 'var(--accent)' },
-      { key: 'emerging_narrative', label: '→ 新たな物語', bg: 'transparent', tc: 'var(--accent)' },
+      { key: 'litany', label: t('layer1'), border: 'var(--accent-warm)' },
+      { key: 'systemic_causes', label: t('layer2'), border: 'var(--accent-light)' },
+      { key: 'worldview', label: t('layer3'), border: 'var(--accent)' },
+      { key: 'myth_metaphor', label: t('layer4'), border: '#2c8acc' },
+      { key: 'key_tension', label: '⚡ 核心的緊張', border: 'var(--highlight)' },
+      { key: 'emerging_narrative', label: '→ 新たな物語', border: 'var(--S)' },
     ];
 
     layers.forEach(layer => {
-      html += `<tr>`;
-      html += `<td style="padding:8px 12px;font-size:0.78rem;font-weight:600;vertical-align:top;border-bottom:1px solid var(--border);background:${layer.bg};color:${layer.tc};position:sticky;left:0;z-index:1;min-width:100px">${layer.label}</td>`;
+      html += `<div style="margin-bottom:20px">`;
+      html += `<div style="font-size:0.88rem;font-weight:700;color:var(--accent);margin-bottom:8px;padding-left:4px;border-left:3px solid ${layer.border}">${layer.label}</div>`;
+      html += `<div style="display:flex;gap:12px;overflow-x:auto;padding-bottom:8px">`;
       quarters.forEach(q => {
         const data = qcla[q];
         const catData = data ? data[claCatFilter] : null;
         const text = catData ? (catData[layer.key] || '') : '';
-        const cellBg = (layer.key === 'key_tension' || layer.key === 'emerging_narrative') ? 'transparent' : layer.bg;
-        html += `<td style="padding:8px 12px;font-size:0.78rem;vertical-align:top;border-bottom:1px solid var(--border);background:${cellBg};color:${layer.tc};line-height:1.5">${esc(text)}</td>`;
+        const label = q.replace('-0', '年').replace('-1', '年1').replace('-', '年') + '月';
+        const isCurrent = q === quarters[quarters.length - 1];
+        html += `<div style="min-width:240px;max-width:300px;flex:1;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;${isCurrent ? 'border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)' : ''}">
+          <div style="font-size:0.75rem;font-weight:600;color:${isCurrent ? 'var(--accent)' : 'var(--text-muted)'};margin-bottom:6px">${label}${isCurrent ? '（現在）' : ''}</div>
+          <div style="font-size:0.8rem;line-height:1.6;color:var(--text)">${esc(text) || '<span style="color:var(--text-muted)">—</span>'}</div>
+        </div>`;
       });
-      html += `</tr>`;
+      html += `</div></div>`;
     });
-
-    html += `</tbody></table></div>`;
 
   } else {
     // === Single quarter view ===
