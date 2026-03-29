@@ -478,10 +478,10 @@
     color: var(--text-muted); text-align: center; white-space: nowrap;
     overflow: hidden; text-overflow: ellipsis; max-width: 45%;
   }
-  .sc-axis-x-pos { bottom: -22px; right: 20px; }
-  .sc-axis-x-neg { bottom: -22px; left: 20px; }
-  .sc-axis-y-pos { top: -22px; left: 50%; transform: translateX(-50%); }
-  .sc-axis-y-neg { bottom: -22px; left: 50%; transform: translateX(-50%); display: none; }
+  .sc-axis-x-pos { bottom: -20px; right: 8px; text-align: right; }
+  .sc-axis-x-neg { bottom: -20px; left: 8px; text-align: left; }
+  .sc-axis-y-pos { top: -20px; left: 50%; transform: translateX(-50%); }
+  .sc-axis-y-neg { display: none; }
 
   .sc-detail-tabs {
     display: flex; gap: 0; margin-bottom: 16px; border-bottom: 2px solid var(--border);
@@ -601,6 +601,25 @@
   .sc-custom-pole {
     margin-top: 4px; font-size: 0.72rem; color: var(--text-muted); line-height: 1.4;
   }
+  .sc-add-df { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
+  .sc-add-df summary {
+    cursor: pointer; font-size: 0.8rem; font-weight: 500; color: var(--text-muted);
+    list-style: none; display: flex; align-items: center; gap: 4px;
+  }
+  .sc-add-df summary::-webkit-details-marker { display: none; }
+  .sc-add-df summary::before { content: '+'; font-weight: 700; font-size: 0.9rem; color: var(--accent); }
+  .sc-add-df-form { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
+  .sc-add-df-form input, .sc-add-df-form textarea {
+    width: 100%; padding: 7px 10px; border: 1px solid var(--border); border-radius: 8px;
+    background: var(--bg); color: var(--text); font-size: 0.82rem; font-family: inherit;
+    box-sizing: border-box;
+  }
+  .sc-add-df-form textarea { resize: vertical; min-height: 40px; }
+  .sc-add-df-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  @media (max-width: 600px) { .sc-add-df-row { grid-template-columns: 1fr; } }
+  .sc-add-df-form label { font-size: 0.72rem; color: var(--text-muted); margin-bottom: 2px; display: block; }
+  .sc-apikey-link { font-size: 0.72rem; color: var(--text-muted); cursor: pointer; text-decoration: underline; }
+  .sc-apikey-link:hover { color: var(--accent); }
 
   @media (max-width: 900px) {
     .sc-matrix-wrapper { padding: 24px 4px 28px; }
@@ -710,7 +729,7 @@
       <h3 style="font-size:1rem;color:var(--accent);margin-bottom:4px" data-i18n="scenarios_title">シナリオプランニング</h3>
       <p style="font-size:0.8rem;color:var(--text-muted)" data-i18n="scenarios_desc">PESTLE分析とCLAメタ解析から導出された4つの蓋然性のある未来シナリオ</p>
     </div>
-    <div id="scenariosCustomPanel"></div>
+    <div id="scenariosCustomPanel" style="display:none"></div>
     <div id="scenariosMeta" style="margin-bottom:16px"></div>
     <div id="scenariosMatrix" style="margin-bottom:32px"></div>
     <div id="scenariosDetail"></div>
@@ -746,6 +765,7 @@
   </div>
 </div>
 
+<script src="api_config.js" onerror=""></script>
 <script>
 // === Data (injected by build script) ===
 let NEWS_DATA = null;
@@ -782,8 +802,23 @@ const I18N = {
     scenarios_apikey: 'Anthropic APIキー（ブラウザに保存）',
     scenarios_pole_pos: '+', scenarios_pole_neg: '-',
     scenarios_same_axis_error: 'X軸とY軸には異なるドライビングフォースを選んでください',
-    scenarios_no_apikey: 'APIキーを入力してください',
+    scenarios_no_apikey: 'APIキーが未設定です（ページ下部の設定リンクから入力してください）',
     scenarios_custom_label: 'カスタム生成',
+    scenarios_add_df: '新しいドライビングフォースを追加',
+    scenarios_df_name: '名称',
+    scenarios_df_name_ph: '例: AIガバナンスの分岐',
+    scenarios_df_pos: '+方向（楽観的・変革的）',
+    scenarios_df_pos_ph: '例: 透明で民主的なAI規制',
+    scenarios_df_neg: '-方向（悲観的・現状維持）',
+    scenarios_df_neg_ph: '例: 規制不在による寡占化',
+    scenarios_df_add_btn: '追加',
+    scenarios_df_added: 'ドライビングフォースを追加しました',
+    scenarios_df_name_required: '名称を入力してください',
+    scenarios_apikey_setting: 'APIキー設定',
+    scenarios_apikey_configured: 'APIキー設定済み',
+    scenarios_apikey_change: '変更',
+    scenarios_apikey_not_configured: 'APIキー未設定',
+    scenarios_apikey_set: '設定する',
 
     stat_news: 'PESTLEニュース', stat_papers: '学術論文', stat_sources: 'ニュースソース',
     stat_date: '収集日', stat_fields: '論文分野',
@@ -830,8 +865,23 @@ const I18N = {
     scenarios_apikey: 'Anthropic API Key (saved in browser)',
     scenarios_pole_pos: '+', scenarios_pole_neg: '-',
     scenarios_same_axis_error: 'Please select different driving forces for X and Y axes',
-    scenarios_no_apikey: 'Please enter an API key',
+    scenarios_no_apikey: 'API key not configured (set it via the link at the bottom)',
     scenarios_custom_label: 'Custom',
+    scenarios_add_df: 'Add a new driving force',
+    scenarios_df_name: 'Name',
+    scenarios_df_name_ph: 'e.g. AI Governance Divergence',
+    scenarios_df_pos: '+ Direction (optimistic / transformational)',
+    scenarios_df_pos_ph: 'e.g. Transparent, democratic AI regulation',
+    scenarios_df_neg: '- Direction (pessimistic / status quo)',
+    scenarios_df_neg_ph: 'e.g. Unregulated monopolization',
+    scenarios_df_add_btn: 'Add',
+    scenarios_df_added: 'Driving force added',
+    scenarios_df_name_required: 'Please enter a name',
+    scenarios_apikey_setting: 'API Key Settings',
+    scenarios_apikey_configured: 'API key configured',
+    scenarios_apikey_change: 'Change',
+    scenarios_apikey_not_configured: 'API key not configured',
+    scenarios_apikey_set: 'Set up',
 
     stat_news: 'PESTLE News', stat_papers: 'Academic Papers', stat_sources: 'News Sources',
     stat_date: 'Collection Date', stat_fields: 'Paper Fields',
@@ -1942,6 +1992,11 @@ function showDFDetail(idx) {
 // === Custom Scenario Generation ===
 let ORIGINAL_SCENARIOS_DATA = null;  // backup of auto-generated data
 
+function getApiKey() {
+  // Priority: api_config.js (local) > localStorage (browser)
+  return window.FI_API_KEY || localStorage.getItem('fi_anthropic_key') || '';
+}
+
 function renderCustomAxesPanel() {
   const panel = document.getElementById('scenariosCustomPanel');
   if (!SCENARIOS_DATA?.driving_forces?.length) { panel.innerHTML = ''; return; }
@@ -1949,19 +2004,28 @@ function renderCustomAxesPanel() {
   const lang = LANG;
   const tf = (ja, en) => lang === 'en' && en ? en : ja;
   const dfs = SCENARIOS_DATA.driving_forces;
-  const savedKey = localStorage.getItem('fi_anthropic_key') || '';
 
   let optionsHtml = `<option value="">${t('scenarios_select_df')}</option>`;
   dfs.forEach((df, i) => {
     const label = tf(df.name, df.name_en);
     const cats = (df.pestle_categories || []).join(', ');
-    optionsHtml += `<option value="${i}">${df.id}: ${label} [${cats}]</option>`;
+    const isCustom = df.id.startsWith('df_custom_') ? ' *' : '';
+    optionsHtml += `<option value="${i}">${df.id}: ${label}${isCustom} [${cats}]</option>`;
   });
+
+  // API key status — shown inline, no input field
+  const hasKey = !!getApiKey();
+  const keyStatusHtml = hasKey
+    ? `<span style="font-size:0.72rem;color:#4a8c5c">${t('scenarios_apikey_configured')}</span>
+       <span class="sc-apikey-link" onclick="promptApiKey()">${t('scenarios_apikey_change')}</span>`
+    : `<span style="font-size:0.72rem;color:#b92a38">${t('scenarios_apikey_not_configured')}</span>
+       <span class="sc-apikey-link" onclick="promptApiKey()">${t('scenarios_apikey_set')}</span>`;
 
   panel.innerHTML = `
     <details class="sc-custom-panel" id="scCustomDetails">
       <summary>${t('scenarios_custom')}</summary>
       <p style="font-size:0.78rem;color:var(--text-muted);margin-top:8px">${t('scenarios_custom_desc')}</p>
+
       <div class="sc-custom-grid">
         <div>
           <label>${t('scenarios_x_axis')}</label>
@@ -1974,16 +2038,108 @@ function renderCustomAxesPanel() {
           <div class="sc-custom-pole" id="scCustomYPole"></div>
         </div>
       </div>
-      <div class="sc-custom-apikey">
-        <label>${t('scenarios_apikey')}</label>
-        <input type="password" id="scApiKey" value="${esc(savedKey)}" placeholder="sk-ant-..." onchange="localStorage.setItem('fi_anthropic_key', this.value)">
-      </div>
+
+      <details class="sc-add-df">
+        <summary>${t('scenarios_add_df')}</summary>
+        <div class="sc-add-df-form">
+          <div>
+            <label>${t('scenarios_df_name')}</label>
+            <input type="text" id="scNewDfName" placeholder="${t('scenarios_df_name_ph')}">
+          </div>
+          <div class="sc-add-df-row">
+            <div>
+              <label>${t('scenarios_df_pos')}</label>
+              <input type="text" id="scNewDfPos" placeholder="${t('scenarios_df_pos_ph')}">
+            </div>
+            <div>
+              <label>${t('scenarios_df_neg')}</label>
+              <input type="text" id="scNewDfNeg" placeholder="${t('scenarios_df_neg_ph')}">
+            </div>
+          </div>
+          <div>
+            <button class="sc-custom-btn sc-custom-btn-primary" onclick="addCustomDF()" style="padding:6px 16px;font-size:0.78rem">${t('scenarios_df_add_btn')}</button>
+            <span id="scAddDfStatus" style="font-size:0.75rem;margin-left:8px"></span>
+          </div>
+        </div>
+      </details>
+
       <div class="sc-custom-actions">
         <button class="sc-custom-btn sc-custom-btn-primary" id="scGenerateBtn" onclick="generateCustomScenarios()">${t('scenarios_generate')}</button>
         <button class="sc-custom-btn sc-custom-btn-reset" id="scResetBtn" onclick="resetToOriginalScenarios()" style="display:none">${t('scenarios_reset')}</button>
         <span class="sc-custom-status" id="scCustomStatus"></span>
+        <span style="margin-left:auto">${keyStatusHtml}</span>
       </div>
     </details>`;
+}
+
+function promptApiKey() {
+  const current = getApiKey();
+  const masked = current ? current.slice(0, 10) + '...' : '';
+  const msg = current
+    ? (LANG === 'en' ? `Current: ${masked}\nEnter new key (blank to keep):` : `現在: ${masked}\n新しいキーを入力（空欄で変更なし）:`)
+    : (LANG === 'en' ? 'Enter your Anthropic API key:' : 'Anthropic APIキーを入力:');
+  const val = prompt(msg);
+  if (val !== null && val.trim()) {
+    localStorage.setItem('fi_anthropic_key', val.trim());
+    const wasOpen = document.getElementById('scCustomDetails')?.open;
+    renderCustomAxesPanel();
+    const details = document.getElementById('scCustomDetails');
+    if (details && wasOpen) details.open = true;
+  }
+}
+
+let _customDfCounter = 0;
+
+function addCustomDF() {
+  const name = document.getElementById('scNewDfName').value.trim();
+  const pos = document.getElementById('scNewDfPos').value.trim();
+  const neg = document.getElementById('scNewDfNeg').value.trim();
+  const statusEl = document.getElementById('scAddDfStatus');
+
+  if (!name) {
+    statusEl.style.color = '#b92a38';
+    statusEl.textContent = t('scenarios_df_name_required');
+    return;
+  }
+
+  if (!ORIGINAL_SCENARIOS_DATA) {
+    ORIGINAL_SCENARIOS_DATA = JSON.parse(JSON.stringify(SCENARIOS_DATA));
+  }
+
+  _customDfCounter++;
+  const newDf = {
+    id: `df_custom_${_customDfCounter}`,
+    name: name, name_en: name,
+    description: name, description_en: name,
+    origin_cla_categories: [], pestle_categories: [],
+    impact: 7, uncertainty: 8, quadrant: 'critical_uncertainty',
+    direction_positive: pos || name,
+    direction_negative: neg || name,
+    source_articles: []
+  };
+  SCENARIOS_DATA.driving_forces.push(newDf);
+
+  // Clear form
+  document.getElementById('scNewDfName').value = '';
+  document.getElementById('scNewDfPos').value = '';
+  document.getElementById('scNewDfNeg').value = '';
+
+  statusEl.style.color = '#4a8c5c';
+  statusEl.textContent = t('scenarios_df_added');
+  setTimeout(() => { if (statusEl) statusEl.textContent = ''; }, 3000);
+
+  // Re-render panel with preserved state
+  const wasOpen = document.getElementById('scCustomDetails')?.open;
+  renderCustomAxesPanel();
+  const details = document.getElementById('scCustomDetails');
+  if (details && wasOpen) details.open = true;
+  const addDf = details?.querySelector('.sc-add-df');
+  if (addDf) addDf.open = true;
+
+  renderDFMap();
+
+  const resetBtn = document.getElementById('scResetBtn');
+  if (resetBtn) resetBtn.style.display = '';
 }
 
 function updateAxisPreview(axis) {
@@ -2001,7 +2157,7 @@ function updateAxisPreview(axis) {
 async function generateCustomScenarios() {
   const xIdx = parseInt(document.getElementById('scCustomX').value);
   const yIdx = parseInt(document.getElementById('scCustomY').value);
-  const apiKey = document.getElementById('scApiKey').value.trim();
+  const apiKey = getApiKey();
   const statusEl = document.getElementById('scCustomStatus');
   const btn = document.getElementById('scGenerateBtn');
 
