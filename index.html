@@ -467,9 +467,25 @@
 
   <!-- ===== PAPERS ===== -->
   <div class="tab-panel" id="tab-papers">
-    <div class="search-bar">
-      <input class="search-input" id="papersSearch" data-i18n-placeholder="search_papers" placeholder="論文を検索..." oninput="renderPapers()">
+    <div class="search-bar" style="flex-wrap:wrap;gap:8px;">
+      <input class="search-input" id="papersSearch" data-i18n-placeholder="search_papers" placeholder="論文を検索..." oninput="renderPapers()" style="flex:1;min-width:200px;">
+      <select id="papersDecade" onchange="renderPapers()" style="padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:var(--card);font-size:0.85rem;color:var(--text);">
+        <option value="">全年代</option>
+        <option value="1990">1990s</option>
+        <option value="2000">2000s</option>
+        <option value="2010">2010s</option>
+        <option value="2020">2020s</option>
+      </select>
+      <select id="papersField" onchange="renderPapers()" style="padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:var(--card);font-size:0.85rem;color:var(--text);">
+        <option value="">全分野</option>
+        <option value="人文学">人文学</option>
+        <option value="社会科学">社会科学</option>
+        <option value="自然科学">自然科学</option>
+        <option value="工学">工学</option>
+        <option value="芸術">芸術</option>
+      </select>
     </div>
+    <div id="papersStats" style="padding:8px 16px;font-size:0.8rem;color:var(--text-muted);"></div>
     <div class="papers-grid" id="papersGrid"></div>
   </div>
 
@@ -935,15 +951,42 @@ function renderPestle() {
 // === Render Papers ===
 function renderPapers() {
   const q = (document.getElementById('papersSearch').value || '').toLowerCase();
+  const decade = document.getElementById('papersDecade').value;
+  const fieldFilter = document.getElementById('papersField').value;
   const byField = {};
+  let totalShown = 0;
+
   PAPERS_DATA.forEach((p, i) => {
     if (q && !(p.title + p.summary + p.authors + p.field).toLowerCase().includes(q)) return;
+    if (fieldFilter && p.field !== fieldFilter) return;
+    if (decade) {
+      const yr = parseInt((p.published_date || '').substring(0, 4));
+      const d = parseInt(decade);
+      if (isNaN(yr) || yr < d || yr >= d + 10) return;
+    }
     if (!byField[p.field]) byField[p.field] = [];
     byField[p.field].push({...p, _idx: i});
+    totalShown++;
   });
 
+  // Stats bar
+  const statsEl = document.getElementById('papersStats');
+  if (statsEl) {
+    const parts = [];
+    for (const [f, ps] of Object.entries(byField)) parts.push(`${f}: ${ps.length}`);
+    statsEl.textContent = `${totalShown.toLocaleString()}件表示 (${parts.join(' / ')})`;
+  }
+
   let html = '';
-  for (const [field, papers] of Object.entries(byField)) {
+  const fieldOrder = ['人文学', '社会科学', '自然科学', '工学', '芸術'];
+  const sortedFields = Object.entries(byField).sort((a, b) => fieldOrder.indexOf(a[0]) - fieldOrder.indexOf(b[0]));
+
+  for (const [field, papers] of sortedFields) {
+    // Sort by date descending within each field
+    papers.sort((a, b) => (b.published_date || '').localeCompare(a.published_date || ''));
+    // Limit display to 200 per field for performance
+    const shown = papers.slice(0, 200);
+    const hasMore = papers.length > 200;
     html += `
       <div class="paper-section">
         <div class="paper-header">
@@ -951,12 +994,13 @@ function renderPapers() {
           <span class="pestle-count">${papers.length}件</span>
         </div>
         <div class="article-list">
-          ${papers.map(p => `
+          ${shown.map(p => `
             <div class="paper-item" style="cursor:pointer" onclick="showPaper(${p._idx})">
               <div class="paper-title">${esc(localizedPaperTitle(p, p._idx))}</div>
               <div class="paper-authors">${esc((p.authors || '').substring(0, 100))} ${p.published_date ? `<span style="color:var(--text-muted);font-size:0.7rem">(${esc(p.published_date)})</span>` : ''}</div>
             </div>
           `).join('')}
+          ${hasMore ? `<div style="padding:8px 12px;color:var(--text-muted);font-size:0.8rem;">...他 ${papers.length - 200}件（検索やフィルタで絞り込めます）</div>` : ''}
         </div>
       </div>`;
   }
