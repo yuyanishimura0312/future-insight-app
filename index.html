@@ -944,30 +944,29 @@ function renderPestle() {
     });
   }
 
-  // Build article data based on filter
+  // Build article data based on filter — always use PESTLE_HISTORY when available
   let pestleData = {};
-  if (yearFilter === 'latest') {
-    // Use latest.json (current day's data)
-    for (const [cat, info] of Object.entries(NEWS_DATA.pestle)) {
-      pestleData[cat] = info.articles || [];
-    }
-  } else if (yearFilter === 'all' && PESTLE_HISTORY) {
-    // Merge all quarters
+  const langFilter = (a) => !a.lang || a.lang === 'ja' || a.lang === 'en';
+
+  if (PESTLE_HISTORY) {
     for (const [qk, cats] of Object.entries(PESTLE_HISTORY)) {
+      if (qk === 'unknown') continue;
+      if (yearFilter !== 'latest' && yearFilter !== 'all' && !qk.startsWith(yearFilter)) continue;
+      if (yearFilter === 'latest') {
+        // Show only most recent quarter
+        const sortedQs = Object.keys(PESTLE_HISTORY).filter(k => k !== 'unknown').sort();
+        if (qk !== sortedQs[sortedQs.length - 1]) continue;
+      }
       for (const [cat, info] of Object.entries(cats)) {
         if (!pestleData[cat]) pestleData[cat] = [];
-        pestleData[cat].push(...(info.articles || []));
+        pestleData[cat].push(...(info.articles || []).filter(langFilter));
       }
     }
-  } else if (PESTLE_HISTORY) {
-    // Filter by specific year
-    for (const [qk, cats] of Object.entries(PESTLE_HISTORY)) {
-      if (qk.startsWith(yearFilter)) {
-        for (const [cat, info] of Object.entries(cats)) {
-          if (!pestleData[cat]) pestleData[cat] = [];
-          pestleData[cat].push(...(info.articles || []));
-        }
-      }
+  }
+  // Fallback to NEWS_DATA if no history
+  if (Object.keys(pestleData).length === 0 && NEWS_DATA) {
+    for (const [cat, info] of Object.entries(NEWS_DATA.pestle)) {
+      pestleData[cat] = (info.articles || []).filter(langFilter);
     }
   }
 
@@ -985,7 +984,7 @@ function renderPestle() {
       <div class="pestle-section">
         <div class="pestle-header">
           <div class="pestle-badge" style="background:${meta.color}"></div>
-          ${meta.icon} ${meta.ja}
+          ${meta.icon} <strong>${meta.ja}</strong>
           <span class="pestle-count">${articles.length.toLocaleString()}件</span>
         </div>
         <div class="article-list">
