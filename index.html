@@ -2882,7 +2882,7 @@ async function loadData() {
     PAPERS_STATS = await statsResp.value.json();
   }
 
-  // Phase 2: Load alerts + scenarios (small files)
+  // Phase 2: Load alerts, scenarios, and translations
   try {
     const alertsResp = await fetch('data/alerts.json?v=' + v);
     ALERTS_DATA = await alertsResp.json();
@@ -2890,6 +2890,13 @@ async function loadData() {
   try {
     const scResp = await fetch('data/scenarios.json?v=' + v);
     if (scResp.ok) SCENARIOS_DATA = await scResp.json();
+  } catch (e) {}
+  try {
+    const trResp = await fetch('data/papers_translations.json?v=' + v);
+    if (trResp.ok) {
+      const trArr = await trResp.json();
+      trArr.forEach(tr => { if (tr && tr.index != null) PAPERS_TRANS[tr.index] = tr; });
+    }
   } catch (e) {}
 
   // Phase 3: Load pestle_index (13KB, for overview stats)
@@ -2911,6 +2918,12 @@ async function loadData() {
   renderScenarios();
   renderSignals();
   restoreTabFromHash();
+
+  // Re-render papers after translations are loaded (they may arrive after first render)
+  if (Object.keys(PAPERS_TRANS).length > 0) {
+    renderPapers();
+    renderOverview();
+  }
 }
 
 loadData();
