@@ -45,6 +45,13 @@ log "Step 3: Detecting alerts..."
 python3 detect_alerts.py >> "$LOG_FILE" 2>&1
 log "  Alert detection done."
 
+# Step 3.5: Generate scenarios (weekly, on Mondays)
+if [ "$(date +%u)" -eq 1 ]; then
+  log "Step 3.5: Generating scenarios (weekly)..."
+  python3 generate_scenarios.py >> "$LOG_FILE" 2>&1
+  log "  Scenario generation done."
+fi
+
 # Step 4: Collect historical data (1 year per day, 1900-2025 cycling)
 log "Step 4: Collecting historical PESTLE data..."
 python3 collect_historical_daily.py >> "$LOG_FILE" 2>&1
