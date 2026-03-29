@@ -233,40 +233,41 @@
 
 <header>
   <div>
-    <h1><span>&#9670;</span> 未来洞察支援アプリ</h1>
-    <div class="header-sub">Future Insight Support — PESTLE × Academic Papers × CLA</div>
+    <h1><span>&#9670;</span> <span data-i18n="app_title">未来洞察支援アプリ</span></h1>
+    <div class="header-sub" data-i18n="app_sub">Future Insight Support — PESTLE × Academic Papers × CLA</div>
   </div>
   <div class="header-actions">
     <span id="lastUpdated" style="font-size:0.75rem;color:#ffe8d7;opacity:0.85"></span>
+    <button class="btn" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.3);color:white;font-size:0.75rem" onclick="toggleLang()" id="langToggleBtn">EN</button>
   </div>
 </header>
 
 <div class="container">
 
   <div class="tab-nav">
-    <button class="tab-btn active" onclick="switchTab('overview')">Overview</button>
-    <button class="tab-btn" onclick="switchTab('pestle')">PESTLE ニュース</button>
-    <button class="tab-btn" onclick="switchTab('papers')">学術論文</button>
-    <button class="tab-btn" onclick="switchTab('cla')">CLA分析</button>
-    <button class="tab-btn" onclick="switchTab('signals')">ウィークシグナル</button>
-    <button class="tab-btn" onclick="switchTab('search')">横断検索</button>
+    <button class="tab-btn active" onclick="switchTab('overview')" data-i18n="tab_overview">概要</button>
+    <button class="tab-btn" onclick="switchTab('pestle')" data-i18n="tab_pestle">PESTLEニュース</button>
+    <button class="tab-btn" onclick="switchTab('papers')" data-i18n="tab_papers">学術論文</button>
+    <button class="tab-btn" onclick="switchTab('cla')" data-i18n="tab_cla">CLA分析</button>
+    <button class="tab-btn" onclick="switchTab('signals')" data-i18n="tab_signals">ウィークシグナル</button>
+    <button class="tab-btn" onclick="switchTab('search')" data-i18n="tab_search">横断検索</button>
   </div>
 
   <!-- ===== OVERVIEW ===== -->
   <div class="tab-panel active" id="tab-overview">
     <div class="stats-row" id="overviewStats"></div>
 
-    <h3 style="font-size:0.9rem;color:var(--text-muted);margin-bottom:14px">PESTLE サマリー</h3>
+    <h3 style="font-size:0.9rem;color:var(--text-muted);margin-bottom:14px" data-i18n="pestle_summary">PESTLEサマリー</h3>
     <div class="pestle-grid" id="overviewPestle"></div>
 
-    <h3 style="font-size:0.9rem;color:var(--text-muted);margin:24px 0 14px">注目の学術論文</h3>
+    <h3 style="font-size:0.9rem;color:var(--text-muted);margin:24px 0 14px" data-i18n="featured_papers">注目の学術論文</h3>
     <div class="papers-grid" id="overviewPapers"></div>
   </div>
 
   <!-- ===== PESTLE ===== -->
   <div class="tab-panel" id="tab-pestle">
     <div class="search-bar">
-      <input class="search-input" id="pestleSearch" placeholder="ニュースを検索..." oninput="renderPestle()">
+      <input class="search-input" id="pestleSearch" data-i18n-placeholder="search_news" placeholder="ニュースを検索..." oninput="renderPestle()">
     </div>
     <div class="pestle-grid" id="pestleGrid"></div>
   </div>
@@ -274,7 +275,7 @@
   <!-- ===== PAPERS ===== -->
   <div class="tab-panel" id="tab-papers">
     <div class="search-bar">
-      <input class="search-input" id="papersSearch" placeholder="論文を検索..." oninput="renderPapers()">
+      <input class="search-input" id="papersSearch" data-i18n-placeholder="search_papers" placeholder="論文を検索..." oninput="renderPapers()">
     </div>
     <div class="papers-grid" id="papersGrid"></div>
   </div>
@@ -282,8 +283,8 @@
   <!-- ===== CLA ===== -->
   <div class="tab-panel" id="tab-cla">
     <div style="margin-bottom:16px">
-      <h3 style="font-size:1rem;color:var(--accent);margin-bottom:4px">因果階層分析（CLA）</h3>
-      <p style="font-size:0.8rem;color:var(--text-muted)">PESTLE各分野のニュースを4つの深度で分析: リタニー（表層）→ 社会的原因 → 世界観 → 神話/メタファー</p>
+      <h3 style="font-size:1rem;color:var(--accent);margin-bottom:4px" data-i18n="cla_title">因果階層分析（CLA）</h3>
+      <p style="font-size:0.8rem;color:var(--text-muted)" data-i18n="cla_desc">PESTLE各分野のニュースを4つの深度で分析: リタニー（表層）→ 社会的原因 → 世界観 → 神話/メタファー</p>
     </div>
     <div class="cla-grid" id="claGrid"></div>
   </div>
@@ -291,8 +292,8 @@
   <!-- ===== WEAK SIGNALS ===== -->
   <div class="tab-panel" id="tab-signals">
     <div style="margin-bottom:16px">
-      <h3 style="font-size:1rem;color:var(--accent);margin-bottom:4px">ウィークシグナル</h3>
-      <p style="font-size:0.8rem;color:var(--text-muted)">ニュースと学術論文から抽出された、将来大きな変化をもたらす可能性のある兆し</p>
+      <h3 style="font-size:1rem;color:var(--accent);margin-bottom:4px" data-i18n="signals_title">ウィークシグナル</h3>
+      <p style="font-size:0.8rem;color:var(--text-muted)" data-i18n="signals_desc">ニュースと学術論文から抽出された、将来大きな変化をもたらす可能性のある兆し</p>
     </div>
     <div class="signals-grid" id="signalsGrid"></div>
   </div>
@@ -300,7 +301,7 @@
   <!-- ===== SEARCH ===== -->
   <div class="tab-panel" id="tab-search">
     <div class="search-bar">
-      <input class="search-input" id="globalSearch" placeholder="ニュース・論文を横断検索..." oninput="renderGlobalSearch()">
+      <input class="search-input" id="globalSearch" data-i18n-placeholder="search_all" placeholder="ニュース・論文を横断検索..." oninput="renderGlobalSearch()">
     </div>
     <div id="searchResults"></div>
   </div>
@@ -321,6 +322,87 @@
 let NEWS_DATA = null;
 let PAPERS_DATA = [];
 let AI_DATA = null;
+let LANG = 'ja';
+
+const I18N = {
+  ja: {
+    app_title: '未来洞察支援アプリ',
+    app_sub: 'Future Insight Support — PESTLE × Academic Papers × CLA',
+    tab_overview: '概要', tab_pestle: 'PESTLEニュース', tab_papers: '学術論文',
+    tab_cla: 'CLA分析', tab_signals: 'ウィークシグナル', tab_search: '横断検索',
+    pestle_summary: 'PESTLEサマリー', featured_papers: '注目の学術論文',
+    search_news: 'ニュースを検索...', search_papers: '論文を検索...',
+    search_all: 'ニュース・論文を横断検索...',
+    cla_title: '因果階層分析（CLA）',
+    cla_desc: 'PESTLE各分野のニュースを4つの深度で分析: リタニー（表層）→ 社会的原因 → 世界観 → 神話/メタファー',
+    signals_title: 'ウィークシグナル',
+    signals_desc: 'ニュースと学術論文から抽出された、将来大きな変化をもたらす可能性のある兆し',
+    stat_news: 'PESTLEニュース', stat_papers: '学術論文', stat_sources: 'ニュースソース',
+    stat_date: '収集日', stat_fields: '論文分野',
+    stat_sub_news: '6分野 × 20件', stat_sub_sources: '世界各国メディア',
+    from_selected: '件から選定', no_results: '検索結果がありません',
+    search_min: '2文字以上で検索してください', found: '件見つかりました',
+    layer1: 'Layer 1: リタニー（表層）', layer2: 'Layer 2: 社会的・システム的原因',
+    layer3: 'Layer 3: 世界観・ディスコース', layer4: 'Layer 4: 神話・メタファー',
+    no_ai: 'AI分析データがありません。ai_analyze.pyを実行してください。',
+    no_signals: 'ウィークシグナルデータがありません。',
+    related: '関連記事', category: 'カテゴリ', source: 'ソース', published: '公開日',
+    summary: '要約・メモ', link: 'リンク', relevance: '関連度スコア',
+    field: '分野', authors: '著者', unknown: '不明',
+    last_updated: '最終更新',
+  },
+  en: {
+    app_title: 'Future Insight App',
+    app_sub: 'Future Insight Support — PESTLE × Academic Papers × CLA',
+    tab_overview: 'Overview', tab_pestle: 'PESTLE News', tab_papers: 'Academic Papers',
+    tab_cla: 'CLA Analysis', tab_signals: 'Weak Signals', tab_search: 'Cross Search',
+    pestle_summary: 'PESTLE Summary', featured_papers: 'Featured Papers',
+    search_news: 'Search news...', search_papers: 'Search papers...',
+    search_all: 'Search across news & papers...',
+    cla_title: 'Causal Layered Analysis (CLA)',
+    cla_desc: 'Analyzing news through 4 layers: Litany (surface) → Systemic Causes → Worldview → Myth/Metaphor',
+    signals_title: 'Weak Signals',
+    signals_desc: 'Emerging signs of potential future change extracted from news and academic papers',
+    stat_news: 'PESTLE News', stat_papers: 'Academic Papers', stat_sources: 'News Sources',
+    stat_date: 'Collection Date', stat_fields: 'Paper Fields',
+    stat_sub_news: '6 categories × 20 articles', stat_sub_sources: 'Global media',
+    from_selected: ' articles screened', no_results: 'No results found',
+    search_min: 'Enter at least 2 characters', found: ' results found',
+    layer1: 'Layer 1: Litany (Surface)', layer2: 'Layer 2: Systemic Causes',
+    layer3: 'Layer 3: Worldview / Discourse', layer4: 'Layer 4: Myth / Metaphor',
+    no_ai: 'No AI analysis data. Run ai_analyze.py first.',
+    no_signals: 'No weak signal data available.',
+    related: 'Related articles', category: 'Category', source: 'Source', published: 'Published',
+    summary: 'Summary', link: 'Link', relevance: 'Relevance Score',
+    field: 'Field', authors: 'Authors', unknown: 'Unknown',
+    last_updated: 'Last updated',
+  }
+};
+
+function t(key) { return I18N[LANG][key] || I18N['ja'][key] || key; }
+
+function toggleLang() {
+  LANG = LANG === 'ja' ? 'en' : 'ja';
+  document.getElementById('langToggleBtn').textContent = LANG === 'ja' ? 'EN' : 'JA';
+  applyI18n();
+  renderOverview();
+  renderPestle();
+  renderPapers();
+  renderCLA();
+  renderSignals();
+}
+
+function applyI18n() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (I18N[LANG][key]) el.textContent = I18N[LANG][key];
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (I18N[LANG][key]) el.placeholder = I18N[LANG][key];
+  });
+  document.title = LANG === 'ja' ? '未来洞察支援アプリ' : 'Future Insight App';
+}
 
 const PESTLE_META = {
   Political:      { ja: '政治',   color: '#b92a38', icon: '&#127987;' },
@@ -362,24 +444,24 @@ function showArticle(category, idx) {
   const meta = PESTLE_META[category];
   openModal(a.title, `
     <div class="modal-field">
-      <div class="modal-label">カテゴリ</div>
+      <div class="modal-label">${t('category')}</div>
       <div class="modal-value" style="color:${meta.color}">${meta.ja} (${category})</div>
     </div>
     <div class="modal-field">
-      <div class="modal-label">ソース</div>
+      <div class="modal-label">${t('source')}</div>
       <div class="modal-value">${esc(a.source)} ${a.lang === 'ja' ? '🇯🇵' : '🌐'}</div>
     </div>
-    ${a.published ? `<div class="modal-field"><div class="modal-label">公開日</div><div class="modal-value">${esc(a.published)}</div></div>` : ''}
+    ${a.published ? `<div class="modal-field"><div class="modal-label">${t('published')}</div><div class="modal-value">${esc(a.published)}</div></div>` : ''}
     <div class="modal-field">
-      <div class="modal-label">要約</div>
+      <div class="modal-label">${t('summary')}</div>
       <div class="modal-value">${esc(a.summary)}</div>
     </div>
     <div class="modal-field">
-      <div class="modal-label">リンク</div>
+      <div class="modal-label">${t('link')}</div>
       <div class="modal-value"><a href="${esc(a.url)}" target="_blank">${esc(a.url)}</a></div>
     </div>
     <div class="modal-field">
-      <div class="modal-label">関連度スコア</div>
+      <div class="modal-label">${t('relevance')}</div>
       <div class="modal-value">${a.relevance_score}</div>
     </div>
   `);
@@ -389,15 +471,15 @@ function showPaper(idx) {
   const p = PAPERS_DATA[idx];
   openModal(p.title, `
     <div class="modal-field">
-      <div class="modal-label">分野</div>
+      <div class="modal-label">${t('field')}</div>
       <div class="modal-value"><span class="paper-field-badge" style="background:${FIELD_COLORS[p.field] || 'var(--accent)'}">${esc(p.field)}</span>${p.subfield ? ' / ' + esc(p.subfield) : ''}</div>
     </div>
     <div class="modal-field">
-      <div class="modal-label">著者</div>
-      <div class="modal-value">${esc(p.authors || '不明')}</div>
+      <div class="modal-label">${t('authors')}</div>
+      <div class="modal-value">${esc(p.authors || t('unknown'))}</div>
     </div>
     <div class="modal-field">
-      <div class="modal-label">要約</div>
+      <div class="modal-label">${t('summary')}</div>
       <div class="modal-value">${esc(p.summary)}</div>
     </div>
     ${p.published_date ? `<div class="modal-field"><div class="modal-label">公開日</div><div class="modal-value">${esc(p.published_date)}</div></div>` : ''}
@@ -421,11 +503,11 @@ function renderOverview() {
   PAPERS_DATA.forEach(p => { fields[p.field] = (fields[p.field] || 0) + 1; });
 
   document.getElementById('overviewStats').innerHTML = `
-    <div class="stat-card"><div class="stat-label">PESTLEニュース</div><div class="stat-value">${totalNews}</div><div class="stat-sub">6分野 × 20件</div></div>
-    <div class="stat-card"><div class="stat-label">学術論文</div><div class="stat-value">${totalPapers}</div><div class="stat-sub">5分野</div></div>
-    <div class="stat-card"><div class="stat-label">ニュースソース</div><div class="stat-value">${sources.size}</div><div class="stat-sub">世界各国メディア</div></div>
-    <div class="stat-card"><div class="stat-label">収集日</div><div class="stat-value" style="font-size:1rem">${NEWS_DATA.date}</div><div class="stat-sub">${NEWS_DATA.total_fetched}件から選定</div></div>
-    <div class="stat-card"><div class="stat-label">論文分野</div><div class="stat-value">${Object.keys(fields).length}</div><div class="stat-sub">${Object.entries(fields).map(([f,n]) => f + ':' + n).join(', ')}</div></div>
+    <div class="stat-card"><div class="stat-label">${t('stat_news')}</div><div class="stat-value">${totalNews}</div><div class="stat-sub">${t('stat_sub_news')}</div></div>
+    <div class="stat-card"><div class="stat-label">${t('stat_papers')}</div><div class="stat-value">${totalPapers}</div><div class="stat-sub">${Object.keys(fields).length} ${t('field')}</div></div>
+    <div class="stat-card"><div class="stat-label">${t('stat_sources')}</div><div class="stat-value">${sources.size}</div><div class="stat-sub">${t('stat_sub_sources')}</div></div>
+    <div class="stat-card"><div class="stat-label">${t('stat_date')}</div><div class="stat-value" style="font-size:1rem">${NEWS_DATA.date}</div><div class="stat-sub">${NEWS_DATA.total_fetched}${t('from_selected')}</div></div>
+    <div class="stat-card"><div class="stat-label">${t('stat_fields')}</div><div class="stat-value">${Object.keys(fields).length}</div><div class="stat-sub">${Object.entries(fields).map(([f,n]) => f + ':' + n).join(', ')}</div></div>
   `;
 
   // PESTLE summary (top 3 per category)
@@ -545,14 +627,14 @@ function renderPapers() {
         </div>
       </div>`;
   }
-  document.getElementById('papersGrid').innerHTML = html || '<div style="color:var(--text-muted);padding:20px;">検索結果がありません</div>';
+  document.getElementById('papersGrid').innerHTML = html || `<div style="color:var(--text-muted);padding:20px;">${t('no_results')}</div>`;
 }
 
 // === Global Search ===
 function renderGlobalSearch() {
   const q = (document.getElementById('globalSearch').value || '').toLowerCase();
   if (!q || q.length < 2) {
-    document.getElementById('searchResults').innerHTML = '<div style="color:var(--text-muted);padding:20px;">2文字以上で検索してください</div>';
+    document.getElementById('searchResults').innerHTML = `<div style="color:var(--text-muted);padding:20px;">${t('search_min')}</div>`;
     return;
   }
 
@@ -576,7 +658,7 @@ function renderGlobalSearch() {
     }
   });
 
-  let html = `<div style="color:var(--text-muted);font-size:0.8rem;margin-bottom:12px">${results.length}件見つかりました</div>`;
+  let html = `<div style="color:var(--text-muted);font-size:0.8rem;margin-bottom:12px">${results.length}${t('found')}</div>`;
   results.forEach(r => {
     const color = r.type === 'news' ? (PESTLE_META[r.category]?.color || 'var(--accent)') : (FIELD_COLORS[r.category] || 'var(--accent)');
     const badge = r.type === 'news' ? (PESTLE_META[r.category]?.ja || r.category) : r.category;
@@ -598,7 +680,7 @@ function renderGlobalSearch() {
 // === Render CLA ===
 function renderCLA() {
   if (!AI_DATA || !AI_DATA.cla) {
-    document.getElementById('claGrid').innerHTML = '<div style="color:var(--text-muted);padding:20px;">AI分析データがありません。ai_analyze.pyを実行してください。</div>';
+    document.getElementById('claGrid').innerHTML = `<div style="color:var(--text-muted);padding:20px;">${t('no_ai')}</div>`;
     return;
   }
 
@@ -614,19 +696,19 @@ function renderCLA() {
           ${meta.icon} ${meta.ja}
         </div>
         <div class="cla-layer litany">
-          <div class="cla-layer-label">Layer 1: リタニー（表層）</div>
+          <div class="cla-layer-label">${t('layer1')}</div>
           <div class="cla-layer-text">${esc(cla.litany || '')}</div>
         </div>
         <div class="cla-layer systemic">
-          <div class="cla-layer-label">Layer 2: 社会的・システム的原因</div>
+          <div class="cla-layer-label">${t('layer2')}</div>
           <div class="cla-layer-text">${esc(cla.systemic_causes || '')}</div>
         </div>
         <div class="cla-layer worldview">
-          <div class="cla-layer-label">Layer 3: 世界観・ディスコース</div>
+          <div class="cla-layer-label">${t('layer3')}</div>
           <div class="cla-layer-text">${esc(cla.worldview || '')}</div>
         </div>
         <div class="cla-layer myth">
-          <div class="cla-layer-label">Layer 4: 神話・メタファー</div>
+          <div class="cla-layer-label">${t('layer4')}</div>
           <div class="cla-layer-text">${esc(cla.myth_metaphor || '')}</div>
         </div>
         ${cla.key_tension ? `<div class="cla-tension">⚡ ${esc(cla.key_tension)}</div>` : ''}
@@ -639,7 +721,7 @@ function renderCLA() {
 // === Render Weak Signals ===
 function renderSignals() {
   if (!AI_DATA || !AI_DATA.weak_signals || AI_DATA.weak_signals.length === 0) {
-    document.getElementById('signalsGrid').innerHTML = '<div style="color:var(--text-muted);padding:20px;">ウィークシグナルデータがありません。</div>';
+    document.getElementById('signalsGrid').innerHTML = `<div style="color:var(--text-muted);padding:20px;">${t('no_signals')}</div>`;
     return;
   }
 
@@ -685,7 +767,7 @@ async function loadData() {
   try {
     const newsResp = await fetch('data/latest.json');
     NEWS_DATA = await newsResp.json();
-    document.getElementById('lastUpdated').textContent = `最終更新: ${NEWS_DATA.date}`;
+    document.getElementById('lastUpdated').textContent = `${t('last_updated')}: ${NEWS_DATA.date}`;
   } catch (e) {
     console.warn('News data not found:', e);
   }
@@ -704,6 +786,7 @@ async function loadData() {
     console.warn('AI analysis data not found:', e);
   }
 
+  applyI18n();
   renderOverview();
   renderPestle();
   renderPapers();
