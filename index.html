@@ -620,6 +620,30 @@
   .sc-add-df-form label { font-size: 0.72rem; color: var(--text-muted); margin-bottom: 2px; display: block; }
   .sc-apikey-link { font-size: 0.72rem; color: var(--text-muted); cursor: pointer; text-decoration: underline; }
   .sc-apikey-link:hover { color: var(--accent); }
+  .sc-df-history { margin-top: 10px; }
+  .sc-df-history-item {
+    display: flex; align-items: center; gap: 8px; padding: 6px 10px;
+    border: 1px solid var(--border); border-radius: 8px; margin-bottom: 4px;
+    font-size: 0.78rem; background: var(--bg);
+  }
+  .sc-df-history-item:hover { border-color: var(--accent); }
+  .sc-df-history-name { flex: 1; font-weight: 500; }
+  .sc-df-history-poles { font-size: 0.7rem; color: var(--text-muted); flex: 2; }
+  .sc-df-history-btn {
+    padding: 3px 10px; border: 1px solid var(--accent); border-radius: 6px;
+    background: none; color: var(--accent); font-size: 0.72rem; cursor: pointer;
+    white-space: nowrap; flex-shrink: 0;
+  }
+  .sc-df-history-btn:hover { background: var(--accent); color: white; }
+  .sc-df-history-del {
+    padding: 3px 6px; border: none; background: none; color: var(--text-muted);
+    font-size: 0.8rem; cursor: pointer; flex-shrink: 0;
+  }
+  .sc-df-history-del:hover { color: #b92a38; }
+  @media (max-width: 600px) {
+    .sc-df-history-item { flex-wrap: wrap; }
+    .sc-df-history-poles { flex-basis: 100%; order: 3; }
+  }
 
   @media (max-width: 900px) {
     .sc-matrix-wrapper { padding: 24px 4px 28px; }
@@ -819,6 +843,9 @@ const I18N = {
     scenarios_apikey_change: '変更',
     scenarios_apikey_not_configured: 'APIキー未設定',
     scenarios_apikey_set: '設定する',
+    scenarios_df_history: '履歴から追加',
+    scenarios_df_history_empty: '履歴はまだありません',
+    scenarios_df_delete_history: '履歴を削除',
 
     stat_news: 'PESTLEニュース', stat_papers: '学術論文', stat_sources: 'ニュースソース',
     stat_date: '収集日', stat_fields: '論文分野',
@@ -882,6 +909,9 @@ const I18N = {
     scenarios_apikey_change: 'Change',
     scenarios_apikey_not_configured: 'API key not configured',
     scenarios_apikey_set: 'Set up',
+    scenarios_df_history: 'Add from history',
+    scenarios_df_history_empty: 'No history yet',
+    scenarios_df_delete_history: 'Clear history',
 
     stat_news: 'PESTLE News', stat_papers: 'Academic Papers', stat_sources: 'News Sources',
     stat_date: 'Collection Date', stat_fields: 'Paper Fields',
@@ -2060,6 +2090,7 @@ function renderCustomAxesPanel() {
             <button class="sc-custom-btn sc-custom-btn-primary" onclick="addCustomDF()" style="padding:6px 16px;font-size:0.78rem">${t('scenarios_df_add_btn')}</button>
             <span id="scAddDfStatus" style="font-size:0.75rem;margin-left:8px"></span>
           </div>
+          ${renderDFHistoryHtml()}
         </div>
       </details>
 
@@ -2090,6 +2121,89 @@ function promptApiKey() {
 
 let _customDfCounter = 0;
 
+// DF history stored in localStorage
+function getDfHistory() {
+  try { return JSON.parse(localStorage.getItem('fi_df_history') || '[]'); }
+  catch { return []; }
+}
+function saveDfHistory(history) {
+  localStorage.setItem('fi_df_history', JSON.stringify(history));
+}
+
+function renderDFHistoryHtml() {
+  const history = getDfHistory();
+  if (!history.length) return '';
+
+  let html = `<div class="sc-df-history">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+      <label style="font-size:0.75rem;color:var(--text-muted);font-weight:500">${t('scenarios_df_history')}</label>
+      <button class="sc-df-history-del" onclick="clearDfHistory()" title="${t('scenarios_df_delete_history')}">&times;</button>
+    </div>`;
+  history.forEach((h, i) => {
+    html += `<div class="sc-df-history-item">
+      <div class="sc-df-history-name">${esc(h.name)}</div>
+      <div class="sc-df-history-poles">
+        <span style="color:#4a8c5c">+ ${esc(h.direction_positive || '')}</span>
+        <span style="color:#b92a38">- ${esc(h.direction_negative || '')}</span>
+      </div>
+      <button class="sc-df-history-btn" onclick="addDfFromHistory(${i})">${t('scenarios_df_add_btn')}</button>
+      <button class="sc-df-history-del" onclick="removeDfHistory(${i})">&times;</button>
+    </div>`;
+  });
+  html += '</div>';
+  return html;
+}
+
+function addDfFromHistory(idx) {
+  const history = getDfHistory();
+  const h = history[idx];
+  if (!h) return;
+
+  if (!ORIGINAL_SCENARIOS_DATA) {
+    ORIGINAL_SCENARIOS_DATA = JSON.parse(JSON.stringify(SCENARIOS_DATA));
+  }
+
+  _customDfCounter++;
+  const newDf = {
+    id: `df_custom_${_customDfCounter}`,
+    name: h.name, name_en: h.name,
+    description: h.name, description_en: h.name,
+    origin_cla_categories: [], pestle_categories: [],
+    impact: 7, uncertainty: 8, quadrant: 'critical_uncertainty',
+    direction_positive: h.direction_positive || h.name,
+    direction_negative: h.direction_negative || h.name,
+    source_articles: []
+  };
+  SCENARIOS_DATA.driving_forces.push(newDf);
+
+  _refreshCustomPanel();
+  renderDFMap();
+}
+
+function removeDfHistory(idx) {
+  const history = getDfHistory();
+  history.splice(idx, 1);
+  saveDfHistory(history);
+  _refreshCustomPanel();
+}
+
+function clearDfHistory() {
+  saveDfHistory([]);
+  _refreshCustomPanel();
+}
+
+function _refreshCustomPanel() {
+  const wasOpen = document.getElementById('scCustomDetails')?.open;
+  const addDfOpen = document.querySelector('.sc-add-df')?.open;
+  renderCustomAxesPanel();
+  const details = document.getElementById('scCustomDetails');
+  if (details && wasOpen) details.open = true;
+  const addDf = details?.querySelector('.sc-add-df');
+  if (addDf && addDfOpen) addDf.open = true;
+  const resetBtn = document.getElementById('scResetBtn');
+  if (resetBtn && ORIGINAL_SCENARIOS_DATA) resetBtn.style.display = '';
+}
+
 function addCustomDF() {
   const name = document.getElementById('scNewDfName').value.trim();
   const pos = document.getElementById('scNewDfPos').value.trim();
@@ -2119,6 +2233,14 @@ function addCustomDF() {
   };
   SCENARIOS_DATA.driving_forces.push(newDf);
 
+  // Save to history (avoid duplicates by name)
+  const history = getDfHistory();
+  const exists = history.some(h => h.name === name);
+  if (!exists) {
+    history.unshift({ name, direction_positive: pos || name, direction_negative: neg || name });
+    saveDfHistory(history);
+  }
+
   // Clear form
   document.getElementById('scNewDfName').value = '';
   document.getElementById('scNewDfPos').value = '';
@@ -2128,18 +2250,8 @@ function addCustomDF() {
   statusEl.textContent = t('scenarios_df_added');
   setTimeout(() => { if (statusEl) statusEl.textContent = ''; }, 3000);
 
-  // Re-render panel with preserved state
-  const wasOpen = document.getElementById('scCustomDetails')?.open;
-  renderCustomAxesPanel();
-  const details = document.getElementById('scCustomDetails');
-  if (details && wasOpen) details.open = true;
-  const addDf = details?.querySelector('.sc-add-df');
-  if (addDf) addDf.open = true;
-
+  _refreshCustomPanel();
   renderDFMap();
-
-  const resetBtn = document.getElementById('scResetBtn');
-  if (resetBtn) resetBtn.style.display = '';
 }
 
 function updateAxisPreview(axis) {
