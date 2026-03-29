@@ -1213,7 +1213,7 @@ function renderCLA() {
         const data = qcla[q];
         const catData = data ? data[claCatFilter] : null;
         const text = catData ? (catData[layer.key] || '') : '';
-        const label = q.replace('-0', '年').replace('-1', '年1').replace('-', '年') + '月';
+        const label = (q.includes('-') ? q.replace('-0', '年').replace('-1', '年1').replace('-', '年') + '月' : q + '年');
         const isCurrent = q === quarters[quarters.length - 1];
         html += `<div style="min-width:240px;max-width:300px;flex:1;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;${isCurrent ? 'border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)' : ''}">
           <div style="font-size:0.75rem;font-weight:600;color:${isCurrent ? 'var(--accent)' : 'var(--text-muted)'};margin-bottom:6px">${label}${isCurrent ? '（現在）' : ''}</div>
@@ -1226,10 +1226,10 @@ function renderCLA() {
   } else {
     // === Single quarter view ===
     html += `<div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center">
-      <span style="font-size:0.82rem;color:var(--text-muted);font-weight:600">四半期:</span>`;
+      <span style="font-size:0.82rem;color:var(--text-muted);font-weight:600">期間:</span>`;
     quarters.forEach((q, i) => {
       const isActive = i === (window._claSingleIdx || quarters.length - 1);
-      const label = q.replace('-0', '年').replace('-1', '年1').replace('-', '年') + '月';
+      const label = (q.includes('-') ? q.replace('-0', '年').replace('-1', '年1').replace('-', '年') + '月' : q + '年');
       html += `<button onclick="window._claSingleIdx=${i};renderCLA()" style="padding:5px 12px;border:1px solid ${isActive ? 'var(--accent)' : 'var(--border)'};border-radius:6px;background:${isActive ? 'var(--accent)' : 'var(--card)'};color:${isActive ? '#fff' : 'var(--text)'};cursor:pointer;font-size:0.8rem">${label}</button>`;
     });
     html += `</div>`;
