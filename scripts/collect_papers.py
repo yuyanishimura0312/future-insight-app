@@ -56,10 +56,14 @@ FIELDS = {
     },
     "芸術": {
         "concept_ids": [
-            "C136764020",   # Art History
-            "C195592381",   # Art
+            "C52119013",    # Art history (level 1, 6.8M works)
+            "C153349607",   # Visual arts (level 1, 5M works)
+            "C136764020",   # Art History (level 2)
+            "C195592381",   # Art (level 0)
+            "C163286209",   # Performing arts
+            "C2983467063",  # Media arts
         ],
-        "openalex_filter": "concept.id:C136764020|C195592381",
+        "openalex_filter": "concept.id:C52119013|C153349607|C136764020|C195592381|C163286209|C2983467063",
     },
 }
 
