@@ -153,26 +153,130 @@
   }
 
   /* Papers */
+  .papers-stats-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin-bottom: 20px;
+  }
+  .papers-stat-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 14px 16px; position: relative; overflow: hidden;
+    transition: box-shadow 0.15s, transform 0.15s; cursor: pointer;
+  }
+  .papers-stat-card:hover { box-shadow: 0 4px 12px rgba(120,60,40,0.1); transform: translateY(-1px); }
+  .papers-stat-card.active { border-color: var(--accent); box-shadow: 0 2px 8px rgba(120,60,40,0.15); }
+  .papers-stat-card::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+  }
+  .papers-stat-label { font-size: 0.68rem; color: var(--text-muted); letter-spacing: 0.03em; }
+  .papers-stat-value { font-size: 1.4rem; font-weight: 700; margin-top: 2px; }
+  .papers-stat-bar {
+    margin-top: 6px; height: 3px; border-radius: 2px; background: var(--border);
+    overflow: hidden;
+  }
+  .papers-stat-bar-fill { height: 100%; border-radius: 2px; transition: width 0.5s ease; }
+
+  .papers-toolbar {
+    display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; align-items: center;
+  }
+  .papers-search-wrap {
+    flex: 1; min-width: 200px; position: relative;
+  }
+  .papers-search-wrap .search-icon {
+    position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+    color: var(--text-muted); font-size: 0.85rem; pointer-events: none;
+  }
+  .papers-search-wrap input {
+    width: 100%; padding: 10px 36px 10px 36px; border-radius: 10px;
+    border: 1px solid var(--border); background: var(--card); font-size: 0.85rem;
+    color: var(--text); transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .papers-search-wrap input:focus {
+    outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(120,60,40,0.08);
+  }
+  .papers-search-clear {
+    position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+    background: none; border: none; color: var(--text-muted); cursor: pointer;
+    font-size: 1rem; display: none; padding: 2px 4px;
+  }
+  .papers-search-clear.show { display: block; }
+  .papers-filter-select {
+    padding: 10px 32px 10px 12px; border-radius: 10px; border: 1px solid var(--border);
+    background: var(--card); font-size: 0.82rem; color: var(--text);
+    appearance: none; -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238c6d5e' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 10px center;
+    cursor: pointer; transition: border-color 0.15s;
+  }
+  .papers-filter-select:focus { outline: none; border-color: var(--accent); }
+  .papers-sort-btn {
+    padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border);
+    background: var(--card); font-size: 0.78rem; color: var(--text-muted);
+    cursor: pointer; transition: all 0.15s; white-space: nowrap;
+  }
+  .papers-sort-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .papers-sort-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
+  .papers-result-count {
+    font-size: 0.78rem; color: var(--text-muted); padding: 4px 0 8px;
+  }
+
   .papers-grid {
     display: grid; grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
     gap: 16px;
   }
-  .paper-section { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .paper-section {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    overflow: hidden; transition: box-shadow 0.15s;
+  }
+  .paper-section:hover { box-shadow: 0 4px 16px rgba(120,60,40,0.08); }
   .paper-header {
     padding: 14px 18px; font-weight: 700; font-size: 0.9rem;
     border-bottom: 1px solid var(--border);
     display: flex; align-items: center; gap: 10px;
+    background: linear-gradient(90deg, rgba(250,245,240,0.5) 0%, var(--card) 100%);
   }
   .paper-item {
-    padding: 10px 18px; border-bottom: 1px solid var(--border); transition: background 0.1s;
+    padding: 12px 18px; border-bottom: 1px solid var(--border); transition: all 0.15s;
+    cursor: pointer; position: relative;
   }
-  .paper-item:hover { background: var(--card-hover); }
-  .paper-title { font-size: 0.82rem; font-weight: 500; }
-  .paper-authors { font-size: 0.7rem; color: var(--text-muted); margin-top: 2px; }
+  .paper-item:last-child { border-bottom: none; }
+  .paper-item:hover { background: var(--card-hover); padding-left: 22px; }
+  .paper-item-top { display: flex; align-items: flex-start; gap: 8px; }
+  .paper-title { font-size: 0.84rem; font-weight: 500; line-height: 1.5; flex: 1; }
+  .paper-lang-badge {
+    font-size: 0.6rem; padding: 1px 6px; border-radius: 3px; flex-shrink: 0;
+    background: #e8f0ff; color: #2c68a0; font-weight: 600; margin-top: 2px;
+  }
+  .paper-lang-badge.ja { background: #fde8e8; color: #b92a38; }
+  .paper-meta {
+    display: flex; align-items: center; gap: 8px; margin-top: 4px; flex-wrap: wrap;
+  }
+  .paper-authors { font-size: 0.72rem; color: var(--text-muted); }
+  .paper-date { font-size: 0.68rem; color: var(--text-muted); opacity: 0.8; }
+  .paper-subfield-tag {
+    font-size: 0.62rem; padding: 1px 6px; border-radius: 3px;
+    background: #f5f0eb; color: var(--text-muted); border: 1px solid var(--border);
+  }
+  .paper-summary-preview {
+    font-size: 0.73rem; color: var(--text-muted); margin-top: 4px;
+    line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; overflow: hidden;
+  }
   .paper-field-badge {
-    font-size: 0.65rem; padding: 2px 8px; border-radius: 4px;
-    background: var(--accent); color: white; opacity: 0.8;
+    font-size: 0.65rem; padding: 3px 10px; border-radius: 6px;
+    background: var(--accent); color: white; font-weight: 500;
   }
+  .paper-load-more {
+    padding: 12px 18px; text-align: center; color: var(--accent);
+    font-size: 0.82rem; cursor: pointer; transition: background 0.15s;
+    border-top: 1px solid var(--border); font-weight: 500;
+  }
+  .paper-load-more:hover { background: var(--card-hover); }
+  .papers-empty {
+    text-align: center; padding: 48px 20px; color: var(--text-muted);
+  }
+  .papers-empty-icon { font-size: 2rem; opacity: 0.3; margin-bottom: 8px; }
+  .papers-empty-text { font-size: 0.9rem; }
+  .papers-empty-sub { font-size: 0.78rem; margin-top: 4px; }
 
   /* Search */
   .search-bar {
@@ -379,11 +483,20 @@
     .article-meta { font-size: 0.68rem; margin-top: 4px; }
 
     /* Papers */
+    .papers-stats-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 14px; }
+    .papers-stat-card { padding: 10px 12px; }
+    .papers-stat-value { font-size: 1.1rem; }
+    .papers-stat-label { font-size: 0.6rem; }
+    .papers-toolbar { gap: 6px; }
+    .papers-search-wrap { min-width: 100%; }
+    .papers-filter-select { flex: 1; font-size: 0.78rem; padding: 8px 28px 8px 10px; }
+    .papers-sort-btn { padding: 8px 10px; font-size: 0.72rem; }
     .paper-section { border-radius: 10px; }
     .paper-header { padding: 12px 14px; }
     .paper-item { padding: 12px 14px; min-height: 44px; }
     .paper-title { font-size: 0.82rem; line-height: 1.5; }
     .paper-authors { font-size: 0.68rem; }
+    .paper-summary-preview { display: none; }
 
     /* CLA */
     .cla-card { padding: 14px; border-radius: 10px; }
@@ -804,25 +917,37 @@
 
   <!-- ===== PAPERS ===== -->
   <div class="tab-panel" id="tab-papers">
-    <div class="search-bar" style="flex-wrap:wrap;gap:8px;">
-      <input class="search-input" id="papersSearch" data-i18n-placeholder="search_papers" placeholder="論文を検索..." oninput="renderPapers()" style="flex:1;min-width:200px;">
-      <select id="papersDecade" onchange="renderPapers()" style="padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:var(--card);font-size:0.85rem;color:var(--text);">
-        <option value="">全年代</option>
-        <option value="1990">1990s</option>
-        <option value="2000">2000s</option>
-        <option value="2010">2010s</option>
+    <div class="papers-stats-grid" id="papersStatsGrid"></div>
+    <div class="papers-toolbar">
+      <div class="papers-search-wrap">
+        <span class="search-icon">&#x1F50D;</span>
+        <input id="papersSearch" data-i18n-placeholder="search_papers" placeholder="論文を検索..." oninput="onPapersSearchInput()">
+        <button class="papers-search-clear" id="papersSearchClear" onclick="clearPapersSearch()">&times;</button>
+      </div>
+      <select class="papers-filter-select" id="papersDecade" onchange="renderPapers()">
+        <option value="" data-i18n="papers_all_decades">全年代</option>
         <option value="2020">2020s</option>
+        <option value="2010">2010s</option>
+        <option value="2000">2000s</option>
+        <option value="1990">1990s</option>
       </select>
-      <select id="papersField" onchange="renderPapers()" style="padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:var(--card);font-size:0.85rem;color:var(--text);">
-        <option value="">全分野</option>
-        <option value="人文学">人文学</option>
-        <option value="社会科学">社会科学</option>
-        <option value="自然科学">自然科学</option>
-        <option value="工学">工学</option>
-        <option value="芸術">芸術</option>
+      <select class="papers-filter-select" id="papersField" onchange="renderPapers()">
+        <option value="" data-i18n="papers_all_fields">全分野</option>
+        <option value="人文学" data-i18n="field_humanities">人文学</option>
+        <option value="社会科学" data-i18n="field_social">社会科学</option>
+        <option value="自然科学" data-i18n="field_natural">自然科学</option>
+        <option value="工学" data-i18n="field_engineering">工学</option>
+        <option value="芸術" data-i18n="field_arts">芸術</option>
       </select>
+      <select class="papers-filter-select" id="papersLang" onchange="renderPapers()">
+        <option value="" data-i18n="papers_all_langs">全言語</option>
+        <option value="en" data-i18n="papers_lang_en">英語</option>
+        <option value="ja" data-i18n="papers_lang_ja">日本語</option>
+      </select>
+      <button class="papers-sort-btn active" id="papersSortDate" onclick="setPapersSort('date')" data-i18n="papers_sort_date">新しい順</button>
+      <button class="papers-sort-btn" id="papersSortTitle" onclick="setPapersSort('title')" data-i18n="papers_sort_title">タイトル順</button>
     </div>
-    <div id="papersStats" style="padding:8px 16px;font-size:0.8rem;color:var(--text-muted);"></div>
+    <div class="papers-result-count" id="papersResultCount"></div>
     <div class="papers-grid" id="papersGrid"></div>
   </div>
 
@@ -939,6 +1064,16 @@ const I18N = {
     stat_date: '収集日', stat_fields: '論文分野',
     stat_sub_news: '6分野 × 20件', stat_sub_sources: '世界各国メディア',
     from_selected: '件から選定', no_results: '検索結果がありません',
+    papers_all_decades: '全年代', papers_all_fields: '全分野', papers_all_langs: '全言語',
+    papers_lang_en: '英語', papers_lang_ja: '日本語',
+    papers_sort_date: '新しい順', papers_sort_title: 'タイトル順',
+    papers_total: '総論文数', papers_showing: '件表示中',
+    papers_load_more: 'さらに表示',
+    papers_no_results: '条件に一致する論文がありません',
+    papers_no_results_sub: '検索条件やフィルタを変更してみてください',
+    papers_subfield: 'サブ分野', papers_language: '言語',
+    field_humanities: '人文学', field_social: '社会科学', field_natural: '自然科学',
+    field_engineering: '工学', field_arts: '芸術',
     search_min: '2文字以上で検索してください', found: '件見つかりました',
     layer1: 'Layer 1: リタニー（表層）', layer2: 'Layer 2: 社会的・システム的原因',
     layer3: 'Layer 3: 世界観・ディスコース', layer4: 'Layer 4: 神話・メタファー',
@@ -1005,6 +1140,16 @@ const I18N = {
     stat_date: 'Collection Date', stat_fields: 'Paper Fields',
     stat_sub_news: '6 categories × 20 articles', stat_sub_sources: 'Global media',
     from_selected: ' articles screened', no_results: 'No results found',
+    papers_all_decades: 'All decades', papers_all_fields: 'All fields', papers_all_langs: 'All languages',
+    papers_lang_en: 'English', papers_lang_ja: 'Japanese',
+    papers_sort_date: 'Newest', papers_sort_title: 'By title',
+    papers_total: 'Total papers', papers_showing: ' shown',
+    papers_load_more: 'Load more',
+    papers_no_results: 'No papers match your criteria',
+    papers_no_results_sub: 'Try adjusting your search or filters',
+    papers_subfield: 'Subfield', papers_language: 'Language',
+    field_humanities: 'Humanities', field_social: 'Social Sciences', field_natural: 'Natural Sciences',
+    field_engineering: 'Engineering', field_arts: 'Arts',
     search_min: 'Enter at least 2 characters', found: ' results found',
     layer1: 'Layer 1: Litany (Surface)', layer2: 'Layer 2: Systemic Causes',
     layer3: 'Layer 3: Worldview / Discourse', layer4: 'Layer 4: Myth / Metaphor',
@@ -1184,15 +1329,21 @@ async function showPaper(idx) {
   const p = PAPERS_DATA[idx];
   // Load full data on first click
   if (!PAPERS_FULL) {
-    openModal(p.title, `<div style="padding:20px;color:var(--text-muted)">詳細データを読み込み中...</div>`);
+    openModal(localizedPaperTitle(p, idx), `<div style="padding:20px;color:var(--text-muted)">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="display:inline-block;width:16px;height:16px;border:2px solid var(--accent);border-top-color:transparent;border-radius:50%;animation:spin 0.8s linear infinite"></span>
+        ${LANG === 'ja' ? '詳細データを読み込み中...' : 'Loading details...'}
+      </div>
+      <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+    </div>`);
     try {
       const resp = await fetch('data/papers.json?v=' + Date.now());
       PAPERS_FULL = await resp.json();
     } catch (e) {
-      openModal(p.title, `<div style="padding:20px">
+      openModal(localizedPaperTitle(p, idx), `<div style="padding:20px">
         <div class="modal-field"><div class="modal-label">${t('field')}</div><div class="modal-value">${esc(p.field)}</div></div>
         <div class="modal-field"><div class="modal-label">${t('authors')}</div><div class="modal-value">${esc(p.authors || t('unknown'))}</div></div>
-        <div class="modal-field"><div class="modal-label">${t('link')}</div><div class="modal-value"><a href="${esc(p.source_url)}" target="_blank">${esc(p.source_url)}</a></div></div>
+        <div class="modal-field"><div class="modal-label">${t('link')}</div><div class="modal-value"><a href="${esc(p.source_url)}" target="_blank" style="word-break:break-all">${esc(p.source_url)}</a></div></div>
       </div>`);
       return;
     }
@@ -1200,26 +1351,37 @@ async function showPaper(idx) {
   const full = PAPERS_FULL[idx] || p;
   const displayTitle = localizedPaperTitle(full, idx);
   const displaySummary = localizedPaperSummary(full, idx);
+  const lang = full.language || 'en';
+  const color = FIELD_COLORS[full.field] || 'var(--accent)';
+  const hasTrans = PAPERS_TRANS[idx] && lang === 'en' && LANG === 'ja';
+
   openModal(displayTitle, `
-    <div class="modal-field">
-      <div class="modal-label">${t('field')}</div>
-      <div class="modal-value"><span class="paper-field-badge" style="background:${FIELD_COLORS[full.field] || 'var(--accent)'}">${esc(full.field)}</span>${full.subfield ? ' / ' + esc(full.subfield) : ''}</div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;">
+      <span class="paper-field-badge" style="background:${color}">${esc(full.field)}</span>
+      ${full.subfield ? `<span class="paper-subfield-tag">${esc(full.subfield)}</span>` : ''}
+      <span class="paper-lang-badge${lang === 'ja' ? ' ja' : ''}">${lang.toUpperCase()}</span>
+      ${full.published_date ? `<span style="font-size:0.72rem;color:var(--text-muted);padding:2px 0;margin-left:auto">${esc(full.published_date)}</span>` : ''}
     </div>
     <div class="modal-field">
       <div class="modal-label">${t('authors')}</div>
-      <div class="modal-value">${esc(full.authors || t('unknown'))}</div>
+      <div class="modal-value" style="line-height:1.6">${esc(full.authors || t('unknown'))}</div>
     </div>
     <div class="modal-field">
       <div class="modal-label">${t('summary')}</div>
-      <div class="modal-value">${esc(displaySummary)}</div>
+      <div class="modal-value" style="line-height:1.8;font-size:0.84rem">${esc(displaySummary)}</div>
     </div>
-    ${(full.language || 'en') === 'en' && LANG === 'ja' && PAPERS_TRANS[idx] ? `<div class="modal-field"><div class="modal-label">Original</div><div class="modal-value" style="font-size:0.78rem;color:var(--text-muted)">${esc(full.title)}<br>${esc(full.summary)}</div></div>` : ''}
-    ${full.published_date ? `<div class="modal-field"><div class="modal-label">${t('published')}</div><div class="modal-value">${esc(full.published_date)}</div></div>` : ''}
-    <div class="modal-field">
-      <div class="modal-label">${t('link')}</div>
-      <div class="modal-value"><a href="${esc(full.source_url)}" target="_blank">${esc(full.source_url)}</a></div>
+    ${hasTrans ? `
+      <div class="modal-field" style="background:#faf5f0;padding:12px;border-radius:8px;margin-top:4px;">
+        <div class="modal-label" style="margin-bottom:4px">Original (English)</div>
+        <div style="font-size:0.78rem;color:var(--text-muted);line-height:1.6;font-weight:500;margin-bottom:6px">${esc(full.title)}</div>
+        <div style="font-size:0.75rem;color:var(--text-muted);line-height:1.6">${esc(full.summary)}</div>
+      </div>` : ''}
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;padding-top:16px;border-top:1px solid var(--border);">
+      <a href="${esc(full.source_url)}" target="_blank" style="display:inline-flex;align-items:center;gap:4px;padding:8px 16px;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-size:0.82rem;font-weight:500;transition:background 0.15s">
+        ${LANG === 'ja' ? '論文を開く' : 'Open paper'} &#8599;
+      </a>
+      ${full.doi ? `<a href="https://doi.org/${esc(full.doi)}" target="_blank" style="display:inline-flex;align-items:center;gap:4px;padding:8px 16px;border-radius:8px;background:var(--card);border:1px solid var(--border);color:var(--text);text-decoration:none;font-size:0.82rem;transition:border-color 0.15s">DOI: ${esc(full.doi)}</a>` : ''}
     </div>
-    ${full.doi ? `<div class="modal-field"><div class="modal-label">DOI</div><div class="modal-value"><a href="https://doi.org/${esc(full.doi)}" target="_blank">${esc(full.doi)}</a></div></div>` : ''}
   `);
 }
 
@@ -1498,16 +1660,86 @@ async function renderPestle() {
 }
 
 // === Render Papers ===
+let _papersSort = 'date';
+let _papersShowCount = {}; // field -> number shown
+
+function onPapersSearchInput() {
+  const q = document.getElementById('papersSearch').value;
+  const clearBtn = document.getElementById('papersSearchClear');
+  if (clearBtn) clearBtn.classList.toggle('show', q.length > 0);
+  renderPapers();
+}
+
+function clearPapersSearch() {
+  document.getElementById('papersSearch').value = '';
+  document.getElementById('papersSearchClear').classList.remove('show');
+  renderPapers();
+}
+
+function setPapersSort(mode) {
+  _papersSort = mode;
+  document.getElementById('papersSortDate').classList.toggle('active', mode === 'date');
+  document.getElementById('papersSortTitle').classList.toggle('active', mode === 'title');
+  renderPapers();
+}
+
+function loadMorePapers(field) {
+  _papersShowCount[field] = (_papersShowCount[field] || 30) + 30;
+  renderPapers();
+}
+
+function filterByField(field) {
+  const sel = document.getElementById('papersField');
+  sel.value = field;
+  renderPapers();
+}
+
+function renderPapersStats(byField, totalShown) {
+  const statsGrid = document.getElementById('papersStatsGrid');
+  if (!statsGrid) return;
+  const fieldOrder = ['人文学', '社会科学', '自然科学', '工学', '芸術'];
+  const maxCount = Math.max(...fieldOrder.map(f => (byField[f] || []).length), 1);
+  const currentFilter = document.getElementById('papersField').value;
+
+  let html = `
+    <div class="papers-stat-card${!currentFilter ? ' active' : ''}" onclick="filterByField('')" style="border-left: 4px solid var(--accent);">
+      <div class="papers-stat-label">${t('papers_total')}</div>
+      <div class="papers-stat-value" style="color:var(--accent)">${totalShown.toLocaleString()}</div>
+    </div>`;
+
+  for (const field of fieldOrder) {
+    const count = (byField[field] || []).length;
+    const color = FIELD_COLORS[field] || 'var(--accent)';
+    const pct = Math.round((count / maxCount) * 100);
+    const isActive = currentFilter === field;
+    html += `
+      <div class="papers-stat-card${isActive ? ' active' : ''}" onclick="filterByField('${field}')" style="border-left: 4px solid ${color};">
+        <div class="papers-stat-label">${esc(field)}</div>
+        <div class="papers-stat-value" style="color:${color}">${count.toLocaleString()}</div>
+        <div class="papers-stat-bar"><div class="papers-stat-bar-fill" style="width:${pct}%;background:${color}"></div></div>
+      </div>`;
+  }
+  statsGrid.innerHTML = html;
+}
+
 function renderPapers() {
   const q = (document.getElementById('papersSearch').value || '').toLowerCase();
   const decade = document.getElementById('papersDecade').value;
   const fieldFilter = document.getElementById('papersField').value;
+  const langFilter = document.getElementById('papersLang').value;
   const byField = {};
   let totalShown = 0;
 
   PAPERS_DATA.forEach((p, i) => {
-    if (q && !(p.title + p.summary + p.authors + p.field).toLowerCase().includes(q)) return;
+    // Search: include translated text too
+    if (q) {
+      const tr = PAPERS_TRANS[i];
+      const searchable = (p.title + ' ' + (p.summary || '') + ' ' + (p.authors || '') + ' ' + p.field + ' ' + (p.subfield || '') +
+        (tr ? ' ' + (tr.title_ja || '') + ' ' + (tr.summary_ja || '') : '')).toLowerCase();
+      if (!searchable.includes(q)) return;
+    }
     if (fieldFilter && p.field !== fieldFilter) return;
+    if (langFilter && (p.language || 'en') !== langFilter) return;
     if (decade) {
       const yr = parseInt((p.published_date || '').substring(0, 4));
       const d = parseInt(decade);
@@ -1518,12 +1750,16 @@ function renderPapers() {
     totalShown++;
   });
 
-  // Stats bar
-  const statsEl = document.getElementById('papersStats');
-  if (statsEl) {
-    const parts = [];
-    for (const [f, ps] of Object.entries(byField)) parts.push(`${f}: ${ps.length}`);
-    statsEl.textContent = `${totalShown.toLocaleString()}件表示 (${parts.join(' / ')})`;
+  // Stats dashboard
+  renderPapersStats(byField, totalShown);
+
+  // Result count
+  const countEl = document.getElementById('papersResultCount');
+  if (countEl) {
+    const total = PAPERS_DATA.length;
+    countEl.textContent = totalShown === total
+      ? `${total.toLocaleString()}${t('papers_showing')}`
+      : `${totalShown.toLocaleString()} / ${total.toLocaleString()}${t('papers_showing')}`;
   }
 
   let html = '';
@@ -1531,29 +1767,57 @@ function renderPapers() {
   const sortedFields = Object.entries(byField).sort((a, b) => fieldOrder.indexOf(a[0]) - fieldOrder.indexOf(b[0]));
 
   for (const [field, papers] of sortedFields) {
-    // Sort by date descending within each field
-    papers.sort((a, b) => (b.published_date || '').localeCompare(a.published_date || ''));
-    // Limit display to 200 per field for performance
-    const shown = papers.slice(0, 200);
-    const hasMore = papers.length > 200;
+    // Sort
+    if (_papersSort === 'date') {
+      papers.sort((a, b) => (b.published_date || '').localeCompare(a.published_date || ''));
+    } else {
+      papers.sort((a, b) => localizedPaperTitle(a, a._idx).localeCompare(localizedPaperTitle(b, b._idx)));
+    }
+
+    const limit = _papersShowCount[field] || 30;
+    const shown = papers.slice(0, limit);
+    const hasMore = papers.length > limit;
+    const color = FIELD_COLORS[field] || 'var(--accent)';
+
     html += `
       <div class="paper-section">
         <div class="paper-header">
-          <span class="paper-field-badge" style="background:${FIELD_COLORS[field] || 'var(--accent)'}">${esc(field)}</span>
-          <span class="pestle-count">${papers.length}件</span>
+          <span class="paper-field-badge" style="background:${color}">${esc(field)}</span>
+          <span class="pestle-count" style="margin-left:auto;font-size:0.78rem;color:var(--text-muted)">${papers.length.toLocaleString()}件</span>
         </div>
         <div class="article-list">
-          ${shown.map(p => `
-            <div class="paper-item" style="cursor:pointer" onclick="showPaper(${p._idx})">
-              <div class="paper-title">${esc(localizedPaperTitle(p, p._idx))}</div>
-              <div class="paper-authors">${esc((p.authors || '').substring(0, 100))} ${p.published_date ? `<span style="color:var(--text-muted);font-size:0.7rem">(${esc(p.published_date)})</span>` : ''}</div>
-            </div>
-          `).join('')}
-          ${hasMore ? `<div style="padding:8px 12px;color:var(--text-muted);font-size:0.8rem;">...他 ${papers.length - 200}件（検索やフィルタで絞り込めます）</div>` : ''}
+          ${shown.map(p => {
+            const title = localizedPaperTitle(p, p._idx);
+            const lang = p.language || 'en';
+            const summary = localizedPaperSummary(p, p._idx);
+            const summaryShort = summary ? summary.substring(0, 120) : '';
+            return `
+            <div class="paper-item" onclick="showPaper(${p._idx})">
+              <div class="paper-item-top">
+                <div class="paper-title">${esc(title)}</div>
+                <span class="paper-lang-badge${lang === 'ja' ? ' ja' : ''}">${lang.toUpperCase()}</span>
+              </div>
+              ${summaryShort ? `<div class="paper-summary-preview">${esc(summaryShort)}${summary.length > 120 ? '...' : ''}</div>` : ''}
+              <div class="paper-meta">
+                <span class="paper-authors">${esc((p.authors || '').substring(0, 80))}${(p.authors || '').length > 80 ? '...' : ''}</span>
+                ${p.published_date ? `<span class="paper-date">${esc(p.published_date)}</span>` : ''}
+                ${p.subfield ? `<span class="paper-subfield-tag">${esc(p.subfield)}</span>` : ''}
+              </div>
+            </div>`;
+          }).join('')}
+          ${hasMore ? `<div class="paper-load-more" onclick="loadMorePapers('${esc(field)}')">${t('papers_load_more')} (${(papers.length - limit).toLocaleString()}件)</div>` : ''}
         </div>
       </div>`;
   }
-  document.getElementById('papersGrid').innerHTML = html || `<div style="color:var(--text-muted);padding:20px;">${t('no_results')}</div>`;
+
+  if (!html) {
+    html = `<div class="papers-empty">
+      <div class="papers-empty-icon">&#128269;</div>
+      <div class="papers-empty-text">${t('papers_no_results')}</div>
+      <div class="papers-empty-sub">${t('papers_no_results_sub')}</div>
+    </div>`;
+  }
+  document.getElementById('papersGrid').innerHTML = html;
 }
 
 // === Global Search ===
