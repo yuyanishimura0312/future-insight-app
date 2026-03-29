@@ -504,12 +504,23 @@ const FIELD_COLORS = {
 function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
 
 // === Tab switching ===
-function switchTab(name) {
+const VALID_TABS = ['overview','pestle','papers','cla','signals','search'];
+function switchTab(name, pushState) {
+  if (!VALID_TABS.includes(name)) name = 'overview';
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('tab-' + name).classList.add('active');
-  event.target.classList.add('active');
+  const btns = document.querySelectorAll('.tab-btn');
+  const idx = VALID_TABS.indexOf(name);
+  if (idx >= 0 && btns[idx]) btns[idx].classList.add('active');
+  if (pushState !== false) history.replaceState(null, '', '#' + name);
 }
+// Restore tab from URL hash on load & back/forward
+function restoreTabFromHash() {
+  const hash = location.hash.replace('#', '');
+  if (VALID_TABS.includes(hash)) switchTab(hash, false);
+}
+window.addEventListener('hashchange', restoreTabFromHash);
 
 // === Modal ===
 function openModal(title, bodyHtml) {
@@ -1102,6 +1113,7 @@ async function loadData() {
   renderPapers();
   renderCLA();
   renderSignals();
+  restoreTabFromHash();
 }
 
 loadData();
