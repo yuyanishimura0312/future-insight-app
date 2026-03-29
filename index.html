@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>未来洞察支援アプリ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -35,6 +35,7 @@
     background: linear-gradient(135deg, #783c28 0%, #a0503c 50%, #c87864 100%);
     border-bottom: 1px solid var(--border);
     padding: 20px 32px;
+    padding-top: max(20px, env(safe-area-inset-top));
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -181,6 +182,13 @@
     font-size: 1.2rem; cursor: pointer;
   }
   .modal-close:hover { color: var(--text); }
+  .modal-swipe-handle {
+    display: none; width: 36px; height: 4px; background: var(--border);
+    border-radius: 2px; margin: 0 auto 12px;
+  }
+  @media (max-width: 480px) {
+    .modal-swipe-handle { display: block; }
+  }
 
   /* CLA */
   .cla-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr)); gap: 16px; margin-bottom: 24px; }
@@ -293,49 +301,121 @@
 
   /* Responsive - mobile */
   @media (max-width: 480px) {
-    header { padding: 14px 16px; }
-    header h1 { font-size: 1.1rem; }
-    .header-sub { font-size: 0.65rem; }
-    .container { padding: 14px 12px; }
+    /* Prevent text size adjustment on orientation change */
+    body { -webkit-text-size-adjust: 100%; }
 
-    /* Tab nav: horizontal scroll */
+    /* Header: compact, single line */
+    header { padding: 12px 16px; }
+    header h1 { font-size: 1rem; }
+    .header-sub { font-size: 0.6rem; display: none; }
+    .header-actions { gap: 6px; }
+    #lastUpdated { font-size: 0.65rem !important; }
+
+    /* Container: tighter padding */
+    .container { padding: 12px 10px; }
+
+    /* Tab nav: pill-style horizontal scroll */
     .tab-nav {
       overflow-x: auto; -webkit-overflow-scrolling: touch;
       scrollbar-width: none; white-space: nowrap;
-      gap: 0; flex-wrap: nowrap;
+      gap: 4px; flex-wrap: nowrap;
+      border-bottom: none;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
     }
     .tab-nav::-webkit-scrollbar { display: none; }
-    .tab-btn { padding: 10px 14px; font-size: 0.78rem; flex-shrink: 0; }
+    .tab-btn {
+      padding: 8px 14px; font-size: 0.75rem; flex-shrink: 0;
+      border-radius: 20px; border-bottom: none; margin-bottom: 0;
+      background: var(--card); border: 1px solid var(--border);
+    }
+    .tab-btn.active {
+      background: var(--accent); color: white;
+      border-color: var(--accent); border-bottom-color: var(--accent);
+    }
 
-    /* Grids: single column */
+    /* Grids: single column, tighter gaps */
     .pestle-grid, .papers-grid, .cla-grid, .signals-grid { grid-template-columns: 1fr; gap: 10px; }
-    .stats-row { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-    .stat-card { padding: 12px 14px; }
-    .stat-value { font-size: 1.3rem; }
 
-    /* Cards */
-    .article-item { padding: 10px 14px; }
-    .article-title { font-size: 0.8rem; }
-    .paper-item { padding: 10px 14px; }
-    .cla-card { padding: 14px; }
-    .signal-card { padding: 14px; }
+    /* Stats: 2-column, compact */
+    .stats-row { grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 16px; }
+    .stat-card { padding: 10px 12px; border-radius: 8px; }
+    .stat-value { font-size: 1.2rem; }
+    .stat-label { font-size: 0.65rem; }
 
-    /* Search */
-    .search-input { min-width: 0; width: 100%; padding: 10px 12px; font-size: 0.85rem; }
-    .search-bar { gap: 8px; }
+    /* PESTLE sections */
+    .pestle-section { border-radius: 10px; }
+    .pestle-header { padding: 12px 14px; font-size: 0.85rem; }
+    .article-list { max-height: 300px; }
 
-    /* Modal */
-    .modal-overlay { padding: 10px; }
-    .modal { padding: 18px; border-radius: 10px; max-height: 85vh; }
-    .modal h2 { font-size: 1rem; }
+    /* Articles: larger tap targets */
+    .article-item { padding: 12px 14px; min-height: 44px; }
+    .article-title { font-size: 0.82rem; line-height: 1.5; }
+    .article-meta { font-size: 0.68rem; margin-top: 4px; }
 
-    /* Alerts */
-    .alert-item { padding: 10px 14px; gap: 10px; }
+    /* Papers */
+    .paper-section { border-radius: 10px; }
+    .paper-header { padding: 12px 14px; }
+    .paper-item { padding: 12px 14px; min-height: 44px; }
+    .paper-title { font-size: 0.82rem; line-height: 1.5; }
+    .paper-authors { font-size: 0.68rem; }
+
+    /* CLA */
+    .cla-card { padding: 14px; border-radius: 10px; }
+    .cla-cat-header { font-size: 0.88rem; margin-bottom: 10px; }
+    .cla-layer { padding-left: 10px; margin-bottom: 10px; }
+    .cla-layer-text { font-size: 0.8rem; }
+
+    /* Signals */
+    .signal-card { padding: 14px; border-radius: 10px; }
+    .signal-name { font-size: 0.85rem; }
+    .signal-desc { font-size: 0.8rem; }
+
+    /* Search: full width, touch-friendly */
+    .search-bar { gap: 8px; flex-direction: column; }
+    .search-input {
+      min-width: 0; width: 100%; padding: 12px 14px;
+      font-size: 16px; /* Prevents iOS auto-zoom on focus */
+      border-radius: 10px;
+    }
+
+    /* Modal: near full-screen on mobile */
+    .modal-overlay { padding: 0; align-items: flex-end; }
+    .modal {
+      padding: 20px 16px; border-radius: 16px 16px 0 0;
+      max-height: 92vh; width: 100%; max-width: 100%;
+    }
+    .modal h2 { font-size: 1rem; margin-bottom: 12px; padding-right: 30px; }
+    .modal-value { font-size: 0.82rem; line-height: 1.6; }
+    .modal-close { font-size: 1.5rem; padding: 8px; }
+
+    /* Alerts: compact, touch-friendly */
+    .alerts-panel { border-radius: 10px; }
+    .alerts-panel-header { padding: 12px 14px; font-size: 0.88rem; }
+    .alert-list { max-height: 360px; }
+    .alert-item { padding: 12px 14px; gap: 10px; min-height: 44px; }
+    .alert-icon { width: 28px; height: 28px; font-size: 0.8rem; }
     .alert-topic { font-size: 0.82rem; }
     .alert-desc { font-size: 0.75rem; }
 
-    /* Buttons */
-    .btn { padding: 6px 12px; font-size: 0.75rem; }
+    /* Buttons: touch-friendly min size */
+    .btn { padding: 8px 14px; font-size: 0.75rem; min-height: 36px; }
+    .translate-btn { padding: 4px 10px; min-height: 28px; }
+
+    /* Section headings */
+    h3[style] { font-size: 0.85rem !important; }
+
+    /* Smooth scrolling for iOS */
+    .article-list, .alert-list { -webkit-overflow-scrolling: touch; }
+  }
+
+  /* Extra small screens (iPhone SE etc.) */
+  @media (max-width: 360px) {
+    header h1 { font-size: 0.9rem; }
+    .tab-btn { padding: 7px 10px; font-size: 0.7rem; }
+    .stat-card { padding: 8px 10px; }
+    .stat-value { font-size: 1.1rem; }
+    .container { padding: 10px 8px; }
   }
 </style>
 </head>
@@ -424,6 +504,7 @@
 <!-- Detail Modal -->
 <div class="modal-overlay" id="detailModal">
   <div class="modal">
+    <div class="modal-swipe-handle"></div>
     <button class="modal-close" onclick="closeModal()">&times;</button>
     <h2 id="modalTitle"></h2>
     <div id="modalBody"></div>
@@ -578,6 +659,29 @@ function openModal(title, bodyHtml) {
 function closeModal() { document.getElementById('detailModal').classList.remove('active'); }
 document.getElementById('detailModal').addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// Swipe-down to close modal on mobile
+(function() {
+  const modal = document.querySelector('#detailModal .modal');
+  let startY = 0, currentY = 0, dragging = false;
+  modal.addEventListener('touchstart', e => {
+    if (modal.scrollTop <= 0) { startY = e.touches[0].clientY; dragging = true; }
+  }, { passive: true });
+  modal.addEventListener('touchmove', e => {
+    if (!dragging) return;
+    currentY = e.touches[0].clientY;
+    const diff = currentY - startY;
+    if (diff > 0) { modal.style.transform = `translateY(${diff}px)`; modal.style.transition = 'none'; }
+  }, { passive: true });
+  modal.addEventListener('touchend', () => {
+    if (!dragging) return;
+    dragging = false;
+    const diff = currentY - startY;
+    modal.style.transition = 'transform 0.2s ease';
+    if (diff > 100) { closeModal(); }
+    modal.style.transform = '';
+  });
+})();
 
 // === Article detail ===
 function showArticle(category, idx) {
