@@ -45,8 +45,13 @@ log "Step 3: Detecting alerts..."
 python3 detect_alerts.py >> "$LOG_FILE" 2>&1
 log "  Alert detection done."
 
-# Step 4: Git commit and push
-log "Step 4: Deploying to GitHub Pages..."
+# Step 4: Update history files from database
+log "Step 4: Updating history from database..."
+python3 update_history.py >> "$LOG_FILE" 2>&1
+log "  History update done."
+
+# Step 5: Git commit and push
+log "Step 5: Deploying to GitHub Pages..."
 cd "$PROJECT_DIR"
 
 # Only commit if data files changed
