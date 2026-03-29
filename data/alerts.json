@@ -1,13 +1,67 @@
 {
-  "generated_at": "2026-03-29T10:56:06.509271+00:00",
+  "generated_at": "2026-03-29T11:05:37.148952+00:00",
   "total_articles_analyzed": 21165,
   "alert_counts": {
     "emergence": 12,
     "surge": 12,
-    "crossover": 8,
-    "total": 32
+    "crossover": 5,
+    "total": 26
   },
   "alerts": [
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "israel",
+      "mentions": 30,
+      "categories": [
+        "Economic",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 5,
+      "alert_title": "中東紛争の多面的波及",
+      "description": "イスラエル・イラン間の軍事衝突が経済、法律、政治、社会、技術の5分野に同時に影響を与えている。湾岐地域の不安定化は原油市場や同盟国経済に直結し、今後のエネルギー価格変動と地政学的リスク評価の見直しを迫る状況が継続する可能性が高い。",
+      "alert_title_en": "Middle East Conflict's Multi-Sector Impact Intensifies",
+      "description_en": "Military escalation between Israel and Iran is simultaneously affecting economic markets, legal frameworks, political stability, social cohesion, and technological security across the Middle East. The widening conflict threatens global oil supply chains and alliance structures, potentially reshaping regional geopolitics and commodity markets significantly."
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "stocks",
+      "mentions": 29,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Technological"
+      ],
+      "n_categories": 5,
+      "alert_title": "株式市場の多領域変動",
+      "description": "テクノロジー、太陽光、不動産など多様なセクターの株価が経済・環境・法律・政治・技術の5分野で同時に変動している。これは政策転換やAI投資ブーム、環境規制の急速な進展が市場全体に複合的に作用していることを示唆し、業種間の相関性が高まる可能性を示している。",
+      "alert_title_en": "Cross-Sector Stock Market Volatility Driven by Policy Shifts",
+      "description_en": "Stock movements spanning tech, renewable energy, and real estate sectors are simultaneously influenced by economic, environmental, legal, political, and technological factors. This signals that policy changes and AI investment cycles are creating interconnected market dynamics that could amplify volatility across seemingly unrelated industries."
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "iranian",
+      "mentions": 29,
+      "categories": [
+        "Economic",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 5,
+      "alert_title": "イラン経済危機と抗議活動",
+      "description": "イランの経済的困窮が社会的不満に転化し、政治的混乱と法的紛争を招いている。経済悪化が直接的な抗議運動につながり、体制の統制が強化される悪循環に陥っており、今後さらなる社会的緊張と国際制裁の強化が予想される。",
+      "alert_title_en": "Iran's Economic Crisis Fuels Widespread Social Unrest",
+      "description_en": "Economic deterioration in Iran is triggering mass protests centered on living costs and employment, creating a feedback loop between government crackdowns and escalating civil unrest. This cycle threatens further international isolation and potential humanitarian consequences if structural economic reforms are not implemented."
+    },
     {
       "type": "SURGE",
       "level": "high",
@@ -19,10 +73,10 @@
         "Social",
         "Political"
       ],
-      "alert_title": "トランプ政権がポートランドから国家警備隊撤退",
-      "description": "トランプ政権がシカゴ、ロサンゼルス、ポートランドから国家警備隊の派遣を撤回することを表明。治安強化政策の転換を示唆するもので、都市部での秩序維持戦略が問い直されている。今後、地域警察力と連邦介入のバランスが議論の焦点となり、都市部の治安改善策に変化をもたらす可能性がある。",
-      "alert_title_en": "Trump Withdraws National Guard from Major US Cities",
-      "description_en": "The Trump administration announces withdrawal of National Guard troops from Chicago, Los Angeles, and Portland, signaling a shift in federal law enforcement strategy. This policy reversal may reshape urban security approaches and local-federal coordination in coming years."
+      "alert_title": "ポートランドの政治的転換点",
+      "description": "トランプ政権によるポートランドへのナショナルガード派遣撤回は、都市部の治安政策の方針転換を象徴している。従来の連邦政府による直接的な法執行体制から地方自治体への権限移譲へのシフトが、都市ガバナンスと社会秩序に与える影響は予測困難で、今後の地方分権の動向を示すテストケースとなりうる。",
+      "alert_title_en": "Trump Administration Reverses Federal Urban Security Strategy",
+      "description_en": "The withdrawal of National Guard troops from Portland marks a shift away from federal intervention in urban law enforcement toward local authority. This policy reversal signals evolving federal-local governance dynamics and could establish precedent for how future administrations approach urban security and community policing."
     },
     {
       "type": "SURGE",
@@ -37,10 +91,28 @@
         "Economic",
         "Legal"
       ],
-      "alert_title": "NY市長マムダニ左翼アジェンダ就任",
-      "description": "左派のゾーラン・マムダニがニューヨーク市長として就任し、民主社会主義的政策実行を宣言。大都市での進歩的政策推進の象徴的な動きであり、米国都市政治の左傾化を示唆。今後、高進度政策都市と保守的州政府間の緊張が高まり、政治的分極化が深刻化する可能性がある。",
-      "alert_title_en": "NYC's New Mayor Takes Office with Progressive Agenda",
-      "description_en": "Zohran Mamdani sworn in as NYC mayor, pledging democratic socialist reforms and liberal policies. This represents a significant shift toward progressive urban governance that may intensify political tensions between cities and federal administrations."
+      "alert_title": "ニューヨーク市長マムダニの急進的転換",
+      "description": "ザカリア・マムダニ氏のニューヨーク市長就任は、米国主要都市の政治的急進化を示す象徴的事象である。民主社会主義的アジェンダの「大胆な統治」は経済政策、福祉制度、公共投資に大きな変更をもたらす可能性があり、同様の左派首長の出現が他都市に広がれば、地方政治の二極化がさらに加速する可能性がある。",
+      "alert_title_en": "NYC Elects Democratic Socialist Mayor Promising Radical Reforms",
+      "description_en": "Zohran Mamdani's inauguration as NYC mayor represents a significant leftward shift in major U.S. urban governance, with explicit commitments to democratic socialist policies. His election could signal broader momentum for progressive urban leadership, potentially influencing economic redistribution and public spending priorities across major metropolitan areas."
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "gobierno",
+      "mentions": 20,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social"
+      ],
+      "n_categories": 5,
+      "alert_title": "スペイン語圏の政府危機",
+      "description": "スペイン、ポルトガル、ドミニカなどスペイン語圏で政府の安定性や財政管理に関する報道が集中している。部分的な政府機能停止、IMF債務交渉、災害救済資金配分など、統治能力の問題が5分野にわたり表出しており、ラテン系民主主義の機能性に対する信頼低下が地域全体に波及する可能性がある。",
+      "alert_title_en": "Spanish-Speaking Regions Face Governance and Fiscal Crises",
+      "description_en": "Multiple Spanish-speaking nations are simultaneously experiencing government instability, fiscal challenges, and disaster response failures, signaling broader governance deficits. These convergent crises in political, economic, legal, social, and environmental domains could deepen institutional distrust and accelerate political fragmentation across the Latin American and Iberian regions."
     },
     {
       "type": "SURGE",
@@ -53,10 +125,10 @@
         "Social",
         "Political"
       ],
-      "alert_title": "グラミー賞で移民政策批判相次ぐ",
-      "description": "グラミー賞授賞式で複数のアーティストがICE（移民・関税執行局）への抗議声明を発表。音楽業界が移民政策に対して集団的異議を唱える動きで、文化的影響力を持つセクターが政治的スタンスを強化。今後、エンターテインメント業界が社会運動の触媒となり、政策転換圧力が高まる可能性がある。",
-      "alert_title_en": "Grammy Artists Protest Immigration Enforcement Policies",
-      "description_en": "Multiple Grammy award winners publicly oppose ICE immigration enforcement at the ceremony, signaling cultural sector mobilization against administration policies. This suggests growing use of high-profile platforms to shape political discourse on immigration."
+      "alert_title": "グラミー賞が移民問題の政治化の象徴に",
+      "description": "グラミー賞授賞式が移民取締りに対する著名人の公開抗議舞台となっている。エンターテインメント業界が政治的メッセージの発信場所化することで、社会的分断が文化的・政治的イベントにも浸透し、今後の大型授賞式が社会的論争の最前線となる傾向が強まる可能性がある。",
+      "alert_title_en": "Grammy Awards Becomes Platform for Immigration Policy Protest",
+      "description_en": "The Grammy Awards ceremony has emerged as a venue for celebrity activism against U.S. immigration enforcement, particularly ICE operations. This politicization of major cultural events reflects deepening social divisions and signals that entertainment platforms will increasingly become sites of political contestation and advocacy."
     },
     {
       "type": "SURGE",
@@ -70,10 +142,10 @@
         "Economic",
         "Environmental"
       ],
-      "alert_title": "スイス・スキーリゾート火災で数十名死亡",
-      "description": "スイスのスキーリゾートで大規模火災が発生し、多数の犠牲者が出た。冬季観光地での安全リスクが顕在化し、リゾート施設の防火基準強化が急務となる。今後、ヨーロッパのリゾート施設における安全規制の一層の厳格化と、観光業の危機管理体制見直しが進むと予想される。",
-      "alert_title_en": "Fatal Fire at Swiss Ski Resort Kills Dozens",
-      "description_en": "A major fire at a Swiss ski resort results in significant casualties, exposing safety vulnerabilities in alpine tourism infrastructure. This incident will likely trigger renewed focus on building codes and emergency preparedness across European resort facilities."
+      "alert_title": "スイス・スキーリゾート火災の重大事故",
+      "description": "スイスのスキーリゾートで元日の火災により多数の死傷者が発生した重大事故である。この事象は観光地の安全管理、建築規制の実効性、災害対応能力に関する根本的な問題を露呈させ、今後のスキーリゾートや観光施設の安全基準の国際的な再検討につながる可能性がある。",
+      "alert_title_en": "Major Fire Kills Dozens at Swiss Ski Resort on New Year's Eve",
+      "description_en": "A catastrophic fire at a Swiss ski resort resulted in dozens of deaths, exposing critical safety gaps in tourism infrastructure and emergency response systems. This tragedy will likely trigger stricter international building codes and safety audits for alpine hospitality venues, reshaping operational standards across the European tourism sector."
     },
     {
       "type": "EMERGENCE",
@@ -85,10 +157,10 @@
         "Economic",
         "Environmental"
       ],
-      "alert_title": "スキーリゾート火災関連報道急増",
-      "description": "スイスのスキーリゾート火災関連のニュースが過去2年間新規検出として初出現。重大事故に関する詳細報道の集中化を反映。今後、リゾート施設の安全監査強化と、冬季観光地域での危機対応プロトコルの国際的標準化が課題となる可能性がある。",
-      "alert_title_en": "Ski Resort Safety Crisis Coverage Emerges",
-      "description_en": "News coverage of ski resort fire incidents emerges as a new topic, reflecting increased media scrutiny of tourism facility safety standards. This signals potential regulatory shifts and insurance industry responses to facility risk assessments."
+      "alert_title": "スキーリゾート関連ニュースの激増",
+      "description": "※ノイズの可能性が高い。同一の火災事故に関する重複報道が多数検出されており、トピック的な新規性に乏しい。アラート8との重複度が高く、個別の兆候というより報道の繰り返しである可能性が高い。",
+      "alert_title_en": "Ski Resort Topic Surge Driven by Single Incident Coverage",
+      "description_en": "※Likely noise. This alert appears to be duplicate coverage of the same Swiss ski resort fire incident rather than emergence of a new trend. High overlap with Alert 8 suggests media repetition rather than genuine new development."
     },
     {
       "type": "EMERGENCE",
@@ -101,10 +173,10 @@
         "Legal",
         "Environmental"
       ],
-      "alert_title": "セメント業界カーボン技術会議展開",
-      "description": "CemCCUS、FutureCem、CementAIなどセメント業界の国際会議・展示会が相次いで開催される動き。脱炭素化技術導入への業界的関心の高まりを示唆。今後、セメント産業における二酸化炭素回収貯蔵（CCUS）やAI活用の実装加速が予想され、グローバル排出権市場への影響も想定される。",
-      "alert_title_en": "Cement Industry Decarbonization Conferences Proliferate",
-      "description_en": "Multiple global cement industry conferences focused on carbon capture and AI technologies emerge as new reporting phenomena. This reflects accelerating industry transition toward low-carbon production methods and technology adoption."
+      "alert_title": "セメント産業のAI・CCUS会議の急増",
+      "description": "セメント産業向けの国際会議・展示会の開催告知が大幅に増加している。これはセメント産業のカーボンニュートラル化に向けたAI技術とCCUS（二酸化炭素回収貯蔵）技術への急速な関心を反映しており、重工業のグリーン転換が加速していることを示唆する重要な兆候である。",
+      "alert_title_en": "Cement Industry Accelerates Adoption of AI and Carbon Capture Technology",
+      "description_en": "Proliferation of Global CemCCUS and FutureCem conferences signals the cement industry's rapid mobilization toward decarbonization through AI optimization and CCUS deployment. This trend indicates that heavy industry is prioritizing climate-aligned technologies, potentially reshaping global carbon reduction strategies and industrial competitiveness."
     },
     {
       "type": "SURGE",
@@ -117,10 +189,10 @@
         "Social",
         "Economic"
       ],
-      "alert_title": "OPEC+がイラン攻撃後の増産発表",
-      "description": "※ノイズの可能性が高い。記事タイトルが\"throughout\"に集中しており、地政学的文脈の詳細が不明確。報道の重複度が高く、分析価値が限定的である。",
-      "alert_title_en": "OPEC Plus Increases Production Following Regional Tensions",
-      "description_en": "※Potential noise alert. Insufficient context regarding specific geopolitical triggers and production volume changes; reporting appears duplicative."
+      "alert_title": "OPEC+の地政学的対応と石油増産",
+      "description": "※ノイズの可能性が高い。「throughout」というキーワードが検出されているが、実際の記事では「throughout the region」など文法的接続表現に過ぎず、独立した兆候ではなく報道の文体的特性が捉えられた可能性が高い。OPEC+の増産決定自体は重要だが、このアラートの形成根拠は薄弱である。",
+      "alert_title_en": "OPEC+ Increases Oil Output Amid Regional Tensions",
+      "description_en": "※Likely noise. The keyword \"throughout\" appears to capture grammatical usage rather than substantive policy trends. While OPEC+ production increases are economically significant, this alert's detection basis is weak and may reflect reporting language patterns rather than genuine market signals."
     },
     {
       "type": "SURGE",
@@ -135,10 +207,29 @@
         "Legal",
         "Environmental"
       ],
-      "alert_title": "セメント業展示会急増・業界転機",
-      "description": "セメント・建設業関連の展示会ニュースが過去平均の50倍以上に急増。業界の技術転換と脱炭素化への急速な対応を示す。今後、建設資材産業全体が低炭素技術導入で競争が激化し、産業構造の再編成が加速する見込みである。",
-      "alert_title_en": "Construction Industry Exhibitions Surge Amid Decarbonization Push",
-      "description_en": "Coverage of cement and construction industry exhibitions increases dramatically, signaling sector-wide urgency in adopting carbon reduction technologies. This portends intensified competition and restructuring within the global construction materials industry."
+      "alert_title": "セメント産業展示会の急増",
+      "description": "※ノイズの可能性が高い。アラート10との重複が大きく、セメント産業会議に関する同一の報道が複数検出されている。「exhibition」単独キーワードでは産業トレンドの本質を捉えておらず、会議開催告知の単純な統計的集約に過ぎない可能性が高い。",
+      "alert_title_en": "Exhibition Keyword Surge in Cement Industry Coverage",
+      "description_en": "※Likely noise. Significant overlap with Alert 10 suggests this is duplicate coverage of cement industry conferences rather than a distinct trend. The keyword \"exhibition\" alone lacks specificity and may reflect simple statistical aggregation of event announcements rather than meaningful market shifts."
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "yeni",
+      "mentions": 16,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "alert_title": "トルコ政治の改憲議論と社会基盤",
+      "description": "トルコ（\"yeni\"はトルコ語で「新」）で新憲法制定、新しい発展モデル、新しい教育枠組みなどが同時に議論されている。AKP指導部による新憲法構想は国家的なアイデンティティ再定義を意味し、政治体制、経済構造、社会規範に同時的な変化をもたらす可能性があり、中東地域の政治的転機となりうる。",
+      "alert_title_en": "Turkey Pursues Constitutional Reform and Ideological Realignment",
+      "description_en": "Turkish political discourse is simultaneously addressing constitutional reform, new development models, and educational restructuring, signaling comprehensive national realignment under AKP leadership. This multi-dimensional institutional overhaul could reshape Turkey's regional role and domestic governance for years to come."
     },
     {
       "type": "EMERGENCE",
@@ -150,10 +241,10 @@
         "Economic",
         "Legal"
       ],
-      "alert_title": "イラン経済危機に抗議デモ急増",
-      "description": "イランで経済悪化に基づく抗議デモが広がり、死傷者も報告されている。経済困窮が民衆不安定化の主要原因であることが明確化。今後、イランの政治的不安定化が地域紛争リスクを高め、国際原油価格の変動要因となる可能性がある。また政権側の弾圧強化による国際的批判も増加するだろう。",
-      "alert_title_en": "Widening Protests in Iran Over Economic Crisis",
-      "description_en": "Protests across Iran intensify over deteriorating economic conditions, with reported deaths and arrests rising. Economic distress is driving broader political instability, potentially affecting regional tensions and global energy markets."
+      "alert_title": "イラン経済危機が抗議活動に拡大",
+      "description": "イランで経済悪化に起因する抗議活動が広がり、死傷者や逮捕者が増加している。生計費危機が政治的不安定性に直結し、政府の取締り強化と市民不満の悪循環が深化している。今後の体制安定性と国際的な対応方針の転換が急速に進む可能性が高い。",
+      "alert_title_en": "Iran's Cost-of-Living Crisis Triggers Deadly Widening Protests",
+      "description_en": "Escalating protests across Iran over economic deterioration are resulting in deaths and mass arrests, creating a dangerous feedback loop between government suppression and civil resistance. This trajectory threatens humanitarian consequences and could accelerate international intervention or sanctions escalation in coming months."
     },
     {
       "type": "EMERGENCE",
@@ -164,10 +255,10 @@
         "Social",
         "Environmental"
       ],
-      "alert_title": "オーストラリア野党指導部の危機",
-      "description": "豪自由党のスーザン・レイ議員が党首候補者として浮上し、党内リーダーシップ危機が報じられている。保守政党内での権力交代・党内対立が顕在化。今後、オーストラリア政治の再編が進む可能性があり、次の総選挙への影響と政策方針の変化が注視される。",
-      "alert_title_en": "Australian Liberal Party Leadership Crisis Emerges",
-      "description_en": "Sussan Ley emerges at center of Australian Liberal Party leadership crisis, signaling internal party tensions and potential restructuring. This may reshape Australia's conservative coalition politics ahead of upcoming electoral cycles."
+      "alert_title": "オーストラリア野党の求心力喪失",
+      "description": "オーストラリア自由党（リベラル党）のスーザン・レイ議員をめぐるリーダーシップ危機が報道されている。野党の内部分裂と指導力の問題が露呈し、政治的空白が生じている。これはオーストラリア政治の二大政党体制の動揺を示唆し、今後の総選挙結果と政治的再編に影響を与える可能性がある。",
+      "alert_title_en": "Australia's Liberal Party Faces Leadership Crisis and Internal Division",
+      "description_en": "Leadership instability within Australia's Liberal Party, centered on Sussan Ley, signals deeper organizational dysfunction in the opposition. This internal fragmentation could reshape the political landscape and affect electoral prospects, particularly as the government consolidates power and alternative leadership visions emerge."
     },
     {
       "type": "EMERGENCE",
@@ -178,10 +269,10 @@
         "Social",
         "Environmental"
       ],
-      "alert_title": "ポートランド市長がICE対抗姿勢強化",
-      "description": "ポートランド市長がICEに対する抗議を強化し、市からの撤退要求を表明。自治体レベルでの連邦移民政策への直接的異議が拡大。今後、都市部地域での移民政策をめぐる連邦・地方の対立が深刻化し、法的紛争や資金配分争いに発展する可能性が高い。",
-      "alert_title_en": "Portland Mayor Escalates Confrontation with Federal Immigration Agents",
-      "description_en": "Portland's mayor demands ICE withdrawal following federal agent actions against protesters, intensifying local-federal conflict over immigration enforcement. This reflects growing municipal resistance to federal immigration policies with potential legal and fiscal implications."
+      "alert_title": "ポートランド市長がICE撤退を要求",
+      "description": "ポートランド市長が連邦捜査官によるICE（移民・税関取締局）の活動停止を公開要求し、抗議者への催涙ガス使用を非難している。都市レベルでの移民政策の反発が激化し、連邦政府と地方自治体の対立構造が明確化している。今後の都市部での法執行の権限配分が大きく変わる可能性がある。",
+      "alert_title_en": "Portland Mayor Demands ICE Withdrawal After Protest Crackdown",
+      "description_en": "Portland's mayor has explicitly demanded the removal of ICE operations from the city following violent federal suppression of protesters. This escalation of federal-local conflict over immigration enforcement represents a critical moment in the struggle over urban sanctuary policies and could inspire similar actions in other major cities."
     },
     {
       "type": "EMERGENCE",
@@ -192,10 +283,10 @@
         "Social",
         "Environmental"
       ],
-      "alert_title": "米連邦職員トランス関連政策に異議",
-      "description": "※ノイズの可能性が高い。記事タイトルが散漫で、\"withdraw\"キーワードの関連性が不明確。複数の無関連なニュースが混在しており、トレンド分析の信頼性が低い。",
-      "alert_title_en": "Federal Workers Challenge Trump Transgender Policy Actions",
-      "description_en": "※Potential noise alert. Article titles are fragmented and lack clear thematic coherence; trend reliability is questionable."
+      "alert_title": "イラン抗議活動の深刻化と死傷増加",
+      "description": "イランでの経済不況に基づく抗議活動が激化し、複数の報道が死傷者増加を報告している。政治的混乱と法的対応が強化されており、イラン国内の社会的亀裂が深刻化している。政権の統制力低下と国際的な人権懸念の高まりが同時進行する重大な局面にある。",
+      "alert_title_en": "Iran's Protest Movement Intensifies with Rising Death Toll",
+      "description_en": "Multiple reports confirm escalating casualties as Iranian protests over economic hardship intensify across the country. The government's hardening response and rising death toll suggest a critical juncture in Iranian domestic stability with significant humanitarian and geopolitical implications ahead."
     },
     {
       "type": "EMERGENCE",
@@ -206,10 +297,10 @@
         "Social",
         "Environmental"
       ],
-      "alert_title": "医療施設での生物汚染問題深刻化",
-      "description": "複数の病院施設で鳥類、カビ、真菌による汚染が報告。医療施設の衛生基準・環境管理の欠陥が露呈。今後、医療施設の建築・保守基準厳格化と院内感染リスク管理の強化が喫緊課題となり、関連規制が強化される見込みである。",
-      "alert_title_en": "Hospital Contamination by Birds, Mold, and Fungus Reported",
-      "description_en": "Multiple hospitals report contamination from birds, mold, and fungal growth, exposing facility maintenance failures and infection control gaps. This will likely trigger stricter building codes and enhanced environmental monitoring requirements across healthcare facilities."
+      "alert_title": "トランプ政権の政策撤回と軍事プレゼンス縮小",
+      "description": "※ノイズの可能性が高い。「trump withdraw」というキーワードが検出されているが、関連記事を見るとトランスジェンダー政策やObamacare関連など政策内容が多岐にわたり、統一された「新兆候」ではなく、トランプ政権による複数の異なる政策転換の報道が誤って集約されている可能性が高い。",
+      "alert_title_en": "Trump Administration Multiple Policy Reversals and Withdrawals",
+      "description_en": "※Likely noise. While Trump withdrawal initiatives are significant, the detected articles span disparate policy domains (military, healthcare, transgender rights) rather than a coherent emerging trend. This appears to be algorithmic over-aggregation of multiple unrelated policy changes rather than a unified new development."
     },
     {
       "type": "EMERGENCE",
@@ -220,10 +311,10 @@
         "Social",
         "Environmental"
       ],
-      "alert_title": "移民取締強化に対する広域抵抗",
-      "description": "トランプ政権の移民取締強化に対して、複数地域・業界から抗議活動が相次ぐ。農業労働者不足や文化的反発が同時進行。今後、移民政策による経済的悪影響（労働力不足、産業停滞）が顕著化し、政策修正圧力が高まる可能性がある。",
-      "alert_title_en": "Widespread Resistance to Immigration Enforcement Intensifies",
-      "description_en": "Immigration enforcement crackdowns spark protests across sectors including entertainment and agriculture, with fears of labor shortages and economic disruption. This resistance may force policy recalibration and broader economic consequences."
+      "alert_title": "ナショナルガード撤退の軍事的影響",
+      "description": "トランプ政権がシカゴ、ロサンゼルス、ポートランドからのナショナルガード部隊撤退を決定している。都市部の治安維持体制の急激な縮小は社会秩序と犯罪率に直接的な影響を与える可能性があり、都市ガバナンスが根本的に変わる可能性がある。地方自治体が独立的に治安体制を再構築する必要が生じる。",
+      "alert_title_en": "Trump Withdraws National Guard Deployments from Major U.S. Cities",
+      "description_en": "The Trump administration's decision to withdraw National Guard troops from major urban centers marks a significant shift in federal law enforcement strategy. This reduction in military-style security presence could reshape urban public safety frameworks and force localities to develop alternative governance models rapidly."
     },
     {
       "type": "SURGE",
@@ -236,10 +327,10 @@
         "Social",
         "Political"
       ],
-      "alert_title": "オバマケア補助金延長失敗が課題化",
-      "description": "議会がオバマケア補助金の延長に失敗し、民主党議員が救済提案。医療保障制度の維持をめぐる政治的対立が激化。今後、米国の医療政策をめぐる与野党間の争点が先鋭化し、数百万人の健康保険喪失リスクが政策転換の圧力要因となる可能性がある。",
-      "alert_title_en": "Obamacare Subsidy Extension Fails, Democrats Seek Alternative",
-      "description_en": "Congress fails to extend Obamacare subsidies, prompting Democratic proposals for alternative solutions. This signals intensifying healthcare policy conflict with potential implications for millions of insured Americans."
+      "alert_title": "全米複数都市での警備態勢の転換",
+      "description": "※ノイズの可能性が高い。「guard troops」というキーワードでアラートされているが、関連記事の多くが動物管理や価格政策など無関係の内容であり、実際の警備政策に関する統一された兆候ではなく、検索結果の誤った集約の可能性が高い。",
+      "alert_title_en": "Guard Troops Topic Shows Keyword Aggregation Errors",
+      "description_en": "※Likely noise. Articles associated with \"guard troops\" include unrelated content about animal control and economic pricing, indicating algorithmic mis-clustering rather than detection of a coherent emerging trend. The keyword matching appears to have captured irrelevant search results."
     },
     {
       "type": "EMERGENCE",
@@ -251,10 +342,10 @@
         "Economic",
         "Legal"
       ],
-      "alert_title": "連邦政府部分閉鎖がICE対立で長期化",
-      "description": "部分的な連邦政府閉鎖がICE関連予算問題で週単位で延長。議会内の移民政策をめぐる深刻な対立が行政機能停止を招く。今後、予算確保とICE権限をめぐる交渉難航が常態化し、政府運営の不安定化が経済に悪影響をもたらす可能性がある。",
-      "alert_title_en": "Partial Federal Shutdown Extended Over ICE Budget Dispute",
-      "description_en": "Federal shutdown persists due to disagreements over ICE funding demands, indicating deep Congressional gridlock on immigration issues. Prolonged budget conflicts may become recurring, creating economic uncertainty and governance instability."
+      "alert_title": "病院内の環境汚染と衛生危機",
+      "description": "複数の病院で鳥、カビ、菌類が発見され、医療施設の衛生管理体制に重大な問題があることが露呈している。公衆衛生上の深刻な脅威であり、患者安全と医療システムの信頼性に直結する危機である。病院管理体制の改革と感染防止対策の強化が急速に進む必要がある。",
+      "alert_title_en": "Hospital Sanitation Crisis: Birds, Mold, and Fungus Contamination Widespread",
+      "description_en": "Reports of birds, mold, and fungal contamination throughout hospital facilities represent a critical public health crisis. This widespread sanitation failure threatens patient safety and institutional credibility, potentially triggering major regulatory reforms and investment in healthcare infrastructure remediation."
     },
     {
       "type": "EMERGENCE",
@@ -264,10 +355,10 @@
       "categories": [
         "Social"
       ],
-      "alert_title": "米国内エレクトリックバイク規制強化",
-      "description": "フロリダ州がE-bikes規制を強化し、子ども自転車の国内製造とタリフ政策が議論に。安全規制と産業保護政策の交錯。今後、E-bikes産業の急成長に伴い、安全基準の国際的統一化と産業政策をめぐる各国間の競争が加速するだろう。",
-      "alert_title_en": "US States Tighten E-Bike Safety Regulations and Tariffs",
-      "description_en": "Florida strengthens e-bike regulations while tariff debates emerge over domestic manufacturing. This reflects growing safety concerns and protectionist pressures in the rapidly expanding e-bike industry globally."
+      "alert_title": "米国の移民政策強化と社会的反発",
+      "description": "トランプ政権の移民取締り強化（ICE活動の拡大）に対し、農業労働地域での恐怖、セレブリティの公開抗議、カナダでのデモなど、多国的で多層的な社会的反発が生じている。この分極化は労働市場、農業生産、文化的社会関係に根本的な影響を与える可能性があり、北米全域の政治的緊張が高まる。",
+      "alert_title_en": "Immigration Crackdown Triggers Multi-Level Social Resistance and International Backlash",
+      "description_en": "Trump's intensified immigration enforcement is catalyzing widespread resistance spanning agricultural workers, celebrity activists, and international protest, creating a multi-level political crisis. This escalating conflict threatens North American labor systems, food production, and bilateral relations while deepening social polarization across regions."
     },
     {
       "type": "EMERGENCE",
@@ -277,10 +368,10 @@
       "categories": [
         "Social"
       ],
-      "alert_title": "イラン情勢が全方位リスク化",
-      "description": "イランが経済・政治・軍事・法的側面で同時に不安定化し、6つのPESTLE分野すべてで報道が横断出現。地域紛争リスク、原油価格変動、国際制裁の複雑化が同時進行。今後、中東地域全体の地政学的リスクが急速に高まり、グローバル経済・エネルギー・金融市場への連鎖的影響が不可避となる可能性が極めて高い。",
-      "alert_title_en": "Iran Crisis Spans All PESTLE Dimensions Simultaneously",
-      "description_en": "Iran emerges as a multi-dimensional crisis affecting politics, economics, military, and legal spheres simultaneously across all PESTLE categories. This signals escalating geopolitical risks with cascading implications for global energy, finance, and security."
+      "alert_title": "Obamacare補助金失効と保険制度危機",
+      "description": "連邦議会がObamacare（ACA）の補助金延長に失敗し、低所得者の医療保険制度が危機的状況にある。民主党議員がトランプ政権での救済可能性を指摘するなど、ねじれた政治状況が発生している。数百万人の保険喪失の可能性があり、米国の医療セーフティネットの機能不全が予見される。",
+      "alert_title_en": "Obamacare Subsidy Failure Threatens Millions of Health Insurance Beneficiaries",
+      "description_en": "Congressional failure to extend ACA subsidies has created an acute healthcare coverage crisis affecting millions. Democratic hopes for Trump administration intervention reflect unprecedented political dysfunction, and potential insurance loss threatens public health outcomes and economic stability across vulnerable populations."
     },
     {
       "type": "EMERGENCE",
@@ -290,10 +381,10 @@
       "categories": [
         "Social"
       ],
-      "alert_title": "トランプ政策が全政策領域に波及",
-      "description": "トランプ政権の政策・言動が経済から環境、法律、技術まで全PESTLEセクターに同時影響。政治指導者の決定が前例なく広範な社会的影響を及ぼす構図が明確化。今後、米国政治の内向き的・急進的なシフトが国際秩序やグローバル規範に根本的な影響をもたらし、多国間協力体制の再編成が不可避となるだろう。",
-      "alert_title_en": "Trump Administration Policies Create Cross-Sectoral Global Impact",
-      "description_en": "Trump administration actions simultaneously affect all PESTLE dimensions from economics to environment and technology, indicating unprecedented breadth of political influence. This suggests fundamental reshaping of global governance structures and international cooperation frameworks."
+      "alert_title": "米国政府の部分的機能停止が長期化",
+      "description": "連邦政府の部分的閉鎖がICE予算問題を中心に長期化している。与野党の対立が深まり、政府機能の持続的な混乱が予見される。この政治的膠着状態は行政サービス提供能力の低下をもたらし、公共投資や社会政策の実行に大きな支障が生じる可能性がある。",
+      "alert_title_en": "U.S. Government Partial Shutdown Persists Amid Budget Dispute",
+      "description_en": "An extended federal government shutdown centered on immigration enforcement funding reflects deepening partisan gridlock. This prolonged dysfunction threatens the delivery of essential services and could trigger economic consequences as federal operations remain disrupted indefinitely."
     },
     {
       "type": "SURGE",
@@ -305,10 +396,10 @@
       "categories": [
         "Social"
       ],
-      "alert_title": "2026年度予算が多次元政策焦点に",
-      "description": "各国の2026-27年度予算編成が政治・経済・環境・技術など全領域で同時に注視される。特にインド連邦予算が高成長目標と財政規律のバランスを象徴。今後、世界経済の不確実性が高まる中、各国政府の財政・産業政策が更新され、AI投資やインフラへの競争が激化する見込みである。",
-      "alert_title_en": "2026-27 Budgets Shape Multi-Sectoral Policy Priorities",
-      "description_en": "Government budgets for 2026-27 simultaneously address political, economic, environmental, and technology dimensions, with India's budget exemplifying growth ambitions versus fiscal discipline. This signals emerging competition in strategic sectors and divergent global economic trajectories."
+      "alert_title": "子ども用自転車の国内製造と関税政策",
+      "description": "子ども用自転車の米国国内製造推進と競合他国への関税設定が議論されている。これは地域産業保護主義と自由貿易のバランスを示唆しており、製造業の国内回帰政策が具体的に進展していることを示す。今後のサプライチェーン再編と製造業雇用に影響を与える可能性がある。",
+      "alert_title_en": "U.S. Pushes Domestic Bicycle Manufacturing with Tariff Protection",
+      "description_en": "Policy proposals to boost domestic children's bicycle production through tariffs signal broader reshoring initiatives. This protectionist strategy reflects deliberate supply chain localization, potentially triggering retaliatory measures and reshaping global manufacturing networks while affecting consumer prices."
     },
     {
       "type": "SURGE",
@@ -322,183 +413,10 @@
         "Political",
         "Legal"
       ],
-      "alert_title": "グローバル計画立案が複合課題化",
-      "description": "※ノイズの可能性が高い。記事タイトルが言語混在で散漫であり、\"plan\"キーワードの関連性が弱い。スペイン、インド、カナダなどの無関連な地域計画が混在しており、トレンド分析の信頼性が低い。",
-      "alert_title_en": "Global Planning Initiatives Address Multiple Policy Dimensions",
-      "description_en": "※Potential noise alert. Articles span disparate geographic regions and policy domains with weak thematic coherence; language mixing and fragmented relevance limit analytical reliability."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "obamacare",
-      "mentions": 10,
-      "ratio": 63.3,
-      "historical_avg": 0.1,
-      "categories": [
-        "Political",
-        "Legal"
-      ],
-      "alert_title": "インド経済が成長と変革の中心化",
-      "description": "インドが2047年ビジョン実現に向けた予算・政策立案の中心となり、レアアース、インフラ、経済成長が同時に焦点化。途上国での構造的な経済転換が明確化。今後、インドが世界経済秩序における重要性が急速に上昇し、技術・資源・市場をめぐる国際競争が激化する可能性が高い。",
-      "alert_title_en": "India Emerges as Center of Global Growth and Transformation",
-      "description_en": "India positions itself as center of economic transformation with focus on rare earth minerals, infrastructure, and growth targets through 2047. This signals India's rising importance in global economic competition and resource geopolitics."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "partial",
-      "mentions": 8,
-      "ratio": 50.7,
-      "historical_avg": 0.1,
-      "categories": [
-        "Political",
-        "Legal"
-      ],
-      "alert_title": "社会課題への対抗政策が国際化",
-      "description": "※ノイズの可能性が高い。スペイン語を含む言語混在で記事が散漫。動物虐待、廃棄物管理、防衛契約など無関連な案件が混在しており、\"contra\"キーワードの意味的結合性が低い。",
-      "alert_title_en": "Cross-National Policy Responses to Social Challenges",
-      "description_en": "※Potential noise alert. Articles in mixed languages address disparate topics (animal cruelty, waste management, defense contracts) with weak thematic connection to keyword; analytical coherence is questionable."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "bikes",
-      "mentions": 8,
-      "ratio": 50.7,
-      "historical_avg": 0.1,
-      "categories": [
-        "Social",
-        "Economic",
-        "Legal"
-      ],
-      "alert_title": "スペイン語圏での政策・事象報道集中",
-      "description": "※ノイズの可能性が高い。スペイン語・ポルトガル語記事が多数混在し、\"sobre\"キーワード（\"about\"の意）が前置詞として機能。メキシコ地方ニュース、アルゼンチン音楽等が無関連に集約されており、統一的なトレンド解釈が困難。",
-      "alert_title_en": "Spanish-Language Media Coverage Shows Fragmented Topics",
-      "description_en": "※Potential noise alert. Mixed Spanish and Portuguese articles with 'sobre' functioning as preposition; disparate Mexican local news and unrelated entertainment topics lack thematic coherence or strategic significance."
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "medium",
-      "topic": "iran",
-      "mentions": 101,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 6,
-      "alert_title": "メディア・移民対策が国家規制化",
-      "description": "ソーシャルメディアにおける移民関連広告取締が各国政府の規制対象となる動き。デジタルプラットフォームの内容規制と移民政策の統合化が進行。今後、国家がメディア・プラットフォームに対する規制権を一層強化し、言論の自由とセキュリティのバランス問題が先鋭化する見込みである。",
-      "alert_title_en": "Governments Regulate Social Media Migrant Content and Advertising",
-      "description_en": "Multiple governments intensify crackdowns on social media migrant-related advertising and content, signaling convergence of platform regulation and immigration policy. This signals emerging state power over digital information flows with implications for free expression."
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "medium",
-      "topic": "trump",
-      "mentions": 81,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 6
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "medium",
-      "topic": "budget",
-      "mentions": 48,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 6
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "medium",
-      "topic": "plan",
-      "mentions": 23,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 6
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "medium",
-      "topic": "india",
-      "mentions": 23,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 6
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "medium",
-      "topic": "contra",
-      "mentions": 23,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 6
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "medium",
-      "topic": "sobre",
-      "mentions": 22,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 6
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "medium",
-      "topic": "media",
-      "mentions": 21,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 6
+      "alert_title": "電動自転車の急速な普及と安全リスク",
+      "description": "電動自転車の高速化と危険性に関する安全警告が増加している。新興テクノロジーの急速な普及が都市部の交通安全に新たなリスクをもたらしており、規制の整備、保険制度の見直し、インフラ整備の必要性が生じている。今後の都市モビリティ政策と公衆安全規制の大きな転換点になる可能性がある。",
+      "alert_title_en": "E-Bikes Safety Concerns Emerge as Technology Adoption Accelerates",
+      "description_en": "Rising awareness of electric bike dangers as the technology spreads rapidly signals emerging public safety challenges in urban mobility. Regulatory gaps and infrastructure inadequacy will likely trigger policy interventions, insurance reforms, and urban planning adjustments in coming months."
     }
   ]
 }

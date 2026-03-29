@@ -230,6 +230,17 @@ def detect_crossover_alerts(rows, recent_months=2):
     if not months:
         return []
 
+    # Generic words that appear everywhere but carry no analytical value
+    crossover_noise = {
+        'trump', 'biden', 'china', 'budget', 'plan', 'india', 'media',
+        'contra', 'sobre', 'entre', 'como', 'global', 'price', 'crisis',
+        'market', 'policy', 'power', 'security', 'reform', 'economic',
+        'political', 'social', 'development', 'business', 'program',
+        'support', 'growth', 'action', 'impact', 'issue', 'risk',
+        'future', 'health', 'energy', 'technology', 'data', 'law',
+        'trade', 'war',
+    }
+
     recent = set(months[-recent_months:])
     keyword_cats = defaultdict(set)
     keyword_counts = Counter()
@@ -238,16 +249,45 @@ def detect_crossover_alerts(rows, recent_months=2):
         if not pd or len(pd) < 7 or pd[:7] not in recent:
             continue
         for kw in extract_keywords(title):
-            keyword_cats[kw].add(cat)
-            keyword_counts[kw] += 1
+            if kw not in crossover_noise:
+                keyword_cats[kw].add(cat)
+                keyword_counts[kw] += 1
+
+    # Use bigrams for more meaningful crossover detection
+    bigram_cats = defaultdict(set)
+    bigram_counts = Counter()
+    for title, cat, pd, url in rows:
+        if not pd or len(pd) < 7 or pd[:7] not in recent:
+            continue
+        for bg in extract_bigrams(title):
+            bigram_cats[bg].add(cat)
+            bigram_counts[bg] += 1
 
     alerts = []
+    # Prefer bigrams (more meaningful) over single keywords
+    for bg, cats in bigram_cats.items():
+        if len(cats) >= MIN_CATEGORIES_CROSSOVER and bigram_counts[bg] >= 6:
+            related = find_related_titles(rows, bg.split()[0], recent, limit=8)
+            alerts.append({
+                "type": "CROSSOVER",
+                "level": "high" if len(cats) >= 5 else "medium",
+                "topic": bg,
+                "mentions": bigram_counts[bg],
+                "categories": sorted(cats),
+                "n_categories": len(cats),
+                "sample_titles": related,
+            })
+
+    # Add single keywords only if they're clearly significant
     for kw, cats in keyword_cats.items():
-        if len(cats) >= MIN_CATEGORIES_CROSSOVER and keyword_counts[kw] >= 8:
+        if len(cats) >= 4 and keyword_counts[kw] >= 15:
+            # Skip if already covered by a bigram
+            if any(kw in a["topic"] for a in alerts):
+                continue
             related = find_related_titles(rows, kw, recent, limit=8)
             alerts.append({
                 "type": "CROSSOVER",
-                "level": "medium",
+                "level": "high" if len(cats) >= 5 else "medium",
                 "topic": kw,
                 "mentions": keyword_counts[kw],
                 "categories": sorted(cats),
@@ -256,7 +296,7 @@ def detect_crossover_alerts(rows, recent_months=2):
             })
 
     alerts.sort(key=lambda a: (-a["n_categories"], -a["mentions"]))
-    return alerts[:8]
+    return alerts[:5]
 
 
 def enrich_alerts_with_ai(all_alerts: list[dict]) -> list[dict]:
