@@ -875,16 +875,22 @@ function renderOverview() {
   const fields = {};
   PAPERS_DATA.forEach(p => { fields[p.field] = (fields[p.field] || 0) + 1; });
 
-  // Total from DB (via latest.json total_fetched)
-  const dbTotal = NEWS_DATA.total_fetched || totalNews;
+  // Historical total from pestle_index (sum of all quarter counts)
   const historyQuarters = PESTLE_HISTORY?._quarterCount || 0;
+  let historyTotal = 0;
+  if (PESTLE_HISTORY?._index) {
+    for (const cats of Object.values(PESTLE_HISTORY._index)) {
+      if (typeof cats === 'object') historyTotal += Object.values(cats).reduce((s, n) => s + (typeof n === 'number' ? n : 0), 0);
+    }
+  }
+  const newsTotal = historyTotal || totalNews;
   const papersTotal = PAPERS_STATS?.total || PAPERS_DATA.length;
 
   document.getElementById('overviewStats').innerHTML = `
-    <div class="stat-card"><div class="stat-label">${t('stat_news')}</div><div class="stat-value">${dbTotal.toLocaleString()}</div><div class="stat-sub">${historyQuarters > 0 ? '1990年〜 ' + historyQuarters + '四半期' : t('stat_sub_news')}</div></div>
+    <div class="stat-card"><div class="stat-label">${t('stat_news')}</div><div class="stat-value">${newsTotal.toLocaleString()}</div><div class="stat-sub">${historyQuarters > 0 ? '1990年〜 ' + historyQuarters + '四半期' : t('stat_sub_news')}</div></div>
     <div class="stat-card"><div class="stat-label">${t('stat_papers')}</div><div class="stat-value">${papersTotal.toLocaleString()}</div><div class="stat-sub">${Object.keys(PAPERS_STATS?.by_field || fields).length} ${t('field')}</div></div>
     <div class="stat-card"><div class="stat-label">${t('stat_sources')}</div><div class="stat-value">${sources.size}</div><div class="stat-sub">${t('stat_sub_sources')}</div></div>
-    <div class="stat-card"><div class="stat-label">${t('stat_date')}</div><div class="stat-value" style="font-size:1rem">${NEWS_DATA.date}</div><div class="stat-sub">${NEWS_DATA.total_fetched}${t('from_selected')}</div></div>
+    <div class="stat-card"><div class="stat-label">${t('stat_date')}</div><div class="stat-value" style="font-size:1rem">${NEWS_DATA.date}</div><div class="stat-sub">${NEWS_DATA.total_fetched}件から${totalNews}件選定</div></div>
     <div class="stat-card"><div class="stat-label">${t('stat_fields')}</div><div class="stat-value">${Object.keys(fields).length}</div><div class="stat-sub">${Object.entries(fields).map(([f,n]) => f + ':' + n).join(', ')}</div></div>
   `;
 
