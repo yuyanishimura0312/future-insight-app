@@ -1888,7 +1888,7 @@ let semanticSearchRunning = false;
 async function loadSemanticEmbeddings() {
   if (semanticEmbeddings) return semanticEmbeddings;
   try {
-    const resp = await fetch('data/embeddings_binary.json');
+    const resp = await fetch('data/embeddings.json');
     semanticEmbeddings = await resp.json();
     console.log(`Loaded ${semanticEmbeddings.count} embeddings`);
     return semanticEmbeddings;
@@ -1905,13 +1905,6 @@ async function loadSemanticModel() {
   return semanticModel;
 }
 
-// Popcount for uint8
-function popcount8(x) {
-  x = x - ((x >> 1) & 0x55);
-  x = (x & 0x33) + ((x >> 2) & 0x33);
-  return (x + (x >> 4)) & 0x0f;
-}
-
 async function runGlobalSemanticSearch() {
   const q = (document.getElementById('globalSearch').value || '').trim();
   if (!q || q.length < 2 || semanticSearchRunning) return;
@@ -1921,7 +1914,6 @@ async function runGlobalSemanticSearch() {
   statusEl.textContent = 'AIモデルを読み込み中...（初回のみ、約30秒）';
 
   try {
-    // Load embeddings and model in parallel
     const [emb, model] = await Promise.all([
       loadSemanticEmbeddings(),
       loadSemanticModel()
@@ -1935,40 +1927,23 @@ async function runGlobalSemanticSearch() {
 
     statusEl.textContent = '検索中...';
 
-    // Encode query (E5 expects 'query: ' prefix)
+    // Encode query
     const output = await model('query: ' + q, { pooling: 'mean', normalize: true });
     const queryVec = Array.from(output.data);
 
-    // Binarize query using stored medians
-    const medians = emb.medians;
-    const dims = emb.dims;
-    const packedLen = dims >> 3; // 384 / 8 = 48
-    const queryBinary = new Uint8Array(packedLen);
-    for (let i = 0; i < dims; i++) {
-      if (queryVec[i] > medians[i]) {
-        queryBinary[i >> 3] |= (1 << (7 - (i & 7)));
-      }
-    }
-
-    // Compute Hamming similarity against all documents
+    // Compute cosine similarity (vectors are normalized, so dot product = cosine)
     const scores = [];
-    for (const [id, b64] of Object.entries(emb.vectors)) {
-      const docBytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
-      let matchBits = 0;
-      for (let i = 0; i < packedLen; i++) {
-        matchBits += popcount8(~(queryBinary[i] ^ docBytes[i]) & 0xff);
-      }
-      scores.push({ id, score: matchBits / dims });
+    for (const [id, docVec] of Object.entries(emb.vectors)) {
+      let dot = 0;
+      for (let i = 0; i < docVec.length; i++) dot += queryVec[i] * docVec[i];
+      scores.push({ id, score: dot });
     }
 
-    // Sort by similarity and take top results
     scores.sort((a, b) => b.score - a.score);
-    const topScore = scores[0].score;
-    const p90 = scores[Math.floor(scores.length * 0.1)].score;
-    const threshold = p90 + (topScore - p90) * 0.4;
-    const results = scores.filter(s => s.score >= threshold).slice(0, 50);
+    // Show top 30 results
+    const results = scores.slice(0, 30);
 
-    statusEl.textContent = `${results.length}件の関連結果（上位を表示）`;
+    statusEl.textContent = `上位${results.length}件の関連結果を表示`;
     renderSemanticResults(results);
   } catch (e) {
     console.error('Semantic search error:', e);

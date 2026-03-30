@@ -1,33 +1,25 @@
 #!/usr/bin/env python3
-"""Generate binary-quantized embeddings for the future insight app.
+"""Generate embeddings for the future insight app.
 
-Uses multilingual-e5-small to create compact binary vectors for ~70K entries.
-Binary quantization reduces storage from ~270MB to ~6MB while retaining
-~90% of cosine similarity accuracy.
-
-Optimized for speed: uses titles only (short text per entry).
+Uses multilingual-e5-small to create float vectors (rounded to 3 decimals)
+for ~10K entries. Stored as JSON for browser-side cosine similarity search.
 """
 
 import json
 import os
 import sys
-import base64
-
-import numpy as np
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, "data")
-EMBEDDINGS_FILE = os.path.join(DATA_DIR, "embeddings_binary.json")
+EMBEDDINGS_FILE = os.path.join(DATA_DIR, "embeddings.json")
 
 MODEL_NAME = "intfloat/multilingual-e5-small"
 BATCH_SIZE = 64
-# Limit papers to keep generation time reasonable (~10 min on M2 Mac)
 MAX_PAPERS = 10000
 
 
 def load_data():
-    """Load news and papers data, return list of (id, text) tuples.
-    Uses short text (title + field only) for fast embedding generation."""
+    """Load news and papers data, return list of (id, text) tuples."""
     entries = []
 
     # Load news
@@ -44,13 +36,12 @@ def load_data():
                 entries.append((entry_id, text))
         print(f"  News: {len(entries)} articles")
 
-    # Load papers (prioritize those with Japanese titles)
+    # Load papers
     papers_path = os.path.join(DATA_DIR, "papers_light.json")
     if os.path.exists(papers_path):
         with open(papers_path, "r", encoding="utf-8") as f:
             papers = json.load(f)
 
-        # Sort: papers with title_ja first, then by recency
         indexed = list(enumerate(papers))
         indexed.sort(key=lambda x: (not bool(x[1].get("title_ja")), x[0]))
         selected = indexed[:MAX_PAPERS]
@@ -68,7 +59,7 @@ def load_data():
             text = " ".join(parts)
             entries.append((entry_id, text))
             paper_count += 1
-        print(f"  Papers: {paper_count} (of {len(papers)} total, limited to {MAX_PAPERS})")
+        print(f"  Papers: {paper_count} (of {len(papers)} total)")
 
     return entries
 
@@ -86,31 +77,25 @@ def main():
     print(f"Loading model: {MODEL_NAME}")
     model = SentenceTransformer(MODEL_NAME)
 
-    print(f"Generating embeddings for {len(docs)} documents (batch_size={BATCH_SIZE})...")
+    print(f"Generating embeddings for {len(docs)} documents...")
     embeddings = model.encode(
         docs,
         batch_size=BATCH_SIZE,
         show_progress_bar=True,
         normalize_embeddings=True,
     )
-    embeddings = np.array(embeddings, dtype=np.float32)
+
     print(f"Embeddings shape: {embeddings.shape}")
 
-    # Binary quantization
-    print("Applying binary quantization...")
-    medians = np.median(embeddings, axis=0)
-    binary = (embeddings > medians).astype(np.uint8)
-    packed = np.packbits(binary, axis=1)
-
+    # Store as JSON with 3 decimal precision
     vectors = {}
-    for entry_id, row in zip(ids, packed):
-        vectors[entry_id] = base64.b64encode(row.tobytes()).decode("ascii")
+    for entry_id, vec in zip(ids, embeddings):
+        vectors[entry_id] = [round(float(v), 3) for v in vec]
 
     output = {
         "model": MODEL_NAME,
         "dims": int(embeddings.shape[1]),
         "count": len(vectors),
-        "medians": [round(float(m), 6) for m in medians],
         "vectors": vectors,
     }
 
