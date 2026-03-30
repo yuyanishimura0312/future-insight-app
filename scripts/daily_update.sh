@@ -40,6 +40,11 @@ log "Step 2: Running AI analysis..."
 python3 ai_analyze.py >> "$LOG_FILE" 2>&1
 log "  AI analysis done."
 
+# Step 2.5: Curate daily papers (select top 20/field, translate, detect novelty)
+log "Step 2.5: Curating daily papers..."
+python3 curate_daily_papers.py >> "$LOG_FILE" 2>&1
+log "  Paper curation done."
+
 # Step 3: Detect alerts
 log "Step 3: Detecting alerts..."
 python3 detect_alerts.py >> "$LOG_FILE" 2>&1
