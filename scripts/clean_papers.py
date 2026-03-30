@@ -29,8 +29,8 @@ SUBFIELD_TO_FIELD = {
     "History and Philosophy of Science": "人文学",
     "Cultural Studies": "人文学",
     "Gender Studies": "人文学",
-    "General Arts and Humanities": "人文学",
-    "Museology": "人文学",
+    "General Arts and Humanities": "芸術",
+    "Museology": "芸術",
 
     # 社会科学 (Social Sciences)
     "Sociology and Political Science": "社会科学",
