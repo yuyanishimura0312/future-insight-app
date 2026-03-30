@@ -972,9 +972,11 @@
 
   <!-- ===== SEARCH ===== -->
   <div class="tab-panel" id="tab-search">
-    <div class="search-bar">
-      <input class="search-input" id="globalSearch" data-i18n-placeholder="search_all" placeholder="ニュース・論文を横断検索..." oninput="renderGlobalSearch()">
+    <div class="search-bar" style="display:flex;gap:8px;align-items:center">
+      <input class="search-input" id="globalSearch" placeholder="自然文で検索してEnter（例：AIが社会に与える影響）" onkeydown="if(event.key==='Enter')runGlobalSemanticSearch()">
+      <button onclick="runGlobalSemanticSearch()" style="padding:8px 16px;background:var(--accent);color:white;border:none;border-radius:6px;cursor:pointer;font-size:0.82rem;white-space:nowrap">検索</button>
     </div>
+    <div id="searchStatus" style="font-size:0.75rem;color:var(--text-muted);padding:4px 0;min-height:1.4em"></div>
     <div id="searchResults"></div>
   </div>
 
@@ -1877,7 +1879,154 @@ function renderPapers() {
   document.getElementById('papersGrid').innerHTML = html;
 }
 
-// === Global Search ===
+// === Semantic Search ===
+let semanticEmbeddings = null; // {medians, vectors, dims}
+let semanticModel = null;
+let semanticSearchRunning = false;
+
+// Load pre-computed binary embeddings
+async function loadSemanticEmbeddings() {
+  if (semanticEmbeddings) return semanticEmbeddings;
+  try {
+    const resp = await fetch('data/embeddings_binary.json');
+    semanticEmbeddings = await resp.json();
+    console.log(`Loaded ${semanticEmbeddings.count} embeddings`);
+    return semanticEmbeddings;
+  } catch (e) {
+    console.error('Failed to load embeddings:', e);
+    return null;
+  }
+}
+
+async function loadSemanticModel() {
+  if (semanticModel) return semanticModel;
+  const { pipeline } = await import('https://cdn.jsdelivr.net/npm/@huggingface/transformers@3');
+  semanticModel = await pipeline('feature-extraction', 'Xenova/multilingual-e5-small', { dtype: 'q8' });
+  return semanticModel;
+}
+
+// Popcount for uint8
+function popcount8(x) {
+  x = x - ((x >> 1) & 0x55);
+  x = (x & 0x33) + ((x >> 2) & 0x33);
+  return (x + (x >> 4)) & 0x0f;
+}
+
+async function runGlobalSemanticSearch() {
+  const q = (document.getElementById('globalSearch').value || '').trim();
+  if (!q || q.length < 2 || semanticSearchRunning) return;
+  semanticSearchRunning = true;
+
+  const statusEl = document.getElementById('searchStatus');
+  statusEl.textContent = 'AIモデルを読み込み中...（初回のみ、約30秒）';
+
+  try {
+    // Load embeddings and model in parallel
+    const [emb, model] = await Promise.all([
+      loadSemanticEmbeddings(),
+      loadSemanticModel()
+    ]);
+
+    if (!emb || !model) {
+      statusEl.textContent = 'データの読み込みに失敗しました。ページを更新してください。';
+      semanticSearchRunning = false;
+      return;
+    }
+
+    statusEl.textContent = '検索中...';
+
+    // Encode query (E5 expects 'query: ' prefix)
+    const output = await model('query: ' + q, { pooling: 'mean', normalize: true });
+    const queryVec = Array.from(output.data);
+
+    // Binarize query using stored medians
+    const medians = emb.medians;
+    const dims = emb.dims;
+    const packedLen = dims >> 3; // 384 / 8 = 48
+    const queryBinary = new Uint8Array(packedLen);
+    for (let i = 0; i < dims; i++) {
+      if (queryVec[i] > medians[i]) {
+        queryBinary[i >> 3] |= (1 << (7 - (i & 7)));
+      }
+    }
+
+    // Compute Hamming similarity against all documents
+    const scores = [];
+    for (const [id, b64] of Object.entries(emb.vectors)) {
+      const docBytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+      let matchBits = 0;
+      for (let i = 0; i < packedLen; i++) {
+        matchBits += popcount8(~(queryBinary[i] ^ docBytes[i]) & 0xff);
+      }
+      scores.push({ id, score: matchBits / dims });
+    }
+
+    // Sort by similarity and take top results
+    scores.sort((a, b) => b.score - a.score);
+    const topScore = scores[0].score;
+    const p90 = scores[Math.floor(scores.length * 0.1)].score;
+    const threshold = p90 + (topScore - p90) * 0.4;
+    const results = scores.filter(s => s.score >= threshold).slice(0, 50);
+
+    statusEl.textContent = `${results.length}件の関連結果（上位を表示）`;
+    renderSemanticResults(results);
+  } catch (e) {
+    console.error('Semantic search error:', e);
+    statusEl.textContent = 'エラーが発生しました: ' + e.message;
+  }
+
+  semanticSearchRunning = false;
+}
+
+function renderSemanticResults(results) {
+  let html = '';
+  results.forEach(r => {
+    const pct = (r.score * 100).toFixed(0);
+    if (r.id.startsWith('news_')) {
+      // Parse news ID: news_Category_index
+      const parts = r.id.split('_');
+      const cat = parts[1];
+      const idx = parseInt(parts[2]);
+      if (!NEWS_DATA || !NEWS_DATA.pestle[cat]) return;
+      const article = NEWS_DATA.pestle[cat].articles[idx];
+      if (!article) return;
+      const color = PESTLE_META[cat]?.color || 'var(--accent)';
+      const badge = PESTLE_META[cat]?.ja || cat;
+      const title = localizedTitle(article, cat, idx);
+      html += `
+        <div class="article-item" style="background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:6px;cursor:pointer" onclick="showArticle('${cat}', ${idx})">
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="font-size:0.65rem;padding:2px 8px;border-radius:4px;background:${color};color:white">${esc(badge)}</span>
+            <span class="lang-badge">NEWS</span>
+            <span style="font-size:0.65rem;padding:2px 6px;border-radius:4px;background:var(--accent-warm);color:white">${pct}%</span>
+          </div>
+          <div class="article-title" style="margin-top:4px">${esc(title)}</div>
+          <div class="article-meta">${esc(article.source || '')}</div>
+        </div>`;
+    } else if (r.id.startsWith('paper_')) {
+      const idx = parseInt(r.id.split('_')[1]);
+      const paper = PAPERS_DATA[idx];
+      if (!paper) return;
+      const color = FIELD_COLORS[paper.field] || 'var(--accent)';
+      const title = localizedPaperTitle(paper, idx);
+      html += `
+        <div class="article-item" style="background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:6px;cursor:pointer" onclick="showPaper(${idx})">
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="font-size:0.65rem;padding:2px 8px;border-radius:4px;background:${color};color:white">${esc(paper.field || '')}</span>
+            <span class="lang-badge">PAPER</span>
+            <span style="font-size:0.65rem;padding:2px 6px;border-radius:4px;background:var(--accent-warm);color:white">${pct}%</span>
+          </div>
+          <div class="article-title" style="margin-top:4px">${esc(title)}</div>
+          <div class="article-meta">${esc((paper.authors || '').substring(0, 60))}</div>
+        </div>`;
+    }
+  });
+
+  if (!html) html = '<div style="color:var(--text-muted);padding:20px;">結果が見つかりませんでした。</div>';
+  document.getElementById('searchResults').innerHTML = html;
+}
+
+// === Global Search (legacy keyword fallback) ===
 function renderGlobalSearch() {
   const q = (document.getElementById('globalSearch').value || '').toLowerCase();
   if (!q || q.length < 2) {
