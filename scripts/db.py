@@ -143,15 +143,29 @@ def save_collection(output: dict) -> None:
 
     total_selected = sum(info["count"] for info in output["pestle"].values())
 
-    # Insert or replace collection row
-    cur = conn.execute(
-        """INSERT OR REPLACE INTO collections
-           (date, collected_at, total_fetched, feeds_count, total_selected)
-           VALUES (?, ?, ?, ?, ?)""",
-        (output["date"], output["collected_at"], output["total_fetched"],
-         output["feeds_count"], total_selected)
-    )
-    collection_id = cur.lastrowid
+    # Check if collection already exists for this date
+    existing = conn.execute(
+        "SELECT id FROM collections WHERE date = ?", (output["date"],)
+    ).fetchone()
+
+    if existing:
+        collection_id = existing[0]
+        conn.execute(
+            """UPDATE collections
+               SET collected_at = ?, total_fetched = ?, feeds_count = ?, total_selected = ?
+               WHERE id = ?""",
+            (output["collected_at"], output["total_fetched"],
+             output["feeds_count"], total_selected, collection_id)
+        )
+    else:
+        cur = conn.execute(
+            """INSERT INTO collections
+               (date, collected_at, total_fetched, feeds_count, total_selected)
+               VALUES (?, ?, ?, ?, ?)""",
+            (output["date"], output["collected_at"], output["total_fetched"],
+             output["feeds_count"], total_selected)
+        )
+        collection_id = cur.lastrowid
 
     # Insert articles
     inserted = 0
