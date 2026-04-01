@@ -18,8 +18,14 @@ if [ -f "$PROJECT_DIR/.env" ]; then
   set +a
 fi
 
-# Ensure PATH includes Homebrew python
-export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+# Ensure PATH includes Homebrew python and venv
+export PATH="/Users/nishimura+/.venv/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
+
+# Get API key from macOS keychain if not already set
+if [ -z "$ANTHROPIC_API_KEY" ]; then
+  ANTHROPIC_API_KEY=$(security find-generic-password -s ANTHROPIC_API_KEY -w 2>/dev/null)
+  export ANTHROPIC_API_KEY
+fi
 
 log() {
   echo "[$(date '+%H:%M:%S')] $1" | tee -a "$LOG_FILE"
