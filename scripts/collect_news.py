@@ -1,35 +1,40 @@
 #!/usr/bin/env python3
 """
 PESTLE News Collector
-世界中のRSSフィードからニュースを取得し、PESTLE 6分野に自動分類する。
-各分野20件ずつ、計120件を収集。
+世界中のRSSフィードとGDELT APIからニュースを取得し、PESTLE 6分野に自動分類する。
+各分野100件ずつ、計600件を目標に収集。
 """
 
 import feedparser
 import json
 import re
 import hashlib
+import time
+import urllib.request
+import urllib.parse
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from collections import defaultdict
 from db import save_collection, get_stats
+
+# === Target per category ===
+TARGET_PER_CATEGORY = 100
 
 # === PESTLE Categories ===
 PESTLE = {
     "Political": {
         "label_ja": "政治",
         "keywords": [
-            # English
             "politics", "election", "government", "policy", "diplomatic", "diplomacy",
             "sanction", "parliament", "congress", "senate", "president", "minister",
             "treaty", "geopolitics", "nato", "united nations", "vote", "campaign",
             "political", "legislation", "democracy", "authoritarian", "coup",
             "bilateral", "summit", "ambassador", "sovereignty", "referendum",
-            # Japanese
             "政治", "選挙", "政府", "政策", "外交", "首相", "大統領", "国会",
             "制裁", "条約", "安全保障", "防衛", "与党", "野党", "内閣",
             "サミット", "首脳", "議会", "自民党", "民主", "統治",
         ],
+        "gdelt_query": "politics OR election OR government OR diplomacy OR geopolitics",
     },
     "Economic": {
         "label_ja": "経済",
@@ -43,6 +48,7 @@ PESTLE = {
             "投資", "スタートアップ", "起業", "企業", "決算", "売上",
             "日銀", "金融", "円安", "円高", "市場", "雇用", "失業",
         ],
+        "gdelt_query": "economy OR inflation OR market OR trade OR investment OR GDP",
     },
     "Social": {
         "label_ja": "社会",
@@ -56,6 +62,7 @@ PESTLE = {
             "格差", "貧困", "福祉", "介護", "医療", "文化", "子育て",
             "多様性", "ジェンダー", "コミュニティ", "地域", "生活",
         ],
+        "gdelt_query": "society OR education OR health OR migration OR inequality OR culture",
     },
     "Technological": {
         "label_ja": "技術",
@@ -69,6 +76,7 @@ PESTLE = {
             "半導体", "宇宙", "サイバー", "ブロックチェーン", "自動運転",
             "バイオ", "生成AI", "ChatGPT", "Claude", "ドローン", "DX",
         ],
+        "gdelt_query": "artificial intelligence OR technology OR semiconductor OR quantum OR cybersecurity",
     },
     "Legal": {
         "label_ja": "法律",
@@ -82,6 +90,7 @@ PESTLE = {
             "知的財産", "個人情報", "コンプライアンス", "憲法", "人権",
             "独占禁止", "著作権", "税制", "改正", "条例", "法改正",
         ],
+        "gdelt_query": "regulation OR law OR court OR privacy OR antitrust OR legislation",
     },
     "Environmental": {
         "label_ja": "環境",
@@ -95,31 +104,51 @@ PESTLE = {
             "サステナブル", "持続可能", "生態系", "汚染", "リサイクル",
             "EV", "電気自動車", "カーボン", "CO2", "自然災害", "洪水",
         ],
+        "gdelt_query": "climate OR environment OR renewable energy OR biodiversity OR pollution",
     },
 }
 
-# === RSS Feed Sources ===
+# === RSS Feed Sources (expanded) ===
 RSS_FEEDS = [
-    # --- Global English ---
+    # --- Global English: General ---
     {"url": "https://feeds.bbci.co.uk/news/world/rss.xml", "name": "BBC World", "lang": "en"},
     {"url": "https://feeds.bbci.co.uk/news/technology/rss.xml", "name": "BBC Tech", "lang": "en"},
     {"url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml", "name": "BBC Science", "lang": "en"},
     {"url": "https://feeds.bbci.co.uk/news/business/rss.xml", "name": "BBC Business", "lang": "en"},
+    {"url": "https://feeds.bbci.co.uk/news/health/rss.xml", "name": "BBC Health", "lang": "en"},
+    {"url": "https://feeds.bbci.co.uk/news/education/rss.xml", "name": "BBC Education", "lang": "en"},
     {"url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml", "name": "NYT World", "lang": "en"},
     {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml", "name": "NYT Tech", "lang": "en"},
     {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml", "name": "NYT Climate", "lang": "en"},
     {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml", "name": "NYT Business", "lang": "en"},
+    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Health.xml", "name": "NYT Health", "lang": "en"},
+    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml", "name": "NYT Politics", "lang": "en"},
+    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml", "name": "NYT Science", "lang": "en"},
     {"url": "https://www.theguardian.com/world/rss", "name": "Guardian World", "lang": "en"},
     {"url": "https://www.theguardian.com/environment/rss", "name": "Guardian Environment", "lang": "en"},
     {"url": "https://www.theguardian.com/technology/rss", "name": "Guardian Tech", "lang": "en"},
+    {"url": "https://www.theguardian.com/law/rss", "name": "Guardian Law", "lang": "en"},
+    {"url": "https://www.theguardian.com/politics/rss", "name": "Guardian Politics", "lang": "en"},
+    {"url": "https://www.theguardian.com/society/rss", "name": "Guardian Society", "lang": "en"},
     {"url": "https://feeds.reuters.com/reuters/topNews", "name": "Reuters Top", "lang": "en"},
     {"url": "https://feeds.reuters.com/reuters/technologyNews", "name": "Reuters Tech", "lang": "en"},
     {"url": "https://feeds.reuters.com/reuters/environment", "name": "Reuters Environment", "lang": "en"},
     {"url": "https://www.aljazeera.com/xml/rss/all.xml", "name": "Al Jazeera", "lang": "en"},
+    # --- Tech / Science ---
     {"url": "https://techcrunch.com/feed/", "name": "TechCrunch", "lang": "en"},
     {"url": "https://www.wired.com/feed/rss", "name": "Wired", "lang": "en"},
     {"url": "https://www.nature.com/nature.rss", "name": "Nature", "lang": "en"},
     {"url": "https://www.sciencedaily.com/rss/all.xml", "name": "ScienceDaily", "lang": "en"},
+    {"url": "https://arstechnica.com/feed/", "name": "Ars Technica", "lang": "en"},
+    {"url": "https://www.theverge.com/rss/index.xml", "name": "The Verge", "lang": "en"},
+    # --- Policy / Legal ---
+    {"url": "https://www.politico.com/rss/politicopicks.xml", "name": "Politico", "lang": "en"},
+    {"url": "https://www.lawfaremedia.org/feed", "name": "Lawfare", "lang": "en"},
+    # --- Business / Economy ---
+    {"url": "https://feeds.bloomberg.com/markets/news.rss", "name": "Bloomberg", "lang": "en"},
+    {"url": "https://www.ft.com/?format=rss", "name": "Financial Times", "lang": "en"},
+    # --- Environment ---
+    {"url": "https://www.carbonbrief.org/feed", "name": "Carbon Brief", "lang": "en"},
     # --- Japanese ---
     {"url": "https://www3.nhk.or.jp/rss/news/cat0.xml", "name": "NHK 主要", "lang": "ja"},
     {"url": "https://www3.nhk.or.jp/rss/news/cat1.xml", "name": "NHK 社会", "lang": "ja"},
@@ -132,6 +161,7 @@ RSS_FEEDS = [
     {"url": "https://news.yahoo.co.jp/rss/topics/science.xml", "name": "Yahoo サイエンス", "lang": "ja"},
     {"url": "https://news.yahoo.co.jp/rss/topics/it.xml", "name": "Yahoo IT", "lang": "ja"},
     {"url": "https://news.yahoo.co.jp/rss/topics/world.xml", "name": "Yahoo 国際", "lang": "ja"},
+    {"url": "https://news.yahoo.co.jp/rss/topics/domestic.xml", "name": "Yahoo 国内", "lang": "ja"},
     {"url": "https://www.nikkei.com/rss/", "name": "日経", "lang": "ja"},
 ]
 
@@ -144,7 +174,6 @@ def classify_pestle(title: str, summary: str) -> dict[str, float]:
         score = 0
         for kw in info["keywords"]:
             if kw.lower() in text:
-                # Longer keywords get higher weight (more specific)
                 weight = 1 + len(kw) / 10
                 score += weight
         scores[category] = score
@@ -159,7 +188,7 @@ def fetch_all_feeds() -> list[dict]:
     for feed_info in RSS_FEEDS:
         try:
             feed = feedparser.parse(feed_info["url"])
-            for entry in feed.entries[:30]:  # Max 30 per feed
+            for entry in feed.entries[:50]:  # Increased from 30 to 50 per feed
                 url = entry.get("link", "")
                 if url in seen_urls:
                     continue
@@ -167,7 +196,6 @@ def fetch_all_feeds() -> list[dict]:
 
                 title = entry.get("title", "").strip()
                 summary = entry.get("summary", entry.get("description", "")).strip()
-                # Strip HTML tags from summary
                 summary = re.sub(r"<[^>]+>", "", summary).strip()
                 if len(summary) > 300:
                     summary = summary[:300] + "..."
@@ -188,18 +216,65 @@ def fetch_all_feeds() -> list[dict]:
     return articles
 
 
-def select_top_articles(articles: list[dict], per_category: int = 20) -> dict:
+def fetch_gdelt_articles(category: str, query: str, max_articles: int = 80) -> list[dict]:
+    """Fetch articles from GDELT DOC API for a specific PESTLE category.
+    Uses multiple single-keyword queries to avoid OR syntax issues."""
+    # Split query into individual keywords and fetch separately
+    keywords = [k.strip() for k in query.replace(" OR ", "|").split("|") if k.strip()]
+    all_gdelt = []
+    seen_urls = set()
+
+    per_keyword = max(10, max_articles // max(len(keywords), 1))
+    for kw in keywords[:4]:  # Limit to 4 queries per category to respect rate limits
+        try:
+            params = urllib.parse.urlencode({
+                "query": kw,
+                "mode": "ArtList",
+                "maxrecords": str(per_keyword),
+                "format": "json",
+            })
+            url = f"https://api.gdeltproject.org/api/v2/doc/doc?{params}"
+            req = urllib.request.Request(url, headers={"User-Agent": "FutureInsight/1.0"})
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+
+            for item in data.get("articles", []):
+                title = item.get("title", "").strip()
+                art_url = item.get("url", "")
+                if not title or art_url in seen_urls:
+                    continue
+                # Only keep English and Japanese articles
+                lang_str = (item.get("language", "") or "").lower()
+                if "english" not in lang_str and "japanese" not in lang_str:
+                    continue
+                seen_urls.add(art_url)
+                lang = "ja" if "japanese" in lang_str else "en"
+                all_gdelt.append({
+                    "title": title,
+                    "summary": "",
+                    "url": art_url,
+                    "source": "GDELT: " + item.get("domain", ""),
+                    "lang": lang,
+                    "published": item.get("seendate", ""),
+                })
+            time.sleep(5)  # Rate limit between keyword queries
+        except Exception as e:
+            print(f"    [WARN] GDELT '{kw}' failed: {e}")
+            continue
+
+    return all_gdelt[:max_articles]
+
+
+def select_top_articles(articles: list[dict], per_category: int = TARGET_PER_CATEGORY) -> dict:
     """Classify articles and select top N per PESTLE category."""
-    # Score all articles
     for article in articles:
         article["scores"] = classify_pestle(article["title"], article["summary"])
 
-    # Select top articles per category, avoiding duplicates
+    # Select top articles per category, allowing shared articles across categories
     selected = {}
-    used_urls = set()
+    used_urls_per_cat = defaultdict(set)
 
     for category in PESTLE:
-        # Sort by score for this category (descending)
         candidates = sorted(
             [a for a in articles if a["scores"][category] > 0],
             key=lambda a: a["scores"][category],
@@ -208,11 +283,20 @@ def select_top_articles(articles: list[dict], per_category: int = 20) -> dict:
 
         category_articles = []
         for a in candidates:
-            if a["url"] in used_urls:
+            if a["url"] in used_urls_per_cat[category]:
                 continue
             if len(category_articles) >= per_category:
                 break
-            used_urls.add(a["url"])
+            used_urls_per_cat[category].add(a["url"])
+            # Parse published date to standard format
+            pub_date = ""
+            try:
+                from email.utils import parsedate_to_datetime
+                dt = parsedate_to_datetime(a["published"])
+                pub_date = dt.strftime("%Y-%m-%d")
+            except Exception:
+                pub_date = a.get("published", "")[:10] if a.get("published") else ""
+
             category_articles.append({
                 "title": a["title"],
                 "summary": a["summary"],
@@ -220,6 +304,7 @@ def select_top_articles(articles: list[dict], per_category: int = 20) -> dict:
                 "source": a["source"],
                 "lang": a["lang"],
                 "published": a["published"],
+                "published_date": pub_date,
                 "relevance_score": round(a["scores"][category], 2),
             })
 
@@ -236,58 +321,82 @@ def main():
     output_dir = Path(__file__).parent.parent / "data"
     output_dir.mkdir(exist_ok=True)
 
-    # Use JST (UTC+9) so the date matches the local calendar day in Japan
     JST = timezone(timedelta(hours=9))
     today = datetime.now(JST).strftime("%Y-%m-%d")
     output_file = output_dir / f"pestle_{today}.json"
 
-    print(f"=== PESTLE News Collector ({today}) ===\n")
+    print(f"=== PESTLE News Collector ({today}) ===")
+    print(f"    Target: {TARGET_PER_CATEGORY} articles per category\n")
 
-    # 1. Fetch
+    # 1. Fetch RSS feeds
     print("1. Fetching RSS feeds...")
-    articles = fetch_all_feeds()
-    print(f"   {len(articles)} articles collected from {len(RSS_FEEDS)} feeds\n")
+    rss_articles = fetch_all_feeds()
+    print(f"   {len(rss_articles)} articles from {len(RSS_FEEDS)} RSS feeds")
 
-    # 2. Classify & Select
-    print("2. Classifying into PESTLE categories...")
-    result = select_top_articles(articles, per_category=10)
+    # 2. Fetch GDELT for each category to supplement
+    print("\n2. Fetching GDELT API (supplementary)...")
+    gdelt_articles = []
+    for cat, info in PESTLE.items():
+        query = info.get("gdelt_query", "")
+        if not query:
+            continue
+        fetched = fetch_gdelt_articles(cat, query, max_articles=80)
+        gdelt_articles.extend(fetched)
+        print(f"   {info['label_ja']} ({cat}): +{len(fetched)} from GDELT")
 
+    # 3. Merge and deduplicate
+    all_articles = rss_articles + gdelt_articles
+    seen = set()
+    deduped = []
+    for a in all_articles:
+        key = hashlib.sha256(a["url"].encode()).hexdigest()[:16]
+        if key not in seen:
+            seen.add(key)
+            deduped.append(a)
+    print(f"\n   Total unique articles: {len(deduped)}")
+
+    # 4. Classify & Select
+    print("\n3. Classifying into PESTLE categories...")
+    result = select_top_articles(deduped, per_category=TARGET_PER_CATEGORY)
+
+    total_selected = 0
     for cat, info in result.items():
-        print(f"   {info['label_ja']} ({cat}): {info['count']} articles")
+        status = "OK" if info["count"] >= TARGET_PER_CATEGORY else f"({info['count']}/{TARGET_PER_CATEGORY})"
+        print(f"   {info['label_ja']} ({cat}): {info['count']} articles {status}")
+        total_selected += info["count"]
 
-    # 3. Build output
+    # 5. Build output
     output = {
         "date": today,
         "collected_at": datetime.now(timezone.utc).isoformat(),
-        "total_fetched": len(articles),
+        "total_fetched": len(deduped),
         "feeds_count": len(RSS_FEEDS),
+        "gdelt_used": len(gdelt_articles) > 0,
+        "target_per_category": TARGET_PER_CATEGORY,
         "pestle": result,
     }
 
-    total_selected = sum(info["count"] for info in result.values())
-    print(f"\n   Total selected: {total_selected} / 60 target")
+    print(f"\n   Total selected: {total_selected} / {TARGET_PER_CATEGORY * 6} target")
 
-    # 4. Save
+    # 6. Save
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
-    print(f"\n3. Saved to {output_file}")
+    print(f"\n4. Saved to {output_file}")
 
-    # Also save as latest.json for easy access
     latest_file = output_dir / "latest.json"
     with open(latest_file, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
     print(f"   Saved to {latest_file}")
 
-    # 5. Save to SQLite database
-    print("\n4. Saving to database...")
+    # 7. Save to SQLite database
+    print("\n5. Saving to database...")
     inserted = save_collection(output)
     print(f"   {inserted} articles saved to SQLite")
 
-    # Show DB stats
     stats = get_stats()
     print(f"   DB: {stats['total_collections']} collections, {stats['total_articles']} total articles")
 
-    print("\n✓ Done!")
+    print(f"\nDone! {total_selected} articles collected.")
 
 
 if __name__ == "__main__":
