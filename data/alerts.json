@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-04-01T22:55:20.682505+00:00",
-  "total_articles_analyzed": 455,
+  "generated_at": "2026-04-02T21:11:48.318261+00:00",
+  "total_articles_analyzed": 911,
   "alert_counts": {
-    "emergence": 5,
-    "surge": 2,
-    "crossover": 3,
-    "total": 10
+    "emergence": 12,
+    "surge": 4,
+    "crossover": 5,
+    "total": 21
   },
   "alerts": [
     {
       "type": "SURGE",
       "level": "high",
       "topic": "trump",
-      "mentions": 40,
-      "ratio": 66.7,
-      "historical_avg": 0.2,
+      "mentions": 88,
+      "ratio": 73.3,
+      "historical_avg": 0.4,
       "categories": [
         "Technological",
         "Political",
@@ -23,34 +23,53 @@
         "Legal",
         "Economic"
       ],
-      "alert_title": "トランプ政権の政策転換が全域に波及",
-      "description": "トランプ関連ニュースが過去平均の66倍に急増し、技術から環境まで全PESTLE分野に影響。エネルギー政策の転換、農業支援、クレジット市場への影響など、政権の経済・産業政策が市場や企業戦略に直結する局面に入った。今後、規制緩和と保護主義のバランスが経済の不確実性を高める可能性。",
-      "alert_title_en": "Trump Administration's Policy Shifts Impact All Sectors",
-      "description_en": "Trump-related news surged 66-fold, spanning all PESTLE domains from energy to trade policy. The administration's approach to tariffs, sanctions, and clean energy is creating ripple effects across markets, corporate strategy, and international relations, signaling a high-volatility policy environment ahead."
+      "alert_title": "トランプ政権の政策転換が急増",
+      "description": "トランプ関連ニュースが過去平均の73倍に増加。ロシア油制裁緩和、農業支援、クリーンエネルギー政策への圧力など、政治・経済・環境に広がる政策転換が同時多発的に報道されている。政権交代による急激な政策方向の反転が、各業界の戦略再構築を迫っている。",
+      "alert_title_en": "Trump Administration Policy Shifts Surge in Coverage",
+      "description_en": "Trump-related news surged to 73 times historical average, covering sanctions easing, farm subsidies, and clean energy pressure. This rapid policy pivot across multiple sectors signals major strategic shifts for businesses and governments worldwide."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "iran war",
-      "mentions": 20,
+      "mentions": 41,
       "categories": [
+        "Technological",
         "Political",
         "Social",
         "Environmental",
         "Economic"
       ],
-      "alert_title": "イラン戦争が経済・環境に急速に波及",
-      "description": "過去2年未出現のイラン戦争が20回の記事出現で新兆候化。油価115ドルの上昇、消費者心理の悪化、再生可能エネルギー転換の混乱など、地政学的危機が即座にグローバル経済と気候戦略に影響。紛争長期化リスクと石油依存の脆弱性を露呈。",
-      "alert_title_en": "Iran War Creates Rapid Economic and Energy Shocks",
-      "description_en": "Iran war emerged as a new topic with 20 articles, directly impacting oil markets ($115/barrel), consumer confidence, and renewable energy transitions. The conflict exposes global economy vulnerability to geopolitical disruption and the fragility of clean energy progress."
+      "alert_title": "イラン紛争が新たに台頭",
+      "description": "過去2年間に報道されなかったイラン戦争が新たに41件出現。経済・環境・政治・社会・技術の5分野に横断的に影響し、油価115ドル、消費者心理の悪化、再生可能エネルギー転換への影響など、複合的な波及効果が生じている。地政学的リスクの顕在化が、グローバルな経済・エネルギー構造を再編している。",
+      "alert_title_en": "Iran War Emerges as Cross-Cutting Crisis",
+      "description_en": "Iran war emerged as a novel topic spanning five PESTLE domains with 41 occurrences, driving oil to $115/barrel and impacting consumer confidence and renewable energy transitions. This geopolitical escalation signals systemic vulnerabilities in global energy and economic stability."
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "iran war",
+      "mentions": 41,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 5,
+      "alert_title": "エネルギー政策が急速に再編",
+      "description": "エネルギー関連ニュースが過去平均の25倍に激増。気候法の遅延・改変、UN報告書による地球エネルギー不均衡の警告、民主党によるクリーンエネルギー減税復活の公約など、政治・法律・経済層での対立が先鋭化。脱炭素化とエネルギー価格のジレンマが政策優先順位を揺さぶっている。",
+      "alert_title_en": "Energy Policy Restructuring Accelerates Amid Tensions",
+      "description_en": "Energy news surged 25-fold as climate law delays clash with clean energy credit pledges and global energy imbalance warnings. This reflects deepening policy conflict between affordability and decarbonization goals."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "energy",
-      "mentions": 15,
+      "mentions": 30,
       "ratio": 25.0,
-      "historical_avg": 0.2,
+      "historical_avg": 0.4,
       "categories": [
         "Technological",
         "Political",
@@ -58,117 +77,232 @@
         "Legal",
         "Economic"
       ],
-      "alert_title": "クリーンエネルギー産業が生存戦略に転換",
-      "description": "エネルギー関連ニュースが25倍に急増し、気候法の遅延、増税圧力、政治的対立が顕在化。クリーンエネルギー企業が政権交代による規制逆転に直面し、投資戦略の根本的見直しが開始。産業支援の政治化が長期成長の不確実性を著しく高める局面。",
-      "alert_title_en": "Clean Energy Sector Faces Political Headwinds and Policy Reversals",
-      "description_en": "Energy-related news surged 25-fold, revealing tensions between climate commitments and energy cost concerns. Clean energy companies face regulatory uncertainty and potential subsidy cutbacks, forcing strategic pivots amid geopolitical instability."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "birthright citizenship",
-      "mentions": 13,
-      "categories": [
-        "Social",
-        "Environmental",
-        "Legal"
-      ],
-      "alert_title": "出生地主義の憲法的危機が新局面へ",
-      "description": "過去未出現の「出生地主義」が13回出現し、最高裁審理が進行中。米国のアイデンティティと国籍定義の根本的な法的再検討が社会的分断を深刻化させる可能性。判例変更は移民政策全体に波及し、人口・労働市場構成に長期的影響。",
-      "alert_title_en": "Birthright Citizenship Constitutional Challenge Escalates",
-      "description_en": "Birthright citizenship emerged as a high-profile issue with Supreme Court deliberations underway. This legal challenge to 14th Amendment interpretation could fundamentally reshape immigration policy and national identity definition, affecting demographic and labor market trends."
+      "alert_title": "ソーシャルメディア中毒訴訟が本格化",
+      "description": "過去2年間に報道されなかったソーシャルメディア中毒問題が20件新規出現。Meta・YouTubeへの訴訟判決が「watershed moment」と評価され、シリコンバレーで「fear and denial」が広がっている。プラットフォーム企業の法的責任追及が本格化し、規制体系の根本的転換を迫る可能性がある。",
+      "alert_title_en": "Social Media Addiction Litigation Reaches Critical Moment",
+      "description_en": "Social media addiction trials emerged as a novel issue, with Meta and YouTube facing watershed verdicts that signal potential regulatory transformation. This marks a critical juncture for platform accountability."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "social media",
-      "mentions": 12,
+      "mentions": 20,
       "categories": [
         "Political",
         "Social"
       ],
-      "alert_title": "ソーシャルメディア中毒訴訟が規制転機に",
-      "description": "過去未出現の「ソーシャルメディア中毒」が12回出現し、Meta・YouTubeへの有罪判決が業界規制の分水嶺に。児童保護と表現の自由の衝突、豪州の16歳以下利用禁止など国別規制の多様化。プラットフォーム企業のビジネスモデルの根本的再構築が迫られる。",
-      "alert_title_en": "Social Media Addiction Verdict Triggers Industry-Wide Regulation",
-      "description_en": "Social media addiction trials marked a watershed moment with convictions against major platforms. Age-restriction regulations and addiction liability lawsuits are reshaping platform business models globally, forcing structural changes in content algorithms and user targeting."
+      "alert_title": "出生地主義的市民権が司法争点化",
+      "description": "過去2年間に報道されなかったアメリカの出生地主義市民権問題が17件新規出現し、政治・法律・社会に横断的に影響。トランプによる市民権定義の再編企図に対し、最高裁判事が懐疑的姿勢を示すなど、国家のアイデンティティ定義が政治的・法的に再構成されようとしている。",
+      "alert_title_en": "Birthright Citizenship Becomes Judicial Battleground",
+      "description_en": "Birthright citizenship emerged as novel legal-political issue with 17 mentions, as Trump challenges the citizenship framework. Supreme Court skepticism signals ongoing uncertainty about redefinition of American membership."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "birthright citizenship",
+      "mentions": 17,
+      "categories": [
+        "Political",
+        "Social",
+        "Environmental",
+        "Legal"
+      ],
+      "alert_title": "最高裁が保守的判断を示唆",
+      "description": "過去2年間に報道されなかった最高裁の重要判決が16件新規出現。LGBTQ変換療法規制法を棄却し、気候訴訟を却下するなど、保守的司法判断が社会的少数派と環境保護に対して制限的立場を強化。司法による社会政策の進行方向が右傾化している。",
+      "alert_title_en": "Supreme Court Issues Conservative Rulings on Social Issues",
+      "description_en": "Supreme Court decisions on conversion therapy and climate litigation emerged with 16 mentions, signaling conservative judicial shifts. These rulings restrict LGBTQ protections and climate litigation pathways."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "supreme court",
-      "mentions": 10,
+      "mentions": 16,
       "categories": [
         "Political",
         "Social",
         "Legal"
       ],
-      "alert_title": "最高裁が社会的分断を決定する局面",
-      "description": "最高裁関連ニュース初出現で10回出現。出生地主義、転向療法禁止など本質的に分裂的な案件が集中裁判化。司法判断が政治・社会的亀裂を司法的に固定する可能性が高く、政治的信頼と社会統合への危機信号。",
-      "alert_title_en": "Supreme Court Becomes Flashpoint for Divisive Constitutional Issues",
-      "description_en": "Supreme Court cases increasingly center on socially divisive issues including birthright citizenship and LGBTQ rights protections. Judicial decisions risk institutionalizing cultural divides while raising questions about courts' role in polarized politics."
+      "alert_title": "ホルムズ海峡の封鎖が地政学リスク化",
+      "description": "過去2年間に報道されなかったホルムズ海峡問題が10件新規出現し、政治・経済・環境・法律に横断的に影響。イラン紛争によるホルムズ海峡再開交渉、トランプのヨーロッパへの責任転嫁発言など、世界経済の要衝が新たな紛争軸になりつつある。グローバル石油供給の不安定化が現実化している。",
+      "alert_title_en": "Strait of Hormuz Blockade Escalates Geopolitical Risk",
+      "description_en": "Strait of Hormuz emerged with 10 mentions across four PESTLE domains as Iran tensions threaten this critical chokepoint. This signals imminent supply chain vulnerability for global oil markets."
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "must",
+      "mentions": 16,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social"
+      ],
+      "n_categories": 5,
+      "alert_title": "クリーンエネルギー産業が存続危機に直面",
+      "description": "過去2年間に報道されなかったクリーンエネルギー議論が7件新規出現。トランプ政権下でのクリーンエネルギー企業の存続戦略、民主党による減税復活公約、富裕投資家による政敵への報復など、業界の政治的・経済的基盤が急速に侵食されている。脱炭素化の政治経済学が根本的に再構成されようとしている。",
+      "alert_title_en": "Clean Energy Industry Faces Policy Survival Crisis",
+      "description_en": "Clean energy emerged as novel policy battlefield with 7 mentions, featuring industry survival strategies under Trump and Democratic tax credit restoration pledges. Political volatility threatens sector stability."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "trump iran",
-      "mentions": 7,
+      "mentions": 12,
       "categories": [
         "Political",
         "Economic"
       ],
-      "alert_title": "※ノイズの可能性が高い",
-      "description": "※ノイズの可能性が高い。アラート1と7の内容が極めて酷似しており、同一トピック「トランプ-イラン」の重複検出と考えられます。アラート7は単なる派生的なクラスタリング結果の可能性。",
-      "alert_title_en": "※Likely Noise Detection",
-      "description_en": "※This alert appears to be a duplicate clustering of Alert 1, with nearly identical article references and topic structure. Algorithmic noise rather than distinct new signal."
+      "alert_title": "イーロン・マスクの影響力が政治化",
+      "description": "過去2年間に報道されなかったイーロン・マスク関連ニュースが6件新規出現。ビジネス開示法の停止への民主党の追及、SpaceXのIPO申請による1兆ドル企業化など、テック産業の巨人が政治・法律・経済で新たな争点になっている。民間の技術資本家と政治権力の癒着と対立が政策決定を左右する局面が進行中。",
+      "alert_title_en": "Elon Musk Emerges as Political and Economic Flashpoint",
+      "description_en": "Elon Musk appeared with 6 mentions amid scrutiny of his business disclosure law suspension and SpaceX's $1 trillion IPO filing. This reflects growing tension between tech oligarchy and democratic oversight."
     },
     {
-      "type": "CROSSOVER",
-      "level": "medium",
-      "topic": "iran war",
-      "mentions": 20,
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "strait hormuz",
+      "mentions": 10,
       "categories": [
-        "Economic",
-        "Environmental",
         "Political",
-        "Social"
+        "Environmental",
+        "Legal",
+        "Economic"
       ],
-      "n_categories": 4,
-      "alert_title": "地政学的危機が全経済セクターを連鎖圧迫",
-      "description": "イラン戦争がPESTLE全4分野に横断出現（20回）し、単一事象の複合的連鎖波及を実証。油価上昇→再生可能エネルギー転換混乱→企業・消費者心理悪化→全セクター同時圧迫の構造化リスク。グローバル供給網の脆弱性が戦争リスク低減に向かわない構造的脆弱性を示唆。",
-      "alert_title_en": "Geopolitical Crisis Creates Multi-Sector Economic Cascade",
-      "description_en": "Iran war impacts span all four PESTLE domains simultaneously, demonstrating systemic interconnection: oil shocks ripple through renewable energy, consumer confidence, and global supply chains. The cascade reveals structural fragility in global economic resilience."
+      "alert_title": "民間信用市場が経済システムを脅かす",
+      "description": "※ノイズの可能性が高い。「private credit」が6件出現したが、ヘルスケア民営化と私募債市場の個別事例が混在しており、統一的なトレンドとして特定困難。ただしトランプ政権下での民間金融システムの不安定化を示唆する「Private-Credit Wobbles」の言及は注視の価値あり。",
+      "alert_title_en": "Private Credit Market Shows Signs of Instability",
+      "description_en": "Private credit instability emerged with 6 mentions, including healthcare privatization and private equity concerns. However, coverage lacks coherence; only Trump-era credit wobbles merit sustained attention."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "clean energy",
+      "mentions": 7,
+      "categories": [
+        "Political",
+        "Environmental"
+      ],
+      "alert_title": "社会科学の信頼性が試される",
+      "description": "※ノイズの可能性が高い。「behavioural sciences」が6件出現し、社会科学研究の再現性・信頼性調査を扱っているが、ニュース価値としては限定的。方法論的問題の学術的検討であり、政策や社会動向への直接的な波及効果が不明確。",
+      "alert_title_en": "Social and Behavioural Sciences Face Reproducibility Scrutiny",
+      "description_en": "Behavioural sciences reproducibility investigations appeared 6 times, but represent primarily academic methodology concerns. Limited news value for policy or societal impact forecasting."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "tech life",
+      "mentions": 6,
+      "categories": [
+        "Technological",
+        "Social",
+        "Legal"
+      ]
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "private credit",
+      "mentions": 6,
+      "categories": [
+        "Environmental",
+        "Economic"
+      ]
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "elon musk",
+      "mentions": 6,
+      "categories": [
+        "Technological",
+        "Legal",
+        "Economic"
+      ]
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "social behavioural",
+      "mentions": 6,
+      "categories": [
+        "Social"
+      ]
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "behavioural sciences",
+      "mentions": 6,
+      "categories": [
+        "Social"
+      ]
     },
     {
       "type": "CROSSOVER",
       "level": "medium",
       "topic": "birthright citizenship",
-      "mentions": 13,
+      "mentions": 17,
       "categories": [
         "Environmental",
         "Legal",
+        "Political",
         "Social"
       ],
-      "n_categories": 3,
-      "alert_title": "国籍定義の根本的再構築が社会統合を脅かす",
-      "description": "出生地主義が3分野横断出現（13回）で、法律・政治・社会が同期的に分断。最高裁判断待機中も街頭抗議が激化。14世紀以来の原則転換が実現した場合、移民構成・市民権定義・国家的アイデンティティの三点同時変動が社会統合に深刻な挑戦。",
-      "alert_title_en": "Citizenship Redefinition Threatens Social Cohesion Framework",
-      "description_en": "Birthright citizenship debates span legal, political, and social domains, triggering concurrent street protests and Supreme Court deliberations. Any constitutional reversal would reshape immigration, citizenship norms, and national identity simultaneously, threatening social coherence."
+      "n_categories": 4
     },
     {
       "type": "CROSSOVER",
       "level": "medium",
       "topic": "supreme court",
-      "mentions": 10,
+      "mentions": 16,
       "categories": [
         "Legal",
         "Political",
         "Social"
       ],
-      "n_categories": 3,
-      "alert_title": "司法・政治・社会の三点同時分断構造",
-      "description": "最高裁関連が3分野横断出現（10回）で、出生地主義・転向療法禁止などの本質的に分裂的な案件が集中。司法判断が政治・社会的分裂を固定化する危機的段階へ。法的支配と民主的正統性の乖離が制度的信頼を蝕む長期リスク。",
-      "alert_title_en": "Judicial Decisions Institutionalize Sociopolitical Divides",
-      "description_en": "Supreme Court cases clustering across law, politics, and society domains signal systemic polarization hardening into jurisprudence. Judicial interventions in cultural conflicts risk eroding institutional legitimacy and democratic consensus."
+      "n_categories": 3
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "medium",
+      "topic": "strait hormuz",
+      "mentions": 10,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political"
+      ],
+      "n_categories": 4
+    },
+    {
+      "type": "SURGE",
+      "level": "medium",
+      "topic": "does",
+      "mentions": 6,
+      "ratio": 5.0,
+      "historical_avg": 0.4,
+      "categories": [
+        "Political",
+        "Social",
+        "Environmental"
+      ]
+    },
+    {
+      "type": "SURGE",
+      "level": "medium",
+      "topic": "huge",
+      "mentions": 6,
+      "ratio": 5.0,
+      "historical_avg": 0.4,
+      "categories": [
+        "Technological",
+        "Social",
+        "Environmental",
+        "Legal"
+      ]
     }
   ]
 }
