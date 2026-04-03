@@ -30,11 +30,14 @@ PESTLE = {
             "treaty", "geopolitics", "nato", "united nations", "vote", "campaign",
             "political", "legislation", "democracy", "authoritarian", "coup",
             "bilateral", "summit", "ambassador", "sovereignty", "referendum",
+            "geoeconomic", "multipolar", "decoupling", "strategic autonomy",
+            "technology sovereignty", "global south", "brics",
             "政治", "選挙", "政府", "政策", "外交", "首相", "大統領", "国会",
             "制裁", "条約", "安全保障", "防衛", "与党", "野党", "内閣",
             "サミット", "首脳", "議会", "自民党", "民主", "統治",
+            "多極化", "デカップリング", "経済安全保障",
         ],
-        "gdelt_query": "politics OR election OR government OR diplomacy OR geopolitics",
+        "gdelt_query": "politics OR election OR government OR diplomacy OR geopolitics OR decoupling",
     },
     "Economic": {
         "label_ja": "経済",
@@ -44,11 +47,15 @@ PESTLE = {
             "investment", "startup", "venture", "ipo", "merger", "acquisition",
             "supply chain", "manufacturing", "unemployment", "fiscal", "debt",
             "cryptocurrency", "bitcoin", "fintech", "banking",
+            "degrowth", "post-growth", "wellbeing economy", "doughnut economics",
+            "circular economy", "state capitalism", "industrial policy",
+            "s-curve disruption", "green transformation",
             "経済", "景気", "株価", "為替", "金利", "インフレ", "GDP", "貿易",
             "投資", "スタートアップ", "起業", "企業", "決算", "売上",
             "日銀", "金融", "円安", "円高", "市場", "雇用", "失業",
+            "脱成長", "ウェルビーイング経済", "GX", "産業構造",
         ],
-        "gdelt_query": "economy OR inflation OR market OR trade OR investment OR GDP",
+        "gdelt_query": "economy OR inflation OR market OR trade OR investment OR GDP OR industrial policy",
     },
     "Social": {
         "label_ja": "社会",
@@ -58,11 +65,14 @@ PESTLE = {
             "community", "diversity", "inclusion", "mental health", "aging",
             "urbanization", "lifestyle", "welfare", "gender", "protest",
             "pandemic", "public health", "housing", "labor",
+            "future generations", "intergenerational", "social tipping point",
+            "value shift", "neuropolitics", "gamblification",
             "社会", "教育", "健康", "人口", "高齢化", "少子化", "移民",
             "格差", "貧困", "福祉", "介護", "医療", "文化", "子育て",
             "多様性", "ジェンダー", "コミュニティ", "地域", "生活",
+            "将来世代", "世代間", "価値観変容", "Society 5.0",
         ],
-        "gdelt_query": "society OR education OR health OR migration OR inequality OR culture",
+        "gdelt_query": "society OR education OR health OR migration OR inequality OR demographic change",
     },
     "Technological": {
         "label_ja": "技術",
@@ -72,11 +82,15 @@ PESTLE = {
             "cybersecurity", "cloud", "software", "hardware", "semiconductor",
             "biotech", "space", "satellite", "drone", "iot", "metaverse",
             "virtual reality", "augmented reality", "deeptech", "chip",
+            "ai governance", "ai safety", "ai regulation", "autonomous",
+            "frontier model", "agi", "automated decision",
+            "foresight", "horizon scanning", "weak signal", "delphi",
             "テクノロジー", "技術", "AI", "人工知能", "ロボット", "量子",
             "半導体", "宇宙", "サイバー", "ブロックチェーン", "自動運転",
             "バイオ", "生成AI", "ChatGPT", "Claude", "ドローン", "DX",
+            "AIガバナンス", "AI規制", "フォーサイト", "総合知",
         ],
-        "gdelt_query": "artificial intelligence OR technology OR semiconductor OR quantum OR cybersecurity",
+        "gdelt_query": "artificial intelligence OR technology OR semiconductor OR quantum OR AI governance",
     },
     "Legal": {
         "label_ja": "法律",
@@ -86,11 +100,14 @@ PESTLE = {
             "privacy", "gdpr", "data protection", "lawsuit", "ruling",
             "legislation", "criminal", "constitutional", "human rights",
             "labor law", "tax law", "regulatory",
+            "eu ai act", "digital services act", "ai safety institute",
+            "regulatory sandbox", "cross-border regulation",
             "法律", "規制", "法案", "裁判", "判決", "訴訟", "特許",
             "知的財産", "個人情報", "コンプライアンス", "憲法", "人権",
             "独占禁止", "著作権", "税制", "改正", "条例", "法改正",
+            "AI規制法", "デジタル規制",
         ],
-        "gdelt_query": "regulation OR law OR court OR privacy OR antitrust OR legislation",
+        "gdelt_query": "regulation OR law OR court OR privacy OR antitrust OR AI regulation",
     },
     "Environmental": {
         "label_ja": "環境",
@@ -100,69 +117,114 @@ PESTLE = {
             "pollution", "deforestation", "ocean", "water", "ecosystem",
             "green", "net zero", "circular economy", "recycling",
             "electric vehicle", "ev", "clean energy", "wildfire", "flood",
+            "planetary boundary", "tipping point", "polycrisis",
+            "earth system", "resilience", "systemic risk",
+            "positive tipping point", "just transition",
             "環境", "気候", "温暖化", "脱炭素", "再生可能", "太陽光",
             "サステナブル", "持続可能", "生態系", "汚染", "リサイクル",
             "EV", "電気自動車", "カーボン", "CO2", "自然災害", "洪水",
+            "プラネタリーバウンダリー", "ティッピングポイント",
+            "ポリクライシス", "レジリエンス",
         ],
-        "gdelt_query": "climate OR environment OR renewable energy OR biodiversity OR pollution",
+        "gdelt_query": "climate OR environment OR renewable energy OR biodiversity OR tipping point OR planetary boundary",
     },
 }
 
-# === RSS Feed Sources (expanded) ===
+# === RSS Feed Sources ===
+# Organized by scanning taxonomy (Shell/Singapore/IFTF/UNDP model):
+#   tier 1: Continuous monitoring — daily signal detection
+#   tier 2: Periodic deep analysis — weekly/monthly structural insight
+#   tier 3: Structural/paradigmatic — alternative frameworks, weak signals
+# focus: Primary PESTLE category affinity (used for boosting relevance score)
 RSS_FEEDS = [
-    # --- Global English: General ---
-    {"url": "https://feeds.bbci.co.uk/news/world/rss.xml", "name": "BBC World", "lang": "en"},
-    {"url": "https://feeds.bbci.co.uk/news/technology/rss.xml", "name": "BBC Tech", "lang": "en"},
-    {"url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml", "name": "BBC Science", "lang": "en"},
-    {"url": "https://feeds.bbci.co.uk/news/business/rss.xml", "name": "BBC Business", "lang": "en"},
-    {"url": "https://feeds.bbci.co.uk/news/health/rss.xml", "name": "BBC Health", "lang": "en"},
-    {"url": "https://feeds.bbci.co.uk/news/education/rss.xml", "name": "BBC Education", "lang": "en"},
-    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml", "name": "NYT World", "lang": "en"},
-    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml", "name": "NYT Tech", "lang": "en"},
-    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml", "name": "NYT Climate", "lang": "en"},
-    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml", "name": "NYT Business", "lang": "en"},
-    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Health.xml", "name": "NYT Health", "lang": "en"},
-    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml", "name": "NYT Politics", "lang": "en"},
-    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml", "name": "NYT Science", "lang": "en"},
-    {"url": "https://www.theguardian.com/world/rss", "name": "Guardian World", "lang": "en"},
-    {"url": "https://www.theguardian.com/environment/rss", "name": "Guardian Environment", "lang": "en"},
-    {"url": "https://www.theguardian.com/technology/rss", "name": "Guardian Tech", "lang": "en"},
-    {"url": "https://www.theguardian.com/law/rss", "name": "Guardian Law", "lang": "en"},
-    {"url": "https://www.theguardian.com/politics/rss", "name": "Guardian Politics", "lang": "en"},
-    {"url": "https://www.theguardian.com/society/rss", "name": "Guardian Society", "lang": "en"},
-    {"url": "https://feeds.reuters.com/reuters/topNews", "name": "Reuters Top", "lang": "en"},
-    {"url": "https://feeds.reuters.com/reuters/technologyNews", "name": "Reuters Tech", "lang": "en"},
-    {"url": "https://feeds.reuters.com/reuters/environment", "name": "Reuters Environment", "lang": "en"},
-    {"url": "https://www.aljazeera.com/xml/rss/all.xml", "name": "Al Jazeera", "lang": "en"},
-    # --- Tech / Science ---
-    {"url": "https://techcrunch.com/feed/", "name": "TechCrunch", "lang": "en"},
-    {"url": "https://www.wired.com/feed/rss", "name": "Wired", "lang": "en"},
-    {"url": "https://www.nature.com/nature.rss", "name": "Nature", "lang": "en"},
-    {"url": "https://www.sciencedaily.com/rss/all.xml", "name": "ScienceDaily", "lang": "en"},
-    {"url": "https://arstechnica.com/feed/", "name": "Ars Technica", "lang": "en"},
-    {"url": "https://www.theverge.com/rss/index.xml", "name": "The Verge", "lang": "en"},
-    # --- Policy / Legal ---
-    {"url": "https://www.politico.com/rss/politicopicks.xml", "name": "Politico", "lang": "en"},
-    {"url": "https://www.lawfaremedia.org/feed", "name": "Lawfare", "lang": "en"},
+    # ============================================================
+    # TIER 1: CONTINUOUS MONITORING — Current events & signal flow
+    # ============================================================
+
+    # --- Core Wire Services (broad coverage, deduplication base) ---
+    {"url": "https://feeds.bbci.co.uk/news/world/rss.xml", "name": "BBC World", "lang": "en", "tier": 1, "focus": "Political"},
+    {"url": "https://feeds.bbci.co.uk/news/business/rss.xml", "name": "BBC Business", "lang": "en", "tier": 1, "focus": "Economic"},
+    {"url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml", "name": "BBC Science", "lang": "en", "tier": 1, "focus": "Environmental"},
+    {"url": "https://feeds.reuters.com/reuters/topNews", "name": "Reuters Top", "lang": "en", "tier": 1, "focus": "Political"},
+    {"url": "https://feeds.reuters.com/reuters/technologyNews", "name": "Reuters Tech", "lang": "en", "tier": 1, "focus": "Technological"},
+    {"url": "https://feeds.reuters.com/reuters/environment", "name": "Reuters Environment", "lang": "en", "tier": 1, "focus": "Environmental"},
+
+    # --- Quality Broadsheets (depth, not duplicating wire coverage) ---
+    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml", "name": "NYT World", "lang": "en", "tier": 1, "focus": "Political"},
+    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml", "name": "NYT Climate", "lang": "en", "tier": 1, "focus": "Environmental"},
+    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml", "name": "NYT Tech", "lang": "en", "tier": 1, "focus": "Technological"},
+    {"url": "https://www.theguardian.com/world/rss", "name": "Guardian World", "lang": "en", "tier": 1, "focus": "Political"},
+    {"url": "https://www.theguardian.com/environment/rss", "name": "Guardian Environment", "lang": "en", "tier": 1, "focus": "Environmental"},
+    {"url": "https://www.theguardian.com/technology/rss", "name": "Guardian Tech", "lang": "en", "tier": 1, "focus": "Technological"},
+    {"url": "https://www.theguardian.com/law/rss", "name": "Guardian Law", "lang": "en", "tier": 1, "focus": "Legal"},
+
     # --- Business / Economy ---
-    {"url": "https://feeds.bloomberg.com/markets/news.rss", "name": "Bloomberg", "lang": "en"},
-    {"url": "https://www.ft.com/?format=rss", "name": "Financial Times", "lang": "en"},
-    # --- Environment ---
-    {"url": "https://www.carbonbrief.org/feed", "name": "Carbon Brief", "lang": "en"},
-    # --- Japanese ---
-    {"url": "https://www3.nhk.or.jp/rss/news/cat0.xml", "name": "NHK 主要", "lang": "ja"},
-    {"url": "https://www3.nhk.or.jp/rss/news/cat1.xml", "name": "NHK 社会", "lang": "ja"},
-    {"url": "https://www3.nhk.or.jp/rss/news/cat3.xml", "name": "NHK 科学", "lang": "ja"},
-    {"url": "https://www3.nhk.or.jp/rss/news/cat4.xml", "name": "NHK 政治", "lang": "ja"},
-    {"url": "https://www3.nhk.or.jp/rss/news/cat5.xml", "name": "NHK 経済", "lang": "ja"},
-    {"url": "https://www3.nhk.or.jp/rss/news/cat6.xml", "name": "NHK 国際", "lang": "ja"},
-    {"url": "https://news.yahoo.co.jp/rss/topics/top-picks.xml", "name": "Yahoo Japan", "lang": "ja"},
-    {"url": "https://news.yahoo.co.jp/rss/topics/business.xml", "name": "Yahoo ビジネス", "lang": "ja"},
-    {"url": "https://news.yahoo.co.jp/rss/topics/science.xml", "name": "Yahoo サイエンス", "lang": "ja"},
-    {"url": "https://news.yahoo.co.jp/rss/topics/it.xml", "name": "Yahoo IT", "lang": "ja"},
-    {"url": "https://news.yahoo.co.jp/rss/topics/world.xml", "name": "Yahoo 国際", "lang": "ja"},
-    {"url": "https://news.yahoo.co.jp/rss/topics/domestic.xml", "name": "Yahoo 国内", "lang": "ja"},
-    {"url": "https://www.nikkei.com/rss/", "name": "日経", "lang": "ja"},
+    {"url": "https://feeds.bloomberg.com/markets/news.rss", "name": "Bloomberg", "lang": "en", "tier": 1, "focus": "Economic"},
+    {"url": "https://www.ft.com/?format=rss", "name": "Financial Times", "lang": "en", "tier": 1, "focus": "Economic"},
+
+    # --- Technology & Science ---
+    {"url": "https://techcrunch.com/feed/", "name": "TechCrunch", "lang": "en", "tier": 1, "focus": "Technological"},
+    {"url": "https://www.wired.com/feed/rss", "name": "Wired", "lang": "en", "tier": 1, "focus": "Technological"},
+    {"url": "https://www.nature.com/nature.rss", "name": "Nature", "lang": "en", "tier": 1, "focus": "Technological"},
+    {"url": "https://www.science.org/rss/news_current.xml", "name": "Science Magazine", "lang": "en", "tier": 1, "focus": "Technological"},
+    {"url": "https://feeds.arstechnica.com/arstechnica/science", "name": "Ars Technica Science", "lang": "en", "tier": 1, "focus": "Technological"},
+
+    # --- Environment (continuous) ---
+    {"url": "https://www.carbonbrief.org/feed", "name": "Carbon Brief", "lang": "en", "tier": 1, "focus": "Environmental"},
+    {"url": "https://climate.copernicus.eu/rss.xml", "name": "Copernicus Climate", "lang": "en", "tier": 1, "focus": "Environmental"},
+
+    # --- Policy / Legal ---
+    {"url": "https://www.politico.com/rss/politicopicks.xml", "name": "Politico", "lang": "en", "tier": 1, "focus": "Political"},
+    {"url": "https://www.lawfaremedia.org/feed", "name": "Lawfare", "lang": "en", "tier": 1, "focus": "Legal"},
+
+    # --- Non-Western Continuous (daily perspective diversity) ---
+    {"url": "https://www.aljazeera.com/xml/rss/all.xml", "name": "Al Jazeera", "lang": "en", "tier": 1, "focus": "Political"},
+    {"url": "https://www.scmp.com/rss/91/feed", "name": "South China Morning Post", "lang": "en", "tier": 1, "focus": "Political"},
+
+    # --- International Organizations ---
+    {"url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml", "name": "UN News", "lang": "en", "tier": 1, "focus": "Social"},
+
+    # --- Japanese Continuous ---
+    {"url": "https://www3.nhk.or.jp/rss/news/cat0.xml", "name": "NHK 主要", "lang": "ja", "tier": 1, "focus": "Political"},
+    {"url": "https://www3.nhk.or.jp/rss/news/cat1.xml", "name": "NHK 社会", "lang": "ja", "tier": 1, "focus": "Social"},
+    {"url": "https://www3.nhk.or.jp/rss/news/cat3.xml", "name": "NHK 科学", "lang": "ja", "tier": 1, "focus": "Technological"},
+    {"url": "https://www3.nhk.or.jp/rss/news/cat4.xml", "name": "NHK 政治", "lang": "ja", "tier": 1, "focus": "Political"},
+    {"url": "https://www3.nhk.or.jp/rss/news/cat5.xml", "name": "NHK 経済", "lang": "ja", "tier": 1, "focus": "Economic"},
+    {"url": "https://www3.nhk.or.jp/rss/news/cat6.xml", "name": "NHK 国際", "lang": "ja", "tier": 1, "focus": "Political"},
+    {"url": "https://news.yahoo.co.jp/rss/topics/top-picks.xml", "name": "Yahoo Japan", "lang": "ja", "tier": 1, "focus": "Social"},
+    {"url": "https://news.yahoo.co.jp/rss/topics/business.xml", "name": "Yahoo ビジネス", "lang": "ja", "tier": 1, "focus": "Economic"},
+    {"url": "https://news.yahoo.co.jp/rss/topics/science.xml", "name": "Yahoo サイエンス", "lang": "ja", "tier": 1, "focus": "Technological"},
+    {"url": "https://news.yahoo.co.jp/rss/topics/it.xml", "name": "Yahoo IT", "lang": "ja", "tier": 1, "focus": "Technological"},
+    {"url": "https://news.yahoo.co.jp/rss/topics/world.xml", "name": "Yahoo 国際", "lang": "ja", "tier": 1, "focus": "Political"},
+    {"url": "https://news.yahoo.co.jp/rss/topics/domestic.xml", "name": "Yahoo 国内", "lang": "ja", "tier": 1, "focus": "Social"},
+    {"url": "https://www.nikkei.com/rss/", "name": "日経", "lang": "ja", "tier": 1, "focus": "Economic"},
+
+    # ============================================================
+    # TIER 2: PERIODIC DEEP ANALYSIS — Structural insight
+    # ============================================================
+
+    # --- Geopolitical Think Tanks ---
+    {"url": "https://www.foreignaffairs.com/rss.xml", "name": "Foreign Affairs", "lang": "en", "tier": 2, "focus": "Political"},
+    {"url": "https://ecfr.eu/feed/", "name": "ECFR", "lang": "en", "tier": 2, "focus": "Political"},
+    {"url": "https://stimson.org/feed/", "name": "Stimson Center", "lang": "en", "tier": 2, "focus": "Political"},
+
+    # --- AI Governance & Technology Policy ---
+    {"url": "https://ainowinstitute.org/feed", "name": "AI Now Institute", "lang": "en", "tier": 2, "focus": "Technological"},
+    {"url": "https://www.adalovelaceinstitute.org/feed/", "name": "Ada Lovelace Institute", "lang": "en", "tier": 2, "focus": "Legal"},
+    {"url": "https://futureoflife.org/feed/", "name": "Future of Life Institute", "lang": "en", "tier": 2, "focus": "Technological"},
+
+    # --- Japan Foresight & Policy ---
+    {"url": "https://www.nistep.go.jp/feed", "name": "NISTEP", "lang": "ja", "tier": 2, "focus": "Technological"},
+    {"url": "https://toyokeizai.net/list/feed/rss", "name": "東洋経済", "lang": "ja", "tier": 2, "focus": "Economic"},
+
+    # ============================================================
+    # TIER 3: STRUCTURAL & PARADIGMATIC — Weak signals, alt futures
+    # ============================================================
+
+    # --- Polycrisis & Systems Analysis ---
+    {"url": "https://cascadeinstitute.org/feed/", "name": "Cascade Institute", "lang": "en", "tier": 3, "focus": "Environmental"},
+    {"url": "https://earth4all.life/feed/", "name": "Earth4All", "lang": "en", "tier": 3, "focus": "Environmental"},
+    {"url": "https://www.sciencedaily.com/rss/all.xml", "name": "ScienceDaily", "lang": "en", "tier": 3, "focus": "Technological"},
 ]
 
 # === Scoring function ===
@@ -188,7 +250,9 @@ def fetch_all_feeds() -> list[dict]:
     for feed_info in RSS_FEEDS:
         try:
             feed = feedparser.parse(feed_info["url"])
-            for entry in feed.entries[:50]:  # Increased from 30 to 50 per feed
+            # Tier 2/3 sources have fewer articles but higher value — fetch all
+            max_entries = 50 if feed_info.get("tier", 1) == 1 else 30
+            for entry in feed.entries[:max_entries]:
                 url = entry.get("link", "")
                 if url in seen_urls:
                     continue
@@ -209,6 +273,8 @@ def fetch_all_feeds() -> list[dict]:
                     "source": feed_info["name"],
                     "lang": feed_info["lang"],
                     "published": published,
+                    "tier": feed_info.get("tier", 1),
+                    "focus": feed_info.get("focus", ""),
                 })
         except Exception as e:
             print(f"  [WARN] Failed to fetch {feed_info['name']}: {e}")
@@ -266,9 +332,25 @@ def fetch_gdelt_articles(category: str, query: str, max_articles: int = 80) -> l
 
 
 def select_top_articles(articles: list[dict], per_category: int = TARGET_PER_CATEGORY) -> dict:
-    """Classify articles and select top N per PESTLE category."""
+    """Classify articles and select top N per PESTLE category.
+    Tier 2/3 (foresight/structural) sources get score boosts to ensure
+    forward-looking analysis surfaces alongside event-driven news."""
+    # Tier bonus: foresight sources are boosted to compete with high-volume news
+    TIER_BOOST = {1: 1.0, 2: 1.5, 3: 2.0}
+    # Focus bonus: if source's primary focus matches category
+    FOCUS_BOOST = 0.3
+
     for article in articles:
-        article["scores"] = classify_pestle(article["title"], article["summary"])
+        base_scores = classify_pestle(article["title"], article["summary"])
+        tier = article.get("tier", 1)
+        focus = article.get("focus", "")
+        boost = TIER_BOOST.get(tier, 1.0)
+        # Apply tier boost and focus affinity bonus
+        for cat in base_scores:
+            base_scores[cat] *= boost
+            if focus == cat:
+                base_scores[cat] += FOCUS_BOOST
+        article["scores"] = base_scores
 
     # Select top articles per category, allowing shared articles across categories
     selected = {}
@@ -306,6 +388,7 @@ def select_top_articles(articles: list[dict], per_category: int = TARGET_PER_CAT
                 "published": a["published"],
                 "published_date": pub_date,
                 "relevance_score": round(a["scores"][category], 2),
+                "tier": a.get("tier", 1),
             })
 
         selected[category] = {
