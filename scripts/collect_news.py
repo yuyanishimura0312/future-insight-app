@@ -18,7 +18,7 @@ from collections import defaultdict
 from db import save_collection, get_stats
 
 # === Target per category ===
-TARGET_PER_CATEGORY = 100
+TARGET_PER_CATEGORY = 334  # 334 x 6 categories ≈ 2,000 articles
 
 # === PESTLE Categories ===
 PESTLE = {
@@ -161,6 +161,8 @@ RSS_FEEDS = [
     # --- Business / Economy ---
     {"url": "https://feeds.bloomberg.com/markets/news.rss", "name": "Bloomberg", "lang": "en", "tier": 1, "focus": "Economic"},
     {"url": "https://www.ft.com/?format=rss", "name": "Financial Times", "lang": "en", "tier": 1, "focus": "Economic"},
+    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml", "name": "NYT Business", "lang": "en", "tier": 1, "focus": "Economic"},
+    {"url": "https://www.theguardian.com/business/rss", "name": "Guardian Business", "lang": "en", "tier": 1, "focus": "Economic"},
 
     # --- Technology & Science ---
     {"url": "https://techcrunch.com/feed/", "name": "TechCrunch", "lang": "en", "tier": 1, "focus": "Technological"},
@@ -176,6 +178,21 @@ RSS_FEEDS = [
     # --- Policy / Legal ---
     {"url": "https://www.politico.com/rss/politicopicks.xml", "name": "Politico", "lang": "en", "tier": 1, "focus": "Political"},
     {"url": "https://www.lawfaremedia.org/feed", "name": "Lawfare", "lang": "en", "tier": 1, "focus": "Legal"},
+    {"url": "https://www.theguardian.com/politics/rss", "name": "Guardian Politics", "lang": "en", "tier": 1, "focus": "Political"},
+    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml", "name": "NYT Politics", "lang": "en", "tier": 1, "focus": "Political"},
+    {"url": "https://www.scotusblog.com/feed/", "name": "SCOTUSblog", "lang": "en", "tier": 1, "focus": "Legal"},
+    {"url": "https://feeds.feedburner.com/AbovetheLaw", "name": "Above the Law", "lang": "en", "tier": 1, "focus": "Legal"},
+    {"url": "https://www.theverge.com/rss/policy/index.xml", "name": "The Verge Policy", "lang": "en", "tier": 1, "focus": "Legal"},
+    {"url": "https://www.eff.org/rss/updates.xml", "name": "EFF", "lang": "en", "tier": 1, "focus": "Legal"},
+    {"url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml", "name": "EU Parliament", "lang": "en", "tier": 1, "focus": "Legal"},
+    {"url": "https://gdprhub.eu/index.php?title=Special:RecentChanges&feed=rss", "name": "GDPRhub", "lang": "en", "tier": 1, "focus": "Legal"},
+
+    # --- Social / Health ---
+    {"url": "https://feeds.bbci.co.uk/news/health/rss.xml", "name": "BBC Health", "lang": "en", "tier": 1, "focus": "Social"},
+    {"url": "https://feeds.bbci.co.uk/news/education/rss.xml", "name": "BBC Education", "lang": "en", "tier": 1, "focus": "Social"},
+    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Health.xml", "name": "NYT Health", "lang": "en", "tier": 1, "focus": "Social"},
+    {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml", "name": "NYT Science", "lang": "en", "tier": 1, "focus": "Social"},
+    {"url": "https://www.theguardian.com/society/rss", "name": "Guardian Society", "lang": "en", "tier": 1, "focus": "Social"},
 
     # --- Non-Western Continuous (daily perspective diversity) ---
     {"url": "https://www.aljazeera.com/xml/rss/all.xml", "name": "Al Jazeera", "lang": "en", "tier": 1, "focus": "Political"},
@@ -250,8 +267,8 @@ def fetch_all_feeds() -> list[dict]:
     for feed_info in RSS_FEEDS:
         try:
             feed = feedparser.parse(feed_info["url"])
-            # Tier 2/3 sources have fewer articles but higher value — fetch all
-            max_entries = 50 if feed_info.get("tier", 1) == 1 else 30
+            # Tier 1: fetch more to fill 2000-article target; Tier 2/3: fetch all
+            max_entries = 100 if feed_info.get("tier", 1) == 1 else 50
             for entry in feed.entries[:max_entries]:
                 url = entry.get("link", "")
                 if url in seen_urls:
@@ -282,7 +299,7 @@ def fetch_all_feeds() -> list[dict]:
     return articles
 
 
-def fetch_gdelt_articles(category: str, query: str, max_articles: int = 80) -> list[dict]:
+def fetch_gdelt_articles(category: str, query: str, max_articles: int = 250) -> list[dict]:
     """Fetch articles from GDELT DOC API for a specific PESTLE category.
     Uses multiple single-keyword queries to avoid OR syntax issues."""
     # Split query into individual keywords and fetch separately
@@ -290,8 +307,8 @@ def fetch_gdelt_articles(category: str, query: str, max_articles: int = 80) -> l
     all_gdelt = []
     seen_urls = set()
 
-    per_keyword = max(10, max_articles // max(len(keywords), 1))
-    for kw in keywords[:4]:  # Limit to 4 queries per category to respect rate limits
+    per_keyword = max(20, max_articles // max(len(keywords), 1))
+    for kw in keywords[:6]:  # Use up to 6 keywords per category for broader coverage
         try:
             params = urllib.parse.urlencode({
                 "query": kw,
@@ -323,7 +340,7 @@ def fetch_gdelt_articles(category: str, query: str, max_articles: int = 80) -> l
                     "lang": lang,
                     "published": item.get("seendate", ""),
                 })
-            time.sleep(5)  # Rate limit between keyword queries
+            time.sleep(10)  # Rate limit between keyword queries (GDELT requires longer intervals)
         except Exception as e:
             print(f"    [WARN] GDELT '{kw}' failed: {e}")
             continue
