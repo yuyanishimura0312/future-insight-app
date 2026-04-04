@@ -366,9 +366,9 @@ def select_top_articles(articles: list[dict], per_category: int = TARGET_PER_CAT
     Tier 2/3 (foresight/structural) sources get score boosts to ensure
     forward-looking analysis surfaces alongside event-driven news."""
     # Tier bonus: foresight sources are boosted to compete with high-volume news
-    TIER_BOOST = {1: 1.0, 2: 1.5, 3: 2.0}
+    TIER_BOOST = TIER_BOOST_CONFIG if TIER_BOOST_CONFIG else {1: 1.0, 2: 1.5, 3: 2.0}
     # Focus bonus: if source's primary focus matches category
-    FOCUS_BOOST = 0.3
+    FOCUS_BOOST = FOCUS_BOOST_CONFIG if FOCUS_BOOST_CONFIG else 0.3
 
     for article in articles:
         base_scores = classify_pestle(article["title"], article["summary"])
@@ -431,6 +431,60 @@ def select_top_articles(articles: list[dict], per_category: int = TARGET_PER_CAT
     return selected
 
 
+def load_feed_config():
+    """Load feed configuration from feed_config.json if it exists.
+    Falls back to hardcoded RSS_FEEDS and PESTLE if config file is not found."""
+    global RSS_FEEDS, PESTLE, TARGET_PER_CATEGORY
+    config_path = Path(__file__).parent.parent / "data" / "feed_config.json"
+    if not config_path.exists():
+        print("  [INFO] feed_config.json not found, using hardcoded defaults")
+        return
+
+    try:
+        with open(config_path, "r", encoding="utf-8") as f:
+            config = json.load(f)
+        print(f"  [INFO] Loaded feed_config.json (updated: {config.get('updated_at', 'unknown')})")
+
+        # Override target
+        if "target_per_category" in config:
+            TARGET_PER_CATEGORY = config["target_per_category"]
+
+        # Override feeds (only enabled feeds)
+        if "feeds" in config:
+            RSS_FEEDS = [feed for feed in config["feeds"] if feed.get("enabled", True)]
+            print(f"  [INFO] {len(RSS_FEEDS)} enabled feeds loaded ({len(config['feeds'])} total)")
+
+        # Override PESTLE keywords and GDELT queries
+        if "pestle_categories" in config:
+            for cat_key, cat_data in config["pestle_categories"].items():
+                if cat_key in PESTLE:
+                    if "keywords" in cat_data:
+                        PESTLE[cat_key]["keywords"] = cat_data["keywords"]
+                    if "gdelt_query" in cat_data:
+                        PESTLE[cat_key]["gdelt_query"] = cat_data["gdelt_query"]
+
+        # Override scoring parameters
+        if "tier_boost" in config:
+            # Store for use in select_top_articles
+            global TIER_BOOST_CONFIG
+            TIER_BOOST_CONFIG = {int(k): v for k, v in config["tier_boost"].items()}
+        if "focus_boost" in config:
+            global FOCUS_BOOST_CONFIG
+            FOCUS_BOOST_CONFIG = config["focus_boost"]
+        if "gdelt_max_per_category" in config:
+            global GDELT_MAX_PER_CATEGORY
+            GDELT_MAX_PER_CATEGORY = config["gdelt_max_per_category"]
+
+    except Exception as e:
+        print(f"  [WARN] Failed to load feed_config.json: {e}, using defaults")
+
+
+# Global config overrides (set by load_feed_config)
+TIER_BOOST_CONFIG = None
+FOCUS_BOOST_CONFIG = None
+GDELT_MAX_PER_CATEGORY = 80
+
+
 def main():
     output_dir = Path(__file__).parent.parent / "data"
     output_dir.mkdir(exist_ok=True)
@@ -440,6 +494,9 @@ def main():
     output_file = output_dir / f"pestle_{today}.json"
 
     print(f"=== PESTLE News Collector ({today}) ===")
+
+    # 0. Load external config if available
+    load_feed_config()
     print(f"    Target: {TARGET_PER_CATEGORY} articles per category\n")
 
     # 1. Fetch RSS feeds
@@ -454,7 +511,7 @@ def main():
         query = info.get("gdelt_query", "")
         if not query:
             continue
-        fetched = fetch_gdelt_articles(cat, query, max_articles=80)
+        fetched = fetch_gdelt_articles(cat, query, max_articles=GDELT_MAX_PER_CATEGORY)
         gdelt_articles.extend(fetched)
         print(f"   {info['label_ja']} ({cat}): +{len(fetched)} from GDELT")
 
