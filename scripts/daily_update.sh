@@ -1,6 +1,7 @@
 #!/bin/bash
 # daily_update.sh — Collect news, run AI analysis, and deploy to GitHub Pages
 # Runs as a daily cron/launchd job
+# TODO: Change launchd schedule to 4:00 AM JST for miratuku-news pipeline
 
 set -e
 
@@ -72,6 +73,20 @@ log "  Historical collection done."
 log "Step 5: Updating history from database..."
 python3 update_history.py >> "$LOG_FILE" 2>&1
 log "  History update done."
+
+# Step 5.5: Collect historical academic papers & generate field history reports (weekly, on Wednesdays)
+# - collect_historical_papers.py: Fetch 500 highly-cited papers (1990-2025) from Semantic Scholar API
+# - generate_field_history.py: Generate historical development reports per field using Claude API
+# Uncomment to enable:
+# if [ "$(date +%u)" -eq 3 ]; then
+#   log "Step 5.5a: Collecting historical academic papers..."
+#   python3 collect_historical_papers.py >> "$LOG_FILE" 2>&1
+#   log "  Historical paper collection done."
+#
+#   log "Step 5.5b: Generating field history reports..."
+#   python3 generate_field_history.py >> "$LOG_FILE" 2>&1
+#   log "  Field history reports done."
+# fi
 
 # Step 6: Git commit and push
 log "Step 6: Deploying to GitHub Pages..."

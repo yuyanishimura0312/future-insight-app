@@ -15,7 +15,7 @@ import urllib.parse
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from collections import defaultdict
-from db import save_collection, get_stats
+from db import save_collection, get_stats, save_media_sources, export_media_sources_json
 
 # === Target per category ===
 TARGET_PER_CATEGORY = 334  # 334 x 6 categories ≈ 2,000 articles
@@ -202,19 +202,27 @@ RSS_FEEDS = [
     {"url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml", "name": "UN News", "lang": "en", "tier": 1, "focus": "Social"},
 
     # --- Japanese Continuous ---
-    {"url": "https://www3.nhk.or.jp/rss/news/cat0.xml", "name": "NHK 主要", "lang": "ja", "tier": 1, "focus": "Political"},
-    {"url": "https://www3.nhk.or.jp/rss/news/cat1.xml", "name": "NHK 社会", "lang": "ja", "tier": 1, "focus": "Social"},
-    {"url": "https://www3.nhk.or.jp/rss/news/cat3.xml", "name": "NHK 科学", "lang": "ja", "tier": 1, "focus": "Technological"},
-    {"url": "https://www3.nhk.or.jp/rss/news/cat4.xml", "name": "NHK 政治", "lang": "ja", "tier": 1, "focus": "Political"},
-    {"url": "https://www3.nhk.or.jp/rss/news/cat5.xml", "name": "NHK 経済", "lang": "ja", "tier": 1, "focus": "Economic"},
-    {"url": "https://www3.nhk.or.jp/rss/news/cat6.xml", "name": "NHK 国際", "lang": "ja", "tier": 1, "focus": "Political"},
-    {"url": "https://news.yahoo.co.jp/rss/topics/top-picks.xml", "name": "Yahoo Japan", "lang": "ja", "tier": 1, "focus": "Social"},
-    {"url": "https://news.yahoo.co.jp/rss/topics/business.xml", "name": "Yahoo ビジネス", "lang": "ja", "tier": 1, "focus": "Economic"},
-    {"url": "https://news.yahoo.co.jp/rss/topics/science.xml", "name": "Yahoo サイエンス", "lang": "ja", "tier": 1, "focus": "Technological"},
-    {"url": "https://news.yahoo.co.jp/rss/topics/it.xml", "name": "Yahoo IT", "lang": "ja", "tier": 1, "focus": "Technological"},
-    {"url": "https://news.yahoo.co.jp/rss/topics/world.xml", "name": "Yahoo 国際", "lang": "ja", "tier": 1, "focus": "Political"},
-    {"url": "https://news.yahoo.co.jp/rss/topics/domestic.xml", "name": "Yahoo 国内", "lang": "ja", "tier": 1, "focus": "Social"},
-    {"url": "https://www.nikkei.com/rss/", "name": "日経", "lang": "ja", "tier": 1, "focus": "Economic"},
+    {"url": "https://www3.nhk.or.jp/rss/news/cat0.xml", "name": "NHK 主要", "lang": "ja", "tier": 1, "focus": "Political", "region": "japan"},
+    {"url": "https://www3.nhk.or.jp/rss/news/cat1.xml", "name": "NHK 社会", "lang": "ja", "tier": 1, "focus": "Social", "region": "japan"},
+    {"url": "https://www3.nhk.or.jp/rss/news/cat3.xml", "name": "NHK 科学", "lang": "ja", "tier": 1, "focus": "Technological", "region": "japan"},
+    {"url": "https://www3.nhk.or.jp/rss/news/cat4.xml", "name": "NHK 政治", "lang": "ja", "tier": 1, "focus": "Political", "region": "japan"},
+    {"url": "https://www3.nhk.or.jp/rss/news/cat5.xml", "name": "NHK 経済", "lang": "ja", "tier": 1, "focus": "Economic", "region": "japan"},
+    {"url": "https://www3.nhk.or.jp/rss/news/cat6.xml", "name": "NHK 国際", "lang": "ja", "tier": 1, "focus": "Political", "region": "japan"},
+    {"url": "https://news.yahoo.co.jp/rss/topics/top-picks.xml", "name": "Yahoo Japan", "lang": "ja", "tier": 1, "focus": "Social", "region": "japan"},
+    {"url": "https://news.yahoo.co.jp/rss/topics/business.xml", "name": "Yahoo ビジネス", "lang": "ja", "tier": 1, "focus": "Economic", "region": "japan"},
+    {"url": "https://news.yahoo.co.jp/rss/topics/science.xml", "name": "Yahoo サイエンス", "lang": "ja", "tier": 1, "focus": "Technological", "region": "japan"},
+    {"url": "https://news.yahoo.co.jp/rss/topics/it.xml", "name": "Yahoo IT", "lang": "ja", "tier": 1, "focus": "Technological", "region": "japan"},
+    {"url": "https://news.yahoo.co.jp/rss/topics/world.xml", "name": "Yahoo 国際", "lang": "ja", "tier": 1, "focus": "Political", "region": "japan"},
+    {"url": "https://news.yahoo.co.jp/rss/topics/domestic.xml", "name": "Yahoo 国内", "lang": "ja", "tier": 1, "focus": "Social", "region": "japan"},
+    {"url": "https://www.nikkei.com/rss/", "name": "日経", "lang": "ja", "tier": 1, "focus": "Economic", "region": "japan"},
+
+    # --- Japanese Additional (miratuku-news expansion) ---
+    {"url": "https://mainichi.jp/rss/etc/mainichi-flash.rss", "name": "毎日新聞", "lang": "ja", "tier": 1, "focus": "Social", "region": "japan"},
+    {"url": "https://www.asahi.com/rss/asahi/newsheadlines.rdf", "name": "朝日新聞デジタル", "lang": "ja", "tier": 1, "focus": "Social", "region": "japan"},
+    {"url": "https://www.yomiuri.co.jp/feed/", "name": "読売新聞", "lang": "ja", "tier": 1, "focus": "Social", "region": "japan"},
+    {"url": "https://rss.itmedia.co.jp/rss/2.0/itmedia_all.xml", "name": "ITmedia", "lang": "ja", "tier": 1, "focus": "Technological", "region": "japan"},
+    {"url": "https://jp.techcrunch.com/feed/", "name": "TechCrunch Japan", "lang": "ja", "tier": 1, "focus": "Technological", "region": "japan"},
+    {"url": "https://business.nikkei.com/rss/sns/nb.rdf", "name": "日経ビジネス", "lang": "ja", "tier": 1, "focus": "Economic", "region": "japan"},
 
     # ============================================================
     # TIER 2: PERIODIC DEEP ANALYSIS — Structural insight
@@ -231,8 +239,8 @@ RSS_FEEDS = [
     {"url": "https://futureoflife.org/feed/", "name": "Future of Life Institute", "lang": "en", "tier": 2, "focus": "Technological"},
 
     # --- Japan Foresight & Policy ---
-    {"url": "https://www.nistep.go.jp/feed", "name": "NISTEP", "lang": "ja", "tier": 2, "focus": "Technological"},
-    {"url": "https://toyokeizai.net/list/feed/rss", "name": "東洋経済", "lang": "ja", "tier": 2, "focus": "Economic"},
+    {"url": "https://www.nistep.go.jp/feed", "name": "NISTEP", "lang": "ja", "tier": 2, "focus": "Technological", "region": "japan"},
+    {"url": "https://toyokeizai.net/list/feed/rss", "name": "東洋経済オンライン", "lang": "ja", "tier": 2, "focus": "Economic", "region": "japan"},
 
     # ============================================================
     # TIER 3: STRUCTURAL & PARADIGMATIC — Weak signals, alt futures
@@ -283,6 +291,9 @@ def fetch_all_feeds() -> list[dict]:
 
                 published = entry.get("published", entry.get("updated", ""))
 
+                # Determine region: explicit feed setting, or 'japan' for ja feeds, else 'global'
+                region = feed_info.get("region", "japan" if feed_info.get("lang") == "ja" else "global")
+
                 articles.append({
                     "title": title,
                     "summary": summary,
@@ -292,6 +303,7 @@ def fetch_all_feeds() -> list[dict]:
                     "published": published,
                     "tier": feed_info.get("tier", 1),
                     "focus": feed_info.get("focus", ""),
+                    "region": region,
                 })
         except Exception as e:
             print(f"  [WARN] Failed to fetch {feed_info['name']}: {e}")
@@ -339,6 +351,7 @@ def fetch_gdelt_articles(category: str, query: str, max_articles: int = 250) -> 
                     "source": "GDELT: " + item.get("domain", ""),
                     "lang": lang,
                     "published": item.get("seendate", ""),
+                    "region": "japan" if lang == "ja" else "global",
                 })
             time.sleep(10)  # Rate limit between keyword queries (GDELT requires longer intervals)
         except Exception as e:
@@ -406,6 +419,7 @@ def select_top_articles(articles: list[dict], per_category: int = TARGET_PER_CAT
                 "published_date": pub_date,
                 "relevance_score": round(a["scores"][category], 2),
                 "tier": a.get("tier", 1),
+                "region": a.get("region", "global"),
             })
 
         selected[category] = {
@@ -495,6 +509,13 @@ def main():
 
     stats = get_stats()
     print(f"   DB: {stats['total_collections']} collections, {stats['total_articles']} total articles")
+
+    # 8. Sync media sources to DB and export JSON
+    print("\n6. Syncing media sources...")
+    save_media_sources(RSS_FEEDS)
+    ms_file = output_dir / "media_sources.json"
+    ms_count = export_media_sources_json(ms_file)
+    print(f"   {ms_count} media sources exported to {ms_file}")
 
     print(f"\nDone! {total_selected} articles collected.")
 
