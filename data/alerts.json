@@ -1,38 +1,18 @@
 {
-  "generated_at": "2026-04-03T22:57:27.303396+00:00",
-  "total_articles_analyzed": 1358,
+  "generated_at": "2026-04-04T19:18:03.785318+00:00",
+  "total_articles_analyzed": 75023,
   "alert_counts": {
     "emergence": 12,
-    "surge": 5,
+    "surge": 12,
     "crossover": 5,
-    "total": 22
+    "total": 29
   },
   "alerts": [
     {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "trump",
-      "mentions": 129,
-      "ratio": 71.7,
-      "historical_avg": 0.6,
-      "categories": [
-        "Technological",
-        "Political",
-        "Social",
-        "Environmental",
-        "Legal",
-        "Economic"
-      ],
-      "alert_title": "トランプ政権の政策転換が急速に拡大",
-      "description": "2024年後半から2026年初頭にかけてトランプ関連のニュースが過去平均の72倍に急増。ロシア制裁緩和から農業支援、CDC人事まで多岐にわたる政策変更が同時進行しており、政治・経済・技術など全域に波及する構造的転換を示唆しています。今後、米国の外交・経済政策の根本的な再編と国際秩序への影響が加速する可能性があります。",
-      "alert_title_en": "Trump Policy Shift Accelerates Across Multiple Sectors",
-      "description_en": "Trump-related news surged 72-fold from late 2024, spanning Russia sanctions relief, farm aid, and CDC appointments. This signals structural policy transformation rippling across politics, economics, and technology, foreshadowing fundamental realignment of U.S. foreign and economic policy with potential global order implications."
-    },
-    {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "iran war",
-      "mentions": 60,
+      "mentions": 114,
       "categories": [
         "Technological",
         "Political",
@@ -40,86 +20,35 @@
         "Environmental",
         "Economic"
       ],
-      "alert_title": "イラン有事が世界経済を揺るがす",
-      "description": "過去2年間に言及されなかった「イラン戦争」が急に60件のニュースに浮上。油価115ドルへの上昇、消費者信頼感の低下、再生可能エネルギー転換の停滞など、経済・環境・政治を横断する影響が同時に報道されている。地政学的リスク顕在化による供給チェーン混乱と中期的なエネルギー価格高騰が懸念されます。",
-      "alert_title_en": "Iran Conflict Emerges as Multi-Sector Economic Risk",
-      "description_en": "Iran war topic newly appeared in 60 articles, with oil reaching $115/barrel, eroding consumer confidence, and disrupting renewable energy transitions. This geopolitical flash point threatens supply chains and portends sustained energy price inflation across multiple sectors."
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "high",
-      "topic": "iran war",
-      "mentions": 60,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 5,
-      "alert_title": "AI・生命工学が法的規制の対象化へ",
-      "description": "ペンタゴンの「Anthropic供給チェーンリスク」指定に対する司法判断、社会メディア中毒訴訟の判決など、技術企業に対する法的・規制的な圧力が激化。6つのPESTLE分野に横断する「judge」トピックの出現は、技術覇権争いが法廷闘争の段階に入ったことを示しており、今後の規制フレームワーク構築と企業戦略の再構築が不可避です。",
-      "alert_title_en": "Tech Giants Face Intensifying Legal and Regulatory Pressure",
-      "description_en": "Pentagon's Anthropic labeling dispute and social media addiction trial verdicts signal escalating legal pressure on technology firms. This cross-sector judicial activity suggests tech dominance battles are entering courtroom phases, necessitating new regulatory frameworks and corporate strategy restructuring."
+      "alert_title": "イラン紛争とAI戦術",
+      "description": "米軍がAIを活用したイラン空爆計画立案を行っており、これまで報道されなかった新しい段階の紛争へ突入している。AI兵器の実戦活用が国際法や人道的懸念を巻き起こし、欧州の対応迫られる局面。今後、軍事AI利用のガバナンス問題が急速に国際政治課題化する可能性。",
+      "alert_title_en": "Iran Conflict Escalates with AI-Driven Military Strategy",
+      "description_en": "U.S. military is now actively using AI to plan air operations against Iran, marking a significant escalation in military technology deployment. This development raises urgent questions about AI governance in warfare and international legal oversight of autonomous military systems."
     },
     {
       "type": "SURGE",
       "level": "high",
-      "topic": "energy",
-      "mentions": 44,
-      "ratio": 24.4,
-      "historical_avg": 0.6,
+      "topic": "artemis",
+      "mentions": 82,
+      "ratio": 12026.7,
+      "historical_avg": 0.0,
       "categories": [
         "Technological",
-        "Political",
         "Social",
         "Environmental",
         "Legal",
         "Economic"
       ],
-      "alert_title": "米国移民政策の根本的再定義が進行中",
-      "description": "出生市民権に関する最高裁判決が新たに17件報道。トランプ政権がアメリカ国籍定義を根本から問い直す動きは、移民政策だけでなく社会構成そのものに関わる政治的分裂を深刻化させています。判決の先行き不透明性とそれに伴う法的・社会的混乱が、今後2〜3年の対立激化と国内分極化をさらに進める可能性があります。",
-      "alert_title_en": "U.S. Birthright Citizenship Definition Under Constitutional Siege",
-      "description_en": "Supreme Court birthright citizenship cases newly generated 17 articles, with Trump seeking fundamental redefinition of American citizenship. This legal uncertainty threatens to intensify societal divisions and domestic polarization over the next 2-3 years."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "social media",
-      "mentions": 28,
-      "categories": [
-        "Political",
-        "Social"
-      ],
-      "alert_title": "ホルムズ海峡の戦略的重要性が再浮上",
-      "description": "過去2年間に報道されなかったホルムズ海峡問題が急浮上（15件）。イラン有事とトランプの「ヨーロッパは独力で対処せよ」発言は、米国の中東撤退姿勢を鮮明にし、世界の石油流通構造の再編を示唆しています。同盟国との負担分担問題と供給チェーン再構築圧力が今後の国際関係に深刻な影響をもたらすでしょう。",
-      "alert_title_en": "Strait of Hormuz Emerges as Critical Geopolitical Flash Point",
-      "description_en": "Strait of Hormuz newly appeared in 15 articles alongside Iran conflict, with Trump signaling U.S. withdrawal from Middle East defense. This signals fundamental restructuring of global oil supply networks and allied burden-sharing arrangements."
+      "alert_title": "アルテミス月面計画急増",
+      "description": "アルテミスII月面ミッションがメディア露出で過去平均の12,000倍超に急増、トランプ政権の政治的レガシー構築の手段として位置づけられている。月面基地プロジェクトの法的根拠の曖昧性も指摘され、宇宙法整備や国家間の月面資源競争が今後の重要課題化。",
+      "alert_title_en": "Artemis Moon Mission Becomes Political Priority",
+      "description_en": "Media coverage of Artemis II has surged dramatically, with the mission becoming politically significant for securing Trump's legacy. However, legal ambiguities surrounding the lunar base project are raising questions about international space law governance."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
-      "topic": "must",
-      "mentions": 25,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Social"
-      ],
-      "n_categories": 5,
-      "alert_title": "クリーン・エネルギー政策の政治的逆転リスク",
-      "description": "エネルギー急増（24倍、44件）とクリーン・エネルギー初出（11件）により、Hochul州知事の気候法遅延、民主党の税控除維持案、富裕層による反対派への報復投資など、政策の不安定性が顕著に。エネルギー価格と気候対策のジレンマが政治的に揺らぎやすく、今後の低炭素転換戦略の実現性が大きく不確実になっています。",
-      "alert_title_en": "Clean Energy Transition Faces Political Reversal and Price Pressures",
-      "description_en": "Energy news surged 24-fold while clean energy newly appeared, revealing policy instability: climate law delays, political backlash, and investor vendettas. Energy affordability versus climate targets creates sustained political vulnerability for decarbonization strategy."
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "high",
-      "topic": "judge",
-      "mentions": 22,
+      "topic": "europe",
+      "mentions": 48,
       "categories": [
         "Economic",
         "Environmental",
@@ -129,209 +58,433 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "ソーシャルメディア中毒が法的責任に転換",
-      "description": "社会メディア初出（28件）と行動科学初出（9件）により、プラットフォーム依存の社会的害がシリコンバレーで「watershed」判決に発展。規制対象化が明確化する中、企業の製品設計責任と個人の権利保護が対立軸となり、今後3年で業界再編と法的規制強化が加速することが見込まれます。",
-      "alert_title_en": "Social Media Addiction Transitions from Social Issue to Legal Liability",
-      "description_en": "Social media addiction newly dominated discourse with landmark verdict against tech firms, triggering fear in Silicon Valley. This shift from social concern to legal accountability will drive industry restructuring and accelerated regulatory enforcement over coming years."
+      "alert_title": "欧州の多域的地政学危機",
+      "description": "欧州がサヘル地域安定化、中国のロシア支援対抗、エネルギー安保の3領域で同時に複合的課題に直面。政治・経済・技術・法律・社会・環境すべての分野で統合的対応が求められる局面。欧州の戦略的自立と国際協調が試される転換点。",
+      "alert_title_en": "Europe Faces Simultaneous Multi-Domain Strategic Challenges",
+      "description_en": "Europe confronts interconnected crises spanning the Sahel, China-Russia relations, and energy security, requiring integrated responses across all PESTLE dimensions. This signals Europe's critical need for strategic autonomy and multilateral cooperation."
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "must",
+      "mentions": 42,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "alert_title": "政府規制と企業のAI倫理対立",
+      "description": "※ノイズの可能性が高い。「must」はアナリティクスノイズと考えられ、具体的な施策や法案を指さない。女性健康やレバノン難民、サーベイランス強制など散発的なトピックの集合で、統一的な新兆候とは言えない。",
+      "alert_title_en": "Fragmented Regulatory Demands Across Policy Domains",
+      "description_en": "※Likely noise. The keyword 'must' aggregates unrelated policy debates without clear thematic coherence or strategic signal."
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "down",
+      "mentions": 40,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "alert_title": "公共サービス廃止の社会影響調査",
+      "description": "※ノイズの可能性が高い。「down」は複数の文脈（サービス閉鎖、コスト低下、訴訟差し止め等）で散在。地政学的危機や新規制との関連性は弱く、キーワード統計による誤検出の可能性が高い。",
+      "alert_title_en": "Fragmented Policy Debates on Service Reduction",
+      "description_en": "※Likely noise. The keyword 'down' appears across disparate contexts without coherent strategic signal."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
-      "topic": "supreme court",
-      "mentions": 21,
+      "topic": "strait hormuz",
+      "mentions": 30,
       "categories": [
+        "Technological",
         "Political",
         "Social",
-        "Legal"
+        "Environmental",
+        "Legal",
+        "Economic"
       ],
-      "alert_title": "SpaceXとMusk帝国の公開企業化が加速",
-      "description": "Elon Musk初出（8件）でSpaceX上場申請が報道され、Muskが「初のトリリオネア」になる可能性が提示されました。同時に民主党がビジネス開示法停止への関与を調査。富と政治権力の集中に対する懸念が高まる中、宇宙産業の民営化加速と規制当局の対抗圧力が今後の事業戦略と政策形成を大きく左右します。",
-      "alert_title_en": "SpaceX IPO and Musk's Wealth Concentration Trigger Political Backlash",
-      "description_en": "Elon Musk newly featured in articles about SpaceX's IPO filing and potential trillionaire status, while Democrats investigate his role in business disclosure law suspension. This wealth-power concentration will trigger sustained regulatory backlash and reshape space industry policy."
+      "alert_title": "ホルムズ海峡米イラン危機",
+      "description": "米国がイラン封じ込めでホルムズ海峡支配を目指す一方、トランプはヨーロッパの自力責任を強要。石油流通・エネルギー安保・地政学的再編が加速し、世界経済への供給ショック懸念が現実化。今後、海峡通行権と国際秩序の再構築が急務。",
+      "alert_title_en": "Hormuz Strait Crisis Reshapes Global Energy Security",
+      "description_en": "Escalating U.S.-Iran tensions at the Strait of Hormuz are forcing Europe toward energy independence while threatening global oil supply stability. This geopolitical reconfiguration signals a potential restructuring of international energy markets and strategic alliances."
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "strait hormuz",
+      "mentions": 30,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "alert_title": "ホルムズ海峡危機の全域的影響",
+      "description": "ホルムズ海峡紛争が経済・政治・法律・技術・環境・社会全分野に波及。OPEC価格操作、国際海洋法の適用、エネルギー転換加速、各国の対応分裂が同時進行。グローバルなエネルギー秩序と国際協調の根本的な揺らぎ示唆。",
+      "alert_title_en": "Multi-Domain Impact of Hormuz Strait Conflict",
+      "description_en": "The Hormuz crisis extends across all PESTLE dimensions, triggering simultaneous shifts in global energy pricing, maritime law, energy transition acceleration, and geopolitical fragmentation. This represents a fundamental challenge to post-WWII international order."
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "judge",
+      "mentions": 30,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "alert_title": "AI企業と防衛省の法的対立",
+      "description": "裁判官がAnthropicへのペンタゴンの「サプライチェーンリスク」認定を差し止め。AI産業と防衛セキュリティのコンフリクトが司法判断に委ねられ、テック企業の軍事協力をめぐる法的枠組みが流動化。今後の判例が企業自律性とセキュリティバランスを再定義。",
+      "alert_title_en": "Federal Judge Blocks Pentagon's AI Company Designation",
+      "description_en": "Judicial intervention in Pentagon's supply chain risk labeling of Anthropic signals growing judicial scrutiny of AI-defense partnerships. This suggests the legal boundaries of corporate autonomy versus national security requirements remain unsettled."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "birthright citizenship",
-      "mentions": 17,
+      "mentions": 29,
       "categories": [
         "Political",
         "Social",
         "Environmental",
         "Legal"
       ],
-      "alert_title": "最高裁が社会的マイノリティ保護を制限",
-      "description": "最高裁初出（21件）でコロラドのコンバージョン・セラピー禁止が却下され、同時にビッグ・オイル訴訟も棄却。司法による環境・人権保護の規制的制約が顕著化。保守的司法姿勢が固定化する中で、気候対策と社会的弱者保護の法的基盤が不安定化し、民間訴訟による救済可能性が低下する傾向が続くでしょう。",
-      "alert_title_en": "Supreme Court Restricts Protection of Vulnerable Groups and Climate Suits",
-      "description_en": "Supreme Court newly appeared in coverage of rejected LGBTQ+ protections and dismissed climate litigation against oil firms. This conservative judicial stance undermines legal safeguards for vulnerable populations and climate action, shifting burden away from courts."
+      "alert_title": "米出生地市民権制度の再審議",
+      "description": "トランプが修正第14条の出生地市民権廃止を最高裁で争い、複数の判事が懐疑的姿勢を示唆。移民政策と国籍定義の根本的変更が司法の門を潜ろうとしており、成功時の米国籍制度と国家アイデンティティが大きく転換。社会分断と法的不確実性が深刻化。",
+      "alert_title_en": "Supreme Court Questions Birthright Citizenship Doctrine",
+      "description_en": "Trump's challenge to the 14th Amendment's birthright citizenship provision faces skepticism from key justices, yet signals a potential fundamental redefinition of American citizenship and national identity with vast social and demographic implications."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "artemis moon",
+      "mentions": 22,
+      "ratio": 3226.7,
+      "historical_avg": 0.0,
+      "categories": [
+        "Technological",
+        "Social",
+        "Environmental",
+        "Legal"
+      ],
+      "alert_title": "月面基地開発の法的争点",
+      "description": "アルテミス月面基地プロジェクトが国際宇宙法の欠陥を露呈。宇宙条約とアルテミス協定の矛盾、資源採掘権の曖昧性、主権主張の禁止と月面活動の衝突。国家主導の月面進出が国際法の「盲点」を突く形で進展。今後、宇宙ガバナンスの国際交渉が不可避。",
+      "alert_title_en": "Artemis Moon Base Reveals International Space Law Gaps",
+      "description_en": "The Artemis lunar base project exposes legal ambiguities in international space treaties regarding resource rights and sovereign claims, signaling urgent need for updated space law governance."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "trump iran",
-      "mentions": 16,
+      "mentions": 19,
       "categories": [
         "Political",
         "Economic"
       ],
-      "alert_title": "生物医学テクノロジーが急速に社会化",
-      "description": "※ノイズの可能性が高い。「ニワトリの卵を医薬品工場に」という見出しは本来の科学的意義より感覚的記述が先行。ただし薬物製造の「インターネット・クックブック化」報道と組み合わさると、バイオ技術の平準化・悪用リスクが増加しており、規制当局と産業の非対称なリスク認識が深刻化している可能性があります。",
-      "alert_title_en": "Biotechnology Democratization Creates Dual-Use Risk Escalation",
-      "description_en": "Biotech advances (egg-based drug production, internet-enabled synthesis) are democratizing pharmaceutical development, but simultaneously enabling illicit drug manufacturing. Regulatory agencies lag technology diffusion, creating sustainability risks for legitimate biotech industries."
+      "alert_title": "トランプのロシア制裁緩和",
+      "description": "トランプがロシア石油への制裁を緩和し、プーチン支援と明示的に関連づけられている。米国の対露政策の急転換がエネルギー市場・対露同盟国支援・NATO結束を揺るがし、西側統一戦線の分裂を加速。今後、米露間の新たな勢力圏調整が国際秩序を再編。",
+      "alert_title_en": "Trump Eases Russian Oil Sanctions Amid Geopolitical Shift",
+      "description_en": "Trump's relaxation of Russian oil sanctions signals a strategic realignment that weakens Western unity and directly aids Putin. This marks a potential pivot in U.S. foreign policy with profound implications for NATO cohesion and global energy markets."
     },
     {
-      "type": "CROSSOVER",
+      "type": "SURGE",
       "level": "high",
-      "topic": "drug",
-      "mentions": 16,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 5,
-      "alert_title": "髄膜炎の局地的集団発生が検出される",
-      "description": "髄膜炎集団発症が初出（8件）で報道。ピークを超えたとの公表も、病院の初期対応遅延が指摘されており、感染症対応の制度的脆弱性が露呈。COVID-19以降の公衆衛生体制の十分性、特に地方医療機関の監視・通報機能の不備が改めて問題化し、感染症対策の組織的再編が求められます。",
-      "alert_title_en": "Localized Meningitis Outbreak Exposes Public Health Surveillance Gaps",
-      "description_en": "Meningitis outbreak newly reported despite peaking, with hospital notification delays revealed. Post-COVID public health infrastructure gaps, especially in local surveillance mechanisms, require systematic organizational reform."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "strait hormuz",
-      "mentions": 15,
+      "topic": "starmer",
+      "mentions": 18,
+      "ratio": 2640.0,
+      "historical_avg": 0.0,
       "categories": [
         "Technological",
         "Political",
-        "Environmental",
-        "Legal",
+        "Social"
+      ],
+      "alert_title": "スターマー英首相の医師スト対立",
+      "description": "キール・スターマー首相が医師ストに対し48時間の中止期限を設定し新規職増加を取り消し。労使紛争が政治化し、NHS改革の進展を巡る統治能力が問われている。医療スタッフ不足が深刻化する中での権力行使が、政局不安定化と医療崩壊リスクを高める。",
+      "alert_title_en": "UK PM Threatens to Withdraw Jobs Package from Striking Doctors",
+      "description_en": "Starmer's hardline stance on doctor strikes, threatening to withdraw employment commitments, escalates labor-government conflict at a critical moment for NHS sustainability. This signals growing tensions between austerity pressures and public sector expectations."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "doctors",
+      "mentions": 16,
+      "ratio": 2346.7,
+      "historical_avg": 0.0,
+      "categories": [
+        "Technological",
+        "Political",
+        "Social",
         "Economic"
       ],
-      "alert_title": "行動科学の再現性危機が広がり続ける",
-      "description": "行動科学初出（9件）で研究の「再現性・再現可能性・分析堅牢性」を問う大規模メタ研究が報道。社会科学の知見信頼性が動揺する中、政策立案の基盤となる学知そのものが疑問視される構造的問題が深刻化。今後の証拠基盤政策（EBP）の実効性低下と、非科学的ポピュリズム台頭のリスクが増加します。",
-      "alert_title_en": "Social Science Reproducibility Crisis Undermines Evidence-Based Policymaking",
-      "description_en": "Behavioral science newly featured large-scale meta-research questioning reproducibility across social science literature. This epistemic crisis in foundational policy knowledge risks accelerating non-scientific populism and eroding evidence-based governance."
+      "alert_title": "英国医師の集団スト加速",
+      "description": "複数の病院医師グループが協調スト行動を脅したしており、個別交渉から集団行動へシフト。医療人材危機とスターマー政権の強硬対応により、NHS機能不全のリスク顕在化。医療サービス分裂や民間セクターシフト、医療格差拡大の可能性。",
+      "alert_title_en": "Hospital Doctor Groups Coordinate Strike Action in England",
+      "description_en": "Resident doctors' escalation toward coordinated strike action signals deepening healthcare system crisis. With government showing inflexibility, NHS service disruptions and acceleration toward privatization become plausible outcomes."
     },
     {
-      "type": "CROSSOVER",
+      "type": "EMERGENCE",
       "level": "high",
-      "topic": "strait hormuz",
-      "mentions": 15,
+      "topic": "privacy defender",
+      "mentions": 14,
       "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Technological"
+        "Legal"
       ],
-      "n_categories": 5,
-      "alert_title": "セキュリティ脅威としての衛星軌道デブリ化",
-      "description": "Starlink衛星の軌道上分解（「tens of objects」化）がSpaceX上場申請と同時に報道。商業宇宙開発の急速拡大がもたらす軌道汚染リスクが可視化され、国際的な宇宙ガバナンス体制の不在が問題化。衛星コンステレーション競争と軌道デブリ増加の負のフィードバックが加速し、宇宙アクセスの長期的持続可能性に深刻な脅威をもたらす可能性があります。",
-      "alert_title_en": "Starlink Anomaly Exposes Orbital Debris Crisis and Governance Vacuum",
-      "description_en": "Starlink satellite breakup into dozens of objects, announced alongside SpaceX IPO, reveals unsustainable growth in orbital debris. Absence of international space governance mechanisms threatens long-term satellite infrastructure viability and space access."
+      "alert_title": "プライバシー擁護運動の拡大",
+      "description": "Cindy CohnのプライバシスEFF指導者の著書出版と講演ツアーが、AIサーベイランスへの法的対抗を象徴。DoD・Anthropic紛争で個人プライバシー権が数少ない権力者の判断に左右される矛盾が顕在化。プライバシー法制化の市民圧力が急速に増大する兆候。",
+      "alert_title_en": "Privacy Advocacy Mobilizes Against Surveillance Expansion",
+      "description_en": "The amplification of privacy defense narratives, exemplified by EFF leadership efforts, reflects growing civil society concern that privacy protections depend on ad-hoc judicial decisions rather than durable legal frameworks. This suggests emerging momentum for comprehensive privacy legislation."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
-      "topic": "clean energy",
-      "mentions": 11,
+      "topic": "pam bondi",
+      "mentions": 14,
       "categories": [
         "Political",
-        "Social",
-        "Environmental"
-      ]
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "tech life",
-      "mentions": 9,
-      "categories": [
-        "Technological",
         "Social",
         "Legal"
-      ]
+      ],
+      "alert_title": "パム・ボンディ司法長官解任",
+      "description": "※ノイズの可能性が高い。記事タイトルに「ドーパミン作用メカニズム」など無関係な学術論文が混在。パム・ボンディの司法長官解任は関連性あるが、他8割のノイズにより分析信頼性が著しく低下。統計的検出の誤り可能性。",
+      "alert_title_en": "Trump Dismisses Attorney General Pam Bondi",
+      "description_en": "※Likely noise. Mixed with unrelated neuroscience papers, reducing signal integrity. While Bondi's dismissal is substantive, contamination suggests algorithmic misclassification."
     },
     {
-      "type": "EMERGENCE",
+      "type": "SURGE",
       "level": "high",
-      "topic": "social behavioural",
-      "mentions": 9,
+      "topic": "defender",
+      "mentions": 14,
+      "ratio": 2053.3,
+      "historical_avg": 0.0,
       "categories": [
-        "Social"
-      ]
+        "Legal"
+      ],
+      "alert_title": "社会科学研究の再現性危機",
+      "description": "社会・行動科学の再現性・再現可能性・分析ロバスト性に関する大規模調査が学術界で喚起。統計的手法の不備と出版バイアスが科学的信頼性を蝕み、政策根拠としての科学的証拠が問い直される局面。学術ガバナンス改革と査読制度の根本的再編が急務。",
+      "alert_title_en": "Social and Behavioral Science Reproducibility Crisis Surfaces",
+      "description_en": "Systematic investigations into reproducibility and analytical robustness of social sciences reveal methodological weaknesses that undermine evidence-based policymaking. This signals impending academic reforms and scrutiny of empirical foundations for government decisions."
     },
     {
-      "type": "EMERGENCE",
+      "type": "SURGE",
       "level": "high",
-      "topic": "behavioural sciences",
-      "mentions": 9,
+      "topic": "deadly",
+      "mentions": 14,
+      "ratio": 2053.3,
+      "historical_avg": 0.0,
+      "categories": [
+        "Technological",
+        "Political",
+        "Social",
+        "Economic"
+      ],
+      "alert_title": "英国髄膜炎アウトブレイク",
+      "description": "英国でメニンコッカス髄膜炎の流行が急速に拡大し、ピークを超えたとの報告がある一方で感染拡大の原因が引き続き不明。若年層への感染リスク顕在化と公衆衛生対応の限界が露呈。今後、感染症予防体制強化と学生ワクチン政策の見直しが必然化。",
+      "alert_title_en": "UK Meningitis Outbreak Spreads Rapidly Among Students",
+      "description_en": "A meningitis outbreak spreading rapidly among UK students reveals gaps in disease surveillance and prevention systems. Even as peaks are reported, the pathogen's transmission vectors remain unclear, signaling need for enhanced epidemiological monitoring."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "sciences",
+      "mentions": 14,
+      "ratio": 2053.3,
+      "historical_avg": 0.0,
       "categories": [
         "Social"
-      ]
+      ],
+      "alert_title": "気候保険による沿岸経済保護",
+      "description": "エルサルバドルがサーフィン産業を気候リスク保険で守る試み。自然資本を組み込んだ気候ファイナンス革新として位置づけられ、脆弱な経済部門への適応戦略の新類型。今後、気候変動被害を金融商品化し途上国のレジリエンス構築する動き加速。経済・環境・法律が統合。",
+      "alert_title_en": "Climate Insurance Preserves Coastal Livelihoods in El Salvador",
+      "description_en": "El Salvador's use of climate risk insurance to protect surfing economies models innovative climate finance for vulnerable sectors. This signals emerging convergence of climate adaptation, financial engineering, and sustainable development in Global South contexts."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "meningitis outbreak",
-      "mentions": 8,
+      "mentions": 13,
       "categories": [
         "Technological",
         "Social"
-      ]
+      ],
+      "alert_title": "ベルギーGBA規制案",
+      "description": "※ノイズの可能性が高い。「APD/GBA (Belgium) - 68/2026」等の法規制文書番号が羅列されているだけで、具体的な法案内容・政策変更・社会影響が全く記述されていない。規制当局の公式文書自動抽出の可能性。",
+      "alert_title_en": "Belgium Data Protection Regulation Updates",
+      "description_en": "※Likely noise. References to regulation numbers without substantive policy content or strategic implications suggest automated document extraction without editorial context."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "save",
+      "mentions": 13,
+      "ratio": 1906.7,
+      "historical_avg": 0.0,
+      "categories": [
+        "Technological",
+        "Political",
+        "Social",
+        "Environmental",
+        "Legal"
+      ],
+      "alert_title": "スペイン個人情報保護当局の裁定",
+      "description": "※ノイズの可能性が高い。「AEPD (Spain) - EXP202307472」等の事件番号のみで、具体的なプライバシー侵害事案の詳細や判断基準が不明。規制当局の案件追跡システムから自動抽出された可能性が高い。",
+      "alert_title_en": "Spain Data Authority Case Numbers Surface",
+      "description_en": "※Likely noise. Case reference numbers lack substantive detail about privacy violations or regulatory decisions, suggesting automated case management database extraction."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
-      "topic": "elon musk",
-      "mentions": 8,
+      "topic": "gba belgium",
+      "mentions": 12,
       "categories": [
-        "Technological",
         "Legal",
         "Economic"
-      ]
+      ],
+      "alert_title": "社会メディア依存症訴訟の転機",
+      "description": "ソーシャルメディア依存症訴訟での「watershed」判決により人権団体が勝利。シリコンバレーで集団的危機感が高まり、プラットフォーム企業の青少年対象設計の責任が司法判断で認定。今後、メディア企業責任法制化と中毒設計訴訟の連鎖が加速化。業界モデル転換が必然。",
+      "alert_title_en": "Social Media Addiction Trial Landmark Verdict Shifts Industry",
+      "description_en": "A watershed court decision on social media addiction liability has sparked fear in Silicon Valley and validated claims about platforms' addictive design practices. This signals upcoming legislation and industry pressure toward product redesign accountability."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "aepd spain",
+      "mentions": 12,
+      "categories": [
+        "Legal",
+        "Economic"
+      ],
+      "alert_title": "行動科学の学術基盤再検証",
+      "description": "行動科学の再現性・再現可能性・分析的ロバスト性に関する大規模メタレビューが、学術基盤の脆弱性を明示。政策決定やテック企業戦略が脆弱な科学根拠に基づいている可能性を暴露。今後、学術倫理規制強化と証拠基準の厳格化が政策領域で進展。",
+      "alert_title_en": "Behavioral Sciences Research Foundation Under Scrutiny",
+      "description_en": "Systematic scrutiny of behavioral science reproducibility reveals that policy decisions and business strategies may rest on fragile empirical foundations. This foreshadows stricter evidence standards and academic accountability mechanisms."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "spain exp",
+      "mentions": 12,
+      "categories": [
+        "Legal",
+        "Economic"
+      ],
+      "alert_title": "慈善団体規制と監視強化",
+      "description": "英国慈善委員会がAlan Turing Instituteに法的義務警告を発出。テック寄付組織のガバナンス欠陥が規制当局監視の対象化。慈善セクターのAI関連活動や言論の自由とのバランスが問われ、非営利組織への政治的圧力が高まる兆候。",
+      "alert_title_en": "Charity Commission Tightens Oversight of Tech-Linked Nonprofits",
+      "description_en": "UK Charity Commission's warning to Alan Turing Institute signals intensified regulatory scrutiny of AI-adjacent nonprofit governance. This foreshadows broader tension between nonprofit independence and state accountability regarding emerging technologies."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "social behavioural",
+      "mentions": 12,
+      "categories": [
+        "Social"
+      ],
+      "alert_title": "経済的購買力が政治の最優先",
+      "description": "「Affordability is the biggest thing」と米国保守層が経済的負担感を最優先課題と表現。トランプ下での物価上昇・購買力低下に対する国民の焦燥感が政治投票行動の決定要因化。インフレ対策の失敗が政権基盤を蝕み、ポピュリズム再燃の素地形成。",
+      "alert_title_en": "Affordability Emerges as Dominant Political Priority",
+      "description_en": "U.S. conservative voters identify affordability as the critical issue, signaling that economic anxiety and purchasing power concerns dominate political decision-making. This suggests inflation mitigation failures could destabilize political establishments."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "behavioural sciences",
+      "mentions": 12,
+      "categories": [
+        "Social"
+      ],
+      "alert_title": "インドの国勢調査規模と統計信頼",
+      "description": "インドが史上最大規模の国勢調査を実施予定だが、人口統計方法の物議が波及。デジタル化による正確性向上一方で、カースト・宗教・地域統計の利用が政治的分裂と差別に繋がる懸念。統計情報と民族紛争のリンクが顕在化し、データガバナンス課題化。",
+      "alert_title_en": "India's Massive Census Raises Statistical Controversy",
+      "description_en": "India's unprecedented census scale promises demographic precision yet triggers debate about the political implications of caste, religion, and regional data collection. This signals emerging tensions between data governance and communal stability."
     },
     {
       "type": "SURGE",
-      "level": "medium",
-      "topic": "does",
-      "mentions": 9,
-      "ratio": 5.0,
-      "historical_avg": 0.6,
+      "level": "high",
+      "topic": "charity",
+      "mentions": 12,
+      "ratio": 1760.0,
+      "historical_avg": 0.0,
       "categories": [
+        "Technological",
+        "Social",
+        "Legal",
+        "Economic"
+      ],
+      "alert_title": "ムスク・SpaceX上場計画の政治性",
+      "description": "SpaceXのIPO構想がムスクの最大の「financial moonshot」と形容される政治的意味合い。テスラの市場影響力に加え、宇宙企業の上場が国防・技術覇権構想と絡み、民間宇宙産業の規制ガバナンスが国家安保問題化。",
+      "alert_title_en": "Musk's SpaceX IPO Signals Private Space Industry's Maturity",
+      "description_en": "SpaceX's potential IPO represents Musk's most ambitious financial move and signals the maturation of private space commerce as a strategic national asset, raising questions about regulatory oversight and government relationships."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "biggest",
+      "mentions": 12,
+      "ratio": 1760.0,
+      "historical_avg": 0.0,
+      "categories": [
+        "Technological",
         "Political",
         "Social",
-        "Environmental"
-      ]
-    },
-    {
-      "type": "SURGE",
-      "level": "medium",
-      "topic": "huge",
-      "mentions": 8,
-      "ratio": 4.4,
-      "historical_avg": 0.6,
-      "categories": [
-        "Technological",
-        "Social",
-        "Environmental",
-        "Legal"
-      ]
-    },
-    {
-      "type": "SURGE",
-      "level": "medium",
-      "topic": "firms",
-      "mentions": 8,
-      "ratio": 4.4,
-      "historical_avg": 0.6,
-      "categories": [
-        "Technological",
-        "Social",
         "Economic"
-      ]
+      ],
+      "alert_title": "ペンタゴンのAI契約と市民警告",
+      "description": "OpenAIのペンタゴン契約が「みんなが問うべき問いを投げかけている」と市民から警告。軍事AI企業化の是非が市民に問い直され、テック企業の国防依存の倫理性が社会議論の焦点化。今後、企業の防衛契約透明化と市民参加ガバナンスが急速に制度化。",
+      "alert_title_en": "OpenAI Pentagon Deal Raises Urgent Public Questions",
+      "description_en": "Public concern over OpenAI's Pentagon partnership signals emerging civic mobilization around corporate militarization. This foreshadows demands for transparency in defense contracting and participatory governance of AI weapons development."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "investigating",
+      "mentions": 12,
+      "ratio": 1760.0,
+      "historical_avg": 0.0,
+      "categories": [
+        "Social"
+      ],
+      "alert_title": "デジタル時代の児童保護法制化",
+      "description": "AB 1043（Internet Age Gates）が児童のオンライン保護と言論の自由のバランスに関して「みんなに害を与える」と批評される。デジタルプラットフォームの児童安全規制が親権・事業自由・憲法的権利の三項関係を破壊する懸念。今後、規制と自由の根本的再定義が必然化。",
+      "alert_title_en": "Digital Age Child Protection Laws Create Rights Conflicts",
+      "description_en": "California's Internet Age Gates bill triggers debate over unintended consequences for parental rights and free speech online. This signals the fundamental challenge of balancing child protection with other constitutional values in digital contexts."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "everyone",
+      "mentions": 11,
+      "ratio": 1613.3,
+      "historical_avg": 0.0,
+      "categories": [
+        "Technological",
+        "Political",
+        "Social",
+        "Legal"
+      ],
+      "alert_title": "グレンフェル論争と政治的責任",
+      "description": "グレンフェル火災を巡る「全員死亡」発言で改革党の住宅スポークスパーソン解任。火災被害者への不謝敬発言が党内処分に至り、政治責任と言論の自由の衝突が可視化。今後、災害犠牲者問題に関する発言監視と政治的正統性が連動。",
+      "alert_title_en": "Grenfell Fire Comments Trigger Political Accountability",
+      "description_en": "Reform party spokesperson dismissed after insensitive remarks about Grenfell deaths signals tighter political accountability for public figures' statements regarding tragedy and victim memory. This reflects evolving standards of political responsibility."
     }
   ]
 }
