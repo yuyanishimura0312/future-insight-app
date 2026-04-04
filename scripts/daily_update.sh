@@ -52,6 +52,11 @@ log "Step 2.5: Curating daily papers..."
 python3 curate_daily_papers.py >> "$LOG_FILE" 2>&1
 log "  Paper curation done."
 
+# Step 2.7: Generate insight reports (10 myth-connected deep-dive reports)
+log "Step 2.7: Generating insight reports..."
+python3 generate_insight_reports.py >> "$LOG_FILE" 2>&1
+log "  Insight reports done."
+
 # Step 3: Detect alerts
 log "Step 3: Detecting alerts..."
 python3 detect_alerts.py >> "$LOG_FILE" 2>&1
