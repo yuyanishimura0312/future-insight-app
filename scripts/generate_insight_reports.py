@@ -30,7 +30,8 @@ load_dotenv(Path(__file__).parent.parent / ".env")
 import anthropic
 
 client = anthropic.Anthropic()
-MODEL = "claude-haiku-4-5-20251001"
+# Model can be overridden via environment variable
+MODEL = os.environ.get("IR_MODEL", "claude-haiku-4-5-20251001")
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 
@@ -219,7 +220,7 @@ def select_myth_relevant_articles(
 
 選定基準:
 1. 現在の支配的神話を「強化する」記事、または神話の「変化・転換」を示す記事
-2. 異なるPESTLE分野から幅広く選ぶ（1分野に偏らない）
+2. **必ず3つ以上の異なるPESTLE分野から選ぶこと**（1分野から最大4件まで）
 3. 表層的なニュースより、深層的な社会変動のシグナルとなる記事を優先
 4. インパクトの大きい順にランク付け（最もインパクトの大きいものを最初に）
 
@@ -236,14 +237,33 @@ def select_myth_relevant_articles(
 
 JSONのみ返してください。"""
 
-    text = call_claude(prompt, max_tokens=4096)
-    selections = extract_json(text)
+    # Retry up to 2 times if fewer than 10 articles are selected
+    for attempt in range(3):
+        text = call_claude(prompt, max_tokens=4096)
+        selections = extract_json(text)
 
-    if not isinstance(selections, list):
-        print("  [WARN] Unexpected response format, wrapping in list")
-        selections = [selections]
+        if not isinstance(selections, list):
+            print("  [WARN] Unexpected response format, wrapping in list")
+            selections = [selections]
 
-    print(f"  -> Selected {len(selections)} articles")
+        print(f"  -> Selected {len(selections)} articles (attempt {attempt + 1})")
+
+        if len(selections) >= 10:
+            break
+        if attempt < 2:
+            print(f"  [WARN] Only {len(selections)} articles selected, retrying...")
+            time.sleep(2)
+
+    # Validate category diversity — warn if too concentrated
+    cat_counts = {}
+    for s in selections:
+        c = s.get("category", "?")
+        cat_counts[c] = cat_counts.get(c, 0) + 1
+    max_cat_count = max(cat_counts.values()) if cat_counts else 0
+    if max_cat_count > 5:
+        top_cat = max(cat_counts, key=cat_counts.get)
+        print(f"  [WARN] Category concentration: {top_cat} has {max_cat_count}/{len(selections)} articles")
+
     return selections
 
 
