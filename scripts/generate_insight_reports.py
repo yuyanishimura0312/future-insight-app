@@ -340,11 +340,18 @@ PESTLE分野: {category}（{PESTLE_JA.get(category, category)}）
 - 箇条書きは補助的にのみ使用し、主要な内容は必ず文章で記述
 - 読者は経営者・コンサルタントを想定し、知的かつ実用的な洞察を提供
 - 日本語で記述してください
+- 冒頭要約として、この記事が示す最も重要な洞察を2-3文（100-150字）で凝縮してください
+- 歴史的経緯を5-8項目の時系列データとして構造化してください
 
 以下のJSON形式で返してください:
 {{
   "report_title": "レポートタイトル（日本語、記事の本質を捉えた魅力的なタイトル）",
+  "summary": "2-3文の要約（日本語、100-150字）",
   "report_text": "約5,000字の全文レポート",
+  "timeline": [
+    {{"year": "1990", "event": "出来事の簡潔な説明（日本語、1-2文）", "significance": "現在のテーマにとっての重要性（日本語、1文）"}},
+    {{"year": "2000-2010", "event": "出来事の簡潔な説明", "significance": "重要性の説明"}}
+  ],
   "historical_context": "歴史的経緯のセクション要約（2-3文）",
   "future_signals": "未来へのシグナル分析の要約（2-3文）",
   "watch_points": "今後ウォッチすべき観点の要約（2-3文）",
@@ -540,7 +547,9 @@ def main():
                     "summary": full_article.get("summary", ""),
                 },
                 "report_title": result.get("report_title", ""),
+                "summary": result.get("summary", ""),
                 "report_text": result.get("report_text", ""),
+                "timeline": result.get("timeline", []),
                 "historical_context": result.get("historical_context", ""),
                 "future_signals": result.get("future_signals", ""),
                 "watch_points": result.get("watch_points", ""),
