@@ -340,22 +340,30 @@ PESTLE分野: {category}（{PESTLE_JA.get(category, category)}）
 - 箇条書きは補助的にのみ使用し、主要な内容は必ず文章で記述
 - 読者は経営者・コンサルタントを想定し、知的かつ実用的な洞察を提供
 - 日本語で記述してください
-- 冒頭要約として、この記事が示す最も重要な洞察を2-3文（100-150字）で凝縮してください
+- 冒頭要約として、この記事が示す最も重要な洞察を500字程度で記述してください。全文を読まなくても一定の理解が得られる内容にしてください
 - 歴史的経緯を5-8項目の時系列データとして構造化してください
+- 未来へのシグナル分析と今後ウォッチすべき観点には、それぞれ記事の内容に即した具体的なタイトルをつけてください
+- 関連する学術成果は、有名な論文だけでなく、あまり知られていない独自の論考や最新の研究も積極的に取り上げ、3つをタイトル・著者・概要で記載してください
 
 以下のJSON形式で返してください:
 {{
   "report_title": "レポートタイトル（日本語、記事の本質を捉えた魅力的なタイトル）",
-  "summary": "2-3文の要約（日本語、100-150字）",
+  "summary": "要約（日本語、500字程度）",
   "report_text": "約5,000字の全文レポート",
   "timeline": [
     {{"year": "1990", "event": "出来事の簡潔な説明（日本語、1-2文）", "significance": "現在のテーマにとっての重要性（日本語、1文）"}},
     {{"year": "2000-2010", "event": "出来事の簡潔な説明", "significance": "重要性の説明"}}
   ],
   "historical_context": "歴史的経緯のセクション要約（2-3文）",
+  "future_signals_title": "未来シグナルのタイトル（日本語、記事固有の具体的なタイトル）",
   "future_signals": "未来へのシグナル分析の要約（2-3文）",
+  "watch_points_title": "ウォッチポイントのタイトル（日本語、記事固有の具体的なタイトル）",
   "watch_points": "今後ウォッチすべき観点の要約（2-3文）",
-  "related_research": "関連する学術成果の要約（2-3文）"
+  "related_research": [
+    {{"title": "論文/論考のタイトル", "author": "著者名", "summary": "概要（2-3文）"}},
+    {{"title": "論文/論考のタイトル", "author": "著者名", "summary": "概要（2-3文）"}},
+    {{"title": "論文/論考のタイトル", "author": "著者名", "summary": "概要（2-3文）"}}
+  ]
 }}
 
 JSONのみ返してください。"""
@@ -551,7 +559,9 @@ def main():
                 "report_text": result.get("report_text", ""),
                 "timeline": result.get("timeline", []),
                 "historical_context": result.get("historical_context", ""),
+                "future_signals_title": result.get("future_signals_title", ""),
                 "future_signals": result.get("future_signals", ""),
+                "watch_points_title": result.get("watch_points_title", ""),
                 "watch_points": result.get("watch_points", ""),
                 "related_research": result.get("related_research", ""),
                 "myth_relation": sel.get("myth_relation", ""),
