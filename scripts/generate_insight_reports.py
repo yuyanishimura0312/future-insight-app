@@ -564,6 +564,7 @@ def main():
         if result:
             report_entry = {
                 "id": i,
+                "date": date_str,
                 "article": {
                     "title": full_article.get("title", ""),
                     "title_ja": title_ja,
