@@ -148,10 +148,10 @@ def extract_weak_signals(news: dict, papers: list) -> list:
     """Extract weak signals from news and papers."""
     print("\n=== 3. ウィークシグナル抽出 ===")
 
-    # Compile all headlines
+    # Compile headlines (top 30 per category to stay within token limits)
     all_headlines = []
     for cat, info in news["pestle"].items():
-        for a in info["articles"]:
+        for a in info["articles"][:30]:
             all_headlines.append(f"[{info['label_ja']}] {a['title']}")
 
     # Add paper titles
@@ -162,7 +162,7 @@ def extract_weak_signals(news: dict, papers: list) -> list:
 
     response = client.messages.create(
         model=MODEL,
-        max_tokens=3000,
+        max_tokens=4096,
         messages=[{
             "role": "user",
             "content": f"""あなたは未来学の専門家で、ウィークシグナル（弱い信号）の検出に長けています。
@@ -197,12 +197,29 @@ JSONのみ返してください。"""
     try:
         text = response.content[0].text.strip()
         if "```" in text:
-            text = text.split("```")[1]
-            if text.startswith("json"):
-                text = text[4:]
-        return json.loads(text)
-    except (json.JSONDecodeError, IndexError):
+            parts = text.split("```")
+            for part in parts[1:]:
+                candidate = part.strip()
+                if candidate.startswith("json"):
+                    candidate = candidate[4:].strip()
+                try:
+                    return json.loads(candidate)
+                except json.JSONDecodeError:
+                    continue
+        # Try direct parse
+        try:
+            return json.loads(text)
+        except json.JSONDecodeError:
+            pass
+        # Try extracting array from text
+        start = text.find("[")
+        end = text.rfind("]")
+        if start != -1 and end > start:
+            return json.loads(text[start:end + 1])
         print("    [WARN] Failed to parse weak signals")
+        return []
+    except (json.JSONDecodeError, IndexError) as e:
+        print(f"    [WARN] Failed to parse weak signals: {e}")
         return []
 
 

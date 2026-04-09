@@ -66,6 +66,10 @@ run_step "collect_news" "collect_news.py"
 log "Step 2: Running AI analysis..."
 run_step "ai_analyze" "ai_analyze.py"
 
+# Step 2.3: Generate daily CLA report
+log "Step 2.3: Generating daily report..."
+run_step "generate_daily_report" "generate_daily_report.py"
+
 # Step 2.5: Curate daily papers
 log "Step 2.5: Curating daily papers..."
 run_step "curate_daily_papers" "curate_daily_papers.py"
