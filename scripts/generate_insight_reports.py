@@ -255,17 +255,60 @@ JSONのみ返してください。"""
             print(f"  [WARN] Only {len(selections)} articles selected, retrying...")
             time.sleep(2)
 
-    # Validate category diversity — warn if too concentrated
-    cat_counts = {}
+    # Enforce category diversity: max 3 articles per category
+    # If a category exceeds the cap, drop excess and backfill from
+    # underrepresented categories by re-querying or using remaining articles
+    cat_buckets: dict[str, list] = {}
     for s in selections:
+        c = s.get("category", "Unknown")
+        cat_buckets.setdefault(c, []).append(s)
+
+    CAT_CAP = 3
+    balanced = []
+    overflow = []
+    for cat, items in cat_buckets.items():
+        balanced.extend(items[:CAT_CAP])
+        overflow.extend(items[CAT_CAP:])
+
+    if overflow:
+        missing_cats = [c for c in PESTLE_CATS if c not in cat_buckets or len(cat_buckets[c]) < 2]
+        print(f"  [INFO] Rebalancing: {len(overflow)} excess articles from overrepresented categories")
+        print(f"  [INFO] Underrepresented categories: {missing_cats or 'none'}")
+
+        # Try to find replacement articles from underrepresented categories
+        if missing_cats and articles:
+            # Pick a few candidate articles from missing categories
+            candidates = [a for a in articles if a["category"] in missing_cats][:50]
+            if candidates:
+                cand_text = "\n".join(
+                    f"[{a['index']}] ({a['category']}) {a['title']}" for a in candidates[:30]
+                )
+                fill_prompt = f"""以下の記事から、CLA神話分析に最も関連の深い記事を{min(len(overflow), len(candidates), 4)}件選んでください。
+
+記事リスト:
+{cand_text}
+
+JSON配列で返してください: [{{"article_index": 番号, "category": "分野", "myth_relation": "strengthens/changes", "related_myth": "関連する神話", "reason": "理由"}}]
+JSONのみ返してください。"""
+                try:
+                    fill_text = call_claude(fill_prompt, max_tokens=2048)
+                    fill_selections = extract_json(fill_text)
+                    if isinstance(fill_selections, list):
+                        balanced.extend(fill_selections[:len(overflow)])
+                        print(f"  [INFO] Added {min(len(fill_selections), len(overflow))} articles from underrepresented categories")
+                except Exception as e:
+                    print(f"  [WARN] Backfill failed: {e}")
+
+    # Ensure exactly 10
+    balanced = balanced[:10]
+
+    cat_counts = {}
+    for s in balanced:
         c = s.get("category", "?")
         cat_counts[c] = cat_counts.get(c, 0) + 1
-    max_cat_count = max(cat_counts.values()) if cat_counts else 0
-    if max_cat_count > 5:
-        top_cat = max(cat_counts, key=cat_counts.get)
-        print(f"  [WARN] Category concentration: {top_cat} has {max_cat_count}/{len(selections)} articles")
+    print(f"  Category distribution: {cat_counts}")
 
-    return selections
+    return balanced
 
 
 # ===== Step 3: Generate individual reports =====
