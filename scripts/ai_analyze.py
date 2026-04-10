@@ -31,6 +31,18 @@ def load_latest_news() -> dict:
 
 
 def load_papers() -> list:
+    """Load papers from daily_papers.json (nested by field) or papers.json (flat list)."""
+    # Prefer daily_papers.json which has the latest curated papers
+    daily_path = DATA_DIR / "daily_papers.json"
+    if daily_path.exists():
+        with open(daily_path, encoding="utf-8") as f:
+            data = json.load(f)
+        papers = []
+        for field_data in data.get("fields", {}).values():
+            papers.extend(field_data.get("papers", []))
+        if papers:
+            return papers
+    # Fallback to flat papers.json
     path = DATA_DIR / "papers.json"
     if not path.exists():
         return []
@@ -144,25 +156,75 @@ JSONのみ返してください。"""
 
 # ===== 3. Weak Signals =====
 
-def extract_weak_signals(news: dict, papers: list) -> list:
-    """Extract weak signals from news and papers."""
-    print("\n=== 3. ウィークシグナル抽出 ===")
+# 8 different perspectives for diverse signal generation (~100 total)
+SIGNAL_BATCH_CONFIGS = [
+    {"focus": "技術・イノベーション",
+     "instruction": "特に技術革新、AI、デジタル化、科学技術の進歩に関連するシグナルに注目してください。技術が社会・経済・政治にもたらす予期しない変化の兆しを検出してください。",
+     "count": 12},
+    {"focus": "地政学・国際関係",
+     "instruction": "国際関係、地政学的パワーバランス、戦争と平和、同盟関係の変化に関するシグナルに注目してください。従来の外交・安全保障の枠組みが崩れつつある兆しを検出してください。",
+     "count": 12},
+    {"focus": "経済・金融・労働",
+     "instruction": "経済構造の変化、金融システム、労働市場、貿易、通貨、サプライチェーンに関するシグナルに注目してください。資本主義や経済秩序の転換点となりうる兆しを検出してください。",
+     "count": 12},
+    {"focus": "社会・文化・価値観",
+     "instruction": "社会構造、文化的変化、価値観の転換、世代間ギャップ、アイデンティティに関するシグナルに注目してください。人々の生き方や社会の在り方が根本的に変わりつつある兆しを検出してください。",
+     "count": 12},
+    {"focus": "環境・気候・資源",
+     "instruction": "気候変動、環境政策、エネルギー転換、資源管理、生態系に関するシグナルに注目してください。人類と自然の関係が変わりつつある兆しを検出してください。",
+     "count": 12},
+    {"focus": "法律・規制・ガバナンス",
+     "instruction": "法制度、規制、人権、ガバナンス構造の変化に関するシグナルに注目してください。統治の仕組みや権力の正当性が問い直されている兆しを検出してください。",
+     "count": 12},
+    {"focus": "分野横断・逆説的動き",
+     "instruction": "異なる分野を横断する予期しない接続、既存トレンドに対する逆説的な動き、少数派だが重要な兆しに特に注目してください。一見無関係な出来事の間の隠れた関連性を検出してください。",
+     "count": 14},
+    {"focus": "日本・アジア固有の動き",
+     "instruction": "日本やアジア地域に特有の社会変化、政策転換、文化的シフトに関するシグナルに注目してください。西欧中心の分析では見落とされがちなアジアの兆しを検出してください。",
+     "count": 14},
+]
 
-    # Compile headlines (top 30 per category to stay within token limits)
-    all_headlines = []
-    for cat, info in news["pestle"].items():
-        for a in info["articles"][:30]:
-            all_headlines.append(f"[{info['label_ja']}] {a['title']}")
 
-    # Add paper titles
-    for p in papers[:50]:
-        all_headlines.append(f"[学術/{p.get('field','')}] {p['title']}")
+def _parse_signal_json(text: str) -> list:
+    """Robustly parse JSON array of signals from LLM response."""
+    import re
+    # Try code block extraction
+    if "```" in text:
+        for block in re.findall(r"```(?:json)?\s*(.*?)```", text, re.DOTALL):
+            try:
+                return json.loads(block.strip())
+            except json.JSONDecodeError:
+                continue
+    # Try direct parse
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+    # Try extracting array
+    start = text.find("[")
+    end = text.rfind("]")
+    if start != -1 and end > start:
+        raw = text[start:end + 1]
+        try:
+            return json.loads(raw)
+        except json.JSONDecodeError:
+            # Fix trailing commas
+            raw = re.sub(r',\s*}', '}', raw)
+            raw = re.sub(r',\s*]', ']', raw)
+            try:
+                return json.loads(raw)
+            except json.JSONDecodeError:
+                pass
+    return []
 
-    headlines_text = "\n".join(all_headlines)
+
+def _generate_signal_batch(headlines_text: str, config: dict, existing_signals: list) -> list:
+    """Generate one batch of signals from a specific perspective."""
+    existing_titles = "\n".join(f"- {s['signal']}" for s in existing_signals)
 
     response = client.messages.create(
         model=MODEL,
-        max_tokens=4096,
+        max_tokens=8192,
         messages=[{
             "role": "user",
             "content": f"""あなたは未来学の専門家で、ウィークシグナル（弱い信号）の検出に長けています。
@@ -173,54 +235,80 @@ def extract_weak_signals(news: dict, papers: list) -> list:
 - 既存のトレンドに対する反動や逆説的な動き
 - 少数派だが重要な動き
 
+【今回の視点: {config['focus']}】
+{config['instruction']}
+
 以下は本日収集されたニュースと学術論文の見出しです:
 
 {headlines_text}
 
-これらからウィークシグナルを8-10個抽出してください。
+【重要: 以下のシグナルはすでに抽出済みなので、重複しないようにしてください】
+{existing_titles}
+
+上記と重複しない新しいウィークシグナルを正確に{config['count']}個抽出してください。
 
 JSON配列で返してください。各要素:
 {{
-  "signal": "シグナルの名称（短く）",
-  "description": "このシグナルの説明と、なぜ重要か（2-3文）",
-  "related_headlines": ["関連する見出し1", "関連する見出し2"],
-  "pestle_categories": ["関連するPESTLE分野"],
+  "signal": "シグナルの名称（短く、日本語）",
+  "description": "このシグナルの説明と、なぜ重要か（2-3文、日本語）",
+  "related_headlines": ["関連する見出し1", "関連する見出し2", "関連する見出し3"],
+  "pestle_categories": ["関連するPESTLE分野（政治/経済/社会/技術/法律/環境）"],
   "potential_impact": "high/medium/low",
   "time_horizon": "1-3年/3-5年/5-10年/10年以上",
   "counter_trend": "このシグナルが反する既存トレンド（1文）"
 }}
 
-JSONのみ返してください。"""
+必ず有効なJSON配列のみを返してください。説明文は不要です。"""
         }],
     )
 
-    try:
-        text = response.content[0].text.strip()
-        if "```" in text:
-            parts = text.split("```")
-            for part in parts[1:]:
-                candidate = part.strip()
-                if candidate.startswith("json"):
-                    candidate = candidate[4:].strip()
-                try:
-                    return json.loads(candidate)
-                except json.JSONDecodeError:
-                    continue
-        # Try direct parse
+    text = response.content[0].text.strip()
+    return _parse_signal_json(text)
+
+
+def extract_weak_signals(news: dict, papers: list) -> list:
+    """Extract ~100 weak signals from news and papers using multiple perspectives."""
+    print("\n=== 3. ウィークシグナル抽出（100個目標） ===")
+
+    # Compile headlines (top 50 per category for richer context)
+    all_headlines = []
+    for cat, info in news["pestle"].items():
+        for a in info["articles"][:50]:
+            all_headlines.append(f"[{info['label_ja']}] {a['title']}")
+
+    # Add paper titles
+    for p in papers[:80]:
+        all_headlines.append(f"[学術/{p.get('field','')}] {p['title']}")
+
+    headlines_text = "\n".join(all_headlines)
+    all_signals = []
+
+    for i, config in enumerate(SIGNAL_BATCH_CONFIGS):
+        print(f"  Batch {i+1}/{len(SIGNAL_BATCH_CONFIGS)}: {config['focus']} (target: {config['count']})")
         try:
-            return json.loads(text)
-        except json.JSONDecodeError:
-            pass
-        # Try extracting array from text
-        start = text.find("[")
-        end = text.rfind("]")
-        if start != -1 and end > start:
-            return json.loads(text[start:end + 1])
-        print("    [WARN] Failed to parse weak signals")
-        return []
-    except (json.JSONDecodeError, IndexError) as e:
-        print(f"    [WARN] Failed to parse weak signals: {e}")
-        return []
+            batch = _generate_signal_batch(headlines_text, config, all_signals)
+            print(f"    -> {len(batch)} signals")
+            all_signals.extend(batch)
+        except Exception as e:
+            print(f"    [WARN] Batch failed: {e}")
+        time.sleep(0.5)
+
+    # If we fell short (e.g. parse errors), run a supplementary batch
+    if len(all_signals) < 90:
+        shortfall = 100 - len(all_signals)
+        print(f"  Supplementary batch: {shortfall} more needed")
+        try:
+            extra = _generate_signal_batch(headlines_text, {
+                "focus": "補完（全分野横断）",
+                "instruction": f"全分野を横断して、まだ検出されていないシグナルを{shortfall}個追加してください。",
+                "count": shortfall,
+            }, all_signals)
+            print(f"    -> {len(extra)} signals")
+            all_signals.extend(extra)
+        except Exception as e:
+            print(f"    [WARN] Supplementary batch failed: {e}")
+
+    return all_signals
 
 
 # ===== Main =====
