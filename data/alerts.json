@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-09T19:32:14.560811+00:00",
-  "total_articles_analyzed": 81050,
+  "generated_at": "2026-04-10T19:39:57.225576+00:00",
+  "total_articles_analyzed": 82259,
   "alert_counts": {
     "emergence": 12,
     "surge": 12,
@@ -12,7 +12,7 @@
       "type": "EMERGENCE",
       "level": "high",
       "topic": "iran war",
-      "mentions": 251,
+      "mentions": 281,
       "categories": [
         "Technological",
         "Political",
@@ -22,15 +22,15 @@
         "Economic"
       ],
       "alert_title": "イラン紛争とAI兵器化",
-      "description": "イラン関連の軍事紛争において、AI技術の戦場での活用が急速に浮上している。政治・経済・技術など6つのPESTLE分野にまたがる251件の報道が検出され、米軍によるAIを活用した攻撃計画策定が報じられている。この兆候は軍事AIの実装加速と国際紛争の質的変化を示唆し、今後の地政学的リスクと技術倫理の衝突が深刻化することを予示している。",
-      "alert_title_en": "Iran Conflict and AI Weaponization Surge",
-      "description_en": "AI-powered military operations in potential Iran conflicts have emerged as a major cross-domain issue across 251 reports spanning politics, economics, and technology. This signals rapid acceleration of military AI deployment and suggests escalating geopolitical risks intertwined with critical ethical concerns about autonomous warfare systems."
+      "description": "過去2年間に報道されなかったイラン関連紛争がAIと結びついて281件報道されるようになりました。軍事用AI、特に攻撃計画策定での活用が急速に議論対象化しており、技術・政治・法律・経済など全域に影響が波及。今後の紛争形態がAI依存化し、国際的な軍事規制枠組み再構築が急務となります。",
+      "alert_title_en": "Iran Conflict and AI Weaponization",
+      "description_en": "AI-enabled military planning for Iran operations has emerged as a major cross-sector issue, spanning technology, politics, law, and economics. This signals rapid militarization of AI and potential acceleration of regional instability requiring urgent international governance frameworks."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "iran war",
-      "mentions": 251,
+      "mentions": 281,
       "categories": [
         "Economic",
         "Environmental",
@@ -40,17 +40,17 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "アルテミス月面計画の急速展開",
-      "description": "NASA主導のアルテミス計画が過去平均の36,762倍に増加し、月面基地計画の法的問題や宇宙探査の政治的価値が議論の中心となっている。トランプ政権による政治的優先順位付けと宇宙開発の法的枠組み整備が同時進行しており、商業宇宙産業と国家戦略の融合、宇宙資源獲得競争の本格化を予兆している。",
-      "alert_title_en": "Artemis Moon Mission Exponential Growth",
-      "description_en": "NASA's Artemis program coverage surged 36,762-fold with intense focus on legal frameworks and political legacy implications. This indicates space exploration is becoming a major geopolitical competition, with emerging questions about space law, resource rights, and the fusion of commercial and state-driven space activities."
+      "alert_title": "ホルムズ海峡の危機再燃",
+      "description": "米国とイランの緊張激化により、ホルムズ海峡での有事が新たに99件報道。世界石油供給の3分の1が通過する重要海峡での紛争リスク高まりは、エネルギー価格・海運・金融市場に直結します。地政学的リスクが再び商品・為替相場を支配する可能性が高まっています。",
+      "alert_title_en": "Strait of Hormuz Crisis Re-escalation",
+      "description_en": "Fresh reporting on US-Iran tensions in the Strait of Hormuz signals potential supply chain and energy market disruption, as 30% of global oil transits this waterway. Economic and geopolitical instability could cascade through energy prices and financial markets."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "artemis",
-      "mentions": 244,
-      "ratio": 36762.7,
+      "mentions": 274,
+      "ratio": 41282.7,
       "historical_avg": 0.0,
       "categories": [
         "Technological",
@@ -60,16 +60,16 @@
         "Legal",
         "Economic"
       ],
-      "alert_title": "ホルムズ海峡危機の新局面",
-      "description": "ホルムズ海峡を巡る米イラン危機が過去2年で初めて顕在化し、84件の報道が政治・経済・法律など複数分野で検出されている。世界の石油供給の約1/3が通過する戦略的要所での紛争リスク高まりは、エネルギー安保、海運経済、国際秩序に直結する脅威であり、世界経済への即座の波及可能性が懸念される。",
-      "alert_title_en": "Strait of Hormuz Crisis Escalation",
-      "description_en": "The US-Iran crisis in the Strait of Hormuz emerged as a new geopolitical flashpoint with 84 reports spanning multiple PESTLE domains. This signals potential disruption to global oil supply (roughly one-third passes through), threatening energy security, maritime commerce, and international stability with immediate economic consequences."
+      "alert_title": "Artemis月面計画の加速",
+      "description": "NASA Artemis計画関連報道が過去平均の41,282倍に激増、274件に達しました。トランプ政権の政治的重要性、宇宙法的課題、環境への懸念が同時浮上。月面基地構想の法的正当性が問われ始めており、宇宙資源利用と国際協調の新時代が切迫しています。",
+      "alert_title_en": "Artemis Moon Mission Accelerates",
+      "description_en": "Dramatic surge in Artemis reporting signals political prioritization and raises emerging legal/environmental concerns around lunar base projects. This indicates imminent shifts in space law frameworks and resource competition dynamics."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "europe",
-      "mentions": 127,
+      "mentions": 141,
       "categories": [
         "Economic",
         "Environmental",
@@ -79,35 +79,16 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "米軍のAI戦術導入加速",
-      "description": "米軍がAIを活用したイラン攻撃計画策定を実施していることが75件の報道で確認され、議員からの監視要求が並行している。軍事AI実装の現実化と政策監視体制の遅れのギャップが拡大しており、今後、武装化AI技術の国際規制枠組み整備が急務となることを示唆している。",
-      "alert_title_en": "US Military AI-Driven Attack Planning",
-      "description_en": "Reports confirm US military is using AI for Iran attack planning while lawmakers call for oversight, indicating a significant gap between deployment and governance. This foreshadows urgency for international regulatory frameworks on autonomous military systems."
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "high",
-      "topic": "must",
-      "mentions": 85,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 6,
-      "alert_title": "英国医師ストライキ激化",
-      "description": "英国の研修医ストライキが過去平均の6,780倍に増加し、スターマー首相による強硬対応が報じられている。医療職の労働紛争が国民サービスの根幹を揺さぶる状況は、医療システムの持続性危機と労使対立の先鋭化を示唆し、NHS改革と人的資本戦略の根本的見直しが不可避となることを示している。",
-      "alert_title_en": "UK Resident Doctors Strike Escalation",
-      "description_en": "UK resident doctor strikes surged 6,780-fold with escalating confrontation between government and medical unions. This indicates deep structural crisis in healthcare labor relations and NHS sustainability, signaling potential long-term impact on public healthcare capacity and workforce stability."
+      "alert_title": "プライバシー権の法制化加速",
+      "description": "プライバシー防衛者への関心が過去平均の7,985倍に急増。AIサーベイランスへの政府強制に対する反発と、個人情報保護法制の国際的強化機運が顕在化。企業と市民のプライバシー権対立が法廷へ移行し、AI規制の根本的な転機を示唆しています。",
+      "alert_title_en": "Privacy Rights Legal Framework Accelerates",
+      "description_en": "Exponential surge in privacy advocacy signals mounting resistance to AI-enabled surveillance and strengthening international data protection frameworks. Legal conflicts between corporate AI deployment and citizen privacy rights are intensifying."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "strait hormuz",
-      "mentions": 84,
+      "mentions": 99,
       "categories": [
         "Technological",
         "Political",
@@ -116,16 +97,16 @@
         "Legal",
         "Economic"
       ],
-      "alert_title": "生まれながらの市民権廃止論争",
-      "description": "トランプ政権がアメリカの生まれながらの市民権廃止に向けた憲法訴訟を推進し、41件の報道が検出されている。政治的アイデンティティ定義と移民政策の根本的転換をめぐる最高裁争点化は、米国の国家形成原理の根本的再検討に繋がり、移民受け入れ政策の国際連鎖反応を生む可能性を示唆している。",
-      "alert_title_en": "Birthright Citizenship Legal Challenge",
-      "description_en": "Trump administration's constitutional challenge to US birthright citizenship has triggered 41 reports and Supreme Court proceedings. This signifies potential fundamental redefinition of American national identity and citizenship, with likely ripple effects on global migration policies and identity politics."
+      "alert_title": "英国医師ストライキの政治化",
+      "description": "住宅医師ストライキが過去平均の7,985倍に報道激増。スターマー首相による強硬対応が政治・社会・経済全領域を揺さぶり、医療労働環境と政治的正統性の対立が先鋭化。医療崩壊リスクと政治不信の連鎖が今後の社会政策に大きく影響します。",
+      "alert_title_en": "UK Resident Doctors' Strike Politicized",
+      "description_en": "Intense reporting on striking resident doctors and government pressure signals deep healthcare labor crisis linked to political legitimacy. The escalating conflict threatens NHS stability and reveals structural economic tensions in public service provision."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "strait hormuz",
-      "mentions": 84,
+      "mentions": 99,
       "categories": [
         "Economic",
         "Environmental",
@@ -135,16 +116,35 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "プライバシー権保護の機構化",
-      "description": "※本アラートの内容は分析対象として限界がある。プライバシー擁護に関する言論活動と、スペイン・イタリアの個人情報保護当局の行政手続き報告が混在しており、新規兆候というより行政プロセスの記録増加の可能性が高い。",
-      "alert_title_en": "Privacy Rights Protection Mechanisms",
-      "description_en": "※Noise possibility is high. The alert mixes memoir promotion, advocacy narratives, and routine administrative data protection case filings, indicating procedural documentation increase rather than emergent policy trend."
+      "alert_title": "米国市民権法の根本的再定義",
+      "description": "出生地市民権の廃止議論が初出現で41件報道。トランプ政権による市民権定義変更が政治・法律・社会的に大きな波紋。移民政策・国家アイデンティティ・法的平等の根本が揺らぎ、社会分裂と法的混乱を招く可能性が高まっています。",
+      "alert_title_en": "US Birthright Citizenship Law Under Challenge",
+      "description_en": "Supreme Court and Trump administration challenge to birthright citizenship has emerged as a defining issue affecting immigration, national identity, and constitutional law. This portends profound social division and legal transformation."
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "must",
+      "mentions": 92,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "alert_title": "欧州の多角的戦略転機",
+      "description": "欧州関連報道が横断分野で141件。中東安全保障からロシア・中国との経済対抗まで、欧州が多方向での戦略的介入を模索。サヘル地域、NATO、経済制裁など重層的課題への統合的対応が求められ、欧州の戦略的自立性が試されています。",
+      "alert_title_en": "Europe's Multi-Directional Strategic Pivot",
+      "description_en": "European coverage spanning Sahel stability, China-Russia relations, and economic resilience signals mounting geopolitical pressure. Europe faces concurrent challenges requiring integrated strategic responses and strategic autonomy."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "military",
-      "mentions": 75,
+      "mentions": 80,
       "categories": [
         "Economic",
         "Environmental",
@@ -154,17 +154,34 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "欧州の地政学的重心転換",
-      "description": "ヨーロッパが127件の報道で政治・経済・法律など複数分野にまたがる横断的課題として浮上している。サヘル地域での安定確保、中国によるロシア支援への対抗戦略、EU戦略的自立の加速が同時進行しており、冷戦後の秩序から多極化への移行期における欧州の自己再定義が進行中であることを示唆している。",
-      "alert_title_en": "Europe's Geopolitical Realignment",
-      "description_en": "Europe emerges as a cross-domain issue in 127 reports focusing on Sahel stability, China-Russia relations, and strategic autonomy. This indicates Europe is undergoing fundamental strategic reorientation away from post-Cold War dependencies toward multipolar system navigation."
+      "alert_title": "3D銃製造技術規制の法制化",
+      "description": "3Dプリンタでの銃器製造規制が過去平均の4,821倍に急増。技術と銃規制の相克が法廷へ移行、消費者自由とセキュリティのバランス問題が先鋭化。民主主義社会における技術統制と権利の緊張が新たな局面へ入ります。",
+      "alert_title_en": "3D Gun Manufacturing Regulation Intensifies",
+      "description_en": "Surge in reporting on '3D-printed ghost guns' reflects emerging regulatory conflict between technology freedom and public safety. Legal battles over print-blocking signal fundamental tensions in democratic societies balancing innovation and security."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "artemis astronauts",
+      "mentions": 56,
+      "categories": [
+        "Technological",
+        "Political",
+        "Social",
+        "Environmental",
+        "Economic"
+      ],
+      "alert_title": "NATO離脱とロシア支援の危機",
+      "description": "※ノイズの可能性が高い。アラート26の「editorial」は記事タイトルが「family justice」に関連しており、「friends-and-family diplomacy」との乖離が見られます。ただしトランプのNATO再考とロシア支援への欧州懸念は実質的な地政学的シフトを示唆します。",
+      "alert_title_en": "NATO Alliance Under Trump Pressure",
+      "description_en": "Friends-and-family diplomacy references suggest alternative international relations frameworks emerging amidst Trump presidency tensions with NATO commitments and concerns over Russian support dynamics."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "artemis moon",
-      "mentions": 52,
-      "ratio": 7834.7,
+      "mentions": 55,
+      "ratio": 8286.7,
       "historical_avg": 0.0,
       "categories": [
         "Technological",
@@ -172,82 +189,58 @@
         "Environmental",
         "Legal"
       ],
-      "alert_title": "AI監視への政府強制反対",
-      "description": "政府によるAI監視システムへの企業参加強制に反対する言論が85件検出されており、技術・法律・政治の各分野で規制抵抗が組織化されている。民間企業の自律性と公的監視需要のバランスをめぐる対立が深化しており、今後の民主主義的ガバナンスとAI導入のトレードオフが社会的争点化することを予兆している。",
-      "alert_title_en": "Opposition to Compulsory AI Surveillance",
-      "description_en": "Organized resistance to government-mandated corporate participation in AI surveillance systems appears across 85 reports spanning technology and law. This foreshadows intensifying tensions between democratic privacy rights and security needs, with potential impact on AI governance frameworks globally."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "trump iran",
-      "mentions": 50,
-      "categories": [
-        "Political",
-        "Legal",
-        "Economic"
-      ],
-      "alert_title": "3Dプリント銃規制の法制化",
-      "description": "※ノイズの可能性が高い。「print」トピックが4,218倍増加したアラートは、3D銃プリント規制論争と無関係なコンテンツ（気象、表示制御など）が混在しており、キーワード抽出の精度低下を示唆している。",
-      "alert_title_en": "3D-Printed Gun Regulation Debate",
-      "description_en": "※Noise possibility is high. The 'print' alert conflates 3D gun manufacturing regulations with unrelated content (weather, display controls), indicating keyword extraction noise rather than coherent policy trend."
+      "alert_title": "イタリア個人情報保護の強化動向",
+      "description": "※ノイズの可能性が高い。アラート19-23の5件は同一ニュース「Garante per la protezione dei dati personali」の重複と見られ、多言語キーワード分割による偽の急増。ただし欧州の個人情報保護規制強化傾向自体は実在します。",
+      "alert_title_en": "Italy Data Protection Authority Activities",
+      "description_en": "※High probability of noise - appears to be duplicate reporting of Italian Data Protection Authority announcements parsed into separate Italian language keywords. Underlying trend of EU data protection strengthening is real."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "moon mission",
-      "mentions": 50,
-      "ratio": 3766.7,
+      "mentions": 54,
+      "ratio": 4068.0,
       "historical_avg": 0.0,
       "categories": [
         "Technological",
         "Social",
         "Environmental"
       ],
-      "alert_title": "スターマー首相の政治主導権強化",
-      "description": "英国のキア・スターマー首相が6,328倍の報道増加で主要政治人物として急浮上し、医師ストライキ対応と対EU外交、NATO防衛コミットメントが焦点となっている。英国内政と外交多軸化の同時推進が報じられ、ポスト・ブレグジット英国の国際的地位再確立が政治的優先課題として固着されていることを示唆している。",
-      "alert_title_en": "Starmer's Political Consolidation",
-      "description_en": "UK PM Keir Starmer surged 6,328-fold in coverage amid doctor disputes, EU relations, and NATO commitments. This indicates centralization of power around key domestic labor conflicts and foreign policy realignment, signaling Britain's post-Brexit repositioning as a major political narrative."
+      "alert_title": "気候危機への保険商品化",
+      "description": "エルサルバドルのサーフィン産業における気候変動保険が、気候・経済・社会・環境・技術全域で報道。自然資産の金融商品化と気候適応の新ビジネスモデル化を示唆。脱炭素から気候適応・保険への経済的シフトが加速する新局面を示します。",
+      "alert_title_en": "Climate Crisis Insurance Product Innovation",
+      "description_en": "Climate insurance for natural resources signals emerging market adaptation strategy shifting from mitigation to financial risk management. This reflects broader economic transformation toward climate resilience business models."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "privacy defender",
-      "mentions": 47,
+      "mentions": 53,
       "categories": [
         "Legal"
-      ]
+      ],
+      "alert_title": "医療制度透明化と責任追及",
+      "description": "NHS医療過誤による乳幼児死亡と家庭裁判所透明性が同時報道。医療制度への不信と法的責任追及機構の改革要求が政治・社会的圧力に。医療過誤責任と透明性制度の充実が今後の医療ガバナンスの重要課題化します。",
+      "alert_title_en": "Healthcare System Accountability and Transparency",
+      "description_en": "Coverage of NHS failures and family court transparency demands signal mounting pressure for medical accountability and institutional reform. Legal and social mechanisms for system oversight are becoming critical governance issues."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "defender",
-      "mentions": 47,
-      "ratio": 7081.3,
+      "mentions": 53,
+      "ratio": 7985.3,
       "historical_avg": 0.0,
       "categories": [
         "Legal"
       ]
     },
     {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "artemis astronauts",
-      "mentions": 46,
-      "categories": [
-        "Technological",
-        "Political",
-        "Social",
-        "Environmental",
-        "Economic"
-      ]
-    },
-    {
       "type": "SURGE",
       "level": "high",
       "topic": "doctors",
-      "mentions": 45,
-      "ratio": 6780.0,
+      "mentions": 53,
+      "ratio": 7985.3,
       "historical_avg": 0.0,
       "categories": [
         "Technological",
@@ -260,8 +253,8 @@
       "type": "SURGE",
       "level": "high",
       "topic": "starmer",
-      "mentions": 42,
-      "ratio": 6328.0,
+      "mentions": 53,
+      "ratio": 7985.3,
       "historical_avg": 0.0,
       "categories": [
         "Technological",
@@ -269,6 +262,28 @@
         "Social",
         "Environmental",
         "Legal"
+      ]
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "trump iran",
+      "mentions": 52,
+      "categories": [
+        "Political",
+        "Legal",
+        "Economic"
+      ]
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "nasa artemis",
+      "mentions": 48,
+      "categories": [
+        "Technological",
+        "Social",
+        "Environmental"
       ]
     },
     {
@@ -286,39 +301,8 @@
     {
       "type": "EMERGENCE",
       "level": "high",
-      "topic": "nasa artemis",
-      "mentions": 41,
-      "categories": [
-        "Technological",
-        "Social",
-        "Environmental"
-      ]
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "aepd spain",
-      "mentions": 35,
-      "categories": [
-        "Legal",
-        "Economic"
-      ]
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "spain exp",
-      "mentions": 35,
-      "categories": [
-        "Legal",
-        "Economic"
-      ]
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
       "topic": "garante protezione",
-      "mentions": 34,
+      "mentions": 40,
       "categories": [
         "Legal",
         "Economic"
@@ -328,7 +312,7 @@
       "type": "EMERGENCE",
       "level": "high",
       "topic": "protezione dei",
-      "mentions": 34,
+      "mentions": 40,
       "categories": [
         "Legal",
         "Economic"
@@ -338,7 +322,27 @@
       "type": "EMERGENCE",
       "level": "high",
       "topic": "dei dati",
-      "mentions": 34,
+      "mentions": 40,
+      "categories": [
+        "Legal",
+        "Economic"
+      ]
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "dati personali",
+      "mentions": 40,
+      "categories": [
+        "Legal",
+        "Economic"
+      ]
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "personali italy",
+      "mentions": 40,
       "categories": [
         "Legal",
         "Economic"
@@ -347,25 +351,23 @@
     {
       "type": "SURGE",
       "level": "high",
-      "topic": "editorial",
-      "mentions": 30,
-      "ratio": 4520.0,
+      "topic": "print",
+      "mentions": 32,
+      "ratio": 4821.3,
       "historical_avg": 0.0,
       "categories": [
-        "Political",
-        "Social",
-        "Legal",
-        "Economic"
+        "Legal"
       ]
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "friends",
-      "mentions": 28,
-      "ratio": 4218.7,
+      "mentions": 31,
+      "ratio": 4670.7,
       "historical_avg": 0.0,
       "categories": [
+        "Technological",
         "Political",
         "Social",
         "Environmental",
@@ -375,9 +377,23 @@
     {
       "type": "SURGE",
       "level": "high",
+      "topic": "editorial",
+      "mentions": 31,
+      "ratio": 4670.7,
+      "historical_avg": 0.0,
+      "categories": [
+        "Political",
+        "Social",
+        "Legal",
+        "Economic"
+      ]
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
       "topic": "save",
-      "mentions": 28,
-      "ratio": 4218.7,
+      "mentions": 30,
+      "ratio": 4520.0,
       "historical_avg": 0.0,
       "categories": [
         "Technological",
@@ -391,20 +407,9 @@
     {
       "type": "SURGE",
       "level": "high",
-      "topic": "print",
+      "topic": "biggest",
       "mentions": 28,
       "ratio": 4218.7,
-      "historical_avg": 0.0,
-      "categories": [
-        "Legal"
-      ]
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "biggest",
-      "mentions": 26,
-      "ratio": 3917.3,
       "historical_avg": 0.0,
       "categories": [
         "Technological",
@@ -418,8 +423,8 @@
       "type": "SURGE",
       "level": "high",
       "topic": "enough",
-      "mentions": 26,
-      "ratio": 3917.3,
+      "mentions": 28,
+      "ratio": 4218.7,
       "historical_avg": 0.0,
       "categories": [
         "Technological",
