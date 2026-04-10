@@ -1006,6 +1006,77 @@ let PESTLE_HISTORY = null;
 let PAPERS_TRANS = {};  // index -> {title_ja, summary_ja}
 let LANG = 'ja';
 
+// === IndexedDB stale-while-revalidate cache ===
+const IDB_NAME = 'fia-cache';
+const IDB_STORE = 'json-data';
+const IDB_VERSION = 1;
+const CACHE_MAX_AGE_MS = 5 * 60 * 1000; // 5 minutes
+
+let _idb = null;
+function openIDB() {
+  if (_idb) return Promise.resolve(_idb);
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open(IDB_NAME, IDB_VERSION);
+    req.onupgradeneeded = () => { req.result.createObjectStore(IDB_STORE); };
+    req.onsuccess = () => { _idb = req.result; resolve(_idb); };
+    req.onerror = () => { resolve(null); };
+  });
+}
+async function idbGet(key) {
+  try {
+    const db = await openIDB();
+    if (!db) return null;
+    return new Promise(resolve => {
+      const tx = db.transaction(IDB_STORE, 'readonly');
+      const req = tx.objectStore(IDB_STORE).get(key);
+      req.onsuccess = () => resolve(req.result || null);
+      req.onerror = () => resolve(null);
+    });
+  } catch { return null; }
+}
+async function idbSet(key, value) {
+  try {
+    const db = await openIDB();
+    if (!db) return;
+    const tx = db.transaction(IDB_STORE, 'readwrite');
+    tx.objectStore(IDB_STORE).put(value, key);
+  } catch {}
+}
+
+// Fetch JSON with stale-while-revalidate via IndexedDB
+async function fetchJSON(url) {
+  const key = url.replace(/\?.*$/, ''); // strip cache-bust query for IDB key
+  const cached = await idbGet(key);
+  const now = Date.now();
+
+  // Background revalidation helper
+  function revalidate() {
+    fetch(url).then(r => {
+      if (r.ok) return r.json();
+      throw new Error('fetch failed');
+    }).then(data => {
+      idbSet(key, { data, ts: Date.now() });
+    }).catch(() => {});
+  }
+
+  if (cached && cached.data != null) {
+    const age = now - (cached.ts || 0);
+    if (age < CACHE_MAX_AGE_MS) {
+      // Fresh cache — return immediately, no network request
+      return cached.data;
+    }
+    // Stale cache — return immediately, revalidate in background
+    revalidate();
+    return cached.data;
+  }
+
+  // No cache — must fetch from network
+  const resp = await fetch(url);
+  const data = await resp.json();
+  idbSet(key, { data, ts: Date.now() });
+  return data;
+}
+
 const I18N = {
   ja: {
     app_title: '未来洞察支援アプリ',
@@ -1386,8 +1457,7 @@ async function showPaper(idx) {
       <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
     </div>`);
     try {
-      const resp = await fetch('data/papers.json?v=' + Date.now());
-      PAPERS_FULL = await resp.json();
+      PAPERS_FULL = await fetchJSON('data/papers.json?v=' + Date.now());
     } catch (e) {
       openModal(localizedPaperTitle(p, idx), `<div style="padding:20px">
         <div class="modal-field"><div class="modal-label">${t('field')}</div><div class="modal-value">${esc(p.field)}</div></div>
@@ -1603,8 +1673,7 @@ function renderOverview() {
 async function ensurePestleHistoryLoaded() {
   if (_pestleHistoryLoaded) return;
   try {
-    const resp = await fetch('data/pestle_history.json?v=' + Date.now());
-    const full = await resp.json();
+    const full = await fetchJSON('data/pestle_history.json?v=' + Date.now());
     PESTLE_HISTORY = { ...PESTLE_HISTORY, ...full };
     _pestleHistoryLoaded = true;
   } catch (e) { console.warn('Failed to load history:', e); }
@@ -1890,8 +1959,7 @@ let semanticSearchRunning = false;
 async function loadSemanticEmbeddings() {
   if (semanticEmbeddings) return semanticEmbeddings;
   try {
-    const resp = await fetch('data/embeddings.json');
-    semanticEmbeddings = await resp.json();
+    semanticEmbeddings = await fetchJSON('data/embeddings.json');
     // Embeddings loaded successfully
     return semanticEmbeddings;
   } catch (e) {
@@ -3060,48 +3128,42 @@ async function loadData() {
   const v = Date.now();
 
   // Phase 1: Load lightweight data first (overview needs these)
-  const [newsResp, papersLightResp, aiResp, statsResp] = await Promise.allSettled([
-    fetch('data/latest.json?v=' + v),
-    fetch('data/papers_light.json?v=' + v),
-    fetch('data/ai_analysis.json?v=' + v),
-    fetch('data/papers_stats.json?v=' + v),
+  const [newsResult, papersLightResult, aiResult, statsResult] = await Promise.allSettled([
+    fetchJSON('data/latest.json?v=' + v),
+    fetchJSON('data/papers_light.json?v=' + v),
+    fetchJSON('data/ai_analysis.json?v=' + v),
+    fetchJSON('data/papers_stats.json?v=' + v),
   ]);
 
-  if (newsResp.status === 'fulfilled') {
-    NEWS_DATA = await newsResp.value.json();
+  if (newsResult.status === 'fulfilled' && newsResult.value) {
+    NEWS_DATA = newsResult.value;
     document.getElementById('lastUpdated').textContent = `${t('last_updated')}: ${NEWS_DATA.date}`;
   }
-  if (papersLightResp.status === 'fulfilled') {
-    PAPERS_DATA = await papersLightResp.value.json();
+  if (papersLightResult.status === 'fulfilled' && papersLightResult.value) {
+    PAPERS_DATA = papersLightResult.value;
   }
-  if (aiResp.status === 'fulfilled') {
-    AI_DATA = await aiResp.value.json();
+  if (aiResult.status === 'fulfilled' && aiResult.value) {
+    AI_DATA = aiResult.value;
   }
-  if (statsResp.status === 'fulfilled') {
-    PAPERS_STATS = await statsResp.value.json();
+  if (statsResult.status === 'fulfilled' && statsResult.value) {
+    PAPERS_STATS = statsResult.value;
   }
 
   // Phase 2: Load alerts, scenarios, and translations
   try {
-    const alertsResp = await fetch('data/alerts.json?v=' + v);
-    ALERTS_DATA = await alertsResp.json();
+    ALERTS_DATA = await fetchJSON('data/alerts.json?v=' + v);
   } catch (e) {}
   try {
-    const scResp = await fetch('data/scenarios.json?v=' + v);
-    if (scResp.ok) SCENARIOS_DATA = await scResp.json();
+    SCENARIOS_DATA = await fetchJSON('data/scenarios.json?v=' + v);
   } catch (e) {}
   try {
-    const trResp = await fetch('data/papers_translations.json?v=' + v);
-    if (trResp.ok) {
-      const trArr = await trResp.json();
-      trArr.forEach(tr => { if (tr && tr.index != null) PAPERS_TRANS[tr.index] = tr; });
-    }
+    const trArr = await fetchJSON('data/papers_translations.json?v=' + v);
+    if (trArr) trArr.forEach(tr => { if (tr && tr.index != null) PAPERS_TRANS[tr.index] = tr; });
   } catch (e) {}
 
   // Phase 3: Load pestle_index (13KB, for overview stats)
   try {
-    const idxResp = await fetch('data/pestle_index.json?v=' + v);
-    const idx = await idxResp.json();
+    const idx = await fetchJSON('data/pestle_index.json?v=' + v);
     // Store quarter count for stats
     if (!PESTLE_HISTORY) PESTLE_HISTORY = {};
     PESTLE_HISTORY._index = idx;
