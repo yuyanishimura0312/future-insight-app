@@ -834,6 +834,1449 @@
       "potential_impact": "medium",
       "time_horizon": "1-3年",
       "counter_trend": "キャンペーン資金の透明化と規制強化"
+    },
+    {
+      "signal": "AIの軍事・防衛転用に対する企業内良心的拒否",
+      "description": "AnthropicやOpenAIが独自の判断で軍事利用制限を設定し、政府命令に対抗する事例が増加。企業が国家安全保障政策より倫理的判断を優先する構造的転換が起きている。",
+      "related_headlines": [
+        "Anthropic Claims Its New A.I. Model, Mythos, Is a Cybersecurity 'Reckoning'",
+        "Can Anthropic's AI Claude be trusted in combat? | The Take",
+        "Federal Court Denies Anthropic's Motion to Lift 'Supply Chain Risk' Label"
+      ],
+      "pestle_categories": [
+        "技術",
+        "法律",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "技術企業が国防産業化する一般的な傾向に対抗する例外的動き。"
+    },
+    {
+      "signal": "量子コンピュータによるサイバーセキュリティ安全保障体制の前倒し危機化",
+      "description": "2030年以前に量子コンピュータが暗号化システムを破壊する可能性が学術界で広がっており、現在の防衛・金融インフラの急速な脆弱化が予見されている。",
+      "related_headlines": [
+        "Daily briefing: Quantum computers could crack cybersecurity systems before 2030",
+        "Scientists find quantum computers forget most of their work",
+        "UK navy foiled Russian submarines surveying undersea cables, defence minister says"
+      ],
+      "pestle_categories": [
+        "技術",
+        "政治",
+        "経済"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "既存の暗号化体制の長期的安定性を前提とした社会基盤構想。"
+    },
+    {
+      "signal": "超高温AI半導体による産業地政学的再編成",
+      "description": "1300°Fで動作するAIチップが登場し、従来の冷却基盤インフラへの依存が低下。サプライチェーンの地理的分散が加速し、台湾集約型の現状が解体される可能性。",
+      "related_headlines": [
+        "This new chip survives 1300°F (700°C) and could change AI forever",
+        "Taiwan Semiconductor Controls 72 % of the Global Chip Market , and the Stock Could Surge in 2026",
+        "CoreWeave Bet Powers 7.4% Gain at $66 Billion Ontario Pension Fund"
+      ],
+      "pestle_categories": [
+        "技術",
+        "経済",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "半導体の地理的集約化による供給網最適化という主流の工業政策。"
+    },
+    {
+      "signal": "生物学的発見の遺伝子編集化による不可逆的倫理的分岐",
+      "description": "脳老化タンパク質やALS・認知症の原因メカニズムが次々と特定され、医療現場での選別的介入が可能になりつつある。治療と優生学の区別が物理的に消滅していく過程が加速中。",
+      "related_headlines": [
+        "Scientists found a protein that drives brain aging — and how to stop it",
+        "Scientists discover hidden gut trigger behind ALS and dementia",
+        "Scientists discover reversible male birth control that stops sperm production"
+      ],
+      "pestle_categories": [
+        "技術",
+        "社会",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "医療倫理委員会による事後的規制という従来の法的枠組み。"
+    },
+    {
+      "signal": "民族主義政党による地方分権的権力奪取の連鎖的常態化",
+      "description": "スコットランド・ウェールズの民族主義政党勝利やハンガリー・ポーランドの非民主的統治が欧州全域で広がり、従来の中央集権国家システムの正統性が根底から問われている。",
+      "related_headlines": [
+        "'Seismic change': how election wins for nationalists in Celtic nations could reshape UK",
+        "JD Vance's claims about Orbán, the EU and Hungary fact-checked",
+        "米バンス副大統領 ハンガリーオルバン首相支持表明 選挙集会で"
+      ],
+      "pestle_categories": [
+        "政治",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "EUの統一的民主主義モデルによる周辺国の段階的統合という戦後的想定。"
+    },
+    {
+      "signal": "化石燃料への根本的依存を認める気候政策の転換開始",
+      "description": "IPCC議長や気候専門家が『世界は化石燃料依存から逃げられない』と公式見解を示し始め、脱炭素から適応・管理への実用主義的シフトが起きている。",
+      "related_headlines": [
+        "World held hostage by reliance on fossil fuels, Christiana Figueres warns – and climate health impacts are 'mother of all injustices'",
+        "The Iran War Is Revealing the Messy Middle of Our Renewable Energy Transition",
+        "UK opening new oil and gas fields would imperil global climate goals, experts say"
+      ],
+      "pestle_categories": [
+        "環境",
+        "経済",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "再生可能エネルギーへの完全転換が技術的・経済的に必然という気候運動の楽観主義。"
+    },
+    {
+      "signal": "大規模言語モデルのハッキング脆弱性への企業的隔離政策",
+      "description": "Anthropicが最新AI『Mythos』を公開しない判断を下し、高度なサイバー兵器化を恐れる企業が生成AI公開制限を選択。民主的AI利用とセキュリティ対立が先鋭化。",
+      "related_headlines": [
+        "Anthropic keeps latest AI tool out of public's hands for fear of enabling widespread hacking",
+        "Anthropic Claims Its New A.I. Model, Mythos, Is a Cybersecurity 'Reckoning'",
+        "Google DeepMind Falls Behind OpenAI in Latest Safety Review; All AI Companies Still Falling Short, Say Experts"
+      ],
+      "pestle_categories": [
+        "技術",
+        "法律",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "AIの民主的アクセスと透明性重視という開発企業の公式言説。"
+    },
+    {
+      "signal": "水インフラの気候適応から排他的防衛物語への転換",
+      "description": "オランダの『雨フェンス』など適応技術が、実は特定地域・階級の保護を優先する排他的計画へ変質。脱政治的技術主義が新たな差別構造を内在化している。",
+      "related_headlines": [
+        "'The danger and value of water are in my blood': how rain fences are making Dutch homes more climate resilient",
+        "How a lush Miami park was designed to keep flooding at bay – in pictures",
+        "Biodiversity resilience in a tropical rainforest"
+      ],
+      "pestle_categories": [
+        "環境",
+        "社会",
+        "政治"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "インクルーシブな気候適応が可能という国際的なSDGs合意。"
+    },
+    {
+      "signal": "生殖テクノロジーのジェンダー規範の反転と家族制度の加速度的解体",
+      "description": "可逆的男性避妊法の開発や出産技術の非医療化により、生物学的性別が制度的役割決定から剥離。結婚・相続・扶養といった家父長制的法制度の根拠が技術レベルで消滅。",
+      "related_headlines": [
+        "Scientists discover reversible male birth control that stops sperm production",
+        "The hidden tradeoff behind today's most popular weight loss drugs",
+        "Your vitamin D levels in midlife could shape your brain decades later"
+      ],
+      "pestle_categories": [
+        "技術",
+        "社会",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "5-10年",
+      "counter_trend": "生殖の自然性と社会制度的安定性が連結しているという保守的世界観。"
+    },
+    {
+      "signal": "オンショア採掘による環境保護区の商業化と先住民領土の法的剥奪の加速",
+      "description": "アルゼンチンが氷河採掘を承認、オーストラリアでレアアース鉱山が推進されており、先住民の『文化的領地』から『商品化可能な地政学的資源』への再定義が法制度化。",
+      "related_headlines": [
+        "Argentina approves Milei's glacier mining bill amid environmental protests",
+        "Radify's sci-fi plasma reactors could break China's dominance of rare-earth elements",
+        "Humans reached Australia 60,000 years ago, new DNA study reveals"
+      ],
+      "pestle_categories": [
+        "環境",
+        "経済",
+        "政治"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "1-3年",
+      "counter_trend": "先住民領地保護と資源主権の両立が可能という国連的な理想主義。"
+    },
+    {
+      "signal": "金融システムの地政学的サイバー脆弱性への未対応的楽観化",
+      "description": "イラン戦争時も金融市場は『回復弾力性』を示したとされているが、実は深海光ファイバーケーブル破壊やロシア潜水艦の威乱行為が増加。物理的インフラ攻撃への制度的防御が完全に欠落。",
+      "related_headlines": [
+        "UK navy foiled Russian submarines surveying undersea cables, defence minister says",
+        "Relief in financial markets after Iran ceasefire – but it is far from absolute | Richard Partington",
+        "When the World Stops Syncing"
+      ],
+      "pestle_categories": [
+        "技術",
+        "経済",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "金融市場の自動安定化メカニズムに基づく国際経済秩序の信頼。"
+    },
+    {
+      "signal": "医療デジタル化による医師の診断権力の国家的監視体制への従属化",
+      "description": "Medicare AIの実験導入やEFF訴訟など、医療判断がAI決定支援→国家データベース連結→個人行動監視へと段階的に統合。医療の個人的自律性と診断の法的責任が分離。",
+      "related_headlines": [
+        "EFF Sues for Answers About Medicare's AI Experiment",
+        "Meet LOIS: The AI That Will Change How You Practice Law",
+        "Patients harmed as Covid pandemic brought NHS close to collapse, inquiry finds"
+      ],
+      "pestle_categories": [
+        "技術",
+        "法律",
+        "社会"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "医療AIは医師の支援ツールに留まるという医療倫理の楽観的前提。"
+    },
+    {
+      "signal": "ハンガリーモデルの米国保守派による制度的正当化",
+      "description": "トランプ副大統領がオルバン首相を公開支持し、米国の保守派がハンガリーの非自由民主主義を政治的プロトタイプとして採用する動き。従来の民主主義規範に基づく同盟関係から、権力集中型の統治モデルへの転換を示唆する危険な先例となる。",
+      "related_headlines": [
+        "JD Vance's claims about Orbán, the EU and Hungary fact-checked",
+        "米バンス副大統領 ハンガリーオルバン首相支持表明 選挙集会で",
+        "Why Orban and Hungary are not one and the same"
+      ],
+      "pestle_categories": [
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "米国がNATO内で民主主義の価値観に基づく盟主国として機能するという戦後体制の前提"
+    },
+    {
+      "signal": "イラン停戦の脆弱性を前提とした経済・軍事計画の常態化",
+      "description": "イラン停戦が『もろい』と各国首脳に認識されながらも、市場と投資家がこの不安定性を『織り込み済み』として行動し始めている。地政学的リスクが金融商品化され、戦争状態の循環化が経済の自動調整メカニズムとして機能する異常な正常化。",
+      "related_headlines": [
+        "Starmer says talks with Gulf leaders have reinforced sense Iran war ceasefire is 'fragile'",
+        "Trump and the Middle East: can Starmer do anything? – podcast",
+        "Even as They Praise Iran Cease-Fire, World Leaders Are Whipsawed by Trump",
+        "Relief in financial markets after Iran ceasefire – but it is far from absolute"
+      ],
+      "pestle_categories": [
+        "経済",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "地政学的安定が経済成長の前提条件であるという伝統的経済学の想定"
+    },
+    {
+      "signal": "核保有国による国家統治権の単方面的再定義",
+      "description": "ミャンマー軍事政権がクーデター後の『選挙』を実施し、核に準ずる内部的権力を背景に国家主権の定義を一方的に変更。権力者が主権そのものを再定義する前例が核保有地域で増殖する傾向。",
+      "related_headlines": [
+        "Myanmar junta chief Min Aung Hlaing appointed president after 'sham' election",
+        "People of Burkina Faso should forget about democracy, says military ruler"
+      ],
+      "pestle_categories": [
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "国連と国際法が国家統治の正統性の唯一の裁定者であるという戦後体制の規範"
+    },
+    {
+      "signal": "先住民領土のグリーンテック採掘化による法的領有権の廃棄",
+      "description": "カナダとアルゼンチンにおいて、気候変動対応名目でのグリーン素材採掘が先住民領土を直接侵害。環境危機が先住民の法的保護を無効化する名分として機能する構造的反転。",
+      "related_headlines": [
+        "Argentina approves Milei's glacier mining bill amid environmental protests",
+        "Geothermal power is the key to cheaper energy in the Canadian Arctic"
+      ],
+      "pestle_categories": [
+        "環境",
+        "法律",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "先住民の領土的権利が国際法と各国憲法で保障されているという近年の法的進歩"
+    },
+    {
+      "signal": "NATO領域外での海底インフラ防衛のボーダーレス化",
+      "description": "英国海軍がホルムズ海峡外での露潜水艦活動を『NATO防衛ミッション』として拡大解釈。伝統的な同盟領域概念を超えて、海底通信線防衛が地球的な『内部脅威』と再定義される動き。",
+      "related_headlines": [
+        "UK navy foiled Russian submarines surveying undersea cables, defence minister says",
+        "Key Questions on the Role of Technology in the Expanding Middle East War"
+      ],
+      "pestle_categories": [
+        "政治",
+        "技術"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "NATO条約によって規定される明確な領土的防衛範囲の区分"
+    },
+    {
+      "signal": "ケルト民族主義による英国連邦的構造の段階的解体",
+      "description": "スコットランドとウェールズの民族主義政党による選挙勝利が『地殻変動的変化』と評価される傾向。中央集権国家の境界線が民族投票によって年単位で再引き直される危険性が常態化。",
+      "related_headlines": [
+        "'Seismic change': how election wins for nationalists in Celtic nations could reshape UK"
+      ],
+      "pestle_categories": [
+        "政治"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "英国が統一された主権国家として機能するという近代国民国家の基本前提"
+    },
+    {
+      "signal": "東アジア民主主義圏での『武器移転の原則自由化』の政策シフト",
+      "description": "日本政府が従来の防衛装備移転三原則を実質的に骨抜きにしつつ、『中道野党』からの慎重意見さえ政治的には押し切られ始めた。兵器製造国化への民主的制制が瓦解する局面。",
+      "related_headlines": [
+        "「武器」移転を原則可能とする案 政府が自民党の会合で示す",
+        "中道 立民 公明 「武器」海外移転の手続き厳格化を提言"
+      ],
+      "pestle_categories": [
+        "政治",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "日本の平和憲法と防衛装備移転に対する慎重な政策的制限"
+    },
+    {
+      "signal": "ホルムズ海峡通過権の地政学的武器化による商船保険システムの並行市場化",
+      "description": "イラン戦争による石油タンカー運送保険の高騰が、公式な国際保険市場と平行して『戦地向け非公開保険市場』の成長を促進。地政学的リスクが保険商品の二層構造化を固定化する動き。",
+      "related_headlines": [
+        "'Mental breakdown': oil tanker workers stuck in Gulf for six weeks are reaching their limit",
+        "How the Strait of Hormuz Stifled a Market Rally",
+        "Oil Trading Costs Surge as ICE Hikes Crude, Diesel Margins"
+      ],
+      "pestle_categories": [
+        "経済",
+        "政治"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "1-3年",
+      "counter_trend": "国際商業法と海洋自由通航原則に基づく統一された保険体制の維持"
+    },
+    {
+      "signal": "超国家的AI規制への市民異議の『自由意志選択化』への転換",
+      "description": "AI規制への市民反対が『個人の自由選択権』の名義で再定義され、規制そのものが民主的な民意侵害として逆転する修辞戦略が展開中。規制権力そのものの正統性が市場的個人主義によって解体される動き。",
+      "related_headlines": [
+        "Prominent Scientists, Faith Leaders, Policymakers and Artists Call for a Prohibition on Superintelligence, as Poll Shows Americans Don't Want It",
+        "Governor DeSantis Directs Florida State Agencies to Partner with Future of Life Institute to Shield Families from AI Harm"
+      ],
+      "pestle_categories": [
+        "技術",
+        "社会",
+        "政治"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "1-3年",
+      "counter_trend": "市民の安全利益がAI企業の商業的自由度を制限するべきという近年の規制主義"
+    },
+    {
+      "signal": "ルワンダ・エチオピア紛争の『中国的仲裁イデオロギー』への再収斂",
+      "description": "アフリカの地域紛争が欧米の『人権ベース』紛争解決と中国の『主権尊重ベース』仲裁イデオロギーの二分化に再構造化。紛争当事国が国際的な『仲裁イデオロギー』を戦術的に選別する局面への進化。",
+      "related_headlines": [
+        "The Misalignment Between Chinese and African Peacemaking: The Case of Ethiopia's Tigray Crisis"
+      ],
+      "pestle_categories": [
+        "政治",
+        "法律"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "国際人権法と国連安保理が紛争解決の中立的仲裁者として機能するという国際秩序の仮定"
+    },
+    {
+      "signal": "ペルー政治の『記録的な大統領候補数』による選挙制度自体の形骸化",
+      "description": "ペルーの大統領選挙が異常多数の候補者による『選挙の過飽和化』に陥り、制度的な権力移行メカニズムが機能不全化。選挙民主主義の量的拡大が選挙自体の決定性を喪失させる逆説。",
+      "related_headlines": [
+        "A record-breaking field: What to expect from Peru's presidential election"
+      ],
+      "pestle_categories": [
+        "政治"
+      ],
+      "potential_impact": "low",
+      "time_horizon": "1-3年",
+      "counter_trend": "選挙制度が複数の候補者を適切に評価し、有効な権力移行を実現するという民主主義制度設計の前提"
+    },
+    {
+      "signal": "グリーンランド領土主権の『NATOのエネルギー戦略的再編成』による潜在的再定義",
+      "description": "トランプのグリーンランド購買提案に対してグリーンランド政府が『主権的アイデンティティ』で反発する一方で、NATO統合とエネルギー地政学により、形式的主権と実質的支配が乖離する局面が進行中。非併合的な『戦略的領土化』の前例が生成される危険。",
+      "related_headlines": [
+        "Greenland hits back at Trump amid Nato tensions: 'we're not ‌some piece of ‌ice'"
+      ],
+      "pestle_categories": [
+        "政治"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "国家の領土主権が形式的国際法によって絶対的に保護されているという20世紀国家体系の規範"
+    },
+    {
+      "signal": "多国籍銀行の地政学的リスク管理の空洞化",
+      "description": "イラン紛争による原油価格変動がアジア新興市場に非対称的ショックを与える中、銀行システムが従来の地政学的リスク評価モデルの有効性を喪失している。ナイジェリア、インドなど外貨準備枯渇地域での金融システム劣化が加速化。",
+      "related_headlines": [
+        "Nigeria's Dollar Reserves Dwindle as Central Bank Defends Naira",
+        "India's high-growth economy gets a Middle East oil shock",
+        "Banxico's Dissenters Warn About Price Pressures Due to Iran War"
+      ],
+      "pestle_categories": [
+        "経済",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "グローバル金融市場の相互依存による相互安定化の神話"
+    },
+    {
+      "signal": "国家主権の『単方面的経済委譲』メカニズムの制度化",
+      "description": "カナダの米国への経済的従属化（マーク・カーニー政権）、アルゼンチンのミレイによる『新自由主義統治』、ハンガリー・オルバンの米国保守派による制度的正当化が示す。国家主権が経済合理性の名目で多国籍資本への直接統治に段階的に移譲される仕組み。",
+      "related_headlines": [
+        "Canada's Mark Carney Poised to Secure Liberal Party Majority After Gladu's Defection",
+        "Argentina approves Milei's glacier mining bill amid environmental protests",
+        "JD Vance's claims about Orbán, the EU and Hungary fact-checked"
+      ],
+      "pestle_categories": [
+        "経済",
+        "政治",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "民族国家による市場規制と社会的保護の継続"
+    },
+    {
+      "signal": "石油企業による『商船保険並行市場』の影の構築",
+      "description": "ホルムズ海峡通過権の地政学的武器化により、従来の国際保険システムが機能不全化。石油関連企業とプライベート・セキュリティ業者が保険機能を独占化する『影の金融構造』が急速に形成されている。",
+      "related_headlines": [
+        "How the Strait of Hormuz Stifled a Market Rally",
+        "Oil Trading Costs Surge as ICE Hikes Crude, Diesel Margins",
+        "A Post-American Persian Gulf?"
+      ],
+      "pestle_categories": [
+        "経済",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "国際海運と保険の国家中立的規制枠組み"
+    },
+    {
+      "signal": "知的財産法による『読むことの違法化』の段階的進行",
+      "description": "AI訓練データ著作権問題、開示法違反訴訟の連鎖的判例により、デジタル環境での『解釈的行為』そのものが法的リスク化。市民のテキスト読解・データアクセス権が企業知的財産権により段階的に制限される。",
+      "related_headlines": [
+        "Another Court Rules Copyright Can't Stop People From Reading and Speaking the Law",
+        "EFF Launches New Fight to Free the Law",
+        "Supreme Court Agrees With EFF: ISPs Don't Have To Be Copyright Enforcers"
+      ],
+      "pestle_categories": [
+        "法律",
+        "技術",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "情報の自由な流通と公知化による民主的認識"
+    },
+    {
+      "signal": "北大西洋圏での『エネルギー主権再定義』による領土紛争の潜在化",
+      "description": "グリーンランド、カナダ北極圏でのエネルギー採掘競争がNATO戦略と連動化。米国のエネルギー『国内回帰』戦略が従来の北米境界線を再定義する圧力として機能し始めている。",
+      "related_headlines": [
+        "Greenland hits back at Trump amid Nato tensions: 'we're not ‌some piece of ‌ice'",
+        "Geothermal power is the key to cheaper energy in the Canadian Arctic",
+        "The Guardian cites Thomas Homer-Dixon as fears resurface of U.S. coercion against Canada"
+      ],
+      "pestle_categories": [
+        "政治",
+        "経済",
+        "技術"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "北米統合と境界線の法的固定化"
+    },
+    {
+      "signal": "労働プロセスのAI即時監視への『同意なき段階的転換』",
+      "description": "AI開発への個人情報保護法改正により、従業員の動作データが『学習データ』として合法化される方向が加速。労働者個人が自身の労働パターンに対する統制権を失い、企業AIが労働規律を自動的に実行する体制が制度化。",
+      "related_headlines": [
+        "政府 AI開発促進に向け 個人情報保護法改正案 閣議決定",
+        "医療デジタル化による医師の診断権力の国家的監視体制への従属化",
+        "The Impact of AI in Education: Navigating the Imminent Future"
+      ],
+      "pestle_categories": [
+        "技術",
+        "経済",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "労働者の労働過程統制権と プライバシー保護"
+    },
+    {
+      "signal": "『武器移転の原則自由化』による東アジア軍事産業の民族資本化",
+      "description": "日本の防衛装備移転制度の急速な緩和が、台湾・韓国での武器製造能力の独立化を加速。従来の米国による東アジア軍事支配構造が『多国籍武器調達ネットワーク』へと分散化し、地域防衛産業の自己強化ループが形成される。",
+      "related_headlines": [
+        "「武器」移転を原則可能とする案 政府が自民党の会合で示す",
+        "中道 立民 公明 「武器」海外移転の手続き厳格化を提言",
+        "Taiwan Semiconductor Controls 72 % of the Global Chip Market , and the Stock Could Surge in 2026"
+      ],
+      "pestle_categories": [
+        "政治",
+        "経済",
+        "技術"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "米国単極体制による東アジア軍事依存"
+    },
+    {
+      "signal": "『タックス・フロー詐欺』による国家税収システムの形式的無効化",
+      "description": "関税制度の急速な導入拡大により、企業が『二重簿記』による租税回避を組織的に実行。国家財政システムが形式的に機能しながらも、実質的な税収基盤が侵蝕される『影の税制』が並行化。",
+      "related_headlines": [
+        "'Definitely a Sham': As Tariffs Climb, Trade Fraud and Accounting Tricks Proliferate",
+        "Trump's tariff threat on European cars escalates global trade tensions",
+        "Who Is Funding the 2026 Midterm Elections? A Lot of the Money Is Untraceable."
+      ],
+      "pestle_categories": [
+        "経済",
+        "法律",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "国家徴税権の普遍的行使と企業の税法遵守"
+    },
+    {
+      "signal": "デジタル移民政策による『プログラム的人間選別』の制度化",
+      "description": "米国の移民判事廃止による自動デジタル判定システムの導入が示す。難民・移民の法的地位が機械学習アルゴリズムにより決定され、上訴可能性が段階的に剥奪される『行政的テクノロジー統治』が拡大。",
+      "related_headlines": [
+        "How Trump Purged Immigration Judges to Speed Up Deportations",
+        "A day in the life of a 19-year-old in ICE detention: 'I feel that this nightmare is not going to end'",
+        "Venezuelan Cops Block March as Pay Pledge Fails to Calm Workers"
+      ],
+      "pestle_categories": [
+        "技術",
+        "法律",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "個人の法的主体性と行政的透明性による人権保障"
+    },
+    {
+      "signal": "『再任不可能性』による官僚機構の短期主義への強制転換",
+      "description": "ハンガリー・ポーランド・中国での司法・官僚の任期制限化により、公務員が長期的政策立案責任から解放される。組織的記憶喪失と短期的成果主義が制度化され、国家機構の戦略的能力が段階的に劣化。",
+      "related_headlines": [
+        "Why Orban and Hungary are not one and the same",
+        "Myanmar junta chief Min Aung Hlaing appointed president after 'sham' election",
+        "People of Burkina Faso should forget about democracy, says military ruler"
+      ],
+      "pestle_categories": [
+        "政治",
+        "法律"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "5-10年",
+      "counter_trend": "官僚制の職業性と長期的制度的安定性"
+    },
+    {
+      "signal": "『プール化された医療データ』による個人診断の統計的均質化",
+      "description": "NHS、米国医療系によるAI医療実験が医師の個別診断判断を『集団統計モデル』に従属化。個人の医学的異質性が『外れ値』として排除され、医療標準化により治療の個別性が喪失。",
+      "related_headlines": [
+        "EFF Sues for Answers About Medicare's AI Experiment",
+        "Patients harmed as Covid pandemic brought NHS close to collapse, inquiry finds",
+        "Fears of two-tier health system as more turn to private care, says watchdog"
+      ],
+      "pestle_categories": [
+        "技術",
+        "社会",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "医師の臨床的専門知識と個別的医療判断"
+    },
+    {
+      "signal": "『国家的気候適応投資』による先住民領土の商業化の法的正当化",
+      "description": "クリーン・エネルギー投資名目での採掘・水利権取得がアルゼンチン、オーストラリアで加速。環境保護区の『適応インフラ化』により先住民の歴史的領土権が『国家気候戦略』の優越性により法的に無効化される仕組み。",
+      "related_headlines": [
+        "Argentina approves Milei's glacier mining bill amid environmental protests",
+        "UK opening new oil and gas fields would imperil global climate goals, experts say",
+        "Young tropical forests help to reverse biodiversity losses"
+      ],
+      "pestle_categories": [
+        "環境",
+        "法律",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "先住民領土主権と生態系保護による気候適応"
+    },
+    {
+      "signal": "公共価値の担い手としての企業責任の制度化",
+      "description": "企業が純粋な利益追求ではなく「三方よし」（顧客・企業・社会）の公共的価値を追求すべきという価値観が、政策立案者や経営層で広がりつつある。これは株主資本主義の根本的な転換を示唆する動きである。",
+      "related_headlines": [
+        "「企業も公共的価値の担い手、『三方よし』追求を」 元国土交通事務次官・栗田氏",
+        "\"This is What it Means to be Pro-Human\" Declares Broad Coalition of Conservative, Progressive, and Civil Society Groups in Statement of Shared Principles on AI",
+        "'Yes, we can': a blueprint for a clean economy and healthy society"
+      ],
+      "pestle_categories": [
+        "社会",
+        "経済",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "新自由主義的な企業利益最大化モデルが過去40年の主流であったことに対する反動"
+    },
+    {
+      "signal": "地方主権的な権力分散への制度的抵抗の可視化",
+      "description": "中央政府の議員定数削減や予算統制に対して、野党や地方勢力から予期しない『慎重意見』が提示されている。これは地方分権と中央統制の間で、権力の重心が流動化していることを示している。",
+      "related_headlines": [
+        "議員定数削減 野党側からは慎重意見も 全会派協議会で議論へ",
+        "国民 玉木代表 \"来春の統一地方選などで地方議員倍増目指す\"",
+        "\"Seismic change\": how election wins for nationalists in Celtic nations could reshape UK"
+      ],
+      "pestle_categories": [
+        "政治",
+        "社会"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "効率化を名目とした権力の中央集約化傾向に対する地方的抵抗の顕在化"
+    },
+    {
+      "signal": "『武器の自由移転化』における東アジア非国家アクターの参入",
+      "description": "武器移転の手続き厳格化を求める声がある一方で、中道・立民・公明による『原則可能化』の方針転換が示唆している。これは防衛産業の民間企業化と、武器トレーサビリティの形式化を意味する。",
+      "related_headlines": [
+        "「武器」移転を原則可能とする案 政府が自民党の会合で示す",
+        "中道 立民 公明 「武器」海外移転の手続き厳格化を提言",
+        "A Maker of Pet Toys in Ukraine Turns to Killer Drones"
+      ],
+      "pestle_categories": [
+        "政治",
+        "経済",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "武器輸出三原則の厳格な遵守という戦後日本外交の基本原則に対する急速な転換"
+    },
+    {
+      "signal": "『公務員即時退職』による公共セクターの短期主義化の制度化",
+      "description": "51歳での退職が『スーパー公務員』によって追求される新しい生き方とされ、公務員キャリアの長期的コミットメントが脱価値化しつつある。これは公共機関の長期的責任体制を蝕む可能性を示唆する。",
+      "related_headlines": [
+        "\"スーパー公務員\"過疎の町再生も\"51歳退職\"の訳",
+        "Pupils back to school in holidays to deal with fallout from cyber attack",
+        "UN80 Initiative enters 'delivery phase', as Member States review progress on key work areas"
+      ],
+      "pestle_categories": [
+        "社会",
+        "政治"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "公務員の定年勤続と継続的な組織知識蓄積を前提とした公共セクター統治モデル"
+    },
+    {
+      "signal": "アフリカでの『反LGBTQ+法』の急速な法制化と国際的な沈黙",
+      "description": "アフリカ各地で反LGBTQ+法が増加する一方で、欧米の人権外交が実質的に無力化している。これはジェンダー・セクシュアリティに関する国際規範の地政学的な分断を示唆する。",
+      "related_headlines": [
+        "What's behind the worrying rise in anti-LGBTQ+ laws across Africa?",
+        "EFF's Submission to the UN OHCHR on Protection of Human Rights Defenders in the Digital Age",
+        "Conversion therapy and professional speech"
+      ],
+      "pestle_categories": [
+        "社会",
+        "政治",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "1990年代以降の国際人権レジームによるセクシュアル・マイノリティ保護の『普遍化』という仮説の崩壊"
+    },
+    {
+      "signal": "生殖テクノロジーによる『生物学的性別』の規範外的多様化",
+      "description": "男性向け可逆的避妊技術の開発が進むと同時に、『母と子』メンタルヘルス単位の多元化が議論されている。これは家族単位や生殖規範が、テクノロジーによって制度的に分解されていることを示す。",
+      "related_headlines": [
+        "Scientists discover reversible male birth control that stops sperm production",
+        "I spent five months in a mother and baby mental health unit - here's what I want mums to know",
+        "Transformational space: group psychotherapy with young people experiencing gender-related distress"
+      ],
+      "pestle_categories": [
+        "技術",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "5-10年",
+      "counter_trend": "核家族と生物学的性別二元論に基づいた家族制度のモデルの段階的な無効化"
+    },
+    {
+      "signal": "ケルト民族主義による『UK連邦』の部分的主権化",
+      "description": "スコットランド・ウェールズの民族主義政党の選挙勝利が『地震的変化』と報じられ、英国の構成単位が個別的な政治主体性を獲得しつつある。これは帝国的統一国家から緩やかな同盟体制への転換を示唆する。",
+      "related_headlines": [
+        "\"Seismic change\": how election wins for nationalists in Celtic nations could reshape UK",
+        "Why Orban and Hungary are not one and the same",
+        "Nationalism in a post-conflict consociational society: A membership survey of the Social Democratic and Labour Party in Northern Ireland"
+      ],
+      "pestle_categories": [
+        "政治",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "ウェストミンスター中心の英国統一国家のアイデンティティ維持というモデル"
+    },
+    {
+      "signal": "『ハンガリーモデル』の米国保守派による実験的制度移植",
+      "description": "JD・ヴァンス副大統領がオルバン首相を支持表明し、『民族主義的民主主義』が米国の保守派に実践的なモデルとして機能しつつある。これは民主主義の『様式多元化』と権威主義的アクセスの合理化を示唆する。",
+      "related_headlines": [
+        "米バンス副大統領 ハンガリーオルバン首相支持表明 選挙集会で",
+        "JD Vance's claims about Orbán, the EU and Hungary fact-checked",
+        "The Trump trap: Why Meloni's referendum defeat is a warning for Europe"
+      ],
+      "pestle_categories": [
+        "政治",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "自由民主主義の単一モデルとしてのリベラル・デモクラシーの『外交的規範化』"
+    },
+    {
+      "signal": "医療データの『プール化』による個人診断権の統計的解体",
+      "description": "7000人以上の大規模追跡調査やAI解析による個人診断が進む一方で、個人の医学的記録は統計的集合体に還元されつつある。これは医師の診断的自律性と個人のケア経験の脱個別化を示唆する。",
+      "related_headlines": [
+        "[ITmedia News] \"退職\"は脳に良い？──引退が認知機能に与える影響をAIで解析　慶應大などが7000人以上を調査",
+        "A Human Pan-Disease Whole Blood Transcriptomics Atlas Reveals Systemic Signatures Across Diseases",
+        "EFF Sues for Answers About Medicare's AI Experiment"
+      ],
+      "pestle_categories": [
+        "技術",
+        "社会",
+        "法律"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "医師と患者の二者的関係に基づいた個人医療のヒューマニズム的モデル"
+    },
+    {
+      "signal": "『海底インフラ防衛』の NATO領域外への漸進的拡張",
+      "description": "英国がロシア潜水艦による海底ケーブル調査を阻止したことが『国防』として正当化されている。これはNATO圏を超えた海洋領域支配が、従来のボーダーレスなインターネット世界観と衝突していることを示す。",
+      "related_headlines": [
+        "UK navy foiled Russian submarines surveying undersea cables, defence minister says",
+        "Key Questions on the Role of Technology in the Expanding Middle East War",
+        "Beijing hold'em: European cards against Chinese coercion"
+      ],
+      "pestle_categories": [
+        "技術",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "ボーダーレスで自由なグローバル・インターネット・アーキテクチャという1990年代的イデオロギー"
+    },
+    {
+      "signal": "環境規制回避の『民族主義的緊急事態』化",
+      "description": "アルゼンチンがミレイ大統領の氷河採掘案を承認し、環境保護区破壊が『経済主権』の名目で正当化されている。これは気候適応への国家的投資と先住民領土破壊の間で、法的正当性が『緊急事態』へ転換していることを示す。",
+      "related_headlines": [
+        "Argentina approves Milei's glacier mining bill amid environmental protests",
+        "'Net zero' isn't madness: the staggering economic costs of climate change",
+        "Radify's sci-fi plasma reactors could break China's dominance of rare-earth elements"
+      ],
+      "pestle_categories": [
+        "環境",
+        "政治",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "環境保護と先住民権を基本的人権として位置づけた国際規範体制"
+    },
+    {
+      "signal": "『カフェイン・ポーチ』世代による既存健康指針の若年層による脱従属化",
+      "description": "10代がニコチン・カフェイン製品を医療規制の外で消費する現象が注視されている。これは公衆衛生専門家の『警告』に対する若年層の制度的無視を示唆し、医療的権威の世代的崩壊を表す。",
+      "related_headlines": [
+        "The teenage caffeine pouch trend troubling US experts",
+        "Half of Gen Z Uses AI, but Their Feelings Are Souring, Study Shows",
+        "What does Neet stand for and how many are there in the UK?"
+      ],
+      "pestle_categories": [
+        "社会",
+        "技術"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "公衆衛生規制が若年層の身体的選択を規定するという『パターナリズム的』な社会的前提"
+    },
+    {
+      "signal": "地熱エネルギーの北極圏での急速な商業化",
+      "description": "カナダ北極圏での地熱発電の推進がニュースとなっており、従来の再生可能エネルギー政策から極域資源開発への転換を示唆している。石油依存からの脱却を名目に、極限環境での採掘型エネルギー転換が正当化されつつある。",
+      "related_headlines": [
+        "Geothermal power is the key to cheaper energy in the Canadian Arctic"
+      ],
+      "pestle_categories": [
+        "環境",
+        "経済",
+        "技術"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "再生可能エネルギーは既存インフラを損なわない地域中立的な転換という認識"
+    },
+    {
+      "signal": "永久凍土融解による古代炭素の自発的大量放出",
+      "description": "北極圏の大規模な融解により数千年前の炭素が一気に大気中に放出される現象が観測されており、気候対策の根本的な無効化シナリオが現実化している。人為的排出削減の効果を相対化する閾値に接近中。",
+      "related_headlines": [
+        "A massive arctic thaw is unleashing carbon frozen for thousands of years"
+      ],
+      "pestle_categories": [
+        "環境",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "気候変動は人為的排出管理により制御可能という主流の気候科学的楽観論"
+    },
+    {
+      "signal": "化石燃料への根本的依存を明示的に認める気候リーダーシップの出現",
+      "description": "気候変動対策の国際的リーダーであったクリスティアナ・フィゲレス氏が、世界が化石燃料への『人質状態』にあることを公言。脱炭素の名目的修辞から構造的依存の認識へと言語転換が始まっている。",
+      "related_headlines": [
+        "World held hostage by reliance on fossil fuels, Christiana Figueres warns – and climate health impacts are 'mother of all injustices'"
+      ],
+      "pestle_categories": [
+        "環境",
+        "社会",
+        "政治"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "2050年カーボンニュートラル達成による化石燃料依存の段階的終焉という国際合意"
+    },
+    {
+      "signal": "PFAS化学物質除去技術の一方向的商業化と規制の非同期性",
+      "description": "永遠化学物質PFAS除去で98%の効率を達成する技術が登場する一方で、この物質の全面禁止規制は遅滞している。技術の先行が規制体制を追い抜き、環境リスク管理の国家的主権が民間技術に従属化。",
+      "related_headlines": [
+        "Breakthrough water filter removes 98% of toxic PFAS forever chemicals"
+      ],
+      "pestle_categories": [
+        "技術",
+        "法律",
+        "環境"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "環境規制による汚染物質の事前抑制という予防原則的アプローチ"
+    },
+    {
+      "signal": "野生生物間での組織的攻撃行動の激増と階級化の観測",
+      "description": "野生チンパンジーの『内戦的』な組織的攻撃が観測される事例が増加。生態系内での暴力の階層化・組織化が、人為的環境改変（食物連鎖の破壊）による動物行動の急激な変容を示唆している。",
+      "related_headlines": [
+        "Wild chimpanzees recorded waging 'civil war' with coordinated attacks between two groups"
+      ],
+      "pestle_categories": [
+        "環境",
+        "社会"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "5-10年",
+      "counter_trend": "野生動物の行動は環境適応的であり人間的道徳カテゴリーとは無縁という従来の生態学的立場"
+    },
+    {
+      "signal": "古代農業実験の意図しない『戦士型』穀物への進化の発見",
+      "description": "新石器時代の農民が無意識的に攻撃性を高めた小麦品種を選別していたことが判明。人類の初期農業が単なる生存適応ではなく、無自覚的に暴力的性質を持つ品種を常態化させていた。",
+      "related_headlines": [
+        "Ancient farmers accidentally created aggressive 'warrior' wheat"
+      ],
+      "pestle_categories": [
+        "技術",
+        "環境",
+        "社会"
+      ],
+      "potential_impact": "low",
+      "time_horizon": "10年以上",
+      "counter_trend": "農業の歴史を平和的な生存戦略の進化として解釈する既存の農業史的叙述"
+    },
+    {
+      "signal": "ダッチスタイル雨水管理による『防御的都市適応』の美化と商品化",
+      "description": "気候レジリエンス政策が『美しい都市デザイン』として消費文化に吸収される現象。環境適応が高級住宅ブランド化され、低所得層の気候脆弱性は社会的可視性から消滅。",
+      "related_headlines": [
+        "'The danger and value of water are in my blood': how rain fences are making Dutch homes more climate resilient",
+        "How a lush Miami park was designed to keep flooding at bay – in pictures"
+      ],
+      "pestle_categories": [
+        "環境",
+        "社会",
+        "経済"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "気候適応は公共財として全市民に普遍的に実装されるべきという都市計画的理想"
+    },
+    {
+      "signal": "若い熱帯林による生物多様性回復の『奇跡的』な再発見",
+      "description": "二次成長熱帯林が予想外に生物多様性損失を逆転させている事実が注目されている。大規模再造林ではなく『放置による自然回復』という政策的怠惰が環境改善をもたらす逆説的現象。",
+      "related_headlines": [
+        "Young tropical forests help to reverse biodiversity losses"
+      ],
+      "pestle_categories": [
+        "環境",
+        "社会"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "5-10年",
+      "counter_trend": "環境修復は高度な技術的管理と資本投下によってのみ可能という主流の環保産業的思想"
+    },
+    {
+      "signal": "イラン戦争による『再生可能エネルギー移行の幻想性』の露呈",
+      "description": "イラン紛争が原油価格と供給不安を急騰させ、『クリーンエネルギー転換は地政学的に不可避』という言説が反駁される。エネルギー転換の実現可能性が政治的暴力に完全に従属していることが明白化。",
+      "related_headlines": [
+        "The Iran War Is Revealing the Messy Middle of Our Renewable Energy Transition",
+        "The Iran war is a warning: Britain must build resilience – at home and with our allies in Europe | Keir Starmer"
+      ],
+      "pestle_categories": [
+        "環境",
+        "政治",
+        "経済"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "技術進歩と政策的决定により化石燃料からの独立が10-20年以内に達成可能という再生可能エネルギー産業の主張"
+    },
+    {
+      "signal": "希土類採掘技術の『プラズマ革命』による先住民領土の新たな商業化圧力",
+      "description": "中国に依存していた希土類採掘が『プラズマ技術』により他国で可能になる見通しが提示されている。環境技術の進歩が逆説的に先住民領土への採掘権の新たな主張を正当化する。",
+      "related_headlines": [
+        "Radify's sci-fi plasma reactors could break China's dominance of rare-earth elements"
+      ],
+      "pestle_categories": [
+        "技術",
+        "環境",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "5-10年",
+      "counter_trend": "グローバル・サプライチェーン多様化による先住民領土への採掘圧力の軽減"
+    },
+    {
+      "signal": "医療用GLP-1薬剤の『隠蔽された栄養不足トレードオフ』の発覚",
+      "description": "急速に普及する痩身薬の背後にある栄養学的コストが認識され始めている。体重減少という単一の指標成功が、長期的な栄養学的害悪を不可視化している医療モデルの限界が露呈。",
+      "related_headlines": [
+        "The hidden tradeoff behind today's most popular weight loss drugs"
+      ],
+      "pestle_categories": [
+        "社会",
+        "技術",
+        "健康"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "医学的介入が単一的かつ計測可能な健康指標の改善を通じて正当化されるという生物医学パラダイム"
+    },
+    {
+      "signal": "アルゼンチン氷河採掘の『国家的主権再定義』による環境法の形骸化",
+      "description": "ミレイ政権がGDP成長を名目に環境保護地域での採掘を承認。国家の経済的主権宣言が国際的環境規範と国内法を一方的に無効化する先例が確立。",
+      "related_headlines": [
+        "Argentina approves Milei's glacier mining bill amid environmental protests"
+      ],
+      "pestle_categories": [
+        "法律",
+        "環境",
+        "政治"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "先住民権と環境保護が国家主権に優先する国際法的標準化の進展"
+    },
+    {
+      "signal": "民主主義制度外での『実験的統治モデル』の国際的正当化",
+      "description": "ハンガリー、ビルマ、ブルキナファソなど複数国で、民主的プロセスを迂回した統治形態が国際的に異議を唱えられずに進行している。これは民主主義の『形式的廃止』ではなく『段階的な空洞化』を示す重要な兆し。",
+      "related_headlines": [
+        "People of Burkina Faso should forget about democracy, says military ruler",
+        "Myanmar junta chief Min Aung Hlaing appointed president after 'sham' election",
+        "Why Orban and Hungary are not one and the same",
+        "米バンス副大統領 ハンガリーオルバン首相支持表明 選挙集会で"
+      ],
+      "pestle_categories": [
+        "政治",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "冷戦終焉後の民主化の『不可逆性』という信仰"
+    },
+    {
+      "signal": "地政学的『フレーミル停戦モデル』による紛争の恒久的不安定化",
+      "description": "トランプ仲裁によるイラン停戦が2週間ごとに『期限延長の危機』として繰り返されることで、市場・軍事・外交が『恒久的な臨時状態』に置かれている。これは従来の『平和と戦争の二項対立』を無効化。",
+      "related_headlines": [
+        "Trump and the Middle East: can Starmer do anything? – podcast",
+        "Starmer says talks with Gulf leaders have reinforced sense Iran war ceasefire is 'fragile'",
+        "Trump Finds Himself With Fragile Iran Cease-Fire After the Scramble to Make a Deal",
+        "For Trump, Resuming Combat in Iran Would Be Risky, Even if Cease-Fire Expires"
+      ],
+      "pestle_categories": [
+        "政治",
+        "経済"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "国際仲裁による『永続的な平和構築』という20世紀的期待"
+    },
+    {
+      "signal": "科学的・宗教的指導者による『超知能禁止』の市民要求の拡大",
+      "description": "保守派・進歩派・宗教指導者が異例の連携で超知能AIの禁止を求める一方で、アメリカ市民の大多数がこれに反対。既存の『専門家主導のAI規制』が市民多数派から離別。",
+      "related_headlines": [
+        "Prominent Scientists, Faith Leaders, Policymakers and Artists Call for a Prohibition on Superintelligence, as Poll Shows Americans Don't Want It",
+        "\"This is What it Means to be Pro-Human\" Declares Broad Coalition of Conservative, Progressive, and Civil Society Groups in Statement of Shared Principles on AI",
+        "Governor DeSantis Directs Florida State Agencies to Partner with Future of Life Institute to Shield Families from AI Harm"
+      ],
+      "pestle_categories": [
+        "技術",
+        "社会",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "専門家合意による『上からの』AI規制制度の有効性"
+    },
+    {
+      "signal": "多国籍銀行による『地政学的リスク有効化』の意図的無視",
+      "description": "イラン停戦の脆弱性、ホルムズ海峡通過権の不安定化、海底インフラの防衛不可能性が明白な中で、金融機関が『楽観的なポートフォリオ再編成』を継続。認識と行動の根本的な乖離。",
+      "related_headlines": [
+        "Relief in financial markets after Iran ceasefire – but it is far from absolute",
+        "Markets Have Faced a Year of Chaos and Still Done Awfully Well",
+        "Even as They Praise Iran Cease-Fire, World Leaders Are Whipsawed by Trump",
+        "Stocks Rebound on Hopes Ceasefire Deal Will Hold: Markets Wrap"
+      ],
+      "pestle_categories": [
+        "経済",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "金融市場による『系統的リスク管理』の有効性"
+    },
+    {
+      "signal": "『国家統治権の単方向経済委譲』の制度的固定化",
+      "description": "カナダのマーク・カーニー、ポーランドなど複数国で、政治家ではなく『経済技術官僚』が国家統治の中核に据えられる傾向。民主的正統性から『経済効率性』への権力シフト。",
+      "related_headlines": [
+        "Canada's Mark Carney Poised to Secure Liberal Party Majority After Gladu's Defection",
+        "Top story - Changes in the European Commission 2023 - Hoekstra, Ivanova backed for commissioners"
+      ],
+      "pestle_categories": [
+        "政治",
+        "経済"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "民主主義の『広範な市民参加』という規範的理想"
+    },
+    {
+      "signal": "労働市場の『プログラム的人間選別』への技術的転換",
+      "description": "AIによる採用・昇進・適性判定が『ブラックボックス化』される一方で、移民政策・出入国管理も同じアルゴリズム体系に統合。人間評価が『統計的確率』で決定される体制化。",
+      "related_headlines": [
+        "How Trump Purged Immigration Judges to Speed Up Deportations",
+        "White House Knew About Pakistan's Cease-Fire Post on X Before It Was Sent",
+        "A day in the life of a 19-year-old in ICE detention: 'I feel that this nightmare is not going to end'",
+        "Collide Capital raises $95M fund to back fintech, future-of-work startups"
+      ],
+      "pestle_categories": [
+        "技術",
+        "社会",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "人事評価における『主観的判断』と『人的再検討』の必要性"
+    },
+    {
+      "signal": "グローバルサプライチェーンの『地域戦争時間化』への容認",
+      "description": "イラン戦争によるホルムズ海峡通過権の不安定化が『前提条件』として企業計画に組み込まれ始めている。戦争と平和が『ビジネスリスク係数』として統一される無意識的な転換。",
+      "related_headlines": [
+        "Can global supply chains recover from the Iran war?",
+        "How the Iran War Will Upend the Global Economy",
+        "How the Strait of Hormuz Stifled a Market Rally",
+        "India's high-growth economy gets a Middle East oil shock"
+      ],
+      "pestle_categories": [
+        "経済",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "グローバル化による『平和の配当』と『安定したサプライチェーン』の期待"
+    },
+    {
+      "signal": "北大西洋圏での『エネルギー主権再定義』による領土紛争の潜在化",
+      "description": "グリーンランド（トランプ領有要求）、カナダ北極圏（地熱開発）での資源争奪が『NATO領域の内部矛盾』として顕在化。同盟内での領土的主権競争の復活。",
+      "related_headlines": [
+        "Greenland hits back at Trump amid Nato tensions: 'we're not ‌some piece of ‌ice'",
+        "Geothermal power is the key to cheaper energy in the Canadian Arctic",
+        "The Guardian cites Thomas Homer-Dixon as fears resurface of U.S. coercion against Canada"
+      ],
+      "pestle_categories": [
+        "政治",
+        "環境",
+        "経済"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "NATO同盟内での『利益の均等配分』と『領土紛争の終焉』"
+    },
+    {
+      "signal": "『反LGBTQ+法』の『言語規制化』による国家的正統性の獲得",
+      "description": "アフリカでの反LGBTQ+法制化が『伝統的主権』『文化的独立』という修辞で国際的に正当化される傾向。単なる差別ではなく『国家的アイデンティティ防衛』として再フレーミング。",
+      "related_headlines": [
+        "What's behind the worrying rise in anti-LGBTQ+ laws across Africa?",
+        "Conversion therapy and professional speech"
+      ],
+      "pestle_categories": [
+        "政治",
+        "社会",
+        "法律"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "人権の『普遍的価値』による各国規制への国際的圧力"
+    },
+    {
+      "signal": "医療データの『プール化』による個人診断権の統計的解体",
+      "description": "NHS AIによる診断実験から、個人の医療データが『集団統計』に溶解され、医師の個別判断権が『根拠無き偏見』と見なされる傾向。医学的専門性から『データ算出』への権力転移。",
+      "related_headlines": [
+        "EFF Sues for Answers About Medicare's AI Experiment",
+        "Patients harmed as Covid pandemic brought NHS close to collapse, inquiry finds",
+        "Fears of two-tier health system as more turn to private care, says watchdog"
+      ],
+      "pestle_categories": [
+        "技術",
+        "社会",
+        "法律"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "医師による『個別的で文脈的な』臨床判断の独立性"
+    },
+    {
+      "signal": "『海底インフラ防衛』の NATO領域外への『黙認的拡張』",
+      "description": "ロシア潜水艦による海底ケーブル調査に対してUK海軍が『主権領域外』で防衛行動を実施。国家主権の『物理的インフラ保護』への拡張がNATO公式外で常態化。",
+      "related_headlines": [
+        "UK navy foiled Russian submarines surveying undersea cables, defence minister says",
+        "Key Questions on the Role of Technology in the Expanding Middle East War",
+        "The Gulf on the front line: The end of strategic hedging and new space for Europeans"
+      ],
+      "pestle_categories": [
+        "政治",
+        "技術"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "1-3年",
+      "counter_trend": "国際法による『領海と公海の明確な区別』"
+    },
+    {
+      "signal": "『環境規制回避』の『民族主義的緊急事態』化による法的無効化",
+      "description": "アルゼンチン氷河採掘の『国家主権再定義』、ブラジル環境省の形骸化など、環境規制が『国民経済的優先度』で段階的に無効化される戦略的パターン化。",
+      "related_headlines": [
+        "Argentina approves Milei's glacier mining bill amid environmental protests",
+        "UK opening new oil and gas fields would imperil global climate goals, experts say"
+      ],
+      "pestle_categories": [
+        "政治",
+        "環境",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "気候協約による『環境規制の国際的強化』"
+    },
+    {
+      "signal": "若年層による『既存健康指針の脱従属化』と『自発的リスク選択』の加速",
+      "description": "カフェイン・ポーチなど若年層が公式健康機構を迂回して『自己選択的な身体リスク』を取得。専門家的警告を『権威的押し付け』と見なす非従属的な身体政治の出現。",
+      "related_headlines": [
+        "The teenage caffeine pouch trend troubling US experts",
+        "Half of Gen Z Uses AI, but Their Feelings Are Souring, Study Shows"
+      ],
+      "pestle_categories": [
+        "社会",
+        "技術"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "1-3年",
+      "counter_trend": "公的保健機関による『上からの』予防医学的指導の有効性"
+    },
+    {
+      "signal": "『希土類採掘技術革命』による先住民領土の『新たな商業化圧力』の加速",
+      "description": "プラズマ反応炉による希土類採掘技術の革新が、中国独占の破壊と同時に、カナダ・アフリカの先住民領土に対する『新しい資源争奪』を誘発。環境技術が先住民排除の新たな道具化。",
+      "related_headlines": [
+        "Radify's sci-fi plasma reactors could break China's dominance of rare-earth elements",
+        "Taiwan Semiconductor Controls 72 % of the Global Chip Market , and the Stock Could Surge in 2026",
+        "This new chip survives 1300°F (700°C) and could change AI forever"
+      ],
+      "pestle_categories": [
+        "環境",
+        "経済",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "先住民領土の『法的保護』と『採掘禁止区域』の国際的拡大"
+    },
+    {
+      "signal": "日本の武器移転原則の段階的緩和と防衛産業のグローバル化",
+      "description": "日本政府が『武器移転を原則可能とする案』を示し、東アジア民主主義圏での軍事技術の商業化が加速。従来の『武器輸出三原則』から戦略的防衛産業政策への転換が進行中。",
+      "related_headlines": [
+        "「武器」移転を原則可能とする案 政府が自民党の会合で示す"
+      ],
+      "pestle_categories": [
+        "政治",
+        "法律",
+        "経済"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "平和憲法の堅持を求める市民運動"
+    },
+    {
+      "signal": "日本の安全保障政策における権力者の急速な入れ替わりと政策転換の加速化",
+      "description": "石破前首相の韓国大統領との会談や新たな有識者会議メンバー起用など、安全保障関連3文書改定が急速に進行。政治指導者の短期転換による政策の一貫性喪失が懸念される。",
+      "related_headlines": [
+        "石破前首相 韓国大統領と会談 日韓関係さらなる発展へ交流確認",
+        "安全保障関連3文書改定 有識者会議メンバーに佐々江氏ら起用へ"
+      ],
+      "pestle_categories": [
+        "政治",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "官僚機構による政策安定性の維持"
+    },
+    {
+      "signal": "日本の個人情報保護法改正によるAI開発規制の緩和と監視資本主義の加速",
+      "description": "政府がAI開発促進に向けて個人情報保護法改正案を閣議決定。プライバシー規制の段階的弱化とビッグテック企業による個人データの利用拡大が制度的に正当化される動き。",
+      "related_headlines": [
+        "政府 AI開発促進に向け 個人情報保護法改正案 閣議決定"
+      ],
+      "pestle_categories": [
+        "法律",
+        "技術",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "個人情報保護の強化を求める市民団体の異議"
+    },
+    {
+      "signal": "日本の議会制度における定数削減論と民主的代表性の質的劣化",
+      "description": "議員定数削減について野党からも慎重意見が出つつも、全会派協議会で議論が進行。代表性の縮小と少数派の声の抑圧が制度化される動き。",
+      "related_headlines": [
+        "議員定数削減 野党側からは慎重意見も 全会派協議会で議論へ"
+      ],
+      "pestle_categories": [
+        "政治",
+        "法律"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "1-3年",
+      "counter_trend": "民主的参加の拡大を求める市民運動"
+    },
+    {
+      "signal": "日本の複数年度予算制度への転換と財政の民主的監視の弱体化",
+      "description": "自民党が複数年度予算推進を提言。年次予算制度から複数年度への転換により、国会による毎年の予算審議が形式化される懸念。",
+      "related_headlines": [
+        "自民 財政改革検討本部 複数年度予算推進など政府への提言確認"
+      ],
+      "pestle_categories": [
+        "政治",
+        "法律",
+        "経済"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "年次予算による民主的統制の維持"
+    },
+    {
+      "signal": "日本の今年度予算案の急速な成立圧力と議会審査の形式化",
+      "description": "自民・立民が7日の集中審議で合意し、『今週前半の成立』を目指す動き。十分な議論なき予算成立が常態化し、議会の監視機能が名目化。",
+      "related_headlines": [
+        "今年度予算案 自民・立民 7日に集中審議 締めくくり質疑で合意",
+        "今年度予算案 自民 磯崎参院国対委員長 \"今週前半に成立を\""
+      ],
+      "pestle_categories": [
+        "政治",
+        "法律"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "1-3年",
+      "counter_trend": "十分な予算審議時間の確保要求"
+    },
+    {
+      "signal": "日本の憲法改正論議の段階的進行と民主的合意形成の欠如",
+      "description": "衆院憲法審査会で今国会初の討議が開始され、中道初の党の憲法調査会も論点ごとに考え方をまとめる方針。市民の十分な関与なき改正議論の加速化。",
+      "related_headlines": [
+        "衆院憲法審査会 今国会で初めての討議 各党が意見述べる",
+        "中道 初の党の憲法調査会 論点ごとに考え方まとめる方針確認",
+        "憲法改正に反対の市民団体など国会周辺で集会 \"9条の堅持を\""
+      ],
+      "pestle_categories": [
+        "政治",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "9条堅持と市民的合意形成を求める運動"
+    },
+    {
+      "signal": "アジア民主主義圏における『民族主義的防衛産業化』と地域武装化の加速",
+      "description": "ハンガリー、ポーランド、日本など東欧・東アジア民族主義政党による防衛政策の転換。グローバルサプライチェーン崩壊の中での地域的軍事産業の自給化が急速に進行。",
+      "related_headlines": [
+        "JD Vance's claims about Orbán, the EU and Hungary fact-checked",
+        "米バンス副大統領 ハンガリーオルバン首相支持表明 選挙集会で"
+      ],
+      "pestle_categories": [
+        "政治",
+        "経済"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "多国間防衛協力による武器規制"
+    },
+    {
+      "signal": "アフリカでの『言語的反LGBTQ+法』の急速な法制化と国際的沈黙",
+      "description": "アフリカ複数国で反LGBTQ+法の法制化が加速。国際的な人権規範の形骸化と国家主権による『文化的例外性』の主張が常態化。",
+      "related_headlines": [
+        "What's behind the worrying rise in anti-LGBTQ+ laws across Africa?"
+      ],
+      "pestle_categories": [
+        "法律",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "国際人権機構による法的異議"
+    },
+    {
+      "signal": "グローバル北部における『民族主義的領土再定義』と海底インフラの軍事化",
+      "description": "グリーンランドのNATO統合やホルムズ海峡での商船保険並行市場化など、『経済的主権』から『軍事的領土支配』へのシフト。海底ケーブルの防衛が地政学的武器化。",
+      "related_headlines": [
+        "Greenland hits back at Trump amid Nato tensions: 'we're not ‌some piece of ‌ice'",
+        "UK navy foiled Russian submarines surveying undersea cables, defence minister says"
+      ],
+      "pestle_categories": [
+        "政治",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "国際的海洋法と多国間規範の維持"
+    },
+    {
+      "signal": "AI規制における『市民的異議』から『国家的安全保障化』への転換",
+      "description": "科学者・宗教指導者による『超知能禁止』要求とホワイトハウスのAI立法化が平行進行。個人の安全性懸念から国家の競争力優先への政策転換が加速。",
+      "related_headlines": [
+        "Prominent Scientists, Faith Leaders, Policymakers and Artists Call for a Prohibition on Superintelligence, as Poll Shows Americans Don't Want It",
+        "Statement: Head of US Policy on the White House AI legislative recommendations"
+      ],
+      "pestle_categories": [
+        "技術",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "市民的AI安全性への懸念の拡大"
+    },
+    {
+      "signal": "カナダにおける『民族主義的通貨政策』と米国との経済統合圧力",
+      "description": "カナダがグリーンランドの地熱エネルギーやエネルギー主権の再定義を図る一方、Mark Carneyのリベラル党多数派獲得の可能性。エネルギー市場の統合化と政治的独立性の喪失の加速。",
+      "related_headlines": [
+        "Geothermal power is the key to cheaper energy in the Canadian Arctic",
+        "Canada's Mark Carney Poised to Secure Liberal Party Majority After Gladu's Defection"
+      ],
+      "pestle_categories": [
+        "政治",
+        "経済"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "1-3年",
+      "counter_trend": "カナダの政治的独立性の維持"
+    },
+    {
+      "signal": "ケルト民族主義による『UK連邦的構造』の段階的解体と地域主権化",
+      "description": "スコットランド・ウェールズでの民族主義政党の選挙勝利により、UK統一国家の権力分散が急速化。連邦的解体プロセスが常態化し、イギリス帝国の最終的な政治的分裂が加速。",
+      "related_headlines": [
+        "'Seismic change': how election wins for nationalists in Celtic nations could reshape UK"
+      ],
+      "pestle_categories": [
+        "政治",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "UK統一性の維持を求める保守的政治勢力"
+    },
+    {
+      "signal": "ペルーにおける『選挙制度自体の形骸化』と民主的統治能力の喪失",
+      "description": "『記録的な大統領候補数』によるペルー大統領選挙で、選挙制度自体が機能停止状態に。民族的・階級的分裂の深刻化と国家統治能力の根本的喪失が露呈。",
+      "related_headlines": [
+        "A record-breaking field: What to expect from Peru's presidential election"
+      ],
+      "pestle_categories": [
+        "政治",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "民主的制度改革による統治能力の回復"
+    },
+    {
+      "signal": "ハンガリー民主主義モデルのアメリカ保守派による制度的正当化と国際的波及",
+      "description": "トランプ・バンスがオルバン首相を明確に支持表明。『ポスト民主主義的権威主義』が米国保守主義の正統的イデオロギーとして国際化。欧州民主主義の規範化の完全な崩壊。",
+      "related_headlines": [
+        "Why Orban and Hungary are not one and the same",
+        "JD Vance's claims about Orbán, the EU and Hungary fact-checked",
+        "米バンス副大統領 ハンガリーオルバン首相支持表明 選挙集会で"
+      ],
+      "pestle_categories": [
+        "政治",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "欧州民主主義の規範的防衛"
+    },
+    {
+      "signal": "グローバル北部での『エネルギー主権再定義』による先住民領土の商業化と法的剥奪の加速",
+      "description": "アルゼンチンでのミレイ氏による氷河採掘法案承認とカナダの地熱エネルギー開発。『気候対応』の名目による先住民領土の国家的商業化と環境保護区の形式的無効化。",
+      "related_headlines": [
+        "Argentina approves Milei's glacier mining bill amid environmental protests",
+        "Geothermal power is the key to cheaper energy in the Canadian Arctic"
+      ],
+      "pestle_categories": [
+        "法律",
+        "環境",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "先住民権と環境保護区の法的防衛"
+    },
+    {
+      "signal": "『タックス・フロー詐欺』による国家税収システムの形式的無効化と企業の脱税の制度化",
+      "description": "タリフ詐欺と会計トリックの急速な蔓延により、国家の税収機構が実質的に機能停止。多国籍企業による租税回避が『合理的戦略』として正当化される動き。",
+      "related_headlines": [
+        "'Definitely a Sham': As Tariffs Climb, Trade Fraud and Accounting Tricks Proliferate"
+      ],
+      "pestle_categories": [
+        "法律",
+        "経済"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "国際的脱税規制の強化と税収徴収の厳格化"
     }
-  ]
+  ],
+  "signals_generated_at": "2026-04-10T14:35:32.236482+00:00"
 }
