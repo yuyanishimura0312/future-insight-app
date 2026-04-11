@@ -196,8 +196,8 @@ def main():
     field_counts = {}
 
     for field_name, field_config in FIELDS.items():
-        print(f"   [{field_name}] Fetching up to 100 papers...")
-        papers = fetch_papers_for_field(field_name, field_config, from_date, per_page=100)
+        print(f"   [{field_name}] Fetching up to 200 papers...")
+        papers = fetch_papers_for_field(field_name, field_config, from_date, per_page=200)
         all_papers.extend(papers)
         field_counts[field_name] = len(papers)
         print(f"   [{field_name}] {len(papers)} papers fetched")

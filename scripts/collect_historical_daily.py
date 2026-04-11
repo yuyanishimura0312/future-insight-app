@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
-Daily Historical PESTLE Collector
-毎日1年分の歴史的PESTLE記事を収集してDBに蓄積する。
+Daily Historical PESTLE Collector (v2)
+毎日1年分の歴史的PESTLE記事を大量収集してDBに蓄積する。
 
-- 1900年〜2016年: Claude APIで歴史的に重要な出来事を生成
-- 2017年〜2025年: GDELT DOC APIから実際のニュースを取得
-- 各カテゴリ10件ずつ（計60件/日）
-- 2025年まで行ったら1900年に戻ってサイクル
+- 1990年から1年ずつ遡って収集（1990→1989→1988→...）
+- 各カテゴリ334件、合計約2000件/日を目標
+- 2017年〜: GDELT DOC APIから実際のニュースを取得
+- 〜2016年: Claude APIで歴史的出来事を生成（カテゴリ別バッチ）
+- 全年分完了後は最新年に戻ってサイクル
 
 State file: data/historical_state.json で進捗を追跡
 """
@@ -30,9 +31,10 @@ from db import get_connection, init_db
 DATA_DIR = Path(__file__).parent.parent / "data"
 STATE_FILE = DATA_DIR / "historical_state.json"
 
-START_YEAR = 1900
-END_YEAR = 2025
-PER_CATEGORY = 10
+# Start from 1990 and go backwards
+START_YEAR = 1990
+END_YEAR = 1900  # go back to 1900
+PER_CATEGORY = 334  # 334 x 6 = 2004 articles/day target
 
 PESTLE_CATEGORIES = {
     "Political":      "政治",
@@ -71,9 +73,9 @@ def save_state(state: dict):
 
 
 def advance_year(state: dict) -> dict:
-    """Move to next year, cycling back to START_YEAR after END_YEAR."""
-    state["current_year"] += 1
-    if state["current_year"] > END_YEAR:
+    """Move to previous year (going backwards). Cycle back to START_YEAR after END_YEAR."""
+    state["current_year"] -= 1
+    if state["current_year"] < END_YEAR:
         state["current_year"] = START_YEAR
         state["completed_cycles"] += 1
     state["last_run"] = datetime.now(timezone.utc).isoformat()
@@ -82,7 +84,7 @@ def advance_year(state: dict) -> dict:
 
 # === GDELT collection (2017+) ===
 
-def fetch_gdelt(query: str, year: int, max_records: int = 10) -> list[dict]:
+def fetch_gdelt(query: str, year: int, max_records: int = 250) -> list[dict]:
     """Fetch articles from GDELT for a given year."""
     start_dt = f"{year}0101000000"
     end_dt = f"{year}1231235959"
@@ -99,7 +101,7 @@ def fetch_gdelt(query: str, year: int, max_records: int = 10) -> list[dict]:
     try:
         resp = requests.get(GDELT_API, params=params, timeout=30)
         if resp.status_code == 429:
-            time.sleep(10)
+            time.sleep(15)
             resp = requests.get(GDELT_API, params=params, timeout=30)
         resp.raise_for_status()
         data = resp.json()
@@ -110,14 +112,38 @@ def fetch_gdelt(query: str, year: int, max_records: int = 10) -> list[dict]:
 
 
 def collect_from_gdelt(year: int) -> dict[str, list[dict]]:
-    """Collect PESTLE articles from GDELT for a year."""
+    """Collect PESTLE articles from GDELT for a year. Target: 334 per category."""
     results = {}
     for cat, query in GDELT_QUERIES.items():
         print(f"    {PESTLE_CATEGORIES[cat]} ({cat})...", end=" ", flush=True)
-        articles = fetch_gdelt(query, year, max_records=PER_CATEGORY)
+        # GDELT max is 250 per request, so split into multiple queries if needed
+        all_articles = []
+        keywords = [k.strip() for k in query.replace("(", "").replace(")", "").split(" OR ")]
+
+        # First try full query
+        articles = fetch_gdelt(query, year, max_records=250)
+        seen_urls = set()
+        for a in articles:
+            url = a.get("url", "")
+            if url and url not in seen_urls:
+                seen_urls.add(url)
+                all_articles.append(a)
+
+        # If we need more, try individual keywords
+        if len(all_articles) < PER_CATEGORY:
+            for kw in keywords[:4]:
+                if len(all_articles) >= PER_CATEGORY:
+                    break
+                extra = fetch_gdelt(kw, year, max_records=100)
+                for a in extra:
+                    url = a.get("url", "")
+                    if url and url not in seen_urls:
+                        seen_urls.add(url)
+                        all_articles.append(a)
+                time.sleep(8)
 
         results[cat] = []
-        for a in articles:
+        for a in all_articles[:PER_CATEGORY]:
             url = a.get("url", "")
             title = a.get("title", "").strip()
             if not url or not title:
@@ -141,18 +167,33 @@ def collect_from_gdelt(year: int) -> dict[str, list[dict]]:
                 "relevance_score": 1.0,
             })
         print(f"{len(results[cat])} articles")
-        time.sleep(5)  # GDELT rate limit
+        time.sleep(5)
 
     return results
 
 
-# === Claude-based historical collection (1900-2016) ===
+# === Claude-based historical collection (pre-2017) ===
 
-def collect_from_claude(year: int) -> dict[str, list[dict]]:
-    """Use Claude to generate historically significant PESTLE events for a year."""
+def collect_from_claude_batch(year: int, category: str, label_ja: str,
+                               target: int = 100) -> list[dict]:
+    """Use Claude to generate historically significant events for one category in one year.
+    Makes multiple calls if needed to reach target count."""
     client = anthropic.Anthropic()
+    all_events = []
+    # Batch: request up to 100 per call, multiple calls if target > 100
+    remaining = target
+    batch_num = 0
 
-    prompt = f"""List the {PER_CATEGORY} most important real events/developments for EACH of the 6 PESTLE categories that occurred in the year {year}.
+    while remaining > 0 and batch_num < 4:
+        batch_size = min(remaining, 100)
+        batch_num += 1
+
+        exclude_titles = ""
+        if all_events:
+            existing = "\n".join(f"- {e['title']}" for e in all_events[:50])
+            exclude_titles = f"\n\nDo NOT repeat these already-listed events:\n{existing}"
+
+        prompt = f"""List {batch_size} important real events/developments in the category "{category}" ({label_ja}) that occurred in the year {year}.
 
 For each event, provide:
 - title: A concise headline (like a news headline at the time)
@@ -160,62 +201,94 @@ For each event, provide:
 - source: The primary organization/publication that would have reported it
 - published_date: The approximate date (YYYY-MM-DD format)
 
-Categories: Political, Economic, Social, Technological, Legal, Environmental
-
 IMPORTANT:
 - Only include REAL, historically documented events from {year}
-- If fewer than {PER_CATEGORY} significant events exist for a category in {year}, include as many as are real
-- For early years (pre-1950), some categories may have fewer events — that is fine
-- Be historically accurate — do not fabricate events
+- Include both major and minor events — international AND domestic (Japan, US, Europe, Asia, Africa, Latin America)
+- Cover diverse aspects: diplomatic, military, elections, social movements, cultural events, scientific discoveries, legal cases, economic crises, trade agreements, environmental disasters, etc.
+- If fewer than {batch_size} real events exist, include as many as are real
+- Be historically accurate — do not fabricate events{exclude_titles}
 
-Respond ONLY with valid JSON in this exact format:
-{{
-  "Political": [
-    {{"title": "...", "summary": "...", "source": "...", "published_date": "YYYY-MM-DD"}},
-    ...
-  ],
-  "Economic": [...],
-  "Social": [...],
-  "Technological": [...],
-  "Legal": [...],
-  "Environmental": [...]
-}}"""
+Respond ONLY with valid JSON array:
+[
+  {{"title": "...", "summary": "...", "source": "...", "published_date": "YYYY-MM-DD"}},
+  ...
+]"""
 
-    print(f"    Generating historical events via Claude API...", flush=True)
-    response = client.messages.create(
-        model="claude-haiku-4-5-20251001",
-        max_tokens=4096,
-        messages=[{"role": "user", "content": prompt}],
-    )
+        try:
+            response = client.messages.create(
+                model="claude-haiku-4-5-20251001",
+                max_tokens=16384,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            text = response.content[0].text.strip()
+            if "```" in text:
+                text = text.split("```json")[-1].split("```")[0] if "```json" in text else text.split("```")[1].split("```")[0]
+            text = text.strip()
 
-    text = response.content[0].text.strip()
-    # Extract JSON from response (handle markdown code blocks)
-    if "```" in text:
-        text = text.split("```json")[-1].split("```")[0] if "```json" in text else text.split("```")[1].split("```")[0]
-    text = text.strip()
+            # Fix truncated JSON: if it ends mid-object, try to close it
+            if not text.endswith("]"):
+                # Find the last complete object
+                last_brace = text.rfind("}")
+                if last_brace > 0:
+                    text = text[:last_brace + 1] + "]"
 
-    try:
-        data = json.loads(text)
-    except json.JSONDecodeError as e:
-        print(f"    [WARN] JSON parse error: {e}")
-        return {cat: [] for cat in PESTLE_CATEGORIES}
+            events = json.loads(text)
+            if isinstance(events, list):
+                all_events.extend(events)
+                remaining -= len(events)
+                # If Claude returned fewer than requested, the year is exhausted
+                if len(events) < batch_size * 0.5:
+                    break
+        except json.JSONDecodeError as e:
+            print(f"      [WARN] JSON parse error (batch {batch_num}): {e}")
+            # Try smaller batch on retry
+            remaining = min(remaining, 50)
+            continue
+        except Exception as e:
+            print(f"      [WARN] Claude batch {batch_num} error: {e}")
+            break
+        time.sleep(1)
 
+    return all_events
+
+
+def collect_from_claude(year: int) -> dict[str, list[dict]]:
+    """Collect PESTLE events for a year via Claude, category by category.
+    Target: up to PER_CATEGORY per category, realistically 50-200 for pre-2017 years."""
     results = {}
-    for cat in PESTLE_CATEGORIES:
-        events = data.get(cat, [])
+    # For older years, Claude can realistically generate fewer events
+    # Scale target based on era
+    if year >= 1990:
+        target_per_cat = min(PER_CATEGORY, 200)  # Modern era: more events available
+    elif year >= 1950:
+        target_per_cat = min(PER_CATEGORY, 100)  # Post-war: moderate
+    elif year >= 1900:
+        target_per_cat = min(PER_CATEGORY, 50)   # Early 20th century: fewer records
+    else:
+        target_per_cat = min(PER_CATEGORY, 30)
+
+    for cat, label_ja in PESTLE_CATEGORIES.items():
+        print(f"    {label_ja} ({cat})...", end=" ", flush=True)
+        events = collect_from_claude_batch(year, cat, label_ja, target=target_per_cat)
+
         results[cat] = []
-        for ev in events[:PER_CATEGORY]:
+        seen_titles = set()
+        for ev in events:
+            title = ev.get("title", "").strip()
+            if not title or title in seen_titles:
+                continue
+            seen_titles.add(title)
             results[cat].append({
-                "title": ev.get("title", ""),
+                "title": title,
                 "summary": ev.get("summary", ""),
-                "url": f"https://historical-reference/{year}/{cat}/{hashlib.md5(ev.get('title', '').encode()).hexdigest()[:8]}",
+                "url": f"https://historical-reference/{year}/{cat}/{hashlib.md5(title.encode()).hexdigest()[:8]}",
                 "source": ev.get("source", "Historical Record"),
                 "lang": "en",
                 "published": "",
                 "published_date": ev.get("published_date", f"{year}-06-15"),
                 "relevance_score": 1.0,
             })
-        print(f"    {PESTLE_CATEGORIES[cat]}: {len(results[cat])} events")
+        print(f"{len(results[cat])} events")
 
     return results
 
@@ -276,11 +349,12 @@ def main():
     year = state["current_year"]
     cycle = state["completed_cycles"]
 
-    print(f"{'=' * 50}")
-    print(f"  Historical PESTLE Collector")
-    print(f"  Year: {year}  (cycle #{cycle + 1})")
-    print(f"  Range: {START_YEAR}-{END_YEAR}")
-    print(f"{'=' * 50}\n")
+    print(f"{'=' * 60}")
+    print(f"  Historical PESTLE Collector v2")
+    print(f"  Year: {year}  (cycle #{cycle + 1}, direction: backwards)")
+    print(f"  Range: {START_YEAR} → {END_YEAR}")
+    print(f"  Target: {PER_CATEGORY} per category × 6 = {PER_CATEGORY * 6}")
+    print(f"{'=' * 60}\n")
 
     init_db()
 
@@ -296,13 +370,20 @@ def main():
     print(f"\n  Storing to database...")
     inserted = store_articles(articles, year)
     total = sum(len(arts) for arts in articles.values())
-    print(f"  {inserted} new / {total} total articles for {year}")
 
-    # Advance to next year
+    # Summary
+    print(f"\n  === Year {year} Summary ===")
+    for cat in PESTLE_CATEGORIES:
+        count = len(articles.get(cat, []))
+        print(f"    {PESTLE_CATEGORIES[cat]:4s} ({cat:15s}): {count:4d}")
+    print(f"    {'Total':>21s}: {total:4d}")
+    print(f"    {'New in DB':>21s}: {inserted:4d}")
+
+    # Advance to previous year
     state = advance_year(state)
     save_state(state)
     print(f"\n  Next run will collect: {state['current_year']}")
-    print(f"{'=' * 50}")
+    print(f"{'=' * 60}")
 
 
 if __name__ == "__main__":

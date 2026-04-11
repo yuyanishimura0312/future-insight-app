@@ -58,9 +58,13 @@ run_step() {
   fi
 }
 
-# Step 1: Collect PESTLE news
+# Step 1: Collect PESTLE news (2000 articles/day)
 log "Step 1: Collecting PESTLE news..."
 run_step "collect_news" "collect_news.py"
+
+# Step 1.5: Collect academic papers (1000 papers/day)
+log "Step 1.5: Collecting academic papers..."
+run_step "collect_papers" "collect_papers.py"
 
 # Step 2: AI analysis
 log "Step 2: Running AI analysis..."
