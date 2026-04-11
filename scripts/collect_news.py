@@ -242,6 +242,30 @@ RSS_FEEDS = [
     {"url": "https://www.nistep.go.jp/feed", "name": "NISTEP", "lang": "ja", "tier": 2, "focus": "Technological", "region": "japan"},
     {"url": "https://toyokeizai.net/list/feed/rss", "name": "東洋経済オンライン", "lang": "ja", "tier": 2, "focus": "Economic", "region": "japan"},
 
+    # --- Japan Expanded Coverage (2026-04-11 addition) ---
+    # Political
+    {"url": "https://www.jiji.com/rss/ranking.rdf", "name": "時事通信", "lang": "ja", "tier": 1, "focus": "Political", "region": "japan"},
+    # Social
+    {"url": "https://www3.nhk.or.jp/rss/news/cat2.xml", "name": "NHK 文化", "lang": "ja", "tier": 1, "focus": "Social", "region": "japan"},
+    {"url": "https://www.nippon.com/ja/feed/", "name": "nippon.com", "lang": "ja", "tier": 1, "focus": "Social", "region": "japan"},
+    {"url": "https://wedge.ismedia.jp/list/feed/rss", "name": "Wedge Online", "lang": "ja", "tier": 2, "focus": "Social", "region": "japan"},
+    # Economic
+    {"url": "https://www.businessinsider.jp/feed", "name": "Business Insider Japan", "lang": "ja", "tier": 1, "focus": "Economic", "region": "japan"},
+    {"url": "https://jbpress.ismedia.jp/list/feed/rss", "name": "JBpress", "lang": "ja", "tier": 1, "focus": "Economic", "region": "japan"},
+    {"url": "https://president.jp/list/rss", "name": "プレジデントオンライン", "lang": "ja", "tier": 2, "focus": "Economic", "region": "japan"},
+    {"url": "https://www.meti.go.jp/ml_index_release_atom.xml", "name": "経済産業省", "lang": "ja", "tier": 1, "focus": "Economic", "region": "japan"},
+    # Technological
+    {"url": "https://japan.cnet.com/rss/index.rdf", "name": "CNET Japan", "lang": "ja", "tier": 1, "focus": "Technological", "region": "japan"},
+    {"url": "https://gigazine.net/news/rss_2.0/", "name": "GIGAZINE", "lang": "ja", "tier": 1, "focus": "Technological", "region": "japan"},
+    {"url": "https://ascii.jp/rss.xml", "name": "ASCII.jp", "lang": "ja", "tier": 1, "focus": "Technological", "region": "japan"},
+    {"url": "https://xtech.nikkei.com/rss/xtech-it.rdf", "name": "日経クロステック", "lang": "ja", "tier": 1, "focus": "Technological", "region": "japan"},
+    # Legal
+    {"url": "https://www.businesslawyers.jp/rss", "name": "BUSINESS LAWYERS", "lang": "ja", "tier": 1, "focus": "Legal", "region": "japan"},
+    {"url": "https://scan.netsecurity.ne.jp/rss/index.rdf", "name": "ScanNetSecurity", "lang": "ja", "tier": 2, "focus": "Legal", "region": "japan"},
+    # Environmental
+    {"url": "https://sustainablejapan.jp/feed", "name": "Sustainable Japan", "lang": "ja", "tier": 1, "focus": "Environmental", "region": "japan"},
+    {"url": "https://energyshift.com/rss", "name": "EnergyShift", "lang": "ja", "tier": 1, "focus": "Environmental", "region": "japan"},
+
     # ============================================================
     # TIER 3: STRUCTURAL & PARADIGMATIC — Weak signals, alt futures
     # ============================================================
