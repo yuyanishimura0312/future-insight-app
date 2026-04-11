@@ -37,7 +37,7 @@ PESTLE_CATEGORIES = {
 }
 
 # How many concurrent year-processes to run
-MAX_WORKERS = 5
+MAX_WORKERS = 10
 # Minimum articles to consider a year "done"
 MIN_ARTICLES_THRESHOLD = 100
 
