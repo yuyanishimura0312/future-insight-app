@@ -267,6 +267,52 @@ RSS_FEEDS = [
     {"url": "https://energyshift.com/rss", "name": "EnergyShift", "lang": "ja", "tier": 1, "focus": "Environmental", "region": "japan"},
 
     # ============================================================
+    # P1 EXPANSION (2026-04-11): CLA Deep Layer + Non-Western + Gov
+    # ============================================================
+
+    # --- CLA Deep Layer Sources (Tier 2-3: worldview, myth) ---
+    {"url": "https://www.noemamag.com/feed/", "name": "NOEMA Magazine", "lang": "en", "tier": 2, "focus": "Political", "region": "global"},
+    {"url": "https://aeon.co/feed.rss", "name": "Aeon", "lang": "en", "tier": 2, "focus": "Social", "region": "global"},
+    {"url": "https://psyche.co/feed", "name": "Psyche", "lang": "en", "tier": 2, "focus": "Social", "region": "global"},
+    {"url": "https://www.themarginalian.org/feed/", "name": "The Marginalian", "lang": "en", "tier": 3, "focus": "Social", "region": "global"},
+    {"url": "https://nautil.us/feed/", "name": "Nautilus", "lang": "en", "tier": 2, "focus": "Technological", "region": "global"},
+    {"url": "https://www.anthropocenemagazine.org/feed/", "name": "Anthropocene Magazine", "lang": "en", "tier": 2, "focus": "Environmental", "region": "global"},
+    {"url": "https://bostonreview.net/feed/", "name": "Boston Review", "lang": "en", "tier": 2, "focus": "Political", "region": "global"},
+    {"url": "https://www.eurozine.com/feed/", "name": "Eurozine", "lang": "en", "tier": 2, "focus": "Social", "region": "global"},
+    {"url": "https://rss.sciencedirect.com/publication/science/00163287", "name": "Futures Journal", "lang": "en", "tier": 2, "focus": "Technological", "region": "global"},
+    {"url": "https://palladiummag.com/feed/", "name": "Palladium Magazine", "lang": "en", "tier": 2, "focus": "Political", "region": "global"},
+
+    # --- Non-Western / Global South ---
+    {"url": "https://theconversation.com/africa/articles.atom", "name": "The Conversation Africa", "lang": "en", "tier": 1, "focus": "Social", "region": "global"},
+    {"url": "https://theconversation.com/au/articles.atom", "name": "The Conversation Australia", "lang": "en", "tier": 1, "focus": "Social", "region": "global"},
+    {"url": "https://globalvoices.org/feed/", "name": "Global Voices", "lang": "en", "tier": 1, "focus": "Social", "region": "global"},
+    {"url": "https://thediplomat.com/feed/", "name": "The Diplomat", "lang": "en", "tier": 1, "focus": "Political", "region": "global"},
+    {"url": "https://americasquarterly.org/feed/", "name": "Americas Quarterly", "lang": "en", "tier": 1, "focus": "Political", "region": "global"},
+    {"url": "https://www.southcentre.int/feed/", "name": "South Centre", "lang": "en", "tier": 1, "focus": "Political", "region": "global"},
+
+    # --- Japan: Government & Policy ---
+    {"url": "https://www.kantei.go.jp/index-jnews.rdf", "name": "首相官邸", "lang": "ja", "tier": 1, "focus": "Political", "region": "japan"},
+    {"url": "https://www.cao.go.jp/rss/news.rdf", "name": "内閣府", "lang": "ja", "tier": 1, "focus": "Political", "region": "japan"},
+    {"url": "https://www.fsa.go.jp/fsaNewsListAll_rss2.xml", "name": "金融庁", "lang": "ja", "tier": 1, "focus": "Legal", "region": "japan"},
+    {"url": "https://www.mhlw.go.jp/stf/news.rdf", "name": "厚生労働省", "lang": "ja", "tier": 1, "focus": "Social", "region": "japan"},
+    {"url": "https://www.mext.go.jp/b_menu/news/index.rdf", "name": "文部科学省", "lang": "ja", "tier": 1, "focus": "Social", "region": "japan"},
+    {"url": "https://www.digital.go.jp/rss/news.xml", "name": "デジタル庁", "lang": "ja", "tier": 1, "focus": "Technological", "region": "japan"},
+    {"url": "https://www.mof.go.jp/news.rss", "name": "財務省", "lang": "ja", "tier": 1, "focus": "Economic", "region": "japan"},
+    {"url": "https://www.boj.or.jp/rss/whatsnew.xml", "name": "日本銀行", "lang": "ja", "tier": 1, "focus": "Economic", "region": "japan"},
+    {"url": "https://www.mlit.go.jp/pressrelease.rdf", "name": "国土交通省", "lang": "ja", "tier": 1, "focus": "Political", "region": "japan"},
+    {"url": "https://www.maff.go.jp/j/press/rss.xml", "name": "農林水産省", "lang": "ja", "tier": 1, "focus": "Environmental", "region": "japan"},
+    {"url": "https://www.caa.go.jp/news.rss", "name": "消費者庁", "lang": "ja", "tier": 1, "focus": "Legal", "region": "japan"},
+    {"url": "https://www.anzen.mofa.go.jp/rss/news.xml", "name": "外務省海外安全", "lang": "ja", "tier": 1, "focus": "Political", "region": "japan"},
+    {"url": "https://public-comment.e-gov.go.jp/rss/pcm_list.xml", "name": "e-Gov パブコメ", "lang": "ja", "tier": 1, "focus": "Legal", "region": "japan"},
+    {"url": "https://ondankataisaku.env.go.jp/carbon_neutral/rss.xml", "name": "脱炭素ポータル", "lang": "ja", "tier": 1, "focus": "Environmental", "region": "japan"},
+    {"url": "https://www.cger.nies.go.jp/cgernews/rss/index.xml", "name": "国環研 地球環境研究センター", "lang": "ja", "tier": 1, "focus": "Environmental", "region": "japan"},
+    {"url": "https://www.rieti.go.jp/jp/rss/index.rdf", "name": "RIETI 経産研", "lang": "ja", "tier": 1, "focus": "Economic", "region": "japan"},
+    {"url": "https://www.jaxa.jp/rss/press_j.rdf", "name": "JAXA", "lang": "ja", "tier": 1, "focus": "Technological", "region": "japan"},
+    {"url": "https://scienceportal.jst.go.jp/feed/", "name": "サイエンスポータル", "lang": "ja", "tier": 1, "focus": "Technological", "region": "japan"},
+    {"url": "https://www.gov-online.go.jp/rss/index.rdf", "name": "政府広報オンライン", "lang": "ja", "tier": 1, "focus": "Political", "region": "japan"},
+    {"url": "https://greenz.jp/feed/", "name": "greenz.jp", "lang": "ja", "tier": 2, "focus": "Environmental", "region": "japan"},
+
+    # ============================================================
     # TIER 3: STRUCTURAL & PARADIGMATIC — Weak signals, alt futures
     # ============================================================
 
