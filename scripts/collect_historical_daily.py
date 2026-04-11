@@ -31,9 +31,10 @@ from db import get_connection, init_db
 DATA_DIR = Path(__file__).parent.parent / "data"
 STATE_FILE = DATA_DIR / "historical_state.json"
 
-# Start from 1990 and go backwards
-START_YEAR = 1990
-END_YEAR = 1900  # go back to 1900
+# Phase 1: 1990→1900 (backwards), then Phase 2: 1991→present (forwards)
+PHASE1_START = 1990
+PHASE1_END = 1900
+PHASE2_END = 2025  # will be updated as years pass
 PER_CATEGORY = 334  # 334 x 6 = 2004 articles/day target
 
 PESTLE_CATEGORIES = {
@@ -64,7 +65,8 @@ def load_state() -> dict:
     if STATE_FILE.exists():
         with open(STATE_FILE, encoding="utf-8") as f:
             return json.load(f)
-    return {"current_year": START_YEAR, "completed_cycles": 0}
+    # Phase 1: go backwards from 1990
+    return {"current_year": PHASE1_START, "phase": 1, "completed_cycles": 0}
 
 
 def save_state(state: dict):
@@ -73,11 +75,25 @@ def save_state(state: dict):
 
 
 def advance_year(state: dict) -> dict:
-    """Move to previous year (going backwards). Cycle back to START_YEAR after END_YEAR."""
-    state["current_year"] -= 1
-    if state["current_year"] < END_YEAR:
-        state["current_year"] = START_YEAR
-        state["completed_cycles"] += 1
+    """Phase 1: 1990→1900 (backwards). Phase 2: 1991→present (forwards)."""
+    phase = state.get("phase", 1)
+
+    if phase == 1:
+        # Going backwards: 1990, 1989, 1988, ..., 1900
+        state["current_year"] -= 1
+        if state["current_year"] < PHASE1_END:
+            # Phase 1 complete, switch to Phase 2: 1991 onwards
+            state["phase"] = 2
+            state["current_year"] = PHASE1_START + 1  # 1991
+    else:
+        # Going forwards: 1991, 1992, ..., 2025
+        state["current_year"] += 1
+        if state["current_year"] > PHASE2_END:
+            # All years covered, restart from 1900 for deeper collection
+            state["current_year"] = PHASE1_END
+            state["phase"] = 1
+            state["completed_cycles"] += 1
+
     state["last_run"] = datetime.now(timezone.utc).isoformat()
     return state
 
@@ -347,12 +363,16 @@ def store_articles(articles_by_cat: dict[str, list[dict]], year: int) -> int:
 def main():
     state = load_state()
     year = state["current_year"]
+    phase = state.get("phase", 1)
     cycle = state["completed_cycles"]
+
+    direction = "← backwards" if phase == 1 else "→ forwards"
+    phase_range = f"{PHASE1_START}→{PHASE1_END}" if phase == 1 else f"{PHASE1_START + 1}→{PHASE2_END}"
 
     print(f"{'=' * 60}")
     print(f"  Historical PESTLE Collector v2")
-    print(f"  Year: {year}  (cycle #{cycle + 1}, direction: backwards)")
-    print(f"  Range: {START_YEAR} → {END_YEAR}")
+    print(f"  Year: {year}  (phase {phase}: {direction})")
+    print(f"  Range: {phase_range}  (cycle #{cycle + 1})")
     print(f"  Target: {PER_CATEGORY} per category × 6 = {PER_CATEGORY * 6}")
     print(f"{'=' * 60}\n")
 
