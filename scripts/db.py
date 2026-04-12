@@ -244,9 +244,18 @@ def get_media_sources() -> list[dict]:
 def export_media_sources_json(output_path) -> int:
     """Export media sources to JSON file. Returns count."""
     sources = get_media_sources()
+    # Include total article count across entire DB (not just RSS-matched sources)
+    conn = get_connection()
+    total_all = conn.execute("SELECT COUNT(*) FROM articles").fetchone()[0]
+    distinct_sources = conn.execute("SELECT COUNT(DISTINCT source) FROM articles").fetchone()[0]
+    conn.close()
+    rss_total = sum(s.get("articles_count", 0) for s in sources)
     output = {
         "exported_at": datetime.utcnow().isoformat(),
         "count": len(sources),
+        "total_articles_rss": rss_total,
+        "total_articles_all": total_all,
+        "distinct_sources_all": distinct_sources,
         "sources": sources,
     }
     with open(output_path, "w", encoding="utf-8") as f:
