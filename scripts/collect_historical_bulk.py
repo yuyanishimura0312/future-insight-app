@@ -39,7 +39,7 @@ PESTLE_CATEGORIES = {
 # How many concurrent year-processes to run
 MAX_WORKERS = 10
 # Minimum articles to consider a year "done"
-MIN_ARTICLES_THRESHOLD = 100
+MIN_ARTICLES_THRESHOLD = 1000
 
 
 def get_collected_years() -> dict[int, int]:
@@ -133,12 +133,8 @@ Respond ONLY with valid JSON array:
 
 def process_year(year: int) -> dict:
     """Process a single year: collect all 6 PESTLE categories."""
-    if year >= 1950:
-        target_per_cat = 200
-    elif year >= 1900:
-        target_per_cat = 100
-    else:
-        target_per_cat = 50
+    # Target 200/category for all years = ~1,200/year
+    target_per_cat = 200
 
     results = {}
     for cat, label_ja in PESTLE_CATEGORIES.items():
