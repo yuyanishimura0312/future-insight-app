@@ -237,14 +237,14 @@
       "enabled": true
     },
     {
-      "url": "https://www.lawfaremedia.org/feed",
+      "url": "https://news.google.com/rss/search?q=site:lawfaremedia.org+when:7d&hl=en-US&gl=US&ceid=US:en",
       "name": "Lawfare",
       "lang": "en",
       "tier": 1,
       "focus": "Legal",
       "region": "global",
-      "enabled": false,
-      "note": "403 Forbidden"
+      "_note": "Cloudflare blocks RSS fetchers; proxied via Google News",
+      "enabled": true
     },
     {
       "url": "https://www.theguardian.com/politics/rss",
@@ -546,13 +546,14 @@
       "enabled": true
     },
     {
-      "url": "https://techcrunch.com/feed/",
-      "name": "TechCrunch",
-      "lang": "en",
+      "url": "https://jp.techcrunch.com/feed/",
+      "name": "TechCrunch Japan",
+      "lang": "ja",
       "tier": 1,
       "focus": "Technological",
       "region": "japan",
-      "enabled": true
+      "enabled": false,
+      "_note": "TechCrunch Japan closed May 2022; covered by global TechCrunch feed"
     },
     {
       "url": "https://business.nikkei.com/rss/sns/nb.rdf",
@@ -600,12 +601,13 @@
       "enabled": true
     },
     {
-      "url": "https://www.adalovelaceinstitute.org/feed/",
+      "url": "https://news.google.com/rss/search?q=site:adalovelaceinstitute.org+when:30d&hl=en-US&gl=US&ceid=US:en",
       "name": "Ada Lovelace Institute",
       "lang": "en",
       "tier": 2,
       "focus": "Legal",
       "region": "global",
+      "_note": "WordPress feed returns empty items; proxied via Google News",
       "enabled": true
     },
     {
@@ -834,8 +836,9 @@
       "enabled": true
     },
     {
-      "url": "https://bostonreview.net/feed/",
+      "url": "https://www.bostonreview.net/latest/feed/",
       "name": "Boston Review",
+      "_note": "Main /feed/ is empty; /latest/feed/ has articles",
       "lang": "en",
       "tier": 2,
       "focus": "Political",
@@ -1092,8 +1095,8 @@
       "tier": 1,
       "focus": "Political",
       "region": "japan",
-      "enabled": false,
-      "note": "403 Forbidden"
+      "enabled": true,
+      "_note": "Requires browser User-Agent to avoid 403; fixed in collect_news.py"
     },
     {
       "url": "https://greenz.jp/feed/",
@@ -1114,12 +1117,13 @@
       "enabled": true
     },
     {
-      "url": "https://earth4all.life/feed/",
+      "url": "https://news.google.com/rss/search?q=site:earth4all.life+when:30d&hl=en-US&gl=US&ceid=US:en",
       "name": "Earth4All",
       "lang": "en",
       "tier": 3,
       "focus": "Environmental",
       "region": "global",
+      "_note": "WordPress feed returns empty items; proxied via Google News",
       "enabled": true
     },
     {
