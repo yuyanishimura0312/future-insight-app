@@ -88,7 +88,14 @@ JSONのみ返してください。説明は不要です。"""
                 text = text.split("```")[1]
                 if text.startswith("json"):
                     text = text[4:]
-            translations[cat] = json.loads(text)
+            parsed = json.loads(text)
+            # Normalize: Claude sometimes returns "summary_transformed" instead of "summary_translated"
+            for item in parsed:
+                if "summary_transformed" in item and "summary_translated" not in item:
+                    item["summary_translated"] = item.pop("summary_transformed")
+                if "title_transformed" in item and "title_translated" not in item:
+                    item["title_translated"] = item.pop("title_transformed")
+            translations[cat] = parsed
         except (json.JSONDecodeError, IndexError):
             translations[cat] = []
             print(f"    [WARN] Failed to parse translation for {cat}")
