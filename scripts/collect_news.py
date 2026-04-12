@@ -145,9 +145,10 @@ RSS_FEEDS = [
     {"url": "https://feeds.bbci.co.uk/news/world/rss.xml", "name": "BBC World", "lang": "en", "tier": 1, "focus": "Political"},
     {"url": "https://feeds.bbci.co.uk/news/business/rss.xml", "name": "BBC Business", "lang": "en", "tier": 1, "focus": "Economic"},
     {"url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml", "name": "BBC Science", "lang": "en", "tier": 1, "focus": "Environmental"},
-    {"url": "https://feeds.reuters.com/reuters/topNews", "name": "Reuters Top", "lang": "en", "tier": 1, "focus": "Political"},
-    {"url": "https://feeds.reuters.com/reuters/technologyNews", "name": "Reuters Tech", "lang": "en", "tier": 1, "focus": "Technological"},
-    {"url": "https://feeds.reuters.com/reuters/environment", "name": "Reuters Environment", "lang": "en", "tier": 1, "focus": "Environmental"},
+    # Reuters killed RSS in 2020; proxied via Google News
+    {"url": "https://news.google.com/rss/search?q=site:reuters.com+when:24h&hl=en-US&gl=US&ceid=US:en", "name": "Reuters Top", "lang": "en", "tier": 1, "focus": "Political"},
+    {"url": "https://news.google.com/rss/search?q=site:reuters.com+technology+when:24h&hl=en-US&gl=US&ceid=US:en", "name": "Reuters Tech", "lang": "en", "tier": 1, "focus": "Technological"},
+    {"url": "https://news.google.com/rss/search?q=site:reuters.com+environment+OR+climate+when:24h&hl=en-US&gl=US&ceid=US:en", "name": "Reuters Environment", "lang": "en", "tier": 1, "focus": "Environmental"},
 
     # --- Quality Broadsheets (depth, not duplicating wire coverage) ---
     {"url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml", "name": "NYT World", "lang": "en", "tier": 1, "focus": "Political"},
@@ -177,7 +178,8 @@ RSS_FEEDS = [
 
     # --- Policy / Legal ---
     {"url": "https://www.politico.com/rss/politicopicks.xml", "name": "Politico", "lang": "en", "tier": 1, "focus": "Political"},
-    {"url": "https://www.lawfaremedia.org/feed", "name": "Lawfare", "lang": "en", "tier": 1, "focus": "Legal"},
+    # Lawfare: Cloudflare blocks RSS fetchers; proxied via Google News
+    {"url": "https://news.google.com/rss/search?q=site:lawfaremedia.org+when:7d&hl=en-US&gl=US&ceid=US:en", "name": "Lawfare", "lang": "en", "tier": 1, "focus": "Legal"},
     {"url": "https://www.theguardian.com/politics/rss", "name": "Guardian Politics", "lang": "en", "tier": 1, "focus": "Political"},
     {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml", "name": "NYT Politics", "lang": "en", "tier": 1, "focus": "Political"},
     {"url": "https://www.scotusblog.com/feed/", "name": "SCOTUSblog", "lang": "en", "tier": 1, "focus": "Legal"},
@@ -221,7 +223,7 @@ RSS_FEEDS = [
     {"url": "https://www.asahi.com/rss/asahi/newsheadlines.rdf", "name": "朝日新聞デジタル", "lang": "ja", "tier": 1, "focus": "Social", "region": "japan"},
     {"url": "https://www.yomiuri.co.jp/feed/", "name": "読売新聞", "lang": "ja", "tier": 1, "focus": "Social", "region": "japan"},
     {"url": "https://rss.itmedia.co.jp/rss/2.0/itmedia_all.xml", "name": "ITmedia", "lang": "ja", "tier": 1, "focus": "Technological", "region": "japan"},
-    {"url": "https://jp.techcrunch.com/feed/", "name": "TechCrunch Japan", "lang": "ja", "tier": 1, "focus": "Technological", "region": "japan"},
+    # TechCrunch Japan closed May 2022; covered by global TechCrunch feed above
     {"url": "https://business.nikkei.com/rss/sns/nb.rdf", "name": "日経ビジネス", "lang": "ja", "tier": 1, "focus": "Economic", "region": "japan"},
 
     # ============================================================
@@ -235,7 +237,8 @@ RSS_FEEDS = [
 
     # --- AI Governance & Technology Policy ---
     {"url": "https://ainowinstitute.org/feed", "name": "AI Now Institute", "lang": "en", "tier": 2, "focus": "Technological"},
-    {"url": "https://www.adalovelaceinstitute.org/feed/", "name": "Ada Lovelace Institute", "lang": "en", "tier": 2, "focus": "Legal"},
+    # Ada Lovelace Institute: WordPress feed returns empty items; proxied via Google News
+    {"url": "https://news.google.com/rss/search?q=site:adalovelaceinstitute.org+when:30d&hl=en-US&gl=US&ceid=US:en", "name": "Ada Lovelace Institute", "lang": "en", "tier": 2, "focus": "Legal"},
     {"url": "https://futureoflife.org/feed/", "name": "Future of Life Institute", "lang": "en", "tier": 2, "focus": "Technological"},
 
     # --- Japan Foresight & Policy ---
@@ -277,7 +280,8 @@ RSS_FEEDS = [
     {"url": "https://www.themarginalian.org/feed/", "name": "The Marginalian", "lang": "en", "tier": 3, "focus": "Social", "region": "global"},
     {"url": "https://nautil.us/feed/", "name": "Nautilus", "lang": "en", "tier": 2, "focus": "Technological", "region": "global"},
     {"url": "https://www.anthropocenemagazine.org/feed/", "name": "Anthropocene Magazine", "lang": "en", "tier": 2, "focus": "Environmental", "region": "global"},
-    {"url": "https://bostonreview.net/feed/", "name": "Boston Review", "lang": "en", "tier": 2, "focus": "Political", "region": "global"},
+    # Boston Review: main /feed/ is empty; /latest/feed/ has articles
+    {"url": "https://www.bostonreview.net/latest/feed/", "name": "Boston Review", "lang": "en", "tier": 2, "focus": "Political", "region": "global"},
     {"url": "https://www.eurozine.com/feed/", "name": "Eurozine", "lang": "en", "tier": 2, "focus": "Social", "region": "global"},
     {"url": "https://rss.sciencedirect.com/publication/science/00163287", "name": "Futures Journal", "lang": "en", "tier": 2, "focus": "Technological", "region": "global"},
     {"url": "https://palladiummag.com/feed/", "name": "Palladium Magazine", "lang": "en", "tier": 2, "focus": "Political", "region": "global"},
@@ -318,7 +322,8 @@ RSS_FEEDS = [
 
     # --- Polycrisis & Systems Analysis ---
     {"url": "https://cascadeinstitute.org/feed/", "name": "Cascade Institute", "lang": "en", "tier": 3, "focus": "Environmental"},
-    {"url": "https://earth4all.life/feed/", "name": "Earth4All", "lang": "en", "tier": 3, "focus": "Environmental"},
+    # Earth4All: WordPress feed returns empty items; proxied via Google News
+    {"url": "https://news.google.com/rss/search?q=site:earth4all.life+when:30d&hl=en-US&gl=US&ceid=US:en", "name": "Earth4All", "lang": "en", "tier": 3, "focus": "Environmental"},
     {"url": "https://www.sciencedaily.com/rss/all.xml", "name": "ScienceDaily", "lang": "en", "tier": 3, "focus": "Technological"},
 ]
 
@@ -342,9 +347,15 @@ def fetch_all_feeds() -> list[dict]:
     articles = []
     seen_urls = set()
 
+    # Use browser-like User-Agent to avoid being blocked by WAFs (e.g. Cloudflare)
+    ua = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+
     for feed_info in RSS_FEEDS:
         try:
-            feed = feedparser.parse(feed_info["url"])
+            feed = feedparser.parse(
+                feed_info["url"],
+                agent=ua,
+            )
             # Tier 1: fetch more to fill 2000-article target; Tier 2/3: fetch all
             max_entries = 100 if feed_info.get("tier", 1) == 1 else 50
             for entry in feed.entries[:max_entries]:
