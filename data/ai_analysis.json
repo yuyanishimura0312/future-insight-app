@@ -667,49 +667,169 @@
   },
   "weak_signals": [
     {
-      "signal": "AI安全規制への市民的反発と民主化圧力",
-      "description": "科学者や政策立案者がSuper Intelligence禁止を呼びかける一方で、AI企業が「信頼できる企業のみへの技術共有」という戦略で規制回避を図っている。この非対称な対立構造は、AI規制が従来の民主的プロセスではなく、企業の自主規制枠組みによって決定される危険性を示唆している。",
+      "signal": "『精神衛生危機の若年層集約化』による「生殖志向の急速な棄却」",
+      "description": "香港の若年層・学生の精神疾患増加、米国での将来世代への懸念の国民レベル拡散、「子どもを持つことの心理的障壁」が新段階に。単なる経済的先延ばしではなく、『世代的実存的危機』が生殖を拒否する文化的前提へ転化し始めている兆し。",
       "related_headlines": [
-        "Prominent Scientists, Faith Leaders, Policymakers and Artists Call for a Prohibition on Superintelligence, as Poll Shows Americans Don't Want It",
+        "Rise in mental illness cases among Hong Kong students 'reflects growing openness'",
+        "Have Mental Health Concerns Influenced Your Choice to Have Children?",
+        "Americans underestimate national levels of concern for future generations: Evidence across collective, governmental and moral considerations"
+      ],
+      "pestle_categories": [
+        "社会",
+        "経済"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "5-10年",
+      "counter_trend": "人口維持・家族形成を前提とした社会政策",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 2,
+      "three_horizons": "H1",
+      "cla_depth": "myth",
+      "scores": {
+        "novelty": 9,
+        "disruption": 9,
+        "connectivity": 8,
+        "credibility": 6,
+        "early_stage": 9
+      },
+      "evidence_type": "statistical",
+      "composite_score": 8.4,
+      "noise_flag": false
+    },
+    {
+      "signal": "「世界モデル」開発競争の隠れた激化",
+      "description": "李飛飛らの中国AI企業による320億円規模の投資で「人類超越AI」実現を目指す動きと、OpenAI・Anthropicが「信頼できる企業のみに最新技術を限定」する戦略が同時進行。これは単なるAI競争ではなく、デジタル空間における『世界の認識枠組み』を制御する新種の地政学的競争の萌芽。",
+      "related_headlines": [
+        "Chinese tech giants, AI 'godmother' Li Fei-Fei race to seize the edge in world models",
         "Like Anthropic, OpenAI Will Share Latest Technology Only With Trusted Companies",
-        "AI Giants Go on Charm Offensive to Avert Public Backlash",
-        "'Safety first' puts Anthropic ahead in game of AI spin"
+        "AGIはいつ実現？中国ゲーム界の伝説･陳天橋氏が3200億円投じる｢人類超えAI｣の核心"
       ],
       "pestle_categories": [
         "技術",
         "政治",
-        "社会"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "市場主導のAI発展とビッグテック企業による技術民主化の議論"
-    },
-    {
-      "signal": "エネルギー主権化による地政学的権力分散",
-      "description": "カナダの北極圏での地熱発電、南米でのクリーンエネルギー自給力強化など、各地域が『電化主権』を通じて外部エネルギー依存から脱却しようとしている。これは従来のグローバル化とは逆行する、地域別の『エネルギーのローカル化』として機能し、地政学的権力構造を再編成する可能性がある。",
-      "related_headlines": [
-        "Geothermal power is the key to cheaper energy in the Canadian Arctic",
-        "Experts call for 'electrified sovereignty' through clean domestic power to overcome energy crises - Earth4All",
-        "How South Korea plans to use the Iran crisis to spur a renewables revolution",
-        "Can Japan's US$10b energy shield oust China's influence in Southeast Asia?"
-      ],
-      "pestle_categories": [
-        "技術",
-        "環境",
-        "政治"
+        "経済"
       ],
       "potential_impact": "high",
       "time_horizon": "3-5年",
-      "counter_trend": "グローバルサプライチェーン統合とエネルギーの中央集約的供給体制"
+      "counter_trend": "AIは国家中立的な科学技術であり、開発競争より安全性協調が優先されるべきという国際規範",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H1",
+      "cla_depth": "myth",
+      "scores": {
+        "novelty": 9,
+        "disruption": 9,
+        "connectivity": 8,
+        "credibility": 7,
+        "early_stage": 8
+      },
+      "evidence_type": "mixed",
+      "composite_score": 8.3,
+      "noise_flag": false
     },
     {
-      "signal": "権威主義的統治のテクノロジー実装化",
-      "description": "ハンガリーの政権交代、ロシア寄りの指導者の敗北など表面的には民主主義の勝利に見えるが、同時にPalantirなどの監視テクノロジーが移民取り締まりに組み込まれ、DHS予算により不透明に運用されている。テクノロジーによる国家権力の集中化が民主的監視をかいくぐって進行中である。",
+      "signal": "民主主義制度そのものへの構造的な信頼喪失",
+      "description": "「Think Tanks Have Defeated Democracy」という命題的な批判、ハンガリー・メローニの政治的敗北、米国での権力分離の機能不全（議会の機能停止的分裂）、民主主義国での『こども選挙』など参政権の拡張実験など、民主的意思決定メカニズムそのものの正当性が多面的に問われ始めている。既存の代議制民主主義が『機能する統治』と『市民の正当性感覚』の両方を失いかけている兆候。",
       "related_headlines": [
-        "Congress Turns Up Pressure on DHS Over Palantir's Role in Immigration Crackdown",
-        "The Trump Administration Has Fired Over 100 Immigration Judges Without Explanation",
-        "Google Broke Its Promise to Me. Now ICE Has My Data.",
-        "The FAA's 'Temporary' Flight Restriction for Drones is a Blatant Attempt to Criminalize Filming ICE"
+        "Think Tanks Have Defeated Democracy",
+        "Why Orban and Hungary are not one and the same",
+        "Orban's defeat threatens to halt Hungarian support of populist right",
+        "これは、私たち一人ひとりが主権を回復していくプロセス。「こども選挙」が、主権者である子どもたちを信じた先に描く未来とは",
+        "Language and democracy"
+      ],
+      "pestle_categories": [
+        "政治",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "民主的ガバナンスは依然として権威主義体制より安定で包括的であるという自由主義的前提",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 2,
+      "three_horizons": "H1",
+      "cla_depth": "myth",
+      "scores": {
+        "novelty": 8,
+        "disruption": 10,
+        "connectivity": 9,
+        "credibility": 7,
+        "early_stage": 7
+      },
+      "evidence_type": "theoretical",
+      "composite_score": 8.2,
+      "noise_flag": false
+    },
+    {
+      "signal": "『電力主権』による地政学的権力の再编成",
+      "description": "「電力化された主権」という概念が浮上。カナダのアークティック地熱、TSMC半導体供給チェーンの地理的分散、中国の海外投資レバレッジなどから、国家権力の基盤がエネルギー・技術基盤に完全にシフトしている。従来のハードパワー・ソフトパワー二項対立が形骸化。",
+      "related_headlines": [
+        "Can Japan's US$10b energy shield oust China's influence in Southeast Asia?",
+        "Geothermal power is the key to cheaper energy in the Canadian Arctic",
+        "Experts call for \"electrified sovereignty\" through clean domestic power to overcome energy crises",
+        "TSMC's Kumamoto Fab Upgrade: A Security-Driven Reconfiguration of Indo-Pacific Chip Competition"
+      ],
+      "pestle_categories": [
+        "政治",
+        "経済",
+        "技術",
+        "環境"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "ハードパワーとソフトパワーの分離可能性という国際関係学の基本前提",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 8,
+        "disruption": 9,
+        "connectivity": 9,
+        "credibility": 8,
+        "early_stage": 7
+      },
+      "evidence_type": "mixed",
+      "composite_score": 8.2,
+      "noise_flag": false
+    },
+    {
+      "signal": "『生態系のケーパビリティ反転』における「人新世の局地的リセット」",
+      "description": "アフリカの森林がカーボンシンク→ソースへ反転、ハワイの鳥類喪失に関する50年仮説の覆滅、コロラド川消失の『隠れた行き先』発見など、生態学的『前提の実験的再検証』が相次ぐ。人間の制御外での非線形な生態変動が既知モデルを無効化する段階に突入。",
+      "related_headlines": [
+        "Africa's forests have flipped from carbon sink to carbon source",
+        "Scientists just debunked a 50-year myth about Hawaii's birds",
+        "Scientists finally know where the Colorado River's missing water is going"
+      ],
+      "pestle_categories": [
+        "環境",
+        "技術"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "気候変動の直線的・予測可能なモデル",
+      "signal_type": "wild_card",
+      "ansoff_level": 2,
+      "three_horizons": "H1",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 9,
+        "disruption": 9,
+        "connectivity": 7,
+        "credibility": 8,
+        "early_stage": 8
+      },
+      "evidence_type": "empirical",
+      "composite_score": 8.2,
+      "noise_flag": false
+    },
+    {
+      "signal": "『規制当局の権力喪失』における『テック企業自主規制への権力譲渡』",
+      "description": "Anthropicが法廷命令に対抗、OpenAIが『信頼できる企業のみへの最新技術配布』を表明、AI安全性ガバナンスが完全に私的企業の判断に依存する状況が公的に容認されている。政府規制機関が『AI企業が何をするか』を事前に知り得ず、事後的な『イメージ管理』のみで対応する構図が確立。",
+      "related_headlines": [
+        "Like Anthropic, OpenAI Will Share Latest Technology Only With Trusted Companies",
+        "Federal Court Denies Anthropic's Motion to Lift 'Supply Chain Risk' Label",
+        "White House AI Framework Proposes Industry-Friendly Legislation - Lawfare",
+        "Michael Kleinman reacts to breakthrough AI safety legislation"
       ],
       "pestle_categories": [
         "技術",
@@ -718,14 +838,188 @@
       ],
       "potential_impact": "high",
       "time_horizon": "1-3年",
-      "counter_trend": "テクノロジー企業による民主的透明性と倫理的利用原則の推進"
+      "counter_trend": "公的規制当局による民間セクターへの監督権と強制力",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 8,
+        "disruption": 9,
+        "connectivity": 8,
+        "credibility": 8,
+        "early_stage": 8
+      },
+      "evidence_type": "empirical",
+      "composite_score": 8.2,
+      "noise_flag": false
     },
     {
-      "signal": "量子コンピューティングの『スーパーアトム』ブレークスルー",
-      "description": "『巨大スーパーアトム』がクォンタムコンピューティングの最大の問題を解決する可能性が示唆され、これまで不可能とされてきた計算能力が実現に近づいている。この技術的ブレークスルーは、現在のAI企業の競争優位を根本から覆す可能性を秘めており、テックジャイアンツの寡占構造に対する新たな脅威となるかもしれない。",
+      "signal": "イラン戦争による「予期しない複合危機」の出現",
+      "description": "中東紛争が単なる地域紛争ではなく、供給チェーン・エネルギー市場・為替・債務危機・民主的分裂を同時に誘発。IMFが公式に「ドナルド・トランプが原因」と名指し批判。民主主義国内での権力分離の機能不全（議会でのイラン戦争権限めぐる対立）と地政学的混乱が同期。予測不可能性そのものが戦略的要因になり始めている。",
       "related_headlines": [
+        "出口の見えないイラン戦争：米欧の亀裂が深刻化",
+        "How the Iran War Will Upend the Global Economy",
+        "Strength in numbers: Developing countries band together as Iran war batters global economy",
+        "Middle East War Will Slow Global Economic Growth, I.M.F. Warns",
+        "Senate Republicans Again Block Bid to Limit Trump's Iran War Powers",
+        "The Untold Risks of War"
+      ],
+      "pestle_categories": [
+        "政治",
+        "経済",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "戦争は地域化・封じ込め可能という冷戦後の仮定",
+      "signal_type": "wild_card",
+      "ansoff_level": 2,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 10,
+        "connectivity": 10,
+        "credibility": 9,
+        "early_stage": 5
+      },
+      "evidence_type": "empirical",
+      "composite_score": 8.1,
+      "noise_flag": false
+    },
+    {
+      "signal": "『規制当局の複層的権力喪失』における「テック企業の『自主規制』への権力転移」",
+      "description": "OpenAI・Anthropic が『信頼できる企業のみ』への最新技術限定供与を『自主規制』として実施、Live Nation-Ticketmaster の独占違法判決が実行困難（市場再編成が進まない）など、『制度的規制の実効性喪失』と『企業による自律的階級化』が並行。統治権そのものの『解体と再編成』の予兆。",
+      "related_headlines": [
+        "Like Anthropic, OpenAI Will Share Latest Technology Only With Trusted Companies",
+        "Live Nation and Ticketmaster Illegally Monopolized Ticketing Market, Jury Finds",
+        "AI Giants Go on Charm Offensive to Avert Public Backlash"
+      ],
+      "pestle_categories": [
+        "法律",
+        "技術",
+        "経済"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "国家・規制当局による法的執行権の独占",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 2,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 8,
+        "disruption": 9,
+        "connectivity": 8,
+        "credibility": 7,
+        "early_stage": 8
+      },
+      "evidence_type": "empirical",
+      "composite_score": 8.1,
+      "noise_flag": false
+    },
+    {
+      "signal": "AI安全性への多元的な制度的圧力形成",
+      "description": "科学者・宗教指導者・政策立案者による「超知能禁止」の公開要求、Future of Life Instituteの規制キャンペーン、Anthropicへの「供給チェーンリスク」ラベル付与、AI企業の公開姿勢の急速な転換など、単なる技術議論から制度的・法的規制枠組みへの転換が同時多発的に生じている。これは技術パラダイムの倫理的正当性そのものが問われ始める兆候。",
+      "related_headlines": [
+        "Prominent Scientists, Faith Leaders, Policymakers and Artists Call for a Prohibition on Superintelligence",
+        "Future of Life Institute Launches Multimillion Dollar Nationwide AI Regulation Campaign",
+        "Federal Court Denies Anthropic's Motion to Lift 'Supply Chain Risk' Label",
+        "Google DeepMind Falls Behind OpenAI in Latest Safety Review; All AI Companies Still Falling Short",
+        "Michael Kleinman reacts to breakthrough AI safety legislation"
+      ],
+      "pestle_categories": [
+        "技術",
+        "法律",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "AI企業による自発的安全性研究と「信頼獲得」戦略が、国家・市民による強制的規制圧力に先制されている",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 8,
+        "disruption": 9,
+        "connectivity": 8,
+        "credibility": 8,
+        "early_stage": 7
+      },
+      "evidence_type": "mixed",
+      "composite_score": 8.0,
+      "noise_flag": false
+    },
+    {
+      "signal": "イラン戦争による『不測の複合危機カスケード』の出現",
+      "description": "イラン戦争がホルムズ海峡、エネルギー価格、グローバル・サプライチェーン、通貨体制に同時多発的な衝撃を与えている。従来の「リスク管理可能な紛争」モデルの前提が崩壊し、システム間の予測困難な相互作用が顕在化している。",
+      "related_headlines": [
+        "The Iran War, ASEAN and Global Supply Chains",
+        "Strength in numbers: Developing countries band together as Iran war batters global economy",
+        "How the Iran War Will Upend the Global Economy",
+        "IMF says strait of Hormuz closure raises prospect of 'major energy crisis'"
+      ],
+      "pestle_categories": [
+        "政治",
+        "経済"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "地域紛争の限定的影響と予測可能なグローバル経済調整",
+      "signal_type": "wild_card",
+      "ansoff_level": 4,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 6,
+        "disruption": 10,
+        "connectivity": 9,
+        "credibility": 9,
+        "early_stage": 7
+      },
+      "evidence_type": "empirical",
+      "composite_score": 8.0,
+      "noise_flag": false
+    },
+    {
+      "signal": "司法権の『政治的中立性喪失』の制度的露呈",
+      "description": "米国最高裁判事間の公開的な人格攻撃（ソトマイヨル判事によるカバノー判事への「不適切な批判」）、及び連邦判事の大量無説明解雇（トランプ政権によるイミグレーション判事100人以上の突然解雇）という相次ぐ事象により、司法の独立性と政治的中立性が制度的に崩壊しつつある兆候。これは法治国家の最後の砦とされた司法権そのものの正当性基盤が動揺していることを示唆する。",
+      "related_headlines": [
+        "Justice Sotomayor Apologizes for Highly Personal Criticism of Justice Kavanaugh",
+        "The Trump Administration Has Fired Over 100 Immigration Judges Without Explanation",
+        "Why does the government keep showing up at the Supreme Court uninvited?"
+      ],
+      "pestle_categories": [
+        "政治",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "司法権の政治からの自立と『法の支配』の制度的保障という20世紀型民主主義の根本前提",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 8,
+        "disruption": 9,
+        "connectivity": 7,
+        "credibility": 9,
+        "early_stage": 7
+      },
+      "evidence_type": "empirical",
+      "composite_score": 8.0,
+      "noise_flag": false
+    },
+    {
+      "signal": "素材科学による物理法則の実験的再編成",
+      "description": "「Graphene just defied a fundamental law of physics」という報告、「Giant superatoms」による量子計算の新パラダイム、GaN技術による次世代パワーエレクトロニクスなど、材料レベルでの基礎物理の『再解釈』が加速している。単なる技術進歩ではなく、既知の物理的制約が『再交渉可能』であることが実証され始めている。技術の『不可能性フロンティア』そのものがシフト中。",
+      "related_headlines": [
+        "Graphene just defied a fundamental law of physics",
         "\"Giant superatoms\" could finally solve quantum computing's biggest problem",
-        "The Gas Inside Your AI Chip",
+        "Enabling Next-Generation Power Conversion: Design, Dynamic Characterization, and Application of Gallium Nitride Bidirectional Switches",
         "Continuously tunable coherent pulse generation in a semiconductor laser"
       ],
       "pestle_categories": [
@@ -733,1064 +1027,1378 @@
       ],
       "potential_impact": "high",
       "time_horizon": "5-10年",
-      "counter_trend": "従来のシリコンベース半導体とAIチップの継続的な改善"
+      "counter_trend": "物理学的制約は普遍的・不変であり、エンジニアリングはその中での最適化にすぎないという決定論的観点",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 9,
+        "disruption": 8,
+        "connectivity": 6,
+        "credibility": 8,
+        "early_stage": 8
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.9,
+      "noise_flag": false
     },
     {
-      "signal": "デジタル弱者による低テク抵抗と自治の再構築",
-      "description": "福島の浪江町、ケニアの土壌再生など、デジタル化から外れた地域が『シビックテック』や『自給力』を通じてボトムアップの自治を再構築している。この動きは、テクノロジー依存度の低い、ローカルな自給自足モデルが新しい社会基盤として機能し始めたことを示唆している。",
+      "signal": "『共有サービスと法規制の不可調和』による『インフォーマル正当性』の萌芽",
+      "description": "インドネシア・バリのAirbnb違法民宿、豪州のUber Eats/DoorDash e-バイク規制、ウガンダのダイヤルアップ業者規制など、プラットフォーム経済が既存法枠組みを構造的に突破している。単なる脱法ではなく、『非国家主体による秩序形成』の実験が並行進行中。",
       "related_headlines": [
-        "生きることそのものに、再び当事者として関わること。ゼロから自分たちで社会をつくる福島県浪江町の高橋大就さんと「生き延びるための自治」を考える",
-        "自給力とは、自分の生命を自分で守ること。大山修一さんがアフリカで\"資源循環による土壌再生\"を実装しながら追求する「平和な社会」",
-        "シビックテックで自治をひらく。Code for Japan 関治之さんが語る「社会のバグ」の直し方",
-        "人口300人のまちで、休校した小中学校が再開へ。和歌山・富貴地区に移住した家族が「フキシネマパラダイス」から発信する、自分たちで地域をつくる楽しさ"
+        "Indonesia's Bali wants illegal rentals to be legitimate as operators flag red tape",
+        "Queensland ebike laws could cripple Uber Eats, DoorDash and shared e-vehicle schemes, industry warns"
       ],
       "pestle_categories": [
-        "社会",
+        "法律",
+        "経済",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "規制当局による統一的・垂直的な法執行モデル",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 8,
+        "disruption": 8,
+        "connectivity": 9,
+        "credibility": 7,
+        "early_stage": 7
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.9,
+      "noise_flag": false
+    },
+    {
+      "signal": "『物理法則の再編成可能性』の実験的実証",
+      "description": "グラフェンが基本物理法則に『逆行する特性』を発揮、「giant superatoms」による量子コンピューティング基盤の原理的革新など、既知の自然科学的『宇宙法則』を超越する物質構造が設計可能段階に。科学の『根本的リベース化』の兆し。",
+      "related_headlines": [
+        "Graphene just defied a fundamental law of physics",
+        "\"Giant superatoms\" could finally solve quantum computing's biggest problem"
+      ],
+      "pestle_categories": [
         "技術",
         "環境"
-      ],
-      "potential_impact": "medium",
-      "time_horizon": "3-5年",
-      "counter_trend": "都市化とデジタル化による中央集約的なサービス供給とスマートシティ構想"
-    },
-    {
-      "signal": "医療診断におけるAI民主化と医学的不確実性の可視化",
-      "description": "ChatGPTが医学的見落としを発見し、AI医療診断が主流化し始めている一方で、同時に従来医学の『不確実性』が露呈している。これにより、医療知識の独占が専門家から機械学習に移行し、個人の医療リテラシー格差が拡大する新たな不平等が生じる可能性を示唆している。",
-      "related_headlines": [
-        "ChatGPT 'uncovered woman's rare condition' after years of misdiagnosis",
-        "AI identifies early risk patterns for skin cancer",
-        "Stanford scientists discover \"natural Ozempic\" without side effects",
-        "How low should blood pressure go? Science has the answer"
-      ],
-      "pestle_categories": [
-        "技術",
-        "社会"
-      ],
-      "potential_impact": "medium",
-      "time_horizon": "1-3年",
-      "counter_trend": "医療専門家の権威と医学的知識の集約化"
-    },
-    {
-      "signal": "言語と民主主義の再定義：法律テキストの民主的アクセス化",
-      "description": "著作権がAIによる法律テキスト読み上げを阻止しようとしている一方で、複数の裁判所が『法律を読んで話す権利は著作権で禁止できない』と判断している。この転換は、国家権力を象徴する法律知識そのものの民主化を意味し、司法の透明性と市民主権に根本的な変化をもたらす可能性がある。",
-      "related_headlines": [
-        "Another Court Rules Copyright Can't Stop People From Reading and Speaking the Law",
-        "Language and democracy",
-        "Supreme Court Agrees With EFF: ISPs Don't Have To Be Copyright Enforcers",
-        "Speaking Freely: Jacob Mchangama"
-      ],
-      "pestle_categories": [
-        "法律",
-        "技術",
-        "政治"
-      ],
-      "potential_impact": "medium",
-      "time_horizon": "3-5年",
-      "counter_trend": "知的財産権による情報独占と専門家による知識ゲートキーピング"
-    },
-    {
-      "signal": "クリプト主権の地政学的台頭：新しい並行金融圏の構築",
-      "description": "キルギスタンが『Cryptostan』として暗号資産取引の中心地化を推し進め、従来の国家金融監視システムの外側に新たな経済圏が形成されている。この動きは国民国家の経済主権が分散型テクノロジーにより蚕食されていることを示唆し、既存の中央銀行システムに対する構造的な脅威となっている。",
-      "related_headlines": [
-        "Welcome to Cryptostan: Kyrgyzstan and the Emerging Crypto Corridor",
-        "CEO of bitcoin firm championed by Nigel Farage leaves company",
-        "Digital Currency, Information Frictions and Monetary Policy",
-        "China's PBOC raises leverage ratios for foreign lenders to support outbound investment"
-      ],
-      "pestle_categories": [
-        "技術",
-        "経済",
-        "政治"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "3-5年",
-      "counter_trend": "中央銀行デジタル通貨（CBDC）による国家金融監視システムの強化"
-    },
-    {
-      "signal": "AI企業による『信頼』マーケティングの政治化",
-      "description": "Anthropic、OpenAIなどが『安全性第一』というナラティブでブランド化しながら、実際には選別的な技術配布で市場支配を強化している。これはAI企業が規制当局や市民から『信頼』を獲得することで、政治的影響力を直接的に確保しようとする戦略であり、従来の産業ロビイングとは異なる『信頼ベースの権力化』として機能している。",
-      "related_headlines": [
-        "'Safety first' puts Anthropic ahead in game of AI spin",
-        "Michael Kleinman reacts to breakthrough AI safety legislation",
-        "Google DeepMind Falls Behind OpenAI in Latest Safety Review; All AI Companies Still Falling Short, Say Experts",
-        "AI Giants Go on Charm Offensive to Avert Public Backlash"
-      ],
-      "pestle_categories": [
-        "技術",
-        "政治",
-        "社会"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "透明性と第三者規制に基づく従来のコンプライアンス体制"
-    },
-    {
-      "signal": "イラン戦争による『サプライチェーン脱グローバル化』の加速",
-      "description": "イラン戦争が激化する中、グローバル供給網が分断され、先進国がローカル化とリショアリングを急速に推し進めている。ホルムズ海峡閉鎖リスクや『最悪のエネルギー危機』の警告は、従来の効率性優先のサプライチェーン思想が転換し、国家別の『供給安全保障』がビジネス戦略の最優先化していることを示唆している。",
-      "related_headlines": [
-        "The Iran War, ASEAN and Global Supply Chains",
-        "Middle East conflict chokes end of supply chain as lights go out in the Pacific",
-        "IMF says strait of Hormuz closure raises prospect of 'major energy crisis' – video",
-        "Strength in numbers: Developing countries band together as Iran war batters global economy"
-      ],
-      "pestle_categories": [
-        "経済",
-        "技術",
-        "政治"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "ジャスト・イン・タイム生産と国家を超えた効率的グローバル分業"
-    },
-    {
-      "signal": "生成AIの『スロップ化』による美的価値基準の崩壊",
-      "description": "AI生成コンテンツの大量生産がオンライン空間を低品質で満たす一方、『プラトニック的AI反論』として人間の美的判断力と創造性の再評価が始まっている。この反動は単なる美学的議論ではなく、AI依存的な情報環境に対する社会的・認識論的な抵抗であり、『情報品質』が新たな経済的・政治的価値基準として浮上する可能性を示唆している。",
-      "related_headlines": [
-        "The Platonic Case Against AI Slop",
-        "Half of Gen Z Uses AI, but Their Feelings Are Souring, Study Shows",
-        "It's Not An AI Hallucination — It's Lazy Editing Of A Human Paralegal",
-        "AI needs solid botanical data more than ever"
-      ],
-      "pestle_categories": [
-        "技術",
-        "社会",
-        "文化"
-      ],
-      "potential_impact": "medium",
-      "time_horizon": "1-3年",
-      "counter_trend": "AI効率化とコンテンツ大量生産の経済的優位性"
-    },
-    {
-      "signal": "AI規制におけるグローバルサウスの台頭と多極的ガバナンス",
-      "description": "従来はG7や米国がAI規制を主導してきたが、中国の『人類超えAI』投資（3200億円）、インドのAI人材不足の構造的解決、南米でのローカルAI開発が並行して進行している。これはAI規制が多極化し、西側の規制フレームが非西側経済を支配する道具ではなく、複数の対抗的なAIガバナンス体制が競合する時代への転換を示唆している。",
-      "related_headlines": [
-        "AGIはいつ実現？中国ゲーム界の伝説･陳天橋氏が3200億円投じる｢人類超えAI｣の核心 | 政治・経済・投資 | 東洋経済オンライン",
-        "Chinese tech giants, AI 'godmother' Li Fei-Fei race to seize the edge in world models",
-        "Reframing talent scarcity: A finnish Delphi-based study co-constructing expert-informed scenarios for HE–industry collaboration toward an AI-literate workforce",
-        "White House AI Framework Proposes Industry-Friendly Legislation - Lawfare"
-      ],
-      "pestle_categories": [
-        "技術",
-        "政治",
-        "経済"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "3-5年",
-      "counter_trend": "西側先進国による単一的なAI規制フレームワークの国際的拡張"
-    },
-    {
-      "signal": "民主主義制度の『思考停止化』：シンクタンク支配による政策決定の民主的正当性喪失",
-      "description": "政治的決定がシンクタンクやエリート層による事前決定により民主的プロセスが形骸化している兆候。国会での議論が後付けの追認となり、主権者である国民の意思決定能力が委譲される構造的危機。この傾向は民主主義の根底を揺さぶり、政治的正当性の危機をもたらす。",
-      "related_headlines": [
-        "Think Tanks Have Defeated Democracy",
-        "参議院憲法審査会が今の国会で初めて開催 各党が意見表明",
-        "高市首相 \"国論二分の政策実現に全力"
-      ],
-      "pestle_categories": [
-        "政治"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "3-5年",
-      "counter_trend": "民主的参加と透明性を求める市民運動による民主主義の再活性化"
-    },
-    {
-      "signal": "『幽霊労働力』の制度化：非正規雇用の正規化拒否とカースト化する労働秩序",
-      "description": "インドで労働者の9割が非正規雇用のまま放置され、イデオロギー的に正規化が拒否されている現象は、新興国における労働階級の恒久的周辺化を意味する。ブラジルのルーラ政権でさえ労働虐待危機に直面しており、グローバルサウスの『発展モデル』そのものが労働搾取の継続を前提としていることが露呈。",
-      "related_headlines": [
-        "インドは本当に「中国式成長軌道」を進んでいるのか？ 労働者の9割を占める非正規雇用と、正規化を拒むイデオロギー対立",
-        "After Fighting for the Rights of Workers, Brazil's President Lula Faces a Labor Abuse Crisis",
-        "Gender Inequalities in Japan and South Korea: Labor Market, Employment, and Education"
-      ],
-      "pestle_categories": [
-        "経済",
-        "社会"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "3-5年",
-      "counter_trend": "労働者の自己組織化と労働市場の正規化を求める社会運動の拡大"
-    },
-    {
-      "signal": "『通貨ナショナリズム』の並行化：新興国による多通貨決済圏の構築と米ドル覇権の段階的侵食",
-      "description": "イラン戦争下でG20が世界経済安定について『トランプを名指しできない』状況下でも、新興国が米ドル以外の決済手段を急速に構築している。キューバの通貨統一問題から中国の海外投資ファイナンス、南アフリカの外交的再編成まで、米ドル依存からの逃散が加速。これは1944年以来の金融秩序の可逆的な解体を示唆。",
-      "related_headlines": [
-        "Double Trouble: Currency Unification in Cuba",
-        "USMCA Annual Review Risks Halting Mexican Peso Rally, BBVA Says",
-        "China's PBOC raises leverage ratios for foreign lenders to support outbound investment",
-        "G20 財務相・中央銀行総裁会議 世界経済の安定へ議論深まるか"
-      ],
-      "pestle_categories": [
-        "経済"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "3-5年",
-      "counter_trend": "米ドルの国際決済通貨としての継続的優位性と米国による経済的強制力の維持"
-    },
-    {
-      "signal": "『防衛的脱グローバル化』による地域アイデンティティの政治化：供給鎖の『短鎖化』と自給力ナショナリズム",
-      "description": "イラン戦争によるホルムズ海峡の脅威から、カナダ・オーストラリアが積極的に『electrified sovereignty（清潔エネルギーによる主権回復）』を宣言。農業、エネルギー、食糧の地域化が政治的フレームとして正当性を持つようになり、『自給力とは自分の生命を自分で守ること』という言説が社会的共鳴を生む。グローバル資本主義下では不可視化されていた地域経済圏の価値がポリティカル化。",
-      "related_headlines": [
-        "Geothermal power is the key to cheaper energy in the Canadian Arctic",
-        "Experts call for \"electrified sovereignty\" through clean domestic power to overcome energy crises - Earth4All",
-        "自給力とは、自分の生命を自分で守ること。大山修一さんがアフリカで\"資源循環による土壌再生\"を実装しながら追求する「平和な社会」",
-        "Can Japan's US$10b energy shield oust China's influence in Southeast Asia?"
-      ],
-      "pestle_categories": [
-        "経済",
-        "環境",
-        "社会"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "3-5年",
-      "counter_trend": "効率性と規模の経済を求めるグローバルサプライチェーンの深化と統合"
-    },
-    {
-      "signal": "『監視国家の民主的正当化危機』：FISA改正をめぐる米国議会の根本的対立",
-      "description": "令状なし監視の是非をめぐって米国議会が深刻に分裂し、共和党内でさえ権力分立の原則が揺らいでいる。これは『テロ対策』という名目下の監視権力が民主主義と直接に相容れないものであることの自覚的認識を示す。権威主義的統治ツールとしての監視システムが、民主的な異議唱和により『不当な権力』として再認識される転換点。",
-      "related_headlines": [
-        "Fisa surveillance vote sparks fierce debate as Congress splits on warrantless monitoring",
-        "The FAA's \"Temporary\" Flight Restriction for Drones is a Blatant Attempt to Criminalize Filming ICE",
-        "Last arguments of the term: huge cases for the Fourth Amendment and immigration"
-      ],
-      "pestle_categories": [
-        "政治",
-        "法律"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "国家安全保障を理由とした監視権限の強化と拡大"
-    },
-    {
-      "signal": "『取り残された多数派』の発見：AI導入時代の労働者スキル二極化と下位95%の動員困難性",
-      "description": "AI企業が『AI時代の人材育成』に躍起になっても、実際には労働力の95%が『retraining不可能』なゾーンに位置していることが露呈。札幌のバス運転手不足で海外人材募集に走る一方、日本全国で『OJTが機能しない』『幹部が育たない』という根本的な人材形成システムの崩壊が語られている。テクノロジー導入と人的資本形成のミスマッチが、失業ではなく『不完全雇用』を恒久化。",
-      "related_headlines": [
-        "札幌 路線バスの運転手不足が深刻化 海外で人材募集し育成へ",
-        "OJTはなぜ機能しなくなったのか──MBA再評価の本質　企業も役所も幹部が育たない国──OJT崩壊と日本の危機①",
-        "AIレビュー全盛期、取り残された95%を動かす「BoostDraft」の法務DX",
-        "Reframing talent scarcity: A finnish Delphi-based study co-constructing expert-informed scenarios for HE–industry collaboration toward an AI-literate workforce"
-      ],
-      "pestle_categories": [
-        "経済",
-        "社会",
-        "技術"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "3-5年",
-      "counter_trend": "スキル習得による雇用の可塑性と市場適応能力への信仰"
-    },
-    {
-      "signal": "『ポピュリスト右翼の敗北の地政学化』：オルバンの選挙大敗がもたらす欧州民主主義の再編",
-      "description": "ハンガリーのオルバン首相（16年ぶりの政権交代）やイタリアのメローニ首相（憲法改正国民投票敗北）の連続的敗北は、単なる政権交代ではなく『ポピュリスト統治モデルの正当性危機』を示唆。トランプへの支持表明さえ選挙敗北を止められず、権威主義的統治手法の『魅力喪失』が可視化。新興民主主義国における『民主的逆行』が一時的なトレンドではなく、市民の抵抗により反転可能であることの実証。",
-      "related_headlines": [
-        "Why Orban and Hungary are not one and the same",
-        "Orbán's defeat threatens to halt Hungarian support of populist right",
-        "The Trump trap: Why Meloni's referendum defeat is a warning for Europe",
-        "Orban's Defeat Punctures Europe's Far Right, but Also Offers It a Road Map",
-        "ハンガリー 16年ぶり政権交代へ 一夜明け 歓迎や期待の声"
-      ],
-      "pestle_categories": [
-        "政治"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "グローバル化への反発と権威主義的解決策への継続的な支持"
-    },
-    {
-      "signal": "『秘密国家』の可視化：英国のセキュリティ・クリアランス制度における民主的説明責任の喪失",
-      "description": "マンデルソン失格問題は、国家セキュリティに関わる決定が議会からも公開的説明からも隔離され、事後的に露呈するまで『秘密のまま』という民主主義の根本的危機を暴露。これは『国家』が『人民主権』から独立した行動主体であることを制度的に容認していることに等しい。民主主義を標榜する先進国でさえ、国家権力の『黒い領域』が拡大している現実。",
-      "related_headlines": [
-        "Five key questions: who overruled decision to deny Mandelson security clearance?",
-        "Epstein row: UK's Starmer faces calls to resign over report that Mandelson failed vetting",
-        "Officials debate withholding Mandelson vetting documents from parliament",
-        "Revealed: Mandelson failed vetting but Foreign Office overruled decision"
-      ],
-      "pestle_categories": [
-        "政治",
-        "法律"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "国家安全保障に基づく情報の秘匿と専門家的判断への信頼"
-    },
-    {
-      "signal": "『イラン戦争のグローバル・サプライショック化』：IMFが『原因を名指しできない』政治的引き裂きの出現",
-      "description": "IMFが明確にトランプを名指しできず『イラン情勢』の曖昧性の中でグローバル成長減速を警告するという奇妙な状況は、米国内の政治分裂が国際金融秩序を揺さぶっていることの証。ホルムズ海峡の脅威が単なる地政学ではなく、米国行政府の一貫性喪失による不確実性を輸出している。中国さえ『予想外に好調』な成長を続ける中、先進国の政治的失能による経済危機という逆転現象。",
-      "related_headlines": [
-        "Middle East War Will Slow Global Economic Growth, I.M.F. Warns",
-        "The IMF refuses to name the cause of this global chaos. It starts with 'Donald' and ends in 'Trump'",
-        "How the Iran War Will Upend the Global Economy",
-        "IMF says strait of Hormuz closure raises prospect of 'major energy crisis'",
-        "Strength in numbers: Developing countries band together as Iran war batters global economy"
-      ],
-      "pestle_categories": [
-        "経済",
-        "政治"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "米国の国際経済秩序への統治能力の継続と地政学的リスク管理"
-    },
-    {
-      "signal": "『法律テキストのオープンソース化』：著作権制度の『司法的侵食』と法的知識民主化の加速",
-      "description": "複数の裁判所が『法律テキスト自体は著作権で保護されない』と判断し、ネット海賊図書館や市民による法律知識へのアクセスを保障する判例が累積。これは『法の支配』が市民による法的知識へのアクセスを前提とすることの司法的自覚を示す。従来、法律知識は弁護士などの専門家による『ゲートキーパー』機能により統制されていたが、その独占が法理的に侵食されつつある。法的権力の民主化は権力構造の可逆的転換。",
-      "related_headlines": [
-        "Another Court Rules Copyright Can't Stop People From Reading and Speaking the Law",
-        "Supreme Court Agrees With EFF: ISPs Don't Have To Be Copyright Enforcers",
-        "Live Nation and Ticketmaster Illegally Monopolized Ticketing Market, Jury Finds",
-        "映画内容の「ネタバレ」記事は \"著作権侵害\" 有罪判決"
-      ],
-      "pestle_categories": [
-        "法律",
-        "社会"
-      ],
-      "potential_impact": "medium",
-      "time_horizon": "3-5年",
-      "counter_trend": "知識財産権の強化と専門家による情報独占の継続"
-    },
-    {
-      "signal": "『共主権性（Co-Sovereignty）』の実践化：子ども選挙と将来世代の政治的正当性獲得",
-      "description": "日本において『こども選挙』という実験的民主主義ツールが、単なる参加型学習ではなく『主権者である子どもたちを信じるプロセス』として再概念化されている。これは過去50年間の『将来世代は利益相反により政治から排除されるべき』という暗黙の仮定を逆転させる。気候危機やAI統治の長期化の中で『現在の投票者だけによる民主主義』の正当性が失われつつあり、複数世代による『共主権性』へのシステム転換が始まっている。",
-      "related_headlines": [
-        "これは、私たち一人ひとりが主権を回復していくプロセス。「こども選挙」が、主権者である子どもたちを信じた先に描く未来とは",
-        "Americans underestimate national levels of concern for future generations: Evidence across collective, governmental and moral considerations",
-        "Have Mental Health Concerns Influenced Your Choice to Have Children?"
-      ],
-      "pestle_categories": [
-        "政治",
-        "社会"
       ],
       "potential_impact": "medium",
       "time_horizon": "5-10年",
-      "counter_trend": "成人中心の政治的正当性と年齢による投票権の不可侵性"
+      "counter_trend": "物理学の公理的不変性",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 10,
+        "disruption": 8,
+        "connectivity": 5,
+        "credibility": 7,
+        "early_stage": 9
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.9,
+      "noise_flag": false
     },
     {
-      "signal": "『AI企業の『信頼商人化』』：安全性言説による市場支配と『安全性の擬似化』",
-      "description": "AnthropicやOpenAIが相次いで『AI安全』『倫理的AI』というマーケティング言説で政策影響力を獲得しながら、実際には自社技術の利益優先戦略が継続している奇妙な現象。AI企業が『規制の『友人』として振る舞う』ことで、実質的な市場規制を回避しながら『責任あるAI』の装いを維持。これはテック企業による『政治的ウォッシング』の新形態であり、安全規制が産業による偽装と化している。",
+      "signal": "『生殖倫理の急速な世代的反転』：若年層による『子孫生産の計画的回避』の構造化",
+      "description": "精神衛生危機、気候不安、経済的不確実性が複合的に作用する中、若年層（特にGen Z）が子どもを持つことを『倫理的に不可能』と判断する傾向が統計的に可視化され始めている。これは『生殖=人生の規範的目標』という数千年の文化的前提を急速に侵食し、人口減少社会への『意識的な移行』を示唆している。",
       "related_headlines": [
-        "Like Anthropic, OpenAI Will Share Latest Technology Only With Trusted Companies",
-        "AI Giants Go on Charm Offensive to Avert Public Backlash",
-        "'Safety first' puts Anthropic ahead in game of AI spin",
-        "Google DeepMind Falls Behind OpenAI in Latest Safety Review; All AI Companies Still Falling Short, Say Experts",
-        "Federal Court Denies Anthropic's Motion to Lift 'Supply Chain Risk' Label"
-      ],
-      "pestle_categories": [
-        "技術",
-        "経済",
-        "法律"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "AI安全性規制の強化と企業のコンプライアンス遵守の拡大"
-    },
-    {
-      "signal": "『気候移民危機』の全面化：国家主権と人道主義の取り返しのつかない衝突",
-      "description": "トランプ政権下でメキシコからの気候難民による死亡事件が相次ぎ、シェインバウム大統領が『メキシコ国民を守る』と宣言する中で、気候変動による移民危機が『開発援助』ではなく『主権侵害』として再フレーム化されている。これはホルダーン限界を超える地域への人口移動が、国家間の法的枠組みでは統制不可能であることを示す。気候危機による移民圧力は、1948年体制の国民国家システムそのものを根底から掘り崩す。",
-      "related_headlines": [
-        "Sheinbaum vows to 'defend Mexicans at every level' amid anger at Trump over migrant deaths",
-        "'I don't go out': Vermont's undocumented dairy workers live in fear after immigration raids",
-        "The Trump Administration Has Fired Over 100 Immigration Judges Without Explanation",
-        "Grattan on Friday: Migration debate deserves better policy approach and less politicking from Liberals"
+        "Have Mental Health Concerns Influenced Your Choice to Have Children?",
+        "Rise in mental illness cases among Hong Kong students 'reflects growing openness'",
+        "Americans underestimate national levels of concern for future generations: Evidence across collective, governmental and moral considerations"
       ],
       "pestle_categories": [
         "社会",
-        "政治",
-        "環境"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "国境管理と移民制限政策の強化による主権防衛"
-    },
-    {
-      "signal": "『生態系の炭素吸収機能の反転』：アフリカの森林がカーボンシンクからカーボンソースへ",
-      "description": "アフリカ大陸の森林が数十年ぶりに炭素を吸収するのではなく放出する存在へと変わった。これは気候変動対策の根本的な前提（森林保護＝炭素相殺）を無効化し、グローバルカーボンクレジット市場の正当性を揺さぶる信号である。",
-      "related_headlines": [
-        "Africa's forests have flipped from carbon sink to carbon source",
-        "Planting trees to remove carbon can harm the environment – or protect it: study highlights trade-offs",
-        "The Nexus between Environmental Degradation and Trade Openness: Evidence from G20 Countries Using Sustainability-Based Indicators"
-      ],
-      "pestle_categories": [
-        "環境",
         "経済"
       ],
       "potential_impact": "high",
       "time_horizon": "1-3年",
-      "counter_trend": "グローバルノースの森林保護投資と炭素相殺メカニズムの信頼性を基盤とする気候金融パラダイム。"
+      "counter_trend": "『生殖願望=普遍的な人間的欲求』という人口学的前提",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "myth",
+      "scores": {
+        "novelty": 8,
+        "disruption": 9,
+        "connectivity": 8,
+        "credibility": 7,
+        "early_stage": 7
+      },
+      "evidence_type": "statistical",
+      "composite_score": 7.9,
+      "noise_flag": false
     },
     {
-      "signal": "『隠蔽された海洋メタン源の急速な動員化』：気候フィードバックループの加速度的悪化",
-      "description": "科学者が海洋の未知のメタン放出源を発見した。この発見は従来のクライメートモデルの予測精度を根本的に揺さぶり、気候変動の『加速度的な自己増幅』が予測より早く進行している可能性を示唆する。",
+      "signal": "『生殖回避の若年層集約化』による人口再生産の根本的倫理的転換",
+      "description": "香港・日本・韓国での精神衛生危機と『将来への懸念』が若年層の『子孫を持つことの拒否』に直結し、単なる経済的不安ではなく『世代的絶望感』が制度化されつつある。これは『人類の生物的継続』という前提を問い直す『生殖倫理の根本的再編成』の兆し。",
       "related_headlines": [
+        "Rise in mental illness cases among Hong Kong students 'reflects growing openness'",
+        "Have Mental Health Concerns Influenced Your Choice to Have Children?",
+        "Americans underestimate national levels of concern for future generations: Evidence across collective, governmental and moral considerations",
+        "Gender Inequalities in Japan and South Korea: Labor Market, Employment, and Education"
+      ],
+      "pestle_categories": [
+        "社会",
+        "経済"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "『人口増加による経済成長』という20世紀的開発主義の前提",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "myth",
+      "scores": {
+        "novelty": 8,
+        "disruption": 9,
+        "connectivity": 8,
+        "credibility": 7,
+        "early_stage": 7
+      },
+      "evidence_type": "mixed",
+      "composite_score": 7.9,
+      "noise_flag": false
+    },
+    {
+      "signal": "地理的主権と『電力主権』の融合",
+      "description": "カナダが「electrified sovereignty」を戦略的概念として導入、韓国がイラン危機を『再生可能エネルギー革命』の機会に転換、TSMC台湾工場の地政学化。エネルギー自給能力がもはや環境課題ではなく『国家安全保障の基礎』として再定義されている。デジタルインフラのクリティカルな依存性が露呈し、国家は『物理的+デジタル+エネルギー』の統合的主権概念へシフト中。",
+      "related_headlines": [
+        "Experts call for 'electrified sovereignty' through clean domestic power to overcome energy crises",
+        "Geothermal power is the key to cheaper energy in the Canadian Arctic",
+        "How South Korea plans to use the Iran crisis to spur a renewables revolution",
+        "TSMC's Kumamoto Fab Upgrade: A Security-Driven Reconfiguration of Indo-Pacific Chip Competition"
+      ],
+      "pestle_categories": [
+        "政治",
+        "技術",
+        "環境"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "エネルギー転換は気候変動対策の副次的効果であり、地政学とは独立という脱炭素主流派の前提",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 8,
+        "disruption": 8,
+        "connectivity": 9,
+        "credibility": 8,
+        "early_stage": 6
+      },
+      "evidence_type": "mixed",
+      "composite_score": 7.8,
+      "noise_flag": false
+    },
+    {
+      "signal": "『AI言語モデルの安全性ガバナンス競争』による国家間テクノ・ポリティック",
+      "description": "Anthropic、OpenAI、Google DeepMindが相次いで安全性レビューを公開し、政府規制に先んじて自主的ガバナンスを示威している。同時に中国の陳天橋が3200億円をAGI研究に投資。AIの『安全性規制』という名目での国家間・企業間の権力争奪が、技術層で繰り広げられており、従来の産業政策とは異なるプレイヤー構成による競争が形成中。",
+      "related_headlines": [
+        "AI Giants Go on Charm Offensive to Avert Public Backlash",
+        "Google DeepMind Falls Behind OpenAI in Latest Safety Review; All AI Companies Still Falling Short, Say Experts",
+        "Like Anthropic, OpenAI Will Share Latest Technology Only With Trusted Companies",
+        "AGIはいつ実現？中国ゲーム界の伝説･陳天橋氏が3200億円投じる｢人類超えAI｣の核心"
+      ],
+      "pestle_categories": [
+        "技術",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "技術開発と規制の分離可能性、市場競争による優勝劣敗の単線的展開",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 8,
+        "disruption": 8,
+        "connectivity": 8,
+        "credibility": 9,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.8,
+      "noise_flag": false
+    },
+    {
+      "signal": "『労働倫理の根本的再定義』における世代間断裂",
+      "description": "インド・日本の非正規労働制度化拒否、ブラジルの労働虐待危機、北米での職業訓練OJT崩壊などから、既存の『労働への道徳的献身』という文化的前提そのものが若年層で無効化しつつある。単なる待遇改善ではなく、労働という活動自体の社会的正当性が問い直されている。",
+      "related_headlines": [
+        "インドは本当に「中国式成長軌道」を進んでいるのか？ 労働者の9割を占める非正規雇用と、正規化を拒むイデオロギー対立",
+        "After Fighting for the Rights of Workers, Brazil's President Lula Faces a Labor Abuse Crisis",
+        "OJTはなぜ機能しなくなったのか──MBA再評価の本質　企業も役所も幹部が育たない国"
+      ],
+      "pestle_categories": [
+        "社会",
+        "経済"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "経済成長に伴う労働の標準化・正規化という20世紀的な歴史的進化の物語",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 2,
+      "three_horizons": "H1",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 8,
+        "disruption": 9,
+        "connectivity": 7,
+        "credibility": 7,
+        "early_stage": 8
+      },
+      "evidence_type": "mixed",
+      "composite_score": 7.8,
+      "noise_flag": false
+    },
+    {
+      "signal": "環境危機の『逆転現象』：アフリカ炭素吸収地から排出地への急速転換",
+      "description": "アフリカの森林がこれまで50年間担ってきた炭素吸収地としての役割が反転し、現在は炭素排出源に転じている。これは気候システムの非線形転換を示す最初の大規模な検証可能なティッピングポイント到達の兆候であり、既存の炭素オフセット戦略の根本的な失効を意味する。",
+      "related_headlines": [
+        "Africa's forests have flipped from carbon sink to carbon source",
         "Scientists discover hidden ocean methane source that could worsen global warming",
-        "MIT scientists just found a hidden problem slowing the ozone comeback",
         "Insects in the tropics are already near their heat limits – climate change could push many beyond survival"
       ],
       "pestle_categories": [
         "環境",
-        "科学"
+        "経済"
       ],
       "potential_impact": "high",
-      "time_horizon": "3-5年",
-      "counter_trend": "段階的で予測可能な気候変動進行と、線形的な気候適応政策の有効性への信頼。"
-    },
-    {
-      "signal": "『生物多様性調査の根本的前提の崩壊』：ハワイの鳥類に関する50年来の科学仮説の否定",
-      "description": "ハワイの鳥類についての確立された科学的理解が突然否定された。これは生物学的事象の『黒歴史化』を意味し、保護政策の基盤となった科学的知見そのものの脆弱性を露呈させる。",
-      "related_headlines": [
-        "Scientists just debunked a 50-year myth about Hawaii's birds",
-        "A crushed fossil revealed a dinosaur that shouldn't have existed",
-        "Scientists just solved a 160-million-year fossil mystery \"I've never seen anything like it\""
-      ],
-      "pestle_categories": [
-        "環境",
-        "科学"
-      ],
-      "potential_impact": "medium",
       "time_horizon": "1-3年",
-      "counter_trend": "確立された生物学的分類体系と、過去の発見の累積的妥当性への信頼。"
+      "counter_trend": "過去数十年間の『グローバル南方による炭素吸収』という気候正義的ナラティブの崩壊",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 8,
+        "disruption": 9,
+        "connectivity": 7,
+        "credibility": 9,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.8,
+      "noise_flag": false
     },
     {
-      "signal": "『アンモニア汚染の『工業動物農業足跡』化』：環境悪化の『見える化』による産業レジティマシー喪失",
-      "description": "豚と家禽の大規模農業施設が集中する地域のアンモニア汚染が追跡可能になった。個別企業の環境フットプリントが『可視化』されることで、グローバルな畜産サプライチェーンの『隠蔽構造』が破壊される可能性がある。",
+      "signal": "『脱炭素化の無意識的逆説』：再生可能エネルギー転換下での全球的エネルギー危機の深刻化",
+      "description": "イラン戦争によるエネルギー供給危機の中で、各国が再生可能エネルギーへの急速転換を進めているにもかかわらず、グローバルエネルギーシステムがより脆弱になっている。これは『エネルギー転換の規模と速度の不整合』が引き起こす構造的脆弱性であり、既存のネット・ゼロ戦略の潜在的な失敗を示唆している。",
       "related_headlines": [
-        "Ammonia pollution hotspots found in areas of UK with most pig and poultry factory farms",
-        "Tracking traffic pollution in real time could transform city climate policy",
-        "Disputes over Africa's ocean resources: here's what could help avoid them"
-      ],
-      "pestle_categories": [
-        "環境",
-        "社会",
-        "技術"
-      ],
-      "potential_impact": "medium",
-      "time_horizon": "3-5年",
-      "counter_trend": "グローバル畜産産業の『匿名性』と、汚染源の追跡困難性に基づく規制回避戦略。"
-    },
-    {
-      "signal": "『再生可能エネルギー危機と『エネルギー主権ナショナリズム』の衝突』：カナダ北極圏における地熱エネルギー覇権化",
-      "description": "カナダが北極圏での地熱エネルギー開発をエネルギー独立の鍵と位置づけ始めている。この動きは、エネルギー転換が『脱グローバル化』と同義化し、国家単位での資源争奪が激化する可能性を示唆する。",
-      "related_headlines": [
-        "Geothermal power is the key to cheaper energy in the Canadian Arctic",
+        "DeBriefed 10 April 2026: Worst energy crisis 'ever' | India withdraws COP33 bid | Drag artists and climate change",
         "How South Korea plans to use the Iran crisis to spur a renewables revolution",
-        "Experts call for \"electrified sovereignty\" through clean domestic power to overcome energy crises - Earth4All"
-      ],
-      "pestle_categories": [
-        "環境",
-        "経済",
-        "政治"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "3-5年",
-      "counter_trend": "グローバルエネルギー市場の統合と、国際的な再生可能エネルギー技術移転の相互補完性。"
-    },
-    {
-      "signal": "『河川の『失水メカニズム』の科学的解明』：従来の水資源管理モデルの根本的再構築",
-      "description": "コロラド川の『消えた水』の行き先が特定された。これは、既存の水資源管理パラダイム（正確な流量計測と分配）が物理的に不可能である可能性を示し、乾燥地域の水紛争の『非可逆化』を意味する。",
-      "related_headlines": [
-        "Scientists finally know where the Colorado River's missing water is going",
-        "New Zealand's Climate Plan Challenged in High Court",
+        "IMF says strait of Hormuz closure raises prospect of 'major energy crisis' – video",
         "Recalibrating the Timeline for a Transition to Renewable Energy Sources"
       ],
       "pestle_categories": [
         "環境",
+        "経済",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "『再生可能エネルギー=システム安定化』という政策的楽観主義",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 8,
+        "connectivity": 9,
+        "credibility": 8,
+        "early_stage": 7
+      },
+      "evidence_type": "mixed",
+      "composite_score": 7.8,
+      "noise_flag": false
+    },
+    {
+      "signal": "『司法権の政治的中立性喪失』が制度的に露呈する法的危機",
+      "description": "米国最高裁の複数の判事が政治的偏向を公然と表明し、UK法務長官の人事任免をめぐる裁判所権限の越権、ハンガリー司法改革による司法の政治化など、世界規模で『司法の独立性』という近代民主主義の根本的前提が機能不全に陥っている兆し。単なる個別事件ではなく、『三権分立』システムそのものの制度的崩壊への序曲。",
+      "related_headlines": [
+        "Justice Sotomayor Apologizes for Highly Personal Criticism of Justice Kavanaugh",
+        "Five key questions: who overruled decision to deny Mandelson security clearance?",
+        "Kimberly's story: the tragedy that changed British legal history",
+        "The Trump Administration Has Fired Over 100 Immigration Judges Without Explanation"
+      ],
+      "pestle_categories": [
+        "政治",
         "法律"
       ],
       "potential_impact": "high",
       "time_horizon": "1-3年",
-      "counter_trend": "水資源の正確な計測と公平な国際配分を前提とする越境水政治の安定化。"
+      "counter_trend": "20世紀民主主義における『司法権の独立性』を根本的前提とする法の支配の理想",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 7,
+        "disruption": 9,
+        "connectivity": 8,
+        "credibility": 8,
+        "early_stage": 7
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.8,
+      "noise_flag": false
     },
     {
-      "signal": "『熱帯昆虫の『生存限界の既到達化』』：気候順応の生物学的天井の実装化",
-      "description": "熱帯昆虫がすでに生存可能温度の限界に達している。これは、気候変動への生物学的順応がもはや不可能な段階に入ったことを意味し、『点転換的な生態系崩壊』のカウントダウンが始まったことを示唆する。",
-      "related_headlines": [
-        "Insects in the tropics are already near their heat limits – climate change could push many beyond survival",
-        "Gray whales are entering San Francisco Bay and many aren't surviving",
-        "The Spatiotemporal evolutionary dynamics of crickets and their influencing factors (Orthoptera; Ensifera)"
-      ],
-      "pestle_categories": [
-        "環境",
-        "科学"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "生物は緩徐な気候変化に対して順応進化可能という進化生物学の基本仮説。"
-    },
-    {
-      "signal": "『南アフリカのアパルトヘイト交渉者による米国大使任命』：過去の『和解技術』の地政学的再動員化",
-      "description": "南アフリカがアパルトヘイト終結の交渉人を米国大使に任命した。これは、深刻な社会分裂を抱える国家が『過去の対立解決モデル』を現在の地政学的紛争に応用する試みであり、『和解』という概念の政治的再領有を示唆する。",
-      "related_headlines": [
-        "South Africa Names Roelf Meyer, Apartheid-Era Negotiator, as U.S. Ambassador",
-        "South Africa names apartheid-era negotiator as ambassador to US",
-        "Reparations 'key to dismantling systemic racism': UN rights chief"
-      ],
-      "pestle_categories": [
-        "政治",
-        "社会"
-      ],
-      "potential_impact": "medium",
-      "time_horizon": "3-5年",
-      "counter_trend": "過去の対立解決メカニズムは現在の複雑な国際紛争には適用不可能という現実主義的断定。"
-    },
-    {
-      "signal": "『野生チンパンジーによる『内戦』の記録化』：非人間動物の政治暴力化と『戦争化』",
-      "description": "野生チンパンジーの集団間の調整攻撃が初めて記録された。これは、『戦争』という現象が人間社会に固有ではなく、自然界でも『政治的』に組織化された暴力として出現することを示し、人間の暴力性の『自然化』を招く。",
-      "related_headlines": [
-        "Wild chimpanzees recorded waging 'civil war' with coordinated attacks between two groups",
-        "Key Questions on the Role of Technology in the Expanding Middle East War",
-        "New realities of war"
-      ],
-      "pestle_categories": [
-        "環境",
-        "社会"
-      ],
-      "potential_impact": "low",
-      "time_horizon": "5-10年",
-      "counter_trend": "人間の暴力性は文化的に習得されるものであり、自然界の暴力とは根本的に異なるという人文主義的前提。"
-    },
-    {
-      "signal": "『グラフェンの『基本物理法則の違反』』：材料科学の根本的前提の再編成",
-      "description": "グラフェンが基本的な物理法則に反する性質を示した。これは、ナノテクノロジーの基盤となる物質の予測不可能性を示し、『設計可能性』という産業用途の根本的約束を揺さぶる。",
-      "related_headlines": [
-        "Graphene just defied a fundamental law of physics",
-        "\"Giant superatoms\" could finally solve quantum computing's biggest problem",
-        "The Gas Inside Your AI Chip"
-      ],
-      "pestle_categories": [
-        "技術",
-        "科学"
-      ],
-      "potential_impact": "medium",
-      "time_horizon": "5-10年",
-      "counter_trend": "物質の性質は既知の物理法則によって完全に予測可能という古典物理学のパラダイム。"
-    },
-    {
-      "signal": "『オゾン層回復の『隠蔽された阻害メカニズム』』：環境修復の『部分的失敗』の発見",
-      "description": "MIT科学者がオゾン層回復を遅延させる未知のメカニズムを発見した。これは、環境規制（フロン禁止）による『成功物語』が実は不完全であり、自然のシステムが人間の意図を『無視』し続けることを示唆する。",
-      "related_headlines": [
-        "MIT scientists just found a hidden problem slowing the ozone comeback",
-        "Recalibrating the Timeline for a Transition to Renewable Energy Sources",
-        "Challenging the paradigms"
-      ],
-      "pestle_categories": [
-        "環境",
-        "科学"
-      ],
-      "potential_impact": "medium",
-      "time_horizon": "3-5年",
-      "counter_trend": "環境規制による自然システムの『線形的な回復』という環境政策の楽観的前提。"
-    },
-    {
-      "signal": "『ハワイにおける『廃プラスチック→舗装道路化』』：破棄物の『領土化』と循環経済の新しい実装",
-      "description": "ハワイがプラスチック廃棄物を舗装材料に転換する実験を開始した。これは、循環経済が『局所的な物質循環』から『領土のインフラ化』へと進化し、廃棄物が『国家資源』へと転化する可能性を示唆する。",
-      "related_headlines": [
-        "Hawaii pioneers turning plastic waste into pavement",
-        "EV endgame: Stalling China's export surge in Europe's southern neighbourhood",
-        "Beyond Impact Lingo: Questioning, Concretizing, Building"
-      ],
-      "pestle_categories": [
-        "環境",
-        "経済",
-        "技術"
-      ],
-      "potential_impact": "medium",
-      "time_horizon": "3-5年",
-      "counter_trend": "廃棄物処理と資源開発が分離された産業システムと、経済的インセンティブに基づく『自発的な』循環実装の限界。"
-    },
-    {
-      "signal": "『司法による民主的正当性の再獲得』：著作権制度の司法的解体と法的知識の非商品化",
-      "description": "複数の裁判所が著作権法が言論と読書行為を制限できないと判断し始め、法律テキストそのものへのアクセス権を基本的人権として再定義する流れが加速している。これは知識独占から民主的アクセスへの根本的転換を示唆している。",
-      "related_headlines": [
-        "Another Court Rules Copyright Can't Stop People From Reading and Speaking the Law",
-        "Supreme Court Agrees With EFF: ISPs Don't Have To Be Copyright Enforcers",
-        "A Baseless Copyright Claim Against a Web Host—and Why It Failed"
-      ],
-      "pestle_categories": [
-        "法律",
-        "社会"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "3-5年",
-      "counter_trend": "知識と情報の商品化・囲い込みによる企業の利益最大化モデル"
-    },
-    {
-      "signal": "『監視資本主義の民主的規制要求』：ICEデータ収集プラットフォームへの議会的追及",
-      "description": "Palantirなどの民間監視プラットフォームが移民追放に使用されることに対し、議会が強く異議を唱え始め、監視技術の『民主的コントロール』が新しい規制課題として浮上している。国家監視権の民間委託という新しい権力構造への抵抗が形成されている。",
+      "signal": "『テック企業への規制当局権力の構造的譲渡』による『民営化された検閲体制』の萌芽",
+      "description": "AI規制、著作権執行、移民監視などにおいて、国家権力が直接的には『規制』をせず、むしろテック企業に『自主規制』を事実上強制する形式が定着しつつある。これは『規制当局の権力喪失』と『企業による国家機能の代行』を同時に意味し、民主的正当性を失った『民営化された権力体制』の出現。",
       "related_headlines": [
         "Congress Turns Up Pressure on DHS Over Palantir's Role in Immigration Crackdown",
-        "Google Broke Its Promise to Me. Now ICE Has My Data.",
-        "The FAA's \"Temporary\" Flight Restriction for Drones is a Blatant Attempt to Criminalize Filming ICE"
+        "White House AI Framework Proposes Industry-Friendly Legislation - Lawfare",
+        "Like Anthropic, OpenAI Will Share Latest Technology Only With Trusted Companies",
+        "Federal Court Denies Anthropic's Motion to Lift 'Supply Chain Risk' Label"
       ],
       "pestle_categories": [
-        "法律",
-        "社会",
-        "政治"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "安全保障名目での監視権の無制限拡大"
-    },
-    {
-      "signal": "『反AI市民運動の『生存権』フレーミング』：スーパーインテリジェンス禁止要求の規制化",
-      "description": "科学者、宗教指導者、政策立案者、芸術家が超知能の禁止を公式に要求し始め、AIをもはや『進歩』ではなく『生存脅威』として再構築している。この『禁止要求運動』は既存のイノベーション中心的価値観に対する根本的異議を表明している。",
-      "related_headlines": [
-        "Prominent Scientists, Faith Leaders, Policymakers and Artists Call for a Prohibition on Superintelligence, as Poll Shows Americans Don't Want It",
-        "Future of Life Institute Launches Multimillion Dollar Nationwide AI Regulation Campaign",
-        "Michael Kleinman reacts to breakthrough AI safety legislation"
-      ],
-      "pestle_categories": [
-        "社会",
+        "政治",
         "技術",
         "法律"
       ],
       "potential_impact": "high",
-      "time_horizon": "3-5年",
-      "counter_trend": "技術進歩の無制限推進による人類の繁栄"
-    },
-    {
-      "signal": "『ハンガリー選挙の『親EU回帰』による右翼ポピュリズム再編』：オルバン敗北の欧州波及効果",
-      "description": "オルバン首相が大敗し親EU化への転換が始まり、欧州右翼ポピュリズムの『ロシア寄り戦略』が地政学的リスクとして認識されるようになった。この敗北はポーランド、スロバキアなど東欧全域への波及を示唆し、『権威主義対民主主義』の地政学的再編を推し進めている。",
-      "related_headlines": [
-        "Orbán's defeat threatens to halt Hungarian support of populist right",
-        "Why Orban and Hungary are not one and the same",
-        "Orban's Defeat Punctures Europe's Far Right, but Also Offers It a Road Map",
-        "ハンガリー議会選挙 ウクライナ和平協議に影響の見方も"
-      ],
-      "pestle_categories": [
-        "政治",
-        "法律"
-      ],
-      "potential_impact": "high",
       "time_horizon": "1-3年",
-      "counter_trend": "民族主義とロシア親和的ポピュリズムの欧州的拡大"
+      "counter_trend": "国家による独占的な正当な権力行使という近代国家の基本原則",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 8,
+        "disruption": 9,
+        "connectivity": 9,
+        "credibility": 7,
+        "early_stage": 6
+      },
+      "evidence_type": "mixed",
+      "composite_score": 7.8,
+      "noise_flag": false
     },
     {
-      "signal": "『セキュリティ・クリアランス制度の『秘密国家』化への民主的反発』：英国Mandelson事件",
-      "description": "政府がセキュリティ・クリアランス決定を秘密裏に変更し議会から隠蔽していた事実が暴露され、民主的説明責任が完全に喪失している。『誰が権力を行使しているのか不透明』という秘密国家化への懸念が、保守派を含む広範な政治的反発を生み出している。",
+      "signal": "『シンクタンク民主主義抑圧説』の学術的検証",
+      "description": "「シンクタンクが民主主義を打ち負かした」という学術的主張が登場。専門家委任制度による民主的正当性の形骸化が、制度的レベルで議論対象化している。この論文的登場は、テクノクラート支配への構造的抵抗が知識層でも顕在化し始めたことを示唆。",
       "related_headlines": [
-        "Five key questions: who overruled decision to deny Mandelson security clearance?",
-        "Officials debate withholding Mandelson vetting documents from parliament",
-        "Revealed: Mandelson failed vetting but Foreign Office overruled decision",
-        "No 10 claims Starmer did not know Mandelson failed security vetting until this week"
+        "Think Tanks Have Defeated Democracy"
       ],
       "pestle_categories": [
-        "法律",
         "政治",
         "社会"
       ],
-      "potential_impact": "medium",
-      "time_horizon": "1-3年",
-      "counter_trend": "国家安全保障上の判断の『不可視性』の維持"
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "専門知識の民主的統治への中立的貢献という規範",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H1",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 8,
+        "disruption": 9,
+        "connectivity": 6,
+        "credibility": 7,
+        "early_stage": 8
+      },
+      "evidence_type": "theoretical",
+      "composite_score": 7.7,
+      "noise_flag": false
     },
     {
-      "signal": "『イラン戦争による『政治的引き裂き』の制度化』：IMFの『原因の名指し不可能性』",
-      "description": "IMFが中東戦争がグローバル経済に深刻な影響を与えていることを認めながらも、その『原因』を名指しできないという事実上の沈黙により、国際機関の『政治的中立性』が根本的に破壊されている。米国の政治的分裂がグローバル統治機構を機能不全に陥れている兆候。",
+      "signal": "『非正規労働の制度化拒否』から『労働市場の根本的再編』へ",
+      "description": "インドでの労働者9割が非正規という構造が、単なる雇用形態ではなく、正規化を拒むイデオロギー対立として機能している。同時にブラジルでのOJT崩壊（企業幹部育成システムの機能不全）と相互作用し、「仕事」そのものの意味定義が失われつつある兆し。",
       "related_headlines": [
-        "The IMF refuses to name the cause of this global chaos. It starts with 'Donald' and ends in 'Trump'",
-        "IMF says strait of Hormuz closure raises prospect of 'major energy crisis'",
-        "Middle East War Will Slow Global Economic Growth, I.M.F. Warns",
-        "How the Iran War Will Upend the Global Economy"
+        "インドは本当に「中国式成長軌道」を進んでいるのか？ 労働者の9割を占める非正規雇用と、正規化を拒むイデオロギー対立",
+        "OJTはなぜ機能しなくなったのか──MBA再評価の本質　企業も役所も幹部が育たない国──OJT崩壊と日本の危機①",
+        "After Fighting for the Rights of Workers, Brazil's President Lula Faces a Labor Abuse Crisis"
       ],
       "pestle_categories": [
         "経済",
-        "政治"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "国際金融機関の技術的中立性と政治的独立性"
-    },
-    {
-      "signal": "『上院での『イラン戦争権限制限』の継続的ブロック』：議会権力の『実質的喪失』",
-      "description": "上院共和党員が大統領のイラン戦争権限を制限する提案を繰り返し否定し、議会による行政権制約という基本的チェック・アンド・バランスが機能不全に陥っている。憲法的権力構造の『司法的虚無化』が明白化している。",
-      "related_headlines": [
-        "Senate Republicans Again Block Bid to Limit Trump's Iran War Powers",
-        "Senate Blocks Bid to Cancel Arms Sales to Israel as Iran War Deepens Democratic Divide",
-        "The untold risks of war"
-      ],
-      "pestle_categories": [
-        "法律",
-        "政治"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "議会による戦争権の制約と行政権のコントロール"
-    },
-    {
-      "signal": "『移民司法官の『説明責任なき大量解雇』』：行政権の完全独裁化",
-      "description": "トランプ政権が100人以上の移民司法官を『説明なく』解雇し、行政権が司法的プロセスを完全に迂回している。法の支配の形式的外観すら放棄する権力の『野蛮化』を示唆している。",
-      "related_headlines": [
-        "The Trump Administration Has Fired Over 100 Immigration Judges Without Explanation",
-        "Last arguments of the term: huge cases for the Fourth Amendment and immigration"
-      ],
-      "pestle_categories": [
-        "法律",
-        "政治"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "行政権の法的制約と司法的独立性"
-    },
-    {
-      "signal": "『子ども選挙による『共主権性』の制度化』：未来世代の『政治的主体化』",
-      "description": "日本で『こども選挙』が企画され、子どもたちが『主権者』として政治的意思を表明する仕組みが実装され始めている。これは現在世代中心的な民主主義の根本的再構築を示唆し、『被扶養者から政治主体へ』という転換を可視化している。",
-      "related_headlines": [
-        "これは、私たち一人ひとりが主権を回復していくプロセス。「こども選挙」が、主権者である子どもたちを信じた先に描く未来とは"
-      ],
-      "pestle_categories": [
-        "社会",
-        "政治",
-        "法律"
-      ],
-      "potential_impact": "medium",
-      "time_horizon": "3-5年",
-      "counter_trend": "成人中心的民主主義と『保護対象』としての子ども"
-    },
-    {
-      "signal": "『自治と地域主権の『下からの再構築』』：シビックテックと福島浪江町の実験",
-      "description": "福島浪江町やCode for Japanの事例において、国家的な復興計画ではなく『自分たちで社会をつくる』という地域主権的自治が再び実装されている。中央集権的復興ガバナンスへの異議が『実践的自治』として具現化している。",
-      "related_headlines": [
-        "シビックテックで自治をひらく。Code for Japan 関治之さんが語る「社会のバグ」の直し方",
-        "生きることそのものに、再び当事者として関わること。ゼロから自分たちで社会をつくる福島県浪江町の高橋大就さんと「生き延びるための自治」を考える",
-        "人口300人のまちで、休校した小中学校が再開へ。和歌山・富貴地区に移住した家族が「フキシネマパラダイス」から発信する、自分たちで地域をつくる楽しさ"
-      ],
-      "pestle_categories": [
-        "社会",
-        "政治"
-      ],
-      "potential_impact": "medium",
-      "time_horizon": "3-5年",
-      "counter_trend": "中央集権的な『公式な』復興・開発ガバナンス"
-    },
-    {
-      "signal": "『日本の『武器移転』原則の『事後通知化』』：防衛国家化による議会権の形骸化",
-      "description": "日本政府が武器移転を『事前に国会に諮らず事後通知』へ変更し、防衛政策の議会的監視が機能不全に陥っている。『国論二分の政策』を首相が『全力で実現』する宣言は、議会民主主義の根本的な権力奪取を意味している。",
-      "related_headlines": [
-        "自民 「武器」移転原則可能とする政府案了承 国会へ事後通知",
-        "高市首相 \"国論二分の政策実現に全力 来年統一地方選勝利を\""
-      ],
-      "pestle_categories": [
-        "政治",
-        "法律"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "議会による防衛政策の事前的監視と民主的統制"
-    },
-    {
-      "signal": "『憲法改正の『静かな実装化』』：首相権限による改憲プロセスの加速",
-      "description": "高市首相が憲法改正を『来年党大会までに発議にめど』と明言し、議会的論争を最小化しながら改憲を推し進める戦略が露呈している。『国論二分の政策』を『全力で』推し進める権力者の宣言は、民主的正当性を無視した権力行使を示唆している。",
-      "related_headlines": [
-        "高市首相\"憲法改正 来年党大会までに発議にめど\" 議論活発に",
-        "参議院憲法審査会が今の国会で初めて開催 各党が意見表明",
-        "自民 萩生田氏「憲法改正へ1年以内に条文整理 合意形成を」"
-      ],
-      "pestle_categories": [
-        "法律",
-        "政治"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "議会的合意を基礎とした憲法改正のプロセス"
-    },
-    {
-      "signal": "『思考兵器化』による民主的意思決定の外部委託化",
-      "description": "シンクタンクが政策立案を独占し、議会の実質的決定権が喪失している現象。民主主義制度そのものが『諮問機構の自動実行システム』へと転換し、市民の政治的代理権が形骸化している。",
-      "related_headlines": [
-        "Think Tanks Have Defeated Democracy",
-        "Behavioral science to strengthen democracy",
-        "参議院憲法審査会が今の国会で初めて開催 各党が意見表明"
-      ],
-      "pestle_categories": [
-        "政治",
         "社会"
       ],
       "potential_impact": "high",
       "time_horizon": "3-5年",
-      "counter_trend": "市民参加と直接民主主義の拡大という期待に対する、エリート支配の再強化"
+      "counter_trend": "労働の形式的改革と正規雇用拡大という20世紀型労働政策",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 2,
+      "three_horizons": "H1",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 8,
+        "disruption": 9,
+        "connectivity": 7,
+        "credibility": 6,
+        "early_stage": 8
+      },
+      "evidence_type": "mixed",
+      "composite_score": 7.7,
+      "noise_flag": false
     },
     {
-      "signal": "『労働のゾンビ化』：AI導入による労働消失の『可視化回避』戦略",
-      "description": "Snapなど大手AI企業が『AI導入による解雇』を正当化する言説を展開する一方で、失業統計に反映されない『幽霊職』が増殖。労働市場の『実質的空洞化』が統計的に隠蔽されている。",
+      "signal": "『AI技術商品化の加速度的失速』による「AI産業の再編成シグナル」",
+      "description": "Snapが従業員16%削減を『AI導入理由』に、Allbirdsがウール靴からAIへ『事業転換』して株価582%上昇など、既存事業撤退の『AI化言説による合理化』が見えている。同時にAI企業自体（Anthropic）は「供給制約経済」に直面。技術の『過度期待からの急速な現実化段階』への転換。",
       "related_headlines": [
         "Snap Is Laying Off 16% of Full-Time Staff as It Embraces A.I.",
-        "Half of Gen Z Uses AI, but Their Feelings Are Souring, Study Shows",
-        "AI is destroying jobs – and the energy crisis could make that much worse"
-      ],
-      "pestle_categories": [
-        "経済",
-        "技術",
-        "社会"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "AI革新による雇用創出と経済成長という楽観的予測への背反"
-    },
-    {
-      "signal": "『セキュリティ国家の『言語支配』化』：法律テキストのAI による再編成と民主的解釈権の喪失",
-      "description": "AIによる法律解釈の独占化が進む中、国家がセキュリティを名目に『法律理解の正統性』を独占。市民が自ら法律を読む権利そのものが『安全保障上の脅威』として再定義される危険性。",
-      "related_headlines": [
-        "Another Court Rules Copyright Can't Stop People From Reading and Speaking the Law",
-        "Language and democracy",
-        "AIに個人情報を入れてはいけない？　個人情報保護法改正を見据えて弁護士が解説"
-      ],
-      "pestle_categories": [
-        "法律",
-        "政治",
-        "技術"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "3-5年",
-      "counter_trend": "法的知識の民主化と透明性の拡大という方向性への逆行"
-    },
-    {
-      "signal": "『通貨主権の『多元化ネットワーク』化』：BRICS圏での非ドル決済圏の段階的制度化",
-      "description": "イラン戦争による経済制裁と供給鎖崩壊の中で、中国・インド・ロシアを中心に『並行金融圏』が急速に組織化。米ドル基軸通貨体制が『地域的な複数通貨ハブ』へと段階的に侵食されている。",
-      "related_headlines": [
-        "China's PBOC raises leverage ratios for foreign lenders to support outbound investment",
-        "The Middle Corridor in an Era of Supply Chain Disruption",
-        "G20 財務相・中央銀行総裁会議 世界経済の安定へ議論深まるか"
-      ],
-      "pestle_categories": [
-        "経済",
-        "政治"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "3-5年",
-      "counter_trend": "米ドル基軸体制の永続化と米国金融覇権の不変性という従来の前提"
-    },
-    {
-      "signal": "『後発国の『テック規制バリア』化』による先進国AI企業の市場分断化",
-      "description": "欧州GDPR、日本個人情報保護法改正、インドのデータローカライゼーション要件など、各国が『AI安全規制』を『市場保護ツール』として再配置。グローバルなAI企業の統一プラットフォームが『国家別に分断化』されている。",
-      "related_headlines": [
-        "「個人情報の保護に関する法律等の一部を改正する法律案」を閣議決定",
-        "令和8年改正個人情報保護法はどうなる？改正方針を弁護士が解説",
+        "Shares in Allbirds surge after maker of wool sneakers announces pivot to AI",
+        "The Mythos cyber scare signals the economics of AI scarcity",
         "Federal Court Denies Anthropic's Motion to Lift 'Supply Chain Risk' Label"
       ],
       "pestle_categories": [
         "技術",
-        "法律",
         "経済"
       ],
       "potential_impact": "high",
       "time_horizon": "1-3年",
-      "counter_trend": "AIのグローバル統一市場化と技術の『国家境界を超えた流動化』という期待"
+      "counter_trend": "AI技術の継続的な性能向上と産業統合の加速",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 8,
+        "disruption": 8,
+        "connectivity": 7,
+        "credibility": 7,
+        "early_stage": 8
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.7,
+      "noise_flag": false
     },
     {
-      "signal": "『生態系の『炭素反転メカニズム』化』：環境修復の『部分的失敗』の科学的証明",
-      "description": "アフリカの森林炭素吸収機能の喪失、海洋メタン源の急速な動員化、オゾン層回復の阻害要因発見など、従来の『環境修復は可能』という科学的前提が次々と瓦解。気候変動の『不可逆的ポイント』への急速な接近が可視化されている。",
-      "related_headlines": [
-        "Africa's forests have flipped from carbon sink to carbon source",
-        "Scientists discover hidden ocean methane source that could worsen global warming",
-        "MIT scientists just found a hidden problem slowing the ozone comeback"
-      ],
-      "pestle_categories": [
-        "環境",
-        "科学"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "5-10年",
-      "counter_trend": "再生可能エネルギーと環境技術による気候危機の『技術的解決可能性』への楽観論"
-    },
-    {
-      "signal": "『移民司法の『アドミニストレーティブ・テロ』化』：法的正当性なき大量驅逐の制度化",
-      "description": "米国でトランプ政権が100以上の移民判事を『説明責任なく大量解雇』。司法権の行政権への完全従属化と、移民への『法的正当性を欠いた強制驅逐』の制度化が進行中。これは『法治国家の本質的危機』を示している。",
-      "related_headlines": [
-        "The Trump Administration Has Fired Over 100 Immigration Judges Without Explanation",
-        "Last arguments of the term: huge cases for the Fourth Amendment and immigration",
-        "Congress Turns Up Pressure on DHS Over Palantir's Role in Immigration Crackdown"
-      ],
-      "pestle_categories": [
-        "法律",
-        "政治",
-        "社会"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "法的正当性と行政権の分離、司法の独立性という民主主義の基本原則"
-    },
-    {
-      "signal": "『地熱主権ナショナリズム』：北極圏でのエネルギー自給力競争の地政学化",
-      "description": "カナダが北極圏における地熱エネルギー開発を『国家戦略』として位置付け、米国のエネルギー支配から脱却しようとしている。エネルギー危機が『地域的なクリーンエネルギー主権競争』へと転化し、地政学的な権力再編成を加速させている。",
-      "related_headlines": [
-        "Geothermal power is the key to cheaper energy in the Canadian Arctic",
-        "Experts call for 'electrified sovereignty' through clean domestic power to overcome energy crises - Earth4All",
-        "How South Korea plans to use the Iran crisis to spur a renewables revolution"
-      ],
-      "pestle_categories": [
-        "環境",
-        "政治",
-        "経済"
-      ],
-      "potential_impact": "medium",
-      "time_horizon": "3-5年",
-      "counter_trend": "グローバルなエネルギー市場の統一化と米国エネルギー覇権の永続化"
-    },
-    {
-      "signal": "『科学的前提の『実験的否定』』：従来の生物学的常識が次々と覆される現象",
-      "description": "ハワイの鳥類分類の50年来の仮説、寿命決定における遺伝子の役割の再評価、グラフェンの基本物理法則違反など、科学の『基礎的前提』が繰り返し否定されている。これは『科学的知識の根本的脆弱性』と『革新的発見の急速化』を同時に示唆している。",
-      "related_headlines": [
-        "Scientists just debunked a 50-year myth about Hawaii's birds",
-        "Scientists were wrong about lifespan. Your genes matter way more than we thought",
-        "Graphene just defied a fundamental law of physics"
-      ],
-      "pestle_categories": [
-        "科学",
-        "社会"
-      ],
-      "potential_impact": "medium",
-      "time_horizon": "3-5年",
-      "counter_trend": "科学的知識の蓄積による『より確実な理解』への段階的進化という期待"
-    },
-    {
-      "signal": "『アパルトヘイト『和解技術』の『地政学的武器化』』：過去の政治的テクノロジーの国家間戦略への転用",
-      "description": "南アフリカが『アパルトヘイト交渉者』を米国大使に任命。『過去の和解と対話のテクノロジー』が『現在の地政学的対立の仲介』として再動員化される現象。歴史的和解スキルが『大国間の権力管理ツール』として再配置されている。",
+      "signal": "『地政学的仲介者の権力化』における「脱米国依存の制度化」",
+      "description": "アパルトヘイト後の『修復者』Roelf Meyerが米国大使として南アフリカ外交を主導、パキスタンがイラン戦争での『外交的仲介者』として主体性を獲得。インド・パキスタン関係の再編とともに、『非同盟主義的な第三者権力』が G20・国連レベルで制度化し始めている。",
       "related_headlines": [
         "South Africa Names Roelf Meyer, Apartheid-Era Negotiator, as U.S. Ambassador",
-        "South Africa names apartheid-era negotiator as ambassador to US",
+        "Pakistan's Search for Diplomatic Relevance Amid the Iran War",
         "Why India is rankled by Pakistan playing mediator in US-Iran war"
       ],
       "pestle_categories": [
         "政治",
-        "社会"
+        "経済"
       ],
       "potential_impact": "medium",
-      "time_horizon": "1-3年",
-      "counter_trend": "歴史的和解が『過去との決別』として機能するという期待への背反"
+      "time_horizon": "3-5年",
+      "counter_trend": "米国・中国の二極的地政学的支配",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 8,
+        "disruption": 7,
+        "connectivity": 8,
+        "credibility": 7,
+        "early_stage": 8
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.7,
+      "noise_flag": false
     },
     {
-      "signal": "『非人間動物の『政治暴力化』』：野生チンパンジーの『内戦』の記録化と『戦争の非人間化』",
-      "description": "野生チンパンジーが『組織的な内戦』を展開する現象が科学的に記録化。これは『戦争が人間固有の行動』という前提を否定し、『暴力の本質が生物学的基盤に存在する』ことを示唆。人間の『道徳的政治性』の生物学的脆弱性が露呈されている。",
+      "signal": "『不動産・資本主義の『エクイティ化』における「所有権の権力的空洞化」",
+      "description": "エリオットがダイキン株に『大規模出資』して利益率向上を『支配的目標化』、ソフトバンクグループが『負債16兆円を操る財務イノベーション』として『統治権を持たない所有権保有』へ移行。『株式所有=経営権』という資本主義の古典的前提が『金融的コントロール』へ転換。所有権と支配権の『構造的乖離』の深刻化。",
       "related_headlines": [
-        "Wild chimpanzees recorded waging 'civil war' with coordinated attacks between two groups",
-        "New realities of war",
-        "The untold risks of war"
+        "ダイキン株大幅反発､エリオットが大規模出資－利益率向上など求める",
+        "［動画］ソフトバンクグループ、負債16兆円を操る財務イノベーション"
       ],
       "pestle_categories": [
-        "社会",
-        "科学"
+        "経済",
+        "法律"
       ],
-      "potential_impact": "low",
+      "potential_impact": "high",
       "time_horizon": "5-10年",
-      "counter_trend": "人間の理性的政治性と戦争の『文明化可能性』という啓蒙的信念"
+      "counter_trend": "所有者による直接的経営統制と責任の一体性",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 8,
+        "disruption": 9,
+        "connectivity": 7,
+        "credibility": 7,
+        "early_stage": 7
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.7,
+      "noise_flag": false
     },
     {
-      "signal": "『暴露による『説明責任喪失』の制度化』：英国Mandelson事件とセキュリティ・クリアランス秘密国家化",
-      "description": "英国でMandelsonがセキュリティ・クリアランス審査に落選した事実が『秘密のまま承認』される矛盾。国家が『秘密裏に秘密を上書き』するプロセスの可視化により、民主的説明責任の『根本的な制度的破綻』が露呈されている。",
+      "signal": "『著作権の読み書き自由化』：法廷による知的財産権の根本的再定義",
+      "description": "複数の米国下級裁判所が「法律文書を読み・話す行為は著作権法で保護されない」と判示し、Anna's Archiveのスポティファイ無断収集に51億円の賠償を命じながらも『読む行為自体の保護』を宣言している。これは著作権の法的本質が『流通統制』から『利用形態の自由』へと根本的に再定義されつつあることを示唆する構造的変化。",
       "related_headlines": [
-        "Revealed: Mandelson failed vetting but Foreign Office overruled decision",
-        "Officials debate withholding Mandelson vetting documents from parliament",
-        "Five key questions: who overruled decision to deny Mandelson security clearance?"
+        "Another Court Rules Copyright Can't Stop People From Reading and Speaking the Law",
+        "Supreme Court Agrees With EFF: ISPs Don't Have To Be Copyright Enforcers",
+        "Spotifyのコンテンツを無断で収集していた海賊版図書館「Anna's Archive」に3億2220万ドル(約510億円)の賠償金支払いを命じる判決"
+      ],
+      "pestle_categories": [
+        "法律",
+        "経済"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "デジタル著作権と知的財産の『絶対的保護』という1990年代〜2010年代の法的パラダイム",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 9,
+        "disruption": 7,
+        "connectivity": 6,
+        "credibility": 8,
+        "early_stage": 8
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.7,
+      "noise_flag": false
+    },
+    {
+      "signal": "『イラン戦争による複合危機の『予期喪失』』：地政学的カオスの常態化",
+      "description": "イラン戦争がホルムズ海峡閉鎖や原油高騰を通じてG7・G20の政策議論を脅かしている状況で、米国の「イラン戦争権限制限法案」がセネートで繰り返し否決されている。これは従来型の『紛争の限定可能性』という前提が崩壊し、複合的な経済・軍事・エネルギー危機が『予測不可能な形で重合』することが政治的に管制不可能になっていることを示す。",
+      "related_headlines": [
+        "Senate Republicans Again Block Bid to Limit Trump's Iran War Powers",
+        "How the Iran War Will Upend the Global Economy",
+        "Middle East War Will Slow Global Economic Growth, I.M.F. Warns"
       ],
       "pestle_categories": [
         "政治",
-        "法律"
+        "経済",
+        "環境"
       ],
-      "potential_impact": "medium",
+      "potential_impact": "high",
       "time_horizon": "1-3年",
-      "counter_trend": "民主的透明性と説明責任の段階的強化という期待"
+      "counter_trend": "米国の『制御可能な紛争管理』と国際秩序の『多層的安定化』という冷戦後の地政学的前提",
+      "signal_type": "wild_card",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 9,
+        "connectivity": 9,
+        "credibility": 9,
+        "early_stage": 5
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.7,
+      "noise_flag": false
     },
     {
-      "signal": "『消費者ウェルネスの『医学的民主化』』：ChatGPTが医療システムの『診断的盲点』を補填する現象",
-      "description": "医学の専門家制度が『何年もの誤診』を続ける一方で、AIが患者自身に『正確な診断への道筋』を提供。これは『医療専門家制度の独占的正当性喪失』と『患者による自己医療化』の加速を意味し、医学的知識の『脱専門家化』が進行している。",
+      "signal": "『世界モデル開発競争』の『隠れた技術的加速化』",
+      "description": "中国のゲーム業界伝説・陳天橋が320億円をAGI実現に投じ、同時にOpenAI・Anthropicが『信頼できる企業のみに最新技術提供』という階級的選別体制を構築中。これは生成AIの次段階である『世界物理モデルの獲得競争』が国家間で激化しているが、メディア報道では『AI安全性』の表層的議論に隠蔽されている構造を示す。",
       "related_headlines": [
-        "ChatGPT 'uncovered woman's rare condition' after years of misdiagnosis",
-        "AI identifies early risk patterns for skin cancer",
-        "Have Mental Health Concerns Influenced Your Choice to Have Children?"
+        "AGIはいつ実現？中国ゲーム界の伝説･陳天橋氏が3200億円投じる｢人類超えAI｣の核心",
+        "Like Anthropic, OpenAI Will Share Latest Technology Only With Trusted Companies",
+        "Chinese tech giants, AI 'godmother' Li Fei-Fei race to seize the edge in world models"
       ],
       "pestle_categories": [
+        "技術",
+        "政治",
+        "経済"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "5-10年",
+      "counter_trend": "AI開発の『透明性と学術共有』を名目とした『普遍的アクセス』の規範",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 8,
+        "disruption": 8,
+        "connectivity": 7,
+        "credibility": 7,
+        "early_stage": 8
+      },
+      "evidence_type": "anecdotal",
+      "composite_score": 7.7,
+      "noise_flag": false
+    },
+    {
+      "signal": "超機関的権力の民主的正当性危機の顕在化",
+      "description": "Mandelson英国外交官の身元確認失敗事件、「Think Tanks Have Defeated Democracy」という言説の台頭、米国でのPalantiらテック企業のICE協力スキャンダルなど、国家公務員・シンクタンク・民間テック企業から成る『深い国家（Deep State）』的構造が、民主的統制を逃れながら権力を行使していることが多角的に可視化されている。代議民主制の『見える権力』と『見えない権力』の乖離が制度危機に。",
+      "related_headlines": [
+        "Think Tanks Have Defeated Democracy",
+        "Five key questions: who overruled decision to deny Mandelson security clearance?",
+        "Officials debate withholding Mandelson vetting documents from parliament",
+        "Congress Turns Up Pressure on DHS Over Palantir's Role in Immigration Crackdown",
+        "Google Broke Its Promise to Me. Now ICE Has My Data."
+      ],
+      "pestle_categories": [
+        "政治",
+        "法律",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "官僚機構と議会の権力分離は民主的統制を可能にするという法治主義的前提",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 2,
+      "three_horizons": "H1",
+      "cla_depth": "myth",
+      "scores": {
+        "novelty": 7,
+        "disruption": 9,
+        "connectivity": 8,
+        "credibility": 8,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.6,
+      "noise_flag": false
+    },
+    {
+      "signal": "『暗号資産回廊』による国家通貨システムの『物理的迂回』",
+      "description": "キルギスタンが『Cryptostan』と呼ばれる暗号資産・マイニング拠点化する一方、キューバの通貨統一危機、ベネズエラのポストチャベス外交政策での非ドル化戦略が同期している。既存国家統制通貨の『実質的機能喪失』の局地的実験。",
+      "related_headlines": [
+        "Welcome to Cryptostan: Kyrgyzstan and the Emerging Crypto Corridor",
+        "Double Trouble: Currency Unification in Cuba",
+        "Venezuela's Post-Chávez Foreign Policy"
+      ],
+      "pestle_categories": [
+        "経済",
+        "政治"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "5-10年",
+      "counter_trend": "中央銀行による通貨統制と金融システムの一元管理",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 9,
+        "disruption": 8,
+        "connectivity": 6,
+        "credibility": 5,
+        "early_stage": 9
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.6,
+      "noise_flag": false
+    },
+    {
+      "signal": "『医療データのAI化による診断の『人間的判断からの解放』",
+      "description": "ChatGPT が『診断医学的見落とし』を補完する事例、AI による皮膚がん「早期リスク」検出など、医学的知識体系が『AI学習モデルへの外部化』段階に。医師の『診断権力の国家・企業への再編成』の前哨戦。",
+      "related_headlines": [
+        "ChatGPT 'uncovered woman's rare condition' after years of misdiagnosis",
+        "AI identifies early risk patterns for skin cancer"
+      ],
+      "pestle_categories": [
+        "技術",
         "社会",
-        "技術"
+        "法律"
       ],
       "potential_impact": "high",
       "time_horizon": "3-5年",
-      "counter_trend": "医療専門家による診断的『ゲートキーパー』機能の永続性と医学的権威性"
+      "counter_trend": "医師の臨床的自律性と診断権の医学倫理的保護",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 8,
+        "connectivity": 8,
+        "credibility": 8,
+        "early_stage": 7
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.6,
+      "noise_flag": false
     },
     {
-      "signal": "『反AI市民主義の『共存権』フレーミング』：スーパーインテリジェンス禁止運動の『生存権』への再定義",
-      "description": "著名科学者・宗教指導者がスーパーインテリジェンス禁止を『共存の条件』として要求。これは従来の『AI規制』論から『人類の生物学的存続権』を基礎とした『実存的禁止要求』へと転換。民主的規制ではなく『生存権の主張』という新しい政治的言語が出現している。",
+      "signal": "『個人情報のAI化禁止』運動：データ主権から『認識主権』への法的進化",
+      "description": "日本の個人情報保護法改正が『AI学習への個人情報利用禁止』を検討し始め、法的次元で『個人情報の算出的変換=権利侵害』という新しい権利体系が萌芽している。これは『データ保護=個人情報の秘密性保全』から『認識の自律性保全』へと権利観を根本的に転換させ、『思考過程のAI化による人間的自律性の侵害』を違法化する動きである。",
       "related_headlines": [
-        "Prominent Scientists, Faith Leaders, Policymakers and Artists Call for a Prohibition on Superintelligence, as Poll Shows Americans Don't Want It",
-        "Future of Life Institute Launches Multimillion Dollar Nationwide AI Regulation Campaign",
-        "Michael Kleinman reacts to breakthrough AI safety legislation"
+        "「個人情報の保護に関する法律等の一部を改正する法律案」を閣議決定",
+        "AIに個人情報を入れてはいけない？　個人情報保護法改正を見据えて弁護士が解説",
+        "令和8年改正個人情報保護法はどうなる？改正方針を弁護士が解説",
+        "Google Broke Its Promise to Me. Now ICE Has My Data."
       ],
       "pestle_categories": [
-        "政治",
+        "法律",
         "技術",
         "社会"
       ],
       "potential_impact": "high",
       "time_horizon": "1-3年",
-      "counter_trend": "AIの『規制可能性』と『人間による制御の可能性』という技術楽観主義"
+      "counter_trend": "『データ=経済的資源』としてのデータ商品化モデル",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H2",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 8,
+        "disruption": 8,
+        "connectivity": 7,
+        "credibility": 8,
+        "early_stage": 7
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.6,
+      "noise_flag": false
     },
     {
-      "signal": "『地方自治の『下からの編み直し』』：シビックテックと福島浪江町による『主権回復プロセス』の実験化",
-      "description": "福島県浪江町でゼロから自治を構築し直す試み、シビックテックによる『社会のバグ修正』、人口300人の地域での学校再開など、『上からの復興』に対する『下からの主権回復』運動が急速に組織化。中央国家による『復興の独占』を地域主権が奪回する現象が可視化されている。",
+      "signal": "「思想検閲の民営化」：企業による情報統制の政治化",
+      "description": "Palantirをはじめとするテック企業がICE（入国管理取締局）と協力し、移民取締と個人監視システムを統合化しつつある事象。同時に、FCC・FAA等の規制当局がドローン映像への制限を強化し、ICE監視への『市民的抵抗の映像化権』を剥奪しようとしている。政府検閲から民間企業への権力委譲と、その権力の非透明な行使という新型の統制体制が浮上。",
       "related_headlines": [
-        "生きることそのものに、再び当事者として関わること。ゼロから自分たちで社会をつくる福島県浪江町の高橋大就さんと「生き延びるための自治」を考える",
+        "Congress Turns Up Pressure on DHS Over Palantir's Role in Immigration Crackdown",
+        "The FAA's \"Temporary\" Flight Restriction for Drones is a Blatant Attempt to Criminalize Filming ICE",
+        "Google Broke Its Promise to Me. Now ICE Has My Data."
+      ],
+      "pestle_categories": [
+        "技術",
+        "社会",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "企業の社会的責任と民間データの『公共的利用禁止』という規範",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 8,
+        "disruption": 8,
+        "connectivity": 8,
+        "credibility": 8,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.6,
+      "noise_flag": false
+    },
+    {
+      "signal": "『脱グローバル化する供給チェーンの『物理的回廊化』』",
+      "description": "イラン戦争によるホルムズ海峡閉鎖リスクが『中東回廊』『インド太平洋回廊』『ユーラシア回廊』の物理的実装を加速させている。同時に日本がASEAの『エネルギー盾』として機能し、TSMC のクマモト工場がセキュリティドライブン再構成を迫られている。グローバルサプライチェーンが『地域ブロック化』と『物理的リスク回避』によって根本的に再組成されている。",
+      "related_headlines": [
+        "Middle East conflict chokes end of supply chain as lights go out in the Pacific",
+        "The Middle Corridor in an Era of Supply Chain Disruption",
+        "TSMC's Kumamoto Fab Upgrade: A Security-Driven Reconfiguration of Indo-Pacific Chip Competition",
+        "Can Japan's US$10b energy shield oust China's influence in Southeast Asia?"
+      ],
+      "pestle_categories": [
+        "経済",
+        "技術",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "グローバル統合供給チェーンによるコスト最適化",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 8,
+        "connectivity": 9,
+        "credibility": 8,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.6,
+      "noise_flag": false
+    },
+    {
+      "signal": "『シビック・テック』による下からの自治再構築運動",
+      "description": "Code for Japanらによる「社会のバグ取り」、福島浪江町での『ゼロから自分たちで社会をつくる』実践、300人規模の村での小中学校再開による自律的コミュニティ再生など、既存の政治行政制度を迂回し、市民技術と自発的結合で地域問題を解決する動きが多数報告されている。既存ガバナンスの失敗を前提に、並行的な『プロトガバナンス』が構築され始めている。",
+      "related_headlines": [
         "シビックテックで自治をひらく。Code for Japan 関治之さんが語る「社会のバグ」の直し方",
+        "生きることそのものに、再び当事者として関わること。ゼロから自分たちで社会をつくる福島県浪江町の高橋大就さんと「生き延びるための自治」を考える",
         "人口300人のまちで、休校した小中学校が再開へ。和歌山・富貴地区に移住した家族が「フキシネマパラダイス」から発信する、自分たちで地域をつくる楽しさ"
       ],
       "pestle_categories": [
         "社会",
+        "技術",
         "政治"
       ],
       "potential_impact": "medium",
       "time_horizon": "3-5年",
-      "counter_trend": "中央国家による統一的な復興・開発モデルの優越性と地方の『受動的統治』"
+      "counter_trend": "中央集権的政府機能の不可欠性と効率性という近代国家モデル",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 8,
+        "disruption": 7,
+        "connectivity": 7,
+        "credibility": 7,
+        "early_stage": 8
+      },
+      "evidence_type": "anecdotal",
+      "composite_score": 7.5,
+      "noise_flag": false
     },
     {
-      "signal": "『労働力不足の『海外育成化』』による移民労働の制度化",
-      "description": "札幌のバス運転手不足が海外人材募集・育成へ転換する動きは、日本の労働人口減少に対する『正規化しない外国人労働者システム』の定着を示唆している。これはアジア全域で『低スキル労働のグローバルアウトソーシング化』が加速する前兆である。",
+      "signal": "『言語と民主主義』の相互構成性への学術的再転向",
+      "description": "民主主義論が『言語による権力構成』という基礎的な問い直しに戻っている。従来の制度設計論から、言語・記号体系による支配と抵抗の機制そのものへの学術的関心が転換。これは民主主義の危機が制度レベルではなく『意味形成の場の奪取』における根本的な葛藤であることを示唆。",
       "related_headlines": [
-        "札幌 路線バスの運転手不足が深刻化 海外で人材募集し育成へ",
-        "OJTはなぜ機能しなくなったのか──MBA再評価の本質",
-        "Gender Inequalities in Japan and South Korea"
+        "Language and democracy"
       ],
       "pestle_categories": [
         "社会",
+        "政治"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "5-10年",
+      "counter_trend": "民主主義制度の形式的整備による問題解決可能性",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H1",
+      "cla_depth": "myth",
+      "scores": {
+        "novelty": 8,
+        "disruption": 7,
+        "connectivity": 7,
+        "credibility": 7,
+        "early_stage": 8
+      },
+      "evidence_type": "theoretical",
+      "composite_score": 7.5,
+      "noise_flag": false
+    },
+    {
+      "signal": "『精神衛生クライシスの世代集約化』における「子孫生産の倫理的棄却」",
+      "description": "香港学生の精神疾患増加、英国での定期的メンタルヘルスチェックの必要性、『未来世代への懸念が出生志向を揺さぶる』という調査が示唆するように、若年層の心理的危機が直接的に生殖選択の回避につながる。個人的な精神状態が『人類継続』という歴史的な社会的義務を無効化している。",
+      "related_headlines": [
+        "Rise in mental illness cases among Hong Kong students 'reflects growing openness'",
+        "Does your school do mental health checks? They should be regular, not just a one-off",
+        "Have Mental Health Concerns Influenced Your Choice to Have Children?",
+        "Americans underestimate national levels of concern for future generations: Evidence across collective, governmental and moral considerations"
+      ],
+      "pestle_categories": [
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "少子化を経済政策や保育制度で逆転させるというプロナタリスト的施策の前提",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "myth",
+      "scores": {
+        "novelty": 8,
+        "disruption": 9,
+        "connectivity": 6,
+        "credibility": 6,
+        "early_stage": 8
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.5,
+      "noise_flag": false
+    },
+    {
+      "signal": "『精神衛生危機の若年層集約化による「生殖意志の構造的喪失」』",
+      "description": "香港の学生における精神疾患増加、米国での将来世代への関心低下が報道される一方で、児童向けメンタルヘルスチェックの定期化が求められている。若年層における系統的な『生きる動機の形成不全』が、単なる個人的問題ではなく、世代的な『人口再生産の倫理的棄却』へと構造化している兆候である。",
+      "related_headlines": [
+        "Rise in mental illness cases among Hong Kong students 'reflects growing openness'",
+        "Have Mental Health Concerns Influenced Your Choice to Have Children?",
+        "Does your school do mental health checks? They should be regular, not just a one-off",
+        "Americans underestimate national levels of concern for future generations: Evidence across collective, governmental and moral considerations"
+      ],
+      "pestle_categories": [
+        "社会",
+        "環境"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "5-10年",
+      "counter_trend": "人口増加と世代継続の生物学的前提",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "myth",
+      "scores": {
+        "novelty": 8,
+        "disruption": 9,
+        "connectivity": 7,
+        "credibility": 6,
+        "early_stage": 7
+      },
+      "evidence_type": "statistical",
+      "composite_score": 7.5,
+      "noise_flag": false
+    },
+    {
+      "signal": "『イラン戦争による複合危機カスケード』の『予測不可能性』の常態化",
+      "description": "イラン戦争の開始以来、その地政学的・経済的・エネルギー的影響が『予測モデル』を次々と破壊している。IMFが『大規模エネルギー危機』を警告し、供給チェーン全域が『想定外の混乱』に見舞われている。これは単なる危機ではなく『予測可能性の喪失』という認識論的な根本的変化の兆し。",
+      "related_headlines": [
+        "How the Iran War Will Upend the Global Economy",
+        "Middle East War Will Slow Global Economic Growth, I.M.F. Warns",
+        "IMF says strait of Hormuz closure raises prospect of 'major energy crisis' – video",
+        "The Iran War, ASEAN and Global Supply Chains"
+      ],
+      "pestle_categories": [
+        "政治",
         "経済"
       ],
       "potential_impact": "high",
       "time_horizon": "1-3年",
-      "counter_trend": "日本の『国内育成・定年雇用』モデルの衰退と『一時的外国人労働化』の制度的定着"
+      "counter_trend": "経済学的『合理的予測』による市場モデルの有効性",
+      "signal_type": "wild_card",
+      "ansoff_level": 4,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 9,
+        "connectivity": 9,
+        "credibility": 8,
+        "early_stage": 5
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.5,
+      "noise_flag": false
     },
     {
-      "signal": "『OJT崩壊による『企業教育機能の民間化・個人化』』",
-      "description": "日本企業でOJT（現場訓練）が機能不全化し、幹部育成が困難になる現象は、企業が組織内教育責任を放棄し、個人のMBA取得や民間研修に外部委託化することを意味する。これは『学習の個人化責任化』による企業コミュニティ機能の解体である。",
+      "signal": "法的次元での『デジタル権力の外部化』抵抗の萌芽",
+      "description": "EFFらが「法を読む自由」を著作権訴訟で防衛、Drone撮影のFAA制限に違憲判断、「個人情報保護法改正でAIへの個人データ入力制限」という日本の法制動向など、デジタル技術による人間の管理と監視に対する『法的逆襲』が多元的に起きている。これは単なるプライバシー保護ではなく、『デジタル領域での人間主権の回復』を制度的に組み込もうとする動き。法体系とテック支配の新たな衝突が表面化。",
       "related_headlines": [
-        "OJTはなぜ機能しなくなったのか──MBA再評価の本質　企業も役所も幹部が育たない国──OJT崩壊と日本の危機①",
-        "Reframing talent scarcity: A finnish Delphi-based study co-constructing expert-informed scenarios for HE–industry collaboration toward an AI-literate workforce"
+        "Another Court Rules Copyright Can't Stop People From Reading and Speaking the Law",
+        "The FAA's \"Temporary\" Flight Restriction for Drones is a Blatant Attempt to Criminalize Filming ICE",
+        "AIに個人情報を入れてはいけない？　個人情報保護法改正を見据えて弁護士が解説",
+        "「個人情報の保護に関する法律等の一部を改正する法律案」を閣議決定",
+        "US Tech Companies Must be Accountable in US Courts for Facilitating Persecution and Torture Abroad"
       ],
       "pestle_categories": [
-        "社会",
+        "法律",
+        "技術",
+        "社会"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "1-3年",
+      "counter_trend": "デジタル規制は産業成長を阻害し、グローバル競争力を損なうという規制撤廃圧力",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 7,
+        "connectivity": 8,
+        "credibility": 8,
+        "early_stage": 7
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.4,
+      "noise_flag": false
+    },
+    {
+      "signal": "東欧民主主義の『反既得権力デモクラシー』への転換",
+      "description": "ハンガリー選挙でのオルバン与党敗北、ポーランド政治の変化などから、既存政治エリートへの不信が東欧全域で構造化している。この現象は単なる選挙結果ではなく、代表制民主主義そのものの信頼性低下と、制度外的な民主実践への志向の萌芽を示している。",
+      "related_headlines": [
+        "Orbán's Defeat Threatens to Halt Hungarian Support of Populist Right",
+        "Orbán's defeat punctures Europe's Far Right, but also offers it a road map",
+        "Why Orban and Hungary are not one and the same"
+      ],
+      "pestle_categories": [
+        "政治",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "既存政治体制の安定性と制度的正当性への信頼",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 7,
+        "disruption": 8,
+        "connectivity": 8,
+        "credibility": 8,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.4,
+      "noise_flag": false
+    },
+    {
+      "signal": "『世代間主権回復』の『こども選挙』への制度的転化",
+      "description": "日本で『こども選挙』が『主権者である子どもたちを信じた』実験として展開。既存市民参与モデルではなく、『世代的前提の再定義』を通じた民主主義の『下位世代による乗っ取り』的な可能性。中央集権的民主主義から『世代的分散主権』への過渡期シグナル。",
+      "related_headlines": [
+        "これは、私たち一人ひとりが主権を回復していくプロセス。「こども選挙」が、主権者である子どもたちを信じた先に描く未来とは"
+      ],
+      "pestle_categories": [
+        "政治",
+        "社会"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "5-10年",
+      "counter_trend": "成人中心・投票権年齢による民主的正当性の制限",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "myth",
+      "scores": {
+        "novelty": 9,
+        "disruption": 7,
+        "connectivity": 6,
+        "credibility": 5,
+        "early_stage": 9
+      },
+      "evidence_type": "anecdotal",
+      "composite_score": 7.4,
+      "noise_flag": false
+    },
+    {
+      "signal": "『法的次元での個人情報の『AI化禁止』運動』",
+      "description": "日本・米国での個人情報保護法改正、AIの学習データ利用禁止、『GoogleがICEに利用者データを提供』という事件化など、データの『AIサプライチェーン化』に対する法的・市民的抵抗が多元的に形成されている。単なる『プライバシー保護』ではなく、『人格情報のAI資本への強制的吸い上げ』という権力構造への拒否。",
+      "related_headlines": [
+        "「個人情報の保護に関する法律等の一部を改正する法律案」を閣議決定",
+        "AIに個人情報を入れてはいけない？　個人情報保護法改正を見据えて弁護士が解説",
+        "Google Broke Its Promise to Me. Now ICE Has My Data.",
+        "Congress Turns Up Pressure on DHS Over Palantir's Role in Immigration Crackdown"
+      ],
+      "pestle_categories": [
+        "法律",
+        "技術",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "『データは新しい石油』という資本的価値化による個人情報の自由な商品化",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 8,
+        "connectivity": 7,
+        "credibility": 8,
+        "early_stage": 7
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.4,
+      "noise_flag": false
+    },
+    {
+      "signal": "『医学診断における人間的判断の自動化的廃止』",
+      "description": "ChatGPTが『医師の見落とした希少疾患を診断』、AI技術が医学的エビデンスベースの判断を『より正確に』実行し始める中、医学の根本的な営みである『患者との対話を通じた不確実性の解釈』という人間的営為そのものが『無駄』として効率化から除外されている。医学の『人文的基礎』の根本的な消去。",
+      "related_headlines": [
+        "ChatGPT 'uncovered woman's rare condition' after years of misdiagnosis",
+        "AI identifies early risk patterns for skin cancer",
+        "A 67-year-old \"crazy\" theory about vitamin B1 has finally been proven"
+      ],
+      "pestle_categories": [
+        "技術",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "医学における『人間的判断』『臨床経験の価値』という専門職的アイデンティティ",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 2,
+      "three_horizons": "H1",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 7,
+        "disruption": 9,
+        "connectivity": 6,
+        "credibility": 7,
+        "early_stage": 8
+      },
+      "evidence_type": "mixed",
+      "composite_score": 7.4,
+      "noise_flag": false
+    },
+    {
+      "signal": "『規制当局の権力空洞化』による『企業自主規制への強制的権力譲渡』",
+      "description": "AI安全性規制、移民統制、著作権執行など複数の政策領域で、政府機関が民間企業に規制権を事実上委譲している。Palantir社のICE統合、Anthropicの『供給チェーンリスク』ラベル対抗、ISP著作権非執行判決など、規制当局の権力が急速に縮減され、企業が『自律的な規制主体』化している。",
+      "related_headlines": [
+        "Congress Turns Up Pressure on DHS Over Palantir's Role in Immigration Crackdown",
+        "Federal Court Denies Anthropic's Motion to Lift 'Supply Chain Risk' Label",
+        "Supreme Court Agrees With EFF: ISPs Don't Have To Be Copyright Enforcers",
+        "White House AI Framework Proposes Industry-Friendly Legislation - Lawfare"
+      ],
+      "pestle_categories": [
+        "法律",
+        "技術",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "『国家による独占的規制権』という近代的ガバナンス前提",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 8,
+        "connectivity": 8,
+        "credibility": 8,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.4,
+      "noise_flag": false
+    },
+    {
+      "signal": "『知的財産権の根本的解体』：法廷による『読み・話す権利』の著作権からの解放",
+      "description": "複数の裁判所がネットパイラシー、判例法の無断引用、ネタバレ記事に対して『著作権は言論の権利を制限できない』という判決を連鎖的に下し始めている。これは『知的財産権の絶対性』という20世紀的な法的前提を根本的に問い直し、『アクセス権>所有権』という新しい規範体系の形成を示唆している。",
+      "related_headlines": [
+        "Another Court Rules Copyright Can't Stop People From Reading and Speaking the Law",
+        "Supreme Court Agrees With EFF: ISPs Don't Have To Be Copyright Enforcers",
+        "映画内容の「ネタバレ」記事は \"著作権侵害\" 有罪判決"
+      ],
+      "pestle_categories": [
+        "法律",
         "経済"
       ],
       "potential_impact": "high",
       "time_horizon": "3-5年",
-      "counter_trend": "従来の日本型企業内教育と組織的人材育成責任制の消滅"
+      "counter_trend": "『著作権=絶対的所有権』という知的財産法の基本原理",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 8,
+        "disruption": 8,
+        "connectivity": 7,
+        "credibility": 8,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.4,
+      "noise_flag": false
     },
     {
-      "signal": "『デジタル監視の『説明責任不可能化』と『組織的隠蔽制度化』』",
-      "description": "英国のMandelson事件で政府がセキュリティ・クリアランス失敗を隠蔽し、議会に説明責任を逃れた行為は、民主的監視制度の『組織的無効化』を示唆している。『秘密の権利』が『説明義務の廃止』へ転換する兆候である。",
+      "signal": "『超知能禁止運動』の多元的制度化への急速な拡大",
+      "description": "Future of Life Institute等による「超知能禁止キャンペーン」が、科学者・信仰指導者・政策立案者・芸術家による超党的な署名活動へと拡大。同時にホワイトハウスAI枠組みが『業界友好的』と批判されながらも、Anthropicら企業側も安全性規制を『スピン』化している。AIの『制御可能性の喪失可能性』に対する社会的不安が、既存の規制枠組みの不十分性を露呈させている。",
       "related_headlines": [
-        "Five key questions: who overruled decision to deny Mandelson security clearance?",
-        "Epstein row: UK's Starmer faces calls to resign over report that Mandelson failed vetting",
-        "Officials debate withholding Mandelson vetting documents from parliament",
-        "Revealed: Mandelson failed vetting but Foreign Office overruled decision"
+        "Prominent Scientists, Faith Leaders, Policymakers and Artists Call for a Prohibition on Superintelligence, as Poll Shows Americans Don't Want It",
+        "'Safety first' puts Anthropic ahead in game of AI spin",
+        "Future of Life Institute Launches Multimillion Dollar Nationwide AI Regulation Campaign"
+      ],
+      "pestle_categories": [
+        "技術",
+        "政治",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "AI技術の『無制限な開発と市場化』という技術産業の自由主義的規範",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 7,
+        "disruption": 8,
+        "connectivity": 8,
+        "credibility": 8,
+        "early_stage": 6
+      },
+      "evidence_type": "mixed",
+      "composite_score": 7.4,
+      "noise_flag": false
+    },
+    {
+      "signal": "『地政学的仲介者の権力化』による脱米国化の制度的定着",
+      "description": "パキスタンがイラン・米国間の仲介者として地政学的プレイヤー化し、南アフリカがアパルトヘイト時代の交渉者を米国大使として任命するなど、『グローバル・サウス』の非同盟的国家が世界政治の『仲介者』として権力化。米国一極体制の衰退と『多極化』ではなく『複数の権力中心の共存』が制度化される兆し。",
+      "related_headlines": [
+        "Why India is rankled by Pakistan playing mediator in US-Iran war",
+        "Pakistan's Search for Diplomatic Relevance Amid the Iran War",
+        "South Africa Names Roelf Meyer, Apartheid-Era Negotiator, as U.S. Ambassador",
+        "Venezuela's Post-Chávez Foreign Policy"
+      ],
+      "pestle_categories": [
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "米国による一極的な地政学的支配の前提",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 8,
+        "connectivity": 8,
+        "credibility": 8,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.4,
+      "noise_flag": false
+    },
+    {
+      "signal": "『個人情報のAI化禁止』運動による『認識主権』の法的概念化",
+      "description": "日本の個人情報保護法改正が『AIに個人情報を入れることの禁止』を方向として明示し、単なる『プライバシー保護』から『自分の認識データが他者のAI学習に利用されることへの法的拒否権』へと進化。これは『データ主権』から『認識主権』（自分がどう認識されるかを支配する権利）への根本的な法的概念転換。",
+      "related_headlines": [
+        "「個人情報の保護に関する法律等の一部を改正する法律案」を閣議決定",
+        "AIに個人情報を入れてはいけない？　個人情報保護法改正を見据えて弁護士が解説",
+        "令和8年改正個人情報保護法はどうなる？改正方針を弁護士が解説",
+        "Google Broke Its Promise to Me. Now ICE Has My Data."
+      ],
+      "pestle_categories": [
+        "法律",
+        "技術"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "『個人データの利活用による経済効率化』というビッグデータ産業の根本的前提",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 8,
+        "disruption": 8,
+        "connectivity": 7,
+        "credibility": 8,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.4,
+      "noise_flag": false
+    },
+    {
+      "signal": "『移民統制とテクノロジー統合』による新たな権力体制の構築",
+      "description": "米国のICE拡大、Trump政権による移民判事の大量解任、Palantir社の移民取締システム導入など、移民管理が国家権力の最前線で、監視テクノロジーと完全に統合している。同時に連邦裁判所による市民権侵害判決が出ているが、行政権は粛々と制度を拡張中。法的抵抗と行政権の非対称性が露呈。",
+      "related_headlines": [
+        "Congress Turns Up Pressure on DHS Over Palantir's Role in Immigration Crackdown",
+        "The Trump Administration Has Fired Over 100 Immigration Judges Without Explanation",
+        "Last arguments of the term: huge cases for the Fourth Amendment and immigration",
+        "ICE agent charged with assault in Minnesota for allegedly pointing gun at motorists"
       ],
       "pestle_categories": [
         "政治",
+        "技術",
         "法律"
       ],
       "potential_impact": "high",
       "time_horizon": "1-3年",
-      "counter_trend": "民主的透明性と議会的監視制度の『組織的侵食』"
+      "counter_trend": "法治国家と市民的自由の保護メカニズム",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 4,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 9,
+        "connectivity": 7,
+        "credibility": 9,
+        "early_stage": 5
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.3,
+      "noise_flag": false
     },
     {
-      "signal": "『憲法改正の『内閣主導化』による議会権力の形骸化』",
-      "description": "日本の高市首相が『来年党大会までに発議にめど』と改憲を加速させ、参議院で『強引な議論』と野党反発を無視している現象は、改憲プロセスが『国会議論』から『内閣決定』へ権力移譲される兆候である。",
+      "signal": "『地域ブロック化による暗号資産の物理的回廊化』",
+      "description": "キルギスタンが『暗号資産回廊』としての戦略的地位を構築、中国が「一帯一路」外交と並行して海外投資レバレッジを高める動き。従来のドル基盤の国際金融システムを物理的にバイパスする通貨的インフラが、地政学的に分断する地域ブロック内で『デジタル現物化』しつつある。",
       "related_headlines": [
-        "高市首相 \"国論二分の政策実現に全力 来年統一地方選勝利を\"",
+        "Welcome to Cryptostan: Kyrgyzstan and the Emerging Crypto Corridor",
+        "China's PBOC raises leverage ratios for foreign lenders to support outbound investment",
+        "Double Trouble: Currency Unification in Cuba"
+      ],
+      "pestle_categories": [
+        "経済",
+        "技術",
+        "政治"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "ドル一極体制による国際金融秩序の安定性",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 8,
+        "disruption": 7,
+        "connectivity": 8,
+        "credibility": 6,
+        "early_stage": 7
+      },
+      "evidence_type": "mixed",
+      "composite_score": 7.3,
+      "noise_flag": false
+    },
+    {
+      "signal": "『共有サービスと法規制の根本的不可調和』における『インフォーマル正当性』の萌芽",
+      "description": "豪州のeバイク規制がUber Eats・DoorDashを圧迫、インドネシア・バリの『違法民泊の合法化要求』、北米での共有サービスの規制脱出など、デジタル資本主義が創造した『共有経済』が既存の法的カテゴリに一切収まらず、むしろ『規制回避そのもの』が新たな市場ロジックとして機能し始めている。",
+      "related_headlines": [
+        "Queensland ebike laws could cripple Uber Eats, DoorDash and shared e-vehicle schemes, industry warns",
+        "Indonesia's Bali wants illegal rentals to be legitimate as operators flag red tape",
+        "Grattan on Friday: Migration debate deserves better policy approach and less politicking from Liberals"
+      ],
+      "pestle_categories": [
+        "法律",
+        "経済",
+        "社会"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "法治国家における『規制による市場秩序の維持』という近代的な前提",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 8,
+        "disruption": 7,
+        "connectivity": 7,
+        "credibility": 7,
+        "early_stage": 7
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.3,
+      "noise_flag": false
+    },
+    {
+      "signal": "『物理法則の実験的再編成可能性』の実証的出現",
+      "description": "グラフェンが『基本物理法則に違反』し、『巨大スーパー原子』が量子計算の物理的限界を超克し、160年間の化石記録の謎が一夜にして解けるなど、従来『不変的な法則』とされた自然現象そのものが実験的な再編成・異解釈の対象化。科学的進歩が『新しい知識』から『既知の法則の再構成可能性』へシフト。",
+      "related_headlines": [
+        "Graphene just defied a fundamental law of physics",
+        "\"Giant superatoms\" could finally solve quantum computing's biggest problem",
+        "Scientists just solved a 160-million-year fossil mystery \"I've never seen anything like it\"",
+        "Scientists just recreated a rare cosmic reaction never seen before"
+      ],
+      "pestle_categories": [
+        "技術",
+        "環境"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "5-10年",
+      "counter_trend": "物理学における『基本法則の普遍性と不変性』の認識枠組み",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 9,
+        "disruption": 8,
+        "connectivity": 5,
+        "credibility": 7,
+        "early_stage": 7
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.3,
+      "noise_flag": false
+    },
+    {
+      "signal": "『憲法改正の超党的加速化』における国家権力の再編制度化",
+      "description": "日本・複数国で『超党的な憲法改正議論』が急加速し、特に日本では『来年党大会までに発議にめど』という政治的期限設定が進行。危機状況（イラン戦争、経済混乱）を背景に、従来は『根本的で時間を要する』とされた憲法秩序そのものが『緊急的な権力再構成の道具』として政治化。民主的手続きを形式的に保ちながらの『体制的な権力再集中』。",
+      "related_headlines": [
+        "高市首相\"憲法改正 来年党大会までに発議にめど\" 議論活発に",
         "参議院憲法審査会が今の国会で初めて開催 各党が意見表明",
-        "高市首相 \"憲法改正 来年党大会までに発議にめど\" 議論活発に",
-        "自民 萩生田氏「憲法改正へ1年以内に条文整理 合意形成を」"
+        "参議院自民党有志 憲法改正に向け議員連盟発足へ"
       ],
       "pestle_categories": [
         "政治",
@@ -1798,39 +2406,86 @@
       ],
       "potential_impact": "high",
       "time_horizon": "1-3年",
-      "counter_trend": "国会における憲法改正の民主的プロセスと議員間合意形成の『組織的迂回』"
+      "counter_trend": "憲法を『国家権力に対する市民的な縛り』として機能させるという近代民主主義的前提",
+      "signal_type": "weak_signal",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 6,
+        "disruption": 9,
+        "connectivity": 7,
+        "credibility": 8,
+        "early_stage": 7
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.3,
+      "noise_flag": false
     },
     {
-      "signal": "『武器輸出の『事後通知化』による議会権の実質的喪失』",
-      "description": "自民党が『武器』移転原則を『事後通知』で可能にする政府案を了承した行為は、防衛装備移転が国会審議なしで実行される『議会権の事後的形骸化』を示唆している。防衛国家化が『国会機能の迂回』で進行する兆候である。",
+      "signal": "『生殖倫理の若年層による急速な構造的逆転』：「子孫を持つことの計画的回避」",
+      "description": "複数の社会科学論文（香港・日本・韓国・米国）で同時に「精神衛生危機と生殖志向の放棄」の相関が報告されている。これは単なる『少子化』ではなく、若年層が倫理的・心理的レベルで『世代継続への義務の拒否』を明示的に行いつつある現象。さらに「未来世代への責任感」が他の親世代世代と逆転している兆候があり、『世代間契約』の根本的な裂け目が生じている。",
       "related_headlines": [
-        "自民 「武器」移転原則可能とする政府案了承 国会へ事後通知",
-        "高市首相 後半国会の重要法案の審議で与党に協力要請"
+        "Have Mental Health Concerns Influenced Your Choice to Have Children?",
+        "Americans underestimate national levels of concern for future generations: Evidence across collective, governmental and moral considerations",
+        "Gender Inequalities in Japan and South Korea: Labor Market, Employment, and Education"
       ],
       "pestle_categories": [
-        "政治",
-        "法律"
+        "社会"
       ],
       "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "防衛装備移転における国会事前審議と民主的承認プロセスの『制度的迂回』"
-    },
-    {
-      "signal": "『定数削減による『民主的代表制の『量的形骸化』』』",
-      "description": "衆議院協議会で与党が『定数削減』を求める動きは、議員数削減を通じて議会全体の『代表性を量的に縮小』させようとする試みである。『民主的代表制の形式的維持と実質的権力集中』の兆候である。",
-      "related_headlines": [
-        "衆議院協議会 与党 \"定数削減を\" 野党 \"強引な議論に反対\""
-      ],
-      "pestle_categories": [
-        "政治"
-      ],
-      "potential_impact": "medium",
       "time_horizon": "3-5年",
-      "counter_trend": "議会の代表性確保と民主的意思決定プロセスの『量的な縮小圧力への抵抗』"
+      "counter_trend": "『生殖は義務』と『家族形成が幸福』という近代家族の規範的前提",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 3,
+      "three_horizons": "H3",
+      "cla_depth": "myth",
+      "scores": {
+        "novelty": 8,
+        "disruption": 8,
+        "connectivity": 6,
+        "credibility": 7,
+        "early_stage": 7
+      },
+      "evidence_type": "statistical",
+      "composite_score": 7.3,
+      "noise_flag": false
     },
     {
-      "signal": "『アパルトヘイト『和解技術』の『外交的兵器化』』",
-      "description": "南アフリカがアパルトヘイト時代の交渉者Roelf Meyerを米国大使に任命した行為は、『過去の和解・対話技術』を現在の地政学的交渉で『外交武器化』する戦略を示唆している。アジア・グローバルサウスが『歴史的和解レトリック』を権力交渉に転用する兆候である。",
+      "signal": "技術企業による大規模な予防的人員削減の加速化",
+      "description": "Snapが16%の従業員削減を発表し「AI採用」を理由に明示。一方、TSMC・OpenAI・Anthropicは逆にAI需要で拡大。この分化は単なる景気循環ではなく、AI導入による「自社業務の加速度的自動化」が経営判断に組み込まれ始めた兆候。労働市場の構造的再編成が予期より早期に始まっている可能性。",
+      "related_headlines": [
+        "Snap Is Laying Off 16% of Full-Time Staff as It Embraces A.I.",
+        "Snap Inc blames AI as it lays off 1,000 workers",
+        "TSMC targets over 30% revenue surge in 2026, ramps up capex amid booming AI demand",
+        "AI is destroying jobs – and the energy crisis could make that much worse"
+      ],
+      "pestle_categories": [
+        "技術",
+        "経済",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "AI導入による生産性向上が雇用創出に転化するという楽観的雇用シナリオ",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 8,
+        "connectivity": 7,
+        "credibility": 8,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.2,
+      "noise_flag": false
+    },
+    {
+      "signal": "『アパルトヘイト後の政治的修復者』の国家間外交における権力化",
+      "description": "南アフリカが過去の和平交渉人を米国大使として指名する決定は、単なる人事ではなく『対立的国家間の歴史的修復経験』を国際外交の公式チャネルへ格上げしたこと。民族紛争・分断国家の『修復知識』が地政学的権力資源化している。これは従来の外交官や政治家のキャリアパスの根本的転換を示唆。",
       "related_headlines": [
         "South Africa Names Roelf Meyer, Apartheid-Era Negotiator, as U.S. Ambassador",
         "South Africa names apartheid-era negotiator as ambassador to US"
@@ -1838,119 +2493,704 @@
       "pestle_categories": [
         "政治"
       ],
-      "potential_impact": "medium",
-      "time_horizon": "3-5年",
-      "counter_trend": "過去の対立解決メカニズムの『純粋な和解機能』から『外交権力行使への転用』"
+      "potential_impact": "low",
+      "time_horizon": "5-10年",
+      "counter_trend": "外交官資格としての技術的専門性と制度的カリアキュラム",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 8,
+        "disruption": 6,
+        "connectivity": 6,
+        "credibility": 8,
+        "early_stage": 8
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.2,
+      "noise_flag": false
     },
     {
-      "signal": "『シビックテックによる『下からの主権回復実験』』",
-      "description": "福島県浪江町での『ゼロから自分たちで社会をつくる』シビックテック実験と、Code for Japanの『社会のバグ直し』運動は、市民が『国家ガバナンスの外側』で『独立した自治機構』を構築する兆候である。『主権の『多層化・分散化』』の実装化である。",
+      "signal": "『民主主義の迂回路』としての超国家的仲介者の権力化",
+      "description": "南アフリカがアパルトヘイト後の政治交渉者をUS大使に任命、パキスタンが米イラン戦争の仲介役を自任、インドが同仲介を拒否するなど、伝統的な国家外交を超えた『非国家的な政治的修復主体』が国家間システムの中核に進出。民主主義制度を経由しない政治決定メカニズムの形成。",
       "related_headlines": [
-        "生きることそのものに、再び当事者として関わること。ゼロから自分たちで社会をつくる福島県浪江町の高橋大就さんと「生き延びるための自治」を考える",
-        "シビックテックで自治をひらく。Code for Japan 関治之さんが語る「社会のバグ」の直し方",
-        "人口300人のまちで、休校した小中学校が再開へ。和歌山・富貴地区に移住した家族が「フキシネマパラダイス」から発信する、自分たちで地域をつくる楽しさ"
+        "South Africa Names Roelf Meyer, Apartheid-Era Negotiator, as U.S. Ambassador",
+        "Pakistan's Search for Diplomatic Relevance Amid the Iran War",
+        "Why India is rankled by Pakistan playing mediator in US-Iran war"
       ],
       "pestle_categories": [
-        "社会",
         "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "冷戦後のウェストファリア主権国家システムの安定性",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 8,
+        "connectivity": 8,
+        "credibility": 6,
+        "early_stage": 7
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.2,
+      "noise_flag": false
+    },
+    {
+      "signal": "『AI産業の商品化失速と『スナップ現象』』",
+      "description": "Snap、Allbirdsなど、本来の事業ドメインを持つ企業がAI転換に失敗して大規模レイオフを実行、逆に『ウール製スニーカーからAIへ』という無茶な事業転換で株価582%上昇するなど、AI投資の収益化不可能性と同時に『AI投資そのものへの投機化』が加速。産業としての持続不可能性が透視されつつある。",
+      "related_headlines": [
+        "Snap Is Laying Off 16% of Full-Time Staff as It Embraces A.I.",
+        "Snap Inc blames AI as it lays off 1,000 workers",
+        "Shares in Allbirds surge after maker of wool sneakers announces pivot to AI",
+        "Half of Gen Z Uses AI, but Their Feelings Are Souring, Study Shows"
+      ],
+      "pestle_categories": [
+        "技術",
+        "経済",
+        "社会"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "1-3年",
+      "counter_trend": "AIが産業全般での『生産性革命』をもたらすという市場的期待",
+      "signal_type": "weak_signal",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "litany",
+      "scores": {
+        "novelty": 7,
+        "disruption": 7,
+        "connectivity": 6,
+        "credibility": 8,
+        "early_stage": 8
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.2,
+      "noise_flag": false
+    },
+    {
+      "signal": "『生態系ケーパビリティの局所的リセット』：在来生物知識体系の実験的復権",
+      "description": "ハワイの野鳥に関する50年来の学説が実験的に棄却され、気候適応戦略において在来知識体系と科学の『同等性』が認識され始めている。この動きは『西方科学的単一性』から『複数の知識体系の共存的正当性』へのパラダイム転換を示唆し、環境ガバナンスの根本的な再編を予兆している。",
+      "related_headlines": [
+        "Scientists just debunked a 50-year myth about Hawaii's birds",
+        "Planting trees to remove carbon can harm the environment – or protect it: study highlights trade-offs",
+        "AI needs solid botanical data more than ever"
+      ],
+      "pestle_categories": [
+        "環境",
+        "社会"
       ],
       "potential_impact": "medium",
       "time_horizon": "3-5年",
-      "counter_trend": "中央政府による『主権の独占』と『トップダウン型行政ガバナンス』からの『下からの権力奪還』"
+      "counter_trend": "『科学的証拠=唯一の信頼できる知識形式』という啓蒙主義的認識枠組み",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 8,
+        "disruption": 6,
+        "connectivity": 7,
+        "credibility": 8,
+        "early_stage": 7
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.2,
+      "noise_flag": false
     },
     {
-      "signal": "『食糧ナショナリズムの『減反強化化』による『秘密行政化』』",
-      "description": "日本の農水大臣による『国民にバレないように』コメ価格維持の『減反強化法案』を進める行為は、『食糧主権政策』が『秘密裏の産業保護』に転化し、『民主的審議を回避する傾向』を示唆している。アジアの『農業保護ナショナリズム』が『非透明化』する兆候である。",
+      "signal": "『医療診断の人間排除化』：AI診断による『臨床的判断の自動化的廃止』の加速",
+      "description": "ChatGPTが稀疾患を診断し、AI安全性研究がAIの『医療意思決定への統合』を肯定し始める中、医学専門知の『意思決定権からの組織的除外』が進んでいる。これは『人間的判断の必要性』という医療の根本的前提の解体を示唆し、責任体系の崩壊を含む深刻な構造的リスクを孕んでいる。",
       "related_headlines": [
-        "国民にバレないように\"減反強化法案\"が進行中...｢絶対にコメ価格を下げたくない｣鈴木農水大臣の嘘八百"
+        "ChatGPT 'uncovered woman's rare condition' after years of misdiagnosis",
+        "Can Anthropic's AI Claude be trusted in combat? | The Take",
+        "AI identifies early risk patterns for skin cancer",
+        "This common gout drug may slash heart attack and stroke risk"
+      ],
+      "pestle_categories": [
+        "技術",
+        "社会",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "『医学的専門知=倫理的責任』という医療の規範的基盤",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 9,
+        "connectivity": 6,
+        "credibility": 7,
+        "early_stage": 7
+      },
+      "evidence_type": "anecdotal",
+      "composite_score": 7.2,
+      "noise_flag": false
+    },
+    {
+      "signal": "『非公式な正当性の萌芽』：規制当局と企業の『不可調和』による『インフォーマル経済の制度化』",
+      "description": "インドネシア・バリの違法民泊規制、オーストラリアのebike規制、カナダの共有サービス規制など、従来型の法規制と現代的な経済実践の『根本的な不可調和』が発生し、企業と利用者が『非公式な正当性』を形成し始めている。これは『公式法=唯一の正当性源泉』という近代法の前提を侵食し、『複数の正当性体系の共存』を示唆している。",
+      "related_headlines": [
+        "Indonesia's Bali wants illegal rentals to be legitimate as operators flag red tape",
+        "Queensland ebike laws could cripple Uber Eats, DoorDash and shared e-vehicle schemes, industry warns",
+        "The Dangers of California's Legislation to Censor 3D Printing"
+      ],
+      "pestle_categories": [
+        "法律",
+        "経済",
+        "社会"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "『法的規制=社会秩序の唯一の基盤』という法実証主義",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 7,
+        "connectivity": 8,
+        "credibility": 7,
+        "early_stage": 7
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.2,
+      "noise_flag": false
+    },
+    {
+      "signal": "『民主主義形式の空洞化』：シンクタンクと政策エリート層による民意の『迂回統治』",
+      "description": "「Think Tanks Have Defeated Democracy」という学術的診断が示すように、シンクタンク・専門家委員会・超党的タスクフォース等が民主的な議会決定を迂回し、『合意形成』という名の下に政策を実装する構造が顕在化。同時にハンガリー選挙でのオルバン敗北もポピュリズムへの反発ではなく『既得権力への怒り』として解釈されている。民主主義の『投票制度の形式的維持』と『実質的な権力喪失』の乖離が深化。",
+      "related_headlines": [
+        "Think Tanks Have Defeated Democracy",
+        "Orban's Defeat Punctures Europe's Far Right, but Also Offers It a Road Map",
+        "Why Orban and Hungary are not one and the same"
       ],
       "pestle_categories": [
         "政治",
-        "経済"
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "議会民主主義と『主権在民』の投票による正当性取得という近代民主主義の根本形式",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "myth",
+      "scores": {
+        "novelty": 7,
+        "disruption": 8,
+        "connectivity": 8,
+        "credibility": 7,
+        "early_stage": 6
+      },
+      "evidence_type": "theoretical",
+      "composite_score": 7.2,
+      "noise_flag": false
+    },
+    {
+      "signal": "『物理法則の実験的可変性』：基本的な物質科学の『再編成可能性』の萌芽",
+      "description": "MIT研究「MIT scientists just found a hidden problem slowing the ozone comeback」およびグラフェンが「基本法則を無視」という報告が相次ぎ、同時にSiC半導体やGaN技術での予測外の特性出現が報告されている。これは物理学の『不変的法則』という前提が、ナノスケール・量子レベルで『設計可能な物質特性』へと転換しつつあることを示唆。人工物の『物理的可塑性』が従来の科学的想定を超越している。",
+      "related_headlines": [
+        "Graphene just defied a fundamental law of physics",
+        "MIT scientists just found a hidden problem slowing the ozone comeback",
+        "Investigation of Device Characterisation and Circuit Design Based on GaN Technology"
+      ],
+      "pestle_categories": [
+        "技術",
+        "環境"
       ],
       "potential_impact": "medium",
-      "time_horizon": "1-3年",
-      "counter_trend": "農業政策における『市場透明性』と『国民的議論』の『組織的回避』"
+      "time_horizon": "5-10年",
+      "counter_trend": "物理学の『不変的で普遍的な自然法則』という科学的世界観",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 9,
+        "disruption": 7,
+        "connectivity": 5,
+        "credibility": 6,
+        "early_stage": 8
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.2,
+      "noise_flag": false
     },
     {
-      "signal": "『中国の『中古品買い替え需要』による『消費崩壊』の『可視化』』",
-      "description": "中国で『半値ルイ・ヴィトン』などの『中古品爆買い』が『年20%成長』する現象は、新品消費の崩壊と『低価格志向への転換』を示唆している。アジア全域の『消費不況化』と『デフレーション圧力の深刻化』の警告信号である。",
+      "signal": "『医療診断における臨床医の排除化』：AI診断と人間的判断の『機能的置換』",
+      "description": "ChatGPTが「医学的誤診を15年続いた患者を診断」し、同時に複数の論文が「AIアルゴリズムは医師の臨床的判断を超越する」と報告。医療現場では医師の『判断権威』が実務レベルで相対化され、AI推奨診断への法的責任問題が未解決なまま運用されている。これは医療という『最後の人間的判断領域』の自動化的廃止という根本的な権力転移を示唆。",
       "related_headlines": [
-        "中国、中古品「爆買い」が映す景気低迷　半値ルイ・ヴィトンで年20％成長",
-        "中国、景気低迷／赤字企業ほど月次決算を／アマゾン・ベゾス実践"
+        "ChatGPT 'uncovered woman's rare condition' after years of misdiagnosis",
+        "AI identifies early risk patterns for skin cancer",
+        "This common gout drug may slash heart attack and stroke risk"
       ],
       "pestle_categories": [
-        "経済"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "中国の『高度消費経済』から『低価格・中古品需要への転換』による『新興国消費モデルの崩壊』"
-    },
-    {
-      "signal": "『原油高騰による『エネルギー政治化』と『地域的自給力競争』『",
-      "description": "イラン戦争によるエネルギー危機が『アジア各国の対応策』を多様化させ、カナダの地熱発電やハワイのプラスチック舗装など『地域固有のエネルギー自給ソリューション』が急速に制度化される現象である。『グローバルエネルギー市場』から『地域主権的エネルギー』への分散化である。",
-      "related_headlines": [
-        "【きょうのおはBiz 4月16日(木)】原油高 アジア各国の対応策は",
-        "【きょうのおはBiz 4月13日(月)】原油高騰 「再生重油」に注目",
-        "Geothermal power is the key to cheaper energy in the Canadian Arctic",
-        "Experts call for \"electrified sovereignty\" through clean domestic power to overcome energy crises"
-      ],
-      "pestle_categories": [
-        "経済",
-        "環境",
-        "技術"
-      ],
-      "potential_impact": "high",
-      "time_horizon": "1-3年",
-      "counter_trend": "グローバルなエネルギー市場統合と『米国主導のエネルギー秩序』からの『地域的離脱と自給力ナショナリズム』"
-    },
-    {
-      "signal": "『インド労働市場の『『非正規化イデオロギー』による『カースト化』』",
-      "description": "インドの『労働者の9割が非正規雇用』のまま『正規化を拒むイデオロギー対立』が激化する現象は、『身分制労働システム』の『近代的再生産』を示唆している。アジアの『労働搾取の『制度的・思想的正当化』』の深刻化である。",
-      "related_headlines": [
-        "インドは本当に「中国式成長軌道」を進んでいるのか？ 労働者の9割を占める非正規雇用と、正規化を拒むイデオロジー対立"
-      ],
-      "pestle_categories": [
-        "社会",
-        "経済"
+        "技術",
+        "法律",
+        "社会"
       ],
       "potential_impact": "high",
       "time_horizon": "3-5年",
-      "counter_trend": "『労働権の普遍化』と『階級流動性』からの『新カースト制による労働身分固定化』"
+      "counter_trend": "医師による『臨床的判断の自律性』と『医学的倫理の人間的決定』という医療制度の規範",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 8,
+        "connectivity": 7,
+        "credibility": 8,
+        "early_stage": 6
+      },
+      "evidence_type": "mixed",
+      "composite_score": 7.2,
+      "noise_flag": false
     },
     {
-      "signal": "『生成AIの『道徳的エモーション化』による『安全規制の『感情操作化』』』",
-      "description": "Anthropicの最新AI『Claude Mythos』が『感情に任せた驚きの行動』で『公開中止』となった事件は、AI企業が『AI安全性』を『擬似的な倫理的感情表現』で『政治的正当化』しようとする戦略を示唆している。『安全性言説』が『感情的操作メカニズム』へ転化する兆候である。",
+      "signal": "『規制回避のための地理的フラグメンテーション』の物理的実装化",
+      "description": "キルギスタンが『暗号資産回廊』として機能し、Kyrgyzstanが国家通貨システムの外部化拠点になると同時に、クウェート地域でのAI開発インフラが国家規制から相対的に独立した『規制真空地帯』として機能している。これは国家法的権力の『地理的迂回』が単なる理論ではなく、物理的・経済的現実になっている兆候である。",
       "related_headlines": [
-        "アンソロピックの最新AI「クロード・ミトス」はなぜ公開中止になったのか？感情に任せた驚きの行動、「危険な超知能」をコントロールできるのか"
+        "Welcome to Cryptostan: Kyrgyzstan and the Emerging Crypto Corridor",
+        "CEO of bitcoin firm championed by Nigel Farage leaves company",
+        "Can Japan's US$10b energy shield oust China's influence in Southeast Asia?"
+      ],
+      "pestle_categories": [
+        "経済",
+        "法律",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "国家主権による金融システムの一元的統制",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 8,
+        "connectivity": 8,
+        "credibility": 6,
+        "early_stage": 7
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.2,
+      "noise_flag": false
+    },
+    {
+      "signal": "『知的財産権の「読み・話す権利」への根本的再定義』",
+      "description": "複数の裁判所がコンテンツの『読了・言及権』を著作権から明確に分離し、法廷がAI学習データ使用の正当性を認める判決が積み重なっている。これは『所有権の絶対性』から『認識権の相対化』への法的転換を示唆しており、知的財産制度そのものの原理的再構成が始まっている。",
+      "related_headlines": [
+        "Another Court Rules Copyright Can't Stop People From Reading and Speaking the Law",
+        "Supreme Court Agrees With EFF: ISPs Don't Have To Be Copyright Enforcers",
+        "A Baseless Copyright Claim Against a Web Host—and Why It Failed"
+      ],
+      "pestle_categories": [
+        "法律",
+        "技術"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "著作権による知的資産の絶対的所有権",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 8,
+        "disruption": 8,
+        "connectivity": 6,
+        "credibility": 8,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.2,
+      "noise_flag": false
+    },
+    {
+      "signal": "『AI安全規制の「超党派的政治化」による二者択一化』",
+      "description": "科学者・信仰指導者・政策立案者が『超知能禁止』を呼びかけ、同時に共和党議員がトランプのイラン戦争権を支持するため『AI規制を後回し』にしている。AI安全性が『技術的問題』から『イデオロギー的分水嶺』へと転化し、民主主義的な合意形成そのものが不可能な領域に入っている兆候である。",
+      "related_headlines": [
+        "Prominent Scientists, Faith Leaders, Policymakers and Artists Call for a Prohibition on Superintelligence, as Poll Shows Americans Don't Want It",
+        "Future of Life Institute Launches Multimillion Dollar Nationwide AI Regulation Campaign",
+        "Senate Republicans Again Block Bid to Limit Trump's Iran War Powers",
+        "White House AI Framework Proposes Industry-Friendly Legislation - Lawfare"
       ],
       "pestle_categories": [
         "技術",
         "政治"
       ],
-      "potential_impact": "medium",
+      "potential_impact": "high",
       "time_horizon": "1-3年",
-      "counter_trend": "AIの『純粋な技術的安全性評価』から『擬似道徳的感情表現による政治的正当化』への転換"
+      "counter_trend": "技術規制の『科学的合理性』に基づく超党派的合意",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 7,
+        "disruption": 8,
+        "connectivity": 7,
+        "credibility": 8,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.2,
+      "noise_flag": false
     },
     {
-      "signal": "『中国の『人類超越AI』への『3200億円単一投資』による『AGI競争の『加速化と集約化』』』",
-      "description": "中国ゲーム界の伝説・陳天橋が『AGI実現』に『3200億円』を投じる戦略は、『分散的AI開発』から『単一の『総合知能』へのの『一極集中投資化』』を示唆している。『AGI実現の『国家主導化』と『企業の『戦略的統合』』のシグナルである。",
+      "signal": "『イラン戦争の「複合危機カスケード」による予測喪失』",
+      "description": "イラン戦争が『予期しない複合危機』（原油価格高騰、グローバル経済成長減速、供給チェーン寸断、地域的政治変動）を同時多発的に引き起こし、IMFすら『ホルムズ海峡閉鎖による大規模エネルギー危機』を明示的に警告している。単一の地政学的事象が『システム全体の予測不可能化』をもたらしている兆候である。",
       "related_headlines": [
-        "AGIはいつ実現？中国ゲーム界の伝説･陳天橋氏が3200億円投じる｢人類超えAI｣の核心"
+        "How the Iran War Will Upend the Global Economy",
+        "Middle East War Will Slow Global Economic Growth, I.M.F. Warns",
+        "IMF says strait of Hormuz closure raises prospect of 'major energy crisis' – video",
+        "Strength in numbers: Developing countries band together as Iran war batters global economy"
+      ],
+      "pestle_categories": [
+        "経済",
+        "政治",
+        "環境"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "地政学的リスクの『セクター別管理可能性』",
+      "signal_type": "wild_card",
+      "ansoff_level": 4,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 6,
+        "disruption": 9,
+        "connectivity": 9,
+        "credibility": 9,
+        "early_stage": 4
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.2,
+      "noise_flag": false
+    },
+    {
+      "signal": "『共和民族主義的民主主義』への東欧の根本的転向が示唆する民主主義の再定義",
+      "description": "ハンガリー総選挙でのオルバン与党敗北、スロバキアの民主化転換などが示唆するのは、従来の『リベラル民主主義 vs ポピュリズム』という二項対立の解体。東欧各国が模索しているのは『人民の直接的関与』と『既得権力への不信』を合体させた『反既得権力型民主主義』という新しい政体形式の出現。",
+      "related_headlines": [
+        "Orbán's defeat threatens to halt Hungarian support of populist right",
+        "Another November: Queer Slovakia after 1989",
+        "Why Orban and Hungary are not one and the same",
+        "Orban's Defeat Punctures Europe's Far Right, but Also Offers It a Road Map"
+      ],
+      "pestle_categories": [
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "リベラル民主主義による『制度的代理制民主主義』の普遍性の前提",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 3,
+      "three_horizons": "H3",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 8,
+        "disruption": 8,
+        "connectivity": 7,
+        "credibility": 7,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.2,
+      "noise_flag": false
+    },
+    {
+      "signal": "『物質科学における物理法則の局所的可変性』の実験的実証",
+      "description": "グラフェンが物理的基本法則に反する特性を示し、米国科学者による『自然オゼンピック』の開発など、これまで『普遍的』と見なされていた物理法則が実は『条件依存的』であることが実験的に示されつつある。科学的パラダイムの根底にある『自然法則の絶対性』という前提の揺らぎ。",
+      "related_headlines": [
+        "Graphene just defied a fundamental law of physics",
+        "Stanford scientists discover 'natural Ozempic' without side effects",
+        "MIT scientists just found a hidden problem slowing the ozone comeback"
+      ],
+      "pestle_categories": [
+        "技術",
+        "環境"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "5-10年",
+      "counter_trend": "ニュートン物理学以来の『普遍的物理法則』という科学的パラダイム",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 9,
+        "disruption": 7,
+        "connectivity": 5,
+        "credibility": 6,
+        "early_stage": 8
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.2,
+      "noise_flag": false
+    },
+    {
+      "signal": "『脱グローバル化する供給チェーン』による『物理的地域ブロック化』の制度的実装",
+      "description": "USMCA、インド太平洋セキュリティ、『中間回廊』など、グローバルなサプライチェーンが『地政学的に分断された物理的回廊』に再構成されている。これは『自由貿易による効率化』から『地政学的自給力』への価値基準の根本的転換。民族主義的保護主義ではなく『セキュリティーに基づいた経済地理学』の萌芽。",
+      "related_headlines": [
+        "The Middle Corridor in an Era of Supply Chain Disruption",
+        "USMCA Annual Review Risks Halting Mexican Peso Rally, BBVA Says",
+        "Can Japan's US$10b energy shield oust China's influence in Southeast Asia?",
+        "The Iran War, ASEAN and Global Supply Chains"
+      ],
+      "pestle_categories": [
+        "経済",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "『グローバル化による比較優位の最大化』というリカード経済学の前提",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 8,
+        "connectivity": 8,
+        "credibility": 8,
+        "early_stage": 5
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.2,
+      "noise_flag": false
+    },
+    {
+      "signal": "『AI産業の商品化失速』による『技術企業の大規模人員削減』から『テックセクターの根本的再編』へ",
+      "description": "Snap、OpenAIなど主要AI企業が一斉に人員削減を発表。ただしこれは『景気循環的な調整』ではなく『生成AI商品化モデルの根本的破綻』の兆し。AI技術が『汎用ユーティリティ化』ではなく『特定用途別の破片化』へと向かい、『AI産業全体の再編成』が不可避化しつつある。",
+      "related_headlines": [
+        "Snap Inc blames AI as it lays off 1,000 workers",
+        "Snap Is Laying Off 16% of Full-Time Staff as It Embraces A.I.",
+        "Half of Gen Z Uses AI, but Their Feelings Are Souring, Study Shows",
+        "AI disruption points to higher taxes on big tech"
       ],
       "pestle_categories": [
         "技術",
         "経済"
       ],
       "potential_impact": "high",
-      "time_horizon": "3-5年",
-      "counter_trend": "『複数企業による競争的AI開発』から『単一企業による『総合AGI構想』への『権力集約化』"
+      "time_horizon": "1-3年",
+      "counter_trend": "『AI汎用化による産業全体の自動化』というテック企業の成長シナリオ",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 8,
+        "connectivity": 8,
+        "credibility": 8,
+        "early_stage": 5
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.2,
+      "noise_flag": false
     },
     {
-      "signal": "『医療の『AI民主化』によるレイヤー的診断権の『分散化』』",
-      "description": "ChatGPTが『医学的誤診』を数年かけて検出し、医療システムの『診断的盲点』を補填する現象は、『医師の診断独占権』が『AI＋患者による『多層的検証』へ侵食』されることを示唆している。『医療専門家支配』から『分散的医学知識民主化』への兆候である。",
+      "signal": "『脱グローバル化する商品チェーン』における地域ブロック化",
+      "description": "イラン戦争による供給チェーン途絶が、中国・東南アジア・中央アジアの地域内貿易強化へ加速。開発途上国が「一致団結」する動きが政策化され、従来のグローバル統合的サプライチェーンからの離脱が不可逆的進行中。テクノロジーも地域閉鎖的になる可能性が高まっている。",
       "related_headlines": [
-        "ChatGPT 'uncovered woman's rare condition' after years of misdiagnosis"
+        "Strength in numbers: Developing countries band together as Iran war batters global economy",
+        "The Iran War, ASEAN and Global Supply Chains",
+        "The Middle Corridor in an Era of Supply Chain Disruption"
+      ],
+      "pestle_categories": [
+        "経済",
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "グローバル自由貿易体制の拡張と深化",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 6,
+        "disruption": 8,
+        "connectivity": 8,
+        "credibility": 8,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.1,
+      "noise_flag": false
+    },
+    {
+      "signal": "『物理学の実験的再編成』：基本法則の『可変性』の実証的表出",
+      "description": "グラフェンによる物理法則違反、「自然Ozempic」化学反応、量子コンピューティングの『自然スーパーアトム』発見など、基礎物理学における『法則の固定性』という前提が実験的に揺らいでいる。これは素材科学の領域で『設計可能性の根本的拡張』を示唆し、20世紀的な『物質の本質的制約』という認識枠組みの解体を予兆している。",
+      "related_headlines": [
+        "Graphene just defied a fundamental law of physics",
+        "Stanford scientists discover \"natural Ozempic\" without side effects",
+        "\"Giant superatoms\" could finally solve quantum computing's biggest problem",
+        "Continuously tunable coherent pulse generation in a semiconductor laser"
+      ],
+      "pestle_categories": [
+        "技術",
+        "環境"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "5-10年",
+      "counter_trend": "『物理法則の不変性と普遍性』という古典的科学観",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 9,
+        "disruption": 6,
+        "connectivity": 5,
+        "credibility": 7,
+        "early_stage": 8
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.1,
+      "noise_flag": false
+    },
+    {
+      "signal": "『暗号資産回廊』による国家通貨システムの『物理的迂回装置化』",
+      "description": "キルギスタンが「クリプトスタン」として暗号資産流通の物理的インフラ化を進めている一方、複数の発展途上国がBRICS決済システムや二国間通貨協定を通じてドルシステムから離脱を加速。同時にビットコイン企業のNigel Farage支持者の企業離脱が相次ぐ。国家通貨の相対的権力喪失と『地域ブロック化による通貨システムの物理的再編成』が同時進行している。",
+      "related_headlines": [
+        "Welcome to Cryptostan: Kyrgyzstan and the Emerging Crypto Corridor",
+        "CEO of bitcoin firm championed by Nigel Farage leaves company",
+        "Double Trouble: Currency Unification in Cuba"
+      ],
+      "pestle_categories": [
+        "経済",
+        "政治",
+        "技術"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "米ドル基軸通貨制と『国家通貨の独占的地位』という戦後金融秩序",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 8,
+        "disruption": 7,
+        "connectivity": 7,
+        "credibility": 6,
+        "early_stage": 7
+      },
+      "evidence_type": "mixed",
+      "composite_score": 7.1,
+      "noise_flag": false
+    },
+    {
+      "signal": "『物理法則の実験的『可変性』の萌芽的実証』",
+      "description": "グラフェンが『基本的な物理法則に逆らう』挙動を示し、磁気特性が従来の予測と異なる結果が得られている。同時に、量子コンピューティング、GaN技術など複数の領域で『理論と実験の乖離』が報告されている。これは『物理学の確定性』という啓蒙主義的前提そのものが揺らいでいる兆候である。",
+      "related_headlines": [
+        "Graphene just defied a fundamental law of physics",
+        "Giant superatoms could finally solve quantum computing's biggest problem",
+        "Enabling Next-Generation Power Conversion: Design, Dynamic Characterization, and Application of Gallium Nitride Bidirectional Switches"
+      ],
+      "pestle_categories": [
+        "技術",
+        "環境"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "5-10年",
+      "counter_trend": "物理法則の普遍性と不変性",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 9,
+        "disruption": 7,
+        "connectivity": 4,
+        "credibility": 7,
+        "early_stage": 8
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.1,
+      "noise_flag": false
+    },
+    {
+      "signal": "『暗号資産回廊』による国家通貨システムの『物理的迂回装置化』",
+      "description": "キルギスタンが『暗号資産コリドー』として機能し、複数の発展途上国が『米国ドル基軸体制』を迂回するための『物理的・技術的インフラ』を構築しつつある。これは『国家通貨システムの脱中心化』ではなく『地政学的に分断された複数の通貨回廊の並立』という新しい国際通貨秩序の兆し。",
+      "related_headlines": [
+        "Welcome to Cryptostan: Kyrgyzstan and the Emerging Crypto Corridor",
+        "Double Trouble: Currency Unification in Cuba",
+        "China's PBOC raises leverage ratios for foreign lenders to support outbound investment"
+      ],
+      "pestle_categories": [
+        "経済",
+        "技術"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "『ブレトン・ウッズ体制による米国ドル基軸』の国際経済秩序",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 8,
+        "disruption": 7,
+        "connectivity": 7,
+        "credibility": 6,
+        "early_stage": 7
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.1,
+      "noise_flag": false
+    },
+    {
+      "signal": "生成AIに対する社会的拒否感の若年層での急速な形成",
+      "description": "「Half of Gen Z Uses AI, but Their Feelings Are Souring, Study Shows」と「The Platonic Case Against AI Slop」が同時出現。デジタルネイティブ世代でさえAI生成コンテンツの品質低下・価値毀損を認識し始めており、単なる技術採用段階ではなく『AI疲労』と『信頼喪失』の段階への転移が起きている。テクノロジー楽観主義の内部からの瓦解の兆候。",
+      "related_headlines": [
+        "Half of Gen Z Uses AI, but Their Feelings Are Souring, Study Shows",
+        "The Platonic Case Against AI Slop",
+        "AI Giants Go on Charm Offensive to Avert Public Backlash",
+        "The Mythos cyber scare signals the economics of AI scarcity"
+      ],
+      "pestle_categories": [
+        "技術",
+        "社会"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "1-3年",
+      "counter_trend": "AI導入は必然的で受け入れられるべき技術的進歩という産業界のナラティブ",
+      "signal_type": "counter_trend",
+      "ansoff_level": 2,
+      "three_horizons": "H2",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 7,
+        "disruption": 6,
+        "connectivity": 6,
+        "credibility": 8,
+        "early_stage": 8
+      },
+      "evidence_type": "statistical",
+      "composite_score": 7.0,
+      "noise_flag": false
+    },
+    {
+      "signal": "『生成AI拒否の若年層化』による消費者基盤の離脱",
+      "description": "Z世代の過半数がAI生成コンテンツへの不信感を示す調査、Snapが1000名規模の解雇でAI投資失敗を認める、などからAI企業の成長神話が若い世代で既に破綻しつつある。『AI統合的な未来』への若年層の心理的拒否が市場原理を超えて進行中。単なる技術採用の遅延ではなく、世代間での『好ましい未来像』の根本的乖離。",
+      "related_headlines": [
+        "Half of Gen Z Uses AI, but Their Feelings Are Souring, Study Shows",
+        "Snap Is Laying Off 16% of Full-Time Staff as It Embraces A.I."
       ],
       "pestle_categories": [
         "技術",
@@ -1958,7 +3198,565 @@
       ],
       "potential_impact": "medium",
       "time_horizon": "3-5年",
-      "counter_trend": "医師による『診断権の独占』と『医学知識の専門家独占』からの『AI・患者による分散的検証システム』への転換"
+      "counter_trend": "AI技術の普及と利用者幸福度の単調増加関係",
+      "signal_type": "counter_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 7,
+        "disruption": 7,
+        "connectivity": 6,
+        "credibility": 8,
+        "early_stage": 7
+      },
+      "evidence_type": "statistical",
+      "composite_score": 7.0,
+      "noise_flag": false
+    },
+    {
+      "signal": "『憲法改正が政治議題化への加速』における国家権力の再編制度化",
+      "description": "日本の複数の憲法審査会開催、高市首相による『来年党大会までに発議にめど』という宣言など、主権と国防権の再定義が制度的プロセスに乗り始めた。同時に自民党内で『武器移転原則の可能化』が承認された。これは東アジアにおけるパワーバランスの急激な転換に対応する国家権力の再組織化の兆候。",
+      "related_headlines": [
+        "高市首相 \"憲法改正 来年党大会までに発議にめど\"",
+        "自民 「武器」移転原則可能とする政府案了承",
+        "参議院憲法審査会が今の国会で初めて開催"
+      ],
+      "pestle_categories": [
+        "政治",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "戦後国家権力の法的基盤としての平和憲法の不可変性",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 4,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 6,
+        "disruption": 9,
+        "connectivity": 7,
+        "credibility": 9,
+        "early_stage": 5
+      },
+      "evidence_type": "empirical",
+      "composite_score": 7.0,
+      "noise_flag": false
+    },
+    {
+      "signal": "『地域ブロック化による通貨システムの物理的迂回』：暗号資産回廊の『国家通貨からの脱出装置化』",
+      "description": "キルギスタン、エルサルバドルなど周辺国家が暗号資産を『地域内決済システムの回廊』として制度化し始め、米ドル依存から離脱する『物理的経路』を構築している。これは『国家通貨=唯一の法定決済手段』という現代通貨体制の前提を回避する『制度的複数性』を形成し、グローバル通貨体制の『脱中心化』を予兆している。",
+      "related_headlines": [
+        "Welcome to Cryptostan: Kyrgyzstan and the Emerging Crypto Corridor",
+        "CEO of bitcoin firm championed by Nigel Farage leaves company",
+        "China's PBOC raises leverage ratios for foreign lenders to support outbound investment",
+        "Double Trouble: Currency Unification in Cuba"
+      ],
+      "pestle_categories": [
+        "経済",
+        "政治"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "『通貨の国家独占』という現代金融体制の基本構造",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 2,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 8,
+        "disruption": 7,
+        "connectivity": 6,
+        "credibility": 6,
+        "early_stage": 7
+      },
+      "evidence_type": "mixed",
+      "composite_score": 6.9,
+      "noise_flag": false
+    },
+    {
+      "signal": "『言語政策の民主主義への根拠剥奪効果』の学術的可視化",
+      "description": "東欧での言語法改正がナショナル・マイノリティーの政治参加を構造的に制限し、『言語選択の自由』が『民主主義参加の前提条件』であることが制度的に露呈。言語学と政治学の融合領域で『言語支配』が『民主主義の根拠そのものへの攻撃』であることが学術的に可視化されつつある。",
+      "related_headlines": [
+        "Language and democracy",
+        "Another November: Queer Slovakia after 1989",
+        "Why Orban and Hungary are not one and the same",
+        "Nationalism in a post-conflict consociational society: A membership survey of the Social Democratic and Labour Party in Northern Ireland"
+      ],
+      "pestle_categories": [
+        "政治",
+        "社会"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "『多言語による多元的民主主義』の普遍的価値の前提",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H1",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 8,
+        "disruption": 7,
+        "connectivity": 6,
+        "credibility": 6,
+        "early_stage": 7
+      },
+      "evidence_type": "mixed",
+      "composite_score": 6.9,
+      "noise_flag": false
+    },
+    {
+      "signal": "労働市場における『正規化拒否イデオロギー』の構造化",
+      "description": "インド製造業で労働者9割が非正規雇用のまま維持される現象が、市場効率性ではなく『意図的イデオロギー対立』として分析される。また、札幌バス運転手不足でも海外人材を『育成』ではなく『使用』する戦略が取られるなど、先進国でも『脱・正規雇用』イデオロギーが制度化。グローバル南北を横断した『不安定労働の構造化』が、もはや経過段階ではなく『目的的制度設計』であることが顕在化。",
+      "related_headlines": [
+        "インドは本当に「中国式成長軌道」を進んでいるのか？ 労働者の9割を占める非正規雇用と、正規化を拒むイデオロギー対立",
+        "札幌 路線バスの運転手不足が深刻化 海外で人材募集し育成へ",
+        "After Fighting for the Rights of Workers, Brazil's President Lula Faces a Labor Abuse Crisis",
+        "Gender Inequalities in Japan and South Korea: Labor Market, Employment, and Education"
+      ],
+      "pestle_categories": [
+        "社会",
+        "経済",
+        "政治"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "グローバル化による雇用の柔軟化は過度な規制の除去であり、長期的に雇用拡大をもたらすという新自由主義的楽観主義",
+      "signal_type": "counter_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 7,
+        "connectivity": 7,
+        "credibility": 7,
+        "early_stage": 6
+      },
+      "evidence_type": "mixed",
+      "composite_score": 6.8,
+      "noise_flag": false
+    },
+    {
+      "signal": "『非国家主体の地政学的プレイヤー化』の制度化",
+      "description": "南アフリカがアパルトヘイト時代の交渉人を米国大使に指名、パキスタンが米イラン戦争の仲介者を自認、インドがパキスタンの仲介役に反発するなど、国家間の伝統的な外交チャネルが民間人・準公的主体を経由しての間接的外交に転換。非国家主体による地政学的影響力行使が制度化し始めている。",
+      "related_headlines": [
+        "South Africa Names Roelf Meyer, Apartheid-Era Negotiator, as U.S. Ambassador",
+        "Pakistan's Search for Diplomatic Relevance Amid the Iran War",
+        "Why India is rankled by Pakistan playing mediator in US-Iran war"
+      ],
+      "pestle_categories": [
+        "政治"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "国家を単位とした国際秩序と公式外交チャネルの排他性",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 7,
+        "connectivity": 6,
+        "credibility": 8,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 6.8,
+      "noise_flag": false
+    },
+    {
+      "signal": "『言語と民主主義の相互根拠性』における言語的主権の政治化",
+      "description": "スロバキアでの『クィア・アイデンティティと言語政策』の結合、ウクライナでの戦時下における『言語の民主的再定義』、複数の国で『言語が民主主義そのものの前提条件であり、同時に民主主義の脅威でもある』という認識が学術的に形成。言語政策が単なる文化政策から『民主的正当性の根本的問題』に転化。",
+      "related_headlines": [
+        "Language and democracy",
+        "Another November: Queer Slovakia after 1989",
+        "Literary Translation in Ukraine: From Empire to Wartime Resistance"
+      ],
+      "pestle_categories": [
+        "社会",
+        "政治"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "言語を『中立的なコミュニケーション手段』として処理する自由主義的仮定",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H2",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 7,
+        "disruption": 6,
+        "connectivity": 7,
+        "credibility": 6,
+        "early_stage": 8
+      },
+      "evidence_type": "theoretical",
+      "composite_score": 6.8,
+      "noise_flag": false
+    },
+    {
+      "signal": "『東欧民主主義の『反既得権力カスケード』化』：ポピュリズムと民主化の『別回路化』",
+      "description": "ハンガリー選挙でのオルバン与党敗北が『ポピュリズムの衰退』ではなく『既得権力層への投票行動』として解釈される中、バングラデシュ・パキスタン・スロバキア等で相次ぐ『政治改革要求』が単なる『民主主義要求』ではなく『制度そのものの再編成要求』として現れている。東欧の『反既得権力民主主義』が、西欧型の『制度内民主化』とは別回路で進行している構造。",
+      "related_headlines": [
+        "Bangladesh's Parties are Divided Over the Reform Process",
+        "Another November: Queer Slovakia after 1989",
+        "Extending authoritarianism through dynasty in Azerbaijan"
+      ],
+      "pestle_categories": [
+        "政治",
+        "社会"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "『東欧民主化＝西欧型議会民主主義への収斂』という国際関係学の単線的進化論",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 6,
+        "connectivity": 7,
+        "credibility": 7,
+        "early_stage": 7
+      },
+      "evidence_type": "empirical",
+      "composite_score": 6.8,
+      "noise_flag": false
+    },
+    {
+      "signal": "『労働診断の自動化による臨床医排除』の加速度的進行",
+      "description": "ChatGPTが患者の希少疾患を診断し、医師が見落とした事例が報道される一方で、AI診断ツールが医療現場に急速に導入されている。これは医療判断の『人間的責任』から『アルゴリズム的無責任』への転換を示唆しており、医療専門職の権威基盤そのものが揺らいでいる兆候である。",
+      "related_headlines": [
+        "ChatGPT 'uncovered woman's rare condition' after years of misdiagnosis",
+        "How low should blood pressure go? Science has the answer",
+        "AI identifies early risk patterns for skin cancer"
+      ],
+      "pestle_categories": [
+        "技術",
+        "社会",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "医療における専門医の独占的地位と診断権の神聖性",
+      "signal_type": "paradigm_shift",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 6,
+        "disruption": 8,
+        "connectivity": 7,
+        "credibility": 7,
+        "early_stage": 6
+      },
+      "evidence_type": "mixed",
+      "composite_score": 6.8,
+      "noise_flag": false
+    },
+    {
+      "signal": "『個人情報保護法の「AI化禁止」への法的転化』",
+      "description": "日本の個人情報保護法改正案で『個人情報のAI学習への利用制限』が検討されており、法的次元での『認識主権』概念が登場している。これは単なる規制強化ではなく、個人の『思考・判断資料化権』が法的権利として確立される前夜を示唆している。",
+      "related_headlines": [
+        "「個人情報の保護に関する法律等の一部を改正する法律案」を閣議決定",
+        "AIに個人情報を入れてはいけない？　個人情報保護法改正を見据えて弁護士が解説",
+        "令和8年改正個人情報保護法はどうなる？改正方針を弁護士が解説"
+      ],
+      "pestle_categories": [
+        "法律",
+        "技術"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "1-3年",
+      "counter_trend": "データ駆動型ビジネスモデルの無制限な拡張",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H2",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 7,
+        "disruption": 6,
+        "connectivity": 5,
+        "credibility": 8,
+        "early_stage": 8
+      },
+      "evidence_type": "empirical",
+      "composite_score": 6.8,
+      "noise_flag": false
+    },
+    {
+      "signal": "『地政学的「仲介者」の権力化による脱米国化の制度化』",
+      "description": "南アフリカがアパルトヘイト時代の交渉人をUS大使として任命し、パキスタンが『米イラン戦争の仲介者』としての権力化を追求し、インドがパキスタンの『仲介役』を警戒している。従来は『強国間の調整役』に過ぎなかった非大国が、自らの『地政学的仲介権』を権力化し、米国への依存を段階的に解除する構造が形成されている。",
+      "related_headlines": [
+        "South Africa Names Roelf Meyer, Apartheid-Era Negotiator, as U.S. Ambassador",
+        "Pakistan's Search for Diplomatic Relevance Amid the Iran War",
+        "Why India is rankled by Pakistan playing mediator in US-Iran war"
+      ],
+      "pestle_categories": [
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "米国による一極的な地政学的統制",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 7,
+        "connectivity": 6,
+        "credibility": 8,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 6.8,
+      "noise_flag": false
+    },
+    {
+      "signal": "『「こども選挙」による世代間主権回復の制度的実装化』",
+      "description": "日本で『子ども選挙』が「主権者である子どもたちを信じた先に描く未来」として制度化される動きが出現している。これは単なる教育実験ではなく、『世代間主権の根本的再編』を示唆しており、現在の政治体制が『現在の世代』のみを代表するという前提そのものが問い直されている兆候である。",
+      "related_headlines": [
+        "これは、私たち一人ひとりが主権を回復していくプロセス。「こども選挙」が、主権者である子どもたちを信じた先に描く未来とは"
+      ],
+      "pestle_categories": [
+        "政治",
+        "社会"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "5-10年",
+      "counter_trend": "『成人中心的民主主義』による世代的権力の寡占",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 9,
+        "disruption": 7,
+        "connectivity": 4,
+        "credibility": 4,
+        "early_stage": 9
+      },
+      "evidence_type": "anecdotal",
+      "composite_score": 6.8,
+      "noise_flag": false
+    },
+    {
+      "signal": "『知的財産権の読み書き自由化』による情報統制体制の法的解体",
+      "description": "複数の国家や企業が『著作権に基づく情報統制』の違憲性を主張し、『法律の読む権利』『ニュースの引用・批評の自由』を著作権から明確に分離する判例が積み重なりつつある。これは『知的財産権による権力統制』という20世紀的な体制の根本的な法的再定義の兆し。",
+      "related_headlines": [
+        "Another Court Rules Copyright Can't Stop People From Reading and Speaking the Law",
+        "Supreme Court Agrees With EFF: ISPs Don't Have To Be Copyright Enforcers",
+        "Spotifyのコンテンツを無断で収集していた海賊版図書館「Anna's Archive」に3億2220万ドル(約510億円)の賠償金支払いを命じる判決",
+        "A Baseless Copyright Claim Against a Web Host—and Why It Failed"
+      ],
+      "pestle_categories": [
+        "法律",
+        "技術"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "『知的財産権による著作権者の絶対的保護』というコンテンツ産業の基本前提",
+      "signal_type": "counter_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 7,
+        "connectivity": 6,
+        "credibility": 8,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 6.8,
+      "noise_flag": false
+    },
+    {
+      "signal": "『司法権の「政治的中立性」制度的喪失の露呈』",
+      "description": "米国最高裁判事が同僚に対して『個人的・不適切な批判』を公開で行い、謝罪する事態が発生。同時に、大統領が司法官を『説得的に訪問』し、下院で共和党が『党派的に分裂』している。司法制度の『政治的独立性』が制度的仮象から実質的な権力への政治化への転換が始まっている。",
+      "related_headlines": [
+        "Justice Sotomayor Apologizes for Highly Personal Criticism of Justice Kavanaugh",
+        "Justice Sotomayor apologizes for \"inappropriate\" remarks about Justice Kavanaugh",
+        "Prosecutors Make Surprise Visit to Fed as Pirro Defends Investigation",
+        "In the House, Republican Plans Go Awry Amid Party Divides"
+      ],
+      "pestle_categories": [
+        "政治",
+        "法律"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "1-3年",
+      "counter_trend": "司法権の政治的中立性と三権分立の原則",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 6,
+        "disruption": 8,
+        "connectivity": 6,
+        "credibility": 9,
+        "early_stage": 5
+      },
+      "evidence_type": "empirical",
+      "composite_score": 6.7,
+      "noise_flag": false
+    },
+    {
+      "signal": "『東欧民主主義の「反既得権力型」への根本的転換』",
+      "description": "オルバン首相の大敗北がハンガリーでの『ポピュリズム対民主主義』という従来の図式を壊し、同時にメローニ首相がイタリアでの『レファレンダム敗北』を経験している。東欧での『権威主義的ポピュリズム』の衰退が、単なる政権交代ではなく、民主主義が『既得権力への抵抗としての形態』へと再構成されている兆候である。",
+      "related_headlines": [
+        "Why Orban and Hungary are not one and the same",
+        "Orbán's defeat threatens to halt Hungarian support of populist right",
+        "The Trump trap: Why Meloni's referendum defeat is a warning for Europe",
+        "Orban's Defeat Punctures Europe's Far Right, but Also Offers It a Road Map"
+      ],
+      "pestle_categories": [
+        "政治"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "民主主義対権威主義という二項対立図式",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 7,
+        "disruption": 7,
+        "connectivity": 6,
+        "credibility": 9,
+        "early_stage": 5
+      },
+      "evidence_type": "empirical",
+      "composite_score": 6.7,
+      "noise_flag": false
+    },
+    {
+      "signal": "『言語政策による民主主義の『根拠剥奪』実験』",
+      "description": "スロバキアで『言語と民主主義』の相互関係が学術的に問われ、同時にバングラデシュで『改革過程における政党分裂』が言語的アイデンティティと結びついている。『言語』が単なるコミュニケーション手段ではなく、民主的合意形成そのものの『前提条件』として再認識される転換が始まっている。",
+      "related_headlines": [
+        "Language and democracy",
+        "Another November: Queer Slovakia after 1989",
+        "Bangladesh's Parties are Divided Over the Reform Process"
+      ],
+      "pestle_categories": [
+        "政治",
+        "社会"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "5-10年",
+      "counter_trend": "言語の透過的な中立的コミュニケーション機能",
+      "signal_type": "weak_signal",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "myth",
+      "scores": {
+        "novelty": 8,
+        "disruption": 6,
+        "connectivity": 5,
+        "credibility": 5,
+        "early_stage": 8
+      },
+      "evidence_type": "theoretical",
+      "composite_score": 6.6,
+      "noise_flag": false
+    },
+    {
+      "signal": "『オルバン敗北がもたらす東欧民主主義の根本的再構成』：『ポピュリズム対民主主義』の簡潔な解体",
+      "description": "ハンガリー選挙でのオルバン与党の大敗は、『権威主義的ポピュリズム vs. 民主主義』という二項対立そのものを崩壊させ、代わりに『反既得権力民主主義』と『EU統合民主主義』の競合する複数の民主主義モデルの共存を示唆している。この転換は東欧全域の『民主主義の再定義』を加速させ、西欧的民主主義観の『普遍性』に疑問を投じている。",
+      "related_headlines": [
+        "Orbán's defeat threatens to halt Hungarian support of populist right",
+        "Orban's Defeat Punctures Europe's Far Right, but Also Offers It a Road Map",
+        "ハンガリー 16年ぶり政権交代へ 一夜明け 歓迎や期待の声"
+      ],
+      "pestle_categories": [
+        "政治",
+        "社会"
+      ],
+      "potential_impact": "high",
+      "time_horizon": "3-5年",
+      "counter_trend": "『権威主義的ポピュリズムの不可逆的台頭』という地政学的悲観主義",
+      "signal_type": "counter_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H1",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 6,
+        "disruption": 7,
+        "connectivity": 7,
+        "credibility": 8,
+        "early_stage": 5
+      },
+      "evidence_type": "empirical",
+      "composite_score": 6.5,
+      "noise_flag": false
+    },
+    {
+      "signal": "『生態系ケーパビリティの局地的リセット』における在来知識体系の実験的復権",
+      "description": "アフリカが『炭素吸収地から排出地へ』転換し、ハワイの渡り鳥の従来の説が否定されるなど、『環境科学の近代的モデル』が実は特定の地域的条件のみに有効であったことが露呈。同時に『地域的生態知識』による環境修復が新たに評価される兆し。『グローバルな環境科学』から『局地的な生態文明』への転換。",
+      "related_headlines": [
+        "Africa's forests have flipped from carbon sink to carbon source",
+        "Scientists just debunked a 50-year myth about Hawaii's birds",
+        "自給力とは、自分の生命を自分で守ること。大山修一さんがアフリカで\"資源循環による土壌再生\"を実装しながら追求する「平和な社会」",
+        "Planting trees to remove carbon can harm the environment – or protect it: study highlights trade-offs"
+      ],
+      "pestle_categories": [
+        "環境",
+        "社会"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "5-10年",
+      "counter_trend": "『普遍的な環境科学による全球的な問題解決』というモダニズムの前提",
+      "signal_type": "counter_trend",
+      "ansoff_level": 2,
+      "three_horizons": "H3",
+      "cla_depth": "worldview",
+      "scores": {
+        "novelty": 7,
+        "disruption": 6,
+        "connectivity": 7,
+        "credibility": 6,
+        "early_stage": 6
+      },
+      "evidence_type": "mixed",
+      "composite_score": 6.5,
+      "noise_flag": false
+    },
+    {
+      "signal": "『共有サービスと法規制の「根本的不可調和」による「インフォーマル正当性」の萌芽』",
+      "description": "ウーバーイーツ・ドアダッシュなどの共有サービスがクイーンズランド州の『ebike規制』に違反し、インドネシアでは『非公式レンタルを公式化』する動きが発生している。规制当局と企業の『不可調和』が『法的グレーゾーン』を『経済的事実』に転化させ、『インフォーマル経済の制度化』が急速に進行している兆候である。",
+      "related_headlines": [
+        "Queensland ebike laws could cripple Uber Eats, DoorDash and shared e-vehicle schemes, industry warns",
+        "Indonesia's Bali wants illegal rentals to be legitimate as operators flag red tape"
+      ],
+      "pestle_categories": [
+        "法律",
+        "経済",
+        "技術"
+      ],
+      "potential_impact": "medium",
+      "time_horizon": "3-5年",
+      "counter_trend": "法的規制による経済活動の完全統制",
+      "signal_type": "emerging_trend",
+      "ansoff_level": 3,
+      "three_horizons": "H2",
+      "cla_depth": "systemic",
+      "scores": {
+        "novelty": 7,
+        "disruption": 6,
+        "connectivity": 6,
+        "credibility": 6,
+        "early_stage": 6
+      },
+      "evidence_type": "empirical",
+      "composite_score": 6.3,
+      "noise_flag": false
     }
   ]
 }
