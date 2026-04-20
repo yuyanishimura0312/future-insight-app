@@ -129,6 +129,14 @@ else
   log "  Pushed to GitHub Pages."
 fi
 
+# Step 7: Sync to PESTLE + Signal DB
+log "Step 7: Syncing to PESTLE + Signal DB..."
+if python3 ~/projects/research/pestle-signal-db/scripts/daily_sync.py >> "$LOG_FILE" 2>&1; then
+  log "  PESTLE + Signal DB sync complete."
+else
+  log "  WARNING: PESTLE + Signal DB sync failed (non-fatal)."
+fi
+
 # Cleanup old logs (keep 30 days)
 find "$LOG_DIR" -name "daily_*.log" -mtime +30 -delete 2>/dev/null || true
 
