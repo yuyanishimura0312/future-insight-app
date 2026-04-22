@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-21T19:50:16.501000+00:00",
-  "total_articles_analyzed": 231354,
+  "generated_at": "2026-04-22T19:50:38.827206+00:00",
+  "total_articles_analyzed": 233351,
   "alert_counts": {
     "emergence": 12,
     "surge": 12,
@@ -12,8 +12,8 @@
       "type": "SURGE",
       "level": "high",
       "topic": "reuters",
-      "mentions": 558,
-      "ratio": 56506.8,
+      "mentions": 628,
+      "ratio": 52996.2,
       "historical_avg": 0.0,
       "categories": [
         "Environmental",
@@ -23,17 +23,17 @@
         "Political",
         "Technological"
       ],
-      "alert_title": "イラン紛争の急速な顕在化",
-      "description": "イラン関連の紛争報道が過去平均の10万倍超に急増し、426件に達した。政治・経済・法律・社会・環境・技術など全PESTLE領域に横断出現している。中東地政学リスクが急速に現実化しており、エネルギー価格や金融市場、国際関係に重大な波及効果をもたらす可能性が高い。",
-      "alert_title_en": "Dramatic Surge in Iran Conflict Coverage",
-      "description_en": "Iran war-related news has surged over 100,000-fold, appearing 426 times across all six PESTLE categories. This signals an unprecedented escalation in Middle East geopolitical risks with potential ripple effects on energy markets, global finance, and international relations."
+      "alert_title": "ロイター報道量の異常急増",
+      "description": "過去平均の約53,000倍という極端な報道量増加が検出されました。グローバル市場、選挙、政治指導部交代など、複数の地政学的イベントが同時発生している兆候を示唆します。この報道集中は、世界的な政治・経済の不安定化局面では、市場変動性の上昇やポリシー決定速度の加速をもたらす可能性があります。",
+      "alert_title_en": "Unprecedented surge in Reuters global news coverage",
+      "description_en": "News coverage has surged approximately 53,000 times above historical averages, indicating simultaneous geopolitical events affecting markets, elections, and political leadership transitions worldwide. This concentration suggests heightened global instability that could trigger increased market volatility and faster policy shifts."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "iran war",
-      "mentions": 426,
-      "ratio": 107849.0,
+      "mentions": 445,
+      "ratio": 112659.2,
       "historical_avg": 0.0,
       "categories": [
         "Environmental",
@@ -43,16 +43,16 @@
         "Political",
         "Technological"
       ],
-      "alert_title": "ホルムズ海峡危機の新出現",
-      "description": "過去2年間に記録がなかった「ホルムズ海峡」が初めて172件出現し、全PESTLE領域に横断出現している。世界の石油供給の約3割が通過する戦略的海峡の危機化は、エネルギー価格高騰やサプライチェーン混乱を招く可能性がある。米国・イラン間の対立激化を反映した新兆候として重要。",
-      "alert_title_en": "Strait of Hormuz Crisis Emerges as New Risk",
-      "description_en": "The Strait of Hormuz, which did not appear in news over the past two years, now surges with 172 mentions across all PESTLE domains. This indicates a critical new geopolitical flashpoint threatening one-third of global oil supplies and signaling potential energy price spikes."
+      "alert_title": "イラン戦争関連報道の急増",
+      "description": "過去平均の約112,600倍という記録的な増加で、イラン戦争が多分野で急速に拡大している状況を反映しています。経済・技術・法律など全領域を横断する影響が確認され、特に中国がロシアより実質的利益を得る可能性についての議論が活発化。エネルギー価格、サプライチェーン、地政学的同盟の再編成が今後の主要リスク要因となります。",
+      "alert_title_en": "Iran war becomes dominant global narrative across all sectors",
+      "description_en": "Coverage has surged 112,600 times above average, reflecting rapid expansion across economic, technological, and legal dimensions. Analysis increasingly focuses on China positioning as the primary beneficiary rather than Russia, signaling major implications for energy markets, supply chains, and geopolitical alliances."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "iran war",
-      "mentions": 426,
+      "mentions": 445,
       "categories": [
         "Economic",
         "Environmental",
@@ -62,16 +62,16 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "中東紛争の複合的波及",
-      "description": "中東地域の報道が全PESTLE領域に141件横断出現し、特に技術応用（ドローン・防衛システム等）と経済への複合的影響が強調されている。現代的な戦争形態が従来の政治・経済リスクを超えた、多層的な社会・技術・環境への波及を示唆している。企業のサプライチェーン戦略の抜本的見直しを迫る兆候。",
-      "alert_title_en": "Multi-dimensional Middle East Conflict Spillovers",
-      "description_en": "Middle East conflict coverage appears 141 times across all PESTLE categories, emphasizing technology integration and compound economic impacts. This reveals how modern warfare extends beyond traditional geopolitical risks to affect supply chains, technology systems, and environmental stability simultaneously."
+      "alert_title": "ホルムズ海峡危機が初出現",
+      "description": "過去2年間に存在しなかったホルムズ海峡関連トピックが新たに177回出現し、米イラン対立の具体的危機地点として機能しています。エネルギー安全保障、海運、国際法など全領域を横断する影響が確認されており、この地域での有事は全球的なエネルギー価格上昇や物流停止を招く可能性があります。",
+      "alert_title_en": "Strait of Hormuz emerges as critical flashpoint in US-Iran crisis",
+      "description_en": "New coverage on the Strait of Hormuz has appeared 177 times, representing a concrete escalation point in US-Iran tensions. Cross-sector impact spans energy security, maritime commerce, and international law, with potential for global oil price spikes and logistical disruption."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "strait hormuz",
-      "mentions": 172,
+      "mentions": 177,
       "categories": [
         "Environmental",
         "Legal",
@@ -80,16 +80,16 @@
         "Political",
         "Technological"
       ],
-      "alert_title": "英国政治の不安定化兆候",
-      "description": "Keir Starmer首相に関する報道が過去平均の6万5千倍に急増し、129件に達した。NHS医師ストライキ、EU関係再構築、NATO懸念など複数の内政課題が同時進行している。英国の政治的安定性低下が国際的信用や投資判断に影響する可能性があり、欧州の政治リスク拡大を示唆。",
-      "alert_title_en": "UK Political Instability Under Starmer Leadership",
-      "description_en": "Coverage of Keir Starmer has surged 65,000-fold to 129 mentions, reflecting simultaneous crises including NHS strikes, UK-EU relations, and NATO concerns. This indicates potential deterioration of UK political stability with implications for international investment confidence and European geopolitical alignment."
+      "alert_title": "英国スターマー首相の政局不安定化",
+      "description": "過去平均の約69,400倍というスターマー関連報道の増加が確認されました。医師ストライキ対応、EU関係、NATO政策など複数の政策課題が同時に露出し、英国政局の複雑化を示唆しています。左派陣営内の結束の動揺と右派野党の台頭が、英国の国際的立場や欧州統合の方向性を変更させる可能性があります。",
+      "alert_title_en": "UK PM Starmer faces unprecedented policy crisis amid multiple fronts",
+      "description_en": "Starmer-related coverage surged 69,400 times above average, reflecting simultaneous crises over physician strikes, EU relations, and NATO policy. The fragmentation signals potential shifts in Britain's international positioning and European integration strategy."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "strait hormuz",
-      "mentions": 172,
+      "mentions": 177,
       "categories": [
         "Economic",
         "Environmental",
@@ -99,16 +99,16 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "月面探査ミッションの新段階",
-      "description": "NASA Artemis計画に関する報道が過去平均の6万3千倍に急増し、125件に達した。トランプ政権が宇宙開発をレガシー構築の手段として位置づけており、宇宙産業への政治的投資加速と商業化の加速を示唆している。民間企業の宇宙ビジネス機会拡大や国家間の宇宙覇権競争激化の可能性。",
-      "alert_title_en": "Artemis Moon Mission Gains Political Momentum",
-      "description_en": "Artemis mission coverage surges 63,000-fold to 125 mentions, with Trump administration prioritizing it as a legacy project. This signals accelerating political investment in space exploration, expanding commercial opportunities in space industry, and intensifying international competition for space dominance."
+      "alert_title": "アルテミスII月面探査が急速加速",
+      "description": "過去平均の約64,800倍というアルテミス関連報道の増加で、米国月面往還計画がメディア・政策の焦点化しています。トランプ政権の宇宙開発優先化が示唆され、民間宇宙企業の成長加速と国家宇宙産業への再投資がもたらされる見込みです。技術・経済・政治が交錯する新しい産業ビジネスモデルの形成が加速します。",
+      "alert_title_en": "Artemis II Moon mission becomes geopolitical priority marker",
+      "description_en": "Coverage surged 64,800 times above average, signaling rapid acceleration of the US lunar mission program under Trump's administration. This reflects renewed emphasis on space exploration that will accelerate private space industry growth and drive reinvestment in national aerospace capabilities."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "europe",
-      "mentions": 146,
+      "mentions": 156,
       "categories": [
         "Economic",
         "Environmental",
@@ -118,16 +118,16 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "中国テック企業の香港集約化",
-      "description": "中国関連報道が全PESTLE領域に118件横断出現し、特に技術企業の香港シフトが強調されている。香港のグローバル金融センター地位を活用した中国テック企業の国際展開加速、米国規制回避の動きが顕著。グローバル企業の地政学的リスク管理戦略が大きく変わる可能性を示唆。",
-      "alert_title_en": "Chinese Tech Companies Consolidate Hong Kong Hub",
-      "description_en": "Chinese-related news appears 118 times across all PESTLE domains, highlighting Chinese tech companies' strategic shift to Hong Kong. This reflects both leveraging Hong Kong's global finance status and circumventing US regulations, reshaping how multinationals manage geopolitical risk."
+      "alert_title": "欧州が多次元危機の渦中へ",
+      "description": "欧州関連報道が156件で全6分野を横断しており、ロシア支援の中国対応、ガザ・ウクライナ外交、エネルギー安全保障が同時に議論されています。欧州がイラン危機の経済的衝撃とロシア戦略への対抗を同時に迫られる状況が浮上。NATO統一性の維持と経済防衛が2026年の重要課題となります。",
+      "alert_title_en": "Europe faces convergence of geopolitical, energy, and strategic crises",
+      "description_en": "European-focused coverage spans all six sectors across 156 instances, addressing China's Russia support, Gaza-Ukraine diplomacy, and energy security simultaneously. Europe must navigate economic impacts of Iran crisis while countering Russian strategy, testing NATO cohesion and economic resilience."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "middle east",
-      "mentions": 141,
+      "mentions": 144,
       "categories": [
         "Economic",
         "Environmental",
@@ -137,17 +137,17 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "欧州の地政学的複雑化",
-      "description": "欧州関連報道が全PESTLE領域に146件横断出現し、対ロシア政策、対中国戦略、中東エネルギー安全保障が複合している。中央アジア・中東での戦略的影響力争いと、エネルギー・防衛の多角化圧力が増加。欧州統一的な戦略形成の困難さと域内政治の分断リスクが高まっている。",
-      "alert_title_en": "Europe Navigates Complex Geopolitical Pressures",
-      "description_en": "European news spans 146 mentions across all PESTLE domains, interweaving Russia policy, China strategy, and Middle East energy security. This reflects mounting pressures on European energy diversification and defense coordination, risking strategic fragmentation and policy incoherence."
+      "alert_title": "中東紛争が全領域に拡大",
+      "description": "中東関連報道が144件で全6分野を横断し、技術の役割に特に焦点が当たっています。AI、ドローン、サイバー兵器など新型戦闘技術の紛争への組み込みが加速しており、民間技術企業と軍事利用の境界が急速に消滅しています。今後、民間技術企業の地政学的責任と規制圧力が大幅に増加します。",
+      "alert_title_en": "Middle East conflict expands across all sectors with technology focus",
+      "description_en": "Middle East coverage spans all six sectors in 144 instances, with particular emphasis on technology's expanding role. Integration of AI, drones, and cyber-weapons into conflict is accelerating the blurring of civilian-military technology boundaries, increasing future regulatory pressure on private tech firms."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "starmer",
-      "mentions": 129,
-      "ratio": 65317.0,
+      "mentions": 137,
+      "ratio": 69367.7,
       "historical_avg": 0.0,
       "categories": [
         "Environmental",
@@ -156,17 +156,17 @@
         "Political",
         "Technological"
       ],
-      "alert_title": "イラン休戦議論の顕在化",
-      "description": "過去2年間に出現しなかった「イラン停戦」が初めて53件出現し、全PESTLE領域に横断している。紛争の激化と同時に終結・交渉シナリオが議論される矛盾的状況は、国際社会の不確実性が極めて高いことを示唆している。外交的解決の道筋模索が急速に進む可能性を示唆。",
-      "alert_title_en": "Iran Ceasefire Discussions Emerge as Crisis Unfolds",
-      "description_en": "Iran ceasefire topics appear for the first time with 53 mentions across all domains, reflecting paradoxical discussions of conflict resolution amid escalation. This indicates high international uncertainty and signals potential diplomatic initiatives accelerating in parallel with military tensions."
+      "alert_title": "イラン和平交渉が初浮上",
+      "description": "過去2年間存在しなかったイラン和平交渉トピックが53回出現し、紛争の長期化への懸念から対話機運が生まれている兆候です。政治・経済・環境など全域での影響を視野に、複数の仲介者による平和枠組み構築の可能性が高まっています。ただし交渉実現には米国の政策変更が必須となります。",
+      "alert_title_en": "Iran ceasefire negotiations emerge as new diplomatic initiative",
+      "description_en": "Iran ceasefire-related coverage newly appeared 53 times, signaling emerging diplomatic initiatives as conflict escalation concerns mount. Multi-sector impacts suggest emerging peace frameworks, though US policy shifts remain essential for negotiation viability."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "artemis",
-      "mentions": 125,
-      "ratio": 63291.7,
+      "mentions": 128,
+      "ratio": 64810.7,
       "historical_avg": 0.0,
       "categories": [
         "Environmental",
@@ -176,16 +176,16 @@
         "Political",
         "Technological"
       ],
-      "alert_title": "プライバシー権擁護運動の拡大",
-      "description": "Cindy Cohn著『Privacy's Defender』関連報道が初出現で34件に達し、法律分野で急速に広がっている。デジタル時代のプライバシー権擁護が法的・社会的議論の中心となりつつあり、今後の個人情報規制やAI企業との対立構図が強まる可能性がある。",
-      "alert_title_en": "Privacy Advocacy Movement Gains Momentum",
-      "description_en": "Coverage of 'Privacy's Defender' emerges with 34 mentions, expanding rapidly in legal discourse. This signals growing social emphasis on privacy rights in the digital age, potentially intensifying regulatory battles and tensions with AI companies over data governance."
+      "alert_title": "トランプ・イラン政策が焦点化",
+      "description": "※トランプ政権のイラン政策についての議論が新たに50件出現していますが、関連記事タイトルが\"Can neuroscience shed light on Trump's new world disorder?\"と内容不詳で、ノイズの可能性が高い。ただし表面的には、トランプ再登場がイラン政策の完全リセットを示唆している可能性があります。",
+      "alert_title_en": "Trump Iran policy positioning becomes key variable in conflict resolution",
+      "description_en": "Trump Iran-related coverage newly appeared 50 times, though article titles suggest possible noise in data quality. If valid, indicates Trump administration may reset Iran policy entirely, becoming critical determinant of conflict escalation or resolution trajectory."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
-      "topic": "chinese",
-      "mentions": 118,
+      "topic": "push",
+      "mentions": 123,
       "categories": [
         "Economic",
         "Environmental",
@@ -195,17 +195,17 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "ハンガリー選挙と民主主義危機",
-      "description": "ハンガリー選挙に関する報道が初出現で41件に達し、政治分野を中心に広がっている。欧州における民主主義後退、表現の自由制限の動きが強調されており、EU内の政治的分断とハンガリーのポーランド的方向性（権威主義化）が懸念される。欧州の民主主義基準の低下を示唆する重要な兆候。",
-      "alert_title_en": "Hungary Election Signals EU Democratic Backsliding",
-      "description_en": "Hungary election coverage emerges with 41 new mentions, highlighting authoritarian trends and free speech restrictions. This signals deepening fractures within the EU and potential democratic backsliding, with implications for European values cohesion and governance standards."
+      "alert_title": "ハンガリー選挙が民主主義の岐路",
+      "description": "ハンガリー選挙報道が新たに42件出現し、「遠い右翼の言論自由チャージ」というテーマで注目されています。EU内での民主主義規範の衝突が顕在化し、欧州の民主主義基準の分裂やEU内統治危機の深化が予測されます。中東欧の権威主義傾向の強化が欧州統合に及ぼす影響が今後の主要監視対象です。",
+      "alert_title_en": "Hungary election signals deepening democratic standards conflict within EU",
+      "description_en": "Hungary election coverage newly appeared 42 times, highlighting far-right positioning on free speech. The case exemplifies fracturing democratic norms within EU governance, potentially accelerating East-Central European authoritarian trends that threaten European integration cohesion."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "war iran",
-      "mentions": 80,
-      "ratio": 40506.7,
+      "mentions": 82,
+      "ratio": 41519.3,
       "historical_avg": 0.0,
       "categories": [
         "Environmental",
@@ -214,26 +214,39 @@
         "Political",
         "Technological"
       ],
-      "alert_title": "エネルギー価格急騰の現実化",
-      "description": "イラン戦争に伴う油価上昇報道が増加し、\"Oil at $115 a Barrel\"などの見出しが出現している。サウジアラビア・UAEなど主要産油国での施設攻撃リスクが高まり、ガソリン・暖房・製造業への直接的な価格転嫁が近い。生活コスト危機と企業利益圧迫の同時進行が予想される。",
-      "alert_title_en": "Energy Price Surge Materializes from Iran Crisis",
-      "description_en": "Oil price surge reporting accelerates with headlines citing $115/barrel, reflecting rising risks to major producing nations' infrastructure. This signals imminent cost-of-living shocks for consumers and margin pressures for manufacturers globally."
+      "alert_title": "インド・ブラジル経済市場の波乱",
+      "description": "ブラジル債券市場の急落とインド株式の動きが報道増加の中で注目されており、新興市場がイラン危機による外部ショックに脆弱であることが示唆されます。特にインフレ圧力、金利引き上げ期待、資本流出リスクが新興国経済に同時に作用し、発展途上国の金融安定性が大幅に低下する可能性があります。",
+      "alert_title_en": "Emerging markets show vulnerability to Iran crisis economic spillover",
+      "description_en": "Brazil's bond market rout and Indian stock market movements feature prominently in surge coverage, revealing emerging markets' vulnerability to external shocks. Simultaneous pressures of inflation, rate expectations, and capital flight threaten developing economy stability significantly."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "iran talks",
-      "mentions": 60,
+      "mentions": 62,
       "categories": [
         "Environmental",
         "Economic",
         "Political",
         "Technological"
       ],
-      "alert_title": "生活費危機への国民的懸念",
-      "description": "\"Affordability\"関連報道が過去平均の1万8千倍に急増し、37件に達した。米国・英国など先進国で生活費危機への不満が政治化しており、インフレ対策とエネルギー価格高騰への対応が選挙争点化している。社会的不満の政治利用と分極化がさらに進む可能性を示唆。",
-      "alert_title_en": "Affordability Crisis Becomes Central Political Issue",
-      "description_en": "Affordability coverage surges 18,000-fold to 37 mentions, reflecting politicization of cost-of-living crises in advanced economies. This indicates mounting citizen discontent over inflation and energy prices, with implications for political polarization and policy responses."
+      "alert_title": "プライバシー防衛の法政策化",
+      "description": "シンディ・コーン著\"プライバシーの防御者\"関連報道が初出現し、プライバシー権がメモリアル対象から政策・法律領域への転換を示唆しています。EFFなどのシビルリバティ団体による法的防衛活動の強化が予期され、企業のデータ利用規制と個人情報保護が法律領域での激しい争点となる可能性があります。",
+      "alert_title_en": "Privacy rights emerge as central legal policy battleground",
+      "description_en": "Coverage of privacy advocacy memoirs and EFF initiatives newly appeared, signaling shift from individual concern to formal legal policy framework. Expect intensified civil liberties battles over corporate data practices and personal information protection in legislative arenas."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "privacy defender",
+      "mentions": 54,
+      "categories": [
+        "Legal"
+      ],
+      "alert_title": "※ノイズ：AI企業人事報道",
+      "description": "※ノイズの可能性が高い。\"Sam Altman\"アラートの関連記事が全てSamsung Galaxy S26 reviewであり、データマッピングエラーと判断されます。実際のサムアルトマン関連重要報道の検出が失敗している可能性があります。",
+      "alert_title_en": "Data quality issue detected in AI executive coverage",
+      "description_en": "※High probability of noise. All related articles for 'Sam Altman' alert reference Samsung Galaxy S26 reviews, indicating data mapping error. Actual coverage of important AI executive developments may be undetected."
     },
     {
       "type": "EMERGENCE",
@@ -243,10 +256,10 @@
       "categories": [
         "Economic"
       ],
-      "alert_title": "AI企業と民主主義の衝突",
-      "description": "※ノイズの可能性が高い。「Sam Altman」関連記事がSamsung製品レビューで占められており、トピックと記事内容の一致度が極めて低い。ただし背景としてAI企業とプライバシー・政治規制の緊張関係が存在する可能性。",
-      "alert_title_en": "AI Company Governance and Regulation Tensions",
-      "description_en": "※High noise probability: Sam Altman mentions associated primarily with Samsung reviews, showing poor topical coherence. However, underlying AI firm tensions with privacy and political oversight may merit monitoring."
+      "alert_title": "※ノイズ：製品レビュー報道",
+      "description": "※ノイズの可能性が高い。\"Vance\"アラートの関連記事が全てGoogle Pixel 10a reviewであり、マッピングエラーと判断されます。米国副大統領人物に関する実質的報道が欠落している可能性があります。",
+      "alert_title_en": "Data mapping error detected in political coverage",
+      "description_en": "※High probability of noise. All 'Vance' alert articles reference Google Pixel 10a reviews, indicating systematic mapping error. Coverage of US Vice President-related developments appears to be missing from dataset."
     },
     {
       "type": "EMERGENCE",
@@ -256,10 +269,30 @@
       "categories": [
         "Economic"
       ],
-      "alert_title": "ホルムズ海峡危機の経済的影響",
-      "description": "ホルムズ海峡危機と価格上昇報道が連動し、エネルギー・金属・穀物など商品価格の同時上昇が報道されている。インドのインフレ圧力や新興国の資本流出リスクが高まり、グローバル経済の分極化（先進国vs新興国の経済格差拡大）が加速する可能性。",
-      "alert_title_en": "Hormuz Crisis Triggers Commodity Price Cascade",
-      "description_en": "Hormuz crisis combines with price surge coverage, triggering simultaneous increases in energy, metals, and grain costs. This amplifies inflation pressures in emerging markets and capital flight risks, accelerating global economic divergence between developed and developing nations."
+      "alert_title": "※ノイズ：日本語ITメディア報道",
+      "description": "※ノイズの可能性が高い。\"ITMedia Mobile\"アラートの記事が日本語のIT製品ニュースであり、グローバルニュース分析データセットに不適切に含まれています。データ品質管理の改善が必要です。",
+      "alert_title_en": "Japanese IT media content included in global news dataset",
+      "description_en": "※High probability of noise. ITMedia Mobile alert contains Japanese-language product news inappropriate for global news analysis. Data quality filtering requires improvement to exclude non-English regional content."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "happened",
+      "mentions": 54,
+      "ratio": 27342.0,
+      "historical_avg": 0.0,
+      "categories": [
+        "Environmental",
+        "Legal",
+        "Economic",
+        "Social",
+        "Political",
+        "Technological"
+      ],
+      "alert_title": "石油価格の危機的上昇圧力",
+      "description": "イラン危機による石油供給不安が報道集中の中で浮上し、バレルあたり115ドル想定の記事が出現しています。ホルムズ海峡有事リスク、OPEC+の対応能力、戦略備蓄の活用が議論され、2026年のエネルギー価格上昇が家計・産業双方に深刻な影響を及ぼす可能性があります。インフレ再加速のリスクが増大します。",
+      "alert_title_en": "Iran crisis threatens severe oil price escalation to $115 per barrel",
+      "description_en": "Iran crisis-triggered oil supply concerns emerge in coverage concentration, with articles referencing $115 barrel scenarios. Hormuz strait risk, OPEC+ response capacity, and strategic reserve deployment are debated, threatening 2026 energy inflation with severe household and industrial impacts."
     },
     {
       "type": "EMERGENCE",
@@ -274,30 +307,34 @@
         "Political",
         "Technological"
       ],
-      "alert_title": "グローバル金融市場の不安定化",
-      "description": "Reuters記事の急増（過去平均の5万6千倍、558件）は、市場変動の報道頻度が異例に高まっていることを示唆している。中央銀行金利正常化、イスラエル中銀首脳交代、選挙による政治リスク増加など、複数の不確実性が同時進行している。投資家の警戒心が著しく高まっている状況を反映。",
-      "alert_title_en": "Global Financial Markets Show Heightened Volatility",
-      "description_en": "Reuters coverage surges 56,000-fold to 558 mentions, indicating exceptional frequency of market-moving events. Concurrent uncertainties including central bank policy shifts, political transitions, and geopolitical crises signal elevated investor risk aversion."
+      "alert_title": "住宅ローン金利への戦争インパクト",
+      "description": "イラン戦争がインフレ・金利上昇を通じて英国の130万世帯の住宅ローン負担を増加させる可能性についての報道が出現しました。地政学的紛争の直接的な家計影響が定量化されることで、政治的圧力が加速します。社会不安定化と政治的反発が2026年の選挙政治を支配する要因となり得ます。",
+      "alert_title_en": "Iran war threatens mortgage shock for 1.3 million UK households",
+      "description_en": "Coverage emerged quantifying Iran war's impact on UK household mortgage costs through inflation-rate transmission mechanisms. Direct geopolitical-to-household impact measurement accelerates political pressure, with social instability and electoral backlash likely to dominate 2026 political dynamics."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
-      "topic": "privacy defender",
-      "mentions": 51,
+      "topic": "trump iran",
+      "mentions": 50,
       "categories": [
-        "Legal"
+        "Environmental",
+        "Legal",
+        "Economic",
+        "Political",
+        "Technological"
       ],
-      "alert_title": "AI利用の倫理的議論の深化",
-      "description": "※ノイズの可能性が高い。記事タイトルが不明瞭で、トピック「moment」（瞬間）とシリコンバレーの社会的議論（ソーシャルメディア中毒訴訟など）の結合が不自然。ただし背景にはAI企業のコンプライアンス危機がある可能性。",
-      "alert_title_en": "AI Ethics and Social Media Accountability Debates",
-      "description_en": "※High noise probability: Topic 'moment' poorly aligns with underlying articles on social media addiction trials and Silicon Valley ethics. However, reflects ongoing AI industry compliance and accountability pressures."
+      "alert_title": "シリコンバレー技術企業の規模縮小化",
+      "description": "\"Tiny Team Moment\"というテーマで、大規模テック企業から小規模スタートアップへの人材・資本シフトが報道される傾向が検出されました。規制圧力、ソーシャルメディア問題、AI倫理懸念が企業規模縮小と分散化を加速させており、業界の競争構造が大きく変わる可能性があります。",
+      "alert_title_en": "Silicon Valley shifts toward distributed small-team organizational model",
+      "description_en": "Coverage of 'tiny team moment' reflects talent and capital migration from mega-tech to small startups. Regulatory pressure, social media controversies, and AI ethics concerns accelerate industry decentralization, potentially reshaping competitive structures fundamentally."
     },
     {
       "type": "SURGE",
       "level": "high",
-      "topic": "happened",
-      "mentions": 51,
-      "ratio": 25823.0,
+      "topic": "moment",
+      "mentions": 49,
+      "ratio": 24810.3,
       "historical_avg": 0.0,
       "categories": [
         "Environmental",
@@ -307,32 +344,43 @@
         "Political",
         "Technological"
       ],
-      "alert_title": "インド人口国勢調査の政治化",
-      "description": "インド人口統計が「最大級（biggest）」報道として急増し、政治的議論の対象になっている。人口動態データが政策・予算配分・政治代表に直結し、社会的分断（カースト・宗教・地域）の可視化につながる可能性がある。民族主義政治運動の激化リスク。",
-      "alert_title_en": "India Census Data Becomes Political Flashpoint",
-      "description_en": "India's census data surges as major news, becoming politicized around population dynamics tied to policy and representation. This risks amplifying ethnic-religious-regional divisions and fueling nationalist political mobilization."
+      "alert_title": "食品政策の企業反発激化",
+      "description": "ケネディ前大統領によって新任の食品政策責任者への企業の反発報道が出現し、健康・規制政策の企業対政府対立構造が激化しています。食品産業、製薬企業、サプリメント業界などが新規制に強硬に抵抗する構図が形成され、トランプ政権の規制改革圧力と利益団体の防衛戦が衝突する構造が作られています。",
+      "alert_title_en": "Food policy reform triggers intense corporate industry backlash",
+      "description_en": "Coverage shows corporate pushback against Kennedy-led food policy changes, escalating government-business conflicts over health and regulatory issues. Food, pharmaceutical, and supplement industries prepare resistance to new regulations, creating collision between Trump deregulation agenda and defensive industry lobbying."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
-      "topic": "trump iran",
+      "topic": "inside health",
       "mentions": 48,
       "categories": [
-        "Environmental",
-        "Legal",
-        "Economic",
-        "Political",
-        "Technological"
+        "Social"
       ],
-      "alert_title": "日本テック企業の動向把握",
-      "description": "※ノイズの可能性が高い。ITmedia関連報道（41件初出現）は日本語ITニュースサイトの定型記事であり、グローバルニュース分析の対象としては外れている。ただしXiaomiなど中国スマートフォンの日本市場進出は実際のトレンド。",
-      "alert_title_en": "Japanese IT Media Coverage and Market Signals",
-      "description_en": "※High noise probability: ITmedia content represents Japanese tech press boilerplate rather than global news. However, underlying Xiaomi/REDMI smartphone price competition in Japan reflects real market dynamics worth monitoring."
+      "alert_title": "新生児死亡削減の国際的停滞",
+      "description": "\"乳幼児死亡削減の国際的推進が失速している\"との報道が現れ、SDG3の達成が危機に瀕していることが示唆されます。開発途上国への資金不足、ヘルスケアシステムの脆弱性、COVID後の優先順位低下が複合的に作用しており、グローバルな健康不平等が拡大する見通しです。",
+      "alert_title_en": "Global infant mortality reduction momentum stalls amid resource constraints",
+      "description_en": "Coverage indicates international efforts to reduce infant deaths are losing steam, threatening SDG3 achievement. Funding shortfalls in developing nations, fragile healthcare systems, and post-COVID priority shifts create convergence pressuring global health inequality expansion."
     },
     {
       "type": "SURGE",
       "level": "high",
-      "topic": "moment",
+      "topic": "biggest",
+      "mentions": 45,
+      "ratio": 22785.0,
+      "historical_avg": 0.0,
+      "categories": [
+        "Environmental",
+        "Economic",
+        "Social",
+        "Political",
+        "Technological"
+      ]
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "vance",
       "mentions": 45,
       "ratio": 22785.0,
       "historical_avg": 0.0,
@@ -340,70 +388,14 @@
         "Environmental",
         "Legal",
         "Economic",
-        "Social",
-        "Political",
-        "Technological"
-      ],
-      "alert_title": "宇宙産業の商業化加速",
-      "description": "SpaceX IPOが「最大級」プロジェクトとして報道され、民間宇宙産業の商業化が急加速していることを示唆している。ロケット再利用技術の成熟、衛星通信市場の拡大、防衛産業への民間テック流入が進む。既存防衛企業や宇宙産業秩序が大きく変わる可能性。",
-      "alert_title_en": "Commercial Space Industry Accelerates with SpaceX IPO",
-      "description_en": "SpaceX IPO emerges as major news story, signaling rapid commercialization of space industry. This reflects maturing reusable rocket technology, expanding satellite communications markets, and crossover between commercial and defense sectors."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "inside health",
-      "mentions": 44,
-      "categories": [
-        "Social"
-      ],
-      "alert_title": "不動産価格と住宅危機の深刻化",
-      "description": "ニューヨークなどで「アフォーダビリティ（手頃さ）」が開発問題の中心になり、不動産市場が庶民生活から遊離している。都市部での住宅危機は移民政策、所得格差、地方衰退と連動し、社会的分断と政治的不安定化の源泉となる可能性がある。",
-      "alert_title_en": "Housing Affordability Crisis Deepens in Major Cities",
-      "description_en": "Housing affordability emerges as core urban policy challenge in major cities like New York, reflecting real estate market divergence from ordinary incomes. This interconnects with inequality, migration policy, and regional decline risks, fueling social division."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "vance",
-      "mentions": 44,
-      "ratio": 22278.7,
-      "historical_avg": 0.0,
-      "categories": [
-        "Environmental",
-        "Legal",
-        "Economic",
         "Political"
-      ],
-      "alert_title": "FCC規制権限の法的争点化",
-      "description": "FCC Chair Carrの放送局への威嚇的施策が違憲問題として議論されており、通信規制の法的限界が争点化している。言論規制と通信事業者の権利のバランスが再定義される段階であり、デジタルメディア時代の規制枠組みが根本的に変わる可能性がある。",
-      "alert_title_en": "FCC Chair's Regulatory Authority Faces Legal Challenges",
-      "description_en": "FCC Chair Carr's threats to broadcasters spark constitutional questions about regulatory limits on communication firms. This signals potential redefinition of speech rights and telecom regulation frameworks in the digital age."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "biggest",
-      "mentions": 43,
-      "ratio": 21772.3,
-      "historical_avg": 0.0,
-      "categories": [
-        "Environmental",
-        "Economic",
-        "Social",
-        "Political",
-        "Technological"
-      ],
-      "alert_title": "NATO同盟危機の顕在化",
-      "description": "トランプのNATO離脱警告が報道される中、英国・欧州がEU独立防衛を急速に模索している。米国の同盟公約の信頼性低下が、欧州の軍事独立化と防衛支出の急増をもたらす。NATO解体リスクと欧州防衛産業の急速な再編成が予想される。",
-      "alert_title_en": "NATO Alliance Faces Existential Credibility Crisis",
-      "description_en": "Trump's NATO withdrawal warnings prompt accelerating European defense independence initiatives and trans-Atlantic trust erosion. This signals potential NATO restructuring, surging European defense spending, and fundamental realignment of Western security architecture."
+      ]
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "itmedia mobile",
-      "mentions": 41,
+      "mentions": 43,
       "categories": [
         "Environmental",
         "Legal",
@@ -416,7 +408,7 @@
       "type": "EMERGENCE",
       "level": "high",
       "topic": "hungary election",
-      "mentions": 41,
+      "mentions": 42,
       "categories": [
         "Political"
       ]
@@ -425,8 +417,8 @@
       "type": "SURGE",
       "level": "high",
       "topic": "traders",
-      "mentions": 38,
-      "ratio": 19240.7,
+      "mentions": 42,
+      "ratio": 21266.0,
       "historical_avg": 0.0,
       "categories": [
         "Economic",
@@ -436,9 +428,25 @@
     {
       "type": "SURGE",
       "level": "high",
+      "topic": "chair",
+      "mentions": 39,
+      "ratio": 19747.0,
+      "historical_avg": 0.0,
+      "categories": [
+        "Environmental",
+        "Legal",
+        "Economic",
+        "Social",
+        "Political",
+        "Technological"
+      ]
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
       "topic": "afford",
-      "mentions": 37,
-      "ratio": 18734.3,
+      "mentions": 39,
+      "ratio": 19747.0,
       "historical_avg": 0.0,
       "categories": [
         "Economic",
@@ -450,7 +458,7 @@
       "type": "EMERGENCE",
       "level": "high",
       "topic": "cindy cohn",
-      "mentions": 34,
+      "mentions": 36,
       "categories": [
         "Legal"
       ]
@@ -459,24 +467,8 @@
       "type": "EMERGENCE",
       "level": "high",
       "topic": "sam altman",
-      "mentions": 34,
+      "mentions": 35,
       "categories": [
-        "Legal",
-        "Economic",
-        "Social",
-        "Political",
-        "Technological"
-      ]
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "chair",
-      "mentions": 34,
-      "ratio": 17215.3,
-      "historical_avg": 0.0,
-      "categories": [
-        "Environmental",
         "Legal",
         "Economic",
         "Social",
