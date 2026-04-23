@@ -118,9 +118,21 @@ JSONのみ返してください。説明は不要です。"""
 # ===== 2. CLA Analysis =====
 
 def cla_analysis(news: dict) -> dict:
-    """Perform Causal Layered Analysis on each PESTLE category."""
+    """Perform Causal Layered Analysis on each PESTLE category.
+    Enhanced with deep layer context: Ngram trends, social indicators,
+    supernode signals, and Thompson Motif-Index hints.
+    """
     print("\n=== 2. CLA分析（因果階層分析） ===")
     cla_results = {}
+
+    # Load deep layer context if available
+    deep_context = {}
+    try:
+        from prepare_cla_context import prepare_all
+        deep_context = prepare_all()
+        print("  [INFO] Deep layer context loaded (Ngram, indicators, supernodes, myths)")
+    except Exception as e:
+        print(f"  [INFO] Deep layer context unavailable: {e}")
 
     for cat, info in news["pestle"].items():
         print(f"  {info['label_ja']} ({cat})...")
@@ -130,24 +142,60 @@ def cla_analysis(news: dict) -> dict:
             f"- {a['title']}" for a in info["articles"][:20]
         )
 
+        # Build enhanced context sections
+        ctx = deep_context.get(cat, {})
+        extra_sections = ""
+
+        # Ngram trends
+        ngram = ctx.get('ngram_trends', {})
+        if ngram:
+            ngram_lines = [f"  {k}: {v['5yr_change']:+.1f}%" for k, v in ngram.items()]
+            extra_sections += f"\n\n## 概念トレンド（Google Books Ngram, 1950-2022）\n" + "\n".join(ngram_lines)
+
+        # Social indicators
+        indicators = ctx.get('social_indicators', {})
+        if indicators:
+            ind_lines = [f"  {v['name']}: {v['latest']}" for v in indicators.values()]
+            extra_sections += f"\n\n## 社会指標（World Bank最新値）\n" + "\n".join(ind_lines)
+
+        # Supernode signals
+        supernode = ctx.get('supernode_context', '')
+        if supernode:
+            extra_sections += f"\n\n## スーパーノード（カスケード・ハブシグナル）\n  {supernode}"
+
+        # Recent signals
+        signals = ctx.get('recent_signals', [])
+        if signals:
+            extra_sections += f"\n\n## 関連する弱いシグナル\n" + "\n".join(f"  - {s}" for s in signals[:3])
+
+        # Thompson motif hint
+        myth_hint = ctx.get('thompson_motif_hint', '')
+        if myth_hint:
+            extra_sections += f"\n\n## 神話層ヒント（Thompson Motif-Index）\n  {myth_hint}"
+
         response = client.messages.create(
             model=MODEL,
             max_tokens=2000,
             messages=[{
                 "role": "user",
-                "content": f"""あなたは未来学の専門家です。以下は本日の{info['label_ja']}（{cat}）分野の主要ニュース見出しです。
+                "content": f"""あなたは未来学の専門家であり、因果階層分析（CLA）の実践者です（Inayatullah 1998, 2024）。
 
+以下は本日の{info['label_ja']}（{cat}）分野の分析コンテキストです。
+
+## ニュース見出し（リタニー層の材料）
 {headlines}
+{extra_sections}
 
-これらのニュースを素材として、因果階層分析（Causal Layered Analysis: CLA）を実施してください。
+これらの情報を統合して、因果階層分析（CLA）を実施してください。
+特に世界観・神話層では、Ngramトレンドや社会指標を引用して裏付けてください。
 
 以下のJSON形式で返してください:
 {{
   "litany": "リタニー（表層）: 今日のニュースから見える表層的な事実・トレンドの要約（2-3文）",
   "systemic_causes": "社会的・システム的原因: これらの事象を生み出している構造的要因（2-3文）",
-  "worldview": "世界観・ディスコース: これらを支える無意識の前提やイデオロギー（2-3文）",
-  "myth_metaphor": "神話・メタファー: 最深層にある文化的な物語や象徴（1-2文）",
-  "key_tension": "この分野で見られる核心的な緊張・矛盾（1文）",
+  "worldview": "世界観・ディスコース: これらを支える無意識の前提やイデオロギー。可能な限りNgramトレンドを引用（2-3文）",
+  "myth_metaphor": "神話・メタファー: 最深層にある文化的な物語や象徴。Thompson Motif-Indexの対応カテゴリがあれば言及（1-2文）",
+  "key_tension": "この分野で見られる核心的な緊張・矛盾。スーパーノードシグナルとの関連があれば言及（1文）",
   "emerging_narrative": "浮上しつつある新しいナラティブ（1文）"
 }}
 
