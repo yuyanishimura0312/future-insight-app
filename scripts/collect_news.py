@@ -451,6 +451,9 @@ def select_top_articles(articles: list[dict], per_category: int = TARGET_PER_CAT
     # Focus bonus: if source's primary focus matches category
     FOCUS_BOOST = FOCUS_BOOST_CONFIG if FOCUS_BOOST_CONFIG else 0.3
 
+    # Region balance: boost Japanese articles to achieve domestic/overseas parity
+    JAPAN_BOOST = REGION_BALANCE_BOOST_CONFIG if REGION_BALANCE_BOOST_CONFIG else 1.0
+
     for article in articles:
         base_scores = classify_pestle(article["title"], article["summary"])
         tier = article.get("tier", 1)
@@ -461,6 +464,10 @@ def select_top_articles(articles: list[dict], per_category: int = TARGET_PER_CAT
             base_scores[cat] *= boost
             if focus == cat:
                 base_scores[cat] += FOCUS_BOOST
+        # Apply region balance boost for Japanese articles
+        if article.get("lang") == "ja" and JAPAN_BOOST > 1.0:
+            for cat in base_scores:
+                base_scores[cat] *= JAPAN_BOOST
         article["scores"] = base_scores
 
     # Select top articles per category, allowing shared articles across categories
@@ -532,7 +539,7 @@ def load_feed_config():
 
         # Override feeds (only enabled feeds)
         if "feeds" in config:
-            RSS_FEEDS = [feed for feed in config["feeds"] if feed.get("enabled", True)]
+            RSS_FEEDS = [feed for feed in config["feeds"] if feed.get("enabled", True) and "url" in feed]
             print(f"  [INFO] {len(RSS_FEEDS)} enabled feeds loaded ({len(config['feeds'])} total)")
 
         # Override PESTLE keywords and GDELT queries
@@ -543,6 +550,8 @@ def load_feed_config():
                         PESTLE[cat_key]["keywords"] = cat_data["keywords"]
                     if "gdelt_query" in cat_data:
                         PESTLE[cat_key]["gdelt_query"] = cat_data["gdelt_query"]
+                    if "gdelt_query_ja" in cat_data:
+                        PESTLE[cat_key]["gdelt_query_ja"] = cat_data["gdelt_query_ja"]
 
         # Override scoring parameters
         if "tier_boost" in config:
@@ -555,6 +564,10 @@ def load_feed_config():
         if "gdelt_max_per_category" in config:
             global GDELT_MAX_PER_CATEGORY
             GDELT_MAX_PER_CATEGORY = config["gdelt_max_per_category"]
+        if "region_balance_boost" in config:
+            global REGION_BALANCE_BOOST_CONFIG
+            REGION_BALANCE_BOOST_CONFIG = config["region_balance_boost"]
+            print(f"  [INFO] Region balance boost for JA articles: {REGION_BALANCE_BOOST_CONFIG}x")
 
     except Exception as e:
         print(f"  [WARN] Failed to load feed_config.json: {e}, using defaults")
@@ -562,6 +575,7 @@ def load_feed_config():
 
 # Global config overrides (set by load_feed_config)
 TIER_BOOST_CONFIG = None
+REGION_BALANCE_BOOST_CONFIG = None
 FOCUS_BOOST_CONFIG = None
 GDELT_MAX_PER_CATEGORY = 80
 
@@ -595,6 +609,12 @@ def main():
         fetched = fetch_gdelt_articles(cat, query, max_articles=GDELT_MAX_PER_CATEGORY)
         gdelt_articles.extend(fetched)
         print(f"   {info['label_ja']} ({cat}): +{len(fetched)} from GDELT")
+        # Japanese GDELT supplementation for domestic/overseas parity
+        query_ja = info.get("gdelt_query_ja", "")
+        if query_ja:
+            fetched_ja = fetch_gdelt_articles(cat, query_ja, max_articles=GDELT_MAX_PER_CATEGORY)
+            gdelt_articles.extend(fetched_ja)
+            print(f"   {info['label_ja']} ({cat}): +{len(fetched_ja)} from GDELT (JA)")
 
     # 3. Merge and deduplicate
     all_articles = rss_articles + gdelt_articles

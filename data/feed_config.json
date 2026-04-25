@@ -7,6 +7,7 @@
   },
   "focus_boost": 0.3,
   "gdelt_max_per_category": 80,
+  "region_balance_boost": 2.0,
   "feeds": [
     {
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
@@ -499,14 +500,14 @@
       "enabled": true
     },
     {
-      "url": "https://www.nikkei.com/rss/",
+      "url": "https://news.google.com/rss/search?q=site:nikkei.com+when:24h&hl=ja&gl=JP&ceid=JP:ja",
       "name": "日経",
       "lang": "ja",
       "tier": 1,
       "focus": "Economic",
       "region": "japan",
-      "enabled": false,
-      "note": "RSS feed discontinued (404)"
+      "enabled": true,
+      "_note": "Direct RSS discontinued; proxied via Google News"
     },
     {
       "url": "https://mainichi.jp/rss/etc/mainichi-flash.rss",
@@ -527,14 +528,14 @@
       "enabled": true
     },
     {
-      "url": "https://www.yomiuri.co.jp/feed/",
+      "url": "https://news.google.com/rss/search?q=site:yomiuri.co.jp+when:24h&hl=ja&gl=JP&ceid=JP:ja",
       "name": "読売新聞",
       "lang": "ja",
       "tier": 1,
       "focus": "Social",
       "region": "japan",
-      "enabled": false,
-      "note": "RSS feed discontinued (404)"
+      "enabled": true,
+      "_note": "Direct RSS discontinued; proxied via Google News"
     },
     {
       "url": "https://rss.itmedia.co.jp/rss/2.0/itmedia_all.xml",
@@ -546,14 +547,14 @@
       "enabled": true
     },
     {
-      "url": "https://jp.techcrunch.com/feed/",
-      "name": "TechCrunch Japan",
+      "url": "https://www.watch.impress.co.jp/data/rss/1.0/wt/feed.rdf",
+      "name": "Impress Watch",
       "lang": "ja",
       "tier": 1,
       "focus": "Technological",
       "region": "japan",
-      "enabled": false,
-      "_note": "TechCrunch Japan closed May 2022; covered by global TechCrunch feed"
+      "enabled": true,
+      "_note": "Replaces TechCrunch Japan (closed May 2022)"
     },
     {
       "url": "https://business.nikkei.com/rss/sns/nb.rdf",
@@ -1053,13 +1054,14 @@
       "enabled": true
     },
     {
-      "url": "https://www.cger.nies.go.jp/cgernews/rss/index.xml",
-      "name": "国環研 地球環境研究センター",
+      "url": "https://www.nies.go.jp/whatsnew/rss.xml",
+      "name": "国環研",
       "lang": "ja",
       "tier": 1,
       "focus": "Environmental",
       "region": "japan",
-      "enabled": true
+      "enabled": true,
+      "_note": "CGER RSS discontinued; using NIES main feed"
     },
     {
       "url": "https://www.rieti.go.jp/jp/rss/index.rdf",
@@ -1134,6 +1136,1680 @@
       "focus": "Technological",
       "region": "global",
       "enabled": true
+    },
+
+    {"_comment": "=== Phase B: 国内メディア拡充 (2026-04-24) ==="},
+
+    {"_comment": "--- B-1: 新聞・通信社 ---"},
+    {
+      "url": "https://news.google.com/rss/search?q=site:sankei.com+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "name": "産経新聞",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Political",
+      "region": "japan",
+      "enabled": true,
+      "_note": "Conservative perspective; proxied via Google News"
+    },
+    {
+      "url": "https://nordot.app/rss/all.xml",
+      "name": "共同通信",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Political",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://www.tokyo-np.co.jp/n/rss",
+      "name": "東京新聞",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Social",
+      "region": "japan",
+      "enabled": true
+    },
+
+    {"_comment": "--- B-2: ビジネス・経済 ---"},
+    {
+      "url": "https://www.zaikei.co.jp/rss/main.xml",
+      "name": "財経新聞",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Economic",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://diamond.jp/list/feed/rss",
+      "name": "ダイヤモンド・オンライン",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Economic",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:dir.co.jp+when:30d&hl=ja&gl=JP&ceid=JP:ja",
+      "name": "大和総研",
+      "lang": "ja",
+      "tier": 2,
+      "focus": "Economic",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://thinktank.php.co.jp/feed/",
+      "name": "PHP総研",
+      "lang": "ja",
+      "tier": 2,
+      "focus": "Political",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:murc.jp+when:30d&hl=ja&gl=JP&ceid=JP:ja",
+      "name": "三菱UFJリサーチ",
+      "lang": "ja",
+      "tier": 2,
+      "focus": "Economic",
+      "region": "japan",
+      "enabled": true
+    },
+
+    {"_comment": "--- B-3: テクノロジー ---"},
+    {
+      "url": "https://pc.watch.impress.co.jp/data/rss/1.0/pcw/feed.rdf",
+      "name": "PC Watch",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://feeds.japan.zdnet.com/rss/zdnet/all.rdf",
+      "name": "ZDNet Japan",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "name": "ITmedia AI+",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://news.mynavi.jp/rss/index",
+      "name": "マイナビニュース",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://gihyo.jp/feed/atom",
+      "name": "gihyo.jp",
+      "lang": "ja",
+      "tier": 2,
+      "focus": "Technological",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://internet.watch.impress.co.jp/data/rss/1.0/iw/feed.rdf",
+      "name": "INTERNET Watch",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Legal",
+      "region": "japan",
+      "enabled": true,
+      "_note": "Internet policy and legal coverage"
+    },
+
+    {"_comment": "--- B-4: 法律・規制 ---"},
+    {
+      "url": "https://www.moj.go.jp/news.rss",
+      "name": "法務省",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Legal",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:jftc.go.jp+when:30d&hl=ja&gl=JP&ceid=JP:ja",
+      "name": "公正取引委員会",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Legal",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://www.ppc.go.jp/rss/news.xml",
+      "name": "個人情報保護委員会",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Legal",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://www.jpo.go.jp/news/rss/index.xml",
+      "name": "特許庁",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Legal",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=法改正+OR+規制改革+OR+パブリックコメント+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "name": "法規制ニュース",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Legal",
+      "region": "japan",
+      "enabled": true,
+      "_note": "Aggregated legal/regulatory news via Google News"
+    },
+
+    {"_comment": "--- B-5: 環境・科学 ---"},
+    {
+      "url": "https://www.env.go.jp/press/rss.xml",
+      "name": "環境省",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Environmental",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://www.sustainablebrands.jp/feed/",
+      "name": "サステナブル・ブランド",
+      "lang": "ja",
+      "tier": 2,
+      "focus": "Environmental",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://www.renewable-ei.org/feed/",
+      "name": "自然エネルギー財団",
+      "lang": "ja",
+      "tier": 2,
+      "focus": "Environmental",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=気候変動+OR+脱炭素+OR+再生可能エネルギー+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "name": "気候変動ニュース",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Environmental",
+      "region": "japan",
+      "enabled": true,
+      "_note": "Aggregated climate news via Google News"
+    },
+
+    {"_comment": "--- B-6: 社会・文化 ---"},
+    {
+      "url": "https://ideasforgood.jp/feed/",
+      "name": "IDEAS FOR GOOD",
+      "lang": "ja",
+      "tier": 2,
+      "focus": "Social",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://turns.jp/feed",
+      "name": "TURNS",
+      "lang": "ja",
+      "tier": 2,
+      "focus": "Social",
+      "region": "japan",
+      "enabled": true,
+      "_note": "Rural migration and population signals"
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=教育+OR+少子化+OR+子育て+site:nikkei.com+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "name": "日経教育・少子化",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Social",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://www.bunka.go.jp/rss/index.xml",
+      "name": "文化庁",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Social",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://www.jica.go.jp/rss/press.xml",
+      "name": "JICA",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Social",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=介護+OR+福祉+OR+高齢者+OR+ヤングケアラー+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "name": "福祉・介護ニュース",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Social",
+      "region": "japan",
+      "enabled": true,
+      "_note": "Aggregated social welfare news"
+    },
+
+    {"_comment": "--- B-7: シンクタンク・研究機関 ---"},
+    {
+      "url": "https://news.google.com/rss/search?q=site:nri.com+when:30d&hl=ja&gl=JP&ceid=JP:ja",
+      "name": "野村総合研究所",
+      "lang": "ja",
+      "tier": 2,
+      "focus": "Economic",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://www.ifeng.or.jp/feed/",
+      "name": "未来工学研究所",
+      "lang": "ja",
+      "tier": 2,
+      "focus": "Technological",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://www.spf.org/rss/news.rdf",
+      "name": "笹川平和財団",
+      "lang": "ja",
+      "tier": 2,
+      "focus": "Political",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://www.jpf.go.jp/j/about/press/rss.xml",
+      "name": "国際交流基金",
+      "lang": "ja",
+      "tier": 2,
+      "focus": "Social",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://www.stat.go.jp/rss/rss.xml",
+      "name": "総務省統計局",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Social",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://rss.itmedia.co.jp/rss/2.0/ait.xml",
+      "name": "@IT",
+      "lang": "ja",
+      "tier": 2,
+      "focus": "Legal",
+      "region": "japan",
+      "enabled": true,
+      "_note": "IT security and policy coverage"
+    },
+
+    {"_comment": "--- B 追加: カバレッジ強化 ---"},
+    {
+      "url": "https://news.google.com/rss/search?q=site:nikkan.co.jp+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "name": "日刊工業新聞",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "japan",
+      "enabled": true,
+      "_note": "Manufacturing and industrial technology"
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:jetro.go.jp+when:30d&hl=ja&gl=JP&ceid=JP:ja",
+      "name": "JETRO",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Economic",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:mizuho-rt.co.jp+when:30d&hl=ja&gl=JP&ceid=JP:ja",
+      "name": "みずほリサーチ&テクノロジーズ",
+      "lang": "ja",
+      "tier": 2,
+      "focus": "Economic",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:smtri.jp+when:30d&hl=ja&gl=JP&ceid=JP:ja",
+      "name": "三井住友トラスト基礎研究所",
+      "lang": "ja",
+      "tier": 2,
+      "focus": "Economic",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:nli-research.co.jp+when:30d&hl=ja&gl=JP&ceid=JP:ja",
+      "name": "ニッセイ基礎研究所",
+      "lang": "ja",
+      "tier": 2,
+      "focus": "Social",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://eetimes.itmedia.co.jp/rss/2.0/eetimes.xml",
+      "name": "EE Times Japan",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "japan",
+      "enabled": true,
+      "_note": "Semiconductor and electronics coverage"
+    },
+    {
+      "url": "https://www.kobelcosys.co.jp/column/rss/",
+      "name": "Qiita トレンド",
+      "lang": "ja",
+      "tier": 2,
+      "focus": "Technological",
+      "region": "japan",
+      "enabled": true,
+      "_note": "Tech community trends"
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=AI+OR+人工知能+OR+生成AI+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "name": "AIニュース日本",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "japan",
+      "enabled": true,
+      "_note": "Aggregated Japanese AI news"
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=半導体+OR+量子コンピュータ+OR+宇宙開発+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "name": "先端技術ニュース",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "japan",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=地方創生+OR+過疎+OR+移住+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "name": "地方創生ニュース",
+      "lang": "ja",
+      "tier": 1,
+      "focus": "Social",
+      "region": "japan",
+      "enabled": true
+    },
+
+    {"_comment": "=== Phase C: 海外メディア拡充 (2026-04-24) ==="},
+
+    {"_comment": "--- C-1: アフリカ (+12) ---"},
+    {
+      "url": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
+      "name": "AllAfrica",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "africa",
+      "enabled": true
+    },
+    {
+      "url": "https://www.theeastafrican.co.ke/tea/rss",
+      "name": "The East African",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Economic",
+      "region": "africa",
+      "enabled": true
+    },
+    {
+      "url": "https://mg.co.za/rss",
+      "name": "Mail & Guardian",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Social",
+      "region": "africa",
+      "enabled": true
+    },
+    {
+      "url": "https://africanarguments.org/feed/",
+      "name": "African Arguments",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "africa",
+      "enabled": true
+    },
+    {
+      "url": "https://qz.com/africa/feed/",
+      "name": "Quartz Africa",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Economic",
+      "region": "africa",
+      "enabled": true
+    },
+    {
+      "url": "https://africasacountry.com/feed/",
+      "name": "Africa Is a Country",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Social",
+      "region": "africa",
+      "enabled": true
+    },
+    {
+      "url": "https://www.thenewhumanitarian.org/rss",
+      "name": "The New Humanitarian",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Social",
+      "region": "africa",
+      "enabled": true
+    },
+    {
+      "url": "https://www.dailymaverick.co.za/rss.xml",
+      "name": "Daily Maverick",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "africa",
+      "enabled": true
+    },
+    {
+      "url": "https://businessday.ng/feed/",
+      "name": "BusinessDay Nigeria",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Economic",
+      "region": "africa",
+      "enabled": true
+    },
+    {
+      "url": "https://news.mongabay.com/feed/?region=africa",
+      "name": "Mongabay Africa",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Environmental",
+      "region": "africa",
+      "enabled": true
+    },
+    {
+      "url": "https://www.nation.co.ke/rss",
+      "name": "Daily Nation Kenya",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Social",
+      "region": "africa",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:thecontinent.org+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "name": "The Continent",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "africa",
+      "enabled": true
+    },
+
+    {"_comment": "--- C-2: ラテンアメリカ (+10) ---"},
+    {
+      "url": "https://nacla.org/feed/",
+      "name": "NACLA",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Social",
+      "region": "latam",
+      "enabled": true
+    },
+    {
+      "url": "https://batimes.com.ar/feed/",
+      "name": "Buenos Aires Times",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "latam",
+      "enabled": true
+    },
+    {
+      "url": "https://insightcrime.org/feed/",
+      "name": "InSight Crime",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Legal",
+      "region": "latam",
+      "enabled": true
+    },
+    {
+      "url": "https://news.mongabay.com/feed/?region=latin-america",
+      "name": "Mongabay Latin America",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Environmental",
+      "region": "latam",
+      "enabled": true
+    },
+    {
+      "url": "https://www.ipsnews.net/category/latin-america/feed/",
+      "name": "IPS News Latin America",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Social",
+      "region": "latam",
+      "enabled": true
+    },
+    {
+      "url": "https://www.thedialogue.org/feed/",
+      "name": "The Dialogue",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "latam",
+      "enabled": true
+    },
+    {
+      "url": "https://www.celag.org/feed/",
+      "name": "CELAG",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "latam",
+      "enabled": true
+    },
+    {
+      "url": "https://riotimesonline.com/feed/",
+      "name": "Rio Times Online",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Economic",
+      "region": "latam",
+      "enabled": true
+    },
+    {
+      "url": "https://agenciabrasil.ebc.com.br/en/rss/ultimasnoticias/feed.xml",
+      "name": "Agencia Brasil",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Social",
+      "region": "latam",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=latin+america+policy+OR+economy+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Latin America News",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "latam",
+      "enabled": true
+    },
+
+    {"_comment": "--- C-3: 南・東南アジア (+14) ---"},
+    {
+      "url": "https://thewire.in/rss",
+      "name": "The Wire India",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://scroll.in/feed",
+      "name": "Scroll.in",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Social",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://asia.nikkei.com/rss/feed/nar",
+      "name": "Nikkei Asia",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Economic",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://www.rappler.com/feed/",
+      "name": "Rappler",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Social",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://www.bangkokpost.com/rss/data/topstories.xml",
+      "name": "Bangkok Post",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://economictimes.indiatimes.com/rssfeedsdefault.cms",
+      "name": "Economic Times India",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Economic",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://www.orfonline.org/feed/",
+      "name": "ORF India",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://www.iseas.edu.sg/feed/",
+      "name": "ISEAS-Yusof Ishak",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://www.downtoearth.org.in/rss/",
+      "name": "Down To Earth India",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Environmental",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://news.mongabay.com/feed/?region=southeast-asia",
+      "name": "Mongabay Southeast Asia",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Environmental",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://www.frontiermyanmar.net/en/rss.xml",
+      "name": "Frontier Myanmar",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://www.straitstimes.com/news/world/rss.xml",
+      "name": "Straits Times",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://koreajoongangdaily.joins.com/rss/content",
+      "name": "Korea JoongAng Daily",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Economic",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://www.thehindu.com/news/international/?service=rss",
+      "name": "The Hindu",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "asia",
+      "enabled": true
+    },
+
+    {"_comment": "--- C-4: 中東 (+8) ---"},
+    {
+      "url": "https://www.middleeasteye.net/rss",
+      "name": "Middle East Eye",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "mena",
+      "enabled": true
+    },
+    {
+      "url": "https://www.arabnews.com/rss.xml",
+      "name": "Arab News",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "mena",
+      "enabled": true
+    },
+    {
+      "url": "https://www.al-monitor.com/rss",
+      "name": "Al-Monitor",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "mena",
+      "enabled": true
+    },
+    {
+      "url": "https://www.mei.edu/rss.xml",
+      "name": "Middle East Institute",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "mena",
+      "enabled": true
+    },
+    {
+      "url": "https://www.jpost.com/rss/rssfeedsworld.aspx",
+      "name": "Jerusalem Post",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "mena",
+      "enabled": true
+    },
+    {
+      "url": "https://www.hurriyetdailynews.com/rss",
+      "name": "Hurriyet Daily News",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "mena",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:carnegie-mec.org+when:30d&hl=en-US&gl=US&ceid=US:en",
+      "name": "Carnegie Middle East",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "mena",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:chathamhouse.org+middle+east+when:30d&hl=en-US&gl=US&ceid=US:en",
+      "name": "Chatham House MENA",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "mena",
+      "enabled": true
+    },
+
+    {"_comment": "--- C-5: 法律・規制専門 (+12) ---"},
+    {
+      "url": "https://iapp.org/news/rss/",
+      "name": "IAPP Privacy",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Legal",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://techpolicy.press/feed/",
+      "name": "Tech Policy Press",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Legal",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.regulationasia.com/feed/",
+      "name": "Regulation Asia",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Legal",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://www.accessnow.org/feed/",
+      "name": "Access Now",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Legal",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.brennancenter.org/rss.xml",
+      "name": "Brennan Center",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Legal",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.privacyinternational.org/rss.xml",
+      "name": "Privacy International",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Legal",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://noyb.eu/en/rss.xml",
+      "name": "noyb.eu",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Legal",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:law360.com+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Law360",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Legal",
+      "region": "global",
+      "enabled": true,
+      "_note": "Proxied via Google News"
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=AI+regulation+OR+AI+governance+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "AI Regulation News",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Legal",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=regulatory+compliance+OR+antitrust+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Global Regulatory News",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Legal",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=data+protection+OR+digital+services+act+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Data Protection News",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Legal",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:europarl.europa.eu+regulation+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "name": "EU Regulation Watch",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Legal",
+      "region": "global",
+      "enabled": true
+    },
+
+    {"_comment": "--- C-6: 経済・代替経済 (+8) ---"},
+    {
+      "url": "https://neweconomics.org/feed",
+      "name": "New Economics Foundation",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Economic",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://weall.org/feed",
+      "name": "WEAll",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Economic",
+      "region": "global",
+      "enabled": true,
+      "_note": "Wellbeing Economy Alliance"
+    },
+    {
+      "url": "https://phenomenalworld.org/feed/",
+      "name": "Phenomenal World",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Economic",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://cepr.org/rss/vox-content",
+      "name": "VoxEU / CEPR",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Economic",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.bruegel.org/rss.xml",
+      "name": "Bruegel",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Economic",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.imf.org/en/blogs/rss",
+      "name": "IMF Blog",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Economic",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://blogs.worldbank.org/feed",
+      "name": "World Bank Blogs",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Economic",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.oecd-ilibrary.org/rss/recent",
+      "name": "OECD iLibrary",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Economic",
+      "region": "global",
+      "enabled": true
+    },
+
+    {"_comment": "--- C-7: 環境 (+8) ---"},
+    {
+      "url": "https://futureearth.org/feed/",
+      "name": "Future Earth",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Environmental",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.resilience.org/?feed=rss2",
+      "name": "Resilience.org",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Environmental",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.climatechangenews.com/feed/",
+      "name": "Climate Home News",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Environmental",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://insideclimatenews.org/feed/",
+      "name": "Inside Climate News",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Environmental",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.ehn.org/feed/",
+      "name": "Environmental Health News",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Environmental",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://theenergymix.com/feed/",
+      "name": "The Energy Mix",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Environmental",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://ensia.com/feed/",
+      "name": "Ensia",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Environmental",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://thebreakthrough.org/feed/",
+      "name": "Breakthrough Institute",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Environmental",
+      "region": "global",
+      "enabled": true
+    },
+
+    {"_comment": "--- C-8: シンクタンク・知識 (+18) ---"},
+    {
+      "url": "https://www.rand.org/pubs/commentary.xml",
+      "name": "RAND Commentary",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.rand.org/pubs/research_reports.xml",
+      "name": "RAND Research",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.atlanticcouncil.org/feed/",
+      "name": "Atlantic Council",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:brookings.edu+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "name": "Brookings",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:carnegieendowment.org+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "name": "Carnegie Endowment",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:chathamhouse.org+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "name": "Chatham House",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.santafe.edu/news-center/feed/",
+      "name": "Santa Fe Institute",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Social",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://issues.org/feed/",
+      "name": "Issues in Science & Technology",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Technological",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.pewresearch.org/feed/",
+      "name": "Pew Research Center",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Social",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://items.ssrc.org/feed/",
+      "name": "SSRC Items",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Social",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://publicbooks.org/feed/",
+      "name": "Public Books",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Social",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://foreignpolicy.com/feed/",
+      "name": "Foreign Policy",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.technologyreview.com/feed/",
+      "name": "MIT Technology Review",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://theconversation.com/us/articles.atom",
+      "name": "The Conversation US",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Social",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://theconversation.com/uk/articles.atom",
+      "name": "The Conversation UK",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Social",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://theconversation.com/ca/articles.atom",
+      "name": "The Conversation Canada",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Social",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.newstatesman.com/feed/",
+      "name": "New Statesman",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://worldpoliticsreview.com/feed/",
+      "name": "World Politics Review",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "global",
+      "enabled": true
+    },
+
+    {"_comment": "--- C-9: 非西洋英語メディア (+10) ---"},
+    {
+      "url": "https://www.xinhuanet.com/english/rss/world_rss.xml",
+      "name": "Xinhua English",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://rss.dw.com/rdf/rss-en-all",
+      "name": "Deutsche Welle",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.france24.com/en/rss",
+      "name": "France 24",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:cgtn.com+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "CGTN",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:dawn.com+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Dawn Pakistan",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:japantimes.co.jp+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Japan Times",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "asia",
+      "enabled": true,
+      "_note": "English-language Japan coverage for international perspective"
+    },
+    {
+      "url": "https://www.channelnewsasia.com/rss/latest",
+      "name": "Channel NewsAsia",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Economic",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://www.aljazeera.com/xml/rss/all.xml",
+      "name": "Al Jazeera EN",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "mena",
+      "enabled": false,
+      "_note": "Duplicate: Al Jazeera already in global sources"
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:trtworld.com+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "TRT World",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "mena",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:bernama.com+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Bernama Malaysia",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Economic",
+      "region": "asia",
+      "enabled": true
+    },
+
+    {"_comment": "--- C-10: Tier 3 パラダイム転換系 (+7) ---"},
+    {
+      "url": "https://intercontinentalcry.org/feed/",
+      "name": "Intercontinental Cry",
+      "lang": "en",
+      "tier": 3,
+      "focus": "Social",
+      "region": "global",
+      "enabled": true,
+      "_note": "Indigenous rights and perspectives"
+    },
+    {
+      "url": "https://www.thenewatlantis.com/rss",
+      "name": "The New Atlantis",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Technological",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.shareable.net/feed/",
+      "name": "Shareable",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Social",
+      "region": "global",
+      "enabled": true,
+      "_note": "Commons and sharing economy"
+    },
+    {
+      "url": "https://thenewinquiry.com/feed/",
+      "name": "The New Inquiry",
+      "lang": "en",
+      "tier": 3,
+      "focus": "Social",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://dissentmagazine.org/feed/",
+      "name": "Dissent Magazine",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Social",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://longreads.com/feed/",
+      "name": "Longreads",
+      "lang": "en",
+      "tier": 3,
+      "focus": "Social",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.opendemocracy.net/en/rss/",
+      "name": "openDemocracy",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "global",
+      "enabled": true
+    },
+
+    {"_comment": "--- C 追加: 地域多様性補完 ---"},
+    {
+      "url": "https://news.google.com/rss/search?q=site:theguardian.com+africa+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Guardian Africa",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "africa",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:reuters.com+asia+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Reuters Asia",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Economic",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:bbc.com+asia+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "BBC Asia",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=circular+economy+OR+degrowth+OR+regenerative+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Circular Economy News",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Environmental",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=global+south+development+OR+brics+economy+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Global South Watch",
+      "lang": "en",
+      "tier": 2,
+      "focus": "Political",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=migration+OR+refugee+OR+displacement+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Migration Watch",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Social",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=cybersecurity+OR+ransomware+OR+data+breach+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Cybersecurity News",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=nuclear+fusion+OR+space+exploration+OR+quantum+computing+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Frontier Tech Watch",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=startup+ecosystem+OR+venture+capital+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Startup Ecosystem News",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Economic",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=WHO+OR+pandemic+preparedness+OR+global+health+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Global Health Watch",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Social",
+      "region": "global",
+      "enabled": true
+    },
+
+    {"_comment": "--- C 追加: テクノロジー・地域補完 (+17) ---"},
+    {
+      "url": "https://spectrum.ieee.org/feeds/feed.rss",
+      "name": "IEEE Spectrum",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://venturebeat.com/feed/",
+      "name": "VentureBeat",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
+      "name": "MIT Tech Review AI",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://feeds.arstechnica.com/arstechnica/technology-lab",
+      "name": "Ars Technica",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.theverge.com/rss/index.xml",
+      "name": "The Verge",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://www.zdnet.com/news/rss.xml",
+      "name": "ZDNet",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:restofworld.org+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "name": "Rest of World",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "global",
+      "enabled": true,
+      "_note": "Tech in emerging markets"
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:devex.com+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "name": "Devex",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Social",
+      "region": "global",
+      "enabled": true,
+      "_note": "Global development news"
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:africanews.com+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Africanews",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "africa",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:punchng.com+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Punch Nigeria",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Social",
+      "region": "africa",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:livemint.com+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Mint India",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Economic",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:inquirer.net+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Philippine Daily Inquirer",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "asia",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:voanews.com+africa+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "VOA Africa",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "africa",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=ESG+OR+impact+investing+OR+sustainable+finance+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "ESG & Impact Finance",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Economic",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=food+security+OR+agriculture+technology+OR+food+systems+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "Food Systems Watch",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Environmental",
+      "region": "global",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:elpais.com+english+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "name": "El Pais English",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Political",
+      "region": "latam",
+      "enabled": true
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=site:allafrica.com+technology+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "name": "AllAfrica Tech",
+      "lang": "en",
+      "tier": 1,
+      "focus": "Technological",
+      "region": "africa",
+      "enabled": true
     }
   ],
   "pestle_categories": {
@@ -1198,9 +2874,19 @@
         "統治",
         "多極化",
         "デカップリング",
-        "経済安全保障"
+        "経済安全保障",
+        "地方自治",
+        "選挙制度",
+        "地方創生",
+        "国連",
+        "G7",
+        "ASEAN",
+        "外交安全保障",
+        "主権",
+        "覇権"
       ],
-      "gdelt_query": "politics OR election OR government OR diplomacy OR geopolitics OR decoupling"
+      "gdelt_query": "politics OR election OR government OR diplomacy OR geopolitics OR decoupling",
+      "gdelt_query_ja": "政治 OR 選挙 OR 外交 OR 安全保障 OR 防衛 OR 国会 sourcelang:japanese"
     },
     "Economic": {
       "label_ja": "経済",
@@ -1265,9 +2951,19 @@
         "脱成長",
         "ウェルビーイング経済",
         "GX",
-        "産業構造"
+        "産業構造",
+        "デフレ",
+        "賃金",
+        "財政",
+        "産業政策",
+        "サプライチェーン",
+        "補助金",
+        "ベンチャー",
+        "物価",
+        "不動産"
       ],
-      "gdelt_query": "economy OR inflation OR market OR trade OR investment OR GDP OR industrial policy"
+      "gdelt_query": "economy OR inflation OR market OR trade OR investment OR GDP OR industrial policy",
+      "gdelt_query_ja": "経済 OR 景気 OR 株価 OR 為替 OR 金利 OR 日銀 sourcelang:japanese"
     },
     "Social": {
       "label_ja": "社会",
@@ -1325,9 +3021,20 @@
         "将来世代",
         "世代間",
         "価値観変容",
-        "Society 5.0"
+        "Society 5.0",
+        "出生率",
+        "地域包括ケア",
+        "不登校",
+        "ヤングケアラー",
+        "共生社会",
+        "NPO",
+        "ボランティア",
+        "過疎化",
+        "孤立",
+        "ウェルビーイング"
       ],
-      "gdelt_query": "society OR education OR health OR migration OR inequality OR demographic change"
+      "gdelt_query": "society OR education OR health OR migration OR inequality OR demographic change",
+      "gdelt_query_ja": "教育 OR 少子化 OR 高齢化 OR 介護 OR 福祉 OR 医療 sourcelang:japanese"
     },
     "Technological": {
       "label_ja": "技術",
@@ -1388,9 +3095,24 @@
         "AIガバナンス",
         "AI規制",
         "フォーサイト",
-        "総合知"
+        "総合知",
+        "量子コンピュータ",
+        "LLM",
+        "大規模言語モデル",
+        "IoT",
+        "メタバース",
+        "サイバーセキュリティ",
+        "核融合",
+        "合成生物学",
+        "ニューロモルフィック",
+        "エッジAI",
+        "デジタルツイン",
+        "スパコン",
+        "5G",
+        "6G"
       ],
-      "gdelt_query": "artificial intelligence OR technology OR semiconductor OR quantum OR AI governance"
+      "gdelt_query": "artificial intelligence OR technology OR semiconductor OR quantum OR AI governance",
+      "gdelt_query_ja": "AI OR 人工知能 OR 半導体 OR 量子 OR ロボット OR 宇宙 sourcelang:japanese"
     },
     "Legal": {
       "label_ja": "法律",
@@ -1441,9 +3163,18 @@
         "条例",
         "法改正",
         "AI規制法",
-        "デジタル規制"
+        "デジタル規制",
+        "データ保護",
+        "労働法",
+        "公正取引",
+        "パブリックコメント",
+        "情報公開",
+        "サンドボックス",
+        "ガイドライン",
+        "行政処分"
       ],
-      "gdelt_query": "regulation OR law OR court OR privacy OR antitrust OR AI regulation"
+      "gdelt_query": "regulation OR law OR court OR privacy OR antitrust OR AI regulation",
+      "gdelt_query_ja": "法律 OR 規制 OR 法改正 OR 個人情報 OR 裁判 OR 訴訟 sourcelang:japanese"
     },
     "Environmental": {
       "label_ja": "環境",
@@ -1499,10 +3230,22 @@
         "プラネタリーバウンダリー",
         "ティッピングポイント",
         "ポリクライシス",
-        "レジリエンス"
+        "レジリエンス",
+        "カーボンニュートラル",
+        "生物多様性",
+        "里山",
+        "循環型社会",
+        "プラスチック",
+        "フードロス",
+        "ZEB",
+        "ZEH",
+        "風力発電",
+        "水素"
       ],
-      "gdelt_query": "climate OR environment OR renewable energy OR biodiversity OR tipping point OR planetary boundary"
+      "gdelt_query": "climate OR environment OR renewable energy OR biodiversity OR tipping point OR planetary boundary",
+      "gdelt_query_ja": "環境 OR 気候変動 OR 脱炭素 OR 再生可能エネルギー OR 温暖化 OR 生態系 sourcelang:japanese"
     }
   },
-  "updated_at": "2026-04-11T12:00:00Z"
+  "updated_at": "2026-04-24T12:00:00Z",
+  "_changelog": "2026-04-24: Phase A (fix 4 broken JA feeds), Phase B (+46 JA sources to 102), Phase D (region_balance_boost 2.0, GDELT JA queries, JA keyword expansion)"
 }
