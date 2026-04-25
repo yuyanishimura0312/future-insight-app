@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 """
-Generate historical CLA (Causal Layered Analysis) from 1990 to present.
-- 1990-2019: yearly analysis
-- 2020-2026: quarterly analysis
-Uses news articles and academic papers from the DB for each period.
+Generate historical CLA (Causal Layered Analysis) for two time ranges:
+  1. 1990-2020: yearly CLA for each year -> data/cla_historical_yearly.json
+  2. 2021-2026: quarterly CLA (Q1-Q4) -> data/cla_historical_quarterly.json
+
+Each entry contains CLA 4-layer analysis for all 6 PESTLE categories,
+plus a cross-category synthesis.
+
+Uses Claude API (Haiku) for cost-efficient batch generation.
+Leverages existing pestle_history.json and DB articles when available.
 """
 
 import json
@@ -28,12 +33,56 @@ PESTLE_JA = {
     "Political": "政治", "Economic": "経済", "Social": "社会",
     "Technological": "技術", "Legal": "法律", "Environmental": "環境",
 }
-PAPER_FIELDS = ["人文学", "社会科学", "自然科学", "工学", "芸術"]
 
 
-def get_period_data(conn, start_date: str, end_date: str) -> dict:
-    """Get news headlines and paper titles for a date range."""
-    # News by PESTLE category
+def extract_json(text: str) -> dict:
+    """Extract JSON from Claude's response, handling code blocks."""
+    text = text.strip()
+    if "```" in text:
+        parts = text.split("```")
+        for part in parts[1:]:
+            candidate = part.strip()
+            if candidate.startswith("json"):
+                candidate = candidate[4:].strip()
+            try:
+                return json.loads(candidate)
+            except json.JSONDecodeError:
+                continue
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+    # Try finding JSON object boundaries
+    start = text.find("{")
+    end = text.rfind("}")
+    if start != -1 and end > start:
+        try:
+            return json.loads(text[start:end + 1])
+        except json.JSONDecodeError:
+            pass
+    raise json.JSONDecodeError("Could not extract JSON", text, 0)
+
+
+def load_pestle_history() -> dict:
+    """Load pestle_history.json for quarterly article data."""
+    path = DATA_DIR / "pestle_history.json"
+    if path.exists():
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def load_decade_data(decade: str) -> dict:
+    """Load pestle_decades/{decade}.json for historical article data."""
+    path = DATA_DIR / "pestle_decades" / f"{decade}.json"
+    if path.exists():
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def get_db_articles(conn, start_date: str, end_date: str) -> dict:
+    """Get news headlines from DB for a date range, grouped by PESTLE category."""
     news = {}
     for cat in PESTLE_CATS:
         rows = conn.execute("""
@@ -42,68 +91,125 @@ def get_period_data(conn, start_date: str, end_date: str) -> dict:
             ORDER BY relevance_score DESC LIMIT 30
         """, (cat, start_date, end_date)).fetchall()
         news[cat] = [r[0] for r in rows]
-
-    # Papers by field
-    papers = {}
-    for field in PAPER_FIELDS:
-        rows = conn.execute("""
-            SELECT title FROM papers
-            WHERE field = ? AND published_date >= ? AND published_date < ?
-            ORDER BY relevance_score DESC LIMIT 15
-        """, (field, start_date, end_date)).fetchall()
-        papers[field] = [r[0] for r in rows]
-
-    return {"news": news, "papers": papers}
+    return news
 
 
-def generate_cla_for_period(period_label: str, data: dict) -> dict:
-    """Generate CLA analysis for all categories in one API call."""
-    # Build context from news and papers
+def get_period_context(year: int, conn, pestle_history: dict, decade_data: dict) -> str:
+    """Build context string from multiple data sources for a given year."""
     context_parts = []
+
+    # Source 1: DB articles for the year
+    db_news = get_db_articles(conn, f"{year}-01-01", f"{year + 1}-01-01")
+    has_db = any(len(v) > 0 for v in db_news.values())
+
+    if has_db:
+        for cat in PESTLE_CATS:
+            headlines = db_news.get(cat, [])
+            if headlines:
+                context_parts.append(f"[{PESTLE_JA[cat]}({cat})]")
+                for h in headlines[:15]:
+                    context_parts.append(f"  - {h}")
+
+    # Source 2: pestle_history.json (quarterly data)
+    for q in range(1, 5):
+        qkey = f"{year}Q{q}"
+        qdata = pestle_history.get(qkey, {})
+        for cat in PESTLE_CATS:
+            cat_data = qdata.get(cat, {})
+            articles = cat_data.get("articles", [])
+            for a in articles[:5]:
+                title = a.get("title", "")
+                if title and not has_db:
+                    context_parts.append(f"  - [{PESTLE_JA.get(cat, cat)}] {title}")
+
+    # Source 3: decade files
+    decade_key = f"{(year // 10) * 10}s"
+    for qkey, qdata in decade_data.items():
+        # Match keys that start with this year
+        if qkey.startswith(str(year)):
+            for cat in PESTLE_CATS:
+                cat_data = qdata.get(cat, {})
+                articles = cat_data.get("articles", [])
+                for a in articles[:3]:
+                    title = a.get("title", "")
+                    if title:
+                        context_parts.append(f"  - [{PESTLE_JA.get(cat, cat)}] {title}")
+
+    return "\n".join(context_parts)
+
+
+def get_quarterly_context(year: int, quarter: int, conn, pestle_history: dict) -> str:
+    """Build context string for a specific quarter."""
+    context_parts = []
+    month_start = (quarter - 1) * 3 + 1
+    month_end = quarter * 3 + 1
+    end_year = year
+    if month_end > 12:
+        month_end = 1
+        end_year = year + 1
+
+    start_date = f"{year}-{month_start:02d}-01"
+    end_date = f"{end_year}-{month_end:02d}-01"
+
+    # DB articles
+    db_news = get_db_articles(conn, start_date, end_date)
     for cat in PESTLE_CATS:
-        headlines = data["news"].get(cat, [])
+        headlines = db_news.get(cat, [])
         if headlines:
             context_parts.append(f"[{PESTLE_JA[cat]}({cat})]")
             for h in headlines[:20]:
                 context_parts.append(f"  - {h}")
 
-    context_parts.append("\n[学術論文]")
-    for field, titles in data["papers"].items():
-        if titles:
-            context_parts.append(f"  {field}:")
-            for t in titles[:10]:
-                context_parts.append(f"    - {t}")
+    # pestle_history.json
+    qkey = f"{year}Q{quarter}"
+    qdata = pestle_history.get(qkey, {})
+    for cat in PESTLE_CATS:
+        cat_data = qdata.get(cat, {})
+        articles = cat_data.get("articles", [])
+        for a in articles[:10]:
+            title = a.get("title", "")
+            if title:
+                context_parts.append(f"  - [{PESTLE_JA.get(cat, cat)}] {title}")
 
-    context = "\n".join(context_parts)
+    return "\n".join(context_parts)
 
-    if len(context.strip()) < 50:
-        return {}
 
-    prompt = f"""あなたは未来学・社会変動の専門家です。以下は「{period_label}」期間に収集されたPESTLE分野のニュース見出しと学術論文タイトルです。
+def generate_cla(period_label: str, context: str) -> dict | None:
+    """Call Claude API to generate CLA for all 6 PESTLE categories + cross-category synthesis.
+
+    Returns dict with 6 PESTLE category CLAs and cross_category_synthesis,
+    or None on failure.
+    """
+    if len(context.strip()) < 30:
+        return None
+
+    prompt = f"""あなたは未来学・社会変動分析の世界的専門家です。以下は「{period_label}」の期間に関する主要な出来事・ニュース見出しです。
 
 {context}
 
-これらを素材に、PESTLE各分野（Political, Economic, Social, Technological, Legal, Environmental）＋全体（Overall）の計7カテゴリについて因果階層分析（CLA）を実施してください。
+この期間について、PESTLE各分野（Political, Economic, Social, Technological, Legal, Environmental）の因果階層分析（CLA: Causal Layered Analysis）を実施してください。
+
+さらに、6カテゴリを横断する統合分析（cross_category_synthesis）も記述してください。
 
 以下のJSON形式で返してください:
 {{
   "Political": {{
-    "litany": "リタニー（表層的事実・トレンドの要約、2-3文）",
-    "systemic_causes": "社会的・システム的原因（構造的要因、2-3文）",
-    "worldview": "世界観・ディスコース（無意識の前提やイデオロギー、2-3文）",
-    "myth_metaphor": "神話・メタファー（最深層の文化的物語、1-2文）",
-    "key_tension": "核心的な緊張・矛盾（1文）",
-    "emerging_narrative": "浮上しつつある新しいナラティブ（1文）"
+    "litany": "表層の出来事・トレンドの要約（2-3文）",
+    "systemic_causes": "構造的原因・社会システム的要因（2-3文）",
+    "worldview": "支配的な世界観・無意識の前提（2-3文）",
+    "myth_metaphor": "深層の文化的物語・象徴（1-2文）"
   }},
-  "Economic": {{ ... }},
-  "Social": {{ ... }},
-  "Technological": {{ ... }},
-  "Legal": {{ ... }},
-  "Environmental": {{ ... }},
-  "Overall": {{ ... }}
+  "Economic": {{ ... 同構造 ... }},
+  "Social": {{ ... 同構造 ... }},
+  "Technological": {{ ... 同構造 ... }},
+  "Legal": {{ ... 同構造 ... }},
+  "Environmental": {{ ... 同構造 ... }},
+  "cross_category_synthesis": "6カテゴリを横断して見える時代の構造変動、神話の交差、パラダイム転換の兆候を2-3文で統合分析"
 }}
 
-{period_label}の時代背景を踏まえて分析してください。JSONのみ返してください。"""
+{period_label}の時代背景・歴史的文脈を十分に踏まえて分析してください。
+もしニュース見出しが少ない場合でも、その期間の一般的な知識に基づいて分析してください。
+JSONのみ返してください。"""
 
     for attempt in range(3):
         try:
@@ -113,115 +219,223 @@ def generate_cla_for_period(period_label: str, data: dict) -> dict:
                 messages=[{"role": "user", "content": prompt}],
             )
             text = response.content[0].text.strip()
-            if "```" in text:
-                text = text.split("```")[1]
-                if text.startswith("json"):
-                    text = text[4:]
-            return json.loads(text)
-        except json.JSONDecodeError as e:
+            result = extract_json(text)
+
+            # Validate structure
+            if not isinstance(result, dict):
+                raise ValueError("Response is not a dict")
+            return result
+
+        except (json.JSONDecodeError, ValueError) as e:
             if attempt < 2:
-                print(f"retry({attempt+1})...", end=" ", flush=True)
-                time.sleep(1)
+                print(f"retry({attempt + 1})...", end=" ", flush=True)
+                time.sleep(2)
             else:
-                print(f"    [ERROR] {e}")
-                return {}
+                print(f"[ERROR] {e}")
+                return None
         except Exception as e:
-            print(f"    [ERROR] {e}")
-            return {}
+            print(f"[ERROR] {e}")
+            time.sleep(3)
+            if attempt == 2:
+                return None
 
 
-def build_periods() -> list:
-    """Build list of (key, label, start_date, end_date) tuples."""
-    periods = []
-
-    # 1990-2019: yearly
-    for year in range(1990, 2020):
-        periods.append((
-            str(year),
-            f"{year}年",
-            f"{year}-01-01",
-            f"{year + 1}-01-01",
-        ))
-
-    # 2020-2026: quarterly
-    for year in range(2020, 2027):
-        for q in range(1, 5):
-            month_start = (q - 1) * 3 + 1
-            month_end = q * 3 + 1
-            end_year = year
-            if month_end > 12:
-                month_end = 1
-                end_year = year + 1
-            key = f"{year}-{month_start:02d}"
-            label = f"{year}年Q{q}（{month_start}月〜{month_start + 2}月）"
-            start = f"{year}-{month_start:02d}-01"
-            end = f"{end_year}-{month_end:02d}-01"
-            # Don't go past current date
-            if start > "2026-03-31":
-                break
-            periods.append((key, label, start, end))
-
-    return periods
+def save_to_db(conn_db, period: str, categories: dict):
+    """Save CLA results to the cla_analyses table in the DB."""
+    for cat_name, cla_data in categories.items():
+        if cat_name == "cross_category_synthesis":
+            continue
+        if not isinstance(cla_data, dict):
+            continue
+        try:
+            conn_db.execute("""
+                INSERT INTO cla_analyses (topic, litany, systemic_cause, worldview, myth_metaphor, analyzed_at)
+                VALUES (?, ?, ?, ?, ?, ?)
+            """, (
+                f"{period}_{cat_name}",
+                cla_data.get("litany", ""),
+                cla_data.get("systemic_causes", ""),
+                cla_data.get("worldview", ""),
+                cla_data.get("myth_metaphor", ""),
+                datetime.now(timezone.utc).isoformat(),
+            ))
+        except Exception as e:
+            print(f"  [DB WARN] {e}")
+    conn_db.commit()
 
 
-def main():
-    print(f"=== Historical CLA Generation ===\n")
+def generate_yearly(conn, pestle_history: dict) -> list:
+    """Generate yearly CLA for 1990-2020."""
+    print("\n=== Yearly CLA: 1990-2020 ===")
 
-    conn = sqlite3.connect(DB_PATH)
+    output_path = DATA_DIR / "cla_historical_yearly.json"
 
-    # Load existing ai_analysis.json
-    ai_path = DATA_DIR / "ai_analysis.json"
-    with open(ai_path, encoding="utf-8") as f:
-        ai_data = json.load(f)
+    # Load existing results to allow incremental generation
+    existing = []
+    if output_path.exists():
+        with open(output_path, encoding="utf-8") as f:
+            existing = json.load(f)
+    existing_periods = {e["period"] for e in existing}
 
-    existing_qcla = ai_data.get("quarterly_cla", {})
-    print(f"Existing CLA periods: {len(existing_qcla)}")
+    # Load decade data files
+    decade_datasets = {}
+    for decade in ["1980s", "1990s", "2000s", "2010s", "2020s"]:
+        decade_datasets[decade] = load_decade_data(decade)
 
-    periods = build_periods()
-    print(f"Target periods: {len(periods)}")
+    # Open DB connection for saving CLA results
+    conn_db = sqlite3.connect(DB_PATH)
 
-    # Skip periods that already have CLA data
-    to_generate = []
-    for key, label, start, end in periods:
-        if key not in existing_qcla:
-            to_generate.append((key, label, start, end))
+    results = list(existing)  # Start from existing
+    years = list(range(1990, 2021))
+    total = len(years)
 
-    print(f"New periods to generate: {len(to_generate)}\n")
-
-    for i, (key, label, start, end) in enumerate(to_generate):
-        print(f"[{i + 1}/{len(to_generate)}] {label} ({key})...", end=" ", flush=True)
-
-        data = get_period_data(conn, start, end)
-        total_items = sum(len(v) for v in data["news"].values()) + sum(len(v) for v in data["papers"].values())
-
-        if total_items < 5:
-            print(f"skipped (only {total_items} items)")
+    for i, year in enumerate(years):
+        period = str(year)
+        if period in existing_periods:
+            print(f"  [{i + 1}/{total}] {year} ... skipped (exists)")
             continue
 
-        cla = generate_cla_for_period(label, data)
+        print(f"  [{i + 1}/{total}] {year} ...", end=" ", flush=True)
+
+        decade_key = f"{(year // 10) * 10}s"
+        decade_data = decade_datasets.get(decade_key, {})
+        context = get_period_context(year, conn, pestle_history, decade_data)
+
+        cla = generate_cla(f"{year}年", context)
         if cla:
-            existing_qcla[key] = cla
-            print(f"OK ({len(cla)} categories, {total_items} source items)")
+            # Extract cross_category_synthesis
+            synthesis = cla.pop("cross_category_synthesis", "")
+            # Build entry in the required format
+            entry = {
+                "period": period,
+                "type": "yearly",
+                "categories": {},
+                "cross_category_synthesis": synthesis,
+            }
+            for cat in PESTLE_CATS:
+                if cat in cla:
+                    entry["categories"][cat] = cla[cat]
+
+            results.append(entry)
+            save_to_db(conn_db, period, cla)
+            print(f"OK ({len(entry['categories'])} categories)")
         else:
-            print("failed")
+            print("failed/skipped")
 
         time.sleep(0.5)
 
-        # Save periodically
-        if (i + 1) % 10 == 0:
-            ai_data["quarterly_cla"] = dict(sorted(existing_qcla.items()))
-            with open(ai_path, "w", encoding="utf-8") as f:
-                json.dump(ai_data, f, ensure_ascii=False, indent=2)
-            print(f"  [saved {len(existing_qcla)} periods]")
+        # Save periodically every 5 years
+        if (i + 1) % 5 == 0:
+            results.sort(key=lambda x: x["period"])
+            with open(output_path, "w", encoding="utf-8") as f:
+                json.dump(results, f, ensure_ascii=False, indent=2)
+            print(f"  [checkpoint: {len(results)} periods saved]")
+
+    conn_db.close()
 
     # Final save
-    ai_data["quarterly_cla"] = dict(sorted(existing_qcla.items()))
-    ai_data["analyzed_at"] = datetime.now(timezone.utc).isoformat()
-    with open(ai_path, "w", encoding="utf-8") as f:
-        json.dump(ai_data, f, ensure_ascii=False, indent=2)
+    results.sort(key=lambda x: x["period"])
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(results, f, ensure_ascii=False, indent=2)
+
+    print(f"\n  -> Saved {len(results)} yearly entries to {output_path}")
+    return results
+
+
+def generate_quarterly(conn, pestle_history: dict) -> list:
+    """Generate quarterly CLA for 2021-2026."""
+    print("\n=== Quarterly CLA: 2021-2026 ===")
+
+    output_path = DATA_DIR / "cla_historical_quarterly.json"
+
+    # Load existing results
+    existing = []
+    if output_path.exists():
+        with open(output_path, encoding="utf-8") as f:
+            existing = json.load(f)
+    existing_periods = {e["period"] for e in existing}
+
+    conn_db = sqlite3.connect(DB_PATH)
+    results = list(existing)
+
+    # Build quarter list: 2021-Q1 through 2026-Q1 (current)
+    quarters = []
+    for year in range(2021, 2027):
+        for q in range(1, 5):
+            period = f"{year}-Q{q}"
+            # Don't generate future quarters
+            if year == 2026 and q > 2:
+                break
+            quarters.append((year, q, period))
+
+    total = len(quarters)
+
+    for i, (year, q, period) in enumerate(quarters):
+        if period in existing_periods:
+            print(f"  [{i + 1}/{total}] {period} ... skipped (exists)")
+            continue
+
+        print(f"  [{i + 1}/{total}] {period} ...", end=" ", flush=True)
+
+        context = get_quarterly_context(year, q, conn, pestle_history)
+        label = f"{year}年 第{q}四半期（Q{q}）"
+
+        cla = generate_cla(label, context)
+        if cla:
+            synthesis = cla.pop("cross_category_synthesis", "")
+            entry = {
+                "period": period,
+                "type": "quarterly",
+                "categories": {},
+                "cross_category_synthesis": synthesis,
+            }
+            for cat in PESTLE_CATS:
+                if cat in cla:
+                    entry["categories"][cat] = cla[cat]
+
+            results.append(entry)
+            save_to_db(conn_db, period, cla)
+            print(f"OK ({len(entry['categories'])} categories)")
+        else:
+            print("failed/skipped")
+
+        time.sleep(0.5)
+
+    conn_db.close()
+
+    # Sort by period
+    results.sort(key=lambda x: x["period"])
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(results, f, ensure_ascii=False, indent=2)
+
+    print(f"\n  -> Saved {len(results)} quarterly entries to {output_path}")
+    return results
+
+
+def main():
+    print(f"{'=' * 60}")
+    print(f"  Historical CLA Generation")
+    print(f"  {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    print(f"{'=' * 60}")
+
+    conn = sqlite3.connect(DB_PATH)
+    pestle_history = load_pestle_history()
+    print(f"pestle_history.json: {len(pestle_history)} quarters loaded")
+
+    # Generate yearly CLA (1990-2020)
+    yearly = generate_yearly(conn, pestle_history)
+
+    # Generate quarterly CLA (2021-2026)
+    quarterly = generate_quarterly(conn, pestle_history)
 
     conn.close()
-    print(f"\n=== Done: {len(existing_qcla)} total CLA periods saved ===")
+
+    print(f"\n{'=' * 60}")
+    print(f"  Complete: {len(yearly)} yearly + {len(quarterly)} quarterly entries")
+    print(f"  Files:")
+    print(f"    - {DATA_DIR / 'cla_historical_yearly.json'}")
+    print(f"    - {DATA_DIR / 'cla_historical_quarterly.json'}")
+    print(f"{'=' * 60}")
 
 
 if __name__ == "__main__":

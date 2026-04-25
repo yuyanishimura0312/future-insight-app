@@ -2,24 +2,35 @@
 """
 Regenerate CLA analysis using enriched PESTLE data:
   - 1990-2020: yearly analysis (31 periods)
-  - 2021-2023: quarterly analysis (12 periods)
+  - 2021-2026Q2: quarterly analysis (22 periods)
 
-Total: 43 periods. Uses Claude Sonnet for deeper analysis.
+Total: 53 periods.
 """
 
 import json
+import os
+import subprocess
 import time
 import sqlite3
 from pathlib import Path
 from datetime import datetime, timezone
-from dotenv import load_dotenv
 
-load_dotenv(Path(__file__).parent.parent / ".env")
+# Load API key from keychain
+api_key = os.environ.get("ANTHROPIC_API_KEY")
+if not api_key:
+    try:
+        api_key = subprocess.check_output(
+            ["security", "find-generic-password", "-s", "ANTHROPIC_API_KEY", "-a", "anthropic", "-w"],
+            text=True
+        ).strip()
+        os.environ["ANTHROPIC_API_KEY"] = api_key
+    except Exception:
+        pass
 
 import anthropic
 
 client = anthropic.Anthropic()
-MODEL = "claude-sonnet-4-6"
+MODEL = "claude-haiku-4-5-20251001"
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 DB_PATH = DATA_DIR / "future_insight.db"
@@ -158,8 +169,8 @@ def build_periods():
             f"{year + 1}-01-01",
         ))
 
-    # 2021-2023: quarterly
-    for year in range(2021, 2024):
+    # 2021-2026: quarterly
+    for year in range(2021, 2027):
         for q in range(1, 5):
             month_start = (q - 1) * 3 + 1
             month_end = q * 3 + 1
@@ -167,6 +178,9 @@ def build_periods():
             if month_end > 12:
                 month_end = 1
                 end_year = year + 1
+            # Stop at 2026 Q2
+            if year == 2026 and q > 2:
+                break
             key = f"{year}-{month_start:02d}"
             label = f"{year}年Q{q}（{month_start}月〜{month_start + 2}月）"
             start = f"{year}-{month_start:02d}-01"

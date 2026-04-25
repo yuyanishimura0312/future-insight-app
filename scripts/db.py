@@ -110,6 +110,26 @@ CREATE TABLE IF NOT EXISTS trends (
     UNIQUE (keyword, field)
 );
 
+-- ===== Media Sources Table =====
+
+CREATE TABLE IF NOT EXISTS media_sources (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    name            TEXT    NOT NULL,
+    name_ja         TEXT,
+    url             TEXT,
+    feed_url        TEXT    NOT NULL UNIQUE,
+    region          TEXT    NOT NULL DEFAULT 'global',
+    categories      TEXT,
+    language        TEXT    NOT NULL DEFAULT 'en',
+    tier            INTEGER NOT NULL DEFAULT 1,
+    status          TEXT    NOT NULL DEFAULT 'active',
+    articles_count  INTEGER NOT NULL DEFAULT 0,
+    last_fetched    TEXT
+);
+
+CREATE INDEX IF NOT EXISTS idx_media_sources_region ON media_sources(region);
+CREATE INDEX IF NOT EXISTS idx_media_sources_status ON media_sources(status);
+
 -- Paper indexes
 CREATE INDEX IF NOT EXISTS idx_papers_field ON papers(field);
 CREATE INDEX IF NOT EXISTS idx_papers_detected_at ON papers(detected_at);
@@ -134,6 +154,113 @@ def init_db():
     conn = get_connection()
     conn.executescript(SCHEMA_SQL)
     conn.close()
+    # Run migrations after initial schema creation
+    _run_migrations()
+
+
+def _run_migrations():
+    """Apply incremental schema migrations safely (idempotent)."""
+    conn = get_connection()
+
+    # Migration: add 'region' column to articles table
+    columns = [row[1] for row in conn.execute("PRAGMA table_info(articles)").fetchall()]
+    if "region" not in columns:
+        conn.execute("ALTER TABLE articles ADD COLUMN region TEXT NOT NULL DEFAULT 'global'")
+        conn.commit()
+
+    conn.close()
+
+
+def save_media_sources(feeds: list[dict]) -> int:
+    """Sync RSS_FEEDS list into the media_sources table.
+    Updates existing rows, inserts new ones. Returns count of upserted rows."""
+    conn = get_connection()
+    init_db_schema_only(conn)
+    count = 0
+    now = datetime.utcnow().isoformat()
+
+    for feed in feeds:
+        feed_url = feed["url"]
+        name = feed["name"]
+        lang = feed.get("lang", "en")
+        tier = feed.get("tier", 1)
+        region = feed.get("region", "japan" if lang == "ja" else "global")
+        focus = feed.get("focus", "")
+
+        # Determine name_ja: use name directly if it contains Japanese characters
+        name_ja = name if any('\u3000' <= c <= '\u9fff' for c in name) else None
+
+        # Count articles from this source
+        art_count = conn.execute(
+            "SELECT COUNT(*) FROM articles WHERE source = ?", (name,)
+        ).fetchone()[0]
+
+        # Get last article date for this source
+        last = conn.execute(
+            "SELECT MAX(created_at) FROM articles WHERE source = ?", (name,)
+        ).fetchone()[0]
+
+        try:
+            conn.execute("""
+                INSERT INTO media_sources
+                    (name, name_ja, feed_url, region, categories, language, tier, status, articles_count, last_fetched)
+                VALUES (?, ?, ?, ?, ?, ?, ?, 'active', ?, ?)
+                ON CONFLICT(feed_url) DO UPDATE SET
+                    name = excluded.name,
+                    name_ja = excluded.name_ja,
+                    region = excluded.region,
+                    categories = excluded.categories,
+                    language = excluded.language,
+                    tier = excluded.tier,
+                    articles_count = excluded.articles_count,
+                    last_fetched = excluded.last_fetched
+            """, (name, name_ja, feed_url, region, focus, lang, tier, art_count, last))
+            count += 1
+        except sqlite3.IntegrityError:
+            pass
+
+    conn.commit()
+    conn.close()
+    return count
+
+
+def init_db_schema_only(conn):
+    """Apply schema without migrations (used internally to ensure tables exist)."""
+    conn.executescript(SCHEMA_SQL)
+
+
+def get_media_sources() -> list[dict]:
+    """Return all media sources with their article counts."""
+    conn = get_connection()
+    conn.row_factory = sqlite3.Row
+    rows = conn.execute(
+        "SELECT id, name, name_ja, url, feed_url, region, categories, language, "
+        "tier, status, articles_count, last_fetched FROM media_sources ORDER BY name"
+    ).fetchall()
+    conn.close()
+    return [dict(r) for r in rows]
+
+
+def export_media_sources_json(output_path) -> int:
+    """Export media sources to JSON file. Returns count."""
+    sources = get_media_sources()
+    # Include total article count across entire DB (not just RSS-matched sources)
+    conn = get_connection()
+    total_all = conn.execute("SELECT COUNT(*) FROM articles").fetchone()[0]
+    distinct_sources = conn.execute("SELECT COUNT(DISTINCT source) FROM articles").fetchone()[0]
+    conn.close()
+    rss_total = sum(s.get("articles_count", 0) for s in sources)
+    output = {
+        "exported_at": datetime.utcnow().isoformat(),
+        "count": len(sources),
+        "total_articles_rss": rss_total,
+        "total_articles_all": total_all,
+        "distinct_sources_all": distinct_sources,
+        "sources": sources,
+    }
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+    return len(sources)
 
 
 def save_collection(output: dict) -> None:
@@ -143,15 +270,29 @@ def save_collection(output: dict) -> None:
 
     total_selected = sum(info["count"] for info in output["pestle"].values())
 
-    # Insert or replace collection row
-    cur = conn.execute(
-        """INSERT OR REPLACE INTO collections
-           (date, collected_at, total_fetched, feeds_count, total_selected)
-           VALUES (?, ?, ?, ?, ?)""",
-        (output["date"], output["collected_at"], output["total_fetched"],
-         output["feeds_count"], total_selected)
-    )
-    collection_id = cur.lastrowid
+    # Check if collection already exists for this date
+    existing = conn.execute(
+        "SELECT id FROM collections WHERE date = ?", (output["date"],)
+    ).fetchone()
+
+    if existing:
+        collection_id = existing[0]
+        conn.execute(
+            """UPDATE collections
+               SET collected_at = ?, total_fetched = ?, feeds_count = ?, total_selected = ?
+               WHERE id = ?""",
+            (output["collected_at"], output["total_fetched"],
+             output["feeds_count"], total_selected, collection_id)
+        )
+    else:
+        cur = conn.execute(
+            """INSERT INTO collections
+               (date, collected_at, total_fetched, feeds_count, total_selected)
+               VALUES (?, ?, ?, ?, ?)""",
+            (output["date"], output["collected_at"], output["total_fetched"],
+             output["feeds_count"], total_selected)
+        )
+        collection_id = cur.lastrowid
 
     # Insert articles
     inserted = 0
@@ -160,15 +301,16 @@ def save_collection(output: dict) -> None:
             url_hash = hashlib.sha256(article["url"].encode()).hexdigest()
             pub_date = _normalize_date(article.get("published", ""))
             try:
+                region = article.get("region", "global")
                 conn.execute(
                     """INSERT OR IGNORE INTO articles
                        (collection_id, url_hash, title, summary, url, source, lang,
-                        published, published_date, pestle_category, relevance_score)
-                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                        published, published_date, pestle_category, relevance_score, region)
+                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
                     (collection_id, url_hash, article["title"], article["summary"],
                      article["url"], article["source"], article["lang"],
                      article.get("published", ""), pub_date, category,
-                     article.get("relevance_score", 0))
+                     article.get("relevance_score", 0), region)
                 )
                 inserted += 1
             except sqlite3.IntegrityError:

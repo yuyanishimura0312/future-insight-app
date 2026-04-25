@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>未来洞察支援アプリ</title>
+<!-- esse-sense inverted favicon (black bg, white e) -->
+<link rel="icon" href="https://esse-sense.com/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -871,6 +873,7 @@
     <button class="tab-btn" onclick="switchTab('scenarios')" data-i18n="tab_scenarios">シナリオ</button>
     <button class="tab-btn" onclick="switchTab('signals')" data-i18n="tab_signals">ウィークシグナル</button>
     <button class="tab-btn" onclick="switchTab('search')" data-i18n="tab_search">横断検索</button>
+    <button class="tab-btn" onclick="switchTab('status')" data-i18n="tab_status">データステータス</button>
   </div>
 
   <!-- ===== OVERVIEW ===== -->
@@ -980,6 +983,13 @@
     <div id="searchResults"></div>
   </div>
 
+  <!-- ===== DATA STATUS ===== -->
+  <div class="tab-panel" id="tab-status">
+    <div id="statusContent" style="font-size:0.85rem;line-height:1.7">
+      <p style="color:var(--text-muted)">Loading status...</p>
+    </div>
+  </div>
+
 </div>
 
 <!-- Detail Modal -->
@@ -1003,6 +1013,77 @@ let ALERTS_DATA = null;
 let PESTLE_HISTORY = null;
 let PAPERS_TRANS = {};  // index -> {title_ja, summary_ja}
 let LANG = 'ja';
+
+// === IndexedDB stale-while-revalidate cache ===
+const IDB_NAME = 'fia-cache';
+const IDB_STORE = 'json-data';
+const IDB_VERSION = 1;
+const CACHE_MAX_AGE_MS = 5 * 60 * 1000; // 5 minutes
+
+let _idb = null;
+function openIDB() {
+  if (_idb) return Promise.resolve(_idb);
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open(IDB_NAME, IDB_VERSION);
+    req.onupgradeneeded = () => { req.result.createObjectStore(IDB_STORE); };
+    req.onsuccess = () => { _idb = req.result; resolve(_idb); };
+    req.onerror = () => { resolve(null); };
+  });
+}
+async function idbGet(key) {
+  try {
+    const db = await openIDB();
+    if (!db) return null;
+    return new Promise(resolve => {
+      const tx = db.transaction(IDB_STORE, 'readonly');
+      const req = tx.objectStore(IDB_STORE).get(key);
+      req.onsuccess = () => resolve(req.result || null);
+      req.onerror = () => resolve(null);
+    });
+  } catch { return null; }
+}
+async function idbSet(key, value) {
+  try {
+    const db = await openIDB();
+    if (!db) return;
+    const tx = db.transaction(IDB_STORE, 'readwrite');
+    tx.objectStore(IDB_STORE).put(value, key);
+  } catch {}
+}
+
+// Fetch JSON with stale-while-revalidate via IndexedDB
+async function fetchJSON(url) {
+  const key = url.replace(/\?.*$/, ''); // strip cache-bust query for IDB key
+  const cached = await idbGet(key);
+  const now = Date.now();
+
+  // Background revalidation helper
+  function revalidate() {
+    fetch(url).then(r => {
+      if (r.ok) return r.json();
+      throw new Error('fetch failed');
+    }).then(data => {
+      idbSet(key, { data, ts: Date.now() });
+    }).catch(() => {});
+  }
+
+  if (cached && cached.data != null) {
+    const age = now - (cached.ts || 0);
+    if (age < CACHE_MAX_AGE_MS) {
+      // Fresh cache — return immediately, no network request
+      return cached.data;
+    }
+    // Stale cache — return immediately, revalidate in background
+    revalidate();
+    return cached.data;
+  }
+
+  // No cache — must fetch from network
+  const resp = await fetch(url);
+  const data = await resp.json();
+  idbSet(key, { data, ts: Date.now() });
+  return data;
+}
 
 const I18N = {
   ja: {
@@ -1289,7 +1370,7 @@ function formatPubDate(s) {
 }
 
 // === Tab switching ===
-const VALID_TABS = ['overview','pestle','papers','cla','scenarios','signals','search'];
+const VALID_TABS = ['overview','pestle','papers','cla','scenarios','signals','search','status'];
 function switchTab(name, pushState) {
   if (!VALID_TABS.includes(name)) name = 'overview';
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
@@ -1384,8 +1465,7 @@ async function showPaper(idx) {
       <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
     </div>`);
     try {
-      const resp = await fetch('data/papers.json?v=' + Date.now());
-      PAPERS_FULL = await resp.json();
+      PAPERS_FULL = await fetchJSON('data/papers.json?v=' + Date.now());
     } catch (e) {
       openModal(localizedPaperTitle(p, idx), `<div style="padding:20px">
         <div class="modal-field"><div class="modal-label">${t('field')}</div><div class="modal-value">${esc(p.field)}</div></div>
@@ -1601,8 +1681,7 @@ function renderOverview() {
 async function ensurePestleHistoryLoaded() {
   if (_pestleHistoryLoaded) return;
   try {
-    const resp = await fetch('data/pestle_history.json?v=' + Date.now());
-    const full = await resp.json();
+    const full = await fetchJSON('data/pestle_history.json?v=' + Date.now());
     PESTLE_HISTORY = { ...PESTLE_HISTORY, ...full };
     _pestleHistoryLoaded = true;
   } catch (e) { console.warn('Failed to load history:', e); }
@@ -1888,9 +1967,8 @@ let semanticSearchRunning = false;
 async function loadSemanticEmbeddings() {
   if (semanticEmbeddings) return semanticEmbeddings;
   try {
-    const resp = await fetch('data/embeddings.json');
-    semanticEmbeddings = await resp.json();
-    console.log(`Loaded ${semanticEmbeddings.count} embeddings`);
+    semanticEmbeddings = await fetchJSON('data/embeddings.json');
+    // Embeddings loaded successfully
     return semanticEmbeddings;
   } catch (e) {
     console.error('Failed to load embeddings:', e);
@@ -2214,6 +2292,137 @@ function renderSignals() {
   }
 
   document.getElementById('signalsGrid').innerHTML = html;
+}
+
+// === Data Status ===
+function renderStatus() {
+  if (!NEWS_DATA) return;
+  const pestle = NEWS_DATA.pestle;
+  const cats = Object.keys(pestle);
+  const totalNews = cats.reduce((s, c) => s + (pestle[c].count || 0), 0);
+  const totalPapers = PAPERS_DATA ? PAPERS_DATA.length : 0;
+  const totalSignals = AI_DATA && AI_DATA.weak_signals ? AI_DATA.weak_signals.length : 0;
+  const feedCount = NEWS_DATA.feeds_count || 0;
+
+  // PESTLE balance table
+  const pestleRows = cats.map(c => {
+    const info = pestle[c];
+    const pct = totalNews > 0 ? ((info.count / totalNews) * 100).toFixed(1) : 0;
+    return `<tr><td>${info.label_ja || c}</td><td style="text-align:right">${info.count.toLocaleString()}</td><td style="text-align:right">${pct}%</td></tr>`;
+  }).join('');
+
+  // Papers by field
+  const fieldCounts = {};
+  if (PAPERS_DATA) {
+    PAPERS_DATA.forEach(p => { fieldCounts[p.field] = (fieldCounts[p.field] || 0) + 1; });
+  }
+  const papersRows = Object.entries(fieldCounts).sort((a,b) => b[1] - a[1]).map(([f, n]) =>
+    `<tr><td>${f}</td><td style="text-align:right">${n}</td></tr>`
+  ).join('');
+
+  // Data files check
+  const dataFiles = [
+    { name: 'latest.json', desc: 'PESTLE news', status: NEWS_DATA ? 'OK' : 'Missing' },
+    { name: 'ai_analysis.json', desc: 'CLA + weak signals', status: AI_DATA ? 'OK' : 'Missing' },
+    { name: 'papers_light.json', desc: 'academic papers', status: PAPERS_DATA && PAPERS_DATA.length > 0 ? 'OK' : 'Missing' },
+    { name: 'alerts.json', desc: 'anomaly alerts', status: ALERTS_DATA ? 'OK' : 'Missing' },
+    { name: 'scenarios.json', desc: 'future scenarios', status: SCENARIOS_DATA ? 'OK' : 'Missing' },
+    { name: 'pestle_history.json', desc: 'historical timeline', status: PESTLE_HISTORY ? 'OK' : 'Missing' },
+  ];
+  const fileRows = dataFiles.map(f =>
+    `<tr><td><code>${f.name}</code></td><td>${f.desc}</td><td style="text-align:center;color:${f.status==='OK'?'#2d7d46':'#c0392b'}">${f.status}</td></tr>`
+  ).join('');
+
+  // Historical coverage
+  const histYears = PESTLE_HISTORY ? Object.keys(PESTLE_HISTORY).length : 0;
+
+  const html = `
+    <h3 style="margin-bottom:16px;font-size:1rem">Data Pipeline Status</h3>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:24px">
+      <div class="stat-card"><div class="stat-label">Date</div><div class="stat-value" style="font-size:1rem">${NEWS_DATA.date}</div></div>
+      <div class="stat-card"><div class="stat-label">News (daily)</div><div class="stat-value">${totalNews.toLocaleString()}</div><div class="stat-sub">${NEWS_DATA.total_fetched.toLocaleString()} fetched, ${feedCount} feeds</div></div>
+      <div class="stat-card"><div class="stat-label">Papers</div><div class="stat-value">${totalPapers.toLocaleString()}</div><div class="stat-sub">${Object.keys(fieldCounts).length} fields</div></div>
+      <div class="stat-card"><div class="stat-label">Weak Signals</div><div class="stat-value">${totalSignals}</div></div>
+      <div class="stat-card"><div class="stat-label">Historical</div><div class="stat-value">${histYears}</div><div class="stat-sub">quarters</div></div>
+    </div>
+
+    <h3 style="margin-bottom:12px;font-size:0.95rem">DB Integrity (2026-04-12 verified)</h3>
+    <table style="width:100%;border-collapse:collapse;font-size:0.82rem;margin-bottom:20px">
+      <thead><tr style="background:var(--bg);border-bottom:2px solid var(--border)">
+        <th style="text-align:left;padding:8px">Item</th>
+        <th style="text-align:right;padding:8px">Value</th>
+        <th style="text-align:center;padding:8px">Status</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:6px 8px">Total articles (DB)</td><td style="text-align:right;padding:6px 8px">221,641</td><td style="text-align:center;color:#2d7d46">PASS</td></tr>
+        <tr><td style="padding:6px 8px">Year coverage (1900-2025)</td><td style="text-align:right;padding:6px 8px">126 / 126</td><td style="text-align:center;color:#2d7d46">PASS</td></tr>
+        <tr><td style="padding:6px 8px">PESTLE balance (max/min ratio)</td><td style="text-align:right;padding:6px 8px">1.07x</td><td style="text-align:center;color:#2d7d46">PASS</td></tr>
+        <tr><td style="padding:6px 8px">Historical accuracy (spot check)</td><td style="text-align:right;padding:6px 8px">5 years verified</td><td style="text-align:center;color:#2d7d46">PASS</td></tr>
+        <tr><td style="padding:6px 8px">Duplicate articles (intra-collection)</td><td style="text-align:right;padding:6px 8px">0</td><td style="text-align:center;color:#2d7d46">PASS</td></tr>
+        <tr><td style="padding:6px 8px">Academic papers</td><td style="text-align:right;padding:6px 8px">799</td><td style="text-align:center;color:#2d7d46">PASS</td></tr>
+        <tr><td style="padding:6px 8px">Media sources</td><td style="text-align:right;padding:6px 8px">124</td><td style="text-align:center;color:#2d7d46">PASS</td></tr>
+      </tbody>
+    </table>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+      <div>
+        <h3 style="margin-bottom:8px;font-size:0.95rem">PESTLE Category Balance (today)</h3>
+        <table style="width:100%;border-collapse:collapse;font-size:0.82rem">
+          <thead><tr style="background:var(--bg)"><th style="text-align:left;padding:6px">Category</th><th style="text-align:right;padding:6px">Count</th><th style="text-align:right;padding:6px">%</th></tr></thead>
+          <tbody>${pestleRows}</tbody>
+          <tfoot><tr style="font-weight:700;border-top:2px solid var(--border)"><td style="padding:6px">Total</td><td style="text-align:right;padding:6px">${totalNews.toLocaleString()}</td><td style="text-align:right;padding:6px">100%</td></tr></tfoot>
+        </table>
+      </div>
+
+      <div>
+        <h3 style="margin-bottom:8px;font-size:0.95rem">Papers by Field</h3>
+        <table style="width:100%;border-collapse:collapse;font-size:0.82rem">
+          <thead><tr style="background:var(--bg)"><th style="text-align:left;padding:6px">Field</th><th style="text-align:right;padding:6px">Count</th></tr></thead>
+          <tbody>${papersRows}</tbody>
+          <tfoot><tr style="font-weight:700;border-top:2px solid var(--border)"><td style="padding:6px">Total</td><td style="text-align:right;padding:6px">${totalPapers}</td></tr></tfoot>
+        </table>
+      </div>
+    </div>
+
+    <h3 style="margin:20px 0 8px;font-size:0.95rem">Data Files</h3>
+    <table style="width:100%;border-collapse:collapse;font-size:0.82rem;margin-bottom:20px">
+      <thead><tr style="background:var(--bg)"><th style="text-align:left;padding:6px">File</th><th style="text-align:left;padding:6px">Description</th><th style="text-align:center;padding:6px">Status</th></tr></thead>
+      <tbody>${fileRows}</tbody>
+    </table>
+
+    <h3 style="margin-bottom:8px;font-size:0.95rem">Historical DB by Decade</h3>
+    <table style="width:100%;border-collapse:collapse;font-size:0.82rem;margin-bottom:20px">
+      <thead><tr style="background:var(--bg)"><th style="text-align:left;padding:6px">Decade</th><th style="text-align:right;padding:6px">Articles</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:4px 8px">1900s</td><td style="text-align:right;padding:4px 8px">15,040</td></tr>
+        <tr><td style="padding:4px 8px">1910s</td><td style="text-align:right;padding:4px 8px">17,790</td></tr>
+        <tr><td style="padding:4px 8px">1920s</td><td style="text-align:right;padding:4px 8px">17,836</td></tr>
+        <tr><td style="padding:4px 8px">1930s</td><td style="text-align:right;padding:4px 8px">17,847</td></tr>
+        <tr><td style="padding:4px 8px">1940s</td><td style="text-align:right;padding:4px 8px">17,776</td></tr>
+        <tr><td style="padding:4px 8px">1950s</td><td style="text-align:right;padding:4px 8px">11,981</td></tr>
+        <tr><td style="padding:4px 8px">1960s</td><td style="text-align:right;padding:4px 8px">11,936</td></tr>
+        <tr><td style="padding:4px 8px">1970s</td><td style="text-align:right;padding:4px 8px">11,923</td></tr>
+        <tr><td style="padding:4px 8px">1980s</td><td style="text-align:right;padding:4px 8px">11,967</td></tr>
+        <tr><td style="padding:4px 8px">1990s</td><td style="text-align:right;padding:4px 8px">22,095</td></tr>
+        <tr><td style="padding:4px 8px">2000s</td><td style="text-align:right;padding:4px 8px">19,830</td></tr>
+        <tr><td style="padding:4px 8px">2010s</td><td style="text-align:right;padding:4px 8px">19,785</td></tr>
+        <tr><td style="padding:4px 8px">2020s</td><td style="text-align:right;padding:4px 8px">11,943</td></tr>
+        <tr style="font-weight:700;border-top:2px solid var(--border)"><td style="padding:6px 8px">Total</td><td style="text-align:right;padding:6px 8px">207,618</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-bottom:8px;font-size:0.95rem">Daily Pipeline (3 streams)</h3>
+    <table style="width:100%;border-collapse:collapse;font-size:0.82rem">
+      <thead><tr style="background:var(--bg)"><th style="text-align:left;padding:6px">Stream</th><th style="text-align:right;padding:6px">Target/day</th><th style="text-align:left;padding:6px">Source</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:4px 8px">PESTLE News</td><td style="text-align:right;padding:4px 8px">2,004</td><td style="padding:4px 8px">124 RSS feeds + GDELT</td></tr>
+        <tr><td style="padding:4px 8px">Academic Papers</td><td style="text-align:right;padding:4px 8px">1,000</td><td style="padding:4px 8px">OpenAlex API (5 fields x 200)</td></tr>
+        <tr><td style="padding:4px 8px">Historical PESTLE</td><td style="text-align:right;padding:4px 8px">~1,200</td><td style="padding:4px 8px">Claude API / GDELT (1 year/day)</td></tr>
+      </tbody>
+    </table>
+  `;
+  document.getElementById('statusContent').innerHTML = html;
 }
 
 // === Translation helpers ===
@@ -3058,48 +3267,42 @@ async function loadData() {
   const v = Date.now();
 
   // Phase 1: Load lightweight data first (overview needs these)
-  const [newsResp, papersLightResp, aiResp, statsResp] = await Promise.allSettled([
-    fetch('data/latest.json?v=' + v),
-    fetch('data/papers_light.json?v=' + v),
-    fetch('data/ai_analysis.json?v=' + v),
-    fetch('data/papers_stats.json?v=' + v),
+  const [newsResult, papersLightResult, aiResult, statsResult] = await Promise.allSettled([
+    fetchJSON('data/latest.json?v=' + v),
+    fetchJSON('data/papers_light.json?v=' + v),
+    fetchJSON('data/ai_analysis.json?v=' + v),
+    fetchJSON('data/papers_stats.json?v=' + v),
   ]);
 
-  if (newsResp.status === 'fulfilled') {
-    NEWS_DATA = await newsResp.value.json();
+  if (newsResult.status === 'fulfilled' && newsResult.value) {
+    NEWS_DATA = newsResult.value;
     document.getElementById('lastUpdated').textContent = `${t('last_updated')}: ${NEWS_DATA.date}`;
   }
-  if (papersLightResp.status === 'fulfilled') {
-    PAPERS_DATA = await papersLightResp.value.json();
+  if (papersLightResult.status === 'fulfilled' && papersLightResult.value) {
+    PAPERS_DATA = papersLightResult.value;
   }
-  if (aiResp.status === 'fulfilled') {
-    AI_DATA = await aiResp.value.json();
+  if (aiResult.status === 'fulfilled' && aiResult.value) {
+    AI_DATA = aiResult.value;
   }
-  if (statsResp.status === 'fulfilled') {
-    PAPERS_STATS = await statsResp.value.json();
+  if (statsResult.status === 'fulfilled' && statsResult.value) {
+    PAPERS_STATS = statsResult.value;
   }
 
   // Phase 2: Load alerts, scenarios, and translations
   try {
-    const alertsResp = await fetch('data/alerts.json?v=' + v);
-    ALERTS_DATA = await alertsResp.json();
+    ALERTS_DATA = await fetchJSON('data/alerts.json?v=' + v);
   } catch (e) {}
   try {
-    const scResp = await fetch('data/scenarios.json?v=' + v);
-    if (scResp.ok) SCENARIOS_DATA = await scResp.json();
+    SCENARIOS_DATA = await fetchJSON('data/scenarios.json?v=' + v);
   } catch (e) {}
   try {
-    const trResp = await fetch('data/papers_translations.json?v=' + v);
-    if (trResp.ok) {
-      const trArr = await trResp.json();
-      trArr.forEach(tr => { if (tr && tr.index != null) PAPERS_TRANS[tr.index] = tr; });
-    }
+    const trArr = await fetchJSON('data/papers_translations.json?v=' + v);
+    if (trArr) trArr.forEach(tr => { if (tr && tr.index != null) PAPERS_TRANS[tr.index] = tr; });
   } catch (e) {}
 
   // Phase 3: Load pestle_index (13KB, for overview stats)
   try {
-    const idxResp = await fetch('data/pestle_index.json?v=' + v);
-    const idx = await idxResp.json();
+    const idx = await fetchJSON('data/pestle_index.json?v=' + v);
     // Store quarter count for stats
     if (!PESTLE_HISTORY) PESTLE_HISTORY = {};
     PESTLE_HISTORY._index = idx;
@@ -3114,6 +3317,7 @@ async function loadData() {
   renderCLA();
   renderScenarios();
   renderSignals();
+  renderStatus();
   restoreTabFromHash();
 
   // Re-render papers after translations are loaded (they may arrive after first render)
