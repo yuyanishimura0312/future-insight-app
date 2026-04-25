@@ -178,7 +178,9 @@ RSS_FEEDS = [
     {"url": "https://news.yahoo.co.jp/rss/topics/it.xml", "name": "Yahoo IT", "lang": "ja"},
     {"url": "https://news.yahoo.co.jp/rss/topics/world.xml", "name": "Yahoo 国際", "lang": "ja"},
     {"url": "https://news.yahoo.co.jp/rss/topics/domestic.xml", "name": "Yahoo 国内", "lang": "ja"},
-    {"url": "https://www.nikkei.com/rss/", "name": "日経", "lang": "ja"},
+    # 日経RSSは404化済み（2026-04時点）
+    {"url": "https://mainichi.jp/rss/etc/mainichi-flash.rss", "name": "毎日新聞", "lang": "ja"},
+    {"url": "https://toyokeizai.net/list/feed/rss", "name": "東洋経済オンライン", "lang": "ja"},
     # --- Japanese (Expanded: Nikkei, NHK additional, Asahi) ---
     {"url": "https://www3.nhk.or.jp/rss/news/cat7.xml", "name": "NHK スポーツ文化", "lang": "ja"},
     {"url": "https://www.asahi.com/rss/asahi/newsheadlines.rdf", "name": "朝日 主要", "lang": "ja"},
