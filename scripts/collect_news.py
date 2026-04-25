@@ -163,6 +163,14 @@ RSS_FEEDS = [
     {"url": "https://news.yahoo.co.jp/rss/topics/world.xml", "name": "Yahoo 国際", "lang": "ja"},
     {"url": "https://news.yahoo.co.jp/rss/topics/domestic.xml", "name": "Yahoo 国内", "lang": "ja"},
     {"url": "https://www.nikkei.com/rss/", "name": "日経", "lang": "ja"},
+    # --- Japanese (Expanded: Nikkei, NHK additional, Asahi) ---
+    {"url": "https://www3.nhk.or.jp/rss/news/cat7.xml", "name": "NHK スポーツ文化", "lang": "ja"},
+    {"url": "https://www.asahi.com/rss/asahi/newsheadlines.rdf", "name": "朝日 主要", "lang": "ja"},
+    {"url": "https://www.asahi.com/rss/asahi/politics.rdf", "name": "朝日 政治", "lang": "ja"},
+    {"url": "https://www.asahi.com/rss/asahi/business.rdf", "name": "朝日 経済", "lang": "ja"},
+    {"url": "https://www.asahi.com/rss/asahi/international.rdf", "name": "朝日 国際", "lang": "ja"},
+    {"url": "https://www.asahi.com/rss/asahi/tech_science.rdf", "name": "朝日 科学", "lang": "ja"},
+
 ]
 
 # === Scoring function ===
