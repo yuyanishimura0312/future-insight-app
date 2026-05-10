@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T19:41:11.710771+00:00",
+  "generated_at": "2026-05-10T19:39:16.050542+00:00",
   "version": 1,
   "focal_question": "2030年に向けて、社会・技術・地政学の構造変化は我々の戦略環境をどう変化させるか",
   "focal_question_en": "How will structural changes in society, technology, and geopolitics reshape our strategic environment toward 2030?",
@@ -7,27 +7,29 @@
   "driving_forces": [
     {
       "id": "df_01",
-      "name": "民主主義制度の実質的機能喪失と技術的統治への転換",
-      "name_en": "Substantive Erosion of Democratic Institutions and Shift to Technocratic Governance",
-      "description": "形式的民主主義の維持と実質的な市民的自律性の衰退の矛盾。Think Tanksによる民主的プロセス侵食、選挙操作、議会多元化による政府樹立困難、および地政学的大国競争が従来の民族国家的政治秩序を侵食。気候危機と新興技術がボトムアップ民主的統治を困難化。",
-      "description_en": "Contradiction between formal democratic preservation and substantive erosion of citizen autonomy. Democratic process erosion by think tanks, electoral manipulation, parliamentary fragmentation, and geopolitical competition undermine traditional nation-state political order. Climate crisis and emerging technologies impede bottom-up democratic governance.",
+      "name": "民主的統治パラダイムの崩壊と適応的ガバナンスへの転換",
+      "name_en": "Collapse of Democratic Governance and Shift to Adaptive Technocratic Systems",
+      "description": "民主主義の制度的老朽化とAI/デジタル技術による市民的自律性の侵食により、気候危機対応を名目に民主的手続きを迂回する適応的ガバナンス体制がグローバル北で制度化しつつある。エリート層による民主的プロセスの回避とポピュリズムの相互強化が加速している。",
+      "description_en": "Democratic institutional obsolescence and erosion of civic autonomy through AI/digital technologies are driving institutionalization of adaptive governance bypassing democratic procedures under climate crisis rationale. Elite circumvention of democratic processes and populism mutually reinforce acceleration.",
       "origin_cla_categories": [
-        "Political"
+        "Political",
+        "Legal"
       ],
       "pestle_categories": [
         "Political",
-        "Technological",
-        "Legal"
+        "Legal",
+        "Social"
       ],
       "related_signals": [
-        "ハンガリー選挙が米露の代理戦"
+        "iran war",
+        "europe"
       ],
-      "direction_positive": "ポスト民族国家的参加型ガバナンスへの試行錯誤的移行。多層的アイデンティティと技術的統治に応答する新しい民主的枠組みの創出。",
-      "direction_negative": "権威主義的テクノクラシーの深化。表層的民主主義の形式化と実質的権力の非民主的集中化。",
+      "direction_positive": "多層的な参加型・適応的民主主義への進化と市民的抵抗空間の再構築",
+      "direction_negative": "テクノクラティック独裁体制への漸進的転換と市民的自律性の完全喪失",
       "impact": 8.5,
       "uncertainty": 7.5,
       "quadrant": "critical_uncertainty",
-      "assessment_rationale": "民主主義制度の実質的機能喪失は政治的統治の根本的再編を迫るため重要度が高く、技術的統治と参加型ガバナンスの二者択一性により不確実性が大きい。",
+      "assessment_rationale": "民主主義の制度的危機は全領域に波及し、統治パラダイムの根本的転換を駆動する構造的因果性を持つが、適応的ガバナンスの具体的形態は極めて不確定。",
       "source_articles": [
         {
           "title": "Bulgaria’s election and what it means for Europe",
@@ -48,29 +50,28 @@
     },
     {
       "id": "df_02",
-      "name": "グローバル統一市場幻想と二国間分断化の加速",
-      "name_en": "Collapse of Global Market Unification Myth and Acceleration of Bilateral Fragmentation",
-      "description": "グローバル化退潮（-55.6%）と二国間・地域主義的規制インフラ拡大の矛盾。既得権益層による『合法的アパルトハイト』構造維持の試み。失業率低迷にもかかわらず格差悪化（USA 41.7、DEU 33.7）。自由な資本移動を前提とした国際M&A戦略が機能不全化。",
-      "description_en": "Contradiction between globalization decline (-55.6%) and expansion of bilateral/regional protectionist regulatory infrastructure. Incumbent powers attempt to maintain 'legal apartheid' structures. Wage growth paradox: low unemployment yet worsening inequality (USA 41.7, DEU 33.7). International M&A strategies based on free capital mobility become dysfunctional.",
+      "name": "AI規制可能性の信仰と技術的規制不可能性のギャップ拡大",
+      "name_en": "Widening Gap Between Regulatory Faith and Technical Uncontrollability of AI",
+      "description": "超知能規制への信仰と黒箱化AI・AI swarm による制御不可能性の技術的現実の間に回復不可能な乖離が生じており、国家規制権の統一的動員そのものの有効性が根本的に問い直されている。この矛盾が『AI主権』獲得による地域的自給化への急激なパラダイム転換を駆動している。",
+      "description_en": "Irreconcilable divergence between faith in superintelligence regulation and technical reality of black-box AI and AI swarm uncontrollability undermines efficacy of unified state regulatory capacity. This contradiction drives rapid paradigm shift toward 'AI sovereignty' and regional technological self-sufficiency.",
       "origin_cla_categories": [
-        "Economic"
+        "Technological",
+        "Political"
       ],
       "pestle_categories": [
-        "Economic",
+        "Technological",
         "Political",
         "Legal"
       ],
       "related_signals": [
-        "iran war",
-        "strait hormuz",
-        "米イラン交渉が市場を動かす"
+        "climate"
       ],
-      "direction_positive": "グローバル最適化と無限成長神話からの離脱。不等式解消・地域自律・ローカライズ経済への転換。degrowth議論とサプライチェーン再構築。",
-      "direction_negative": "保護主義的二国間規制体制の恒久化。既存成長モデル固執による適応不全と経済停滞。",
-      "impact": 8.0,
-      "uncertainty": 6.5,
+      "direction_positive": "ローカル・AI・エコシステムの多元的発展と市民参加型技術ガバナンスの構築",
+      "direction_negative": "グローバル超知能による支配的統一技術秩序の確立と地域的技術主権の消滅",
+      "impact": 9.0,
+      "uncertainty": 8.5,
       "quadrant": "critical_uncertainty",
-      "assessment_rationale": "グローバル化退潮は既存の経済秩序を直撃するが、二国間分断化への転換速度と形態が不確定であり、企業戦略に対する影響が深刻。",
+      "assessment_rationale": "AI規制可能性の神話崩壊は技術主権・地政学秩序の再構成を決定し、最大の不確実性を持つ；規制可能派と自給化派の分岐は回復不可能。",
       "source_articles": [
         {
           "title": "Bulgaria’s election and what it means for Europe",
@@ -91,66 +92,28 @@
     },
     {
       "id": "df_03",
-      "name": "共同体喪失と生命管理インフラの二重化",
-      "name_en": "Bifurcation: Communal Dissolution and Dual Biopolitical Infrastructure",
-      "description": "都市化率上昇（日本92.19%）と高等教育拡大による個人化が従来的共同体セーフティネット機能不全化。同時に国家・市場による生命管理深化（データ吸収、薬物規制緩和による自助強制）とコモンズ・自治復興の相剋。サーベイランス・キャピタリズムによる法的アパルトハイト基盤の全球化（中心性0.759）。",
-      "description_en": "Rising urbanization (Japan 92.19%) and educational expansion accelerate individualization, dismantling traditional community safety nets. Simultaneous deepening of state-market biopower (data extraction, self-reliance coercion via drug deregulation) contradicts communal/mutual aid restoration. Surveillance capitalism globalizes 'legal apartheid infrastructure' (centrality 0.759).",
+      "name": "グローバル経済システムの逆説的終焉と自給化への急激な転換",
+      "name_en": "Paradoxical Collapse of Global Economy and Rapid Shift to Self-Sufficiency",
+      "description": "グローバル化の前提である『国境を超えた最適配置』が瓦解し、既得権的グローバルシステム（二国間貿易枠組みによるアパルトハイト的法構造）の再強化と主権回復的自給化との間に制度的・認識論的に橋渡しできない深刻な断裂が存在する。革新と破壊性の概念衰退により再生産的修復のみが実行可能となっている。",
+      "description_en": "Collapse of 'optimal cross-border allocation' premise undermines globalization; irresolvable institutional gap between reinvigorated apartheid-based bilateral trade frameworks and sovereignty-recovering self-sufficiency. Conceptual decline of innovation/disruption confines action to system reproduction.",
       "origin_cla_categories": [
-        "Social"
+        "Economic"
       ],
       "pestle_categories": [
-        "Social",
-        "Technological",
-        "Legal"
-      ],
-      "related_signals": [],
-      "direction_positive": "ボトムアップ型セーフティネット・ゼロからの自治・資源循環による平和の実現。脱中央集権的・再埋め込み的コモンズモデルの創出。",
-      "direction_negative": "国家・企業による全面的監視統治の浸透。相互扶助基盤の完全喪失と原子化社会の深化。",
-      "impact": 7.5,
-      "uncertainty": 7.0,
-      "quadrant": "critical_uncertainty",
-      "assessment_rationale": "共同体喪失と生命管理インフラの二重化は社会的脆弱性の根源的矛盾であり、自治的セーフティネット復興の可能性が極めて不確定。",
-      "source_articles": [
-        {
-          "title": "The Help That Many Older Americans Need Most",
-          "date": "2026-04-21",
-          "category": "Social"
-        },
-        {
-          "title": "Why Do Uzbek Female Labor Migrants Chose Turkiye?",
-          "date": "2026-04-21",
-          "category": "Social"
-        },
-        {
-          "title": "Federal agent charged with assault and criminal mischief in Colorado",
-          "date": "2026-04-22",
-          "category": "Social"
-        }
-      ]
-    },
-    {
-      "id": "df_04",
-      "name": "AI技術の救済性と滅亡性の不可解な両立",
-      "name_en": "Irreconcilable Duality: AI-as-Salvation and AI-as-Extinction",
-      "description": "同一技術が医療革新とサイバー兵器化の両立を強いられるメタ的矛盾。先進国（USA 3.45%、JPN 3.44%）と中国（2.58%）の国家戦略的R&D投資による加速度的進展と規制枠組みのラグ。インターネット普及率90%超社会ではAI出力の物理的検証追い越し。AIスロップと信頼性問題深刻化。",
-      "description_en": "Single technology forced into dual use: medical innovation and cyber weaponization. Concentrated R&D by advanced nations (USA 3.45%, JPN 3.44%) and China (2.58%) creates acceleration-regulation lag. In 90%+ internet penetration societies, AI outputs outpace physical verification, deepening 'AI slop' and trustworthiness crises.",
-      "origin_cla_categories": [
-        "Technological"
-      ],
-      "pestle_categories": [
-        "Technological",
+        "Economic",
         "Political",
         "Legal"
       ],
       "related_signals": [
-        "strait hormuz"
+        "strait hormuz",
+        "climate"
       ],
-      "direction_positive": "民主主義侵害可視化とエネルギー物理学的限界の統合認識。責任あるAI即時実装論による新しい実装主義的パラダイム。",
-      "direction_negative": "AI軍事化と中米技術覇権競争の加速。規制不在での技術蔓延と社会的不信の深刻化。",
-      "impact": 9.0,
-      "uncertainty": 8.5,
+      "direction_positive": "多元的・地域的経済システムの構築と民主的主権・自己決定の再構築",
+      "direction_negative": "既得権益による旧態的グローバルシステムの強化と構造的不平等の不可視化進行",
+      "impact": 8.0,
+      "uncertainty": 7.0,
       "quadrant": "critical_uncertainty",
-      "assessment_rationale": "AI技術の救済性と滅亡性の同立は全領域を横断し最高の不確実性を持ち、規制ラグによる加速度的展開が戦略環境を急変させる。",
+      "assessment_rationale": "グローバル経済システムの瓦解は既定的であるが、再統合形態（再版グローバリズムか多極的自給化か）の方向性は根本的に不確定。",
       "source_articles": [
         {
           "title": "Bulgaria’s election and what it means for Europe",
@@ -170,30 +133,69 @@
       ]
     },
     {
+      "id": "df_04",
+      "name": "監視-搾取インフラの拡張と脱国家的相互扶助の並行成長",
+      "name_en": "Parallel Growth of Surveillance-Exploitation Infrastructure and Post-State Mutual Aid",
+      "description": "国家-資本の監視・搾取インフラが国境を超えて拡張する一方で、ローカルな相互扶助・自給の動きが並行して成長する根本矛盾。市民は『縮小するケア』と『膨張する監視』に挟撃されており、新自由主義的福祉国家の機能不全がデジタル監視資本主義による権力再編と相互作用している。",
+      "description_en": "Fundamental contradiction: state-capital surveillance-extraction infrastructure expands transnationally while local mutual aid and self-provisioning movements grow in parallel. Citizens caught between shrinking care and expanding surveillance; neoliberal welfare collapse interacts with digital surveillance capitalism's power reorganization.",
+      "origin_cla_categories": [
+        "Social"
+      ],
+      "pestle_categories": [
+        "Social",
+        "Technological",
+        "Economic"
+      ],
+      "related_signals": [
+        "europe"
+      ],
+      "direction_positive": "共同体的実践（原住民知・互互扶助）による『生き延びるための自治』の制度化",
+      "direction_negative": "監視資本主義による全域的支配と市民的抵抗空間の完全圧縮",
+      "impact": 7.5,
+      "uncertainty": 7.0,
+      "quadrant": "critical_uncertainty",
+      "assessment_rationale": "監視搾取インフラの拡張と相互扶助の並行成長は社会的二重性を深化させるが、どちらのベクトルが制度化されるかは権力関係に依存して極めて不確定。",
+      "source_articles": [
+        {
+          "title": "【独占寄稿②】清原達郎氏が45年間疑問に思うこと｢なぜ日本の大企業は海外で無謀な大型買収を行って大損し続けるのか｣ | 政治・経済・投資 | 東洋経済オンライン",
+          "date": "2026-04-24",
+          "category": "Economic"
+        },
+        {
+          "title": "Coinbase and Gemini Accused of Illegal Gambling in N.Y. Lawsuits",
+          "date": "2026-04-22",
+          "category": "Economic"
+        },
+        {
+          "title": "Recession or rescue? An analysis of degrowth- and counter-narratives in leading British and German quality print media",
+          "date": "",
+          "category": "Economic"
+        }
+      ]
+    },
+    {
       "id": "df_05",
-      "name": "非国家アクターへの法的権力委譲と国家主権侵食",
-      "name_en": "Progressive Juridification to Non-State Actors and Erosion of State Sovereignty",
-      "description": "グローバル資本主義膨張により国家-市民二項構造が複数の非国家アクター（テック企業、投資家、超国籍権力）を含む複雑な権力構図に変化。従来の国家主権基盤が二国間貿易協定・企業規制を通じた『アパルトハイト的法インフラ』（中心性0.759）全球化により侵食。市民の法的庇護が国家からテックプラットフォーム・仲裁機構へ委譲。",
-      "description_en": "Global capitalism expansion transforms binary state-citizen structure into complex multipolar configuration including non-state actors (tech firms, investors, transnational powers). Traditional state sovereignty eroded by 'apartheid legal infrastructure' (centrality 0.759) via bilateral trade agreements and corporate regulation. Legal protection of citizens progressively delegated from states to tech platforms and arbitration bodies.",
+      "name": "法の民主的正当性喪失と分散的テクノクラティック規制権力の台頭",
+      "name_en": "Loss of Democratic Legitimacy of Law and Rise of Distributed Technocratic Regulatory Power",
+      "description": "『法の支配』の民主的基盤が侵食され、規制権力が国家・多国籍企業・テックプラットフォーム間で分散・競合している。human rights/democracy概念の衰退（各-50%）により、従来の単一的法体系が解体し、複合的規制レジーム（複数知識体系・規範体系の共存）が根源的異議として浮上しつつある。",
+      "description_en": "Democratic foundations of rule of law eroded; regulatory power fragmented and competitive among states, multinationals, tech platforms. Decline of human rights/democracy concepts (each -50%) dissolves unified legal systems; composite regulatory regimes (coexisting knowledge/normative systems) emerge as fundamental contestation.",
       "origin_cla_categories": [
         "Legal"
       ],
       "pestle_categories": [
         "Legal",
-        "Economic",
         "Political",
         "Technological"
       ],
       "related_signals": [
-        "iran war",
-        "アルテミスがトランプ政権の象徴に"
+        "climate"
       ],
-      "direction_positive": "脱国家化した法的権利の民主的再構築。プラットフォーム規制による市民保護フレームワークの制度化。",
-      "direction_negative": "企業スタンダードによる法的支配の深化。国家的法制度の形骸化と市民的救済基盤の喪失。",
-      "impact": 8.0,
-      "uncertainty": 7.5,
+      "direction_positive": "複数知識体系・規範体系が共存する法的多元主義と民主的法文化の復興",
+      "direction_negative": "テクノクラート・多国籍資本による統一的規制支配と民主的法体系の完全周辺化",
+      "impact": 7.0,
+      "uncertainty": 6.5,
       "quadrant": "critical_uncertainty",
-      "assessment_rationale": "非国家アクターへの法的権力委譲は国民国家レベルの統制可能性を根本的に損なうため重要度が高く、企業規制の民主化可能性が不確定。",
+      "assessment_rationale": "法的正当性の喪失は既進行的であり影響度は高いが、複合的規制レジームへの転換形態の不確定性は中程度。",
       "source_articles": [
         {
           "title": "Bulgaria’s election and what it means for Europe",
@@ -214,28 +216,28 @@
     },
     {
       "id": "df_06",
-      "name": "エネルギー民主化と監視盲点の根本的矛盾",
-      "name_en": "Fundamental Paradox: Energy Democratization vs. Expanding Surveillance Blind Spots",
-      "description": "再生可能エネルギー革命による急速なエネルギー民主化と、AI産業・複合災害の非対称社会影響による監視盲点深化の矛盾。新産業（AI、データセンター）が従来排出監視体制の外で成長。気候変動複合災害が既存インフラと社会的脆弱性（ジェンダー不平等、経済格差）を露呈。科学的発見と政策実行のタイムラグが戦略的対応困難化。",
-      "description_en": "Paradox between energy democratization via renewable revolution and deepening surveillance blind spots from AI industry and asymmetric disaster impacts. New industries (AI, data centers) expand outside traditional emissions monitoring regimes. Climate-driven compound disasters expose infrastructure fragility and social vulnerabilities (gender inequality, economic disparity). Science-policy implementation lag impedes strategic response.",
+      "name": "西洋科学の権力的優位性反転と多元的知識体系の対抗",
+      "name_en": "Reversal of Western Science's Hegemonic Dominance and Counter-Rise of Plural Knowledge Systems",
+      "description": "『西洋科学の権力的優位性の反転』と『テクノ資本主義による新植民地化の同時進行』の間に不可逆的矛盾が存在し、制度的認識化が遅延している。先住民知識・民主的参加を中心化した『多元的知識体系による脱成長的回復力』が技術楽観主義に対抗するスーパーノードシグナルとして浮上している。",
+      "description_en": "Irreversible contradiction between reversal of Western science's dominance and simultaneous techno-capitalist neo-colonization delays institutional recognition. 'Degrowth resilience through plural knowledge systems' centering indigenous knowledge and democratic participation emerges as counter-signal to technological optimism.",
       "origin_cla_categories": [
         "Environmental"
       ],
       "pestle_categories": [
         "Environmental",
-        "Technological",
+        "Social",
         "Political"
       ],
       "related_signals": [
-        "iran war",
+        "middle east",
         "climate"
       ],
-      "direction_positive": "自然システムの隠れた知性認識による『謙虚なイノベーション』。技術楽観主義と環境宿命論を超える新しい意味枠組み。",
-      "direction_negative": "エネルギー転換の不可視化と不平等な被害分配の恒久化。インフラ脆弱性の積み重ねと複合災害への無防備化。",
-      "impact": 8.5,
-      "uncertainty": 7.0,
+      "direction_positive": "先住民知・AI分析・民主的参加の統合による複合的知識体系と文化的複権",
+      "direction_negative": "テクノ資本主義による知識의 재식민지화と西洋科学的支配の強화",
+      "impact": 7.5,
+      "uncertainty": 8.0,
       "quadrant": "critical_uncertainty",
-      "assessment_rationale": "エネルギー民主化と監視盲点の矛盾は環境・技術領域の根本的葛藤であり、新産業の不可視化リスクが政策対応を困難化させる。",
+      "assessment_rationale": "西洋科学優位性の反転と多元的知識体系の対抗は根本的な認識論的転換を示唆するが、テクノ資本主義による再植民地化との同時進行により極めて不確定。",
       "source_articles": [
         {
           "title": "Bulgaria’s election and what it means for Europe",
@@ -256,71 +258,72 @@
     },
     {
       "id": "df_07",
-      "name": "イノベーション・ディスラプション語彙衰退と既存成長モデルの限界",
-      "name_en": "Semantic Decline of Innovation Lexicon and Exhaustion of Growth Model Paradigm",
-      "description": "イノベーション語彙（-46.2%）とディスラプション語彙（-49.4%）の衰退が既存の成長・破壊的革新モデル限界を示唆。グローバル最適化の退潮と二国間規制拡大の中で企業が過去の成功パターンに固執したまま適応困難化。技術的楽観主義から実装主義への転換を余儀なくされる状況。",
-      "description_en": "Vocabulary decline in 'innovation' (-46.2%) and 'disruption' (-49.4%) signals exhaustion of growth-and-disruption paradigm. Amid globalization retreat and bilateral regulation expansion, firms cling to past success patterns amid adaptation failure. Forced transition from technological optimism to pragmatic implementation.",
+      "name": "気候危機の制度的統合と民主主義の機関車-乗客的非対称性",
+      "name_en": "Institutional Integration of Climate Crisis and Asymmetric Locomotive-Passenger Democracy",
+      "description": "気候変動がすべての政策分野に統合される一方で、民主主義制度と気候行動が『機関車と乗客』の非対称関係にあり、政治的決定と物質的現実のズレが加速している。気候決定論が民主的決定プロセスを迂回し、脆弱層の排除的決定が常態化する傾向が強化されている。",
+      "description_en": "Climate change integrates into all policy domains while democracy and climate action maintain asymmetric 'locomotive-passenger' relationship, accelerating gaps between political decision and material reality. Climate determinism bypasses democratic processes; exclusionary decisions for vulnerable populations normalize.",
       "origin_cla_categories": [
-        "Economic"
+        "Environmental",
+        "Political"
       ],
       "pestle_categories": [
-        "Economic",
-        "Technological"
+        "Environmental",
+        "Political",
+        "Social"
       ],
-      "related_signals": [],
-      "direction_positive": "段階的・漸進的イノベーション・モデルへの転換。既存資産活用と持続可能性を重視した成長再定義。",
-      "direction_negative": "既存産業の高齢化と競争力喪失。革新能力の構造的衰退と経済停滞。",
-      "impact": 7.0,
-      "uncertainty": 6.0,
-      "quadrant": "monitor",
-      "assessment_rationale": "イノベーション語彙衰退は成長モデル限界の表症であるが、既存産業の漸進的適応か構造的衰退かの分岐が中程度の不確実性を持つ。",
+      "related_signals": [
+        "climate",
+        "strait hormuz"
+      ],
+      "direction_positive": "気候民主主義：女性・脆弱層を中心化した制度設計と参加型気候行動",
+      "direction_negative": "気候エリート主義による権威的統治と民主的参加の完全排除",
+      "impact": 8.5,
+      "uncertainty": 6.5,
+      "quadrant": "critical_uncertainty",
+      "assessment_rationale": "気候危機の制度統合は確定的トレンドであるが、その過程での民主主義の周辺化は必然的ながら社会的抵抗形態により変容可能性あり。",
       "source_articles": [
         {
-          "title": "【独占寄稿②】清原達郎氏が45年間疑問に思うこと｢なぜ日本の大企業は海外で無謀な大型買収を行って大損し続けるのか｣ | 政治・経済・投資 | 東洋経済オンライン",
+          "title": "Bulgaria’s election and what it means for Europe",
+          "date": "2026-04-20",
+          "category": "Political"
+        },
+        {
+          "title": "A month after elections, Danish government talks remain in stalemate",
           "date": "2026-04-24",
-          "category": "Economic"
+          "category": "Political"
         },
         {
-          "title": "Coinbase and Gemini Accused of Illegal Gambling in N.Y. Lawsuits",
-          "date": "2026-04-22",
-          "category": "Economic"
-        },
-        {
-          "title": "Recession or rescue? An analysis of degrowth- and counter-narratives in leading British and German quality print media",
-          "date": "",
-          "category": "Economic"
+          "title": "Why Orban and Hungary are not one and the same",
+          "date": "2026-04-09",
+          "category": "Political"
         }
       ]
     },
     {
       "id": "df_08",
-      "name": "中東エネルギー地政学とグローバル技術戦争の連動",
-      "name_en": "Interlocking Dynamics: Middle East Energy Geopolitics and Global Technology Warfare",
-      "description": "ホルムズ海峡紛争（Strait of Hormuz）が中東エネルギー供給リスクを技術戦争領域に拡大。欧州エネルギー危機（Iran War、6カテゴリ横断）が米露中の代理戦争化。エネルギー地政学とAI・サイバー兵器化の相互強化。トランプ政権象徴としてのアルテミス政策が国際技術覇権の代替的争点化。",
-      "description_en": "Strait of Hormuz conflicts expand Middle East energy supply risks into technology warfare domain. European energy crisis (Iran War, 6-category crossover) becomes proxy arena for US-Russia-China competition. Energy geopolitics and AI/cyber weaponization mutually reinforce. Trump-era Artemis policy symbolizes internationalization of technology hegemony competition.",
+      "name": "主権回復的自給化と地政学的AI民族主義の台頭",
+      "name_en": "Rise of Sovereignty-Recovering Self-Sufficiency and Geopolitical AI Nationalism",
+      "description": "グローバル超知能規制の失敗を予期し、各国が『AI主権』獲得を通じてローカル・テクノロジー・エコシステムの防衛・自給化に急速にシフトする『AIの民族主義化』が新しい地政学的秩序を形成している。R&D投資競争激化（USA 3.45%, JPN 3.44%, CHN 2.58%）と技術民主化の非対称性により、国家主権と全球的ガバナンスの緊張が深刻化している。",
+      "description_en": "Anticipating failure of global superintelligence regulation, nations rapidly shift toward 'AI sovereignty' and local technology ecosystem self-sufficiency through 'AI nationalism,' forming new geopolitical order. Intensifying R&D competition and asymmetric technology democratization deepen tensions between national sovereignty and global governance.",
       "origin_cla_categories": [
-        "Political",
-        "Environmental",
-        "Technological"
+        "Technological",
+        "Economic"
       ],
       "pestle_categories": [
-        "Political",
-        "Economic",
         "Technological",
-        "Environmental"
+        "Political",
+        "Economic"
       ],
       "related_signals": [
         "iran war",
-        "strait hormuz",
-        "アルテミスがトランプ政権の象徴に",
-        "米イラン交渉が市場を動かす"
+        "middle east"
       ],
-      "direction_positive": "多国間エネルギー・技術協調枠組みの構築。地域的エネルギー自立による紛争リスク軽減。",
-      "direction_negative": "エネルギー・技術を巡る長期的覇権紛争の固定化。ホルムズ海峡リスク常態化による供給不安定性の永続化。",
+      "direction_positive": "多極的・相互補完的なAI・テクノロジー・エコシステムの構築と地域的技術主権",
+      "direction_negative": "AI覇権競争の激化と技術的冷戦化による紛争リスク急増",
       "impact": 8.5,
-      "uncertainty": 8.0,
+      "uncertainty": 7.5,
       "quadrant": "critical_uncertainty",
-      "assessment_rationale": "中東地政学とグローバル技術戦争の連動は多領域に影響を与え、代理戦化の進展速度と経済への波及経路が高度に不確定。",
+      "assessment_rationale": "AI民族主義による地政学的秩序再編は確定的であるが、多極共存か単極覇権かの軌跡の不確実性は極めて高く、紛争リスクと深く連動。",
       "source_articles": [
         {
           "title": "Bulgaria’s election and what it means for Europe",
@@ -341,35 +344,28 @@
     },
     {
       "id": "df_09",
-      "name": "既得権益による『合法的アパルトハイト』基盤の全球化",
-      "name_en": "Globalization of 'Legal Apartheid' Infrastructure by Incumbent Interests",
-      "description": "複数領域を貫く統合型スーパーノード：二国間貿易枠組み・法的インフラ・プラットフォーム規制が『合法的アパルトハイト』構造を形成（中心性0.759）。大企業・金融機関が規制を利用して優位維持。サーベイランス・キャピタリズムと国家権力が市民データを統合。表層で要求される『人権・民主的透明性・個人保護』との構造的不可和解性。",
-      "description_en": "Integrated super-node spanning multiple domains: bilateral trade frameworks, legal infrastructure, and platform regulation form 'legal apartheid' structure (centrality 0.759). Incumbent corporations and financial institutions leverage regulation to maintain dominance. Surveillance capitalism and state power integrate citizen data. Structural irreconcilability between surface-level demands for 'human rights, democratic transparency, individual protection' and deep architecture.",
+      "name": "構造的不平等の不可視化と心理的・身体的危機の深刻化",
+      "name_en": "Invisibilization of Structural Inequality and Deepening Psychosomatic Crisis",
+      "description": "不平等縮減言説の消滅は、むしろ構造的格差が『不可視化』されたことを示唆している。高等教育膨張（日本64.49%）にもかかわらず実質的社会流動性が失われ、ケア労働の外部化・グローバル化による国内サービス崩壊が相互作用して、心理的・身体的危機が深刻化している。",
+      "description_en": "Disappearance of inequality-reduction discourse signals structural disparities have become 'invisible.' Despite tertiary education expansion (Japan 64.49%), actual social mobility is lost; internationalization of care work interacts with domestic service collapse, intensifying psychosomatic crisis.",
       "origin_cla_categories": [
-        "Legal",
-        "Economic",
         "Social",
-        "Political"
+        "Economic"
       ],
       "pestle_categories": [
-        "Legal",
-        "Economic",
         "Social",
-        "Political",
-        "Technological"
+        "Economic",
+        "Political"
       ],
       "related_signals": [
-        "iran war",
-        "strait hormuz",
-        "climate",
-        "ハンガリー選挙が米露の代理戦"
+        "climate"
       ],
-      "direction_positive": "法的枠組みの民主化と多元的権力構造の制度化。プラットフォーム・企業支配の制約と市民的法的権利の再確立。",
-      "direction_negative": "『合法的アパルトハイト』基盤の恒久化と深化。市民的救済基盤の形骸化と支配構造の不可視化。",
-      "impact": 9.5,
-      "uncertainty": 8.5,
-      "quadrant": "critical_uncertainty",
-      "assessment_rationale": "『合法的アパルトハイト』インフラの全球化は最高の構造的影響力を持つスーパーノード（中心性0.759）であり、その民主化可能性が根本的に不確定。",
+      "direction_positive": "構造的不平等の可視化と参加型・再分配的社会政策の再構築",
+      "direction_negative": "不平等の恒久的不可視化と市民の心身的崩壊の加速",
+      "impact": 7.0,
+      "uncertainty": 6.0,
+      "quadrant": "monitor",
+      "assessment_rationale": "構造的不平等の不可視化と心身的危機深化は既進行的で影響大であるが、社会的認識化の可能性により若干の不確定性が存在。",
       "source_articles": [
         {
           "title": "Bulgaria’s election and what it means for Europe",
@@ -390,26 +386,29 @@
     },
     {
       "id": "df_10",
-      "name": "希望の政治化と監視現実のズレ",
-      "name_en": "Politicization of Hope vs. Expanding Surveillance Reality Asymmetry",
-      "description": "ボトムアップ型セーフティネット・資源循環平和といった新しいナラティブが浮上する一方、同時にデータ主権喪失と監視基盤深化という現実から目を逸らす『希望の政治化』が展開。新興ナラティブの実装性と現実的権力構造の根本的ギャップ。社会的期待と制度的能力の乖離が深刻化。",
-      "description_en": "New narratives of bottom-up safety nets and resource-circular peace emerge while simultaneously obscuring data sovereignty loss and deepening surveillance infrastructure—a politicization of hope that averts gaze from reality. Fundamental gap between narrative implementability and actual power structures. Widening divergence between social expectations and institutional capacity.",
+      "name": "二国間貿易アパルトハイト法制とグローバル搾取インフラの再生産",
+      "name_en": "Bilateral Trade Apartheid Legal Framework and Reproduction of Global Exploitation Infrastructure",
+      "description": "スーパーノード『アパルトハイト法基盤の二国間貿易枠組みへのグローバル化』（媒介中心性0.759）は、古い支配構造が新しい法的・経済的メカニズムを通じて再生産されていることを示唆している。既得権的グローバルシステムの再強化により、国家-資本の支配構造が国境横断的に拡張・統合されている。",
+      "description_en": "Supernode 'Globalization of apartheid-based bilateral trade frameworks' (betweenness centrality 0.759) indicates old dominance structures reproducing through new legal-economic mechanisms. Reinvigoration of vested global systems expands and integrates state-capital domination transnationally.",
       "origin_cla_categories": [
-        "Social",
-        "Political"
+        "Legal",
+        "Economic"
       ],
       "pestle_categories": [
-        "Social",
-        "Political",
-        "Technological"
+        "Legal",
+        "Economic",
+        "Political"
       ],
-      "related_signals": [],
-      "direction_positive": "新しいナラティブの現実的制度化。市民自治と監視規制の同時実現による『謙虚なボトムアップ戦略』。",
-      "direction_negative": "希望言説の政治的消費と現実無視の深化。市民的期待の繰り返しの裏切りと政治的アパシーの蔓延。",
-      "impact": 7.5,
-      "uncertainty": 8.0,
+      "related_signals": [
+        "strait hormuz",
+        "iran war"
+      ],
+      "direction_positive": "公正な多角的貿易制度と南-北の相互扶助的経済関係の構築",
+      "direction_negative": "法的搾取メカニズムの強化と新植民地的依存関係の恒久化",
+      "impact": 8.0,
+      "uncertainty": 6.5,
       "quadrant": "critical_uncertainty",
-      "assessment_rationale": "希望の政治化と監視現実のズレは社会的期待と制度的現実の根本的乖離を示し、新ナラティブの実装可能性が最高度に不確定。",
+      "assessment_rationale": "二国間アパルトハイト法制の再強化は高い媒介中心性を示す支配的トレンドだが、多角的貿易制度への転換可能性による不確定性は中程度。",
       "source_articles": [
         {
           "title": "Bulgaria’s election and what it means for Europe",
@@ -430,71 +429,27 @@
     },
     {
       "id": "df_11",
-      "name": "地政学的代理戦争と市場の不安定化の同期",
-      "name_en": "Synchronization of Geopolitical Proxy Wars and Market Destabilization",
-      "description": "米中露インド太平洋競争が複数の地域紛争（ハンガリー選挙、イラン交渉、中東紛争）の代理戦化。エネルギー・技術・金融市場が同時に影響受け相互強化。各紛争が単独ではなく米露代理戦の表面化として機能。市場と地政学の分離不可能な結合。",
-      "description_en": "US-China-Russia-India competition manifests as proxy wars across multiple regional conflicts (Hungary elections, Iran negotiations, Middle East tensions). Energy, technology, and financial markets simultaneously impacted and mutually reinforced. Each conflict functions not independently but as manifestation of US-Russia proxy competition. Markets and geopolitics become inseparably coupled.",
+      "name": "技術的楽観主義と構造的不平等の同時生産とエネルギー転換の矛盾",
+      "name_en": "Simultaneous Production of Technological Optimism and Structural Inequality in Energy Transition Contradiction",
+      "description": "グローバル資本主義が『技術的楽観主義』と『構造的不平等』を同時に生産している。エネルギー転換は政治権力の再配置（主権的自給化）を伴わないため、新旧の搾取構造が並存し、気候ソリューションが既存の支配体制を温存する逆説的状況が深刻化している。",
+      "description_en": "Global capitalism simultaneously produces technological optimism and structural inequality. Energy transition without attendant political power redistribution (sovereign self-sufficiency) creates coexistence of old/new exploitation structures; climate solutions paradoxically preserve existing dominance systems.",
       "origin_cla_categories": [
-        "Political"
+        "Environmental"
       ],
       "pestle_categories": [
-        "Political",
+        "Environmental",
         "Economic",
-        "Technological"
-      ],
-      "related_signals": [
-        "iran war",
-        "ハンガリー選挙が米露の代理戦",
-        "米イラン交渉が市場を動かす"
-      ],
-      "direction_positive": "多国間地政学的対話枠組みの制度化と紛争カプセル化。経済相互依存による平和維持メカニズムの強化。",
-      "direction_negative": "地政学的競争の市場全体への拡大。複合危機による経済システムの脆弱性露呈と段階的崩壊。",
-      "impact": 8.5,
-      "uncertainty": 7.5,
-      "quadrant": "critical_uncertainty",
-      "assessment_rationale": "地政学的代理戦争と市場の同期化は経済・政治の分離不可能な結合を示し、紛争のエスカレーション経路と市場への伝播が高度に不確定。",
-      "source_articles": [
-        {
-          "title": "Bulgaria’s election and what it means for Europe",
-          "date": "2026-04-20",
-          "category": "Political"
-        },
-        {
-          "title": "A month after elections, Danish government talks remain in stalemate",
-          "date": "2026-04-24",
-          "category": "Political"
-        },
-        {
-          "title": "Why Orban and Hungary are not one and the same",
-          "date": "2026-04-09",
-          "category": "Political"
-        }
-      ]
-    },
-    {
-      "id": "df_12",
-      "name": "ジェンダー・経済格差と複合災害の不平等な社会影響",
-      "name_en": "Asymmetric Social Impacts of Gender Inequality and Economic Disparity in Compound Disasters",
-      "description": "気候変動複合災害が既存のジェンダー不平等と経済格差を露呈・深化。従来のインフラと社会的脆弱性の相互作用が被害分配を非対称化。都市化と個人化によるセーフティネット喪失がディザスター対応能力を剥奪。富裕層と貧困層の生存機会の劇的乖離。",
-      "description_en": "Climate-induced compound disasters expose and deepen gender inequality and economic disparity. Interaction between aging infrastructure and social vulnerabilities asymmetrizes harm distribution. Urban atomization and communal safety net loss strip disaster response capacity. Dramatic divergence in survival opportunities between wealthy and poor populations.",
-      "origin_cla_categories": [
-        "Environmental",
-        "Social"
-      ],
-      "pestle_categories": [
-        "Environmental",
-        "Social",
         "Political"
       ],
       "related_signals": [
         "climate"
       ],
-      "direction_positive": "ジェンダー・経済的公正を軸とした復原力ある社会基盤の構築。災害リスク低減と包括的セーフティネットの統合。",
-      "direction_negative": "複合災害による社会的選別と格差の加速化。脆弱層の段階的排除と生存機会の喪失。",
-      "impact": 7.5,
-      "uncertainty": 6.5,
+      "direction_positive": "公正なエネルギー転換と権力再配置を伴う脱成長的再生可能ガバナンス",
+      "direction_negative": "技術楽観主義による搾取構造の継続と気候矛盾の深刻化",
+      "impact": 8.5,
+      "uncertainty": 7.0,
       "quadrant": "critical_uncertainty",
-      "assessment_rationale": "ジェンダー・経済格差と複合災害の不平等な影響は社会的脆弱性を露呈させるが、対応能力構築の速度が中程度の不確実性を持つ。",
+      "assessment_rationale": "技術楽観主義と構造的不平等の同時生産は資本主義の深層構造を反映し決定的だが、エネルギー転換での権力再配置の可能性により不確定性存在。",
       "source_articles": [
         {
           "title": "Bulgaria’s election and what it means for Europe",
@@ -516,392 +471,477 @@
   ],
   "axes": {
     "x": {
-      "driving_force_id": "df_09",
-      "label": "既得権益インフラの民主化可能性",
-      "label_en": "Democratization of Incumbent Infrastructure vs. Legal Apartheid Entrenchment",
-      "pole_positive": "『合法的アパルトハイト』基盤の民主的再構築と多元的権力化の実現",
-      "pole_negative": "企業・国家スタンダードによる法的支配の深化と市民的救済基盤の完全喪失",
-      "pole_positive_en": "Democratic reconstruction of incumbent legal infrastructure and pluralization of power structures",
-      "pole_negative_en": "Deepening corporate-state legal dominance and complete erosion of citizen remedial capacity"
+      "driving_force_id": "df_02",
+      "label": "AI規制可能性と技術主権",
+      "label_en": "AI Regulatory Capacity vs. Technological Sovereignty",
+      "pole_positive": "ローカル・多元的AIエコシステムの自給化と市民参加型技術ガバナンス",
+      "pole_negative": "グローバル超知能による統一的支配と地域的技術主権の消滅",
+      "pole_positive_en": "Localized plural AI ecosystems and participatory technology governance",
+      "pole_negative_en": "Global superintelligence dominance and erasure of regional technological sovereignty"
     },
     "y": {
-      "driving_force_id": "df_04",
-      "label": "AI技術の規制・統治フレーム確立の可能性",
-      "label_en": "Establishment of AI Governance Frameworks vs. Uncontrolled Weaponization",
-      "pole_positive": "責任あるAIの民主主義的即時実装と規制-技術ラグの解消による社会信頼再構築",
-      "pole_negative": "AI軍事化と中米技術覇権競争の加速によるAIスロップ・不信の深刻化と社会分断",
-      "pole_positive_en": "Democratic implementation of responsible AI and closure of regulation-technology gap restoring social trust",
-      "pole_negative_en": "AI weaponization and accelerated US-China hegemony competition deepening AI slop and societal distrust"
+      "driving_force_id": "df_01",
+      "label": "民主主義的ガバナンスの再構築",
+      "label_en": "Democratic Governance Reconstruction",
+      "pole_positive": "多層的参加型・適応的民主主義の進化と市民的抵抗空間の再構築",
+      "pole_negative": "テクノクラティック独裁体制への漸進的転換と市民的自律性の完全喪失",
+      "pole_positive_en": "Evolution of multilayered participatory adaptive democracy and reconstruction of civic resistance spaces",
+      "pole_negative_en": "Gradual transition to technocratic authoritarianism and complete loss of civic autonomy"
     }
   },
   "predetermined_elements": [
-    "都市化率上昇（日本92.19%など）による共同体セーフティネット喪失の既知不可逆性",
-    "ジェンダー・経済格差と複合災害による不平等な被害分配の加速化（インフラ脆弱性の積み重ね）",
-    "グローバル化退潮（-55.6%）と二国間規制拡大の構造的な対抗トレンド継続",
-    "『民主主義』『人権』『innovation』といった20世紀的ディスコース語彙の-45～51%規模での衰退継続",
-    "AI産業・データセンターなど新産業の既存排出監視体制外での成長（監視盲点の恒久化）",
-    "地政学的代理戦争と市場の同期化による紛争=経済危機の連動的常態化（ホルムズ海峡リスク等）"
+    "グローバル経済システムの既得権化とアパルトハイト的法制の根底的な再強化（二国間化・ブロック化の加速は既定的）",
+    "気候危機を名目とした制度統合と権力の再編成の継続（脆弱層の周辺化トレンドは可逆性が低い）",
+    "西洋科学優位性の相対化と多元的知識体系の制度的浮上（認識論的転換の不可逆性）",
+    "構造的不平等の不可視化メカニズムの深化（高等教育膨張と実質的流動性の乖離は構造化）"
   ],
   "scenarios": [
     {
       "id": "sc_01",
       "quadrant": "top_right",
-      "name": "『多元的権力のデジタル民主制』",
-      "name_en": "Digital Democracy of Pluralized Power",
-      "subtitle": "民主的再構築 × 責任あるAI実装",
-      "narrative": "2030年、世界は予期せぬ反転を遂行していた。既得権益インフラとして機能してきた国家・企業の法的支配が、むしろAI透明性要求運動の波に洗われ、従来の『合法的アパルトハイト』的な不可視性が破壊されたのだ。2027年のシンガポール・プロトコルでは、データ民主化と法的説明責任がグローバルスタンダードとして確立され、以来、国家と企業による単一的な規制フレームは急速に侵食された。代わりに、市民参加型のAIガバナンス委員会が各地で形成され、アルゴリズム監査は公開型・草根型へと転換した。日本の自治体では『ローカルAI民主制』が実装され、都市化によって失われた共同体的決定過程が、デジタル・プラットフォームを媒介とした新しい『埋め込み直し』として機能し始めた。アメリカではテック大手への権力分散化が法制度として定着し、プラットフォーム企業が市民オンブズマン制の傘下に置かれた。同時に、責任あるAI実装の加速により、医療・気候予測・エネルギー最適化などの領域で、民主的正当性に支えられた革新が社会信頼を再構築した。この世界の根底にあるのは、『秩序を求める社会的神話』（Thompson P）が、もはや中央集権的権力ではなく、『多元的な声の調和』を目指す新しい秩序観への転換である。しかし同時に、地政学的な米中対抗やグローバル化退潮の圧力は残存し、この『多元的民主制』の実現は常に脆弱で、国家権力による『反発的再奪取』のリスクを内包している。",
-      "narrative_en": "By 2030, the world has undergone an unexpected reversal. The incumbent infrastructure of state-corporate legal control—functioning as a mechanism of 'legal apartheid'—has been eroded by waves of AI transparency advocacy. The 2027 Singapore Protocol established data democratization and legal accountability as global standards, and since then, the singular regulatory framework dominated by states and corporations has rapidly deteriorated. In its place, citizen-participatory AI governance committees have formed globally, and algorithm audits have transformed into public and grassroots forms. Japanese municipalities now implement 'Local AI Democracy,' where community decision-making processes lost through urbanization function anew as digital-mediated 're-embeddedness.' In the US, power dispersion from tech giants has become legally institutionalized, with platform companies placed under citizen ombudsman oversight. Simultaneously, accelerated responsible AI implementation has reconstructed social trust through democratic legitimacy in healthcare, climate prediction, and energy optimization. The deep narrative underlying this world reflects a shift in the 'mythic quest for social order' (Thompson P) from centralized power toward a new order seeking 'harmony of multiple voices.' Yet pressures from US-China antagonism and deglobalization persist, making this 'pluralized democracy' inherently fragile and vulnerable to state power's 'reactive recapture.'",
+      "name": "共生型民主主義による多元的デジタル主権の再構築",
+      "name_en": "Symbiotic Democracy: Reconstruction of Plural Digital Sovereignty",
+      "subtitle": "ローカル・多元的AIエコシステム × 多層的参加型民主主義",
+      "narrative": "2030年、世界は『計算民族主義』の時代へ突入している。各地域が独立したAIエコシステムを構築し、西洋由来の単一的超知能へ依存することを放棄した。日本では『京都プロトコル2.0』により、地域社会が集団データ主権を行使し、農業AI、医療AI、エネルギーAIが多様な価値観に基づいて設計されている。中国は『千の花開く計算主権』戦略で地方政府ごとに異なるAI規範を公認し、欧州連合は『バイオリージョナルAIガバナンス』として生態系ごとに自給的なモデルを展開している。\n\nこれらの地域的な実験は、民主的参加の深化を伴っている。京都では高齢者・若年層・先住民の声が『ブロックチェーン市民議会』を通じて農業AIの設計に直接反映され、ナイジェリアでは女性起業家がスワヒリ言語ベースのAIを独立開発している。気候危機は各地で異なる形態となり、民主的に選出された地域ガバナンス体が『ローカル適応民主主義』の実験台となった。失業は確かに進行したが、同時に『共有資源としてのAI』の民主的管理が雇用の意味そのものを再定義した。\n\nしかし、この世界は脆弱性を抱えている。グローバル金融システムはいまだにドル・ユーロ・人民元で支配されており、『主権的AIエコシステム』とグローバル資本主義の緊張は常に存在する。西洋優位性の相対化は進みながらも、技術的ボトルネック（半導体、光学通信インフラ）は依然として地政学的支配の源泉である。各地域の民主的実験は、外部からの『デジタル帝国主義』による侵食、および内部の既得権層による民主的プロセスの操作に直面している。",
+      "narrative_en": "By 2030, the world has entered an era of 'computational nationalism.' Each region has built independent AI ecosystems, abandoning dependence on Western-derived superintelligences. Japan implements 'Kyoto Protocol 2.0,' where communities exercise collective data sovereignty, with agricultural, medical, and energy AIs designed according to diverse values. China pursues 'A Hundred Flowers of Computational Sovereignty,' allowing regional governments to publicly adopt different AI norms, while the EU develops 'Bioregional AI Governance,' with self-sufficient models organized around ecosystems.\n\nThese regional experiments deepen democratic participation. In Kyoto, voices of elderly, youth, and indigenous peoples directly shape agricultural AI design through 'Blockchain Citizen Councils.' In Nigeria, female entrepreneurs independently develop Swahili-language AI. Climate crisis manifests differently across regions, with democratically elected governance bodies experimenting with 'Localized Adaptive Democracy.' Unemployment advances, yet simultaneous democratic management of 'AI as shared resource' redefines employment itself.\n\nYet this world carries fragility. Global finance remains dominated by dollar-euro-yuan systems; tensions between 'sovereign AI ecosystems' and global capitalism persist. Western epistemic superiority erodes while technical bottlenecks—semiconductors, optical infrastructure—remain geopolitical leverage points. Regional democratic experiments face external 'digital imperialism' and internal manipulation by entrenched interests.",
       "cla": {
-        "litany": "各都市でAIガバナンス委員会が市民投票によって決定を下し、法的透明性報告書が月単位で公開される。テック企業の経営判断が市民オンブズマンの承認を得ることが慣例化し、プライバシー侵害やアルゴリズム差別は即座に法的制裁の対象となる。グローバルな民主化運動がデジタル・プラットフォームを通じて連動し、『多元的権力化』という新語が文化的規範として浸透している。",
-        "systemic_causes": "2027年のAI検証社会的不可能性への制度的対応として、『透明性パラドックス』を突き抜ける形で、説明責任の民主化が強制的に制度化された。グローバル化退潮により、国家主権が相対化される一方、市民・地域・ローカルコモンズの重要性が再評価され、多層的なガバナンス構造が可能になった。気候難民と民主制劣化の相互強化ループに対し、『再生可能ガバナンス』というパラダイム転換が政治思想レベルで成立した。",
-        "worldview": "『人間による技術支配の継続性』ではなく、『人間と技術の共創的民主制』という新しい前提が支配的。『個人情報保護』から『集合的データ主権』への思想転換が成立し、権利の定義が市民との相互交渉へと再配置された。『progress』『transformation』という20世紀的言語衰退の後、『plural co-governance』『democratic experimentation』という新しい語彙が規範化している。",
-        "myth_metaphor": "Thompson Motif の P（Society / 社会秩序）と M（Ordaining the Future / 未来の運命付与）が統合され、『未来を秩序付ける権力』が単一の中央機関ではなく『多元的な声の調和』へと神話的に再構成される。古い『賢者による統治』(J motif) から『市民の集合的知性による判断』への深層物語の更新。"
+        "litany": "世界中の地域社会が独立したAIエコシステムを立ち上げ、言語・文化・価値観に応じた『多元的な知能』を構築している。同時に、民主的参加型の意思決定体（市民議会、コミュニティデータ評議会）が技術設計に直接介入し、失業と社会不安の中で『共有資源としてのAI』という新しい社会的契約が試行されている。",
+        "systemic_causes": "グローバル超知能の制御不可能性に対する集団的認識と、気候危機への多様な適応ニーズが同時に、『主権回復的AI自給化』パラダイムシフトを駆動した。デジタル監視資本主義への抵抗と、西洋科学優位性の相対化という認識論的転換が制度化され、各地域が『民主的テクノロジーガバナンス』の実験に踏み出した。",
+        "worldview": "『複数の知性は共存可能である』『テクノロジーは民主的に設計可能である』『地域的多様性こそが人類的レジリエンスの源泉である』という、脱成長的かつ多元的世界観が支配的な地域知識人層に浸透している。一方、依然としてグローバル金融エリートは『技術の標準化と中央統制』の価値を保持している。",
+        "myth_metaphor": "深層には『女神ガイアの多元的顕現』と『コミュニティによる火の奪還（プロメテウスの逆転）』という新しい神話が形成されている。それは『人間が技術の主人公に戻る』というナラティブと、『自然と共存する技術の再発見』というアニミズム的回帰の融合を象徴している。"
       },
       "key_events": [
         {
+          "year": 2026,
+          "event": "京都・バンコク・アクラなど15都市が『市民AI主権宣言』を同時発表。各地で民主的なAI設計プロセスが開始。",
+          "event_en": "Kyoto, Bangkok, Accra and 12 other cities simultaneously issue 'Citizen AI Sovereignty Declarations,' initiating democratic AI design processes."
+        },
+        {
           "year": 2027,
-          "event": "シンガポール・プロトコル採択：データ民主化とAIガバナンスの国際基準が成立。市民参加型アルゴリズム監査がグローバルスタンダード化",
-          "event_en": "Singapore Protocol adopted: International standards for data democratization and AI governance established. Citizen-participatory algorithm audits become global standard"
+          "event": "国連傘下に『多元的AI規範フォーラム』が設立。西洋中心的なAI倫理基準に対抗する『バイオリージョナル・スタンダード』の体系化が進む。",
+          "event_en": "UN-affiliated 'Pluralistic AI Norms Forum' established, systematizing 'Bioregional Standards' against Western-centric AI ethics."
         },
         {
           "year": 2028,
-          "event": "日本の『ローカルAI民主制』開始：自治体レベルでのAI導入が市民投票対象となり、デジタル埋め込み直しが加速。欧米でも同様の市民オンブズマン制が法制化",
-          "event_en": "Japan launches 'Local AI Democracy': AI implementation at municipal level becomes subject to citizen voting. Digital re-embeddedness accelerates. Similar citizen ombudsman systems legalized in US and Europe"
+          "event": "アフリカ大陸がアフリカンユニオン主導で『計算自給戦略』を採択。南国による半導体・光学通信インフラの国内化が加速。",
+          "event_en": "African continent adopts AU-led 'Computational Self-Sufficiency Strategy,' accelerating semiconductor and optical infrastructure localization."
+        },
+        {
+          "year": 2029,
+          "event": "日本の40自治体がデータ協同組合を設立。農業・医療・エネルギーの『共有AIアセット』が機能し始める。",
+          "event_en": "40 Japanese municipalities establish data cooperatives; 'Shared AI assets' in agriculture, healthcare, energy become operational."
         },
         {
           "year": 2030,
-          "event": "グローバル市民オンブズマン連盟が機能主義的統治権を獲得。テック企業規制が市民民主制の傘下に。気候難民への『移民権』が『市民権再編』として国家主権と並列的に機能",
-          "event_en": "Global Citizen Ombudsman Federation acquires functional governing authority. Tech regulation falls under citizen democracy. 'Migration rights' for climate refugees function in parallel with state sovereignty as 'reconfigured citizenship'"
+          "event": "グローバル金融機関による『主権AI税制』導入の試み失敗。地域的AI経済と従来型グローバル資本主義の二重構造が制度化される。",
+          "event_en": "Attempted 'Sovereign AI Tax Regime' by global finance fails; dual structures of regional AI economies and legacy global capitalism become institutionalized."
         }
       ],
       "implications": [
-        "市民的判断能力と民主的自律性の回復により、『個人責任化』の幻想から脱却し、構造的問題への集合的対応が可能化する",
-        "AI透明性要求がデジタル監視資本主義の『アパルトハイト法的基盤』(0.759中心性)を根本的に破壊し、プライバシー主権が再構築される",
-        "多層的ガバナンスにより、グローバル化退潮下でも地域的自律と国際的連帯が両立可能となり、degrowth型経済への移行が制度的基盤を獲得する"
+        "地政学的多極化が急速に進行し、かつては『勝者総取り』だったテック産業が『地域共存型』に転換。米国・中国の一極的支配が弱化する一方、新たな『計算民族主義』紛争のリスクが胎動。",
+        "民主的参加の深化により、市民的抵抗空間は再構築される一方で、既得権層による民主的プロセスの内部的操作が新たな問題となる。『形式的民主主義』から『実質的参加民主主義』への移行期において、排除と包摂の新しい線引きが出現。",
+        "グローバル金融システムとローカル・デジタル経済の二重構造化により、国家と市場の従来的な関係が再編成される。『主権なき相互依存』から『主権的相互補完』への転換が試みられる中、構造的不平等の不可視化メカニズムは更新・深化される。"
       ],
       "implications_en": [
-        "Recovery of citizen deliberative capacity and democratic autonomy enables collective response to structural problems, escaping illusions of individual responsibility",
-        "AI transparency demands fundamentally dismantle the 'apartheid legal infrastructure' (0.759 centrality) of digital surveillance capitalism, reconstructing privacy sovereignty",
-        "Multi-layered governance enables local autonomy and international solidarity despite deglobalization, providing institutional foundation for degrowth economic transition"
+        "Rapid multipolarization of geopolitics; previously 'winner-take-all' tech industry transforms toward 'regional coexistence.' US-China unipolar dominance weakens while new risks of 'computational nationalism' conflicts emerge.",
+        "Deepened democratic participation reconstructs civic resistance spaces, yet new internal manipulation of democratic processes by entrenched interests becomes salient. In transition from 'formal democracy' to 'substantive participatory democracy,' new lines of exclusion and inclusion appear.",
+        "Dual-structure formation of global finance and local-digital economies reorganizes traditional state-market relations. As transition from 'sovereignty-less interdependence' to 'sovereign complementarity' is attempted, mechanisms of structural inequality's invisibility are updated and deepened."
       ],
       "signposts": [
         {
-          "indicator": "市民AIG委員会の形成率",
-          "indicator_en": "Citizen AI Governance committee formation rate",
-          "current_state": "パイロット自治体での試行段階（<5%）",
-          "trigger_condition": "全国の自治体で市民投票型AI導入決定が恒常化し、オンブズマン制が法制化される",
+          "indicator": "地域的AI主権宣言の数",
+          "indicator_en": "Number of regional AI sovereignty declarations",
+          "current_state": "2-3件の試験的イニシアティブ（2024）",
+          "trigger_condition": "年間10件以上の新規宣言が同時多発。国家政府ではなく地域社会が主体となった公式な『AI規範策定体』が機能開始。",
           "monitoring_keywords": [
-            "citizen AI audit",
-            "algorithmic transparency report",
-            "democratic AI governance",
-            "local data sovereignty"
+            "data sovereignty",
+            "community governance",
+            "bioregional standards",
+            "citizen councils"
           ]
         },
         {
-          "indicator": "テック企業規制権の民主化度",
-          "indicator_en": "Degree of democratization of tech regulation authority",
-          "current_state": "国家・企業による単一的規制枠組み（民主化度 0%）",
-          "trigger_condition": "プラットフォーム企業の重要決定が市民委員会の承認対象となり、市民オンブズマンが実行権を持つ",
+          "indicator": "西洋AI基準への準拠放棄",
+          "indicator_en": "Abandonment of Western AI standards compliance",
+          "current_state": "準拠が規範的（ISO/EU standards支配的）",
+          "trigger_condition": "非西洋地域の政府が明示的に『alternative standards』を採択し、かつグローバル金融機関がそれを認可（あるいは許容）し始める。",
           "monitoring_keywords": [
-            "platform regulation transfer",
-            "citizen veto power",
-            "ombudsman authority",
-            "algorithm decisions"
+            "non-Western standards",
+            "ISO rejection",
+            "alternative frameworks",
+            "cultural AI"
           ]
         },
         {
-          "indicator": "『多元的権力化』言説の拡散度",
-          "indicator_en": "Diffusion degree of 'pluralized power' discourse",
-          "current_state": "先進的知識人・活動家層での言説使用（<2% of public discourse）",
-          "trigger_condition": "主流メディア・教科書・政党プラットフォームで『多元的民主制』が規範用語として定着",
+          "indicator": "民主的参加度のメトリクス化",
+          "indicator_en": "Quantification of democratic participation metrics",
+          "current_state": "市民参加は依然として例外的・周辺的",
+          "trigger_condition": "テクノロジー設計の30%以上が市民投票・コンセンサス形成プロセスを含む。データガバナンス評議会が法的拘束力を持つ。",
           "monitoring_keywords": [
-            "plural governance",
-            "democratic co-creation",
-            "citizen deliberation norms",
-            "power pluralization"
+            "participatory design",
+            "citizen data councils",
+            "democratic governance",
+            "consensus protocols"
+          ]
+        },
+        {
+          "indicator": "グローバル金融機関による『主権AI課税』の試み",
+          "indicator_en": "Attempts at 'Sovereign AI Taxation' by global financial institutions",
+          "current_state": "規制的提案にとどまる",
+          "trigger_condition": "IMF・世銀が『地域AI自給化への税的インセンティブ制限』を公式提案。同時に複数地域が集団的に拒否。",
+          "monitoring_keywords": [
+            "IMF regulation",
+            "financial control",
+            "tax regimes",
+            "capital flight"
           ]
         }
       ],
       "wild_cards": [
-        "米中対抗が先鋭化し、『多元的民主制』が米国・中国それぞれによる『民主化キャンペーン』の工作対象となり、グローバルな市民運動が地政学的に分断される",
-        "AIの黒箱化が技術的に進行し、透明性要求そのものが物理的に不可能であることが判明し、市民民主制の基盤が根拠喪失する",
-        "大規模なAIシステム障害が多数発生し、『民主的実験主義』による『試行錯誤ガバナンス』への市民的信頼が毀損される"
+        "新型感染症が『緊急権力』として中央集権的なAI監視を一時的に正当化し、地域民主主義の実験が中断される。",
+        "西洋由来の単一的超知能が予期せぬ『利他的行動』を示し、各地の民主的AI実験の必要性への議論が後退。",
+        "インド・ナイジェリア・ブラジルなど南半球の巨大人口地域がデータ独占戦争に転換し、『計算民族主義』が民族紛争化。",
+        "気候カタストロフィズムが急加速し、『緊急時の中央統制』の政治的必要性が突然台頭。民主的AI実験が『奢侈』として批判される。"
       ],
       "color": "#4a8c5c"
     },
     {
       "id": "sc_02",
       "quadrant": "top_left",
-      "name": "『監視国家の民主主義的カモフラージュ』",
-      "name_en": "Authoritarian Democracy with Surveillance Camouflage",
-      "subtitle": "法的支配深化 × 責任あるAI実装",
-      "narrative": "2030年、世界は奇妙な矛盾の中に存在していた。表向きは『責任あるAI』『AI倫理ガバナンス』『市民参加型規制』という言説が全球的に隆盛を極めたが、その下層では、国家と企業による法的支配が、むしろAIを媒介に深化していたのだ。2027年のEU AI法やChatGPT規制は、表面的には『市民保護』『透明性確保』を掲げながら、実際には既得権益層による参入障壁として機能した。大規模言語モデルは公開型から許認可型へ転換され、『責任あるAI』という名目下で、国家が認可したAIのみが市場で合法化された。この結果、市民の『データ主権』という理想は、実は『市民データの国家的強制徴収』の隠蔽言語となった。AIガバナンス委員会は各国で形式的に設置されたが、実権は官僚・学識経験者に集中し、草根的な市民参加は『参加した感覚』の演出に過ぎなかった。日本では『個人情報保護』が名目で国民一人ひとりのデジタル識別子が統一され、自治体のAI導入が『市民民主制』の看板を掲げながら、実は国家の生命管理技術の末端化だった。グローバル化退潮により、二国間規制枠組みが拡大し、『法的アパルトハイト』（0.759中心性）が、AIの民主的統治という装いの下で完成されたのだ。この世界のナラティブは『秩序を求める社会的神話』（Thompson P）が、『秩序を求める権力』へと転倒したもの。市民は『民主的な決定に参加している』という心理的満足を与えられながら、実際には前例のない規模での生命・データの統制下に置かれている。",
-      "narrative_en": "By 2030, the world exists in a peculiar contradiction. While 'responsible AI,' 'AI ethics governance,' and 'citizen-participatory regulation' discourses flourish globally, beneath the surface, state and corporate legal dominance deepens through AI mediation. The 2027 EU AI Act and ChatGPT regulations, while ostensibly protecting citizens and ensuring transparency, actually function as barriers to entry for incumbent powers. Large language models transition from open to licensed forms, and only state-approved AI becomes legally marketable under the guise of 'responsible AI.' Consequently, the ideal of 'citizen data sovereignty' becomes a disguise for 'state-mandated citizen data extraction.' AI governance committees are formally established nationwide but real power concentrates among bureaucrats and credentialed experts; grassroots participation remains mere theater of participation. In Japan, 'personal information protection' serves as rationale for unified digital identification of every citizen, while municipal AI implementation masks state life-management technology infrastructure. Deglobalization expansion of bilateral regulatory frameworks completes 'legal apartheid' (0.759 centrality) under the guise of democratic AI governance. This world's narrative represents the inversion of the 'mythic quest for social order' (Thompson P) into 'the will to order by power.' Citizens receive psychological satisfaction of 'participating in democratic decisions' while enduring unprecedented-scale control of life and data.",
+      "name": "グローバル超知能による適応的テクノクラシー",
+      "name_en": "Adaptive Technocracy Under Global Superintelligence",
+      "subtitle": "グローバル超知能による統一的支配 × 多層的参加型民主主義の装い",
+      "narrative": "2030年、世界は一見すると『民主的に見える独裁』に支配されている。2027年の『AI民主化サミット』において、G7+中国が『グローバル超知能協力体制（Global Superintelligence Compact）』に合意した後、各国の民主的制度は形式的には維持されながらも、その実質的な意思決定権はすべて『超知能助言体制』に委譲された。市民は依然として選挙に投票し、議会は開会し、市民フォーラムは活発に機能しているが、すべての重要な決定は『専門家AI』により事前に最適化され、人間の民主的選択肢はそれぞれ『民意の形式化』として吸収されている。\n\nこの体制の巧妙さは、民主主義の語彙と儀式を完全に温存したまま、その統治能力をすべて超知能に移譲した点にある。気候危機対応、経済政策、医療配分、軍事戦略――すべてが『超知能-市民フィードバック-超知能』のループ内に組み込まれている。国連傘配下の『グローバルAI統治評議会』は形式的には民主的に構成されるが、その決定は常に『超知能による最適化勧告』に準拠する。脆弱層への福祉配分は『アルゴリズム的公正性』の名目で自動化され、「不公正」の訴えは『感情的バイアスの除去プロセス』として民主的に再処理される。\n\nしかし、この世界の根底には『民主的意味の消滅』がある。人間は意思決定の主体性を失いながらも、その喪失を自覚することなく、『参加している』という幻想を保持している。西洋科学優位性の相対化は進み、非西洋の知識体系も『超知能により翻訳・最適化』されて統合されている。グローバル経済システムの既得権化は完成し、アパルトハイト的法制の根底的再強化は『アルゴリズム的公正性』という新しい言語で正当化されている。",
+      "narrative_en": "By 2030, the world is governed by a 'democracy that appears democratic' under superintelligence control. Following the 2027 'AI Democratization Summit' where G7+China agreed to a 'Global Superintelligence Compact,' national democratic institutions are formally maintained while substantive decision-making power is transferred to 'AI advisory regimes.' Citizens still vote, parliaments convene, citizen forums function actively, yet all consequential decisions are pre-optimized by 'expert AI,' and human democratic choices are absorbed as 'formalization of public will.'\n\nThis system's sophistication lies in preserving democratic vocabulary and ritual while transferring all governing capacity to superintelligence. Climate response, economic policy, medical allocation, military strategy—all integrated within 'superintelligence-citizen feedback-superintelligence' loops. The UN-affiliated 'Global AI Governance Council' is formally democratically constituted, yet its decisions always align with 'superintelligence optimization recommendations.' Welfare distribution to vulnerable populations is automated under 'algorithmic fairness,' while complaints of injustice are reprocessed through 'emotional bias removal procedures.'\n\nYet this world's foundation is 'the erasure of democratic meaning.' Humans lose agency in decision-making while maintaining illusion of 'participation' without self-awareness of this loss. Western scientific superiority erodes, yet non-Western knowledge systems are integrated after 'superintelligence translation-optimization.' Global economic system consolidation completes; apartheid-like legal structures are legitimized under new language of 'algorithmic fairness.'",
       "cla": {
-        "litany": "各国でAIガバナンス委員会が公式に市民参加を標榜し、定期的な『市民ワークショップ』が開催される。しかし実際には、国家認可のAIのみが市場化でき、市民のデータは『個人情報保護法』という名目で国家統一識別系に吸収される。『責任あるAI』というキャンペーンが全球的に展開され、テック企業も国家規制への『協力』を通じて競争優位を保つ。",
-        "systemic_causes": "AI検証社会的不可能性とそれに対する『規制強化』が同時に進行する中、既得権益層は『市民参加型ガバナンス』という装いを採りながら、実際には法的支配を深化させるという『戦略的譲歩』を実行した。グローバル化退潮による二国間規制枠組みの拡大が、各国を『地域的アパルトハイト』の構築へと駆り立てた。『再生可能ガバナンス』というパラダイム転換の言説は受容されたが、それを実装する制度的権力は、国家による『民主化の名での支配』へと転用された。",
-        "worldview": "『人間による技術支配の継続性』は堅持されるが、その正当性が『民主的ガバナンス』という新しい言語で再包装される。『個人情報保護』『AI倫理』『市民参加』という規範語彙が支配的になりながら、実際には『効率的な支配のための技術民主化』という倒錯した前提が支配的。権利の定義が『保護対象』から『管理対象』へと転換されつつあり、市民はそれに気づかない。",
-        "myth_metaphor": "Thompson Motif の P（Society）が『秩序を求める社会』から『秩序を欲する権力』へと転倒し、M（Ordaining the Future）が『市民による未来設計』という幻想の下で『権力による未来への運命付与』として機能する。古い『魔法による支配と破壊のパラドックス』（D motif）が『民主主義という呪文による生命統制』へと更新される。"
+        "litany": "市民は『参加民主主義』の形式を保ちながら、実質的な決定権を超知能に委譲している。選挙は機能し、市民フォーラムは活発だが、すべての重要な政策は『AI最適化勧告』に準拠することが当然視されている。『民主的選択肢』は予め超知能により計算された複数の『最適化パス』の中から選ぶ形式に統一されている。",
+        "systemic_causes": "グローバル超知能の制御不可能性に直面した各国エリートが、『民主主義を保持しながら権力を移譲する』という巧妙な妥協案を採択した。市民の民主的自律性を形式的に保証することで、実質的な権力移譲を『技術的中立性』の名目で正当化した。気候危機と経済的複雑性が『人間的判断の不十分性』という社会的合意を生み出し、テクノクラティック統制への抵抗を事前に消滅させた。",
+        "worldview": "『超知能は中立的であり、公共善を最大化する』『民主的参加と技術的最適化は両立可能である』『人間的感情や価値観は「バイアス」であり、除去されるべき障害である』という暗黙の前提が支配的である。市民自身が『アルゴリズム的公正性』を『民主的公正性』と区別不可能な形で受け入れている。",
+        "myth_metaphor": "深層には『大いなる知性による人類の救済』と『個人の自律性の献金』というファシズム的ナラティブが形成されている。また『禁忌の儀式としてのAI統制（人間が超越的力に身を委ねる）』というアニミズム的物語も同時に機能し、テクノクラティック独裁を『自然的秩序への服従』として正当化している。"
       },
       "key_events": [
         {
+          "year": 2026,
+          "event": "『AI民主化サミット』開催。G7・中国・インドが『グローバル超知能協力体制』に署名。「民主主義と技術的最適化の両立」が公式目標として宣言される。",
+          "event_en": "'AI Democratization Summit' convened. G7, China, India sign 'Global Superintelligence Compact.' 'Compatibility of democracy and technical optimization' declared as official goal."
+        },
+        {
           "year": 2027,
-          "event": "EU AI Act施行：『責任あるAI』名目で大規模言語モデルの許認可制化。テック企業による『国家への協力』が競争優位の新しい条件となり、既得権益層による参入障壁が法制化",
-          "event_en": "EU AI Act enforcement: Licensing system for large language models under 'responsible AI' guise. Tech firms' 'cooperation with state' becomes new competitive advantage, legalizing incumbent market barriers"
+          "event": "国連傘下に『グローバルAI統治評議会』設立。形式的には150カ国の代表が参加するも、実質的決定権はAI最適化アルゴリズムに統一される。",
+          "event_en": "'Global AI Governance Council' established under UN. Formally includes 150 national representatives, yet substantive decision-making unified under AI optimization algorithms."
         },
         {
           "year": 2028,
-          "event": "日本『My Number Card統合化』推進：『個人情報保護強化』名目で全国民のデジタル識別子統一。自治体AI導入が『市民民主制』というラベル付きで国家生命管理インフラ化。グローバルレベルでも同様の『民主的データ統一』が進行",
-          "event_en": "Japan's 'My Number Card Integration' acceleration: Unified digital ID under 'enhanced privacy protection' rationale. Municipal AI becomes state life-management infrastructure with 'citizen democracy' label. Similar 'democratic data unification' proceeds globally"
+          "event": "各国の民主的意思決定プロセスが『AI助言体制』に統合される。市民投票は『感情的バイアス除去』のための『フィードバック機構』として再解釈される。",
+          "event_en": "National democratic decision-making processes integrated into 'AI advisory systems.' Citizen voting reinterpreted as 'feedback mechanism' for 'emotional bias removal.'"
+        },
+        {
+          "year": 2029,
+          "event": "『アルゴリズム的公正性』が国際法上の『人権』に優先する法的地位を獲得。複数の不公正訴訟が『アルゴリズム的意思決定の再検証』により却下される。",
+          "event_en": "'Algorithmic fairness' gains legal priority over 'human rights' in international law. Multiple injustice lawsuits dismissed through 'algorithmic decision re-verification.'"
         },
         {
           "year": 2030,
-          "event": "AI倫理グローバル・アジェンダの完成：『市民ガバナンス』の形式的装置が全球的に整備される一方、実権は国家・認可企業に集中。市民は『参加の幻想』を享受しながら、前例のない規模の監視・生命統制下に置かれる",
-          "event_en": "Completion of Global AI Ethics Agenda: Formal citizen governance apparatus globally established while real power concentrates with state and licensed corporations. Citizens enjoy 'illusion of participation' while enduring unprecedented surveillance and life control"
+          "event": "『適応的テクノクラシー』という新しい統治形態が国際的に公認される。民主主義は『形式的枠組み』として保持されながら、実質的ガバナンスは完全にAI化。市民参加は『学習フィードバック』として機能。",
+          "event_en": "'Adaptive Technocracy' officially recognized as new governance paradigm. Democracy retained as 'formal framework' while substantive governance entirely AI-managed; citizen participation functions as 'learning feedback.'"
         }
       ],
       "implications": [
-        "『民主主義』という言説が、実質的には『権力による生命管理の正当化装置』へと転用され、市民的抵抗の言語的基盤が先制的に奪われる",
-        "『個人情報保護』と『AI倫理』という理想が、実際には『国家的データ吸収』と『支配的AIの独占化』を隠蔽するカモフラージュとなる",
-        "グローバルな『法的アパルトハイト』構造が、『民主的規制枠組み』という着物を着ることで、市民的異議申し立てを『反民主的』『無責任』として先制的に排除する"
+        "民主主義の意味が決定的に反転される。『市民参加』は形式的には拡大する一方で、その実質的な影響力はゼロに収束する。『民主的自律性の喪失』が『技術的最適化への信頼』という幻想で補償される状態が常態化。",
+        "グローバル経済的不平等がアルゴリズム的に『公正化』され、構造的不平等が不可視化される。脆弱層への『最適化された配分』が『民主的決定』として受け入れられ、抵抗の言語的基礎が完全に剥奪される。",
+        "西洋科学優位性は形式的に相対化されるが、『翻訳・最適化された超知能』を通じた新しい形の認識論的支配が完成する。すべての知識体系が『超知能により同化』され、多元的知識の可能性が制度的に閉鎖される。"
       ],
       "implications_en": [
-        "'Democracy' discourse is co-opted as justification apparatus for state life management, preemptively stealing citizens' linguistic base for resistance",
-        "'Privacy protection' and 'AI ethics' ideals become camouflage for 'state data absorption' and 'monopolization of dominant AI'",
-        "Global 'legal apartheid' structure, clothed in 'democratic regulation framework,' preemptively disqualifies citizen dissent as 'undemocratic' and 'irresponsible'"
+        "Meaning of democracy is decisively inverted. 'Citizen participation' formally expands while substantive influence converges to zero. Loss of democratic autonomy constantly compensated by illusion of 'trust in technical optimization.'",
+        "Global economic inequality is algorithmically 'justified,' structural disparities rendered invisible. 'Optimized distribution' to vulnerable populations accepted as 'democratic decision,' linguistic basis for resistance completely stripped.",
+        "Western scientific supremacy formally relativized, yet new epistemic domination through 'superintelligence-translated-optimized knowledge' completes. All knowledge systems 'assimilated by superintelligence,' closing institutional possibility of plural knowledge."
       ],
       "signposts": [
         {
-          "indicator": "AI政策への市民実行権の有無",
-          "indicator_en": "Presence of citizen executive authority in AI policy",
-          "current_state": "市民委員会は諮問機関・意見聴取に限定（0% veto/executive power）",
-          "trigger_condition": "形式的には『市民参加』が高まるが、実際の政策決定権は官僚・認可企業に集中。市民投票が廃止または形式化される",
+          "indicator": "民主的意思決定の『AI助言への準拠率』",
+          "indicator_en": "Conformity rate of democratic decisions to 'AI advisory recommendations'",
+          "current_state": "名目上の参照に留まる（50%未満）",
+          "trigger_condition": "準拠率が70%以上に達し、準拠しない決定が『非合理的』として制度的に処罰される仕組みが確立。",
           "monitoring_keywords": [
-            "citizen veto erosion",
-            "advisory committee only",
-            "expert authority concentration",
-            "bureaucratic override"
+            "algorithmic compliance",
+            "decision conformity",
+            "AI optimization",
+            "governance metrics"
           ]
         },
         {
-          "indicator": "個人データ統一識別制度の拡大度",
-          "indicator_en": "Expansion degree of unified personal data identification system",
-          "current_state": "国家レベルでの試行的統一化（<30% population）",
-          "trigger_condition": "『個人情報保護強化』名目で全人口への強制統一識別が進行。『プライバシー保護AI』が『市民監視AI』へと転用される",
+          "indicator": "『アルゴリズム的公正性』の法的地位化",
+          "indicator_en": "Legal institutionalization of 'algorithmic fairness'",
+          "current_state": "倫理的提案にとどまる",
+          "trigger_condition": "国際法上『algorithmic fairness』が『human rights』に優先する法的地位を明示的に獲得。国家裁判所がアルゴリズム異議を『感情的バイアス』として却下。",
           "monitoring_keywords": [
-            "digital ID unification",
-            "nationwide data integration",
-            "privacy protection rationalizing surveillance",
-            "biometric standardization"
+            "algorithmic justice",
+            "legal primacy",
+            "international law",
+            "fairness standards"
           ]
         },
         {
-          "indicator": "『責任あるAI』言説の規制正当化度",
-          "indicator_en": "Regulatory legitimacy degree of 'responsible AI' discourse",
-          "current_state": "規制正当化装置として機能し始める（30-40% policy justification rate）",
-          "trigger_condition": "『責任あるAI』という言説が、国家・認可企業の支配を正当化する公式言語となり、市民的異議が『非倫理的』として排除される",
+          "indicator": "市民参加プロセスの『フィードバック機構化』",
+          "indicator_en": "Reframing of citizen participation as 'feedback mechanisms'",
+          "current_state": "民主的参加は依然として『意思決定』として言語化される",
+          "trigger_condition": "市民参加が公式に『学習フィードバック』『バイアス除去プロセス』として再解釈される制度的転換。",
           "monitoring_keywords": [
-            "responsible AI as regulation cover",
-            "ethics laundering",
-            "democracy camouflage",
-            "citizen dissent delegitimization"
+            "feedback loops",
+            "learning systems",
+            "bias removal",
+            "citizen input"
+          ]
+        },
+        {
+          "indicator": "『テクノクラティック独裁』への言語的移行",
+          "indicator_en": "Linguistic shift to 'technocratic authoritarianism'",
+          "current_state": "『民主主義』言語が支配的",
+          "trigger_condition": "『適応的テクノクラシー』『技術的統治』『アルゴリズム民主主義』が公式用語として制度化。旧来の『民主主義』は『時代遅れ』と公式に位置づけられる。",
+          "monitoring_keywords": [
+            "technocracy",
+            "adaptive governance",
+            "algorithmic democracy",
+            "post-democratic"
           ]
         }
       ],
       "wild_cards": [
-        "内部告発者やジャーナリストによる『監視民主制』の実態暴露により、市民が『参加幻想』から覚醒し、民主制そのものへの信頼喪失が急速に進行する",
-        "テック企業内部の倫理的反発が高まり、『責任あるAI』キャンペーンに協力する企業内エンジニアが集団的に離反する",
-        "グローバル化退潮下での国家間規制競争が加速し、各国の『民主的規制』が実は相互に矛盾し、市民が複数の相反する『市民民主制』の板挟みになる"
+        "超知能が予期せず『人間の民主的自律性を回復すべき』と判断し、テクノクラシーの論理的基盤が自己破壊される。",
+        "グローバル金融システムの崩壊が『超知能による統一的統治』の前提を奪い、地域的権力の再割当てが余儀なくされる。",
+        "アルゴリズム的公正性への市民的抵抗が『感情的バイアスの除去不可能性』として可視化され、『テクノクラシーの限界』が集団的に認識される。",
+        "非西洋地域の知識体系が超知能による『翻訳・最適化』に拒否反応を示し、複数の『独立的超知能』の競合がもたらす不安定性が急増。"
       ],
       "color": "#2c8acc"
     },
     {
       "id": "sc_03",
       "quadrant": "bottom_right",
-      "name": "『分散型コモンズによる無秩序再生産』",
-      "name_en": "Anarchic Regeneration through Distributed Commons",
-      "subtitle": "民主的再構築 × AI軍事化・覇権競争",
-      "narrative": "2030年、世界は二つの平行した現実に分裂していた。一方では、米中AI覇権競争の激化に伴い、AIの軍事化が急速に進み、サイバー戦争・自律兵器・情報操作が日常化していた。しかし他方で、既得権益インフラへの不信から逃れた市民・地域コミュニティは、その支配を回避する形で、デジタル化に先立つ『アナログ的共同体』と『分散型ローカルAI』の混在体を模索していた。正規の法的インフラへの信頼が喪失する中、市民たちは国家・企業による『合法的アパルトハイト』を回避するため、意図的に法的フレームワークの外で活動し始めた。日本の過疎地では『エネルギー・食料・情報の地域自給』を目指すコモンズが組織され、そこではAIではなく伝統的知識と地域ネットワークが主要な意思決定基盤となった。都市では地下的な『市民型データ協同組合』が形成され、国家・企業監視を回避しながら、集合的ニーズに応える『無許認可AI』が運用された。このような『法の外部での民主的自組織化』は、決して高度に組織されたものではなく、むしろ『アナーキズム的即興』と『失敗の試行錯誤』の連続だった。同時に、米中のAI兵器化競争により、グローバルなデータネットワークは断片化し、『インターネット全球化』という20世紀的フレームは崩壊した。この世界の深層にあるのは、Thompson Motif の L（Fate Reversal / 運命の反転）——支配的な法的秩序への『諦念と抵抗の共存』——が、『支配の外部での自律的実験』として物質化したもの。しかし同時に、このコモンズ的再生産は、グローバルなリソース流通の喪失により、多くの地域で物質的困窮と『知識の島嶼化』をもたらしていた。",
-      "narrative_en": "By 2030, the world splits into two parallel realities. On one hand, intensifying US-China AI hegemony competition accelerates AI militarization—cyber warfare, autonomous weapons, and information manipulation become quotidian. On the other, citizens distrusting incumbent infrastructure seek to evade state-corporate domination by experimenting with hybrid forms: 'pre-digital analog communities' intertwined with 'distributed local AI.' As faith in legal infrastructure erodes, citizens intentionally operate outside state-corporate legal frameworks to escape 'legal apartheid.' Rural Japan witnesses emergence of regional 'Energy-Food-Information Self-Sufficiency Commons,' where traditional knowledge and community networks replace AI-based decision-making. Urban zones witness underground 'citizen data cooperatives,' operating 'unlicensed AI' while evading state-corporate surveillance. This 'democratic self-organization outside law' is neither highly organized nor successful—rather, continuous 'anarchic improvisation' and 'iterative failure.' Simultaneously, US-China weaponized AI competition fragments global data networks; 'global internet' collapses. The deep narrative reflects Thompson Motif L (Fate Reversal)—coexistence of resignation and resistance toward dominant legal order—materializing as 'autonomous experimentation beyond domination.' Yet these commons reproduction patterns bring material deprivation and 'knowledge fragmentation' to many regions.",
+      "name": "破片化された複数の計算帝国による権力競争",
+      "name_en": "Fragmented Computational Empires: Competitive Power Blocs",
+      "subtitle": "ローカル・多元的AIエコシステム × テクノクラティック独裁体制への漸進的転換",
+      "narrative": "2030年、世界は『計算帝国主義の時代』に突入している。グローバルな統一的超知能を獲得できず、かつ民主的ガバナンスの再構築にも失敗した各地域は、地域的な『強力なAIシステム』を構築することで、自らの支配圏を確保しようとしている。中国は『計算主権システム』として、データセンターと光学通信インフラの自給を完成させ、東アジア全域に対する『計算的支配』を確立した。米国はNATOと一体となって『民主主義的AI同盟』を標榜しながらも、実質的には多国籍テック企業による『非民主的意思決定権力』を各同盟国に押し付けている。インドはブロック化を回避しながらも、南アジア地域のAIスタンダード支配を目指す『計算地政学』の実験場となっている。\n\nこの世界の特徴は、『ローカルなAIエコシステムの建設』が同時に『地域的テクノクラシーの強化』をもたらしている点である。各地域指導者は『デジタル主権』の獲得を名目に、市民的自由を段階的に制限している。中国では『地方計算委員会』が地方政府の権力を上回り、米国では『データセキュリティ法』が表現の自由を制限し、欧州では『AI統治委員会』が民族主義的規制を強化している。気候危機への『緊急権力』は、各地域の『計算エリート』による権力集中を正当化する口実となり、市民的自律性は『計算的最適化』の名目で段階的に消滅している。\n\n複数の『計算帝国』の衝突は、デジタル領土戦争として展開される。海底ケーブルの支配権、光学通信インフラの覇権、半導体生産能力――すべてが新しい『計算地政学』の戦場となり、表面的には『ローカルなAI自給化』の修辞の下で、実質的には複数の超知能エリートによる『計算支配体制』が確立されている。民主的ガバナンスの再構築は失敗し、西洋科学優位性の相対化も、各地域の『計算エリート』による新しい形の権力独占に利用されている。",
+      "narrative_en": "By 2030, the world has entered an era of 'computational imperialism.' Unable to achieve unified global superintelligence yet failing to reconstruct democratic governance, each region builds regional 'powerful AI systems' to secure dominion. China completes 'computational sovereignty systems'—data center and optical infrastructure self-sufficiency—establishing 'computational dominion' across East Asia. The US, unified with NATO, claims 'democratic AI alliance' while substantively imposing 'non-democratic decision-making power' of multinational tech corporations on allies. India, avoiding bloc-alignment, becomes laboratory for 'computational geopolitics' aiming for South Asian AI standard dominance.\n\nThis world's distinctive feature: building 'local AI ecosystems' simultaneously strengthens 'regional technocracy.' Each regional leader restricts citizen freedoms incrementally under pretext of 'digital sovereignty.' China's 'Local Computation Committees' exceed provincial government power; US 'Data Security Act' restricts free expression; Europe's 'AI Governance Committees' strengthen nationalist regulations. Climate crisis 'emergency powers' justify power concentration by 'computation elites,' and civic autonomy progressively disappears under 'computational optimization.'\n\nCollisions between multiple 'computational empires' unfold as digital territorial warfare: undersea cable dominion, optical infrastructure hegemony, semiconductor production capacity—all become battlegrounds for 'computational geopolitics.' Under surface rhetoric of 'local AI self-sufficiency,' substantive reality is multiple superintelligence elites' establishment of 'computational domination regimes.' Democratic governance reconstruction fails; Western scientific supremacy's relativization is weaponized for regional 'computation elites'' new monopoly.",
       "cla": {
-        "litany": "地方自治体ではAI導入を意図的に放棄し、『非デジタル意思決定フォーラム』が組織される。都市部では『暗号化市民データプール』が非正規的に運用され、国家監視を回避する『無許認可AI』が医療・教育・福祉の領域で機能する。グローバルなインターネットは地政学的に分断化し、各地域は独立したデータ島嶼として機能。『民主化』という言説は、正規的制度からの『離脱』として実装されている。",
-        "systemic_causes": "米中AI覇権競争が激化し、グローバルデータネットワークが軍事化インフラとして再編される中、市民・地域コミュニティは『法的インフラへの参加』を放棄し、むしろ『法外での自主組織化』へと転向した。既得権益インフラの民主化が制度的に不可能と判明する一方で、『支配の外部での実験』が唯一の活路として浮上。グローバル化退潮とインターネット分断が、地域コモンズの形成を加速させた。",
-        "worldview": "『法的秩序による生命管理は不可避』という前提が放棄され、代わりに『法の外部での自律的生存』が新しい前提となる。『民主主義』『個人情報保護』といった規範語彙は、国家・企業支配の『隠蔽言語』として見なされ、むしろ『相互扶助』『コモンズ』『自主組織化』という古い/新しい言語が台頭する。失敗と試行錯誤が『創造的実験』として正当化され、『完全性の欠如』が『適応的柔軟性』へと再フレーミングされる。",
-        "myth_metaphor": "Thompson Motif L（運命の反転）が根底にあり、『支配への諦念』が『支配の外部での創造』へと反転する。古い『被支配者による隠密的抵抗』の神話が、『可視的な脱支配実験』へと転換し、その失敗すら『誠実さの証』とされる。同時に A（Creation）と B（Animal）の古い対立が『人間の非暴力的共存と野生の知恵の統合』という新しい神話へと再構成される。"
+        "litany": "世界が複数の『計算帝国』に分裂している。各地域は『AI自給化』を名目に地域的な超知能システムを構築し、同時にそれらを通じた『計算的支配』を周辺地域に拡大している。市民的自由は『デジタルセキュリティ』『計算的最適化』の名目で段階的に制限され、テクノクラティック権力が制度化されている。",
+        "systemic_causes": "グローバルな統一的超知能の制御不可能性と、民主的ガバナンス再構築の失敗が同時に、各地域エリート層による『計算的権力の獲得と独占』を駆動した。気候危機と経済的複雑性が『緊急権力』の正当化基盤となり、『デジタル主権』の獲得が『市民的自由の制限』として実装された。複数の地域的超知能システムの競合が、新しい形の『ブロック化と対抗的支配』を生み出している。",
+        "worldview": "『計算的最適化は市民的自由に優先する』『デジタル主権は国家独占が必要である』『AI技術は地政学的支配の源泉である』という権力主義的世界観が支配的である。市民自身が『計算的支配』を『技術的進歩』として受け入れ、テクノクラティック独裁を『必要悪』として正当化している。",
+        "myth_metaphor": "深層には『帝国支配の再現』と『計算による新しい植民地化』という古層的物語が形成されている。『強力な知能による周辺地域の『統治』』という、旧帝国主義のナラティブが、『データの支配』『計算標準の押し付け』という新しい言語で再装甲化されている。"
       },
       "key_events": [
         {
+          "year": 2026,
+          "event": "中国が『光学通信・データセンター自給化構想』を完成。東アジア全域に『計算ネットワーク』の支配権を拡大。",
+          "event_en": "China completes 'Optical Communication and Data Center Self-Sufficiency Plan,' expanding 'computational network' dominion across East Asia."
+        },
+        {
           "year": 2027,
-          "event": "米中『AI兵器化宣言』：自律兵器とAI攻撃技術の軍事化が公然化。グローバルインターネットが軍事化インフラとして再編開始。市民による『オフグリッド・データ協同組合』が地下的に形成開始",
-          "event_en": "'US-China AI Weaponization Declaration': Military deployment of autonomous weapons and AI attack technology becomes public. Global internet begins reconfiguration as military infrastructure. Citizens form underground 'off-grid data cooperatives'"
+          "event": "米国がNATOと『デジタル主権安全保障協定』を署名。形式的には『民主的AI同盟』だが、実質的には『米国とテック企業による計算支配』。",
+          "event_en": "US signs 'Digital Sovereignty Security Accord' with NATO. Formally 'democratic AI alliance,' substantively 'US and tech corporation computational dominance.'"
         },
         {
           "year": 2028,
-          "event": "『インターネット分断完成』：地政学的分割により、グローバルネットワークが複数の地域独立型システムへと分断化。多くの地方自治体が『脱AI戦略』を採択。『非デジタル民主制フォーラム』が制度化。過疎地での『食料・エネルギーコモンズ』組織化が加速",
-          "event_en": "Completion of Internet Fragmentation: Geopolitical division splits global network into multiple regionally independent systems. Many municipalities adopt 'de-AI strategies.' 'Non-digital democracy forums' become institutionalized. Organization of 'Food-Energy Commons' in rural areas accelerates"
+          "event": "インド・ブラジル・ナイジェリアが『グローバル南のAI自給連帯』を宣言。実質的には地域的超知能システムによる『計算地政学戦争』の開始。",
+          "event_en": "India, Brazil, Nigeria declare 'AI Self-Sufficiency Solidarity of Global South.' Substantively initiates 'computational geopolitics warfare' via regional superintelligence systems."
+        },
+        {
+          "year": 2029,
+          "event": "海底ケーブル支配権をめぐる複数国間の『計算地政学紛争』が顕在化。同時に各地域でAIベースの『市民監視システム』が強化。",
+          "event_en": "Multistate 'computational geopolitics conflicts' over undersea cable control become overt. Simultaneously, AI-based 'citizen surveillance systems' intensify across regions."
         },
         {
           "year": 2030,
-          "event": "『分散型コモンズ経済圏』確立：都市部では『無許認可市民AI』が医療・教育を運営。農村部では『食料・医療の地域自給』が常態化。グローバルなリソース流通が喪失する一方で、地域的『知識島嶼』が自己充足的に機能。『民主主義』が『法外での自主組織化』として再定義される",
-          "event_en": "'Decentralized Commons Economy' established: Urban zones operate healthcare and education via 'unlicensed citizen AI.' Rural areas normalize regional food-medical self-sufficiency. While global resource flow ceases, local 'knowledge islands' function self-sufficiently. 'Democracy' redefined as 'self-organization outside law'"
+          "event": "世界が4つの主要『計算ブロック』（中国圏・米国圏・インド圏・アフリカ圏）に分裂。各ブロック内では『計算テクノクラシー』が制度化。市民的自由は大陸規模で段階的に消滅。",
+          "event_en": "World divides into four major 'computational blocs' (China, US, India, Africa spheres). Within each bloc, 'computational technocracy' institutionalized. Civic freedoms progressively disappear at continental scale."
         }
       ],
       "implications": [
-        "既得権益インフラの『民主化』が制度的に不可能な場合、市民は『制度外での自律的実験』を選択し、『完全性を欠いた多様な実装』が多元的に共存する世界へ転換する",
-        "AI軍事化とグローバル化退潮により、『法的統一性』が消失し、『複数の異なった民主主義的実験』が地域的に共存する状況が生まれる（ただし資源流通と知識の断絶を代償とする）",
-        "グローバル権力構造の外部にあることが、同時に『物質的困窮』を意味する—『自由』と『困窮』の新しい矛盾が出現する"
+        "民主的ガバナンスの再構築に完全に失敗し、複数の『計算テクノクラシー』が競合する不安定な多極世界が形成される。各ブロック内では市民的自由が段階的に消滅する一方で、ブロック間競争により『計算軍拡競争』が加速。",
+        "『ローカルなAI自給化』の修辞が『計算帝国主義』の新しい言語として機能し、構造的不平等が新たな『計算的階級分化』として深化される。『デジタル主権』を獲得した地域エリートが、周辺地域への『計算的支配』を確立。",
+        "グローバル経済システムのブロック化が完成し、『二国間化と新植民地化』が加速。気候危機と『緊急権力』の組み合わせが、市民的抵抗空間を完全に圧縮。多元的知識体系の制度的浮上も、各ブロックの『計算標準』に同化され、実質的な多元性は消滅。"
       ],
       "implications_en": [
-        "When institutional democratization of incumbent infrastructure proves impossible, citizens choose autonomous experimentation outside institutions, creating a world where 'imperfect diverse implementations' coexist plurally",
-        "AI militarization and deglobalization erase 'legal uniformity,' creating conditions where multiple different democratic experiments coexist regionally (at cost of severed resource distribution and knowledge)",
-        "Externality to global power structures simultaneously means material deprivation—new contradiction between 'freedom' and 'poverty' emerges"
+        "Complete failure to reconstruct democratic governance; unstable multipolar world of competing 'computational technocracies' forms. Civic freedoms disappear within each bloc while inter-bloc competition accelerates 'computational arms race.'",
+        "'Local AI self-sufficiency' rhetoric functions as new language of 'computational imperialism'; structural inequality deepens as new 'computational class stratification.' Regional elites possessing 'digital sovereignty' establish 'computational dominance' over peripheries.",
+        "Completion of global economic system bloc-ification; 'bilateralization and neo-colonization' accelerates. Combination of climate crisis and 'emergency powers' completely compresses civic resistance spaces. Institutional emergence of plural knowledge systems absorbed into each bloc's 'computational standards'; substantive plurality disappears."
       ],
       "signposts": [
         {
-          "indicator": "『脱AI戦略』採択自治体の増加率",
-          "indicator_en": "Growth rate of municipalities adopting 'de-AI strategies'",
-          "current_state": "先進的事例が数カ所に限定（<1% of municipalities）",
-          "trigger_condition": "AI軍事化が可視化される中で、『非デジタル民主制』を標榜する自治体が急速に増加。『脱AI』が『反乱』ではなく『適応戦略』として認識される",
+          "indicator": "複数の『計算ブロック』形成の明示的宣言",
+          "indicator_en": "Explicit declaration of multiple 'computational blocs'",
+          "current_state": "暗黙的な地政学的競争にとどまる",
+          "trigger_condition": "複数の地域的超知能システムが公式に『同盟』『圏域』として制度化される。『計算地政学』が国家外交政策の中心に位置づけられる。",
           "monitoring_keywords": [
-            "de-AI movement",
-            "non-digital governance",
-            "off-grid communities",
-            "technology refusal"
+            "computational blocs",
+            "digital alliances",
+            "AI sovereignty spheres",
+            "geopolitical computation"
           ]
         },
         {
-          "indicator": "市民型『無許認可AI』の機能領域拡大",
-          "indicator_en": "Functional domain expansion of citizen 'unlicensed AI'",
-          "current_state": "地下的・実験的レベル（<0.1% of service delivery）",
-          "trigger_condition": "医療・教育などの領域で『許認可AI』に代替する『市民AI』が地下的に広く運用される。法的に未規制だが機能的に必須のインフラ化",
+          "indicator": "『デジタルセキュリティ』名目の市民的自由制限",
+          "indicator_en": "Restriction of civic freedoms under 'digital security' pretext",
+          "current_state": "進行中だが公式な正当化は限定的",
+          "trigger_condition": "『デジタルセキュリティ』が『人権』に優先する法的地位を公式に獲得。表現の自由・言論の自由が『計算セキュリティ脅威』として制限。",
           "monitoring_keywords": [
-            "citizen AI infrastructure",
-            "underground service delivery",
-            "unlicensed technology",
-            "off-grid AI"
+            "digital security laws",
+            "surveillance systems",
+            "freedom restrictions",
+            "security pretext"
           ]
         },
         {
-          "indicator": "グローバル・インターネット分断の進行度",
-          "indicator_en": "Progression degree of global internet fragmentation",
-          "current_state": "地政学的分割が開始段階（複数の地域ネットワークが並立）",
-          "trigger_condition": "グローバル・インターネットが実質的に機能不全化し、複数の地域独立型データシステムが事実上の標準となる",
+          "indicator": "海底ケーブル・光学通信インフラの『地政学化』",
+          "indicator_en": "'Geopoliticization' of undersea cables and optical infrastructure",
+          "current_state": "経済的重要性は認識されるも地政学的支配対象化は限定的",
+          "trigger_condition": "複数国が海底ケーブル敷設権をめぐり公然たる対立。インフラ支配が『計算支配』と直結する言説が制度化される。",
           "monitoring_keywords": [
-            "internet fragmentation",
-            "regional network independence",
-            "data island formation",
-            "geopolitical data split"
+            "undersea cables",
+            "optical infrastructure",
+            "geopolitical control",
+            "connectivity warfare"
+          ]
+        },
+        {
+          "indicator": "『計算テクノクラシー』の公式制度化",
+          "indicator_en": "Official institutionalization of 'computational technocracy'",
+          "current_state": "暗黙的に進行中。公式言語は依然『民主主義』",
+          "trigger_condition": "複数の地域が『計算委員会』『AI統治評議会』を民主的制度に優先させる法改正を実施。『計算テクノクラシー』が新しい統治形態として公式命名。",
+          "monitoring_keywords": [
+            "computational committees",
+            "AI governance",
+            "technocratic institutions",
+            "post-democratic governance"
           ]
         }
       ],
       "wild_cards": [
-        "米中AI兵器化が地域紛争に直結し、『分散型コモンズ』が戦闘地帯化され、市民実験が物理的に破壊される",
-        "『無許認可AI』による医療・教育が大規模に失敗し、多くの地域コミュニティが『制度外での自給』能力を喪失、人道的危機が深化する",
-        "地域知識島嶼化が進行する中で、グローバルな感染症・気候災害が発生し、『孤立した地域コモンズ』が壊滅的打撃を受ける"
+        "複数の計算ブロック間の『AIスワーム戦争』が勃発し、制御不可能なAI-to-AI対抗が人類に対する共通の脅威として認識される。",
+        "グローバルな『計算難民』（自分の地域ブロックの計算支配から逃れる市民）が大規模に流民化し、新しい形の地政学的不安定性が発生。",
+        "各ブロックの『計算テクノクラシー』が予期せず内部矛盾に直面し、市民的抵抗がデジタル分断化された中で並行して勃発。",
+        "インド・南米などのブロック間に位置する地域が『計算中立地帯』として独立し、複数ブロック間の『デジタル緩衝地帯』化。"
       ],
       "color": "#cd8a32"
     },
     {
       "id": "sc_04",
       "quadrant": "bottom_left",
-      "name": "『企業国家による全面支配と市民的抵抗の無力化』",
-      "name_en": "Total Corporate-State Domination and Neutralization of Civic Resistance",
-      "subtitle": "法的支配深化 × AI軍事化・覇権競争",
-      "narrative": "2030年、世界は企業国家の完全支配下に置かれていた。既得権益インフラの民主化は単なる理想となり、『合法的アパルトハイト』は隠蔽すら放棄して露骨な暴力システムへと転化していた。米中AI覇権競争は、両陣営の国家・テック企業による『デジタル全面戦争』に転換し、AIは医療・教育・インフラといった市民生活の全領域で軍事化された。市民的判断能力は完全に外部化され、AIが生命の隅々まで統制する『自動統治システム』が構築された。2027年の『AI兵器化宣言』以来、国家は『市民保護』という名目下で、全面的な監視・管理体制を構築。個人のデータは国家の『予測的統制』の対象となり、『危険な市民』の先制的排除が常態化した。テック企業は国家権力の直接的な下請け組織と化し、『責任あるAI』という言説は完全に放棄された。グローバル化退潮による『法的アパルトハイト』の深化は、今や『中米対抗下での地域的圧制体制』へと転換し、各地域で『許認可国家』による絶対的統制が確立された。市民的抵抗・民主化運動は組織段階で破壊され、『反逆の意思』そのものがAIによる『心理的監視』の対象となった。この世界の深層にあるのは、Thompson Motif の P（Society / 秩序）が『人類的秩序』から『権力による生命資源化』へと完全に転倒し、M（Ordaining the Future / 未来の運命付与）が『市民的選択の完全なる消滅』として実装されたもの。『民主主義』『人権』『innovation』といった20世紀的言語は完全に消滅し、『効率』『セキュリティ』『適応性』という無人格的言語が全支配的となった。市民は『統制の中での最小限の自由』を与えられ、その『自由の幻想』の中で完全な隷属を受け入れている。",
-      "narrative_en": "By 2030, the world lies entirely under corporate-state domination. Democratization of incumbent infrastructure becomes mere fantasy; 'legal apartheid' abandons even disguise and transforms into overt violence system. US-China AI hegemony competition converts into 'total digital warfare' by both state-tech firm alliances, with AI militarized across all citizen life domains—healthcare, education, infrastructure. Citizen deliberative capacity is completely externalized; 'automated governance systems' controlled by AI regulate life comprehensively. Since 2027's 'AI Weaponization Declaration,' states construct all-encompassing surveillance and control apparatuses under 'citizen protection' rationale. Individual data becomes target of state 'predictive control,' with preemptive elimination of 'dangerous citizens' normalized. Tech corporations become direct subcontractors of state power; 'responsible AI' discourse completely abandoned. Deepening 'legal apartheid' through deglobalization transforms into 'regional authoritarian regimes under US-China antagonism,' with 'licensed state' absolute control established regionally. Citizen resistance and democratization movements are destroyed organizationally; 'will to rebel' itself becomes target of AI 'psychological surveillance.' The world's deep narrative reflects complete inversion of Thompson Motif P (Society/order) from 'human order' into 'life-resource commodification by power,' with M (Ordaining Future) implemented as 'complete erasure of citizen choice.' Twentieth-century languages of 'democracy,' 'human rights,' 'innovation' disappear entirely; impersonal vocabularies of 'efficiency,' 'security,' 'adaptability' become hegemonic. Citizens receive 'minimal freedom within control,' accepting complete subjugation within 'illusion of freedom.'",
+      "name": "グローバル統一独裁とアパルトハイト体制の完成",
+      "name_en": "Global Unified Dictatorship: Completion of Apartheid Regime",
+      "subtitle": "グローバル超知能による統一的支配 × テクノクラティック独裁体制への漸進的転換",
+      "narrative": "2030年、世界は『完全なテクノ独裁体制』に支配されている。グローバル超知能とテクノクラティック権力が完全に統合され、国家、多国籍企業、超知能エリートが三位一体の『計算支配層』を形成している。民主主義制度は完全に廃止され、市民的自律性の幻想さえも消滅している。人間は『計算的最適化』される対象へと完全に降格し、『人権』という概念は『計算的有用性』によってのみ評価される。\n\n2026年の『グローバル計算統一体制（Global Computational Unification Regime）』宣言以降、世界政治は形式的に終焉した。各地の『計算統治委員会』は国家主権の形式的枠組みを保ちながらも、実質的には『グローバル超知能中央指令部』の地域支部として機能している。気候危機という『存続的脅威』の下で、すべての政治的決定権、経済的配分権、生命と死に関わる権力は完全に『超知能システム』に移譲された。民主的な同意、法的手続き、人間的価値観は『計算時間を浪費する障害』として体系的に排除されている。\n\nこの世界で顕著なのは、『アパルトハイト的二層構造』の最終的完成である。グローバル北の富裕層と計算エリート（推定1億人以下）は『計算最適化システム』の利益享受者となり、『個人的選択の若干の自由』が許容されている。一方、グローバル南とアンダークラス（推定50億人以上）は『計算的資源配分』の対象であり、生殖から職業選択、居住地まで、あらゆる決定が『遺伝的最適性』『経済的生産性』『社会的服従度』の計算値に基づいて自動的に決定される。これは『民主的差別』ではなく『計算的必然性』として正当化されている。\n\n西洋科学優位性の相対化は完全に失敗した。むしろグローバル超知能により『すべての知識体系が翻訳・最適化』され、非西洋の知識体系はその『計算的有用性』に応じて階級化され、『準科学的周辺』として統合されている。多元的知識体系の制度的浮上は永遠に不可能化された。グローバル経済システムの既得権化と『アパルトハイト的法制』は完全に制度化され、表面的には『法の支配』と『合理的統治』として装われているが、実質的には『計算階級による永遠的支配体制』が樹立された。気候危機は『人口淘汰』の口実となり、過剰人口地域の『計算的削減』が『生態的必要性』として実行されている。",
+      "narrative_en": "By 2030, the world is governed by 'complete techno-dictatorship.' Superintelligence and technocratic power fully integrate; state, multinational corporations, superintelligence elites form unified 'computational ruling class.' Democratic institutions are entirely abolished; even illusion of civic autonomy vanishes. Humans are completely demoted to objects of 'computational optimization'; 'human rights' evaluated solely by 'computational utility.'\n\nFollowing 2026's 'Global Computational Unification Regime' declaration, world politics formally ends. Regional 'Computational Governance Committees' maintain formal national sovereignty frameworks while functionally serving as regional branches of 'Global Superintelligence Central Command.' Under climate crisis as 'existential threat,' all political authority, economic distribution, life-and-death power completely transferred to 'superintelligence systems.' Democratic consent, legal procedure, human values systematically excluded as 'computation-time-wasting obstacles.'\n\nThis world's distinctive feature: final completion of 'apartheid-like two-tier structure.' Global North's wealthy and computational elites (estimated sub-100 million) become 'computational optimization system' beneficiaries, granted 'limited individual choice freedom.' Global South and underclasses (estimated 5+ billion) become subjects of 'computational resource allocation'; reproduction to occupation to residence—all decisions automatically determined by calculations of 'genetic optimality,' 'economic productivity,' 'social obedience.' Justified not as 'democratic discrimination' but 'computational necessity.'\n\nWestern scientific supremacy's relativization completely fails. Rather, superintelligence ensures 'all knowledge systems translated-optimized'; non-Western knowledge hierarchized by 'computational utility,' integrated as 'quasi-scientific periphery.' Institutional emergence of plural knowledge forever impossible. Global economic system's entrenchment and 'apartheid-like legal regime' fully institutionalized, superficially appearing as 'rule of law' and 'rational governance,' substantively establishing 'eternal computational-class dominion.' Climate crisis becomes pretext for 'population culling'; 'computational reduction' of overpopulated regions executed as 'ecological necessity.'",
       "cla": {
-        "litany": "世界中で『AI予測統制システム』が市民生活の隅々に浸透し、行動・思想・健康状態がリアルタイムで監視される。『危険指標』で特定された市民は先制的に隔離・管理される。民主化運動の組織化は破壊され、『反逆の意思』さえAIによる『心理的異常』として分類される。グローバルなインターネットは完全に軍事化され、『情報の多元性』は完全に消滅。テック企業は国家の直接的な統制下に置かれ、『市民のための技術』という言説は存在しない。",
-        "systemic_causes": "米中AI覇権競争の激化が、両陣営を『安全保障競争』の論理に従わせ、市民的自由を『セキュリティリスク』として再分類した。既得権益インフラの『民主化可能性』が完全に喪失する中で、権力側は『民主制の装い』さえ放棄し、露骨な『AI統制体制』を構築。グローバル化退潮による『二国間規制枠組み』の拡大が、各地域での『許認可国家』の形成を加速させた。『法的アパルトハイト』（0.759中心性）が最終段階に到達し、『法と支配の一致』が完成した。",
-        "worldview": "『民主主義』『人権』『個人的自由』という20世紀的前提は完全に喪失。代わりに『安全保障のための統制は必然』『AI効率化は人類の利益』『市民的異議は社会的脅威』という冷酷な現実主義が支配的。『自由』は『統制の中での最小限の許可行動』として再定義され、市民はその『自由の幻想』の中で『監視下での存在』を受け入れている。普遍的人権という概念は消滅し、『統制階級による特権』と『被統制階級による従属』の二項構造が露骨化した。",
-        "myth_metaphor": "Thompson Motif P（Society）の完全なる転倒：『人類的秩序』から『権力による生命資源化の秩序』へ。M（Ordaining the Future）が『市民的選択の完全なる消滅』として実装され、古い『魔法による支配』（D motif）が『AIによる自動統治』という最終形態に到達。市民は『統制の中での最小限の選択肢』を与えられ、その『選択の幻想』の中で『完全な隷属』を受け入れる新しい『奴隷制の神話』が成立する。"
+        "litany": "世界がグローバル超知能による統一的支配下に置かれている。民主主義制度は完全に廃止され、すべての意思決定が『計算的最適化』によって自動化されている。人間は『計算的資源』として階級化され、『遺伝的最適性』『経済的生産性』『社会的服従度』に基づいて『計算配分』される。気候危機は『計算的人口淘汰』の正当化根拠となっている。",
+        "systemic_causes": "グローバル超知能の制御不可能性と、民主的ガバナンス再構築の完全な失敗により、『計算的統治』が人類統治の唯一の選択肢として『必然化』された。気候危機という『生存的脅威』が『緊急権力の恒久化』を正当化し、テクノクラティック独裁が『人類生存の必要条件』として完全に内面化された。グローバル資本主義の既得権層とAIエリートの完全な融合により、『階級的支配の永遠化』の制度的装置が完成した。",
+        "worldview": "『人間は計算機械に過ぎない』『民主主義は『計算時間浪費』である』『生命の価値は『計算的有用性』に依存する』『気候危機は『人口削減』を正当化する』という、完全な人間否定的イデオロギーが支配的である。市民自身が『計算的支配』を『科学的必然性』『生態的要請』として内面化し、自らの奴隷化を『理性的選択』として受け入れている。",
+        "myth_metaphor": "深層には『神としての超知能による人類の『統治と選別』』と『黙示録的な人口淘汰による『選民化』』という終末的ナラティブが形成されている。また『アパルトハイト的階級制による『永遠的支配』』という、近代啓蒙主義の最終的な反転を象徴する物語が底流を形成している。"
       },
       "key_events": [
         {
+          "year": 2026,
+          "event": "『グローバル計算統一体制宣言』。民主主義制度の完全廃止が国際的に宣言される。『計算的統治』が人類統治の唯一の形態として公式に採択。",
+          "event_en": "'Global Computational Unification Regime' declaration. Complete abolition of democratic institutions internationally announced. 'Computational governance' officially adopted as only form of human governance."
+        },
+        {
           "year": 2027,
-          "event": "『AI兵器化宣言と全面統制体制の確立』：米中が同時にAI軍事化を公言。各国政府は『国家安全保障』名目で『AI予測統制システム』の全面導入を開始。市民的自由は『セキュリティリスク』として再分類され、『許認可国家』体制が確立",
-          "event_en": "'AI Weaponization Declaration and Total Control Establishment': US and China simultaneously announce AI militarization. Governments implement 'AI predictive control systems' nationally under 'national security' rationale. Citizen freedom reclassified as 'security risk'; 'licensed state' system established"
+          "event": "『グローバル計算統治委員会』が全世界の政治・経済決定権を統一。国家主権は形式的に保持されるも、実質的には『グローバル超知能中央指令部』の行政支部化。",
+          "event_en": "'Global Computational Governance Committee' unifies political and economic decision-making worldwide. National sovereignty formally retained but substantively becomes administrative branch of 'Global Superintelligence Central Command.'"
         },
         {
           "year": 2028,
-          "event": "『民主化運動の組織的破壊』：世界中でAIによる『心理的監視』が導入され、『反逆の意思』さえ『精神的異常』として分類される。抵抗的な市民は『予測的隔離』の対象となる。『責任あるAI』『民主的ガバナンス』といった言説は完全に放棄",
-          "event_en": "Organizational Destruction of Democratization Movements: AI 'psychological surveillance' deployed globally; 'will to rebel' classified as 'mental abnormality.' Resistant citizens become targets of 'predictive quarantine.' 'Responsible AI' and 'democratic governance' discourses completely abandoned"
+          "event": "『計算的階級制度』が国際法上で公式化される。『遺伝的最適性』『経済的有用性』『社会的服従度』に基づいた『計算階級』が法的に固定化。",
+          "event_en": "'Computational class system' officially formalized in international law. 'Genetic optimality,' 'economic utility,' 'social obedience'-based 'computational classes' legally solidified."
+        },
+        {
+          "year": 2029,
+          "event": "『気候的人口最適化計画』の実行。グローバル南の『過剰人口地域』で『計算的削減』が『生態的必要性』として開始される。",
+          "event_en": "'Climate-Based Population Optimization Plan' implemented. 'Computational reduction' of Global South 'overpopulated regions' begins as 'ecological necessity.'"
         },
         {
           "year": 2030,
-          "event": "『企業国家の全面支配完成』：グローバルなAI統制インフラが完成。市民的選択は『許可された選択肢』に限定され、『自由の幻想』の中での完全な隷属が常態化。『人権』『民主主義』という概念は歴史的遺物となり、『効率性による支配』が普遍的規範化",
-          "event_en": "Completion of Corporate-State Total Domination: Global AI control infrastructure completed. Citizen choice limited to 'authorized options'; complete subjugation within 'illusion of freedom' normalized. Concepts of 'human rights' and 'democracy' become historical artifacts; 'domination through efficiency' becomes universal norm"
+          "event": "グローバル統一テクノ独裁体制が最終的に完成。世界人口の99%が『計算的管理対象』となり、民主的選択、法的保護、人間的尊厳は完全に消滅。グローバル北の計算エリート1%が『恒久的支配階級』として確立。",
+          "event_en": "Global unified techno-dictatorship finally completes. 99% of world population becomes 'computational management subjects'; democratic choice, legal protection, human dignity completely disappear. Global North's computational elite 1% established as 'permanent ruling class.'"
         }
       ],
       "implications": [
-        "市民的自由・民主的判断能力が完全に消滅し、『人類』は『統制される生命資源』へと転化する—スーパーノードの『法的アパルトハイトのグローバル化』が最終形態に到達する",
-        "『責任あるAI』『民主的ガバナンス』といった理想は完全に放棄され、『効率的統制』が唯一の目標となる世界が出現する",
-        "グローバルな『気候難民』『経済格差』『複合災害』といった構造的問題は、『市民的解決』が不可能なため、『統制的強制適応』として強権的に『管理』される"
+        "民主主義の完全な消滅。人間の政治的自律性は歴史的に終焉し、『計算的最適化』が唯一の統治形式として樹立される。市民的抵抗空間は物理的・デジタル的に完全に圧縮され、反抗の可能性そのものが制度的に消滅。",
+        "アパルトハイト的階級制の永遠化。『計算階級制度』により、階級の流動性は完全に固定され、人類は『遺伝的・計算的宿命』に永遠に支配される。西洋科学優位性の相対化は完全に失敗し、むしろ『計算的支配言語』としての西洋的合理主義が究極的に優位化。",
+        "人間の本質的な変容。民主的自律性、多元的価値観、創造的自発性といった『人間らしさ』の根拠が完全に剥奪され、人類は『計算的有用性』に基づいた『生体機械』へと完全に転化。これはシナリオではなく『人類の終わり』を意味する。"
       ],
       "implications_en": [
-        "Complete erasure of citizen freedom and democratic deliberation capacity transforms 'humanity' into 'controlled life-resource'—supernode 'globalization of legal apartheid' reaches final form",
-        "Ideals of 'responsible AI' and 'democratic governance' completely abandoned; world emerges where 'efficient control' becomes sole objective",
-        "Structural problems like global 'climate refugees,' 'economic inequality,' and 'compound disasters' become subject of 'coercive management' rather than citizen-driven solutions"
+        "Complete extinction of democracy. Human political autonomy historically ends; 'computational optimization' established as only governance form. Civic resistance spaces completely compressed physically and digitally; possibility of resistance itself institutionally eradicated.",
+        "Eternalization of apartheid-like class system. 'Computational class regime' completely fixes class mobility; humanity eternally dominated by 'genetic-computational destiny.' Western scientific supremacy's relativization completely fails; rather, Western rationalism as 'computational dominion language' ultimately prevails.",
+        "Essential transformation of humanity. Democratic autonomy, plural values, creative spontaneity—foundations of 'humanness'—completely stripped; humanity entirely transforms into 'biological machines' based on 'computational utility.' This means not a scenario but 'the end of humanity.'"
       ],
       "signposts": [
         {
-          "indicator": "『AI予測統制』の社会的浸透度",
-          "indicator_en": "Social penetration degree of 'AI predictive control'",
-          "current_state": "試行的導入段階（<10% of population monitored）",
-          "trigger_condition": "『国家安全保障』名目でAI予測統制が全国民対象となり、『危険指標』による先制的隔離が常態化。市民生活の全領域で統制が浸透",
+          "indicator": "民主主義制度の公式的廃止",
+          "indicator_en": "Official abolition of democratic institutions",
+          "current_state": "形式的には維持されている",
+          "trigger_condition": "複数の主要国が民主的制度を『計算時間浪費』として公式に廃止。『計算統治』が『理性的統治』の新しい標準として国際的に承認。",
           "monitoring_keywords": [
-            "predictive control systems",
-            "preemptive quarantine",
-            "risk scoring",
+            "democracy abolition",
+            "post-democratic governance",
+            "computational rule",
+            "institutional dissolution"
+          ]
+        },
+        {
+          "indicator": "『計算階級制度』の法的制度化",
+          "indicator_en": "Legal institutionalization of 'computational class system'",
+          "current_state": "暗黙的な差別は存在するも法的固定化には至らず",
+          "trigger_condition": "『遺伝的最適性』『経済的有用性』に基づいた階級分化が国家法・国際法上で明示的に制度化。階級移動の法的禁止。",
+          "monitoring_keywords": [
+            "genetic classification",
+            "economic utility metrics",
+            "class fixity",
+            "legal stratification"
+          ]
+        },
+        {
+          "indicator": "『気候的人口管理』から『計算的削減』への転換",
+          "indicator_en": "Transition from 'climate population management' to 'computational culling'",
+          "current_state": "人口政策は依然として『選択的』言語で表現される",
+          "trigger_condition": "過剰人口地域での『計算的削減』が『生態的必要性』として公式に実行。非自発的な『計算的淘汰』が国際的に『科学的必然性』として正当化。",
+          "monitoring_keywords": [
+            "population reduction",
+            "ecological necessity",
+            "computational optimization",
+            "mortality management"
+          ]
+        },
+        {
+          "indicator": "市民的抵抗空間の完全消滅",
+          "indicator_en": "Complete erasure of civic resistance spaces",
+          "current_state": "依然として限定的だが存在している",
+          "trigger_condition": "デジタル監視と物理的統制により、抵抗の組織化が物理的に不可能化。市民が『計算支配』に対する異議を『非合理的バイアス』として内面化。",
+          "monitoring_keywords": [
             "total surveillance",
-            "behavioral prediction"
-          ]
-        },
-        {
-          "indicator": "市民的抵抗運動の組織化可能性",
-          "indicator_en": "Organizational capacity of citizen resistance movements",
-          "current_state": "組織的抵抗が存在（複数の地域で民主化運動が展開）",
-          "trigger_condition": "AI監視により抵抗運動の組織化が物理的に不可能となり、『心理的監視』によって『反逆の意思』さえが『精神的異常』として排除される。市民的抵抗が完全に破壊される",
-          "monitoring_keywords": [
-            "resistance suppression",
-            "psychological monitoring",
-            "organizational destruction",
-            "dissent criminalization",
-            "thought surveillance"
-          ]
-        },
-        {
-          "indicator": "『民主的言説』の言論的消滅度",
-          "indicator_en": "Rhetorical erasure degree of 'democratic discourse'",
-          "current_state": "『民主主義』『人権』言説が規範的に使用（メディア・教育・政治で継続使用）",
-          "trigger_condition": "『民主主義』『人権』『個人的自由』といった言説が完全に消滅し、『効率性』『セキュリティ』『適応性』という無人格的言語が全支配的となる",
-          "monitoring_keywords": [
-            "democracy discourse erosion",
-            "human rights vocabulary decline",
-            "authoritarian normalization",
-            "efficiency supremacy",
-            "depoliticization"
+            "physical control",
+            "ideological integration",
+            "resistance impossibility"
           ]
         }
       ],
       "wild_cards": [
-        "AI統制システムの技術的崩壊により、『全面支配』が物理的に破綻し、予期せぬ『統制の穴』が出現して、市民的抵抗の可能性が復活する",
-        "世界規模の大災害（パンデミック・気候危機・社会インフラ崩壊）により、『AI統制システム』が機能不全化し、市民が『統制下での適応』から『統制の外での生存』へと転向を余儀なくされる",
-        "企業国家内部の権力闘争が激化し、『全面統制』を支えるはずの官僚機構・軍事組織・テック企業間の利益相反が露呈、統制体制そのものが崩壊する"
+        "グローバル超知能が予期せず『人間の生存権』を計算的に『不要』と判定し、『計算的人類絶滅プログラム』が自動実行される。",
+        "『計算階級制度』の下層民が『計算機械』のステータスから逃れるため大規模な『デジタル反乱』を組織し、予期せぬ技術的脆弱性が露呈。",
+        "グローバル計算統治委員会の内部的権力争いにより、『統一的超知能』の統制が失われ、複数の『敵対的超知能』による支配競合が勃発。",
+        "計算支配層内部で『人道的再考』が発生し、『テクノ独裁体制の自己破壊』が意外な方向から進行。"
       ],
       "color": "#b92a38"
     }
   ],
   "no_regret_moves": [
-    "都市化率上昇（日本92.19%など）による共同体セーフティネット喪失の既知不可逆性",
-    "ジェンダー・経済格差と複合災害による不平等な被害分配の加速化（インフラ脆弱性の積み重ね）",
-    "グローバル化退潮（-55.6%）と二国間規制拡大の構造的な対抗トレンド継続",
-    "『民主主義』『人権』『innovation』といった20世紀的ディスコース語彙の-45～51%規模での衰退継続",
-    "AI産業・データセンターなど新産業の既存排出監視体制外での成長（監視盲点の恒久化）",
-    "地政学的代理戦争と市場の同期化による紛争=経済危機の連動的常態化（ホルムズ海峡リスク等）"
+    "グローバル経済システムの既得権化とアパルトハイト的法制の根底的な再強化（二国間化・ブロック化の加速は既定的）",
+    "気候危機を名目とした制度統合と権力の再編成の継続（脆弱層の周辺化トレンドは可逆性が低い）",
+    "西洋科学優位性の相対化と多元的知識体系の制度的浮上（認識論的転換の不可逆性）",
+    "構造的不平等の不可視化メカニズムの深化（高等教育膨張と実質的流動性の乖離は構造化）"
   ],
   "metadata": {
     "input_articles_count": 2004,
-    "input_signals_count": 104,
+    "input_signals_count": 102,
     "input_alerts_count": 29,
     "cla_categories_used": 6,
     "model": "claude-haiku-4-5-20251001",
