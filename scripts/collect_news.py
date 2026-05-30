@@ -160,36 +160,6 @@ RSS_FEEDS = [
     {"url": "https://www.theguardian.com/law/rss", "name": "Guardian Law", "lang": "en", "tier": 1, "focus": "Legal"},
 
     # --- Business / Economy ---
-<<<<<<< HEAD
-    {"url": "https://feeds.bloomberg.com/markets/news.rss", "name": "Bloomberg", "lang": "en"},
-    {"url": "https://www.ft.com/?format=rss", "name": "Financial Times", "lang": "en"},
-    # --- Environment ---
-    {"url": "https://www.carbonbrief.org/feed", "name": "Carbon Brief", "lang": "en"},
-    # --- Japanese ---
-    {"url": "https://www3.nhk.or.jp/rss/news/cat0.xml", "name": "NHK 主要", "lang": "ja"},
-    {"url": "https://www3.nhk.or.jp/rss/news/cat1.xml", "name": "NHK 社会", "lang": "ja"},
-    {"url": "https://www3.nhk.or.jp/rss/news/cat3.xml", "name": "NHK 科学", "lang": "ja"},
-    {"url": "https://www3.nhk.or.jp/rss/news/cat4.xml", "name": "NHK 政治", "lang": "ja"},
-    {"url": "https://www3.nhk.or.jp/rss/news/cat5.xml", "name": "NHK 経済", "lang": "ja"},
-    {"url": "https://www3.nhk.or.jp/rss/news/cat6.xml", "name": "NHK 国際", "lang": "ja"},
-    {"url": "https://news.yahoo.co.jp/rss/topics/top-picks.xml", "name": "Yahoo Japan", "lang": "ja"},
-    {"url": "https://news.yahoo.co.jp/rss/topics/business.xml", "name": "Yahoo ビジネス", "lang": "ja"},
-    {"url": "https://news.yahoo.co.jp/rss/topics/science.xml", "name": "Yahoo サイエンス", "lang": "ja"},
-    {"url": "https://news.yahoo.co.jp/rss/topics/it.xml", "name": "Yahoo IT", "lang": "ja"},
-    {"url": "https://news.yahoo.co.jp/rss/topics/world.xml", "name": "Yahoo 国際", "lang": "ja"},
-    {"url": "https://news.yahoo.co.jp/rss/topics/domestic.xml", "name": "Yahoo 国内", "lang": "ja"},
-    # 日経RSSは404化済み（2026-04時点）
-    {"url": "https://mainichi.jp/rss/etc/mainichi-flash.rss", "name": "毎日新聞", "lang": "ja"},
-    {"url": "https://toyokeizai.net/list/feed/rss", "name": "東洋経済オンライン", "lang": "ja"},
-    # --- Japanese (Expanded: Nikkei, NHK additional, Asahi) ---
-    {"url": "https://www3.nhk.or.jp/rss/news/cat7.xml", "name": "NHK スポーツ文化", "lang": "ja"},
-    {"url": "https://www.asahi.com/rss/asahi/newsheadlines.rdf", "name": "朝日 主要", "lang": "ja"},
-    {"url": "https://www.asahi.com/rss/asahi/politics.rdf", "name": "朝日 政治", "lang": "ja"},
-    {"url": "https://www.asahi.com/rss/asahi/business.rdf", "name": "朝日 経済", "lang": "ja"},
-    {"url": "https://www.asahi.com/rss/asahi/international.rdf", "name": "朝日 国際", "lang": "ja"},
-    {"url": "https://www.asahi.com/rss/asahi/tech_science.rdf", "name": "朝日 科学", "lang": "ja"},
-
-=======
     {"url": "https://feeds.bloomberg.com/markets/news.rss", "name": "Bloomberg", "lang": "en", "tier": 1, "focus": "Economic"},
     {"url": "https://www.ft.com/?format=rss", "name": "Financial Times", "lang": "en", "tier": 1, "focus": "Economic"},
     {"url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml", "name": "NYT Business", "lang": "en", "tier": 1, "focus": "Economic"},
@@ -355,7 +325,6 @@ RSS_FEEDS = [
     # Earth4All: WordPress feed returns empty items; proxied via Google News
     {"url": "https://news.google.com/rss/search?q=site:earth4all.life+when:30d&hl=en-US&gl=US&ceid=US:en", "name": "Earth4All", "lang": "en", "tier": 3, "focus": "Environmental"},
     {"url": "https://www.sciencedaily.com/rss/all.xml", "name": "ScienceDaily", "lang": "en", "tier": 3, "focus": "Technological"},
->>>>>>> 5c1d130f57714390511513bf4b6c0d3c2e21d0f1
 ]
 
 # === Scoring function ===
