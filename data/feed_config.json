@@ -1137,10 +1137,12 @@
       "region": "global",
       "enabled": true
     },
-
-    {"_comment": "=== Phase B: 国内メディア拡充 (2026-04-24) ==="},
-
-    {"_comment": "--- B-1: 新聞・通信社 ---"},
+    {
+      "_comment": "=== Phase B: 国内メディア拡充 (2026-04-24) ==="
+    },
+    {
+      "_comment": "--- B-1: 新聞・通信社 ---"
+    },
     {
       "url": "https://news.google.com/rss/search?q=site:sankei.com+when:24h&hl=ja&gl=JP&ceid=JP:ja",
       "name": "産経新聞",
@@ -1169,8 +1171,9 @@
       "region": "japan",
       "enabled": true
     },
-
-    {"_comment": "--- B-2: ビジネス・経済 ---"},
+    {
+      "_comment": "--- B-2: ビジネス・経済 ---"
+    },
     {
       "url": "https://www.zaikei.co.jp/rss/main.xml",
       "name": "財経新聞",
@@ -1216,8 +1219,9 @@
       "region": "japan",
       "enabled": true
     },
-
-    {"_comment": "--- B-3: テクノロジー ---"},
+    {
+      "_comment": "--- B-3: テクノロジー ---"
+    },
     {
       "url": "https://pc.watch.impress.co.jp/data/rss/1.0/pcw/feed.rdf",
       "name": "PC Watch",
@@ -1273,8 +1277,9 @@
       "enabled": true,
       "_note": "Internet policy and legal coverage"
     },
-
-    {"_comment": "--- B-4: 法律・規制 ---"},
+    {
+      "_comment": "--- B-4: 法律・規制 ---"
+    },
     {
       "url": "https://www.moj.go.jp/news.rss",
       "name": "法務省",
@@ -1321,8 +1326,9 @@
       "enabled": true,
       "_note": "Aggregated legal/regulatory news via Google News"
     },
-
-    {"_comment": "--- B-5: 環境・科学 ---"},
+    {
+      "_comment": "--- B-5: 環境・科学 ---"
+    },
     {
       "url": "https://www.env.go.jp/press/rss.xml",
       "name": "環境省",
@@ -1360,8 +1366,9 @@
       "enabled": true,
       "_note": "Aggregated climate news via Google News"
     },
-
-    {"_comment": "--- B-6: 社会・文化 ---"},
+    {
+      "_comment": "--- B-6: 社会・文化 ---"
+    },
     {
       "url": "https://ideasforgood.jp/feed/",
       "name": "IDEAS FOR GOOD",
@@ -1418,8 +1425,9 @@
       "enabled": true,
       "_note": "Aggregated social welfare news"
     },
-
-    {"_comment": "--- B-7: シンクタンク・研究機関 ---"},
+    {
+      "_comment": "--- B-7: シンクタンク・研究機関 ---"
+    },
     {
       "url": "https://news.google.com/rss/search?q=site:nri.com+when:30d&hl=ja&gl=JP&ceid=JP:ja",
       "name": "野村総合研究所",
@@ -1475,8 +1483,9 @@
       "enabled": true,
       "_note": "IT security and policy coverage"
     },
-
-    {"_comment": "--- B 追加: カバレッジ強化 ---"},
+    {
+      "_comment": "--- B 追加: カバレッジ強化 ---"
+    },
     {
       "url": "https://news.google.com/rss/search?q=site:nikkan.co.jp+when:24h&hl=ja&gl=JP&ceid=JP:ja",
       "name": "日刊工業新聞",
@@ -1571,10 +1580,12 @@
       "region": "japan",
       "enabled": true
     },
-
-    {"_comment": "=== Phase C: 海外メディア拡充 (2026-04-24) ==="},
-
-    {"_comment": "--- C-1: アフリカ (+12) ---"},
+    {
+      "_comment": "=== Phase C: 海外メディア拡充 (2026-04-24) ==="
+    },
+    {
+      "_comment": "--- C-1: アフリカ (+12) ---"
+    },
     {
       "url": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
       "name": "AllAfrica",
@@ -1683,8 +1694,9 @@
       "region": "africa",
       "enabled": true
     },
-
-    {"_comment": "--- C-2: ラテンアメリカ (+10) ---"},
+    {
+      "_comment": "--- C-2: ラテンアメリカ (+10) ---"
+    },
     {
       "url": "https://nacla.org/feed/",
       "name": "NACLA",
@@ -1775,8 +1787,9 @@
       "region": "latam",
       "enabled": true
     },
-
-    {"_comment": "--- C-3: 南・東南アジア (+14) ---"},
+    {
+      "_comment": "--- C-3: 南・東南アジア (+14) ---"
+    },
     {
       "url": "https://thewire.in/rss",
       "name": "The Wire India",
@@ -1903,8 +1916,9 @@
       "region": "asia",
       "enabled": true
     },
-
-    {"_comment": "--- C-4: 中東 (+8) ---"},
+    {
+      "_comment": "--- C-4: 中東 (+8) ---"
+    },
     {
       "url": "https://www.middleeasteye.net/rss",
       "name": "Middle East Eye",
@@ -1977,8 +1991,9 @@
       "region": "mena",
       "enabled": true
     },
-
-    {"_comment": "--- C-5: 法律・規制専門 (+12) ---"},
+    {
+      "_comment": "--- C-5: 法律・規制専門 (+12) ---"
+    },
     {
       "url": "https://iapp.org/news/rss/",
       "name": "IAPP Privacy",
@@ -2088,8 +2103,9 @@
       "region": "global",
       "enabled": true
     },
-
-    {"_comment": "--- C-6: 経済・代替経済 (+8) ---"},
+    {
+      "_comment": "--- C-6: 経済・代替経済 (+8) ---"
+    },
     {
       "url": "https://neweconomics.org/feed",
       "name": "New Economics Foundation",
@@ -2163,8 +2179,9 @@
       "region": "global",
       "enabled": true
     },
-
-    {"_comment": "--- C-7: 環境 (+8) ---"},
+    {
+      "_comment": "--- C-7: 環境 (+8) ---"
+    },
     {
       "url": "https://futureearth.org/feed/",
       "name": "Future Earth",
@@ -2237,8 +2254,9 @@
       "region": "global",
       "enabled": true
     },
-
-    {"_comment": "--- C-8: シンクタンク・知識 (+18) ---"},
+    {
+      "_comment": "--- C-8: シンクタンク・知識 (+18) ---"
+    },
     {
       "url": "https://www.rand.org/pubs/commentary.xml",
       "name": "RAND Commentary",
@@ -2401,8 +2419,9 @@
       "region": "global",
       "enabled": true
     },
-
-    {"_comment": "--- C-9: 非西洋英語メディア (+10) ---"},
+    {
+      "_comment": "--- C-9: 非西洋英語メディア (+10) ---"
+    },
     {
       "url": "https://www.xinhuanet.com/english/rss/world_rss.xml",
       "name": "Xinhua English",
@@ -2495,8 +2514,9 @@
       "region": "asia",
       "enabled": true
     },
-
-    {"_comment": "--- C-10: Tier 3 パラダイム転換系 (+7) ---"},
+    {
+      "_comment": "--- C-10: Tier 3 パラダイム転換系 (+7) ---"
+    },
     {
       "url": "https://intercontinentalcry.org/feed/",
       "name": "Intercontinental Cry",
@@ -2562,8 +2582,9 @@
       "region": "global",
       "enabled": true
     },
-
-    {"_comment": "--- C 追加: 地域多様性補完 ---"},
+    {
+      "_comment": "--- C 追加: 地域多様性補完 ---"
+    },
     {
       "url": "https://news.google.com/rss/search?q=site:theguardian.com+africa+when:24h&hl=en-US&gl=US&ceid=US:en",
       "name": "Guardian Africa",
@@ -2654,8 +2675,9 @@
       "region": "global",
       "enabled": true
     },
-
-    {"_comment": "--- C 追加: テクノロジー・地域補完 (+17) ---"},
+    {
+      "_comment": "--- C 追加: テクノロジー・地域補完 (+17) ---"
+    },
     {
       "url": "https://spectrum.ieee.org/feeds/feed.rss",
       "name": "IEEE Spectrum",
@@ -2810,6 +2832,123 @@
       "focus": "Technological",
       "region": "africa",
       "enabled": true
+    },
+    {
+      "url": "https://feeds.bbci.co.uk/arabic/rss.xml",
+      "name": "BBC Arabic",
+      "lang": "ar",
+      "tier": 1,
+      "focus": "Political",
+      "region": "middle_east",
+      "enabled": true
+    },
+    {
+      "url": "https://feeds.bbci.co.uk/hindi/rss.xml",
+      "name": "BBC Hindi",
+      "lang": "hi",
+      "tier": 1,
+      "focus": "Political",
+      "region": "south_asia",
+      "enabled": true
+    },
+    {
+      "url": "https://feeds.bbci.co.uk/mundo/rss.xml",
+      "name": "BBC Mundo",
+      "lang": "es",
+      "tier": 1,
+      "focus": "Political",
+      "region": "latin_america",
+      "enabled": true
+    },
+    {
+      "url": "https://feeds.bbci.co.uk/afrique/rss.xml",
+      "name": "BBC Afrique",
+      "lang": "fr",
+      "tier": 1,
+      "focus": "Political",
+      "region": "africa",
+      "enabled": true
+    },
+    {
+      "url": "https://feeds.bbci.co.uk/portuguese/rss.xml",
+      "name": "BBC Brasil",
+      "lang": "pt",
+      "tier": 1,
+      "focus": "Political",
+      "region": "latin_america",
+      "enabled": true
+    },
+    {
+      "url": "https://feeds.bbci.co.uk/zhongwen/simp/rss.xml",
+      "name": "BBC Zhongwen",
+      "lang": "zh",
+      "tier": 1,
+      "focus": "Political",
+      "region": "east_asia",
+      "enabled": true
+    },
+    {
+      "url": "https://feeds.bbci.co.uk/indonesia/rss.xml",
+      "name": "BBC Indonesia",
+      "lang": "id",
+      "tier": 1,
+      "focus": "Social",
+      "region": "southeast_asia",
+      "enabled": true
+    },
+    {
+      "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
+      "name": "El Pais",
+      "lang": "es",
+      "tier": 1,
+      "focus": "Political",
+      "region": "europe",
+      "enabled": true
+    },
+    {
+      "url": "https://www.lemonde.fr/rss/une.xml",
+      "name": "Le Monde",
+      "lang": "fr",
+      "tier": 1,
+      "focus": "Political",
+      "region": "europe",
+      "enabled": true
+    },
+    {
+      "url": "https://www.tagesschau.de/index~rss2.xml",
+      "name": "Tagesschau",
+      "lang": "de",
+      "tier": 1,
+      "focus": "Political",
+      "region": "europe",
+      "enabled": true
+    },
+    {
+      "url": "https://rss.dw.com/rdf/rss-de-all",
+      "name": "DW Deutsch",
+      "lang": "de",
+      "tier": 1,
+      "focus": "Social",
+      "region": "europe",
+      "enabled": true
+    },
+    {
+      "url": "https://feeds.folha.uol.com.br/emcimadahora/rss091.xml",
+      "name": "Folha de S.Paulo",
+      "lang": "pt",
+      "tier": 1,
+      "focus": "Social",
+      "region": "latin_america",
+      "enabled": true
+    },
+    {
+      "url": "https://www.yna.co.kr/rss/news.xml",
+      "name": "Yonhap",
+      "lang": "ko",
+      "tier": 1,
+      "focus": "Political",
+      "region": "east_asia",
+      "enabled": true
     }
   ],
   "pestle_categories": {
@@ -2883,7 +3022,77 @@
         "ASEAN",
         "外交安全保障",
         "主権",
-        "覇権"
+        "覇権",
+        "política",
+        "elecciones",
+        "gobierno",
+        "presidente",
+        "ministro",
+        "diplomacia",
+        "parlamento",
+        "sanciones",
+        "geopolítica",
+        "soberanía",
+        "politique",
+        "élection",
+        "gouvernement",
+        "président",
+        "ministre",
+        "diplomatie",
+        "parlement",
+        "sanctions",
+        "géopolitique",
+        "souveraineté",
+        "Politik",
+        "Wahl",
+        "Regierung",
+        "Präsident",
+        "Minister",
+        "Diplomatie",
+        "Parlament",
+        "Sanktionen",
+        "Geopolitik",
+        "Souveränität",
+        "eleições",
+        "governo",
+        "sanções",
+        "soberania",
+        "سياسة",
+        "انتخابات",
+        "حكومة",
+        "رئيس",
+        "دبلوماسية",
+        "برلمان",
+        "عقوبات",
+        "سيادة",
+        "राजनीति",
+        "चुनाव",
+        "सरकार",
+        "राष्ट्रपति",
+        "कूटनीति",
+        "संसद",
+        "प्रतिबंध",
+        "संप्रभुता",
+        "정치",
+        "선거",
+        "정부",
+        "대통령",
+        "외교",
+        "국회",
+        "제재",
+        "주권",
+        "选举",
+        "总统",
+        "议会",
+        "主权",
+        "politik",
+        "pemilu",
+        "pemerintah",
+        "presiden",
+        "diplomasi",
+        "parlemen",
+        "sanksi",
+        "kedaulatan"
       ],
       "gdelt_query": "politics OR election OR government OR diplomacy OR geopolitics OR decoupling",
       "gdelt_query_ja": "政治 OR 選挙 OR 外交 OR 安全保障 OR 防衛 OR 国会 sourcelang:japanese"
@@ -2960,7 +3169,81 @@
         "補助金",
         "ベンチャー",
         "物価",
-        "不動産"
+        "不動産",
+        "economía",
+        "inflación",
+        "mercado",
+        "comercio",
+        "inversión",
+        "banco central",
+        "PIB",
+        "empleo",
+        "deuda",
+        "aranceles",
+        "économie",
+        "marché",
+        "commerce",
+        "investissement",
+        "banque centrale",
+        "chômage",
+        "dette",
+        "tarifs douaniers",
+        "Wirtschaft",
+        "Inflation",
+        "Markt",
+        "Handel",
+        "Investition",
+        "Zentralbank",
+        "BIP",
+        "Arbeitslosigkeit",
+        "Schulden",
+        "Zölle",
+        "economia",
+        "inflação",
+        "comércio",
+        "investimento",
+        "emprego",
+        "dívida",
+        "tarifas",
+        "اقتصاد",
+        "تضخم",
+        "سوق",
+        "تجارة",
+        "استثمار",
+        "بنك مركزي",
+        "ناتج محلي",
+        "بطالة",
+        "अर्थव्यवस्था",
+        "मुद्रास्फीति",
+        "बाजार",
+        "व्यापार",
+        "निवेश",
+        "जीडीपी",
+        "बेरोजगारी",
+        "ऋण",
+        "경제",
+        "인플레이션",
+        "시장",
+        "무역",
+        "투자",
+        "중앙은행",
+        "실업",
+        "经济",
+        "通胀",
+        "市场",
+        "贸易",
+        "投资",
+        "央行",
+        "国内生产总值",
+        "失业",
+        "ekonomi",
+        "inflasi",
+        "pasar",
+        "perdagangan",
+        "investasi",
+        "bank sentral",
+        "PDB",
+        "pengangguran"
       ],
       "gdelt_query": "economy OR inflation OR market OR trade OR investment OR GDP OR industrial policy",
       "gdelt_query_ja": "経済 OR 景気 OR 株価 OR 為替 OR 金利 OR 日銀 sourcelang:japanese"
@@ -3031,7 +3314,71 @@
         "ボランティア",
         "過疎化",
         "孤立",
-        "ウェルビーイング"
+        "ウェルビーイング",
+        "sociedad",
+        "salud",
+        "educación",
+        "migración",
+        "desigualdad",
+        "pobreza",
+        "género",
+        "demografía",
+        "bienestar",
+        "société",
+        "santé",
+        "éducation",
+        "inégalité",
+        "pauvreté",
+        "genre",
+        "démographie",
+        "bien-être",
+        "Gesellschaft",
+        "Gesundheit",
+        "Bildung",
+        "Migration",
+        "Ungleichheit",
+        "Armut",
+        "Geschlecht",
+        "Demografie",
+        "Wohlergehen",
+        "sociedade",
+        "saúde",
+        "educação",
+        "migração",
+        "desigualdade",
+        "gênero",
+        "demografia",
+        "bem-estar",
+        "مجتمع",
+        "صحة",
+        "تعليم",
+        "هجرة",
+        "فقر",
+        "مساواة",
+        "سكان",
+        "समाज",
+        "स्वास्थ्य",
+        "शिक्षा",
+        "प्रवास",
+        "गरीबी",
+        "असमानता",
+        "जनसांख्यिकी",
+        "사회",
+        "건강",
+        "교육",
+        "이민",
+        "불평등",
+        "빈곤",
+        "인구",
+        "不平等",
+        "贫困",
+        "masyarakat",
+        "kesehatan",
+        "pendidikan",
+        "migrasi",
+        "kemiskinan",
+        "ketimpangan",
+        "demografi"
       ],
       "gdelt_query": "society OR education OR health OR migration OR inequality OR demographic change",
       "gdelt_query_ja": "教育 OR 少子化 OR 高齢化 OR 介護 OR 福祉 OR 医療 sourcelang:japanese"
@@ -3109,7 +3456,66 @@
         "デジタルツイン",
         "スパコン",
         "5G",
-        "6G"
+        "6G",
+        "tecnología",
+        "inteligencia artificial",
+        "innovación",
+        "semiconductores",
+        "robótica",
+        "ciberseguridad",
+        "datos",
+        "technologie",
+        "intelligence artificielle",
+        "innovation",
+        "semi-conducteurs",
+        "robotique",
+        "cybersécurité",
+        "données",
+        "logiciel",
+        "Technologie",
+        "künstliche Intelligenz",
+        "Innovation",
+        "Halbleiter",
+        "Robotik",
+        "Cybersicherheit",
+        "Daten",
+        "Software",
+        "tecnologia",
+        "inteligência artificial",
+        "inovação",
+        "semicondutores",
+        "cibersegurança",
+        "dados",
+        "تكنولوجيا",
+        "ذكاء اصطناعي",
+        "ابتكار",
+        "أشباه الموصلات",
+        "روبوت",
+        "أمن سيبراني",
+        "तकनीक",
+        "कृत्रिम बुद्धिमत्ता",
+        "नवाचार",
+        "सेमीकंडक्टर",
+        "रोबोटिक्स",
+        "साइबर सुरक्षा",
+        "기술",
+        "인공지능",
+        "혁신",
+        "반도체",
+        "로봇",
+        "사이버보안",
+        "技术",
+        "人工智能",
+        "创新",
+        "半导体",
+        "机器人",
+        "网络安全",
+        "teknologi",
+        "kecerdasan buatan",
+        "inovasi",
+        "semikonduktor",
+        "robotika",
+        "keamanan siber"
       ],
       "gdelt_query": "artificial intelligence OR technology OR semiconductor OR quantum OR AI governance",
       "gdelt_query_ja": "AI OR 人工知能 OR 半導体 OR 量子 OR ロボット OR 宇宙 sourcelang:japanese"
@@ -3171,7 +3577,62 @@
         "情報公開",
         "サンドボックス",
         "ガイドライン",
-        "行政処分"
+        "行政処分",
+        "ley",
+        "tribunal",
+        "regulación",
+        "justicia",
+        "derechos",
+        "demanda",
+        "normativa",
+        "sentencia",
+        "loi",
+        "réglementation",
+        "droits",
+        "procès",
+        "jugement",
+        "Gesetz",
+        "Gericht",
+        "Regulierung",
+        "Justiz",
+        "Rechte",
+        "Klage",
+        "Urteil",
+        "lei",
+        "regulação",
+        "justiça",
+        "direitos",
+        "processo",
+        "sentença",
+        "قانون",
+        "محكمة",
+        "تنظيم",
+        "عدالة",
+        "حقوق",
+        "دعوى",
+        "कानून",
+        "अदालत",
+        "विनियमन",
+        "न्याय",
+        "अधिकार",
+        "मुकदमा",
+        "법",
+        "법원",
+        "규제",
+        "사법",
+        "권리",
+        "소송",
+        "法院",
+        "监管",
+        "司法",
+        "权利",
+        "诉讼",
+        "hukum",
+        "pengadilan",
+        "regulasi",
+        "keadilan",
+        "hak",
+        "gugatan"
       ],
       "gdelt_query": "regulation OR law OR court OR privacy OR antitrust OR AI regulation",
       "gdelt_query_ja": "法律 OR 規制 OR 法改正 OR 個人情報 OR 裁判 OR 訴訟 sourcelang:japanese"
@@ -3240,12 +3701,67 @@
         "ZEB",
         "ZEH",
         "風力発電",
-        "水素"
+        "水素",
+        "clima",
+        "medio ambiente",
+        "energía renovable",
+        "carbono",
+        "biodiversidad",
+        "sostenibilidad",
+        "contaminación",
+        "climat",
+        "environnement",
+        "énergie renouvelable",
+        "carbone",
+        "biodiversité",
+        "durabilité",
+        "Klima",
+        "Umwelt",
+        "erneuerbare Energie",
+        "Kohlenstoff",
+        "Biodiversität",
+        "Nachhaltigkeit",
+        "Umweltverschmutzung",
+        "meio ambiente",
+        "energia renovável",
+        "biodiversidade",
+        "sustentabilidade",
+        "poluição",
+        "مناخ",
+        "بيئة",
+        "طاقة متجددة",
+        "كربون",
+        "تنوع بيولوجي",
+        "استدامة",
+        "जलवायु",
+        "पर्यावरण",
+        "नवीकरणीय ऊर्जा",
+        "कार्बन",
+        "जैव विविधता",
+        "स्थिरता",
+        "기후",
+        "환경",
+        "재생에너지",
+        "탄소",
+        "생물다양성",
+        "지속가능성",
+        "气候",
+        "环境",
+        "可再生能源",
+        "碳",
+        "生物多样性",
+        "可持续",
+        "iklim",
+        "lingkungan",
+        "energi terbarukan",
+        "karbon",
+        "keanekaragaman hayati",
+        "keberlanjutan"
       ],
       "gdelt_query": "climate OR environment OR renewable energy OR biodiversity OR tipping point OR planetary boundary",
       "gdelt_query_ja": "環境 OR 気候変動 OR 脱炭素 OR 再生可能エネルギー OR 温暖化 OR 生態系 sourcelang:japanese"
     }
   },
-  "updated_at": "2026-04-24T12:00:00Z",
-  "_changelog": "2026-04-24: Phase A (fix 4 broken JA feeds), Phase B (+46 JA sources to 102), Phase D (region_balance_boost 2.0, GDELT JA queries, JA keyword expansion)"
+  "updated_at": "2026-06-13T00:00:00Z",
+  "_changelog": "2026-04-24: Phase A (fix 4 broken JA feeds), Phase B (+46 JA sources to 102), Phase D (region_balance_boost 2.0, GDELT JA queries, JA keyword expansion)\n2026-06-13: DKF Phase C (additive) — 非英語フィード +13 (ar/hi/es/fr/pt/de/ko/zh/id / BBC多言語+El Pais/Le Monde/Tagesschau/DW/Folha/Yonhap, 全 urllib live検証済) + 多言語キーワード +377 (6カテゴリ×9言語)。英語偏重是正の前方収集。既存en/jaフィード・キーワードは不変。"
 }
