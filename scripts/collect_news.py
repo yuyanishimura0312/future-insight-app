@@ -350,6 +350,8 @@ def fetch_all_feeds() -> list[dict]:
     # Use browser-like User-Agent to avoid being blocked by WAFs (e.g. Cloudflare)
     ua = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
+    import socket as _socket
+    _socket.setdefaulttimeout(20)  # 死にフィード/応答しないサーバでの無限ハング防止 (per-feed I/O timeout)
     for feed_info in RSS_FEEDS:
         try:
             feed = feedparser.parse(
