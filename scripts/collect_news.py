@@ -352,7 +352,18 @@ def fetch_all_feeds() -> list[dict]:
 
     import socket as _socket
     _socket.setdefaulttimeout(20)  # 死にフィード/応答しないサーバでの無限ハング防止 (per-feed I/O timeout)
+
+    # Per-feed health ledger (additive 2026-06-14). Fail-safe: if the recorder cannot
+    # initialise it degrades to a no-op and collection proceeds exactly as before.
+    try:
+        from feed_health import FeedHealthRecorder
+        _health = FeedHealthRecorder()
+    except Exception as _e:  # noqa: BLE001
+        print(f"  [feed_health] unavailable, continuing without ledger: {_e}")
+        _health = None
+
     for feed_info in RSS_FEEDS:
+        _added_for_feed = 0
         try:
             feed = feedparser.parse(
                 feed_info["url"],
@@ -388,8 +399,20 @@ def fetch_all_feeds() -> list[dict]:
                     "focus": feed_info.get("focus", ""),
                     "region": region,
                 })
+                _added_for_feed += 1
+            # Record this feed's outcome: 'ok' if it yielded entries, else 'empty'
+            # (parsed without raising but returned nothing — a slow-rotting feed signal).
+            if _health is not None:
+                _status = "ok" if (_added_for_feed > 0 or feed.entries) else "empty"
+                _health.record(feed_info["name"], feed_info["url"], _status,
+                               entries=_added_for_feed)
         except Exception as e:
             print(f"  [WARN] Failed to fetch {feed_info['name']}: {e}")
+            if _health is not None:
+                _health.record(feed_info["name"], feed_info["url"], "error", error=str(e))
+
+    if _health is not None:
+        _health.finish()
 
     return articles
 
