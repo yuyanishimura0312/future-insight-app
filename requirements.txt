@@ -1,3 +1,12 @@
-feedparser
-requests
-# requests is also used by collect_papers.py (OpenAlex API)
+# future-insight-app daily pipeline dependencies
+# Build/refresh the dedicated venv with:  python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+# daily_update.sh runs a preflight that auto-rebuilds this venv if feedparser/requests are missing.
+
+# --- core daily-step dependencies (preflight checks these) ---
+feedparser          # collect_news.py (RSS/Atom parsing) — the dependency that was lost when ~/.venv vanished
+requests            # collect_papers.py / collect_historical_daily.py (OpenAlex API)
+anthropic           # ai_analyze.py / generate_*_report.py / curate_daily_papers.py / detect_alerts.py / collect_historical_daily.py / generate_scenarios.py
+python-dotenv       # dotenv.load_dotenv() used across the AI-analysis steps
+
+# --- optional: Firestore status reporting (report_status.py skips gracefully if absent) ---
+firebase-admin
