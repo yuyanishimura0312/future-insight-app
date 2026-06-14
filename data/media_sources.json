@@ -1,10 +1,24 @@
 {
-  "exported_at": "2026-04-24T19:13:47.489107",
-  "count": 131,
-  "total_articles_rss": 26528,
-  "total_articles_all": 239129,
-  "distinct_sources_all": 66986,
+  "exported_at": "2026-06-14T19:14:56.922372",
+  "count": 326,
+  "total_articles_rss": 31522,
+  "total_articles_all": 312728,
+  "distinct_sources_all": 70984,
   "sources": [
+    {
+      "id": 2765,
+      "name": "@IT",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://rss.itmedia.co.jp/rss/2.0/ait.xml",
+      "region": "japan",
+      "categories": "Legal",
+      "language": "ja",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 28,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
     {
       "id": 65,
       "name": "AI Now Institute",
@@ -16,8 +30,36 @@
       "language": "en",
       "tier": 2,
       "status": "active",
-      "articles_count": 141,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 151,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2828,
+      "name": "AI Regulation News",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=AI+regulation+OR+AI+governance+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Legal",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 16,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2773,
+      "name": "AIニュース日本",
+      "name_ja": "AIニュース日本",
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=AI+OR+人工知能+OR+生成AI+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Technological",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 54,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 652,
@@ -30,8 +72,8 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 26,
-      "last_fetched": "2026-04-23 19:13:02"
+      "articles_count": 32,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 30,
@@ -44,8 +86,22 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 490,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 506,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2823,
+      "name": "Access Now",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.accessnow.org/feed/",
+      "region": "global",
+      "categories": "Legal",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 14,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 66,
@@ -86,8 +142,64 @@
       "language": "en",
       "tier": 2,
       "status": "active",
-      "articles_count": 127,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 133,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2781,
+      "name": "Africa Is a Country",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://africasacountry.com/feed/",
+      "region": "africa",
+      "categories": "Social",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 6,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2779,
+      "name": "African Arguments",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://africanarguments.org/feed/",
+      "region": "africa",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 12,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2900,
+      "name": "Africanews",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:africanews.com+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "africa",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 3,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2796,
+      "name": "Agencia Brasil",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://agenciabrasil.ebc.com.br/en/rss/ultimasnoticias/feed.xml",
+      "region": "latam",
+      "categories": "Social",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 14,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 40,
@@ -100,8 +212,50 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 477,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 486,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2814,
+      "name": "Al-Monitor",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.al-monitor.com/rss",
+      "region": "mena",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 17,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2776,
+      "name": "AllAfrica",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
+      "region": "africa",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 14,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2908,
+      "name": "AllAfrica Tech",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:allafrica.com+technology+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "region": "africa",
+      "categories": "Technological",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 10,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 764,
@@ -114,8 +268,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 98,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 106,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 755,
@@ -128,8 +282,36 @@
       "language": "en",
       "tier": 2,
       "status": "active",
-      "articles_count": 75,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 89,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2813,
+      "name": "Arab News",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.arabnews.com/rss.xml",
+      "region": "mena",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 24,
+      "last_fetched": "2026-04-30 19:39:19"
+    },
+    {
+      "id": 2895,
+      "name": "Ars Technica",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://feeds.arstechnica.com/arstechnica/technology-lab",
+      "region": "global",
+      "categories": "Technological",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 10,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 22,
@@ -142,8 +324,78 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 60,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 65,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2850,
+      "name": "Atlantic Council",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.atlanticcouncil.org/feed/",
+      "region": "global",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 30,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2912,
+      "name": "BBC Afrique",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://feeds.bbci.co.uk/afrique/rss.xml",
+      "region": "africa",
+      "categories": "Political",
+      "language": "fr",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 8,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2909,
+      "name": "BBC Arabic",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://feeds.bbci.co.uk/arabic/rss.xml",
+      "region": "middle_east",
+      "categories": "Political",
+      "language": "ar",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2884,
+      "name": "BBC Asia",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:bbc.com+asia+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "asia",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 7,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2913,
+      "name": "BBC Brasil",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://feeds.bbci.co.uk/portuguese/rss.xml",
+      "region": "latin_america",
+      "categories": "Political",
+      "language": "pt",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 6,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 2,
@@ -156,8 +408,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 371,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 382,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 36,
@@ -184,8 +436,50 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 360,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 364,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2910,
+      "name": "BBC Hindi",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://feeds.bbci.co.uk/hindi/rss.xml",
+      "region": "south_asia",
+      "categories": "Political",
+      "language": "hi",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2915,
+      "name": "BBC Indonesia",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://feeds.bbci.co.uk/indonesia/rss.xml",
+      "region": "southeast_asia",
+      "categories": "Social",
+      "language": "id",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 5,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2911,
+      "name": "BBC Mundo",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://feeds.bbci.co.uk/mundo/rss.xml",
+      "region": "latin_america",
+      "categories": "Political",
+      "language": "es",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 22,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 3,
@@ -198,8 +492,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 126,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 136,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 1,
@@ -212,8 +506,22 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 322,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 328,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2914,
+      "name": "BBC Zhongwen",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://feeds.bbci.co.uk/zhongwen/simp/rss.xml",
+      "region": "east_asia",
+      "categories": "Political",
+      "language": "zh",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 657,
@@ -226,8 +534,36 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 290,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 334,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2802,
+      "name": "Bangkok Post",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.bangkokpost.com/rss/data/topstories.xml",
+      "region": "asia",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 139,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2874,
+      "name": "Bernama Malaysia",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:bernama.com+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "asia",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 14,
@@ -240,8 +576,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 820,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 837,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 756,
@@ -272,6 +608,76 @@
       "last_fetched": "2026-04-24 19:13:38"
     },
     {
+      "id": 2847,
+      "name": "Breakthrough Institute",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://thebreakthrough.org/feed/",
+      "region": "global",
+      "categories": "Environmental",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2824,
+      "name": "Brennan Center",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.brennancenter.org/rss.xml",
+      "region": "global",
+      "categories": "Legal",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2851,
+      "name": "Brookings",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:brookings.edu+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 8,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2836,
+      "name": "Bruegel",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.bruegel.org/rss.xml",
+      "region": "global",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 2,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2789,
+      "name": "Buenos Aires Times",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://batimes.com.ar/feed/",
+      "region": "latam",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 40,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
       "id": 648,
       "name": "Business Insider Japan",
       "name_ja": null,
@@ -282,8 +688,50 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 117,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 127,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2784,
+      "name": "BusinessDay Nigeria",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://businessday.ng/feed/",
+      "region": "africa",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 2,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2794,
+      "name": "CELAG",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.celag.org/feed/",
+      "region": "latam",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2869,
+      "name": "CGTN",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:cgtn.com+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "asia",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 2,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 650,
@@ -296,8 +744,8 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 71,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 100,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 23,
@@ -310,8 +758,36 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 120,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 140,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2852,
+      "name": "Carnegie Endowment",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:carnegieendowment.org+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 4,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2818,
+      "name": "Carnegie Middle East",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:carnegie-mec.org+when:30d&hl=en-US&gl=US&ceid=US:en",
+      "region": "mena",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 70,
@@ -324,8 +800,78 @@
       "language": "en",
       "tier": 3,
       "status": "active",
-      "articles_count": 136,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 142,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2872,
+      "name": "Channel NewsAsia",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.channelnewsasia.com/rss/latest",
+      "region": "asia",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 27,
+      "last_fetched": "2026-04-04 18:21:14"
+    },
+    {
+      "id": 2853,
+      "name": "Chatham House",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:chathamhouse.org+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 2,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2819,
+      "name": "Chatham House MENA",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:chathamhouse.org+middle+east+when:30d&hl=en-US&gl=US&ceid=US:en",
+      "region": "mena",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 14,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2885,
+      "name": "Circular Economy News",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=circular+economy+OR+degrowth+OR+regenerative+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Environmental",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 26,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2842,
+      "name": "Climate Home News",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.climatechangenews.com/feed/",
+      "region": "global",
+      "categories": "Environmental",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 80,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 24,
@@ -338,8 +884,148 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 100,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 106,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2888,
+      "name": "Cybersecurity News",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=cybersecurity+OR+ransomware+OR+data+breach+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Technological",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 9,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2919,
+      "name": "DW Deutsch",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://rss.dw.com/rdf/rss-de-all",
+      "region": "europe",
+      "categories": "Social",
+      "language": "de",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 14,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2783,
+      "name": "Daily Maverick",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.dailymaverick.co.za/rss.xml",
+      "region": "africa",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2786,
+      "name": "Daily Nation Kenya",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.nation.co.ke/rss",
+      "region": "africa",
+      "categories": "Social",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2830,
+      "name": "Data Protection News",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=data+protection+OR+digital+services+act+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Legal",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 2,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2870,
+      "name": "Dawn Pakistan",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:dawn.com+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "asia",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 4,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2867,
+      "name": "Deutsche Welle",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://rss.dw.com/rdf/rss-en-all",
+      "region": "global",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 142,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2899,
+      "name": "Devex",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:devex.com+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Social",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 10,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2879,
+      "name": "Dissent Magazine",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://dissentmagazine.org/feed/",
+      "region": "global",
+      "categories": "Social",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 18,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2806,
+      "name": "Down To Earth India",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.downtoearth.org.in/rss/",
+      "region": "asia",
+      "categories": "Environmental",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 63,
@@ -352,8 +1038,22 @@
       "language": "en",
       "tier": 2,
       "status": "active",
-      "articles_count": 279,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 301,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2771,
+      "name": "EE Times Japan",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://eetimes.itmedia.co.jp/rss/2.0/eetimes.xml",
+      "region": "japan",
+      "categories": "Technological",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 32,
@@ -366,8 +1066,22 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 579,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 617,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2905,
+      "name": "ESG & Impact Finance",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=ESG+OR+impact+investing+OR+sustainable+finance+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 4,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 33,
@@ -380,8 +1094,22 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 75,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 79,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2831,
+      "name": "EU Regulation Watch",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:europarl.europa.eu+regulation+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Legal",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 45,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 71,
@@ -412,6 +1140,48 @@
       "last_fetched": "2026-04-24 19:13:38"
     },
     {
+      "id": 2803,
+      "name": "Economic Times India",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://economictimes.indiatimes.com/rssfeedsdefault.cms",
+      "region": "asia",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 29,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2916,
+      "name": "El Pais",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
+      "region": "europe",
+      "categories": "Political",
+      "language": "es",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 25,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2907,
+      "name": "El Pais English",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:elpais.com+english+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "latam",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 2,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
       "id": 656,
       "name": "EnergyShift",
       "name_ja": null,
@@ -422,8 +1192,36 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 98,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 116,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2846,
+      "name": "Ensia",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://ensia.com/feed/",
+      "region": "global",
+      "categories": "Environmental",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 44,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2844,
+      "name": "Environmental Health News",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.ehn.org/feed/",
+      "region": "global",
+      "categories": "Environmental",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 757,
@@ -436,8 +1234,8 @@
       "language": "en",
       "tier": 2,
       "status": "active",
-      "articles_count": 567,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 589,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 15,
@@ -450,8 +1248,36 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 623,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 646,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2920,
+      "name": "Folha de S.Paulo",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://feeds.folha.uol.com.br/emcimadahora/rss091.xml",
+      "region": "latin_america",
+      "categories": "Social",
+      "language": "pt",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 32,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2906,
+      "name": "Food Systems Watch",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=food+security+OR+agriculture+technology+OR+food+systems+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Environmental",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 3,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 62,
@@ -464,8 +1290,78 @@
       "language": "en",
       "tier": 2,
       "status": "active",
-      "articles_count": 125,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 127,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2859,
+      "name": "Foreign Policy",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://foreignpolicy.com/feed/",
+      "region": "global",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 5,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2868,
+      "name": "France 24",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.france24.com/en/rss",
+      "region": "global",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 35,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2808,
+      "name": "Frontier Myanmar",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.frontiermyanmar.net/en/rss.xml",
+      "region": "asia",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2889,
+      "name": "Frontier Tech Watch",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=nuclear+fusion+OR+space+exploration+OR+quantum+computing+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Technological",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 9,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2840,
+      "name": "Future Earth",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://futureearth.org/feed/",
+      "region": "global",
+      "categories": "Environmental",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 4,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 67,
@@ -478,8 +1374,8 @@
       "language": "en",
       "tier": 2,
       "status": "active",
-      "articles_count": 280,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 298,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 758,
@@ -492,8 +1388,8 @@
       "language": "en",
       "tier": 2,
       "status": "active",
-      "articles_count": 228,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 244,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 34,
@@ -520,8 +1416,50 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 104,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 122,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2891,
+      "name": "Global Health Watch",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=WHO+OR+pandemic+preparedness+OR+global+health+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Social",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 10,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2829,
+      "name": "Global Regulatory News",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=regulatory+compliance+OR+antitrust+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Legal",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 7,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2886,
+      "name": "Global South Watch",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=global+south+development+OR+brics+economy+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 26,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 762,
@@ -534,8 +1472,22 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 139,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 147,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2882,
+      "name": "Guardian Africa",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:theguardian.com+africa+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "africa",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 6,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 17,
@@ -548,8 +1500,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 364,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 377,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 11,
@@ -562,8 +1514,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 317,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 331,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 13,
@@ -576,8 +1528,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 275,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 293,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 27,
@@ -590,8 +1542,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 205,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 212,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 39,
@@ -604,8 +1556,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 246,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 257,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 12,
@@ -618,8 +1570,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 312,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 326,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 10,
@@ -632,8 +1584,120 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 682,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 696,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2817,
+      "name": "Hurriyet Daily News",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.hurriyetdailynews.com/rss",
+      "region": "mena",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 9,
+      "last_fetched": "2026-04-04 15:20:22"
+    },
+    {
+      "id": 2820,
+      "name": "IAPP Privacy",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://iapp.org/news/rss/",
+      "region": "global",
+      "categories": "Legal",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2754,
+      "name": "IDEAS FOR GOOD",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://ideasforgood.jp/feed/",
+      "region": "japan",
+      "categories": "Social",
+      "language": "ja",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 52,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2892,
+      "name": "IEEE Spectrum",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://spectrum.ieee.org/feeds/feed.rss",
+      "region": "global",
+      "categories": "Technological",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 29,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2837,
+      "name": "IMF Blog",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.imf.org/en/blogs/rss",
+      "region": "global",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2744,
+      "name": "INTERNET Watch",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://internet.watch.impress.co.jp/data/rss/1.0/iw/feed.rdf",
+      "region": "japan",
+      "categories": "Legal",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 10,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2792,
+      "name": "IPS News Latin America",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.ipsnews.net/category/latin-america/feed/",
+      "region": "latam",
+      "categories": "Social",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2805,
+      "name": "ISEAS-Yusof Ishak",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.iseas.edu.sg/feed/",
+      "region": "asia",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 59,
@@ -646,8 +1710,92 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 205,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 225,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2741,
+      "name": "ITmedia AI+",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "region": "japan",
+      "categories": "Technological",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 14,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2666,
+      "name": "Impress Watch",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.watch.impress.co.jp/data/rss/1.0/wt/feed.rdf",
+      "region": "japan",
+      "categories": "Technological",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2790,
+      "name": "InSight Crime",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://insightcrime.org/feed/",
+      "region": "latam",
+      "categories": "Legal",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 5,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2843,
+      "name": "Inside Climate News",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://insideclimatenews.org/feed/",
+      "region": "global",
+      "categories": "Environmental",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 6,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2875,
+      "name": "Intercontinental Cry",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://intercontinentalcry.org/feed/",
+      "region": "global",
+      "categories": "Social",
+      "language": "en",
+      "tier": 3,
+      "status": "active",
+      "articles_count": 12,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2855,
+      "name": "Issues in Science & Technology",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://issues.org/feed/",
+      "region": "global",
+      "categories": "Technological",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 10,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 782,
@@ -660,8 +1808,8 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 34,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 36,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 649,
@@ -674,8 +1822,106 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 105,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 113,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2767,
+      "name": "JETRO",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:jetro.go.jp+when:30d&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Economic",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 13,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2758,
+      "name": "JICA",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.jica.go.jp/rss/press.xml",
+      "region": "japan",
+      "categories": "Social",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2871,
+      "name": "Japan Times",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:japantimes.co.jp+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "asia",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 329,
+      "last_fetched": "2026-06-13 19:41:09"
+    },
+    {
+      "id": 2816,
+      "name": "Jerusalem Post",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.jpost.com/rss/rssfeedsworld.aspx",
+      "region": "mena",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 22,
+      "last_fetched": "2026-04-24 19:57:22"
+    },
+    {
+      "id": 2810,
+      "name": "Korea JoongAng Daily",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://koreajoongangdaily.joins.com/rss/content",
+      "region": "asia",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2797,
+      "name": "Latin America News",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=latin+america+policy+OR+economy+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "latam",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 1,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2827,
+      "name": "Law360",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:law360.com+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Legal",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 2,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 26,
@@ -702,8 +1948,190 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 527,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 535,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2917,
+      "name": "Le Monde",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.lemonde.fr/rss/une.xml",
+      "region": "europe",
+      "categories": "Political",
+      "language": "fr",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 160,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2880,
+      "name": "Longreads",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://longreads.com/feed/",
+      "region": "global",
+      "categories": "Social",
+      "language": "en",
+      "tier": 3,
+      "status": "active",
+      "articles_count": 4,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2894,
+      "name": "MIT Tech Review AI",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
+      "region": "global",
+      "categories": "Technological",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 10,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2860,
+      "name": "MIT Technology Review",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.technologyreview.com/feed/",
+      "region": "global",
+      "categories": "Technological",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 12,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2778,
+      "name": "Mail & Guardian",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://mg.co.za/rss",
+      "region": "africa",
+      "categories": "Social",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 30,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2812,
+      "name": "Middle East Eye",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.middleeasteye.net/rss",
+      "region": "mena",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 24,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2815,
+      "name": "Middle East Institute",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.mei.edu/rss.xml",
+      "region": "mena",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 2,
+      "last_fetched": "2026-04-04 07:36:07"
+    },
+    {
+      "id": 2887,
+      "name": "Migration Watch",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=migration+OR+refugee+OR+displacement+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Social",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 109,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2902,
+      "name": "Mint India",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:livemint.com+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "asia",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 4,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2785,
+      "name": "Mongabay Africa",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.mongabay.com/feed/?region=africa",
+      "region": "africa",
+      "categories": "Environmental",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 17,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2791,
+      "name": "Mongabay Latin America",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.mongabay.com/feed/?region=latin-america",
+      "region": "latam",
+      "categories": "Environmental",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2807,
+      "name": "Mongabay Southeast Asia",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.mongabay.com/feed/?region=southeast-asia",
+      "region": "asia",
+      "categories": "Environmental",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2788,
+      "name": "NACLA",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://nacla.org/feed/",
+      "region": "latam",
+      "categories": "Social",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 43,
@@ -716,8 +2144,8 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 25,
-      "last_fetched": "2026-04-22 19:14:32"
+      "articles_count": 29,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 48,
@@ -730,8 +2158,8 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 344,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 370,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 46,
@@ -744,8 +2172,8 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 715,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 825,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 647,
@@ -758,8 +2186,8 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 14,
-      "last_fetched": "2026-04-21 19:13:06"
+      "articles_count": 16,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 44,
@@ -772,8 +2200,8 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 426,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 464,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 45,
@@ -786,8 +2214,8 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 42,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 48,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 47,
@@ -800,8 +2228,8 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 597,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 672,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 68,
@@ -814,8 +2242,8 @@
       "language": "ja",
       "tier": 2,
       "status": "active",
-      "articles_count": 84,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 98,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 750,
@@ -828,8 +2256,8 @@
       "language": "en",
       "tier": 2,
       "status": "active",
-      "articles_count": 45,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 49,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 16,
@@ -842,8 +2270,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 428,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 433,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 8,
@@ -856,8 +2284,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 326,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 350,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 37,
@@ -884,8 +2312,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 238,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 248,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 38,
@@ -912,8 +2340,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 230,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 246,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 7,
@@ -926,8 +2354,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 717,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 727,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 20,
@@ -940,8 +2368,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 518,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 553,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 754,
@@ -958,6 +2386,104 @@
       "last_fetched": "2026-04-24 19:13:38"
     },
     {
+      "id": 2832,
+      "name": "New Economics Foundation",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://neweconomics.org/feed",
+      "region": "global",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 26,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2864,
+      "name": "New Statesman",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.newstatesman.com/feed/",
+      "region": "global",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2800,
+      "name": "Nikkei Asia",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://asia.nikkei.com/rss/feed/nar",
+      "region": "asia",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2839,
+      "name": "OECD iLibrary",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.oecd-ilibrary.org/rss/recent",
+      "region": "global",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2804,
+      "name": "ORF India",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.orfonline.org/feed/",
+      "region": "asia",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2739,
+      "name": "PC Watch",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://pc.watch.impress.co.jp/data/rss/1.0/pcw/feed.rdf",
+      "region": "japan",
+      "categories": "Technological",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 6,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2737,
+      "name": "PHP総研",
+      "name_ja": "PHP総研",
+      "url": null,
+      "feed_url": "https://thinktank.php.co.jp/feed/",
+      "region": "japan",
+      "categories": "Political",
+      "language": "ja",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
       "id": 759,
       "name": "Palladium Magazine",
       "name_ja": null,
@@ -968,8 +2494,50 @@
       "language": "en",
       "tier": 2,
       "status": "active",
-      "articles_count": 234,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 242,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2856,
+      "name": "Pew Research Center",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.pewresearch.org/feed/",
+      "region": "global",
+      "categories": "Social",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 43,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2834,
+      "name": "Phenomenal World",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://phenomenalworld.org/feed/",
+      "region": "global",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 18,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2903,
+      "name": "Philippine Daily Inquirer",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:inquirer.net+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "asia",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 60,
+      "last_fetched": "2026-05-12 19:42:23"
     },
     {
       "id": 25,
@@ -982,8 +2550,22 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 345,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 354,
+      "last_fetched": "2026-06-14 14:25:41"
+    },
+    {
+      "id": 2825,
+      "name": "Privacy International",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.privacyinternational.org/rss.xml",
+      "region": "global",
+      "categories": "Legal",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 2,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 752,
@@ -1000,6 +2582,90 @@
       "last_fetched": "2026-04-24 19:13:38"
     },
     {
+      "id": 2858,
+      "name": "Public Books",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://publicbooks.org/feed/",
+      "region": "global",
+      "categories": "Social",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2901,
+      "name": "Punch Nigeria",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:punchng.com+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "africa",
+      "categories": "Social",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 3,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2772,
+      "name": "Qiita トレンド",
+      "name_ja": "Qiita トレンド",
+      "url": null,
+      "feed_url": "https://www.kobelcosys.co.jp/column/rss/",
+      "region": "japan",
+      "categories": "Technological",
+      "language": "ja",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2780,
+      "name": "Quartz Africa",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://qz.com/africa/feed/",
+      "region": "africa",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2848,
+      "name": "RAND Commentary",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.rand.org/pubs/commentary.xml",
+      "region": "global",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 14,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2849,
+      "name": "RAND Research",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.rand.org/pubs/research_reports.xml",
+      "region": "global",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 12,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
       "id": 781,
       "name": "RIETI 経産研",
       "name_ja": "RIETI 経産研",
@@ -1010,8 +2676,78 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 403,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 473,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2801,
+      "name": "Rappler",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.rappler.com/feed/",
+      "region": "asia",
+      "categories": "Social",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 5,
+      "last_fetched": "2026-04-04 17:11:09"
+    },
+    {
+      "id": 2822,
+      "name": "Regulation Asia",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.regulationasia.com/feed/",
+      "region": "asia",
+      "categories": "Legal",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2841,
+      "name": "Resilience.org",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.resilience.org/?feed=rss2",
+      "region": "global",
+      "categories": "Environmental",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 11,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2898,
+      "name": "Rest of World",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:restofworld.org+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Technological",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2883,
+      "name": "Reuters Asia",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:reuters.com+asia+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "asia",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 2,
+      "last_fetched": "2026-05-09 20:55:45"
     },
     {
       "id": 6,
@@ -1066,8 +2802,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 221,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 223,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 4,
@@ -1094,8 +2830,22 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 456,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 458,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2795,
+      "name": "Rio Times Online",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://riotimesonline.com/feed/",
+      "region": "latam",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 3,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 29,
@@ -1108,8 +2858,36 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 221,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 227,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2857,
+      "name": "SSRC Items",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://items.ssrc.org/feed/",
+      "region": "global",
+      "categories": "Social",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 10,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2854,
+      "name": "Santa Fe Institute",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.santafe.edu/news-center/feed/",
+      "region": "global",
+      "categories": "Social",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 658,
@@ -1122,8 +2900,8 @@
       "language": "ja",
       "tier": 2,
       "status": "active",
-      "articles_count": 175,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 201,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 21,
@@ -1136,8 +2914,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 62,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 72,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 72,
@@ -1150,8 +2928,36 @@
       "language": "en",
       "tier": 3,
       "status": "active",
-      "articles_count": 719,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 779,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2799,
+      "name": "Scroll.in",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://scroll.in/feed",
+      "region": "asia",
+      "categories": "Social",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2877,
+      "name": "Shareable",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.shareable.net/feed/",
+      "region": "global",
+      "categories": "Social",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 4,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 765,
@@ -1164,8 +2970,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 112,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 118,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 41,
@@ -1178,8 +2984,22 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 865,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 891,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2890,
+      "name": "Startup Ecosystem News",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=startup+ecosystem+OR+venture+capital+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "global",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 2,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 64,
@@ -1196,6 +3016,20 @@
       "last_fetched": "2026-04-24 19:13:38"
     },
     {
+      "id": 2809,
+      "name": "Straits Times",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.straitstimes.com/news/world/rss.xml",
+      "region": "asia",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 130,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
       "id": 655,
       "name": "Sustainable Japan",
       "name_ja": null,
@@ -1206,8 +3040,64 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 80,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 92,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2873,
+      "name": "TRT World",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:trtworld.com+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "mena",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 1,
+      "last_fetched": "2026-04-04 17:11:09"
+    },
+    {
+      "id": 2755,
+      "name": "TURNS",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://turns.jp/feed",
+      "region": "japan",
+      "categories": "Social",
+      "language": "ja",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 20,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2918,
+      "name": "Tagesschau",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.tagesschau.de/index~rss2.xml",
+      "region": "europe",
+      "categories": "Political",
+      "language": "de",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 8,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2821,
+      "name": "Tech Policy Press",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://techpolicy.press/feed/",
+      "region": "global",
+      "categories": "Legal",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 18,
@@ -1238,6 +3128,20 @@
       "last_fetched": null
     },
     {
+      "id": 2787,
+      "name": "The Continent",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:thecontinent.org+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "region": "africa",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
       "id": 760,
       "name": "The Conversation Africa",
       "name_ja": null,
@@ -1248,8 +3152,8 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 348,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 364,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 761,
@@ -1262,8 +3166,64 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 271,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 289,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2863,
+      "name": "The Conversation Canada",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://theconversation.com/ca/articles.atom",
+      "region": "global",
+      "categories": "Social",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 15,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2862,
+      "name": "The Conversation UK",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://theconversation.com/uk/articles.atom",
+      "region": "global",
+      "categories": "Social",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 12,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2861,
+      "name": "The Conversation US",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://theconversation.com/us/articles.atom",
+      "region": "global",
+      "categories": "Social",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 14,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2793,
+      "name": "The Dialogue",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.thedialogue.org/feed/",
+      "region": "latam",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 10,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 763,
@@ -1276,8 +3236,50 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 743,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 775,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2777,
+      "name": "The East African",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.theeastafrican.co.ke/tea/rss",
+      "region": "africa",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 3,
+      "last_fetched": "2026-04-04 16:48:21"
+    },
+    {
+      "id": 2845,
+      "name": "The Energy Mix",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://theenergymix.com/feed/",
+      "region": "global",
+      "categories": "Environmental",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2811,
+      "name": "The Hindu",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.thehindu.com/news/international/?service=rss",
+      "region": "asia",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 207,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 753,
@@ -1290,8 +3292,64 @@
       "language": "en",
       "tier": 3,
       "status": "active",
-      "articles_count": 191,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 213,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2876,
+      "name": "The New Atlantis",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.thenewatlantis.com/rss",
+      "region": "global",
+      "categories": "Technological",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 2,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2782,
+      "name": "The New Humanitarian",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.thenewhumanitarian.org/rss",
+      "region": "africa",
+      "categories": "Social",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2878,
+      "name": "The New Inquiry",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://thenewinquiry.com/feed/",
+      "region": "global",
+      "categories": "Social",
+      "language": "en",
+      "tier": 3,
+      "status": "active",
+      "articles_count": 3,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2896,
+      "name": "The Verge",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.theverge.com/rss/index.xml",
+      "region": "global",
+      "categories": "Technological",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 8,
+      "last_fetched": "2026-04-04 15:41:07"
     },
     {
       "id": 31,
@@ -1304,8 +3362,22 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 108,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 112,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2798,
+      "name": "The Wire India",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://thewire.in/rss",
+      "region": "asia",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 42,
@@ -1318,8 +3390,64 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 338,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 350,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2904,
+      "name": "VOA Africa",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:voanews.com+africa+when:24h&hl=en-US&gl=US&ceid=US:en",
+      "region": "africa",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 1,
+      "last_fetched": "2026-04-04 06:42:11"
+    },
+    {
+      "id": 2893,
+      "name": "VentureBeat",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://venturebeat.com/feed/",
+      "region": "global",
+      "categories": "Technological",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 3,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2835,
+      "name": "VoxEU / CEPR",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://cepr.org/rss/vox-content",
+      "region": "global",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 52,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2833,
+      "name": "WEAll",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://weall.org/feed",
+      "region": "global",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 16,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 660,
@@ -1332,8 +3460,8 @@
       "language": "ja",
       "tier": 2,
       "status": "active",
-      "articles_count": 140,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 152,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 19,
@@ -1346,8 +3474,50 @@
       "language": "en",
       "tier": 1,
       "status": "active",
-      "articles_count": 399,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 403,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2838,
+      "name": "World Bank Blogs",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://blogs.worldbank.org/feed",
+      "region": "global",
+      "categories": "Economic",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2865,
+      "name": "World Politics Review",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://worldpoliticsreview.com/feed/",
+      "region": "global",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 12,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2866,
+      "name": "Xinhua English",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.xinhuanet.com/english/rss/world_rss.xml",
+      "region": "asia",
+      "categories": "Political",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 52,
@@ -1360,8 +3530,8 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 25,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 33,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 49,
@@ -1434,6 +3604,48 @@
       "last_fetched": "2026-04-14 19:06:04"
     },
     {
+      "id": 2921,
+      "name": "Yonhap",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.yna.co.kr/rss/news.xml",
+      "region": "east_asia",
+      "categories": "Political",
+      "language": "ko",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2897,
+      "name": "ZDNet",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.zdnet.com/news/rss.xml",
+      "region": "global",
+      "categories": "Technological",
+      "language": "en",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2740,
+      "name": "ZDNet Japan",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://feeds.japan.zdnet.com/rss/zdnet/all.rdf",
+      "region": "japan",
+      "categories": "Technological",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 12,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
       "id": 778,
       "name": "e-Gov パブコメ",
       "name_ja": "e-Gov パブコメ",
@@ -1444,8 +3656,22 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 151,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 167,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2743,
+      "name": "gihyo.jp",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://gihyo.jp/feed/atom",
+      "region": "japan",
+      "categories": "Technological",
+      "language": "ja",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 70,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 785,
@@ -1458,8 +3684,8 @@
       "language": "ja",
       "tier": 2,
       "status": "active",
-      "articles_count": 276,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 316,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 654,
@@ -1472,8 +3698,50 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 59,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 66,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2826,
+      "name": "noyb.eu",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://noyb.eu/en/rss.xml",
+      "region": "global",
+      "categories": "Legal",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 74,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2881,
+      "name": "openDemocracy",
+      "name_ja": null,
+      "url": null,
+      "feed_url": "https://www.opendemocracy.net/en/rss/",
+      "region": "global",
+      "categories": "Political",
+      "language": "en",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 8,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2768,
+      "name": "みずほリサーチ&テクノロジーズ",
+      "name_ja": "みずほリサーチ&テクノロジーズ",
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:mizuho-rt.co.jp+when:30d&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Economic",
+      "language": "ja",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 783,
@@ -1490,6 +3758,34 @@
       "last_fetched": "2026-04-22 19:14:32"
     },
     {
+      "id": 2751,
+      "name": "サステナブル・ブランド",
+      "name_ja": "サステナブル・ブランド",
+      "url": null,
+      "feed_url": "https://www.sustainablebrands.jp/feed/",
+      "region": "japan",
+      "categories": "Environmental",
+      "language": "ja",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2735,
+      "name": "ダイヤモンド・オンライン",
+      "name_ja": "ダイヤモンド・オンライン",
+      "url": null,
+      "feed_url": "https://diamond.jp/list/feed/rss",
+      "region": "japan",
+      "categories": "Economic",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
       "id": 771,
       "name": "デジタル庁",
       "name_ja": "デジタル庁",
@@ -1500,8 +3796,22 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 16,
-      "last_fetched": "2026-04-16 19:10:59"
+      "articles_count": 30,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2770,
+      "name": "ニッセイ基礎研究所",
+      "name_ja": "ニッセイ基礎研究所",
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:nli-research.co.jp+when:30d&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Social",
+      "language": "ja",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 22,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 659,
@@ -1514,8 +3824,106 @@
       "language": "ja",
       "tier": 2,
       "status": "active",
-      "articles_count": 118,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 130,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2742,
+      "name": "マイナビニュース",
+      "name_ja": "マイナビニュース",
+      "url": null,
+      "feed_url": "https://news.mynavi.jp/rss/index",
+      "region": "japan",
+      "categories": "Technological",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 2,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2769,
+      "name": "三井住友トラスト基礎研究所",
+      "name_ja": "三井住友トラスト基礎研究所",
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:smtri.jp+when:30d&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Economic",
+      "language": "ja",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 14,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2738,
+      "name": "三菱UFJリサーチ",
+      "name_ja": "三菱UFJリサーチ",
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:murc.jp+when:30d&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Economic",
+      "language": "ja",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 39,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2747,
+      "name": "個人情報保護委員会",
+      "name_ja": "個人情報保護委員会",
+      "url": null,
+      "feed_url": "https://www.ppc.go.jp/rss/news.xml",
+      "region": "japan",
+      "categories": "Legal",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2774,
+      "name": "先端技術ニュース",
+      "name_ja": "先端技術ニュース",
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=半導体+OR+量子コンピュータ+OR+宇宙開発+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Technological",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 44,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2746,
+      "name": "公正取引委員会",
+      "name_ja": "公正取引委員会",
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:jftc.go.jp+when:30d&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Legal",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 24,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2732,
+      "name": "共同通信",
+      "name_ja": "共同通信",
+      "url": null,
+      "feed_url": "https://nordot.app/rss/all.xml",
+      "region": "japan",
+      "categories": "Political",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 767,
@@ -1528,8 +3936,8 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 34,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 36,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 769,
@@ -1542,8 +3950,8 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 427,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 449,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 774,
@@ -1556,8 +3964,22 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 49,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 53,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2722,
+      "name": "国環研",
+      "name_ja": "国環研",
+      "url": null,
+      "feed_url": "https://www.nies.go.jp/whatsnew/rss.xml",
+      "region": "japan",
+      "categories": "Environmental",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 780,
@@ -1574,6 +3996,34 @@
       "last_fetched": null
     },
     {
+      "id": 2763,
+      "name": "国際交流基金",
+      "name_ja": "国際交流基金",
+      "url": null,
+      "feed_url": "https://www.jpf.go.jp/j/about/press/rss.xml",
+      "region": "japan",
+      "categories": "Social",
+      "language": "ja",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2775,
+      "name": "地方創生ニュース",
+      "name_ja": "地方創生ニュース",
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=地方創生+OR+過疎+OR+移住+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Social",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 5,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
       "id": 777,
       "name": "外務省海外安全",
       "name_ja": "外務省海外安全",
@@ -1584,8 +4034,22 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 9,
-      "last_fetched": "2026-04-15 19:09:58"
+      "articles_count": 13,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2736,
+      "name": "大和総研",
+      "name_ja": "大和総研",
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:dir.co.jp+when:30d&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Economic",
+      "language": "ja",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 49,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 784,
@@ -1598,8 +4062,22 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 47,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 61,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2757,
+      "name": "文化庁",
+      "name_ja": "文化庁",
+      "url": null,
+      "feed_url": "https://www.bunka.go.jp/rss/index.xml",
+      "region": "japan",
+      "categories": "Social",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 770,
@@ -1612,8 +4090,22 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 105,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 109,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2766,
+      "name": "日刊工業新聞",
+      "name_ja": "日刊工業新聞",
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:nikkan.co.jp+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Technological",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 773,
@@ -1626,8 +4118,8 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 60,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 78,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 55,
@@ -1644,6 +4136,20 @@
       "last_fetched": null
     },
     {
+      "id": 2661,
+      "name": "日経",
+      "name_ja": "日経",
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:nikkei.com+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Economic",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 10,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
       "id": 653,
       "name": "日経クロステック",
       "name_ja": "日経クロステック",
@@ -1654,8 +4160,8 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 102,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 128,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 61,
@@ -1668,8 +4174,22 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 356,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 381,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2756,
+      "name": "日経教育・少子化",
+      "name_ja": "日経教育・少子化",
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=教育+OR+少子化+OR+子育て+site:nikkei.com+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Social",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 6,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 646,
@@ -1696,8 +4216,36 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 87,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 90,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2761,
+      "name": "未来工学研究所",
+      "name_ja": "未来工学研究所",
+      "url": null,
+      "feed_url": "https://www.ifeng.or.jp/feed/",
+      "region": "japan",
+      "categories": "Technological",
+      "language": "ja",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 10,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2733,
+      "name": "東京新聞",
+      "name_ja": "東京新聞",
+      "url": null,
+      "feed_url": "https://www.tokyo-np.co.jp/n/rss",
+      "region": "japan",
+      "categories": "Social",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 69,
@@ -1710,8 +4258,8 @@
       "language": "ja",
       "tier": 2,
       "status": "active",
-      "articles_count": 433,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 473,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 56,
@@ -1724,8 +4272,50 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 37,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 39,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2753,
+      "name": "気候変動ニュース",
+      "name_ja": "気候変動ニュース",
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=気候変動+OR+脱炭素+OR+再生可能エネルギー+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Environmental",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 21,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2745,
+      "name": "法務省",
+      "name_ja": "法務省",
+      "url": null,
+      "feed_url": "https://www.moj.go.jp/news.rss",
+      "region": "japan",
+      "categories": "Legal",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2749,
+      "name": "法規制ニュース",
+      "name_ja": "法規制ニュース",
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=法改正+OR+規制改革+OR+パブリックコメント+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Legal",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 31,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 776,
@@ -1738,8 +4328,78 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 15,
-      "last_fetched": "2026-04-20 19:05:06"
+      "articles_count": 17,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2748,
+      "name": "特許庁",
+      "name_ja": "特許庁",
+      "url": null,
+      "feed_url": "https://www.jpo.go.jp/news/rss/index.xml",
+      "region": "japan",
+      "categories": "Legal",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2750,
+      "name": "環境省",
+      "name_ja": "環境省",
+      "url": null,
+      "feed_url": "https://www.env.go.jp/press/rss.xml",
+      "region": "japan",
+      "categories": "Environmental",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
+    },
+    {
+      "id": 2731,
+      "name": "産経新聞",
+      "name_ja": "産経新聞",
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:sankei.com+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Political",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 14,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2759,
+      "name": "福祉・介護ニュース",
+      "name_ja": "福祉・介護ニュース",
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=介護+OR+福祉+OR+高齢者+OR+ヤングケアラー+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Social",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 61,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2762,
+      "name": "笹川平和財団",
+      "name_ja": "笹川平和財団",
+      "url": null,
+      "feed_url": "https://www.spf.org/rss/news.rdf",
+      "region": "japan",
+      "categories": "Political",
+      "language": "ja",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 661,
@@ -1752,8 +4412,22 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 205,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 229,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2764,
+      "name": "総務省統計局",
+      "name_ja": "総務省統計局",
+      "url": null,
+      "feed_url": "https://www.stat.go.jp/rss/rss.xml",
+      "region": "japan",
+      "categories": "Social",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 779,
@@ -1766,8 +4440,22 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 266,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 318,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2752,
+      "name": "自然エネルギー財団",
+      "name_ja": "自然エネルギー財団",
+      "url": null,
+      "feed_url": "https://www.renewable-ei.org/feed/",
+      "region": "japan",
+      "categories": "Environmental",
+      "language": "ja",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 0,
+      "last_fetched": null
     },
     {
       "id": 58,
@@ -1784,6 +4472,20 @@
       "last_fetched": null
     },
     {
+      "id": 2664,
+      "name": "読売新聞",
+      "name_ja": "読売新聞",
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:yomiuri.co.jp+when:24h&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Social",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 1,
+      "last_fetched": "2026-06-14 14:25:41"
+    },
+    {
       "id": 772,
       "name": "財務省",
       "name_ja": "財務省",
@@ -1794,8 +4496,22 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 35,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 41,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
+      "id": 2734,
+      "name": "財経新聞",
+      "name_ja": "財経新聞",
+      "url": null,
+      "feed_url": "https://www.zaikei.co.jp/rss/main.xml",
+      "region": "japan",
+      "categories": "Economic",
+      "language": "ja",
+      "tier": 1,
+      "status": "active",
+      "articles_count": 22,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 775,
@@ -1812,6 +4528,20 @@
       "last_fetched": "2026-04-24 19:13:38"
     },
     {
+      "id": 2760,
+      "name": "野村総合研究所",
+      "name_ja": "野村総合研究所",
+      "url": null,
+      "feed_url": "https://news.google.com/rss/search?q=site:nri.com+when:30d&hl=ja&gl=JP&ceid=JP:ja",
+      "region": "japan",
+      "categories": "Economic",
+      "language": "ja",
+      "tier": 2,
+      "status": "active",
+      "articles_count": 48,
+      "last_fetched": "2026-06-14 19:14:39"
+    },
+    {
       "id": 768,
       "name": "金融庁",
       "name_ja": "金融庁",
@@ -1822,8 +4552,8 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 35,
-      "last_fetched": "2026-04-24 19:13:38"
+      "articles_count": 43,
+      "last_fetched": "2026-06-14 19:14:39"
     },
     {
       "id": 766,
@@ -1836,8 +4566,8 @@
       "language": "ja",
       "tier": 1,
       "status": "active",
-      "articles_count": 48,
-      "last_fetched": "2026-04-23 19:13:02"
+      "articles_count": 56,
+      "last_fetched": "2026-06-14 19:14:39"
     }
   ]
 }
