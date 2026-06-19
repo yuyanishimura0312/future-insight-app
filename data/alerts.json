@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-18T19:49:47.602793+00:00",
-  "total_articles_analyzed": 318978,
+  "generated_at": "2026-06-19T19:59:11.613857+00:00",
+  "total_articles_analyzed": 321004,
   "alert_counts": {
     "emergence": 12,
     "surge": 12,
@@ -12,8 +12,8 @@
       "type": "SURGE",
       "level": "high",
       "topic": "reuters",
-      "mentions": 805,
-      "ratio": 45348.3,
+      "mentions": 808,
+      "ratio": 45517.3,
       "historical_avg": 0.0,
       "categories": [
         "Political",
@@ -23,16 +23,16 @@
         "Legal",
         "Environmental"
       ],
-      "alert_title": "ロイター配信急増",
-      "description": "過去2年で最大級の45000倍超の急増。複数地域の政治・経済ニュース（イスラエル中銀、インド株、ジブチ選挙、ハンガリー選挙等）がロイター配信で集中。グローバルニュースフロー全体の「再編成」を示唆し、特定メディアソースへの依存度上昇と報道エコシステムの集約化が進む可能性がある。",
-      "alert_title_en": "Massive spike in Reuters news distribution",
-      "description_en": "A 45,000-fold increase in Reuters content signals consolidation of global news flows. This suggests growing media concentration and dependence on single news sources for international coverage, with potential implications for information diversity and geopolitical narrative control."
+      "alert_title": "ロイターニュース急増",
+      "description": "過去平均の45000倍超でロイターニュースが急増。中央銀行人事、選挙結果、政策変更など政治経済イベントが集中報道されている。グローバルな政策転換期を示唆し、市場変動や地政学的リスク認識の高まりが今後の投資判断を左右する可能性がある。",
+      "alert_title_en": "Reuters News Coverage Surge Detected",
+      "description_en": "Reuters coverage has increased over 45,000 times above baseline, reflecting concentrated reporting on central bank appointments, elections, and policy shifts. This signals a critical period of global policy transitions that could significantly impact future market volatility and geopolitical risk assessments."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "climate",
-      "mentions": 410,
+      "mentions": 470,
       "categories": [
         "Economic",
         "Environmental",
@@ -42,17 +42,17 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "気候と豊かさの定義転換",
-      "description": "※ノイズの可能性が高い。同一イベント記事の重複出現（同じオンラインセミナー「Climate Creative Cafe 22」が6回）により統計的異常を示しているが、固有のニュース価値は限定的。ただし「伝統技術」と「豊かさの定義」の再考は、脱成長・ポストグリーン志向を示す兆候として注視に値する。",
-      "alert_title_en": "Rethinking wealth through traditional technology and climate",
-      "description_en": "Despite duplicated entries, the framing of prosperity beyond growth metrics and integration of traditional knowledge into climate solutions reflects emerging narrative shift toward post-growth development models."
+      "alert_title": "気候テーマの横断的拡大",
+      "description": "※ノイズの可能性が高い。同一イベント広告の重複報道が470回出現。ただし気候と豊かさの定義を再検討するテーマは、ESG投資の価値観転換を示唆。伝統技術への関心復活は、テック一辺倒から多元的価値観へのシフトを示す可能性がある。",
+      "alert_title_en": "Climate-Related Cross-Disciplinary Expansion",
+      "description_en": "Though largely duplicate event coverage, the recurring theme of climate-linked 'prosperity redefinition' suggests potential value system shifts in ESG investment, potentially signaling renewed interest in traditional technologies alongside modern innovation."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "hormuz",
-      "mentions": 298,
-      "ratio": 25181.0,
+      "mentions": 299,
+      "ratio": 25265.5,
       "historical_avg": 0.0,
       "categories": [
         "Political",
@@ -62,16 +62,16 @@
         "Legal",
         "Environmental"
       ],
-      "alert_title": "ホルムズ海峡危機勃発",
-      "description": "過去平均の25000倍超の急増。イラン核問題関連で米国・欧州間の対応分裂（トランプが欧州に自衛を要求）が顕著。エネルギー供給チェーン不安定化と地政学的リスク上昇により、石油価格変動・供給制約が世界経済に直結する局面に突入。",
-      "alert_title_en": "Strait of Hormuz crisis escalates amid Iran tensions",
-      "description_en": "A 25,000-fold surge reflects acute energy security crisis as geopolitical tensions threaten critical chokepoint. This directly impacts oil prices and global supply chains, forcing companies and nations to rapidly recalibrate energy strategies and supply chain resilience."
+      "alert_title": "ホルムズ海峡緊張激化",
+      "description": "過去平均の25000倍超で急増（299件）。イラン、米国、欧州間の石油輸送路をめぐる対立が深刻化。トランプ政権の介入姿勢強化により、エネルギー安全保障の再構築が急速に進行。油価変動と地政学リスク連動による世界経済への波及が懸念される。",
+      "alert_title_en": "Strait of Hormuz Tensions Escalate Sharply",
+      "description_en": "Coverage surged 25,000 times above baseline, reflecting intensifying disputes over oil transit involving Iran, US, and Europe. Trump administration intervention suggests rapid energy security realignment, with cascading implications for global oil prices and geopolitical risk coupling."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "strait hormuz",
-      "mentions": 198,
+      "mentions": 199,
       "categories": [
         "Political",
         "Economic",
@@ -80,10 +80,29 @@
         "Legal",
         "Environmental"
       ],
-      "alert_title": "ホルムズ海峡新常態化",
-      "description": "過去2年間で初出現の198回。米欧間の責任分岐（トランプが欧州に対イラン対応を要求）が構造化。単なる一時的危機でなく、米国の中東関与縮小と同盟国への負担転嫁が常態化する新地政学秩序を示唆している。",
-      "alert_title_en": "Strait of Hormuz becomes structural geopolitical flashpoint",
-      "description_en": "New emergence of Strait of Hormuz as regular news topic signals shift from temporary crisis to structural challenge. U.S. withdrawal of energy security guarantees forces European and allied nations to develop independent strategies."
+      "alert_title": "ホルムズ海峡新トピック化",
+      "description": "過去2年出現なかったホルムズ海峡の詳細言及が199件で初出現。戦略的重要性の再認識と、複数国による圧力構想の具体化を示す。今後の石油流通の不確実性増大により、エネルギー多角化と供給チェーン脱炭素化がビジネス上の必須課題化する。",
+      "alert_title_en": "Strait of Hormuz Becomes New Policy Focus",
+      "description_en": "First emergence of detailed Strait of Hormuz discussion (199 instances) indicates strategic reassessment and concrete multilateral pressure initiatives. Heightened oil distribution uncertainty will drive urgent business imperatives toward energy diversification and supply chain decarbonization."
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "rules",
+      "mentions": 133,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "alert_title": "規制ルール再構築の動き",
+      "description": "経済・環境・法律・政治・社会・技術の6分野横断で規制ルール論が133件出現。EU法廷のドイツ難民政策違法判決やツバル主権再定義など、既存ルール崩壊と新秩序構築の兆候。適応型ガバナンスの必要性が加速し、企業コンプライアンスの複雑化が予見される。",
+      "alert_title_en": "Cross-Sectoral Regulatory Framework Reconstruction",
+      "description_en": "Rule-making discussions span six PESTLE domains (133 instances), from EU court asylum ruling to Tuvalu sovereignty redefinition. This signals existing rules collapse and new governance emergence, necessitating adaptive compliance frameworks that will complicate future business operations."
     },
     {
       "type": "SURGE",
@@ -100,55 +119,17 @@
         "Legal",
         "Environmental"
       ],
-      "alert_title": "アルテミス月探査加速",
-      "description": "過去平均の13000倍超の急増。NASA月面基地計画（Artemis II）が法的問題を含む重要局面。宇宙開発の加速とともに国際法・主権問題が浮上。月面資源採取権や国家主権の確立が今後の宇宙競争の焦点となり、米国・中国間の宇宙覇権競争が新段階へ。",
-      "alert_title_en": "Artemis lunar program accelerates amid legal questions",
-      "description_en": "The 13,000-fold increase reflects escalating moon competition with emerging legal disputes over territorial claims and resource rights. Future space development will depend on resolving jurisdiction and sovereignty issues in lunar operations."
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "high",
-      "topic": "economy",
-      "mentions": 124,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 6,
-      "alert_title": "老齢化経済と中小企業危機",
-      "description": "6つのPESTLE分野横断。日本の老齢化経済における中小企業信用配分の課題が6分野で同時出現。金融・労働・技術・法制全面での高齢社会対応の必要性を示唆。先進国全体の構造的な成長制約と信用収縮リスクが迫る。",
-      "alert_title_en": "SME credit crisis in aging economies",
-      "description_en": "Cross-domain emergence of aging economy challenges reveals systemic credit allocation problems for small businesses. This signals broader structural constraints on growth in developed economies and potential financial instability risks."
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "high",
-      "topic": "rules",
-      "mentions": 108,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 6,
-      "alert_title": "国家主権ルール再編成",
-      "description": "6つのPESTLE分野横断。EU法廷の難民給付否定判決とツバルの国家定義改定が並行出現。従来の国家主権・国境・福祉制度の定義が崩壊局面。デジタル主権やクライメート難民など新次元の「ルール戦争」へ。",
-      "alert_title_en": "Redefinition of statehood and sovereignty rules",
-      "description_en": "Concurrent emergence of EU court rulings on asylum and Tuvalu's statehood redefinition indicates fundamental restructuring of sovereignty concepts. Future governance will center on digital sovereignty, climate migration rights, and non-traditional forms of state legitimacy."
+      "alert_title": "アルテミス計画急加速",
+      "description": "月面探査アルテミスプログラムが過去平均の13000倍超で報道増（128件）。NASA月面基地の法的課題指摘も同時出現。宇宙資源利用と国際法の衝突が深刻化し、宇宙産業参入時の法的リスクと商業化トレンドが並行展開する未来が示唆される。",
+      "alert_title_en": "Artemis Lunar Program Accelerates Coverage",
+      "description_en": "Artemis moon program coverage surged 13,000 times (128 instances), with simultaneous emergence of legal challenges to NASA's base. This indicates escalating space resource utilization conflicts with international law, signaling future commercial space ventures will face heightened legal risks."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "orban",
-      "mentions": 101,
-      "ratio": 12801.7,
+      "mentions": 103,
+      "ratio": 13055.2,
       "historical_avg": 0.0,
       "categories": [
         "Political",
@@ -156,15 +137,53 @@
         "Social",
         "Technological"
       ],
-      "alert_title": "オルバン政治の米国化",
-      "description": "過去平均の12800倍超。トランプ・ヴァンス米政権がハンガリーのオルバン再選を明確支持。欧米民主主義の質的分岐と「権威主義的民主主義」の国際的正当化が進行。東欧での米国影響力拡大と中国牽制戦略が相互作用。",
-      "alert_title_en": "Orbán becomes Trump administration's European model",
-      "description_en": "Trump and Vance's explicit support for Orbán signals emerging authoritarian-democratic international alliance. This marks shift from liberal democracy consensus toward pluralistic governance models in U.S. foreign policy."
+      "alert_title": "オルバン政治の国際化",
+      "description": "ハンガリー首相オルバンが過去平均の13000倍超で言及増（103件）。米国との接近（ヴァンス訪問）と中国影響力削減への国際的注視。EU内の政治的分断深化と米国の外交戦略再編が並行し、東欧地政学の不確実性増大が今後の対欧政策決定に影響する。",
+      "alert_title_en": "Orban's Political Role Becomes Internationalized",
+      "description_en": "Hungarian PM Orban coverage surged 13,000 times (103 instances), featuring US engagement (Vance visit) and scrutiny of China's influence reduction. Deepening EU political schism and US diplomatic recalibration suggest heightened Eastern European geopolitical uncertainty affecting future European policy decisions."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "must",
+      "mentions": 87,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "alert_title": "デジタル監視への警告",
+      "description": "※ノイズの可能性が高い。同一ガイド記事の6分野横断出現（87件）。ただしデジタル監視の常態化回避という本質的テーマは重要。プライバシー規制と技術自由のバランス問題が今後のAI規制ガバナンス議論の基調となり、企業のデータ利用戦略に枢要な影響を与える。",
+      "alert_title_en": "Digital Surveillance Normalization Prevention",
+      "description_en": "Though largely duplicate coverage of EFF guidance (87 instances), the core theme of surveillance normalization prevention is substantive. Privacy regulation versus technology freedom balance will become foundational to future AI governance debates, critically impacting corporate data strategy."
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "next",
+      "mentions": 78,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "alert_title": "化石燃料転換への問い",
+      "description": "※ノイズの可能性が高い。同一ウェビナー記事の重複（78件）。ただし化石燃料転換の次段階をめぐる議論の継続は有意。再生可能エネルギーへの単純転換から多元的エネルギー戦略への進化を示唆し、企業の長期エネルギー投資判断の枠組み再構築が求められる。",
+      "alert_title_en": "Fossil Fuel Transition Next Steps Debated",
+      "description_en": "Though marked by event promotion duplication (78 instances), ongoing debate about fossil fuel transition's next phase is substantive. It signals evolution from simple renewable substitution to pluralistic energy strategy, requiring companies to rebuild long-term energy investment frameworks."
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "itmedia",
       "mentions": 75,
       "categories": [
         "Economic",
@@ -175,10 +194,10 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "デジタル監視の常態化危機",
-      "description": "※ノイズの可能性が高い。同一記事の6重複出現だが、テーマ自体は重要。6分野横断で監視正当化の構造化を警告。今後、セキュリティ名目での監視拡大と市民自由の衝突が深刻化。",
-      "alert_title_en": "Digital surveillance normalization as systemic risk",
-      "description_en": "Despite duplication, the cross-domain emergence reflects growing normalization of surveillance systems. Future societies face escalating tension between security demands and civil liberties protection."
+      "alert_title": "ITメディア報道の拡散",
+      "description": "※ノイズの可能性が高い。ITmedia系メディア記事の横断出現（75件）。スマートフォン国際展開、AI翻訳ツール、通信プラン比較など消費者向けテック情報の増加。デジタル化とAI統合が日常生活の細分化需要を生む傾向を示唆する。",
+      "alert_title_en": "ITmedia Coverage Widespread Cross-Domain",
+      "description_en": "Though primarily consumer tech journalism duplication (75 instances), the spread reflects growing integration of AI translation tools and international smartphone deployment. This suggests digitalization is driving fragmented, personalized consumer tech demand."
     },
     {
       "type": "SURGE",
@@ -191,36 +210,17 @@
         "Economic",
         "Legal"
       ],
-      "alert_title": "大型法律事務所の戦略転換",
-      "description": "過去平均の35000倍超。大型法律事務所がプロボノ（無報酬法務）強化と反トランプ政権対応を並行。収益モデル転換と政治的立場表明の同時進行。弁護士業界の「社会正義」志向化とビジネス戦略の融合が進む。",
-      "alert_title_en": "BigLaw firms pivot toward pro-bono and political advocacy",
-      "description_en": "Law firms dramatically increasing pro-bono work while opposing Trump policies signals shift from profit-maximization toward stakeholder value models. This reflects broader corporatization of social activism and law's politicization."
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "high",
-      "topic": "tech",
-      "mentions": 67,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 6,
-      "alert_title": "衛星ダイレクト接続普及",
-      "description": "6つのPESTLE分野横断。衛星による直接携帯接続技術（Direct-to-Cell）が複数記事で既出。デジタルデバイド解消と基盤インフラ廉価化が進行。通信市場の構造転換と農村・途上国での急速なデジタル化が加速。",
-      "alert_title_en": "Satellite direct-to-cell connectivity transforms access",
-      "description_en": "Direct-to-Cell satellite technology spanning all PESTLE domains indicates infrastructure democratization. This will accelerate digital inclusion in rural and developing regions, disrupting traditional telecom business models."
+      "alert_title": "大型法律事務所の変質",
+      "description": "大型法律事務所（Biglaw）が過去平均の35000倍超で言及増（70件）。弁護士のプロボノ活動拡大とトランプ政権への対抗姿勢が同時出現。企業法務の政治化と倫理性重視が進行し、コーポレートガバナンスの社会的責任層が厚くなる傾向が強まる。",
+      "alert_title_en": "Major Law Firms Transform Practice Models",
+      "description_en": "Biglaw coverage surged 35,000 times (70 instances), showing expanded pro bono work and Trump administration opposition. This signals politicization and ethics prioritization in corporate law, thickening social responsibility layers within corporate governance practices."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "iran talks",
-      "mentions": 66,
-      "ratio": 16731.0,
+      "mentions": 70,
+      "ratio": 17745.0,
       "historical_avg": 0.0,
       "categories": [
         "Political",
@@ -228,10 +228,10 @@
         "Technological",
         "Environmental"
       ],
-      "alert_title": "米イラン和平交渉始動",
-      "description": "過去平均の16700倍超。パキスタン仲介の米イラン協議が急浮上。トランプ期限圧力下での急転。エネルギー価格・株価変動が同期し、地政学的リスク軽減期待が市場を支配。ただし交渉脆弱性高く、決裂時のエネルギー危機は極端。",
-      "alert_title_en": "US-Iran peace talks advance under Trump pressure",
-      "description_en": "Pakistan-mediated U.S.-Iran negotiations emerging as potential conflict resolution path. Market volatility tied to talk progress signals extreme sensitivity to geopolitical uncertainty and fragility of emerging diplomatic frameworks."
+      "alert_title": "米イラン和平交渉展開",
+      "description": "イラン交渉が過去平均の17000倍超で急増（70件）。トランプ行政府によるイラン政策転換の具体化。株価・金価格・湾岸諸国の不安が連動。中東地政学的リスク再評価が急速に進み、エネルギー関連投資と地政学ヘッジ戦略の同時再構築が企業経営判断に迫られる。",
+      "alert_title_en": "US-Iran Peace Negotiations Accelerate",
+      "description_en": "Iran talks surged 17,000 times above baseline (70 instances), reflecting Trump administration policy shift concretization. Stock prices, gold, and Gulf state concerns moved in tandem. Rapid Middle Eastern geopolitical risk reassessment compels simultaneous restructuring of energy-linked investments and geopolitical hedging strategies."
     },
     {
       "type": "SURGE",
@@ -247,17 +247,71 @@
         "Technological",
         "Environmental"
       ],
-      "alert_title": "イラン停戦交渉加速",
-      "description": "過去平均の5500倍超の急増。ホルムズ海峡再開可能性が具体化。停戦シナリオがエネルギー供給不安を部分緩和。ただし合意の脆弱性と実装困難性（米イラン制裁体制の解除必要性等）が残存。",
-      "alert_title_en": "Iran ceasefire negotiations drive Strait of Hormuz reopening hopes",
-      "description_en": "Ceasefire talks directly linked to Strait reopening prospects. However, implementation remains fragile given structural sanctions and mistrust, creating high downside risk for energy markets if negotiations collapse."
+      "alert_title": "イラン停戦の可能性台頭",
+      "description": "イラン停戦が過去平均の5500倍超で急増（66件）。ホルムズ海峡再開シナリオへの期待反映。石油供給の不確実性軽減と市場心理の急速な転換。和平破綻時の急落リスクとセットで価格ボラティリティ拡大が予見され、中期的な供給安定性の不確実性が増す。",
+      "alert_title_en": "Iran Ceasefire Emerges as Possible Scenario",
+      "description_en": "Iran ceasefire coverage surged 5,500 times (66 instances), reflecting expectations of Strait of Hormuz reopening. Oil supply uncertainty mitigation and rapid market sentiment shifts create symmetrical upside and downside volatility risks, amplifying medium-term supply stability uncertainty."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "migrant returns",
+      "mentions": 63,
+      "categories": [
+        "Political"
+      ],
+      "alert_title": "移民返送政策の新段階",
+      "description": "移民返送が初出現で63件報道。米国出生地市民権廃止の議論と連動。トランプ政権の反移民強化が制度化段階へ進展。家族分離・法的地位剥奪のリスク拡大が示唆され、労働力確保と社会統合の対立が深刻化し、企業採用戦略と地域社会関係が複雑化する。",
+      "alert_title_en": "Migrant Returns Policy Enters New Phase",
+      "description_en": "Migrant returns emerged as new topic (63 instances), linked to birthright citizenship abolition debate. Trump administration's anti-immigration hardening progresses to institutionalization stage. Escalating family separation and legal status deprivation risks suggest deepening labor supply versus social cohesion conflicts, complicating corporate hiring strategy and community relations."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "returns press",
+      "mentions": 63,
+      "categories": [
+        "Political"
+      ],
+      "alert_title": "返送プレス報道の浮上",
+      "description": "※ノイズの可能性が高い。返送・返還に関する雑多なニュース報道（63件）。ただし中国への容疑者返送合意やトランプ政権の一連の返送施策が含まれており、国家間の引き渡し政策が活発化している兆候。今後の国際捜査協力と政治的圧力の結合が予想される。",
+      "alert_title_en": "Returns and Deportation Press Coverage Emerges",
+      "description_en": "Though noisy topic aggregation (63 instances), includes US-China suspect deportation agreements and Trump administration return policies, signaling activated interstate extradition agreements. Future international investigations will increasingly blend legal cooperation with political pressure."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "conference wednesday",
+      "mentions": 63,
+      "categories": [
+        "Political"
+      ],
+      "alert_title": "水曜会議の政策発表相次ぐ",
+      "description": "※ノイズの可能性が高い。会議開催通知・記者会見記録の横断出現（63件）。ただしトランプ政権のイラン政策発表とAIセキュリティ会議の同時報道は、政治・技術課題の統合的ガバナンスへの萌芽を示唆。政策決定の技術統合度が高まる傾向。",
+      "alert_title_en": "Wednesday Conferences Policy Announcements Surge",
+      "description_en": "Though largely event notification duplication (63 instances), concurrent Trump Iran policy announcement and AI security conference coverage suggests emerging integrated governance of political-technical issues, indicating policy decisions will increasingly incorporate technology integration factors."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "rules migrant",
+      "mentions": 63,
+      "ratio": 10647.0,
+      "historical_avg": 0.0,
+      "categories": [
+        "Political"
+      ],
+      "alert_title": "移民規制ルールの激増",
+      "description": "移民関連規制ルール言及が過去平均の10000倍超で激増（63件）。トランプ政権の移民政策強硬化の制度化進展。市民権認定基準厳格化と返送強化が並行。社会的分極化の深化と法的不確実性増大が予想され、人材獲得競争の地政学化とコンプライアンス負担増が企業に迫られる。",
+      "alert_title_en": "Migrant Regulation Rules Increase Dramatically",
+      "description_en": "Migrant regulatory rules surged 10,000 times above baseline (63 instances), reflecting Trump administration hardening institutionalization. Tightened citizenship criteria and enhanced returns proceed in parallel. Forecast deepening social polarization and escalating legal uncertainty, compelling corporations to face geopoliticized talent competition and heightened compliance burdens."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "trump iran",
-      "mentions": 59,
-      "ratio": 14956.5,
+      "mentions": 60,
+      "ratio": 15210.0,
       "historical_avg": 0.0,
       "categories": [
         "Political",
@@ -266,10 +320,42 @@
         "Legal",
         "Environmental"
       ],
-      "alert_title": "トランプのイラン政策転換",
-      "description": "過去平均の15000倍超。トランプが石油戦争から「政権交代再定義」へ軸足移動。金融・エネルギー市場が連動変動。政策の予測不可能性と意思決定の個人依存が極端に高く、市場心理の脆弱性が顕著。",
-      "alert_title_en": "Trump redefines Iran war strategy toward regime redefinition",
-      "description_en": "Trump's shift from military to political objectives creates market unpredictability tied to presidential decision-making. Financial markets show extreme sensitivity to policy pivots, revealing vulnerability to single-actor geopolitical decisions."
+      "alert_title": "トランプ・イラン政策転換",
+      "description": "トランプ・イランが過去平均の15000倍超で急増（60件）。政権による対イラン政策の急速転換を示唆。石油相場・株価の同時変動と市場参加者の先制的ポジション調整が報道。政策不確実性の市場への急速波及と、実行可能性への懐疑が並行し、短期的な価格ボラティリティと長期的なポジショニング再構築の両層化が進む。",
+      "alert_title_en": "Trump Iran Policy Undergoes Rapid Shift",
+      "description_en": "Trump-Iran coverage surged 15,000 times (60 instances), suggesting sharp policy reversal in administration stance. Simultaneous oil price and equity movements reflect market participants' preemptive positioning. Policy uncertainty cascades rapidly into markets while implementation skepticism persists, creating bifurcated short-term volatility and long-term repositioning dynamics."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "parlament",
+      "mentions": 60,
+      "ratio": 6084.0,
+      "historical_avg": 0.0,
+      "categories": [
+        "Political"
+      ],
+      "alert_title": "欧州議会の民主主義強化",
+      "description": "※ノイズの可能性が高い。欧州議会（Parlament）関連記事の重複出現（60件）。ただし農業政策・防衛準備強化の議論含有は有意。EU内の経済・防衛・農業政策の統合的再構築が進行中であり、域内規制の複雑化と産業競争環境の不確実性増大を示唆する。",
+      "alert_title_en": "European Parliament Strengthens Democratic Agenda",
+      "description_en": "Though largely duplicate content (60 instances), includes agricultural and defense readiness strengthening discussions signifying substantive integrated EU economic-defense-agriculture policy reconstruction, suggesting regulation complexity and industry competitive environment uncertainty are rising."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "itmedia mobile",
+      "mentions": 57,
+      "categories": [
+        "Economic",
+        "Social",
+        "Technological",
+        "Legal",
+        "Environmental"
+      ],
+      "alert_title": "ITメディア・モバイル拡張",
+      "description": "※ノイズの可能性が高い。ITmedia Mobile関連初出記事（57件）。スマートフォン性能向上、海外通信対応、金融向けPC、小型AIコンピューターなど多岐。デジタルデバイスの多機能化・小型化・高性能化が同時進行し、消費者と企業ニーズの多元化を示唆。インフラ費用対効果が個別最適化される傾向。",
+      "alert_title_en": "ITmedia Mobile Coverage Expands Broadly",
+      "description_en": "Though primarily product-focused duplication (57 instances), spans smartphone enhancement, overseas connectivity, enterprise PCs, and miniaturized AI computers, suggesting concurrent multifunction-miniaturization-performance trends driving diversified consumer and business needs optimization and individual infrastructure cost-effectiveness customization."
     },
     {
       "type": "SURGE",
@@ -282,16 +368,16 @@
         "Economic",
         "Technological"
       ],
-      "alert_title": "株価変動の地政学連動化",
-      "description": "過去平均の14400倍超。イラン交渉進展と石油価格・株価が即時連動。市場が政治リスク評価に完全シフト。ファンダメンタルズより地政学シグナルが株価を支配する異常状態。市場効率性と金融安定性の低下が深刻。",
-      "alert_title_en": "Stock prices show extreme geopolitical volatility",
-      "description_en": "Markets now react instantaneously to Iran negotiation signals, suggesting geopolitical risk dominates fundamental valuations. This reveals structural fragility in financial markets and reduced pricing efficiency."
+      "alert_title": "株価報道の急増",
+      "description": "株価報道が過去平均の14000倍超で急増（57件）。イラン停戦見通し、和平失敗リスク、油価変動、市場心理の急速転換。複数の地政学的不確実性が同時に市場に波及。投資家の短期ポジション調整と中期的な資産配置再構築が並行し、市場のボラティリティレジーム上昇と流動性ストレスが増す懸念。",
+      "alert_title_en": "Stock Price Reporting Surges Dramatically",
+      "description_en": "Stock price coverage surged 14,000 times (57 instances), reflecting Iran ceasefire prospects, peace failure risks, and rapid market sentiment shifts converging simultaneously. Parallel investor short-term positioning adjustments and medium-term reallocation suggest rising volatility regimes and liquidity stress risks."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "iran ceasefire",
-      "mentions": 55,
+      "mentions": 56,
       "categories": [
         "Political",
         "Economic",
@@ -300,10 +386,29 @@
         "Legal",
         "Environmental"
       ],
-      "alert_title": "イラン停戦新時代",
-      "description": "過去2年間初出現の55回。トランプ「2〜3週間での終了」宣言が市場・外交に衝撃波。停戦実現シナリオと「政権交代の再定義」が新競争軸。中東秩序の急速転換（サウジ・湾岸国家の戦略再編成）が迫在。",
-      "alert_title_en": "Iran war cease-fire emerges as new geopolitical reality",
-      "description_en": "Trump's declaration of imminent war termination signals fundamental shift in Middle East power dynamics. This forces rapid recalibration of Saudi and Gulf state strategies and regional alliances."
+      "alert_title": "イラン停戦初出現",
+      "description": "イラン停戦が初出現で56件報道。トランプ政権による政策大転換の具体化と市場期待形成。レジーム交替と戦争終結シナリオが同時論議。地政学的不確実性の一時的軽減と新たな政治リスク（合意破談）の併存が予想され、この間隙を利用した資産再ポジショニングと規制不確実性対応が急速化する。",
+      "alert_title_en": "Iran Ceasefire Emerges as Inaugural Topic",
+      "description_en": "Iran ceasefire appeared as new topic (56 instances), concretizing Trump administration policy transformation and market expectations. Simultaneous regime-change and war-termination scenario discussions forecast coexisting geopolitical risk mitigation and new political risks (agreement failure), accelerating interim asset repositioning and regulatory uncertainty responses."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "docket",
+      "mentions": 56,
+      "ratio": 14196.0,
+      "historical_avg": 0.0,
+      "categories": [
+        "Political",
+        "Economic",
+        "Social",
+        "Technological",
+        "Legal"
+      ],
+      "alert_title": "法務案件報道の拡大",
+      "description": "法務（docket）関連報道が過去平均の14000倍超で急増（56件）。裁判所の朝刊案件報道の日次増加。緊急上訴の頻発。規制・政治訴訟の活発化を示唆。トランプ政権と対抗勢力の法廷闘争激化が予想され、企業リスク管理における法的不確実性対応がより複雑で多層的になる。",
+      "alert_title_en": "Legal Docket Coverage Expands Significantly",
+      "description_en": "Legal docket coverage surged 14,000 times (56 instances), reflecting daily court case reporting increases and emergency appeal frequency. Suggests escalating regulatory-political litigation. Forecast intensifying courtroom struggles between Trump administration and opposition, requiring companies to address increasingly complex multilayered legal uncertainty in risk management."
     },
     {
       "type": "EMERGENCE",
@@ -313,10 +418,10 @@
       "categories": [
         "Economic"
       ],
-      "alert_title": "石油価格の政治的変動性",
-      "description": "初出現の54回。トランプ発言で石油相場が数週で20%超変動。エネルギー市場の「政治化」が構造化。インフレ圧力と通貨政策の効果も削減。中央銀行の政策独立性が侵蝕される局面。",
-      "alert_title_en": "Oil prices driven by political declarations rather than fundamentals",
-      "description_en": "Trump statements triggering extreme oil price swings indicates energy markets have become tools of political signaling. This reduces central bank policy autonomy and creates inflationary shocks beyond traditional monetary control."
+      "alert_title": "油価・市場連動報道初出",
+      "description": "油価・最新情報の初出現で54件。イラン和平見通しと石油相場の連動型報道体系の確立。市場動向の同時更新・リアルタイム情報配信の需要急増。投資家の情報処理速度向上要求とボラティリティ対応の即座性が高まり、機関投資家のアルゴリズム取引と個人投資家の意思決定の時間差圧縮が加速。",
+      "alert_title_en": "Oil Price and Market Latest Information Debuts",
+      "description_en": "Oil-market latest information emerged as new topic (54 instances), establishing linked reporting system between Iran peace prospects and petroleum prices. Market participants' real-time information demand accelerates, compressing time lags between algorithmic institutional and individual investor decision-making, heightening volatility response immediacy."
     },
     {
       "type": "EMERGENCE",
@@ -326,179 +431,74 @@
       "categories": [
         "Economic"
       ],
-      "alert_title": "イラン攻撃の最新局面",
-      "description": "初出現の54回。UAEガス施設・クウェート製油所への攻撃が最新情報として頻出。紛争のエスカレーション可能性と停戦交渉の脆弱性を示唆。エネルギー基盤施設の攻撃リスクが常態化する危険性。",
-      "alert_title_en": "Latest Iran attacks on energy infrastructure intensify",
-      "description_en": "Reported strikes on UAE and Kuwait energy facilities show ongoing volatility despite ceasefire discussions. This indicates conflict escalation risk remains acute and energy security threats are becoming normalized."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "docket",
-      "mentions": 54,
-      "ratio": 13689.0,
-      "historical_avg": 0.0,
-      "categories": [
-        "Political",
-        "Economic",
-        "Social",
-        "Technological",
-        "Legal"
-      ],
-      "alert_title": "法廷日程の急増",
-      "description": "過去平均の13700倍超。Morning Docketの頻出が示す司法負荷の急増。政権交代に伴う大量訴訟（移民政策・関税等）が司法制度を圧迫。司法判断の遅延と執行可能性の低下が政治分裂を加速。",
-      "alert_title_en": "Court docket overload signals litigation wave from policy changes",
-      "description_en": "Morning Docket spikes indicate judicial system strain from Trump administration policies. Legal uncertainty and delayed judgments will amplify political polarization and policy implementation failures."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "itmedia mobile",
-      "mentions": 53,
-      "categories": [
-        "Economic",
-        "Social",
-        "Technological",
-        "Legal",
-        "Environmental"
-      ],
-      "alert_title": "ITメディア報道の日本化",
-      "description": "初出現の53回。ITメディア配信の日本テック・消費ニュース（Xiaomi割引、VAIO値上げ、ポケモンiPhone）が頻出。日本語テック報道の国際配信増加が示唆する「ローカルニュース国際化」傾向。東アジア市場の相対的重要性上昇。",
-      "alert_title_en": "Japanese tech news gains international distribution via ITmedia",
-      "description_en": "Emergence of Japanese consumer tech news in global circuits indicates rising Asian market influence on international tech narratives. This reflects shift of innovation hubs and consumer trends toward East Asia."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "migrant returns",
-      "mentions": 50,
-      "categories": [
-        "Political"
-      ],
-      "alert_title": "移民返送政策の制度化",
-      "description": "初出現の50回。市民権・移民政策の大転換が政治化。不法滞在者強制送還と市民権廃止論が同時進行。社会分裂と法的紛争の大波が到来。特にアジア系合法移民への影響懸念。",
-      "alert_title_en": "Migrant returns and birthright citizenship challenges emerge",
-      "description_en": "Combined emergence of migrant deportation and citizenship challenges signals fundamental redefinition of national membership. Legal and social conflicts over immigration will reshape demographic trajectories of developed nations."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "returns press",
-      "mentions": 50,
-      "categories": [
-        "Political"
-      ],
-      "alert_title": "強制送還の国際協力化",
-      "description": "初出現の50回。中国への容疑者送還とICE（米移民取締局）活動強化が並行。国家間での強制送還体制の国際化と「人流管理」の厳格化。人権懸念と主権対立の先鋭化。",
-      "alert_title_en": "International deportation cooperation framework strengthens",
-      "description_en": "Increased extradition cooperation between nations alongside stricter immigration enforcement signals emergence of coordinated international migration control systems. This raises sovereignty and human rights protection concerns."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "conference wednesday",
-      "mentions": 50,
-      "categories": [
-        "Political"
-      ],
-      "alert_title": "トランプイラン会見",
-      "description": "初出現の50回。トランプのイラン政策会見が複数配信。公開討論による政策転換の実時間化。メディア・市場がライブ政策発表に完全リアルタイム反応。大統領個人の言動が国際金融・エネルギー市場を直接支配。",
-      "alert_title_en": "Trump press conference on Iran policy shapes real-time markets",
-      "description_en": "Live policy announcements by Trump directly moving energy and financial markets signals extreme dependence on individual political actors. Democratic institutions and market mechanisms are bypassed for direct leader-audience communication."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "rules migrant",
-      "mentions": 50,
-      "ratio": 8450.0,
-      "historical_avg": 0.0,
-      "categories": [
-        "Political"
-      ],
-      "alert_title": "移民規則の厳格化",
-      "description": "過去平均の8400倍超。移民・難民政策の法制化と厳格化が急進化。国籍・市民権のルール競争が激化。境界管理とNation-stateの定義戦が政治の中心へ。",
-      "alert_title_en": "Migrant rules tightening globally amid policy shift",
-      "description_en": "Surge in migrant rule changes reflects nationalist turn in immigration policy worldwide. Border controls and citizenship definitions becoming primary political battlegrounds."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "parlament",
-      "mentions": 50,
-      "ratio": 6337.5,
-      "historical_avg": 0.0,
-      "categories": [
-        "Political"
-      ],
-      "alert_title": "欧州議会の防衛権強化",
-      "description": "過去平均の6300倍超。欧州議会がNATO・防衛政策で主導権強化。ロシア脅威下での欧州統合と防衛自立化。米国への依存減少と独立的防衛戦略の構築が加速。",
-      "alert_title_en": "European Parliament strengthens defense autonomy amid NATO shifts",
-      "description_en": "EU defense policy initiatives reflect strategic decoupling from U.S. security guarantees. European strategic autonomy in defense becoming structural necessity rather than aspirational goal."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "iran peace",
-      "mentions": 38,
-      "categories": [
-        "Political",
-        "Economic",
-        "Social",
-        "Technological",
-        "Legal"
-      ],
-      "alert_title": "イラン平和交渉局面",
-      "description": "初出現の38回。米イラン戦争終結への「平和交渉」フレーミングが確立。停戦ではなく構造的和平へのシフト。地域紛争から構造的安全保障転換。サウジ・UAE等の急速な政策転換を強要。",
-      "alert_title_en": "Iran peace negotiations reframe conflict resolution strategy",
-      "description_en": "Peace negotiations discourse replaces military solutions, signaling potential structural realignment of Middle East security architecture. This forces rapid recalibration of Gulf state foreign policies."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "kevin warsh",
-      "mentions": 38,
-      "categories": [
-        "Political",
-        "Economic",
-        "Technological",
-        "Legal",
-        "Environmental"
-      ],
-      "alert_title": "ケビン・ウォーシュFRB議長候補",
-      "description": "初出現の38回。トランプ推薦のFRB議長候補が資産公開（1.3億ドル超）。金融エリート人脈の透明性と倫理性論争が浮上。中央銀行の独立性と政治性の対立が先鋭化。",
-      "alert_title_en": "Kevin Warsh as Fed chair nominee raises wealth and independence questions",
-      "description_en": "Warsh's vast personal wealth and Trump connection raise concerns about Federal Reserve political independence. This signals potential tension between monetary policy autonomy and executive branch control."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "birthright citizenship",
-      "mentions": 37,
-      "categories": [
-        "Political",
-        "Social",
-        "Legal",
-        "Environmental"
-      ],
-      "alert_title": "先天的市民権の法的危機",
-      "description": "初出現の37回。トランプが米市民権修正条項（14条）の先天的市民権廃止を裁判所に提起。最高裁が対応検討中。アジア系合法移民への影響が懸念され、国籍定義の根本的再編成局面。",
-      "alert_title_en": "Birthright citizenship challenged in Supreme Court",
-      "description_en": "Trump administration's constitutional challenge to birthright citizenship signals potential redefinition of American membership. This disproportionately affects Asian immigrants and could reshape demographic and political structures."
+      "alert_title": "ロイター最新情報の体系化",
+      "description": "ロイター最新情報が初出現で54件。イラン攻撃・原発被害などの即座速報体系の確立。リアルタイムニュース配信の国際標準化。市場参加者の情報同期度向上と集団的意思決定の同期化進行。情報非対称性の圧縮により、ニッチ情報の先制利用機会喪失が進み、投資戦略の差別化が困難化する。",
+      "alert_title_en": "Reuters Latest Information Systematized",
+      "description_en": "Reuters latest information emerged as new topic (54 instances), establishing instant alert systems for Iran attacks and nuclear facility damage. International real-time news distribution standardization proceeds. Compressed information asymmetry reduces first-mover niche information advantages, complicating investment strategy differentiation."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "claude fable",
-      "mentions": 37,
+      "mentions": 43,
       "categories": [
         "Political",
         "Technological"
       ],
-      "alert_title": "Claude Code流出と競争激化",
-      "description": "初出現の37回。AnthropicのClaude Code漏洩とCursor等による競争激化。生成AI開発の「外部化」と新興プレイヤーの台頭。Anthropic独占が瓦解し、AI開発の民主化が加速。",
-      "alert_title_en": "Claude Code leak accelerates AI coding tool competition",
-      "description_en": "Source code leak forces Anthropic to compete with emerging alternatives like Cursor. This signals end of AI tool monopolies and acceleration of open-source AI development ecosystems."
+      "alert_title": "Claude AIコード流出事件",
+      "description": "Claude Codeが初出現で43件報道。Anthropic AIの部分ソースコード流出と使用制限課題発生。セキュリティ脆弱性と商用化戦略の衝突。AI知的財産保護の難化とサイバー脅威の多面化が示唆され、エンタープライズAI導入時の法的・セキュリティリスク評価の複雑化と専門人材の急速需要化が予想される。",
+      "alert_title_en": "Claude AI Code Leak Incident Emerges",
+      "description_en": "Claude Code emerged as new topic (43 instances) following Anthropic source code partial leak and usage limitation issues. Security vulnerability collides with commercialization strategy. Suggests escalating AI intellectual property protection difficulties and multifaceted cyber threats, predicting complex enterprise AI deployment legal-security risk assessment and urgent specialist talent demand."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "iran peace",
+      "mentions": 39,
+      "categories": [
+        "Political",
+        "Economic",
+        "Social",
+        "Technological",
+        "Legal"
+      ],
+      "alert_title": "イラン和平交渉の具体化",
+      "description": "イラン和平が初出現で39件。停戦シナリオの詳細論議と市場期待の結晶化。米軍撤退タイムライン（2-3週間）の公表。予想外の政策転換速度が投資家心理に急激な影響。中東地政学の大きな空白期間が生まれ、この隙間を利用した規制仲裁と資産移動が急加速し、市場参加者間の利益相反が深化する。",
+      "alert_title_en": "Iran Peace Negotiations Crystallize in Detail",
+      "description_en": "Iran peace emerged as new topic (39 instances) with detailed ceasefire scenarios and crystallized market expectations. Public US military withdrawal timeline (2-3 weeks) creates unexpected policy transition speed impacting investor psychology sharply. Middle East geopolitical gap enables regulatory arbitrage and asset movement acceleration, deepening market participant benefit conflicts."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "kevin warsh",
+      "mentions": 39,
+      "categories": [
+        "Political",
+        "Economic",
+        "Technological",
+        "Legal",
+        "Environmental"
+      ],
+      "alert_title": "ウォーシュ連邦準備制度理事会候補",
+      "description": "ケビン・ウォーシュが初出現で39件。トランプ政権のFRB議長候補指名と資産公開。個人資産130百万ドル超の開示。金融規制と富豪人脈の結合による政策偏向の懸念。利益相反管理の厳格化要求と同時に、特定層への利益還元が予想される構造。FRB独立性への市場信頼低下が金融市場に波及。",
+      "alert_title_en": "Kevin Warsh Nominated as Fed Chair Candidate",
+      "description_en": "Kevin Warsh emerged as new topic (39 instances) with Trump Fed chair nomination and asset disclosure exceeding $130 million. Links financial regulation with wealthy networks, raising policy bias concerns. Market expectations of interest-aligned benefit returns and concentrated influence, while pressuring conflict-of-interest management, forecast eroding Fed independence confidence cascading into financial markets."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "birthright citizenship",
+      "mentions": 38,
+      "categories": [
+        "Political",
+        "Social",
+        "Legal",
+        "Environmental"
+      ],
+      "alert_title": "出生地市民権廃止論争",
+      "description": "出生地市民権が初出現で38件。米国最高裁での合憲性審理と政治的圧力。トランプ政権による移民法改変の政策化。アジア系移民への不均等影響。法的確実性喪失と家族制度の解体リスク。企業人的資源戦略の国籍別差別化要件や人材確保コスト急増が予想され、ダイバーシティ政策と法令順守の対立が深化する。",
+      "alert_title_en": "Birthright Citizenship Abolition Becomes Contested",
+      "description_en": "Birthright citizenship emerged as new topic (38 instances) amid Supreme Court constitutionality review and political pressure. Trump administration immigration law transformation concretizes with disproportionate Asian immigrant impact. Lost legal certainty and family system dissolution risks predict corporate HR strategy nationality-based differentiation requirements and escalated talent acquisition costs, deepening diversity-compliance conflicts."
     }
   ]
 }
