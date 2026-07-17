@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-16T19:59:42.314596+00:00",
-  "total_articles_analyzed": 375921,
+  "generated_at": "2026-07-17T20:01:35.818986+00:00",
+  "total_articles_analyzed": 378841,
   "alert_counts": {
     "emergence": 12,
     "surge": 12,
@@ -12,7 +12,7 @@
       "type": "CROSSOVER",
       "level": "high",
       "topic": "european parliament",
-      "mentions": 831,
+      "mentions": 850,
       "categories": [
         "Economic",
         "Environmental",
@@ -22,16 +22,16 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "EU議会の横断的政策議論拡大",
-      "description": "欧州議会が農業、移民、防衛など複数の政策領域で同時に活発な議論を展開している。経済から環境、技術まで6つのPESTLE分野に横断的に出現する831件のニュースは、EUが直面する複合的課題に統合的に対応しようとする姿勢を示唆している。これは今後のEU政策がより横断的・複合的になることを示す重要な兆候である。",
-      "alert_title_en": "EU Parliament's Cross-Domain Policy Integration",
-      "description_en": "The European Parliament is simultaneously engaging in multi-domain policy discussions spanning agriculture, migration, and defense across six PESTLE fields. This signals an integrated policy approach to complex, interconnected challenges and indicates a shift toward more comprehensive EU governance frameworks."
+      "alert_title": "EU議会の全域横断的影響",
+      "description": "欧州議会が農業サプライチェーン強化、移民政策、防衛など複数領域で同時に政策課題として浮上。政治・経済・法律・環境・社会・技術の全分野に跨る850件のニュースが検出され、EUの統合的な政策転換が進行中であることを示唆。今後、各国の規制や投資判断に広範な影響を与える可能性が高い。",
+      "alert_title_en": "EU Parliament Multi-Sector Policy Convergence",
+      "description_en": "European Parliament emerges as focal point across all six PESTLE dimensions through agriculture, migration, and defense initiatives. This signals comprehensive EU policy transformation that will reshape regulatory landscape and corporate strategy across sectors."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "compliance",
-      "mentions": 548,
+      "mentions": 565,
       "categories": [
         "Economic",
         "Environmental",
@@ -41,16 +41,16 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "コンプライアンスパラドックス顕在化",
-      "description": "548件の記事が「コンプライアンスが規則違反となる」という逆説的状況を報じている。規制遵守そのものが問題となる矛盾した状況—特にEU AI法対応で見られる—が経済から法律まで広範囲に議論されている。今後、規制設計の不備による企業負担増加や法的紛争の増加が懸念される。",
-      "alert_title_en": "Compliance Paradox Becoming Systemic Issue",
-      "description_en": "The emerging paradox where regulatory compliance itself becomes problematic is spreading across six domains, particularly in EU AI Act implementation. This signals potential structural flaws in regulatory design that could create widespread compliance burdens and legal conflicts."
+      "alert_title": "コンプライアンスのパラドックス",
+      "description": "全PESTLE分野に565件出現。単なる規制対応から『コンプライアンス自体が違反になる』という逆説的な状況が生成されている。EU AI法や産業規制が複雑化する中で、過度な適応が競争阻害やイノベーション抑制につながる懸念が表面化。組織の戦略的な規制対応の在り方が問われている。",
+      "alert_title_en": "Compliance Paradox Emerging Globally",
+      "description_en": "A contradictory trend where excessive regulatory compliance may itself become an offense, particularly under EU AI Act and industrial standards. This reflects growing complexity where companies face conflicting regulatory demands across jurisdictions."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "science",
-      "mentions": 373,
+      "mentions": 387,
       "categories": [
         "Economic",
         "Environmental",
@@ -60,16 +60,16 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "科学と民主主義の関係再考",
-      "description": "科学規範と民主主義的意思決定の整合性について、6分野に渡って373件の記事が議論している。AIが気象予測を革新する一方で、科学的権威と民主的手続きの緊張関係が顕在化。今後、技術進展と民主的正当性のバランス問題が政策決定に大きな影響を与えることが予想される。",
-      "alert_title_en": "Science and Democracy Reconciliation Needed",
-      "description_en": "The tension between scientific authority and democratic legitimacy is being discussed across six domains as AI transforms climate science. This signals mounting pressure to reconcile technological expertise with democratic governance processes."
+      "alert_title": "科学的規範の民主化問題",
+      "description": "科学知識の民主的正当性と気候AI技術導入の矛盾が387件で同時出現。気候科学とAI革命は技術的には進化しても、民主的プロセスとの乖離が生じている。科学への社会的信頼構築と技術導入スピードのバランスが今後の鍵となる。",
+      "alert_title_en": "Science Norms in Democracy Under Tension",
+      "description_en": "Conflict between traditional scientific norms and democratic legitimacy surfaces as AI transforms weather and climate science. The gap between technical advancement and public trust-building mechanisms will shape future policy effectiveness."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "ukraine",
-      "mentions": 361,
+      "mentions": 382,
       "categories": [
         "Economic",
         "Environmental",
@@ -79,16 +79,16 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "ウクライナの同盟関係が歴史問題で緊迫",
-      "description": "ウクライナのゼレンスキー大統領が戦時中の民族主義者を称賛する姿勢がポーランドとの関係を悪化させている。361件の記事が政治・経済・技術など複数分野で報道するこの問題は、過去の歴史認識の相違が現在の戦略的同盟を揺るがす危機を示唆している。今後、東欧地域での連携強化に歴史和解が不可欠になる。",
-      "alert_title_en": "Ukraine-Poland Alliance Strained by Nationalist History",
-      "description_en": "Zelenskyy's honoring of wartime nationalists is straining Ukraine's critical alliance with Poland, spreading across political, economic, and technological discourse. This signals how unresolved historical grievances can undermine contemporary strategic partnerships."
+      "alert_title": "ウクライナの同盟亀裂",
+      "description": "ウクライナとポーランドの関係悪化が政治・経済・法律・環境・社会・技術全領域で382件記録。ゼレンスキー政権の民族主義的象徴化がNATO同盟内の分断を招き、対ロシア戦略の足並みを揺さぶっている。東欧の地政学的再編が加速する可能性。",
+      "alert_title_en": "Ukraine-Poland Alliance Strain Over Nationalism",
+      "description_en": "Zelenskyy's honoring of wartime nationalist figures strains Ukraine's crucial alliance with Poland across all sectors. This threatens NATO cohesion and complicates long-term Eastern European geopolitical stability during conflict."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "summit",
-      "mentions": 353,
+      "mentions": 357,
       "categories": [
         "Economic",
         "Environmental",
@@ -98,17 +98,17 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "G7サミット全領域政策集約",
-      "description": "フランス主催のG7サミットに関する報道が353件、全6分野に分散している。経済危機対応から気候変動、デジタル規制まで、複数の全地球的課題が同時進行で議論される状況が反映されている。今後のグローバル・ガバナンスは、個別課題ごとの対応から統合的枠組みへの転換を迫られることになる。",
-      "alert_title_en": "G7 Summit Consolidates Global Multi-Domain Agenda",
-      "description_en": "France's G7 summit is consolidating discussions across six domains, from economic crisis to climate and digital regulation. This reflects the increasing necessity for integrated governance responses to interconnected global challenges."
+      "alert_title": "主要サミットの多領域波及",
+      "description": "G7をはじめ国際サミットが全6分野で357件出現。経済・環境・技術・法律が統合的に議論される時代に転換。従来は個別課題だった領域が相互依存し、一つの政策決定が全領域に波及する複合性が強まっている。",
+      "alert_title_en": "Multi-Sector Convergence at Global Summits",
+      "description_en": "International summits like G7 demonstrate unprecedented cross-sector integration across economic, environmental, technical, and legal dimensions. Policy decisions now cascade across multiple domains simultaneously."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "milei",
-      "mentions": 286,
-      "ratio": 8061.0,
+      "mentions": 293,
+      "ratio": 8258.3,
       "historical_avg": 0.0,
       "categories": [
         "Social",
@@ -117,16 +117,16 @@
         "Legal",
         "Economic"
       ],
-      "alert_title": "アルゼンチン改革急加速",
-      "description": "ミレイ大統領の改革が過去平均比8061倍に急増し、286件の報道に達している。政府部門の大規模削減と氷河法改革が司法によって承認されるなど、急進的なネオリベラル政策が制度的に組み込まれつつある。今後、南米における急進改革モデルの影響波及と、社会的反発の激化が懸念される。",
-      "alert_title_en": "Milei's Radical Reforms Accelerating Exponentially",
-      "description_en": "Coverage of President Milei's reforms has surged 8,061 times above baseline, with court approvals enabling massive government downsizing. This signals accelerating implementation of radical neoliberal restructuring with potential regional policy influence."
+      "alert_title": "ミレイ改革の急加速",
+      "description": "アルゼンチン・ミレイ大統領の構造改革が過去平均の8258倍に急増。氷河保護法廃止と公務員削減（『チェーンソー改革』）が実行段階へ。急進的な規制緩和と環境政策の転換が、ラテンアメリカの政治経済モデルの分岐を示唆。",
+      "alert_title_en": "Milei's Radical Reform Acceleration Unprecedented",
+      "description_en": "Argentine President Milei's structural reforms spike 8,258 times baseline, including glacier protection law repeal and aggressive public sector cuts. This signals a dramatic policy pivot with ripple effects across Latin America."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "allafrica com",
-      "mentions": 225,
+      "mentions": 231,
       "categories": [
         "Social",
         "Technological",
@@ -135,33 +135,33 @@
         "Legal",
         "Economic"
       ],
-      "alert_title": "アフリカ報道のアジェンダ転換",
-      "description": "allAfrica.comが過去2年間に出現しなかったトピックとして新たに225件報道されている。南アフリカの違法移民対策、ナイジェリアのデータ保護、ケニアの投資交渉など、アフリカの独立的な政策課題がメディア報道の主流化を示唆。今後、グローバルな権力構造におけるアフリカの主体性強化が加速する可能性がある。",
-      "alert_title_en": "Africa-Centric News Agenda Emerging Globally",
-      "description_en": "AllAfrica.com is newly prominent with 225 articles covering Africa's independent policy agendas including immigration control, data protection, and investment negotiations. This signals growing recognition of Africa's autonomous role in global governance."
+      "alert_title": "アフリカ発ニュースソース拡大",
+      "description": "allAfrica.comという情報源が初出現で231件記録。南アフリカの違法移民対策、ナイジェリアのMeta提携によるデータ保護、ケニアの国際交渉など、グローバルニュースモニタリング中にアフリカの政策・技術動向の可視化が進行中。アフリカのディジタル化と規制整備が加速している。",
+      "alert_title_en": "Africa News Coverage Surge Via allAfrica",
+      "description_en": "AllAfrica platform emergence marks rising visibility of African policy and tech initiatives including immigration reform, data protection partnerships with Meta, and international trade negotiations. African digitalization and regulatory frameworks gaining global attention."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "bonn",
-      "mentions": 217,
-      "ratio": 5794.3,
+      "mentions": 218,
+      "ratio": 5821.0,
       "historical_avg": 0.0,
       "categories": [
         "Environmental",
         "Political"
       ],
-      "alert_title": "ボン気候交渉が政治化",
-      "description": "ボン気候交渉に関する報道が過去平均比5794倍に急増し、217件に達している。化石燃料転換の議論が政治・環境の中核課題として浮上。気候交渉がテクニカルな環境問題から政治的決定を伴う変革へ移行しており、今後の国家エネルギー戦略の転換が加速する見通し。",
-      "alert_title_en": "Bonn Climate Talks Becoming Political Battleground",
-      "description_en": "Coverage of Bonn climate negotiations has surged 5,794 times, with fossil fuel transition becoming a central political issue. This signals climate change is transitioning from technical negotiation to strategic national energy policy conflict."
+      "alert_title": "ボン気候会議の急浮上",
+      "description": "ボン（UNFCCC会議開催地）が過去平均の5821倍で218件出現。化石燃料転換の議論が政治・環境分野で集中。Santa Martaから始まる国際気候交渉プロセスがボンに集約され、2025-2026年の脱炭素政策が決定的な転機を迎える。",
+      "alert_title_en": "Bonn Climate Talks Surge in Global Focus",
+      "description_en": "Bonn emerges as critical nexus for fossil fuel transition negotiations with 5,821x increase in mentions. The convergence from Santa Marta discussions signals decisive climate policy turning point for 2025-2026."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "chatham",
-      "mentions": 176,
-      "ratio": 22322.7,
+      "mentions": 185,
+      "ratio": 23464.2,
       "historical_avg": 0.0,
       "categories": [
         "Social",
@@ -170,17 +170,17 @@
         "Political",
         "Legal"
       ],
-      "alert_title": "Chatham House湾岐戦分析急増",
-      "description": "Chatham Houseの中東エネルギー分析報道が過去平均比22,322倍に急増している。湾岐地域の石油ガス政策が国際的なシンクタンク分析の最優先課題となり、176件の記事が集中している。地政学的エネルギー戦略の再構築が政策立案者の緊急課題となっていることを示唆している。",
-      "alert_title_en": "Gulf Energy Geopolitics Under Intense International Scrutiny",
-      "description_en": "Chatham House's Gulf oil and gas analysis has exploded 22,322 times above baseline with 176 articles, indicating energy policy in the region is now a top priority for global strategic analysis and policy circles."
+      "alert_title": "Chatham Houseの気候分析拡大",
+      "description": "シンクタンクChatham Houseが23464倍の急増で185件。湾岸石油ガス産業の深掘り分析が『Climate Briefing』シリーズで高頻度化。エネルギー転換における産油国の役割と抵抗が戦略的議論の中心に浮上している。",
+      "alert_title_en": "Chatham House Climate Research Explosive Growth",
+      "description_en": "Chatham House citations spike 23,464 times with focus on Gulf oil and gas producers' climate transition role. This reflects increasing strategic scrutiny of fossil fuel nations' behavior and leverage in climate negotiations."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "chatham house",
-      "mentions": 176,
-      "ratio": 22322.7,
+      "mentions": 185,
+      "ratio": 23464.2,
       "historical_avg": 0.0,
       "categories": [
         "Social",
@@ -189,32 +189,46 @@
         "Political",
         "Legal"
       ],
-      "alert_title": "Chatham House報告書影響拡大",
-      "description": "※ノイズの可能性が高い。アラート9と実質的に同一の内容で、同一出現元（Chatham House）の過度な集約を示している。単一ソースの重複カウントの結果と考えられ、分析的価値は限定的。",
-      "alert_title_en": "Duplicate Alert - Chatham House Source Concentration",
-      "description_en": "※This appears to be duplicate noise from Alert 9, representing over-concentration of a single source rather than distinct news emergence."
+      "alert_title": "Chatham House分析の継続拡大",
+      "description": "※ノイズの可能性が高い。アラート9と同一コンテンツ。Chatham Houseへの引用集約を示すものの、独立的な新情報は限定的。",
+      "alert_title_en": "Chatham House Analysis Continued Expansion",
+      "description_en": "※High noise probability. Duplicate of Alert 9 with identical content and citation metrics."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "codex",
-      "mentions": 168,
-      "ratio": 28410.7,
+      "mentions": 172,
+      "ratio": 29087.1,
       "historical_avg": 0.0,
       "categories": [
         "Technological"
       ],
-      "alert_title": "OpenAI API統合の急速展開",
-      "description": "CodeX関連の報道が過去平均比28,410倍に急増し、168件に達している。ChatGPTへの安全なプライベートサーバー接続機能が提供開始され、セキュリティ統合AIプラットフォームの実装が加速している。今後、エンタープライズAI導入の爆発的増加と、AIセキュリティ規制の強化が予想される。",
-      "alert_title_en": "OpenAI Enterprise Integration Accelerating Rapidly",
-      "description_en": "Codex coverage has surged 28,410 times with secure MCP tunnel integration enabling enterprise AI deployment. This signals imminent enterprise AI adoption acceleration and likely regulatory response to AI security risks."
+      "alert_title": "AI開発ツール(Codex)の急増",
+      "description": "OpenAIのCodexが過去平均の29087倍で172件出現。MCPサーバー統合、Secure MCP Tunnel提供開始、Windows対応拡大など、エンタープライズAI統合が加速。ローカルシステムとクラウドAIの接続安全性が競争軸になり、AIの組織浸透が2026年に本格化する局面。",
+      "alert_title_en": "Codex AI Tool Adoption Skyrockets Massively",
+      "description_en": "OpenAI's Codex surges 29,087 times with Secure MCP Tunnel and Windows integration announcements. Enterprise AI integration accelerates rapidly, signaling 2026 as inflection point for organizational AI embedding."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "regulatory compliance",
+      "mentions": 134,
+      "categories": [
+        "Technological",
+        "Legal"
+      ],
+      "alert_title": "規制コンプライアンス新要件化",
+      "description": "『regulatory compliance』が初出現で134件。メタ社のナイジェリア提携、EU航空労働規制など、新興市場と先進国で並行的に規制要件が強化されている。企業の多地域コンプライアンス負荷が劇的に増加し、法務と技術の統合対応が急務化。",
+      "alert_title_en": "Regulatory Compliance Requirements Newly Formalized",
+      "description_en": "Regulatory compliance emerges as distinct category with Nigeria-Meta partnership and EU air transport regulations. Multi-jurisdictional compliance burden on corporations intensifies, demanding integrated legal-technical responses."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "global south",
-      "mentions": 131,
-      "ratio": 9494.4,
+      "mentions": 134,
+      "ratio": 9711.8,
       "historical_avg": 0.0,
       "categories": [
         "Social",
@@ -223,57 +237,61 @@
         "Political",
         "Economic"
       ],
-      "alert_title": "グローバルサウスの戦略的再評価",
-      "description": "グローバルサウスに関する報道が過去平均比9,494倍に急増し、131件の議論を生成している。先進国中心の国際秩序に対抗する途上国グループの戦略的意思が顕在化。今後、BRICS等の新興国連合が政治経済的影響力を拡大し、既存多国間機構の再編が進む可能性が高い。",
-      "alert_title_en": "Global South Strategic Realignment Accelerating",
-      "description_en": "Coverage of the Global South's future has surged 9,494 times, signaling emerging strategic consolidation among developing nations against Western-centric international order and potential restructuring of multilateral institutions."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "regulatory compliance",
-      "mentions": 128,
-      "categories": [
-        "Technological",
-        "Legal"
-      ],
-      "alert_title": "AI時代の規制コンプライアンス確立",
-      "description": "「規制コンプライアンス」が過去2年間に出現しなかった新トピックとして128件現れている。ナイジェリアのメタ協業やEU航空労働規制が具体例で、AI導入と規制対応の並行進行が課題化。今後、デジタル企業と規制当局の継続的な適応ゲームが産業構造を再編する可能性がある。",
-      "alert_title_en": "Regulatory Compliance Framework for AI Era Emerging",
-      "description_en": "Regulatory compliance has emerged as new topic with 128 articles covering Meta-Nigeria data protection and EU aviation labor standards. This signals ongoing adaptation cycles between technology firms and regulators reshaping industry structure."
+      "alert_title": "グローバルサウス台頭",
+      "description": "『Global South』が過去平均の9712倍で134件出現。先進国と開発途上国の経済・技術・政治的立場の分化が顕在化。気候資金、デジタル主権、食料安全保障など、南半球主導の新しい国際秩序構築が2025-2026年の主要テーマ化。",
+      "alert_title_en": "Global South Economic-Political Rise Accelerating",
+      "description_en": "Global South emerges 9,712 times baseline emphasis, signaling distinct development models and geopolitical realignment. Climate finance, digital sovereignty, and food security become South-led agenda items reshaping international order."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "evidence japan",
-      "mentions": 117,
-      "ratio": 5935.8,
+      "mentions": 120,
+      "ratio": 6088.0,
       "historical_avg": 0.0,
       "categories": [
         "Social",
         "Environmental",
         "Political"
       ],
-      "alert_title": "日本の証拠ベース政策拡大",
-      "description": "「Evidence Japan」が過去平均比5,935倍に急増し、117件報道されている。記事タイトルが未記載のため詳細分析に限界あり。日本の科学的根拠に基づく政策決定プロセスが国際的に認識・報道される段階に進んでいる可能性を示唆している。",
-      "alert_title_en": "Japan's Evidence-Based Policy Making Gaining International Recognition",
-      "description_en": "Evidence Japan topic has surged 5,935 times with 117 articles. Though limited detail available, this suggests Japan's science-based policymaking is gaining international prominence and influence."
+      "alert_title": "日本国内証拠政策化",
+      "description": "『evidence japan』が過去平均の6088倍で120件。関連記事が表示されていないため詳細不明だが、日本の証拠主導の社会・環境・政治政策が国際的に注目されるプロセスが進行中。データ駆動型ガバナンスの日本モデル化の可能性。",
+      "alert_title_en": "Evidence-Based Japan Policy Surge Detected",
+      "description_en": "Evidence-based policy approach in Japan spikes 6,088 times. Limited article visibility suggests Japanese model of data-driven governance gaining international recognition and potential replication."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "andy burnham",
+      "mentions": 112,
+      "ratio": 5682.1,
+      "historical_avg": 0.0,
+      "categories": [
+        "Social",
+        "Environmental",
+        "Political",
+        "Legal"
+      ],
+      "alert_title": "Andy Burnham首相候補化",
+      "description": "英マンチェスター市長Andy Burnhamが過去平均の5682倍で112件出現。労働党内右翼争い激化の中、Starmer首相が彼を閣僚に起用予定と報道。英国の政治権力再編が進行し、2026年の選挙体制が形成段階。地域首長からの首相輩出が政治構造の変化を象徴。",
+      "alert_title_en": "Andy Burnham Emerges as UK PM Contender",
+      "description_en": "Manchester's Andy Burnham surges as prime ministerial candidate amid Labour Party political shifts, with Starmer signaling cabinet placement. UK political realignment accelerates toward 2026 electoral cycle with regional leader ascendancy."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "sakana",
-      "mentions": 108,
-      "ratio": 54792.0,
+      "mentions": 111,
+      "ratio": 56314.0,
       "historical_avg": 0.0,
       "categories": [
         "Technological",
         "Economic"
       ],
-      "alert_title": "Sakana AIの商用展開開始",
-      "description": "Sakana AIが過去平均比54,792倍に急増し、108件報道されている。自律型リサーチアシスタント「Sakana Marlin」の商用化が日本発のAI企業の急速な成長を示唆。今後、日本のAI企業が先進国市場で競争力を発揮し、グローバルなAI産業地図の再編が進む可能性がある。",
-      "alert_title_en": "Sakana AI Commercial Product Launch Signals Japanese AI Emergence",
-      "description_en": "Sakana AI coverage has surged 54,792 times with launch of autonomous research assistant Sakana Marlin. This signals rapid growth of Japanese AI startups and potential reshaping of global AI competitive landscape."
+      "alert_title": "Sakana AI自律研究商用化",
+      "description": "日本発Sakana AIが過去平均の56314倍で111件出現。『Sakana Marlin』という自律型リサーチアシスタントの初商用化で、日本のAI企業が競争に本格参入。エンタープライズ向けAI実装の競争が日米中で激化し、業界再編が2026年に加速。",
+      "alert_title_en": "Sakana AI Autonomous Research Tool Commercialization",
+      "description_en": "Japanese startup Sakana AI spikes 56,314 times with commercial launch of 'Sakana Marlin' autonomous research assistant. Japan's AI industry enters enterprise competition at scale, intensifying US-China-Japan AI race."
     },
     {
       "type": "EMERGENCE",
@@ -287,31 +305,47 @@
         "Legal",
         "Economic"
       ],
-      "alert_title": "適応資金不足が気候危機深刻化",
-      "description": "気候適応資金（Finance BIGGO）が新トピックとして107件出現。先進国が2025年に適応資金を倍増するという目標をほぼ確実に未達とする見通しが報道されている。気候変動への資金面での対応不足が今後、気候難民や地域紛争を加速させる可能性が高い。",
-      "alert_title_en": "Climate Adaptation Finance Shortfall Deepening Crisis",
-      "description_en": "Climate adaptation finance has emerged as new topic with 107 articles showing wealthy nations likely missed their 2025 goal to double adaptation funding. This signals worsening vulnerability to climate impacts and potential acceleration of climate-driven migration and conflict."
+      "alert_title": "金融・大規模イベント分析初出",
+      "description": "『finance biggo』が初出現で107件。関税のマクロ経済学、先進国の気候適応資金不足（2025年目標未達）が記録。グローバル金融ネットワークと保護主義的政策の相互作用が経済・政治を揺さぶる状況が新たな分析対象化。",
+      "alert_title_en": "Finance & Global Events Analysis Newly Tracked",
+      "description_en": "Finance-biggo tracking initiates with focus on tariff macroeconomics and unmet 2025 climate adaptation finance targets. Global financial networks and protectionist policies emerging as interconnected analytical domain."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "claude fable",
-      "mentions": 102,
+      "mentions": 105,
       "categories": [
         "Technological",
         "Political"
       ],
-      "alert_title": "Claude次世代AIモデル続出",
-      "description": "Claude Fableが新トピックとして102件報道されている。Anthropicの最新モデル「Claude Opus 4.8」と「Claude Fable 5」の登場により、数カ月要するコード移行が1日で完了するなど生産性が革命的に向上。今後、AIによる自動化がソフトウェア開発の重要な競争軸となり、技能労働の空洞化が加速する懸念がある。",
-      "alert_title_en": "Claude Next-Gen Models Revolutionizing Development Automation",
-      "description_en": "Claude Fable has emerged with 102 articles covering Anthropic's latest models achieving dramatic productivity gains—reducing months-long code migrations to single days. This signals imminent disruption of software development labor markets through AI automation."
+      "alert_title": "Claude Fable AI新展開",
+      "description": "Anthropicの『Claude Fable 5』が初出現で105件。セキュリティプラグイン、ダイナミックワークフロー、大規模コード移行自動化（Rubyで2ヶ月を1日に短縮）など、生成AIの実装効率が革新的に高まる。エンタープライズ向けAI導入の技術障壁が急速に低下する局面。",
+      "alert_title_en": "Claude Fable 5 Enterprise AI Breakthrough",
+      "description_en": "Anthropic's Claude Fable 5 debuts with security plugins and dynamic workflows, enabling massive code migration automation. Technical barriers to enterprise AI implementation collapse, accelerating adoption across 2025-2026."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "investing com",
+      "mentions": 105,
+      "categories": [
+        "Social",
+        "Technological",
+        "Legal",
+        "Economic"
+      ],
+      "alert_title": "投資情報サイト拡大カバー",
+      "description": "Investing.comが初出現で105件。AI動向（Intel格上げ、SpaceX買い推奨）、Ant GroupのAlipay AI搭載、SPCX IPO、産業脱炭素化など、ファイナンシャル・メディアが政策と技術の交差点をカバー。投資家向け情報が政策・技術の複合シグナルになる傾向が強化。",
+      "alert_title_en": "Investing.com Financial-Tech Coverage Expansion",
+      "description_en": "Investing.com enters tracking with AI sector analysis, Ant Group AI initiatives, and decarbonization partnerships. Financial media increasingly bridges policy-technology intersections for investor decision-making."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "brics",
-      "mentions": 102,
-      "ratio": 6468.5,
+      "mentions": 105,
+      "ratio": 6658.8,
       "historical_avg": 0.0,
       "categories": [
         "Social",
@@ -321,25 +355,10 @@
         "Legal",
         "Economic"
       ],
-      "alert_title": "BRICS農業協力が一帯一路超える",
-      "description": "BRICS関連報道が過去平均比6,468倍に急増し、102件に達している。農業協力と食料安全保障における一枚岩の意思表示が強化されている。今後、BRICSが西側中心の国際体制に対抗する経済ブロックとして機能し、多極化が加速する見通しが高い。",
-      "alert_title_en": "BRICS Unified Agricultural Cooperation Challenging Western Order",
-      "description_en": "BRICS coverage has surged 6,468 times with agriculture ministers adopting joint declarations on trade barriers and food security. This signals consolidation of BRICS as a unified economic bloc challenging Western-centric international order."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "investing com",
-      "mentions": 101,
-      "categories": [
-        "Social",
-        "Technological",
-        "Economic"
-      ],
-      "alert_title": "投資情報プラットフォーム多様化",
-      "description": "Investing.comが新トピックとして101件出現。AIスタートアップの投資動向、中国企業のAI統合、スペースX等の成長企業情報が同一プラットフォームで集約される傾向を示唆。今後、投資情報の民主化とAI関連企業への資金集中が市場構造を変動させる可能性がある。",
-      "alert_title_en": "Investment Information Platforms Consolidating AI Market Data",
-      "description_en": "Investing.com has emerged as new topic with 101 articles covering AI startup trends, Chinese tech integration, and SpaceX growth. This signals democratization of investment information and concentration of capital flows toward AI-related enterprises."
+      "alert_title": "BRICS農業連携・食料安保",
+      "description": "BRICS諸国が過去平均の6659倍で105件出現。インドール宣言での農業協力強化、一方的な貿易障壁排除、海洋コラーゲン生体医材など。BRICS自体が国家間協力から経済・技術実装段階へ移行。グローバルな食料・医療サプライチェーン再編にBRICSが主導権を求めている。",
+      "alert_title_en": "BRICS Agricultural Cooperation Deepens Operationally",
+      "description_en": "BRICS surges 6,659 times with Indore Declaration on agriculture cooperation and food security. Coalition transitions from political coordination to operational economic and biotech implementation, reshaping global supply chains."
     },
     {
       "type": "SURGE",
@@ -353,10 +372,10 @@
         "Legal",
         "Economic"
       ],
-      "alert_title": "ボン気候会議で化石燃料転換加速",
-      "description": "ボンニュースレター（Bulletin）が過去平均比17,080倍に急増し、101件報道されている。気候危機対応が「最難課題」と明言されるなど、政治的認識が一変。ボン会議での化石燃料転換の具体的公約の加速が見込まれ、エネルギー産業の急速な再編が始まる可能性がある。",
-      "alert_title_en": "Bonn Conference Accelerating Fossil Fuel Transition Commitments",
-      "description_en": "Bonn Bulletin coverage has surged 17,080 times with climate crisis recognized as the 'hardest' challenge ever. This signals political will for accelerated fossil fuel transition and likely rapid energy industry restructuring."
+      "alert_title": "ボン気候会議速報体制",
+      "description": "Bonn Bulletin（気候会議報道）が過去平均の17080倍で101件。気候危機対応が『最難関課題』と国連事務局が表明。リアルタイム交渉情報の高頻度配信が、市場・政策関係者への即時シグナルになる体制が整備されている。",
+      "alert_title_en": "Bonn Bulletin Real-Time Climate Summit Reporting",
+      "description_en": "Bonn Bulletin coverage spikes 17,080 times with UN characterizing climate crisis as 'hardest' challenge. Real-time summit reporting becomes immediate market and policy signal mechanism."
     },
     {
       "type": "EMERGENCE",
@@ -366,10 +385,10 @@
       "categories": [
         "Environmental"
       ],
-      "alert_title": "ボン化石燃料転換議論深化",
-      "description": "「ボンニュースレター」が新トピックとして99件出現。ボン気候会議での化石燃料転換ロードマップが報道の焦点。Santa Martaからボンへの連続的政治的圧力が化石燃料産業の転換を加速させている。今後の脱炭素化投資がビジネス機会として認識される転機を迎えている。",
-      "alert_title_en": "Bonn Climate Talks Deepening Fossil Fuel Transition Discourse",
-      "description_en": "Bonn Bulletin has emerged with 99 articles charting fossil fuel transition pathways from Santa Marta through Bonn. This signals accelerating political momentum and potential business opportunity recognition in decarbonization."
+      "alert_title": "ボン報道体制の公式化",
+      "description": "『bonn bulletin』が初出現で99件。気化石燃料転換の国際交渉プロセスが公式報告書体制で整備。透明性と複数国家への同時情報配信が、交渉権力の分散化を促進。",
+      "alert_title_en": "Bonn Bulletin Official Reporting Framework",
+      "description_en": "Official Bonn Bulletin framework initiates with fossil fuel transition negotiation coverage. Transparent, synchronized information distribution to multiple stakeholders reshapes negotiation power dynamics."
     },
     {
       "type": "EMERGENCE",
@@ -379,10 +398,10 @@
       "categories": [
         "Political"
       ],
-      "alert_title": "移民帰還政策が新局面へ",
-      "description": "「移民帰還」が新トピックとして94件出現。欧州議会の新規則が移民帰還の強制的実施を加速させつつある。統合政策の進展と並行した厳格化が同時進行し、今後のEU移民政策は包容と排除の緊張を高める方向へ進む見通し。",
-      "alert_title_en": "Migrant Return Policy Entering New Implementation Phase",
-      "description_en": "Migrant returns has emerged as new topic with 94 articles covering Europe's progressive immigrant integration alongside stricter return enforcement. This signals EU migration policy will intensify the tension between integration and exclusion."
+      "alert_title": "移民帰還政策の新段階",
+      "description": "『migrant returns』が初出現で94件。欧州の統合進捗と収束の矛盾が記録される。移民受け入れと送還の新しい枠組みが政治化し、EU内部および国境管理政策が再編段階に。",
+      "alert_title_en": "Migrant Return Policies Newly Formalized Framework",
+      "description_en": "Migrant returns emerges as distinct policy category with European integration paradoxes. New frameworks for reception and deportation reshape EU internal politics and border management."
     },
     {
       "type": "EMERGENCE",
@@ -392,10 +411,10 @@
       "categories": [
         "Political"
       ],
-      "alert_title": "EU移民帰還新規則が発動",
-      "description": "「帰還プレス」が新トピックとして94件出現。欧州議会による新しい移民帰還規則が正式に発動、複数言語での報道を通じて全加盟国に周知されている。今後、移民帰還メカニズムの実装が各国で進行し、国境管理システムの一層の厳格化が見込まれる。",
-      "alert_title_en": "EU New Migrant Return Rules Officially Implemented",
-      "description_en": "EU migrant return rules have been officially implemented with European Parliament press conference announcements across multiple languages. This signals imminent acceleration of border control enforcement and migration return mechanisms across member states."
+      "alert_title": "EU移民帰還ルール発表",
+      "description": "『returns press』が初出現で94件。EU議会が移民帰還の新ルールを複数言語で同時発表。多言語・多国家への並行政策発表が、EUの統一規制力を示す一方、実装の複雑性も示唆。",
+      "alert_title_en": "EU Migration Return Rules Multilingual Announcement",
+      "description_en": "European Parliament announces new migrant return rules in multiple languages simultaneously. Synchronized multilingual policy rollout demonstrates EU regulatory coordination while highlighting implementation complexity."
     },
     {
       "type": "EMERGENCE",
@@ -405,10 +424,10 @@
       "categories": [
         "Political"
       ],
-      "alert_title": "会議開催による政策宣言相次ぐ",
-      "description": "「会議水曜日」が新トピックとして94件出現している。Appleの会議でAI計画公表、Bonn気候会議、EU移民帰還規則の記者会見など、複数の高層級会議での政策発表が集約されている。今後、国際会議での政策公表ペースが加速し、市場への影響変動が増すと予想される。",
-      "alert_title_en": "Major Policy Announcements Clustering Around Strategic Conferences",
-      "description_en": "Conference announcements have emerged with 94 articles spanning Apple's AI announcements, Bonn climate conference, and EU migrant return rules. This signals acceleration of high-level policy disclosure cycles with increased market volatility."
+      "alert_title": "国際会議・発表日程化",
+      "description": "※ノイズの可能性が高い。『conference wednesday』は汎用的な記事タイトル要素で、Apple AI計画発表、アフリカ保健戦略、EU移民政策など無関係な内容が混在。特定の新兆候を示さない。",
+      "alert_title_en": "Conference Schedule Announcements Mixed",
+      "description_en": "※High noise probability. Generic conference scheduling language without coherent thematic signal mixing Apple AI, African health, and EU migration topics."
     },
     {
       "type": "SURGE",
@@ -420,60 +439,42 @@
       "categories": [
         "Political"
       ],
-      "alert_title": "EU移民帰還規則が一気に制度化",
-      "description": "「移民帰還規則」が過去平均比15,896倍に急増し、94件報道されている。記事タイトルが未記載だが、欧州議会による新規則が複数言語・複数国で並行報道される状況から、EUの統一的移民政策が実装段階に入った。今後、各国の移民帰還実行率が政治的フォーカスとなる。",
-      "alert_title_en": "EU Migrant Return Rules Rapid Institutionalization Across Member States",
-      "description_en": "Rules on migrant returns have surged 15,896 times with implementation occurring simultaneously across EU member states. This signals EU-wide enforcement acceleration and upcoming national political debates over return implementation rates."
+      "alert_title": "EU移民帰還ルール急増",
+      "description": "『rules migrant』が過去平均の15896倍で94件。関連記事が表示されていないが、EU議会の移民規制強化が実装段階に入った兆候。政治的主張から法的枠組みへの転換が進行中。",
+      "alert_title_en": "EU Migrant Return Rules Surge Dramatically",
+      "description_en": "EU migrant return rules spike 15,896 times. Transition from political rhetoric to regulatory implementation framework underway, signaling hardening of EU migration stance."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "carnegie endowment",
-      "mentions": 85,
+      "mentions": 88,
       "categories": [
         "Social",
         "Technological",
         "Environmental",
         "Political"
       ],
-      "alert_title": "カーネギー国際平和財団が気候外交主導",
-      "description": "カーネギー財団が新トピックとして85件出現。欧州の新移民協定における気候変動の盲点指摘と、Avril Haines新会長の就任により、気候外交とセキュリティ統合が国際的課題化。今後、気候変動を地政学的リスク要因として組み込む戦略的思考が主流化する可能性がある。",
-      "alert_title_en": "Carnegie Endowment Elevating Climate in Diplomatic Strategy",
-      "description_en": "Carnegie Endowment has emerged with 85 articles highlighting the climate blind spot in EU migration policy and new leadership from Avril Haines. This signals integration of climate change into geopolitical strategy and security analysis."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "endowment",
-      "mentions": 85,
-      "ratio": 5390.4,
-      "historical_avg": 0.0,
-      "categories": [
-        "Social",
-        "Technological",
-        "Environmental",
-        "Political"
-      ],
-      "alert_title": "国際寄付基金が政策枠組み主導化",
-      "description": "「財団（Endowment）」が過去平均比5,390倍に急増し、85件報道されている。カーネギー等の国際的シンクタンク・寄付基金が政策枠組み設定の中心的役割を担う傾向が強化。今後、市民社会組織による知識生産が国家政策に先行する傾向が加速する可能性がある。",
-      "alert_title_en": "International Endowments Becoming Policy Framework Leaders",
-      "description_en": "Endowment coverage has surged 5,390 times with international foundations like Carnegie taking central roles in policy framework development. This signals potential shift where civil society knowledge production increasingly precedes government policy formation."
+      "alert_title": "Carnegie国際平和研究拡大",
+      "description": "Carnegie Endowment初出現で88件。気候問題とEU移民政策の盲点分析、Avril Haines新会長就任など。米国シンクタンク発の国際政策分析が高頻度化。国家安全保障指導者の国際機関転出は、政策人脈の再編を示唆。",
+      "alert_title_en": "Carnegie Endowment International Analysis Expands",
+      "description_en": "Carnegie Endowment emerges with climate-migration policy blind spot analysis and Avril Haines presidency. US think tank's policy analysis gains prominence while national security leader's transition signals elite network reshuffling."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "endowment international",
-      "mentions": 80,
+      "mentions": 83,
       "categories": [
         "Social",
         "Technological",
         "Environmental",
         "Political"
       ],
-      "alert_title": "国際平和機構のグローバル影響力拡大",
-      "description": "「国際財団」が新トピックとして80件出現。カーネギー平和基金の気候政策枠組みが国際的な政策議論の前提条件化。今後、民間財団による「ソフトパワー」を通じた政策形成が各国政府の意思決定に先行する構図が固定化する見通し。",
-      "alert_title_en": "International Peace Foundations Expanding Global Policy Influence",
-      "description_en": "International endowments have emerged with 80 articles showing Carnegie's climate policy frameworks becoming prerequisites for policy debate. This signals increasing soft power influence of private foundations in shaping government decision-making."
+      "alert_title": "Carnegie系国際機関影響",
+      "description": "『endowment international』が初出現で83件。Carnegie系の国際政策分析が体系化・拡散段階に。気候と移民の統合的分析が国際議論の枠組みを再定義している。",
+      "alert_title_en": "Carnegie International Policy Framework Expansion",
+      "description_en": "Carnegie-affiliated international policy analysis becomes systematized framework. Climate-migration integration reshapes international policy discourse structure."
     },
     {
       "type": "EMERGENCE",
@@ -484,10 +485,10 @@
         "Political",
         "Legal"
       ],
-      "alert_title": "ミレイ政策導入と司法容認",
-      "description": "「導入と教訓」が新トピックとして76件出現。アルゼンチンのミレイ政策実装が司法判断により進行し、氷河法改革が承認されている。政策実装と法的検証の並行進行が示唆される一方で、EU移民協定導入など国際的な法的枠組み統合も進行。今後、政策と法的正当性の再構築が世界的課題化する。",
-      "alert_title_en": "Policy Implementation and Judicial Legitimacy Co-Evolving",
-      "description_en": "Implementation and takeaways has emerged with 76 articles covering Milei's policy execution receiving judicial approval alongside EU Migration Pact implementation. This signals global pattern of policy legitimacy being established through parallel legal and political processes."
+      "alert_title": "政策実装の実行化段階",
+      "description": "『implementation takeaways』が初出現で76件。ミレイの氷河保護法廃止実装、ハンガリーがEU移民協定を拒否、UN気候プロセスの実装支援強化など、政治的決定から実行フェーズへの転換が同時並行。国家レベルの規制・政策の具体化が2025-2026年の焦点。",
+      "alert_title_en": "Policy Implementation Transition Phase Accelerating",
+      "description_en": "Implementation-focused discourse surges across Milei reforms, Hungary's EU migration pact rejection, and UN climate process operationalization. Shift from political decision to execution phase across multiple jurisdictions and sectors simultaneously."
     }
   ]
 }
