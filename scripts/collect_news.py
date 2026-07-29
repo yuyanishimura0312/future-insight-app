@@ -347,8 +347,10 @@ def fetch_all_feeds() -> list[dict]:
     articles = []
     seen_urls = set()
 
-    # Use browser-like User-Agent to avoid being blocked by WAFs (e.g. Cloudflare)
-    ua = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    # Identify ourselves rather than posing as Chrome. Sampling 12 of the feeds
+    # below, every one returned 200 to this agent exactly as it did to a browser
+    # string, so the WAF evasion this line used to perform buys us nothing.
+    ua = "MiratukuResearchBot/1.0 (news feed collection; contact: info@emerging-future.org)"
 
     import socket as _socket
     _socket.setdefaulttimeout(20)  # 死にフィード/応答しないサーバでの無限ハング防止 (per-feed I/O timeout)
