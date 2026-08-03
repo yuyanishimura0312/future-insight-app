@@ -1,533 +1,6 @@
 [
   {
     "alert_type": "NEW_CONTEXT",
-    "title": "公衆衛生政策へのソーシャルメディアインフルエンサーの統合",
-    "description": "従来の医療啓発モデルを超えて、ソーシャルメディアインフルエンサーを治療アドヒアランス促進の重要なアクターとして位置づけている。デジタル時代の公衆衛生戦略に新たなパラダイムを提起し、情報流通構造の根本的な変化を反映した政策設計の必要性を示唆している。",
-    "significance": "high",
-    "field": "社会科学",
-    "paper_title": "The Role of Social Media Influencers in Promoting Therapeutic Compliance: Implications for Public Health Policy",
-    "paper_title_ja": "治療コンプライアンス促進におけるソーシャルメディアインフルエンサーの役割：公衆衛生政策への含意",
-    "paper_url": "https://openalex.org/W7137590217",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "急速に増加するジェンダー関連苦痛への臨床対応の実証化",
-    "description": "過去15年で急速に増加したジェンダー関連苦痛という新しい臨床現象に対して、集団精神療法の適用可能性を初めて質的に検証している。倫理的・実効性上の公開討論が続く領域で、実践ベースの証拠を提供することで、臨床心理学と社会的議論の接合点を開拓している。",
-    "significance": "high",
-    "field": "社会科学",
-    "paper_title": "Transformational space: group psychotherapy with young people experiencing gender-related distress",
-    "paper_title_ja": "変革的空間：ジェンダー関連苦痛を経験する若年層を対象とした集団精神療法",
-    "paper_url": "https://doi.org/10.5526/err-00042868",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "スペクトラル・マテリアリズムという新理論枠組みの構築",
-    "description": "本研究は「スペクトラル・マテリアリズム」という新たな理論概念を導入し、物質性・歴史性・生態性を統合する学際的分析枠組みを開発しています。これまでの物質文化研究や環境人文学の領域に新たなパラダイムを提供する可能性があります。",
-    "significance": "high",
-    "field": "人文学",
-    "paper_title": "Spectral Materialism: Encounters with land-time-scapes",
-    "paper_title_ja": "スペクトラル・マテリアリズム：土地-時間-景観との出会い",
-    "paper_url": "https://doi.org/10.25602/gold.00040593",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "デカダン文学・クイア理論・妖精譚ジャンルの新たな結合",
-    "description": "本論文はデカダン運動、クイア理論、妖精譚という従来異なる文学研究領域を統合し、特にルネ・ヴィヴィアンとアルテア・ガイルスという見落とされた女性作家を新たに文学的正典に位置づけています。ジェンダー、セクシュアリティ、文学史研究における新たな視点を提供しています。",
-    "significance": "high",
-    "field": "人文学",
-    "paper_title": "The Decadent Fairy Tale: Queering the Othered Body, 1880-1920",
-    "paper_title_ja": "デカダン妖精譚：他者化された身体のクイアライゼーション、1880-1920年",
-    "paper_url": "https://doi.org/10.25602/gold.00040432",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "SiC成長プロセスへのAI駆動最適化",
-    "description": "従来の物理シミュレーション中心のSiC結晶成長アプローチから、データドリブンの機械学習ベースのプロセス最適化へのパラダイムシフトを示す。複雑な熱・化学的相互作用をAIが学習することで、新たなプロセス条件探索が可能になり、ワイドバンドギャップ半導体産業全体に影響を与える可能性がある。",
-    "significance": "high",
-    "field": "工学",
-    "paper_title": "Feature Importance and Growth Rate Prediction in SiC PVT Processes through Advanced Machine Learning Models",
-    "paper_title_ja": "SiC PVTプロセスにおける機械学習を用いた特徴重要度と成長速度予測",
-    "paper_url": "https://doi.org/10.5281/zenodo.19103128",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "マルチマテリアル3Dプリンティングによる動的機械特性設計",
-    "description": "3Dプリンティング技術により、空間的に異なる粘弾性特性をプログラマブルに創出する手法は、ソフト材料設計の新たなパラダイムを示す。従来の均質または単純な勾配構造から、複雑な動的特性分布を持つバイオミメティック材料へのシフトは、医療デバイスや軟ロボティクス分野に革新をもたらす可能性がある。",
-    "significance": "high",
-    "field": "工学",
-    "paper_title": "3D Printing of Soft Composites with Tunable Visco-Hyperelastic Properties",
-    "paper_title_ja": "調整可能な粘弾性特性を有するソフトコンポジットの3Dプリンティング",
-    "paper_url": "https://doi.org/10.7273/000007857",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "ワイドバンドギャップ半導体による電力変換の次世代実現",
-    "description": "GaN双方向スイッチの統合的な設計・評価・応用は、再生可能エネルギーと電動化輸送という急速に成長する分野における電力変換技術の根本的な転換を示す。シリコンベースから広禁止帯半導体へのシフトにより、エネルギー効率とパワー密度の大幅な向上が実現され、電力エレクトロニクス産業全体のパラダイム転換を推進する。",
-    "significance": "high",
-    "field": "工学",
-    "paper_title": "Enabling Next-Generation Power Conversion: Design, Dynamic Characterization, and Application of Gallium Nitride Bidirectional Switches",
-    "paper_title_ja": "次世代電力変換の実現：窒化ガリウム双方向スイッチの設計、動特性評価、および応用",
-    "paper_url": "https://doi.org/10.17638/03195421",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "磁気操舵ソフトロボットによる血管内治療の革新",
-    "description": "従来の機械的ガイドワイヤーから磁気操舵される柔軟な連続ロボットへのシフトは、内視鏡的治療における操作性と安全性を根本的に向上させる可能性を示す。医療デバイス設計における新たな物理原理の応用であり、複雑な血管系統への最小侵襲アプローチの時代を開く可能性がある。",
-    "significance": "high",
-    "field": "工学",
-    "paper_title": "Advancements in magnetic steering of soft magnetic continuum robots for medical applications",
-    "paper_title_ja": "医療応用向けソフト磁性連続ロボットの磁気操舵の進展",
-    "paper_url": "https://doi.org/10.5526/err-00042648",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "超保存配列と時空進化ダイナミクスの統合分析による昆虫進化学の新展開",
-    "description": "コオロギを模型系として、超保存配列による高精度系統樹とマクロエコロジカル分析を統合することで、種多様性形成メカニズムの時空的理解に新しいフレームワークを提供している。従来の系統地理学的研究を進化ダイナミクスの観点から革新的に拡張している。",
-    "significance": "high",
-    "field": "自然科学",
-    "paper_title": "The Spatiotemporal evolutionary dynamics of crickets and their influencing factors (Orthoptera; Ensifera)",
-    "paper_title_ja": "コオロギの時空進化ダイナミクスと影響要因（直翅目；キリギリス亜目）",
-    "paper_url": "https://doi.org/10.5281/zenodo.17556680",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "過少代表人口集団のゲノム解析による人口遺伝学の地域的拡張",
-    "description": "従来のゲノム研究で周辺化されてきたモン族の大規模ゲノム解析(440サンプル)により、南アジア人口遺伝学に従来なかった地域的・民族的多様性の視点を導入している。アジア人口の進化史に対する根本的な理解の再構築を可能にしている。",
-    "significance": "high",
-    "field": "自然科学",
-    "paper_title": "Differentiated genomic footprints and connections inferred from 440 Hmong-Mien genomes suggest their isolation and long-distance migration",
-    "paper_title_ja": "440個のモン族ゲノムから推定された分化したゲノムフットプリントと関連性：隔離と遠距離移動の示唆",
-    "paper_url": "https://doi.org/10.5281/zenodo.10453217",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "クロマチン構造情報の液体生検診断への応用による癌診断学の革新",
-    "description": "細胞遊離DNA中のヌクレオソーム占有率パターンをクロマチン構造の代理指標として診断に用いることで、従来の遺伝子配列解析を越えた新しい生物物理学的癌診断パラダイムを開拓している。",
-    "significance": "high",
-    "field": "自然科学",
-    "paper_title": "Analysis of cell-free DNA for cancer diagnostics using liquid biopsies",
-    "paper_title_ja": "液体生検を用いた癌診断のための細胞遊離DNAの分析",
-    "paper_url": "https://doi.org/10.5526/err-00042900",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "皮膚常在菌ウイルス学の新興フロンティア開拓",
-    "description": "従来ほとんど研究されていなかったコアグラーゼ陰性ブドウ球菌のバクテリオファージ生態系を包括的に調査することで、皮膚マイクロバイオーム研究に感染症学的視点を導入し、微生物群集制御メカニズムの新しい理解を提供している。",
-    "significance": "high",
-    "field": "自然科学",
-    "paper_title": "Viruses of Coagulase-Negative Staphylococcus: understanding viral diversity, defence systems, and host range dynamics in the skin microbiome",
-    "paper_title_ja": "コアグラーゼ陰性ブドウ球菌のウイルス：皮膚マイクロバイオームにおけるウイルス多様性、防御システム、宿主範囲ダイナミクスの理解",
-    "paper_url": "https://doi.org/10.17638/03194300",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "パン疾患全血トランスクリプトミクスアトラスによる系統医学の統合的枠組みの構築",
-    "description": "複数疾患全体での全身的分子シグネチャーを大規模解析することで、従来の疾患特異的研究を越えた系統レベルでの疾患共通メカニズムと相違を明らかにする新しい診断・治療学的枠組みを提供している。",
-    "significance": "high",
-    "field": "自然科学",
-    "paper_title": "A Human Pan-Disease Whole Blood Transcriptomics Atlas Reveals Systemic Signatures Across Diseases",
-    "paper_title_ja": "全血トランスクリプトミクスの人間パン疾患アトラス：疾患全体での全身的シグネチャーの解明",
-    "paper_url": "https://doi.org/10.5281/zenodo.17288329",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "秘教主義とロシア前衛美術研究の理論的革新",
-    "description": "秘教主義とロシア前衛芸術の関係を菌学的・錬金術的観点から読み直す新たな解釈枠組みを提示している。従来の政治史的読解を超え、神秘思想が美的形式に与えた影響を美学的に再考する新しい文脈を開拓している。",
-    "significance": "high",
-    "field": "芸術",
-    "paper_title": "The Chaosmos of the Mycological Russian Avant-Garde: Key Nodes of Its Aesthetics The Kandinsky Case: The Visuality of Alchemy and the Search for the Invisible",
-    "paper_title_ja": "菌学的ロシア前衛芸術のカオスモス：美学の主要な結節点、カンディンスキーの事例―錬金術の可視性と不可視なものの探求",
-    "paper_url": "https://openalex.org/W7127545304",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "政治的暴力の可視化と記憶化における新たな表現実践",
-    "description": "強制失踪という不可視的な政治的暴力を写真という視覚表現を通じて可視化する新たなアプローチを提示している。人権侵害の記憶と表現に関する新たな文脈を開拓し、暴力と表象の関係に対する新しい理論的視点を提供している。",
-    "significance": "high",
-    "field": "芸術",
-    "paper_title": "Photographier l'absence. La violence invisible de la disparition forcée en Colombie depuis 1990",
-    "paper_title_ja": "不在を写真に撮る。1990年以降のコロンビアにおける強制失踪の不可視的暴力",
-    "paper_url": "https://openalex.org/W7130495731",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "美術館機関とイギリス帝国主義経済の歴史的共犯関係の解明",
-    "description": "美術館という高級文化機関とイギリスの奴隷制度経済の歴史的連続性を明らかにする新たな批評視点を提示している。美術史に植民地主義批評と経済的分析を導入し、美術制度の政治的・経済的根拠を問い直す新しい研究文脈を開く。",
-    "significance": "high",
-    "field": "芸術",
-    "paper_title": "Long shadows in the gallery: George Watson Taylor as collector, connoisseur and slave-owner",
-    "paper_title_ja": "ギャラリーの長い影：ジョージ・ワトソン・テイラーを収集家、目利き、奴隷所有者として",
-    "paper_url": "https://openalex.org/W7164452212",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "CROSS_FIELD",
-    "title": "デジタルメディアと身体・心理的影響の統合研究",
-    "description": "ソーシャルメディア（Instagram）の利用が身体イメージ、化粧整形願望、そして治療コンプライアンスに与える影響を、社会科学と医療・心理学の視点から統合的に検討する新しい文脈。インフルエンサーのメディア戦略が公衆衛生政策まで影響する構造が浮かび上がる。",
-    "significance": "high",
-    "related_fields": [
-      "社会科学",
-      "芸術"
-    ],
-    "field": "横断",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "CROSS_FIELD",
-    "title": "組織変革と権力構造の分析：中国の文脈化",
-    "description": "医療セクターの組織革新、デジタル変革、およびトップマネジメントの権力・報酬体系が、中国の社会経済的背景の中でどのように相互作用するかを分析する統合的アプローチ。地域的特殊性と普遍的組織論の接点。",
-    "significance": "high",
-    "related_fields": [
-      "社会科学"
-    ],
-    "field": "横断",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "CROSS_FIELD",
-    "title": "マルチオミクス分析による疾患普遍性と個別性の検証",
-    "description": "細胞遊離DNAの液体生検、血液全体トランスクリプトーム、がん遺伝子ネットワークなど、自然科学の複数の高度な分子生物学的手法を統合し、疾患横断的なシステミック署名を同定する新興パラダイム。",
-    "significance": "high",
-    "related_fields": [
-      "自然科学"
-    ],
-    "field": "横断",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "CROSS_FIELD",
-    "title": "ソフトロボティクスと医療応用の融合",
-    "description": "磁気制御によるソフトマグネティック連続ロボットの医療応用と、3Dプリント技術による柔軟複合材料の設計が交差する領域。工学的革新が直接医療実装に向かう新しい軌跡。",
-    "significance": "medium",
-    "related_fields": [
-      "工学"
-    ],
-    "field": "横断",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "CROSS_FIELD",
-    "title": "記憶・遺産・責任の社会空間的表現",
-    "description": "冷戦後のブリテンにおける記憶の纏絡性、中国都市のポスト社会主義時間性、サウジアラビア映画の自己検閲、そしてコロンビアの強制失踪の写真的記録化が、異なる地政学的文脈における集合的記憶と視覚的証言の問題を照射する。",
-    "significance": "high",
-    "related_fields": [
-      "芸術",
-      "社会科学"
-    ],
-    "field": "横断",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "CROSS_FIELD",
-    "title": "生物規模の進化動態：微視から宏視への統合",
-    "description": "個別種（Drosophila、Xanthomonas、コオロギ、Hmong-Mien集団）の詳細な遺伝的・進化的フットプリント分析から、系統地理学的・病原体生態学的パターンまで、複数の生物組織レベルで時空間的進化ダイナミクスを統一的に理解する新フレームワーク。",
-    "significance": "medium",
-    "related_fields": [
-      "自然科学"
-    ],
-    "field": "横断",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "CROSS_FIELD",
-    "title": "創造的実践と社会正義の交点：獄中執筆と精神療法",
-    "description": "刑務所における創造的執筆による生成的正義の実践と、若年層のジェンダー関連苦痛に対するグループ精神療法のトランスフォーメーション的空間が、周縁化された身体の治癒と社会的包摂の新しい方法論を提示する。",
-    "significance": "high",
-    "related_fields": [
-      "芸術",
-      "社会科学"
-    ],
-    "field": "横断",
-    "date": "2026-07-02"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "超保存的エレメント系統学による昆虫多様化プロセス解析",
-    "description": "従来のマーカーでは解決困難な昆虫の多様化メカニズムを、超保存的エレメントという高精度系統情報を用いて分析する新しいアプローチ。昆虫進化学に新たな時空間的理解をもたらす可能性がある。",
-    "significance": "high",
-    "field": "自然科学",
-    "paper_title": "The Spatiotemporal evolutionary dynamics of crickets and their influencing factors (Orthoptera; Ensifera)",
-    "paper_title_ja": "コオロギおよび関連昆虫（Orthoptera; Ensifera）の時空間進化動態とその影響要因",
-    "paper_url": "https://doi.org/10.5281/zenodo.17556680",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "過少評価民族の大規模ゲノム解析によるアジア人口移動史の再解釈",
-    "description": "従来ゲノム研究で不十分だったモン・ミエン民族の大規模データ整備により、南中国の複雑な人口移動史と遺伝的多様性の全体像が初めて明らかになる。アジア集団遺伝学の新しい地域的文脈を開拓している。",
-    "significance": "high",
-    "field": "自然科学",
-    "paper_title": "Differentiated genomic footprints and connections inferred from 440 Hmong-Mien genomes suggest their isolation and long-distance migration",
-    "paper_title_ja": "440個のモン・ミエン集団ゲノムから推定された分化したゲノムフットプリントと連結：彼らの隔離と長距離移動の証拠",
-    "paper_url": "https://doi.org/10.5281/zenodo.10453217",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "社会的接触ネットワークとマイクロバイオーム構成の直接的相互関係解明",
-    "description": "狩猟採集民の社会行動パターンと口腔マイクロバイオーム構成の相互関係を初めて系統的に解析し、微生物生態学と人間行動進化学の統合的視点をもたらす新しい研究領域を開拓している。",
-    "significance": "high",
-    "field": "自然科学",
-    "paper_title": "Agta hunter-gatherer oral microbiomes are shaped by contact network structure",
-    "paper_title_ja": "アグタ狩猟採集民の口腔マイクロバイオームは接触ネットワーク構造によって形成される",
-    "paper_url": "https://doi.org/10.5281/zenodo.6338840",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "公共セクターイノベーションへの参加的アプローチの類型化",
-    "description": "従来の公共サービス革新研究は供給者主導モデルを前提としていたが、本論文はユーザー参加の多様な形態を体系的に分類し、新たな分析枠組みを提示している。特に国家的規模での「ユーザー権利」イニシアティブを通じた実証分析により、パブリック・ガバナンスの革新理論に新たな次元をもたらしている。",
-    "significance": "high",
-    "field": "社会科学",
-    "paper_title": "A collaborative and participatory approach to public service innovation: Health sector dynamics and outlook",
-    "paper_title_ja": "公共サービス革新への協働的・参加的アプローチ：保健セクターのダイナミクスと展望",
-    "paper_url": "https://openalex.org/W7162828992",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "性別関連苦悩を経験する青少年へのグループ精神療法の臨床応用",
-    "description": "急速に増加する性別関連苦悩への臨床対応として、グループ精神療法という既存の心理療法技法を新たな対象集団に適用することで、青年期の性別発達支援における新たな治療モダリティを開拓している。倫理的論争が続く中での実証的治療効果の検証は、臨床実践の新境地を示唆している。",
-    "significance": "high",
-    "field": "社会科学",
-    "paper_title": "Transformational space: group psychotherapy with young people experiencing gender-related distress",
-    "paper_title_ja": "変革の空間：性別関連苦悩を経験する若者のためのグループ精神療法",
-    "paper_url": "https://doi.org/10.5526/err-00042868",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "中国農村都市移住者の子どもの識字格差における家庭環境変数の社会的文脈化",
-    "description": "従来の識字教育研究は安定的な家庭環境を前提としていたが、本論文は急速な社会移動という動的文脈の中で、家庭識字環境と親の期待が複雑に相互作用する過程を分析する。新興国の急速な社会変動に対応する教育格差研究の新たなパラダイムを示唆している。",
-    "significance": "high",
-    "field": "社会科学",
-    "paper_title": "Bridging the Gap in Reading Skills: The Role of Home Literacy Environment and Parental Expectations in Chinese Rural-to- Urban Migrant Children",
-    "paper_title_ja": "読み書き能力の格差橋梁：中国農村から都市への移住者の子どもにおける家庭識字環境と親の期待の役割",
-    "paper_url": "https://doi.org/10.17638/03194761",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "人間中心の多次元翻訳評価アプローチの提案",
-    "description": "従来のNLPの翻訳評価は自動メトリクスに支配されてきたが、本研究は感情、情動、議論保持を統合的に評価する人間ベースの枠組みを提示している。これは機械翻訳の評価パラダイムに新たな視点をもたらし、人間中心設計とNLPの交差領域における新たな研究方向を開拓する可能性がある。",
-    "significance": "high",
-    "field": "工学",
-    "paper_title": "Human-Based Machine Translation Evaluation: A Multi-Dimensional Approach to Sentiment, Emotion, and Argumentation Preservation in Chinese-English Translation",
-    "paper_title_ja": "人間ベースの機械翻訳評価: 中国語-英語翻訳における感情、情動、議論保持の多次元的アプローチ",
-    "paper_url": "https://doi.org/10.17638/03195263",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "生成AI、認知科学、美学の統合的理論枠組み",
-    "description": "生成AIが引き起こす認知的失敗（\"generative crash\"）を芸術的鑑賞と逆強化学習で説明する革新的アプローチである。AI価値学習の理論的課題を認知的アフォーダンスと美学を通じて解釈することで、AI、認知神経科学、哲学美学の従来は断絶していた分野を統合する新たなパラダイムの可能性を示唆している。",
-    "significance": "high",
-    "field": "工学",
-    "paper_title": "Art as an Algorithmic Virus: Unifying the Generative Crash and AI Value Convergence via Cognitive Affordances",
-    "paper_title_ja": "芸術としてのアルゴリズミックウイルス: 生成的クラッシュとAI価値収束を認知的アフォーダンスで統合",
-    "paper_url": "https://doi.org/10.5281/zenodo.19407789",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "生成AI、認知科学、美学の統合的理論枠組み",
-    "description": "生成AIが引き起こす認知的失敗（\"generative crash\"）を芸術的鑑賞と逆強化学習で説明する革新的アプローチである。AI価値学習の理論的課題を認知的アフォーダンスと美学を通じて解釈することで、AI、認知神経科学、哲学美学の従来は断絶していた分野を統合する新たなパラダイムの可能性を示唆している。",
-    "significance": "high",
-    "field": "工学",
-    "paper_title": "Art as an Algorithmic Virus: Unifying the Generative Crash and AI Value Convergence via Cognitive Affordances",
-    "paper_title_ja": "芸術としてのアルゴリズミックウイルス: 生成的クラッシュとAI価値収束を認知的アフォーダンスで統合",
-    "paper_url": "https://doi.org/10.5281/zenodo.19542109",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "幽霊的物質性論の導入：超学際的パラダイムの構築",
-    "description": "物質性研究、植民地研究、環境人文学、芸術実践を統合した「幽霊的物質性」という新概念を提起し、ポスト・ヒューマニスティック人文学に新たな理論的パラダイムをもたらしている。環境正義とメモリアル・アーカイブの観点から、植民地遺産の物質的痕跡を読み直す新たな方法論を開拓している。",
-    "significance": "high",
-    "field": "人文学",
-    "paper_title": "Spectral Materialism: Encounters with land-time-scapes",
-    "paper_title_ja": "幽霊的物質性：土地-時間-景観との出会い",
-    "paper_url": "https://doi.org/10.25602/gold.00040593",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "人新世的アーカイブ論の構築：喪失と保存の政治学",
-    "description": "気候変動・デジタル衰退・経済崩壊という人新世的危機状況において、アーカイブの豊富性という前提を覆し、「喪失のアーカイブ」という逆説的概念を導入している。記録保存の政治性と未来への責任を同時に問う新たな文化理論的パラダイムを示唆しており、人文学のクライシス対応的な役割再定義につながる可能性がある。",
-    "significance": "high",
-    "field": "人文学",
-    "paper_title": "The Archive at the End of the World: Speculative Preservation and the Politics of Loss",
-    "paper_title_ja": "世界の終焉におけるアーカイブ：推測的保存と喪失の政治学",
-    "paper_url": "https://openalex.org/W7127555709",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "映画検閲研究における新たな分析枠組みの開拓",
-    "description": "従来の二項対立的な検閲分析を超え、自己検閲というミクロレベルの内在的プロセスに焦点を当てる。これにより映画製作者の主体性と制度的圧力の複雑な相互作用を新たに可視化し、検閲研究の基本的前提を問い直している。",
-    "significance": "high",
-    "field": "芸術",
-    "paper_title": "Self-censorship in Saudi cinema: aesthetics and representations",
-    "paper_title_ja": "サウジアラビア映画における自己検閲：美学と表現",
-    "paper_url": "https://doi.org/10.5526/err-00042103",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "身体センシング技術とパフォーミングアーツの融合領域",
-    "description": "バイオメトリック・データをアート的表現にマッピングする実践は、従来は分離していた技術領域とクリエイティブプロセスを統合する。このことにより、身体的経験を新たに拡張・変容させるパフォーマンス設計の新しいパラダイムが生成される可能性を示唆している。",
-    "significance": "high",
-    "field": "芸術",
-    "paper_title": "Embodied Interaction and Audio-Visuals in Performing Arts",
-    "paper_title_ja": "パフォーミングアーツにおける具象的相互作用とオーディオビジュアル",
-    "paper_url": "https://openalex.org/W7113132609",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "アヴァンギャルド美術史における精神的・形而上学的次元の再評価",
-    "description": "オカルティズムとアヴァンギャルドの関係を単なる周辺的影響から歴史的メタナラティブの中心へ移動させることで、近代美術の精神史的基盤を新たに問い直す。これは物質主義的現代美術史批評に対する根本的な再考を迫るものである。",
-    "significance": "high",
-    "field": "芸術",
-    "paper_title": "The Chaosmos of the Mycological Russian Avant-Garde: Key Nodes of Its Aesthetics The Kandinsky Case: The Visuality of Alchemy and the Search for the Invisible",
-    "paper_title_ja": "菌学的ロシア・アヴァンギャルドのカオスモス：その美学の主要ノード『カンディンスキー事例：錬金術の視覚性と不可視なものの探求』",
-    "paper_url": "https://openalex.org/W7127545304",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "デザイン・フィクションの領土計画方法論化",
-    "description": "従来は投機的表現ジャンルであったデザイン・フィクションを、都市計画とガバナンスの公式な方法論として再定義する。このことにより、都市の未来構想における虚構的実践の正当な政治的・認識論的地位を確立し、計画プロセスそのものの再概念化を促す可能性を開く。",
-    "significance": "high",
-    "field": "芸術",
-    "paper_title": "L’enchantement de la planification territoriale par le design fiction : les cas de Grand Paris et Grand Londres",
-    "paper_title_ja": "デザイン・フィクションによる領土計画の魅惑：グランド・パリとグランド・ロンドンの事例",
-    "paper_url": "https://openalex.org/W7140018608",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "植民地建築の脱植民地化的批評実践",
-    "description": "建築類型学を従来の形態分析から政治経済的批評へと転位させ、植民地遺産を単なる歴史的対象ではなく現在の支配関係を反映するテキストとして読み直す。これは建築史研究における脱植民地化的転回の実践例を示している。",
-    "significance": "high",
-    "field": "芸術",
-    "paper_title": "Reading Lilong: a postcolonial approach to typology",
-    "paper_title_ja": "里弄を読む：類型学への脱植民地化的アプローチ",
-    "paper_url": "https://doi.org/10.21954/ou.ro.00108524",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "ナイトライフをデザイン・建築史の中心対象へ",
-    "description": "従来は都市文化の周辺に位置付けられていたナイトクラブ・クラブ・カルチャーを、20-21世紀の創造産業と美学実験の中核的位置に再配置する。これにより都市史、デザイン史、文化史における分析対象の根本的な再優先化を実現している。",
-    "significance": "high",
-    "field": "芸術",
-    "paper_title": "Beyond the Dancefloor: Club Culture, Design and Nightlife",
-    "paper_title_ja": "ダンスフロアを超えて：クラブ・カルチャー、デザイン、ナイトライフ",
-    "paper_url": "https://openalex.org/W7161455765",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
-    "title": "写真実践の人権トラウマ記録方法論への転換",
-    "description": "写真を単なる証拠記録ではなく、不可視化された暴力を可視化し証言する新たな美学的・政治的実践として定義する。強制失踪というトラウマ現象に対する芸術的応答を確立し、人権記録における美学の本質的役割を再考させる。",
-    "significance": "high",
-    "field": "芸術",
-    "paper_title": "Photographier l'absence. La violence invisible de la disparition forcée en Colombie depuis 1990",
-    "paper_title_ja": "不在を撮影する：1990年以降のコロンビアにおける強制失踪の不可視な暴力",
-    "paper_url": "https://openalex.org/W7130495731",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "CROSS_FIELD",
-    "title": "生物学的マイクロバイオームと社会構造の相互作用",
-    "description": "Agta狩猟採集民の口腔マイクロバイオームが接触ネットワーク構造によって形成されるという知見は、微生物学と社会ネットワーク分析を統合した新しい視点を提供します。生物学的プロセスが社会的ネットワークトポロジーによって直接規定される仕組みは、従来の分野区分を超えた人間社会と生物系の関係性を示唆しています。",
-    "significance": "high",
-    "related_fields": [
-      "自然科学",
-      "社会科学"
-    ],
-    "field": "横断",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "CROSS_FIELD",
-    "title": "ゲノム情報と民族移動・言語系統の人文学的文脈化",
-    "description": "Hmong-Mien民族の440ゲノムから推定される孤立と長距離移動の痕跡は、遺伝学的データを民族誌・言語史・人口移動史と統合して解釈する必要があります。この統合的アプローチは自然科学と人文学の境界領域における新しい研究パラダイムを示唆しています。",
-    "significance": "high",
-    "related_fields": [
-      "自然科学",
-      "人文学"
-    ],
-    "field": "横断",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "CROSS_FIELD",
-    "title": "身体イメージ、デジタルメディア、そして審美的実践の収束",
-    "description": "Instagramの問題的使用と美容整形希望の関連性に関する社会科学研究は、デジタルプラットフォームの視覚文化と身体改造の美学を扱う芸術研究と連結する可能性があります。この接合点は、現代の身体性と視覚文化の統合的理解を要求しています。",
-    "significance": "medium",
-    "related_fields": [
-      "社会科学",
-      "芸術"
-    ],
-    "field": "横断",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "CROSS_FIELD",
-    "title": "AIアルゴリズムと人文学的解釈の融合",
-    "description": "「Art as an Algorithmic Virus」は、生成AIの認知的アフォーダンスを美学・芸術理論の言語で分析する試みです。これは計算機科学と人文学/芸術の従来にない統合を示すもので、AI時代の創造性と価値観の再定義に関わっています。",
-    "significance": "high",
-    "related_fields": [
-      "工学",
-      "芸術",
-      "人文学"
-    ],
-    "field": "横断",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "CROSS_FIELD",
-    "title": "病理学的言説と精神分析的解釈の重層化",
-    "description": "父子関係と食との関係を分析する心理療法的研究は、臨床心理学と人文学的解釈（ユング心理学、神話解釈）を融合させています。このアプローチは、象徴的身体プロセスの理解において学問分野の新しい統合方法を示唆しています。",
-    "significance": "medium",
-    "related_fields": [
-      "社会科学",
-      "人文学"
-    ],
-    "field": "横断",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "CROSS_FIELD",
-    "title": "翻訳の多次元的評価と感情・議論の保存",
-    "description": "中英翻訳における感情・議論の保存を多次元的に評価する工学的手法は、言語学・修辞学・認知科学の知見を機械翻訳システムに統合しようとするものです。言語技術と人文学的言語分析の新しい協働モデルを示しています。",
-    "significance": "medium",
-    "related_fields": [
-      "工学",
-      "人文学"
-    ],
-    "field": "横断",
-    "date": "2026-07-03"
-  },
-  {
-    "alert_type": "NEW_CONTEXT",
     "title": "ソーシャルメディアインフルエンサーと医療コンプライアンスの新たな結合領域",
     "description": "治療アドヒアランスという医療的課題とソーシャルメディアインフルエンサーの影響力を組み合わせた研究領域は、デジタル化社会における公衆衛生の新たなパラダイムを示唆している。医療政策が従来の医療専門家中心の枠組みから社会的インフルエンサー活用への転換を議論する新しい文脈を開拓している。",
     "significance": "high",
@@ -6263,5 +5736,518 @@
     ],
     "field": "横断",
     "date": "2026-08-01"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "ジェンダー関連苦悩への集団精神療法の新たな臨床応用",
+    "description": "過去15年で急速に増加するジェンダー関連苦悩（GRD）を経験する若者は、従来の臨床心理学では十分に対応されていない新興現象である。この論文は集団精神療法という既存手法を新たな患者集団と倫理的課題に適用することで、臨床心理学の新たな実践領域を開拓している。",
+    "significance": "high",
+    "field": "社会科学",
+    "paper_title": "Transformational space: group psychotherapy with young people experiencing gender-related distress",
+    "paper_title_ja": "変容的空間：ジェンダー関連苦悩を経験する若者を対象とした集団精神療法",
+    "paper_url": "https://doi.org/10.5526/err-00042868",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "ソーシャルメディアインフルエンサーによる治療遵守促進の新展開",
+    "description": "治療コンプライアンスは医療政策の古い課題だが、ソーシャルメディアインフルエンサーという新興メディア現象を治療遵守促進メカニズムとして位置づけることは、デジタル化時代の新しい公衆衛生戦略を示唆している。従来の医療コミュニケーション枠組みでは考慮されていなかった領域である。",
+    "significance": "high",
+    "field": "社会科学",
+    "paper_title": "The Role of Social Media Influencers in Promoting Therapeutic Compliance: Implications for Public Health Policy",
+    "paper_title_ja": "治療コンプライアンス促進におけるソーシャルメディアインフルエンサーの役割：公衆衛生政策への含意",
+    "paper_url": "https://openalex.org/W7137590217",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "AI美学の新しい理論的文脈",
+    "description": "本論文は生成型AIが引き起こす計算失敗を認知科学と美学の枠組みで解釈し、逆強化学習と芸術的鑑賞を統合する理論を提案している。これはAI研究、認知科学、美学の従来の領域分割を超えた新しい学際的パラダイムを開拓し、生成AIの根本的な限界と特性に関する新しい理解を示唆している。",
+    "significance": "high",
+    "field": "工学",
+    "paper_title": "Art as an Algorithmic Virus: Unifying the Generative Crash and AI Value Convergence via Cognitive Affordances",
+    "paper_title_ja": "アルゴリズム的ウイルスとしてのアート:認知的アフォーダンスを通じた生成系クラッシュとAI価値収束の統一",
+    "paper_url": "https://doi.org/10.5281/zenodo.19407789",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "非西洋的視点からの人新世文学研究の開拓",
+    "description": "現代中国SFにおける人新世の表象を分析することで、西洋中心的な環境人文学から脱却し、アジア的視点による新たなエコクリティシズムの可能性を開く。中国文学と環境批評、そしてグローバルな人新世議論の交差点に新しい研究領域を創出している。",
+    "significance": "high",
+    "field": "人文学",
+    "paper_title": "The Representation of the Anthropocene in Contemporary Chinese Science Fiction",
+    "paper_title_ja": "現代中国SFにおける人新世の表象",
+    "paper_url": "https://doi.org/10.17638/03195264",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "児童生物考古学による過去の主体の可視化",
+    "description": "生物考古学と児童研究の統合により、従来考古学で過小評価されてきた子ども期の生活体験を物質的証拠から復元する。中世社会の完全な歴史像構築に向けた新たな方法論を開拓している。",
+    "significance": "high",
+    "field": "人文学",
+    "paper_title": "A Bioarchaeological Understanding of the Lifecycle Identity and Lived Experiences of Children During the Early Medieval Period in Southeast England",
+    "paper_title_ja": "初期中世イングランド南東部の子どもの生涯アイデンティティと生活体験の生物考古学的理解",
+    "paper_url": "https://doi.org/10.17030/uclan.thesis.00059168",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "帝国主義下の人種分類の不安定性を可視化する新しい歴史地理学",
+    "description": "ホワイトネス研究と南半球の移民研究を結合することで、帝国主義体制における人種分類のカテゴリーが固定的ではなく、常に交渉と闘争の対象であったことを証明する。従来の西洋中心的なホワイトネス研究を脱中心化する重要な歴史的視角を提示している。",
+    "significance": "high",
+    "field": "人文学",
+    "paper_title": "\"Swarthy not quite types”: whiteness, Greek migration and empire in southern Africa, 1860 - 1945",
+    "paper_title_ja": "「正確ではない褐色の者たち」：1860-1945年の南アフリカにおけるホワイトネス、ギリシャ系移民と帝国",
+    "paper_url": "https://doi.org/10.18743/pub.00057506",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "冷戦期ソビエト映画の文化的転移研究による新しい映画史解釈",
+    "description": "ソビエト映画史をプロパガンダ研究の枠から解放し、東西冷戦における複雑な文化的交換と相互作用の場として再構想する。これにより映画の社会的役割についての従来的理解を超える新たな分析視角を提供している。",
+    "significance": "high",
+    "field": "人文学",
+    "paper_title": "Le cinéma soviétique de la mort de Staline à la Perestroïka en dialogue avec le reste du monde : analyse des transferts culturels à l’oeuvre",
+    "paper_title_ja": "スターリン死後からペレストロイカまでのソビエト映画と世界との対話：文化的転移の分析",
+    "paper_url": "https://openalex.org/W7124819696",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "デカダン・クィア・児童文学の統合による新しい文学批評の創出",
+    "description": "19世紀末の女性デカダン作家による童話のクイア分析を初めて体系化することで、従来の文学史から周辺化されてきた実験的テキストを中心化し、ジェンダー・セクシュアリティ・児童文学研究の交差点に新しい研究領域を確立している。",
+    "significance": "high",
+    "field": "人文学",
+    "paper_title": "The Decadent Fairy Tale: Queering the Othered Body, 1880-1920",
+    "paper_title_ja": "デカダン童話：1880-1920年の他者化された身体のクイアリング",
+    "paper_url": "https://doi.org/10.25602/gold.00040432",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "アジア民族集団ゲノム研究の新しい文脈開拓",
+    "description": "これまでゲノム研究で過小評価されてきたモン族・ミャオ族の大規模ゲノム解析（440ゲノム）により、東アジアの進化史理解に新しい地域的視点が加わった。民族誌学的背景を持つゲノム系統地理学研究の範例となる可能性がある。",
+    "significance": "high",
+    "field": "自然科学",
+    "paper_title": "Differentiated genomic footprints and connections inferred from 440 Hmong-Mien genomes suggest their isolation and long-distance migration",
+    "paper_title_ja": "440個のモン族・ミャオ族ゲノムから推測された分化したゲノム足跡と関連性：孤立と長距離移動の提唱",
+    "paper_url": "https://doi.org/10.5281/zenodo.10453217",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "液体生検とクロマチン構造の学際的統合",
+    "description": "細胞遊離DNAのクロマチン構造解析を癌診断に組み込むことで、非侵襲的バイオマーカー開発の新しい分子基盤を提示している。従来の液体生検と高次クロマチン情報の融合は新しい診断パラダイムとなる可能性。",
+    "significance": "high",
+    "field": "自然科学",
+    "paper_title": "Analysis of cell-free DNA for cancer diagnostics using liquid biopsies",
+    "paper_title_ja": "液体生検を用いた癌診断のための細胞遊離DNA分析",
+    "paper_url": "https://doi.org/10.5526/err-00042900",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "社会的接触ネットワークと微生物群集形成の新たな関連性",
+    "description": "狩猟採集民の社会的接触構造がマイクロバイオーム組成を直接形成することを示し、微生物生態学に社会的ネットワーク分析を導入した学際的研究。従来の分離した微生物生態学研究から行動生態学的視点への転換を示唆。",
+    "significance": "high",
+    "field": "自然科学",
+    "paper_title": "Agta hunter-gatherer oral microbiomes are shaped by contact network structure",
+    "paper_title_ja": "Agta狩猟採集民の口腔マイクロバイオームは接触ネットワーク構造で形成される",
+    "paper_url": "https://doi.org/10.5281/zenodo.6338840",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "多層マルチオミクス技術の統合的腫瘍解析",
+    "description": "複数の最先端マルチオミクス技術（DOGMA-seq、TREKKER、Slide-seqV2、MAESTER）を単一の腫瘍に統合適用することで、空間的コンテキストを保持した包括的な腫瘍微小環境理解が実現された。複合オミクス統合戦略の新しい可能性を開拓。",
+    "significance": "high",
+    "field": "自然科学",
+    "paper_title": "Single-cell and spatial multiomic profiling of urothelial carcinoma",
+    "paper_title_ja": "尿路上皮癌の単一細胞および空間マルチオミクスプロファイリング",
+    "paper_url": "https://doi.org/10.5281/zenodo.21122266",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "クロマチンアクセシビリティと遺伝子発現の空間的統合解析",
+    "description": "ATAC-seqによるクロマチン構造情報と空間トランスクリプトミクスの統合により、組織内の調節機構を空間的文脈で理解する新しいアプローチが示される。単一細胞レベルの制御メカニズム理解に空間的次元を加えた新しいパラダイム。",
+    "significance": "high",
+    "field": "自然科学",
+    "paper_title": "Single-cell and spatial multiomic profiling of urothelial carcinomas [matrix files/atac fragments file]",
+    "paper_title_ja": "尿路上皮癌の単一細胞および空間マルチオミクスプロファイリング（マトリックスファイル/ATACフラグメント）",
+    "paper_url": "https://doi.org/10.5281/zenodo.17797150",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "美術史の脱中心化的パラダイム転換",
+    "description": "グローバル美術史を地理的拡張ではなく制度的・方法論的な根本的問い直しとして位置づけることで、ユーロアメリカ中心主義の美術史叙述を脱構築する新たな学問的文脈を開拓している。これは単なる非西洋美術の包含を超えた、美術史学の知的再編成を意図している。",
+    "significance": "high",
+    "field": "芸術",
+    "paper_title": "The Routledge Companion to Global Art Histories",
+    "paper_title_ja": "グローバル美術史へのラウトレッジ・コンパニオン",
+    "paper_url": "https://openalex.org/W7166973999",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "AI時代の創作倫理における脱ポストディジタル的抵抗戦略",
+    "description": "大規模言語モデルとの協働における創作的実践を、権力構造・支配的言説への批判的検証として正面から扱い、デジタル時代における創作的抵抗とエージェンシーの新たな可能性を提示している。従来のAI利用論を超えた倫理的・政治的次元を付与している。",
+    "significance": "high",
+    "field": "芸術",
+    "paper_title": "Writing against the machine: Postdigital resistance in LLM collaboration",
+    "paper_title_ja": "機械に抗して書く：LLM協働における脱ポストディジタル的抵抗",
+    "paper_url": "https://openalex.org/W7166964392",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "アヴァンギャルド美術史へのオカルティズム・アナキズム統合",
+    "description": "ロシア・アヴァンギャルド美術の分析にオカルティズムと無政府主義思想を中心的に組み込むことで、既存の現代美術史叙述の知的基盤を根本的に再考し、美術と精神的・政治的思考の関係性を新たに開拓している。",
+    "significance": "high",
+    "field": "芸術",
+    "paper_title": "The Chaosmos of the Mycological Russian Avant-Garde: Key Nodes of Its Aesthetics The Kandinsky Case: The Visuality of Alchemy and the Search for the Invisible",
+    "paper_title_ja": "菌学的ロシア・アヴァンギャルドのカオスモス：その美学の主要ノード　カンディンスキーの事例：錬金術の可視性と不可視なものの探求",
+    "paper_url": "https://openalex.org/W7127545304",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "CROSS_FIELD",
+    "title": "AIと人間の創造性・倫理の交差",
+    "description": "工学分野のAI・機械学習技術（LLM、生成モデル）と、芸術・人文学における創造的実践・抵抗が直接的に対面する領域が出現。AIによる形式検証補助から、LLMとの協働執筆、生成AIへの抵抗まで、従来は別々だった「技術的実装」と「創造的・倫理的問い」が同一の文脈で展開されている。",
+    "significance": "high",
+    "related_fields": [
+      "工学",
+      "芸術",
+      "人文学"
+    ],
+    "field": "横断",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "CROSS_FIELD",
+    "title": "身体イメージと医療・心理的介入の統合",
+    "description": "社会科学における身体イメージの問題（Instagram利用と美容整形欲望、性別関連の苦痛）が、心理療法や公衆衛生政策と直接結合。ソーシャルメディア影響下の身体認識が、臨床的・公衆衛生的な介入の対象として新たに浮上している。",
+    "significance": "high",
+    "related_fields": [
+      "社会科学",
+      "医療・保健"
+    ],
+    "field": "横断",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "CROSS_FIELD",
+    "title": "マイクロバイオームと社会的ネットワークの相互規定",
+    "description": "自然科学のマイクロバイオーム研究（Agta狩猟採集民の口腔マイクロバイオーム）が、社会的接触ネットワーク構造によって形成されることを示唆。生物学的過程が社会構造に依存する新しい認識枠組みが生成されている。",
+    "significance": "high",
+    "related_fields": [
+      "自然科学",
+      "社会科学",
+      "人文学"
+    ],
+    "field": "横断",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "CROSS_FIELD",
+    "title": "デザイン・フィクションによる都市計画の再想像",
+    "description": "芸術領域のデザインフィクションが、グランドパリ・グランドロンドンといった実際の都市計画プロジェクトに直接適用される。従来の工学的・行政的計画プロセスに、フィクション的・想像力的な方法論が組み込まれている。",
+    "significance": "high",
+    "related_fields": [
+      "芸術",
+      "工学",
+      "社会科学"
+    ],
+    "field": "横断",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "CROSS_FIELD",
+    "title": "機械学習による生物多様性の時空間動態解析",
+    "description": "工学のML技術（予測モデル、障害診断）が自然科学の進化生態学に適用され、コオロギなどの生物の時空間的進化動態を高精度で把握。従来の統計的生態学を超えた新しい解析パラダイムが出現。",
+    "significance": "medium",
+    "related_fields": [
+      "工学",
+      "自然科学"
+    ],
+    "field": "横断",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "CROSS_FIELD",
+    "title": "オーラルヒストリーと遺伝学的痕跡の統合的読解",
+    "description": "人文学の移民史・難民史（ユダヤ難民、ギリシャ移民）と、自然科学のゲノム解析（Hmong-Mien集団の移動経路推定）が相補的に作用。口頭の歴史記述と生物学的痕跡が相互検証される新しい歴史認識法が形成されている。",
+    "significance": "medium",
+    "related_fields": [
+      "人文学",
+      "自然科学"
+    ],
+    "field": "横断",
+    "date": "2026-08-02"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "中国SFとアンスロポセン研究の新しい文脈",
+    "description": "現代中国SFにおけるアンスロポセン表現という研究対象は、非西欧的な視点から人新世問題を考察する新しい文脈を開拓している。このアプローチは、環境人文学における中国の想像力と理論的貢献を可視化し、グローバル・ノースの議論の独占を相対化する可能性を持つ。",
+    "significance": "high",
+    "field": "人文学",
+    "paper_title": "The Representation of the Anthropocene in Contemporary Chinese Science Fiction",
+    "paper_title_ja": "現代中国SF文学におけるアンスロポセン表現",
+    "paper_url": "https://doi.org/10.17638/03195264",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "初期中世子ども研究への考古学的新地平",
+    "description": "バイオアーケオロジーを用いた子どもの生涯経験研究は、従来過小評価されてきた対象に焦点を当てることで、中世社会史研究に新たな方法論的視点を導入している。これにより、これまでの成人中心的歴史叙述の補正が可能になる。",
+    "significance": "high",
+    "field": "人文学",
+    "paper_title": "A Bioarchaeological Understanding of the Lifecycle Identity and Lived Experiences of Children During the Early Medieval Period in Southeast England",
+    "paper_title_ja": "バイオアーケオロジーによる理解：初期中世南イングランドの子どもの生涯アイデンティティと生活経験",
+    "paper_url": "https://doi.org/10.17030/uclan.thesis.00059168",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "南アフリカ移民史における白性研究の新展開",
+    "description": "ギリシャ系コミュニティの白性分類が歴史的に不確実で闘争的であったことを実証することで、白性研究を非西欧的文脈へ拡張している。これは帝国主義下の人種カテゴリー化が多元的で複雑であったことを明らかにし、従来の二元的人種論を超える分析枠組みを提示する。",
+    "significance": "high",
+    "field": "人文学",
+    "paper_title": "\"Swarthy not quite types”: whiteness, Greek migration and empire in southern Africa, 1860 - 1945",
+    "paper_title_ja": "「完全ではない褐色型」：南アフリカにおける白性、ギリシャ系移民とヨーロッパ帝国主義、1860-1945年",
+    "paper_url": "https://doi.org/10.18743/pub.00057506",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "スペクトル物質主義による超学際的パラダイムシフト",
+    "description": "物質性、植民地史、アート実践を統合するスペクトル物質主義は、文化研究における新しい理論的パラダイムの可能性を示唆している。塩分過多と植民地テラフォーミングという具体的な土地—時間—景観を通じた分析は、従来の文化理論の抽象性を超える具体的実践と理論の架橋を実現している。",
+    "significance": "high",
+    "field": "人文学",
+    "paper_title": "Spectral Materialism: Encounters with land-time-scapes",
+    "paper_title_ja": "スペクトル物質主義：土地—時間—景観との出会い",
+    "paper_url": "https://doi.org/10.25602/gold.00040593",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "AI倫理学とゴシック研究の交差領域開拓",
+    "description": "技術に対する文化的な恐怖表現をゴシック美学の系譜の中に位置づけることで、AI倫理学研究に新しい批評的次元を導入している。技術恐怖の表現様式を体系化することで、デジタル人文学における文化的アプローチの重要性を示唆している。",
+    "significance": "high",
+    "field": "人文学",
+    "paper_title": "AI and the Gothic",
+    "paper_title_ja": "AIとゴシック",
+    "paper_url": "https://openalex.org/W7134100420",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "性別関連苦痛への心理療法的応答の新パラダイム",
+    "description": "性別関連苦痛を経験する若者への心理療法的介入として、グループサイコセラピーの具体的有効性を提示している。倫理的有効性をめぐる社会的議論が続く中で、実証的臨床知見を提供し、若者心理保健の新たな実践領域を開拓している。",
+    "significance": "high",
+    "field": "社会科学",
+    "paper_title": "Transformational space: group psychotherapy with young people experiencing gender-related distress",
+    "paper_title_ja": "変革的空間：性別関連苦痛を経験している若者向けグループサイコセラピー",
+    "paper_url": "https://doi.org/10.5526/err-00042868",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "男性摂食障害と父親関係の臨床的相互作用の発見",
+    "description": "25年の臨床実践に基づき、男性の摂食障害と父子関係という従来未充分に探究されていた領域を、ユング的視点から深く分析している。男性心理および摂食障害研究に新たな親子力動的視点を導入し、これまで注視されてこなかった臨床的理解を提供する。",
+    "significance": "high",
+    "field": "社会科学",
+    "paper_title": "The devouring Kronos: the impact of father-son relationships on the son’s relationship with food and the body in the Jungian consulting room",
+    "paper_title_ja": "食べる者クロノス：父子関係が息子の食物と身体への関係性に及ぼす影響",
+    "paper_url": "https://doi.org/10.5526/err-00042825",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "精神分析的実践における存在論的苦悩の新しい概念化",
+    "description": "長期心理療法における「創造的カップルと分析的第三者」の概念を導入し、社会的成功を達成しながらも深い充足感の欠如を経験する患者の現象を説明する新しい枠組みを提供している。従来の幸福・成功観を超えた臨床的理解の次元を開拓している。",
+    "significance": "high",
+    "field": "社会科学",
+    "paper_title": "Movement and stasis in psychoanalytic psychotherapy: the creative couple and the analytic third",
+    "paper_title_ja": "精神分析的心理療法における運動と停止：創造的カップルと分析的第三者",
+    "paper_url": "https://doi.org/10.5526/err-00042667",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "ソーシャルメディアインフルエンサーを活用した治療順応戦略の提案",
+    "description": "治療アドヒアランス向上の新しい介入手段としてソーシャルメディアインフルエンサーの活用を提案し、デジタル時代の公衆衛生政策に新たな実践的方向性を示している。従来の医療専門家主導型から社会的影響力を活用したアプローチへのパラダイムシフトの可能性を示唆する。",
+    "significance": "high",
+    "field": "社会科学",
+    "paper_title": "The Role of Social Media Influencers in Promoting Therapeutic Compliance: Implications for Public Health Policy",
+    "paper_title_ja": "治療コンプライアンス促進におけるソーシャルメディアインフルエンサーの役割：公衆衛生政策への含意",
+    "paper_url": "https://openalex.org/W7137590217",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "未研究民族集団の大規模ゲノム解析による新たな人口史",
+    "description": "モン・クメール語族の440個のゲノム解析は、アジア人口遺伝学における過小評価されてきた民族の進化史を初めて大規模に明らかにするもの。東南アジアにおける遠距離移動と隔離パターンの新たな理解をもたらし、従来のアジア人口史モデルの修正につながる可能性がある。",
+    "significance": "high",
+    "field": "自然科学",
+    "paper_title": "Differentiated genomic footprints and connections inferred from 440 Hmong-Mien genomes suggest their isolation and long-distance migration",
+    "paper_title_ja": "440個のモン・クメール語族ゲノムから推定される差別化されたゲノム足跡と関連性：隔離と遠距離移動の示唆",
+    "paper_url": "https://doi.org/10.5281/zenodo.10453217",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "社会ネットワーク構造とマイクロバイオーム形成の統合的解析",
+    "description": "狩猟採集民の社会的接触パターンがマイクロバイオーム組成を形作ることを実証し、人類学・進化生物学・微生物学の新たな統合領域を開拓している。人間の社会構造と微生物進化の因果関係を示す初めての研究。",
+    "significance": "high",
+    "field": "自然科学",
+    "paper_title": "Agta hunter-gatherer oral microbiomes are shaped by contact network structure",
+    "paper_title_ja": "アグタ狩猟採集民の口腔マイクロバイオームは接触ネットワーク構造により形作られる",
+    "paper_url": "https://doi.org/10.5281/zenodo.6338840",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "全血トランスクリプトミクスによる疾患横断的な全身性シグネチャーの発見",
+    "description": "複数の疾患を単一の生物学的マーカー系で比較解析し、疾患固有性と共通性の分子的基盤を明らかにする新たなパラダイム。個別疾患研究から統合的な全身疾患理解への移行を示し、精密医療の新たな基盤となる可能性がある。",
+    "significance": "high",
+    "field": "自然科学",
+    "paper_title": "A Human Pan-Disease Whole Blood Transcriptomics Atlas Reveals Systemic Signatures Across Diseases",
+    "paper_title_ja": "疾患横断的な全血トランスクリプトミクスアトラス：疾患全体にわたる全身性シグネチャーの解明",
+    "paper_url": "https://doi.org/10.5281/zenodo.17288329",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "パッシブ熱管理の新パラダイム：マイクロカプセル化PCM内部計測統合",
+    "description": "マイクロカプセル化潜熱蓄熱材とバッテリー内部計測の組み合わせは、受動的熱管理システムの新しい実現形態を示しています。従来のアクティブ冷却依存からの脱却と、リアルタイム内部温度監視の統合により、自動車熱管理分野に新しい研究方向を開拓しています。",
+    "significance": "high",
+    "field": "工学",
+    "paper_title": "Development of Passive Battery Thermal Management Systems Using Micro-encapsulated Phase Change Materials and the Internal Probing of Li-ion Cells",
+    "paper_title_ja": "マイクロカプセル化潜熱蓄熱材を用いたパッシブバッテリー熱管理システムの開発とLi-ionセル内部計測",
+    "paper_url": "https://doi.org/10.17638/03194027",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "段階的機械特性制御による付加製造のバイオミメティック展開",
+    "description": "マルチマテリアル3Dプリンティングで空間的に可変する粘弾性超弾性特性を制御する手法は、ソフトロボティクスやバイオミメティック構造設計に革新的なアプローチをもたらします。従来の均質材料設計の制約を超え、生物的複雑性を製造技術で実現する新たな文脈を開拓しています。",
+    "significance": "high",
+    "field": "工学",
+    "paper_title": "3D Printing of Soft Composites with Tunable Visco-Hyperelastic Properties",
+    "paper_title_ja": "調整可能な粘弾性超弾性特性を持つソフトコンポジットの3Dプリンティング",
+    "paper_url": "https://doi.org/10.7273/000007857",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "GaN双方向スイッチによるエネルギー転換システムの次世代化",
+    "description": "ワイドバンドギャップ半導体GaNの双方向スイッチ化は、再生可能エネルギーと電動化輸送の統合を技術的に実現する重要な転換点となります。従来の単方向パワーエレクトロニクスから双方向エネルギーフローへの移行を可能にし、次世代グリッド統合システムに新たな実装パラダイムをもたらします。",
+    "significance": "high",
+    "field": "工学",
+    "paper_title": "Enabling Next-Generation Power Conversion: Design, Dynamic Characterization, and Application of Gallium Nitride Bidirectional Switches",
+    "paper_title_ja": "次世代電力変換を実現するGaN双方向スイッチの設計、動的特性評価、応用",
+    "paper_url": "https://doi.org/10.17638/03195421",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "生成AI認知失敗現象の理論的フレームワーク化とAI-人間認知統一",
+    "description": "生成AIが引き起こす計算的失敗を逆強化学習と芸術的認知の統一フレームワークで説明しようとするアプローチは、人工知能と認知科学の融合に新しい理論的地平を開きます。従来のAI説明可能性研究の枠組みを超えて、意図性欠如とその補償メカニズムを本質的に問い直す新たな研究コンテキストを創出しています。",
+    "significance": "high",
+    "field": "工学",
+    "paper_title": "Art as an Algorithmic Virus: Unifying the Generative Crash and AI Value Convergence via Cognitive Affordances",
+    "paper_title_ja": "アルゴリズミックウイルスとしてのアート：生成的クラッシュとAI価値収束を認知的アフォーダンスで統一",
+    "paper_url": "https://doi.org/10.5281/zenodo.19407789",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "NEW_CONTEXT",
+    "title": "オカルティズムの前衛美術研究への理論的統合",
+    "description": "従来の美術史ではオカルティズムは周辺的主題とされてきたが、本研究はこれを中心的なナラティブへと昇格させている。菌学的メタファーを用いてロシア前衛とオカルティズムの深い親和性を理論化し、美術史解釈に新たなパラダイムをもたらしている。カンディンスキーのアルケミカルなビジョンと社会変革への志向を統合的に理解する新しい視角を開拓している。",
+    "significance": "high",
+    "field": "芸術",
+    "paper_title": "The Chaosmos of the Mycological Russian Avant-Garde: Key Nodes of Its Aesthetics The Kandinsky Case: The Visuality of Alchemy and the Search for the Invisible",
+    "paper_title_ja": "菌学的ロシア前衛芸術のカオスモス：その美学の重要なノード カンディンスキーの事例：錬金術の視性と不可視なるものの探求",
+    "paper_url": "https://openalex.org/W7127545304",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "CROSS_FIELD",
+    "title": "AIと人文学的想像力の融合：デジタル技術と創造的表現の新しい接点",
+    "description": "工学分野のAI・アルゴリズム研究と人文学の文学・芸術表現が交差している。特に「AI and the Gothic」と「Art as an Algorithmic Virus」は、AIを技術的なツールではなく文化的・美学的主体として捉え直す新しい視点を提示している。また「Writing as Spiritual Practice」と機械学習による生成技術の融合も潜在的に新しい創造的領域を開く。",
+    "significance": "high",
+    "related_fields": [
+      "人文学",
+      "工学",
+      "芸術"
+    ],
+    "field": "横断",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "CROSS_FIELD",
+    "title": "マイクロスケール生物学と文化人類学の融合：社会的相互作用が微生物生態系を形成する機構の解明",
+    "description": "「Agta hunter-gatherer oral microbiomes are shaped by contact network structure」は、社会的接触ネットワークが口腔マイクロバイオームを形成する仕組みを示唆している。これは社会科学の「Reciprocal Dynamics of Affect」や人文学の移動・相互作用の研究と共鳴し、社会構造が生物学的現象を直接的に規定する新しい分析枠組みを提示している。",
+    "significance": "high",
+    "related_fields": [
+      "自然科学",
+      "社会科学",
+      "人文学"
+    ],
+    "field": "横断",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "CROSS_FIELD",
+    "title": "帝国主義と民族移動の遺伝的・文化的足跡：多層的な歴史の再構築",
+    "description": "「Differentiated genomic footprints and connections inferred from 440 Hmong-Mien genomes」と「'Swarthy not quite types': whiteness, Greek migration and empire in southern Africa」は、遺伝学的証拠と歴史叙述が同一の移動・帝国支配現象を異なるスケールから捉える例である。ゲノム研究と文化歴史学の統合により、植民地化と民族形成の複雑な因果関係が新たに明らかになる可能性がある。",
+    "significance": "high",
+    "related_fields": [
+      "自然科学",
+      "人文学"
+    ],
+    "field": "横断",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "CROSS_FIELD",
+    "title": "身体・感覚・デジタルメディアの相互作用：新たな自己認識危機の出現",
+    "description": "「My lips don't look like the lips I see on Instagram!」と「Embodied Interaction and Audio-Visuals in Performing Arts」およびソーシャルメディアに関する複数の社会科学論文は、デジタルメディア仲介下における身体経験と自己像の乖離が重要な現象であることを示唆している。これは芸術的実践、心理学的ストレス、テクノロジー設計が相互に作用する新しい現象領域を形成している。",
+    "significance": "high",
+    "related_fields": [
+      "社会科学",
+      "芸術",
+      "工学"
+    ],
+    "field": "横断",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "CROSS_FIELD",
+    "title": "環境史と SF 想像力：人新世における物語化と思考実験の融合",
+    "description": "「The Representation of the Anthropocene in Contemporary Chinese Science Fiction」と「Spectral Materialism: Encounters with land-time-scapes」は、人新世という科学的事実を文学的・美学的に想像する営みが、科学的理解と創造的表現を統合する新しい知的領域を開いている。これは従来の環境科学と人文学の対立を超える可能性を示唆している。",
+    "significance": "high",
+    "related_fields": [
+      "人文学",
+      "芸術"
+    ],
+    "field": "横断",
+    "date": "2026-08-03"
+  },
+  {
+    "alert_type": "CROSS_FIELD",
+    "title": "難民・避難民と都市空間：歴史的危機管理と現代の移動性の比較研究",
+    "description": "「Shelters Interrupted: Hong Kong, Singapore, and Jewish Refugees」と農村部から都市へのマイグレーション研究の組み合わせにより、避難と移動の経験が異なる歴史的・地政学的文脈において共通の空間的・社会的課題を生起させることが明らかになっている。難民・移民の保護と社会統合の問題が縦断的に理解される新しい枠組みが出現している。",
+    "significance": "medium",
+    "related_fields": [
+      "人文学",
+      "社会科学"
+    ],
+    "field": "横断",
+    "date": "2026-08-03"
   }
 ]
