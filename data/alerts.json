@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-29T20:12:12.732577+00:00",
-  "total_articles_analyzed": 494032,
+  "generated_at": "2026-08-31T20:01:29.623282+00:00",
+  "total_articles_analyzed": 499720,
   "alert_counts": {
     "emergence": 12,
     "surge": 12,
@@ -9,104 +9,67 @@
   },
   "alerts": [
     {
-      "type": "CROSSOVER",
-      "level": "high",
-      "topic": "compliance",
-      "mentions": 840,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 6,
-      "alert_title": "グローバルコンプライアンス強化",
-      "description": "社会・経済・法律・技術・政治・環境の全6分野で同時にコンプライアンス関連ニュースが840件出現。規制当局による金融、データ保護、不動産安全など多領域での基準厳格化が進行中。企業のコスト負担増加と業務プロセスの急速な刷新が必至となり、非準拠企業の排除が加速する可能性が高い。",
-      "alert_title_en": "Global Compliance Surge Across All Sectors",
-      "description_en": "Compliance-related news surged to 840 occurrences across all six PESTLE dimensions, reflecting a coordinated global regulatory tightening in finance, data protection, and social services. This signals firms must rapidly overhaul operations or face exclusion from markets."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "milei",
-      "mentions": 788,
-      "ratio": 14287.2,
-      "historical_avg": 0.0,
-      "categories": [
-        "Political",
-        "Economic",
-        "Social",
-        "Technological",
-        "Legal"
-      ],
-      "alert_title": "アルゼンチンミレイ改革加速",
-      "description": "ミレイ大統領による政府改革が過去平均の14,287倍に急増（788件）。公務員削減と氷河保護法改革が司法承認を得て加速。新自由主義的構造改革の急速推進により、南米の政治経済モデルが転換期を迎え、他国への波及効果も注視される。",
-      "alert_title_en": "Milei's Structural Reforms Accelerate in Argentina",
-      "description_en": "News coverage of Milei's administrative overhaul surged 14,287-fold, with court clearance for glacier law reforms and aggressive civil service cuts. This signals a radical shift in Latin American governance models with potential regional contagion effects."
-    },
-    {
       "type": "SURGE",
       "level": "high",
       "topic": "ceuta",
-      "mentions": 577,
-      "ratio": 58584.7,
+      "mentions": 604,
+      "ratio": 61366.4,
       "historical_avg": 0.0,
       "categories": [
-        "Political",
         "Social",
         "Legal",
-        "Environmental"
-      ],
-      "alert_title": "セウタ移民危機激化",
-      "description": "スペイン領セウタへの不規則移民が過去平均の58,584倍に急増（577件）。モロッコとスペイン間での領土紛争と密輸ネットワーク問題が顕在化。北アフリカ-ヨーロッパ間の人道危機が深刻化し、スペイン内政および両国関係に重大影響が生じている。",
-      "alert_title_en": "Ceuta Migration Crisis Reaches Critical Levels",
-      "description_en": "Irregular migration to Spanish Ceuta surged 58,584-fold, escalating territorial tensions between Spain and Morocco while exposing criminal smuggling networks. This humanitarian crisis signals deteriorating cooperation on border control in the Mediterranean region."
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "high",
-      "topic": "nli research",
-      "mentions": 565,
-      "categories": [
-        "Economic",
         "Environmental",
-        "Legal",
-        "Political",
-        "Social",
-        "Technological"
+        "Political"
       ],
-      "n_categories": 6,
-      "alert_title": "日本経済研究所の横断発信",
-      "description": "NLI Researchによる経済分析・循環経済・障害者雇用など複合テーマの発信が6分野で565件に達している。※ノイズの可能性が高い。単一機関のニュースリリースの集約的出現であり、市場トレンド兆候というより情報源の偏りを反映している可能性がある。",
-      "alert_title_en": "NLI Research Multi-Sector Coverage Expansion",
-      "description_en": "※High probability of noise. NLI Research content appeared 565 times across sectors, but this reflects concentrated media output from a single institution rather than genuine market-wide trend signals."
+      "alert_title": "セウタへの難民流入が急増",
+      "description": "スペイン領セウタへの違法移民が過去2年で過去平均の61倍に急増し、2週間で1,500人以上が到着。モロッコとスペイン間の国境管理が緊張し、軍の増強も実施されている。この傾向は欧州全体の移民政策とアフリカ側の経済格差が根本原因であり、今後は地中海周辺の人道危機と地域紛争の深刻化につながる可能性がある。",
+      "alert_title_en": "Surge in irregular migration to Spanish enclave Ceuta",
+      "description_en": "Irregular migration to Ceuta has surged dramatically, with over 1,500 arrivals in two weeks, reflecting deteriorating conditions in North Africa and intensifying border tensions between Spain and Morocco. This trend signals deepening humanitarian crises and geopolitical strain across the Mediterranean region, with potential for increased conflict and policy shifts in European immigration controls."
     },
     {
-      "type": "CROSSOVER",
+      "type": "SURGE",
       "level": "high",
       "topic": "jetro",
-      "mentions": 543,
+      "mentions": 575,
+      "ratio": 2147.8,
+      "historical_avg": 0.1,
       "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
         "Social",
+        "Legal",
+        "Environmental",
+        "Political",
+        "Economic",
         "Technological"
       ],
-      "n_categories": 6,
-      "alert_title": "JETRO統計情報の重複",
-      "description": "日本貿易振興機構（JETRO）のコンテンツが543件出現。※ノイズの可能性が高い。医療用品サプライと知的財産権情報の重複記事から、ウェブスクレイピングやキャッシュデータの多重計上である可能性が高く、実質的な新兆候ではない。",
-      "alert_title_en": "JETRO Content Aggregation with High Duplication",
-      "description_en": "※High probability of noise. JETRO-sourced articles appeared 543 times with extreme duplication patterns, suggesting web scraping artifacts rather than genuine emerging signals in trade policy or IP protection."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。JETROウェブサイトへの言及が大量に出現しているが、提供記事は日本の組織的な情報発信であり、ニュース報道ではなくサイト内容の反復出現。具体的な新兆候や政策変化を示さない。",
+      "alert_title_en": "JETRO website content repetition detected",
+      "description_en": "※High likelihood of noise. This appears to be automated indexing of JETRO website content rather than meaningful news signals, with repetitive articles on IP protection and business information that lack substantive policy changes or emerging trends."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "burnham",
+      "mentions": 549,
+      "ratio": 2343.6,
+      "historical_avg": 0.1,
+      "categories": [
+        "Social",
+        "Environmental",
+        "Political",
+        "Economic",
+        "Technological"
+      ],
+      "alert_title": "英国Andy Burnham政治的躍進",
+      "description": "英国政治家Andy Burnhamに関する報道が過去平均の2,343倍に急増。ケイル・スターマー首相がBurnhamに防衛費負担を求める発言から、彼がNo.10 North構想など大型政策の中心人物として浮上。これは英国の地方分権と国防政策の転換を示唆し、今後の政権内力学と政策優先順位の変化を反映している。",
+      "alert_title_en": "UK politician Andy Burnham gaining increased political prominence",
+      "description_en": "Coverage of UK politician Andy Burnham has surged 2,343-fold, signaling his rising role in national policy discussions including defense spending and devolution. This reflects evolving power dynamics within the UK government and potential shifts in regional governance strategies."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
-      "topic": "regulatory",
-      "mentions": 509,
+      "topic": "compliance",
+      "mentions": 383,
       "categories": [
         "Economic",
         "Environmental",
@@ -116,16 +79,16 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "規制フレームワーク急速拡張",
-      "description": "欧州バイオテック法やEU決済規制改正、カナダiGaming規制など、規制対象の横断的な拡張が509件で検出。生命科学・金融技術・ゲーミング等で新しい監視枠組みが次々と導入中。コンプライアンスコストの急増と規制当局の権限強化が企業戦略に深刻な影響を与える。",
-      "alert_title_en": "Regulatory Framework Expansion Across Industries",
-      "description_en": "Regulatory shifts spanned biotech, payments, and gaming sectors across 509 news items, signaling coordinated expansion of government oversight. This wave of new compliance frameworks will substantially increase operational costs for affected industries."
+      "alert_title": "多分野規制順応の複雑化",
+      "description": "「compliance（規制順応）」がすべてのPESTLE分野に同時出現し、NBCCBDから金融セキュリティまで多岐にわたる業界で規制要件の厳格化が進行中。特にSME企業やスタートアップへの規制コスト増加が顕著。今後はコンプライアンス対応能力が企業競争力の決定的要因となり、特に途上国企業の市場参入障壁が上昇する可能性がある。",
+      "alert_title_en": "Regulatory compliance complexity escalating across all sectors",
+      "description_en": "Compliance issues are simultaneously emerging across all six PESTLE domains, from CBD regulations to financial fraud disclosures, indicating intensifying global regulatory frameworks. Smaller enterprises face mounting compliance costs, potentially reshaping competitive dynamics and market access barriers."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "vietnam",
-      "mentions": 495,
+      "mentions": 329,
       "categories": [
         "Economic",
         "Environmental",
@@ -135,379 +98,385 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "ベトナム法改正ラッシュ",
-      "description": "証券法・土地法・弁護士法などの法改正が6分野で495件出現。マネーロンダリング防止と国際基準への適合が同時進行。ベトナムが急速に国際規制体制に統合される一方で、国内企業と政府関係の再編が進行中であり、域内経済秩序の転換を示唆する。",
-      "alert_title_en": "Vietnam Undergoes Rapid Legal Reform Wave",
-      "description_en": "Vietnam's multiple simultaneous legal reforms covering securities, land, and anti-money laundering law appeared 495 times across sectors. This signals rapid institutional integration into global regulatory standards while reshaping domestic corporate governance."
+      "alert_title": "ベトナム全方位的な国家戦略展開",
+      "description": "ベトナムが経済・環境・社会・技術・法律・政治のすべての分野で同時に戦略的発信を強化。外交、循環経済、高齢者ケア、AI女性リーダーなど多面的な国家ビジョンを提示。これは国際舞台でのベトナムのプレゼンス向上と、2030年に向けた包括的な国家変革の意志を示唆している。",
+      "alert_title_en": "Vietnam launching comprehensive multi-sector national strategy",
+      "description_en": "Vietnam is simultaneously positioning itself across all PESTLE dimensions—from diplomatic engagement to circular economy and AI development—indicating a coordinated national strategy. This reflects Vietnam's growing geopolitical ambitions and commitment to comprehensive development aligned with global megatrends."
     },
     {
-      "type": "SURGE",
+      "type": "CROSSOVER",
       "level": "high",
-      "topic": "devex",
-      "mentions": 462,
-      "ratio": 29317.8,
-      "historical_avg": 0.0,
+      "topic": "jetro",
+      "mentions": 323,
       "categories": [
-        "Political",
         "Economic",
-        "Social",
-        "Technological",
+        "Environmental",
         "Legal",
-        "Environmental"
-      ],
-      "alert_title": "気候変動対応投資急増",
-      "description": "開発政策プラットフォーム（Devex）による気候変動関連コンテンツが過去平均の29,317倍に急増（462件）。ロンドン気候行動週間など国際会議が集中。気候ファイナンスとESG投資が政策・市場の中心軸となり、低炭素産業への資本シフトが加速する局面。",
-      "alert_title_en": "Climate Finance and ESG Investment Surge",
-      "description_en": "Climate-focused development content surged 29,317-fold, with major international forums like London Climate Action Week driving policy coordination. Capital flows to low-carbon sectors are accelerating as climate becomes central to global investment strategy."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "chatham house",
-      "mentions": 449,
-      "ratio": 13408.4,
-      "historical_avg": 0.0,
-      "categories": [
         "Political",
-        "Economic",
-        "Social",
-        "Technological",
-        "Legal",
-        "Environmental"
-      ],
-      "alert_title": "イラク政治の国際的注視",
-      "description": "Chatham Houseによるイラク新首相と武装勢力統制に関する分析が過去平均の13,408倍に急増（449件）。中東地政学の不安定性が国際シンクタンクの関心を集中。地域安定性とエネルギー供給リスクの見通し変化が投資家心理に影響する。",
-      "alert_title_en": "Iraq Political Stabilization Under International Scrutiny",
-      "description_en": "Chatham House analysis of Iraq's new PM and factional control surged 13,408-fold, reflecting heightened international concern over Middle East stability. This signals growing geopolitical risk premium in energy markets and regional investment decisions."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "chatham",
-      "mentions": 449,
-      "ratio": 11997.0,
-      "historical_avg": 0.0,
-      "categories": [
-        "Political",
-        "Economic",
-        "Social",
-        "Technological",
-        "Legal",
-        "Environmental"
-      ],
-      "alert_title": "※Chathamキーワード重複",
-      "description": "※ノイズの可能性が高い。アラート9と10は同一コンテンツの重複出現（449件）。キーワード抽出の技術的エラーまたはスクレイピング重複であり、独立した兆候ではない。",
-      "alert_title_en": "※Duplicate Keyword Detection Noise",
-      "description_en": "※High probability of noise. Alerts 9 and 10 represent identical article duplication (449 occurrences), indicating technical extraction errors rather than distinct emerging signals."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "allafrica com",
-      "mentions": 424,
-      "categories": [
-        "Political",
-        "Economic",
-        "Social",
-        "Technological",
-        "Legal",
-        "Environmental"
-      ],
-      "alert_title": "アフリカ規制・移民対策統合",
-      "description": "allAfrica.comによるナイジェリアのメタ・データ保護イニシアティブと南アフリカの不規則移民対策が初出（424件）。アフリカ大陸での規制強化とデジタルガバナンス、国境管理の同時進行。国家容量拡大と企業責任の統合が域内政治経済の新局面を形作る。",
-      "alert_title_en": "Africa's Integrated Regulatory and Migration Agenda",
-      "description_en": "AllAfrica.com coverage of Nigeria-Meta data protection and South Africa's illegal immigration initiatives represents new policy integration (424 occurrences). African nations are simultaneously strengthening digital governance and border control, reshaping investment landscapes."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "codex",
-      "mentions": 285,
-      "ratio": 20669.3,
-      "historical_avg": 0.0,
-      "categories": [
         "Social",
         "Technological"
       ],
-      "alert_title": "Windows Codexアプリ拡張",
-      "description": "※ノイズの可能性が高い。ChatGPT Codexのコンピュータユース対応が同一内容で285件重複出現。単一の技術アップデートの多重報道であり、市場トレンドではなく記事配信の重複キャッシュを反映している可能性が極めて高い。",
-      "alert_title_en": "※Windows Codex Application Update Noise",
-      "description_en": "※High probability of noise. Single ChatGPT Codex Windows update appeared 285 times identically, reflecting distribution platform duplication rather than substantive market trend."
+      "n_categories": 6,
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。JETRO関連の第6アラートは、JETROサイト内のセミナー情報やビジネス短信の反復出現であり、グローバルニュース分析ではなくサイト情報の機械的集約。具体的な市場変化や政策シグナルを欠く。",
+      "alert_title_en": "JETRO business information content clustering",
+      "description_en": "※High likelihood of noise. This alert reflects repetitive JETRO website content rather than meaningful market signals, including seminar notices and business briefs without substantive policy or market changes."
     },
     {
       "type": "SURGE",
       "level": "high",
-      "topic": "andy burnham",
-      "mentions": 285,
-      "ratio": 14468.5,
+      "topic": "migration crisis",
+      "mentions": 251,
+      "ratio": 3984.6,
       "historical_avg": 0.0,
       "categories": [
-        "Political",
-        "Economic",
         "Social",
-        "Legal",
-        "Environmental"
+        "Political"
       ],
-      "alert_title": "英国政治後継構図変化",
-      "description": "Andy Burnhamのマンチェスター市長から英国首相候補への急速な浮上が過去平均の14,468倍に急増（285件）。Keir Starmer政権の政治的再編と権力構図の不確実性が顕在化。英国政党政治の世代交代と地域分権の台頭が示唆される。",
-      "alert_title_en": "UK Political Succession: Andy Burnham's Premier Rise",
-      "description_en": "Andy Burnham surged 14,468-fold as potential prime minister after Starmer signals cabinet appointment. This signals unexpected shifts in UK Labour leadership dynamics and potential shift toward regional-power-based premiership models."
+      "alert_title": "移民危機の地域的深刻化",
+      "description": "ベネズエラの移民危機が地震後さらに悪化し、カトリック指導者を巻き込む国際的関心が高まっている。南米から欧州まで複数地域で移民危機が同時進行し、教会や国際機関が前面に出る状況。今後は人道的圧力が移民政策を左右する政治的カードとなり、保護主義的措置の国際対立が深刻化する可能性がある。",
+      "alert_title_en": "Regional migration crises intensify with papal intervention",
+      "description_en": "Migration crises are simultaneously deepening across multiple regions, from Venezuela to the Mediterranean, with increased involvement of religious and international actors. This trend suggests humanitarian pressures will increasingly shape immigration policies and geopolitical tensions."
     },
     {
-      "type": "EMERGENCE",
+      "type": "CROSSOVER",
       "level": "high",
-      "topic": "regulatory compliance",
-      "mentions": 269,
-      "categories": [
-        "Technological",
-        "Legal"
-      ],
-      "alert_title": "規制コンプライアンス体系化",
-      "description": "技術・法律分野でのdata protection規制が初出（269件）。ナイジェリア・メタ協力とEU航空輸送労働規制が同時出現。デジタル産業と従来産業の規制体系の統一的管理が進行中。企業は技術と労働規制を統合的に対応せねばならない局面。",
-      "alert_title_en": "Regulatory Compliance Framework Convergence",
-      "description_en": "Data protection and labor regulatory compliance emerged simultaneously (269 occurrences), with Nigeria-Meta initiatives alongside EU transport worker standards. Firms must now manage integrated tech and labor compliance frameworks."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "investing com",
-      "mentions": 229,
+      "topic": "innovation",
+      "mentions": 243,
       "categories": [
         "Economic",
-        "Social",
-        "Technological",
+        "Environmental",
         "Legal",
-        "Environmental"
-      ],
-      "alert_title": "AI・宇宙産業投資活況",
-      "description": "Investing.comの金融報道でAI（インテル、Alipay）と宇宙産業（SpaceX）投資動向が初出（229件）。アナリストによる重点銘柄推奨とアント・グループのWeChat対抗AI展開が注目。AI資本流入と業界統合の加速、特に中国テック企業による投資争奪が激化。",
-      "alert_title_en": "AI and Space Sector Investment Surge",
-      "description_en": "Investing.com coverage of AI leaders (Intel, Alipay, SpaceX) surged 229-fold with new analyst upgrades and competitive AI deployments. Capital concentration in advanced tech and emerging space industries is accelerating, particularly in China."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "sakana",
-      "mentions": 222,
-      "ratio": 112702.0,
-      "historical_avg": 0.0,
-      "categories": [
-        "Economic",
-        "Technological",
-        "Legal"
-      ],
-      "alert_title": "自律型AI研究アシスタント展開",
-      "description": "Sakana AIの商用プロダクト「Sakana Marlin」が過去平均の112,702倍に急増（222件）。日本系AI企業による自律研究アシスタント初の商用化。エンタープライズAIの実用段階への転換とアジア系スタートアップの急速な市場参入が示唆される。",
-      "alert_title_en": "Sakana AI's Autonomous Research Assistant Launch",
-      "description_en": "Sakana AI's autonomous research assistant 'Sakana Marlin' surged 112,702-fold upon commercial release (222 occurrences). This signals Japanese AI startups entering enterprise markets and acceleration of autonomous research tools adoption."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "geopolitics",
-      "mentions": 201,
-      "ratio": 11337.9,
-      "historical_avg": 0.0,
-      "categories": [
         "Political",
         "Social",
-        "Environmental"
+        "Technological"
       ],
-      "alert_title": "地政学的経済安全保障",
-      "description": "日本製造業の地政学リスク対応が過去平均の11,337倍に急増（201件）。サプライチェーン多層化と経済安全保障政策への需要が高まる。台湾問題、ロシア制裁、半導体戦略の複合的リスク認識が、企業戦略の再編と政府による産業政策強化を推進。",
-      "alert_title_en": "Geopolitics Reshapes Supply Chain Economics",
-      "description_en": "Japanese firms' geopolitical risk management surged 11,337-fold, reflecting heightened demand for economic security policies amid supply chain diversification. Taiwan risks and semiconductor competition drive urgent corporate and policy responses."
+      "n_categories": 6,
+      "alert_title": "全分野イノベーション競争の激化",
+      "description": "イノベーションが経済・環境・社会・法律・政治・技術のすべての分野で同時に議論されている。アフリカのクリエイティブ経済、AI統治、プライバシーサンドボックスなど、単なる技術革新ではなく社会的責任を伴うイノベーションへの関心が急速に高まっている。これは企業のイノベーション戦略が倫理・ガバナンス・社会的インパクト抜きには成立しない時代への転換を示唆している。",
+      "alert_title_en": "Innovation discourse now spanning ethics, governance, and social impact",
+      "description_en": "Innovation is simultaneously emerging across all PESTLE dimensions, moving beyond pure technology to encompass governance, ethics, and social responsibility. This shift indicates businesses must integrate compliance and stakeholder accountability into innovation strategies to remain competitive."
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "regulatory",
+      "mentions": 231,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "alert_title": "規制手段の多層化と厳格化",
+      "description": "「regulatory（規制的）」アプローチが全分野に横断出現。FDA規制からSEC企業監視まで、政府部門による市場支配が強化されている一方で、ガバナンス構築とリスク管理能力が企業生存の必須条件化。今後の産業は規制当局との協調なしに成長戦略を立てられない状況が加速する。",
+      "alert_title_en": "Regulatory frameworks tightening across all economic sectors",
+      "description_en": "Regulatory oversight is intensifying across all sectors globally, from FDA compliance to SEC enforcement, making governance and risk management critical for corporate survival. Future business strategy increasingly requires proactive regulatory cooperation rather than reactive compliance."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "breach lawsuit",
-      "mentions": 187,
-      "ratio": 94933.7,
+      "mentions": 170,
+      "ratio": 4545.3,
       "historical_avg": 0.0,
       "categories": [
         "Social",
-        "Technological",
-        "Legal"
-      ],
-      "alert_title": "データ侵害訴訟の激増",
-      "description": "データ侵害関連の集団訴訟が過去平均の94,933倍に急増（187件）。Fluke、iRhythm Technologies、One Medical等の企業が相次ぎ訴訟対象化。米国でのデータプライバシー訴訟環境の急速悪化と企業責任追及の強化が進行中。",
-      "alert_title_en": "Data Breach Litigation Explodes Dramatically",
-      "description_en": "Data breach lawsuits surged 94,933-fold (187 occurrences) against major firms including Fluke and iRhythm. The U.S. litigation environment for privacy violations is rapidly intensifying, forcing tech companies to reassess cybersecurity and disclosure protocols."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "extreme heat",
-      "mentions": 181,
-      "ratio": 15314.6,
-      "historical_avg": 0.0,
-      "categories": [
-        "Political",
-        "Social",
-        "Environmental"
-      ],
-      "alert_title": "極端気象と気候適応危機",
-      "description": "猛暑と気候変動が過去平均の15,314倍に急増（181件）。2026年ワールドカップでも極端気象リスク増加が予測。適応計画の遅れが顕在化し、スポーツ・観光・建設等の産業に深刻な経済影響。気候関連の物理的リスクが投資判断の新たな基軸になる局面。",
-      "alert_title_en": "Extreme Heat and Climate Adaptation Lag Crisis",
-      "description_en": "Extreme heat coverage surged 15,314-fold, with studies showing elevated heat risks for 2026 World Cup. Climate adaptation plans are critically lagging behind physical risks, creating new operational threats to sports, tourism, and infrastructure sectors."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "cgtn",
-      "mentions": 177,
-      "ratio": 11232.1,
-      "historical_avg": 0.0,
-      "categories": [
-        "Political",
-        "Economic",
-        "Social",
-        "Technological",
         "Legal",
-        "Environmental"
+        "Technological"
       ],
-      "alert_title": "中国国営メディア情報増加",
-      "description": "CGTN報道が過去平均の11,232倍に急増（177件）。新疆遊牧民移動、ロシア制裁、中国外交等の政治経済ニュースが多言語発信。中国の情報発信戦略の強化とグローバルメディア生態系における中国視点の浸透が進行中。",
-      "alert_title_en": "CGTN's Multilingual Information Expansion",
-      "description_en": "CGTN content surged 11,232-fold covering Xinjiang, Russia sanctions, and China diplomacy in multiple languages. This signals coordinated Chinese strategic communications expansion and growing voice in global media ecosystems."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "claim depot",
-      "mentions": 175,
-      "categories": [
-        "Social",
-        "Technological",
-        "Legal"
-      ],
-      "alert_title": "データ侵害訴訟レポート拡大",
-      "description": "Claim Depot等による訴訟情報レポート初出（175件）。※ノイズの可能性が有る。xAI告発訴訟と一般的訴訟案件が混在。法律情報プラットフォームのコンテンツ拡張である可能性が高く、新しい市場兆候というより情報供給側の変化を反映。",
-      "alert_title_en": "Data Breach Lawsuit Investigation Platforms Expand",
-      "description_en": "※Moderate noise probability. Claim Depot lawsuit tracking content appeared 175 times with mixed quality data (xAI cases mixed with generic investigations). May reflect platform expansion rather than genuine litigation surge."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "cgtn com",
-      "mentions": 172,
-      "categories": [
-        "Political",
-        "Economic",
-        "Social",
-        "Technological",
-        "Legal",
-        "Environmental"
-      ],
-      "alert_title": "※CGTN重複キーワード",
-      "description": "※ノイズの可能性が高い。アラート20（cgtn）と22（cgtn com）は同一ニュースの重複出現（172件）。ドメイン名の抽出差異による技術的な重複であり、独立した兆候ではない。",
-      "alert_title_en": "※CGTN Duplicate Domain Noise",
-      "description_en": "※High probability of noise. Alerts 20 and 22 represent identical CGTN articles with domain name extraction variants (172 occurrences), indicating technical processing errors rather than distinct signals."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "lawsuit investigation",
-      "mentions": 163,
-      "categories": [
-        "Social",
-        "Technological",
-        "Legal"
-      ],
-      "alert_title": "訴訟関連の調査報告体系化",
-      "description": "訴訟・調査情報の集約報告が初出（163件）。Greenpeace環境訴訟とAI生成訴訟の処理課題が同時出現。※ノイズの可能性が有る。法的紛争の多様化は兆候だが、情報集約プラットフォームの拡張であり、市場動向との区別が必要。",
-      "alert_title_en": "Lawsuit Investigation Aggregation Platforms Emerge",
-      "description_en": "※Moderate noise probability. Lawsuit investigation platforms surged 163-fold with mixed content (Greenpeace environmental cases, AI-generated lawsuit handling). Reflects information platform expansion alongside genuine litigation complexity."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "investigation claim",
-      "mentions": 163,
-      "categories": [
-        "Social",
-        "Technological",
-        "Legal"
-      ],
-      "alert_title": "※訴訟調査情報重複",
-      "description": "※ノイズの可能性が高い。アラート23（lawsuit investigation）と24（investigation claim）は類似コンテンツの重複（163件）。法律情報プラットフォームの構造上の重複であり、実質的な市場兆候ではない。",
-      "alert_title_en": "※Lawsuit Investigation Data Deduplication Needed",
-      "description_en": "※High probability of noise. Alerts 23-24 show near-identical investigation tracking platforms (163 occurrences), indicating required data deduplication in legal information systems rather than distinct emerging signals."
+      "alert_title": "データ漏洩訴訟の急増",
+      "description": "データ漏洩訴訟が過去平均の4,545倍に急増。Fidelity Investment、医療機関、EYなど大手企業による個人情報流出が相次ぎ、集団訴訟化している。これはサイバーセキュリティ投資の不足と組織のデータ管理能力の劣化を示唆し、今後は企業の賠償責任と保険コストが急騰し、デジタル時代の経営リスク管理が急務となる。",
+      "alert_title_en": "Data breach lawsuits accelerating exponentially",
+      "description_en": "Data breach litigation has surged 4,545-fold, involving major financial and healthcare institutions, indicating systemic cybersecurity deficiencies. This trend will drive sharply rising litigation costs, insurance premiums, and regulatory penalties, making cyber risk management central to corporate governance."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "ceuta migration",
-      "mentions": 159,
+      "mentions": 167,
       "categories": [
         "Social"
       ],
-      "alert_title": "セウタ移民危機の社会的影響",
-      "description": "スペイン・セウタへの不規則移民が社会分野で初出として159件に達する。アラート3（ceuta）と重複するが、社会的影響の深刻化が独立した兆候として認識されている。北アフリカの難民圧力とスペイン国内政治分極化の加速が示唆される。",
-      "alert_title_en": "Ceuta Migration Crisis: Social Impact Escalation",
-      "description_en": "Ceuta migration surged 159 times as distinct social signal, overlapping with broader geopolitical alert. Reflects accelerating refugee pressure from North Africa and intensifying Spanish political polarization."
+      "alert_title": "セウタ移民危機の新局面",
+      "description": "過去2年間では言及されなかった「ceuta migration」という複合トピックが初出で167回出現。単なる移民ニュースではなく、スペイン領土の一体性と人道的危機が同時に焦点化。これまで水面下だった問題が国際的に可視化され、EUの辺縁部における統治能力と人権のジレンマが顕在化している。",
+      "alert_title_en": "Ceuta migration crisis emerging as distinct geopolitical issue",
+      "description_en": "The term 'ceuta migration' appears for the first time as a distinct topic, signaling the shift from isolated incidents to a recognized geopolitical flashpoint. This indicates growing international awareness of governance and humanitarian tensions at EU peripheries."
     },
     {
-      "type": "EMERGENCE",
+      "type": "SURGE",
       "level": "high",
-      "topic": "claude fable",
-      "mentions": 150,
+      "topic": "cgtn",
+      "mentions": 165,
+      "ratio": 2465.3,
+      "historical_avg": 0.0,
       "categories": [
+        "Social",
+        "Legal",
+        "Environmental",
         "Political",
         "Economic",
         "Technological"
       ],
-      "alert_title": "Claude Fable 5大規模展開",
-      "description": "Anthropic社の新型AI「Claude Fable 5」が初出（150件）。50万行Rubyコード移行を2ヶ月から1日に短縮。エンタープライズAI導入の劇的な効率化が示唆。大型言語モデルの実用レベルが急速に向上し、開発生産性の革新的改善が産業横断的に広がる局面。",
-      "alert_title_en": "Claude Fable 5 AI Model Enterprise Deployment",
-      "description_en": "Anthropic's Claude Fable 5 emerged 150 times with dramatic efficiency gains (Ruby migration from 2 months to 1 day). This signals enterprise AI adoption entering transformative productivity phase, reshaping development economics."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。CGTN（中国メディア）ドメインからの機械的な出現増加であり、特定の政策変化や市場兆候ではなく、単一メディアの記事増加を検出している可能性。コンテンツ多様性の欠如。",
+      "alert_title_en": "CGTN news source repetition detected",
+      "description_en": "※High likelihood of noise. This reflects increased indexing of CGTN (Chinese media) content rather than substantive global news signals, showing algorithmic amplification of a single source rather than emerging trends."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "cgtn com",
+      "mentions": 160,
+      "ratio": 3126.2,
+      "historical_avg": 0.0,
+      "categories": [
+        "Social",
+        "Legal",
+        "Environmental",
+        "Political",
+        "Economic",
+        "Technological"
+      ],
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。「cgtn.com」ドメイン単体の出現検出であり、トピック内容が記事タイトル集として示されていない。機械的なドメイン集約で、実質的なニュース内容を分析できない。",
+      "alert_title_en": "Domain-level index clustering without substantive content",
+      "description_en": "※High likelihood of noise. This alert reflects technical indexing of a single domain without meaningful content analysis, providing no actionable intelligence on emerging issues or trends."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "depot",
+      "mentions": 156,
+      "ratio": 2732.7,
+      "historical_avg": 0.0,
+      "categories": [
+        "Social",
+        "Legal",
+        "Political",
+        "Technological"
+      ],
+      "alert_title": "データ漏洩訴訟案件の氾濫",
+      "description": "「depot」（Claim Depotサイト）を経由したデータ漏洩訴訟関連コンテンツが過去平均の2,732倍に急増。Lake Region Healthcare、Locus Technologies、EY、Northwest Iowa Community Collegeなど多様な機関での漏洩が報告され、個人情報流出が構造的問題化。これは業界横断的なセキュリティ投資不足とコンプライアンス監視の強化を促す政策転換の前触れ。",
+      "alert_title_en": "Data breach incidents spreading across healthcare and enterprise sectors",
+      "description_en": "Data breach reports are proliferating across healthcare organizations and enterprises, with class action lawsuits mounting. This pattern indicates systemic vulnerabilities in information security practices and foreshadows stricter regulatory enforcement and industry-wide compliance mandates."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "claim depot",
+      "mentions": 155,
+      "ratio": 3937.0,
+      "historical_avg": 0.0,
+      "categories": [
+        "Social",
+        "Legal",
+        "Technological"
+      ],
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。「claim depot」は訴訟情報集約サイトの反復出現であり、本質的には新規ニュース報道ではなくクレームデータベースへのアクセス追跡。トレンドそのものより、サイト認知度の増加を測定している。",
+      "alert_title_en": "Legal claims database indexing without original news signals",
+      "description_en": "※High likelihood of noise. This reflects indexing of a litigation claims database aggregator rather than original news reporting, measuring website visibility rather than substantive emerging legal or security trends."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "lawsuit investigation",
+      "mentions": 147,
+      "ratio": 4667.2,
+      "historical_avg": 0.0,
+      "categories": [
+        "Social",
+        "Legal",
+        "Technological"
+      ],
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。「lawsuit investigation」という一般的なフレーズの機械的な出現増加であり、Claim Depotサイト内のラベル反復。具体的な法的または市場的な新兆候を示さず、単なるコンテンツラベリングの増加。",
+      "alert_title_en": "Generic lawsuit investigation phrase repetition",
+      "description_en": "※High likelihood of noise. This reflects algorithmic labeling patterns within a claims database rather than meaningful legal or market signals, representing technical tagging proliferation without substantive trend information."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "investigation claim",
+      "mentions": 147,
+      "ratio": 4667.2,
+      "historical_avg": 0.0,
+      "categories": [
+        "Social",
+        "Legal",
+        "Technological"
+      ],
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。「investigation claim」はClain Depotの構造的ラベル反復であり、新規ニュース報道ではなくデータベース内の技術的な言語パターン。アラート16と同一内容で、検出ロジックの過検知を示唆。",
+      "alert_title_en": "Database label pattern duplication without news signal",
+      "description_en": "※High likelihood of noise. This is a duplicate of Alert 16, reflecting technical labeling patterns rather than substantive news, indicating algorithmic over-detection of database structural language rather than meaningful emerging issues."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "zelenskyy",
+      "mentions": 146,
+      "ratio": 3371.3,
+      "historical_avg": 0.0,
+      "categories": [
+        "Political"
+      ],
+      "alert_title": "ゼレンスキー外交戦の加速化",
+      "description": "ウクライナのゼレンスキー大統領に関する報道が過去平均の3,371倍に急増。NATO加盟、ロシアとの交渉圧力、政府改造など複数の政治展開が同時進行。これはウクライナ情勢が単なる軍事紛争から国際政治のハブへと変質し、欧州安保体制の根本的再編が進行中であることを示唆している。",
+      "alert_title_en": "Zelenskyy's diplomatic offensive reshaping European security architecture",
+      "description_en": "Coverage of President Zelenskyy has surged 3,371-fold, reflecting Ukraine's pivot toward diplomatic and NATO engagement. This signals the war is transforming into a geopolitical realignment affecting European defense structures and great power competition."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
-      "topic": "finance biggo",
-      "mentions": 136,
+      "topic": "spain ceuta",
+      "mentions": 79,
       "categories": [
-        "Political",
-        "Economic",
         "Social",
-        "Technological",
         "Legal",
         "Environmental"
       ],
-      "alert_title": "気候ファイナンス管理課題",
-      "description": "モーリシャス等での気候ファイナンス管理とケニア選挙資金規制が初出（136件）。※ノイズの可能性が有る。気候資金と政治資金の両立が同時テーマとなり、発展途上国での民主的統治とグリーンファイナンス並行化の課題が浮上。ただし情報源の多様性に乏しい。",
-      "alert_title_en": "Climate Finance Management and Electoral Spending",
-      "description_en": "※Moderate noise probability. Climate finance governance in Mauritius and Kenya electoral spending regulations appeared 136 times. Signals emerging challenges in balancing green finance with democratic electoral integrity in developing nations."
+      "alert_title": "スペイン移民政策の転換",
+      "description": "「Spain Ceuta」という初出トピックが79回出現。スペインが移民への法的地位拡大と同時に、セウタでの軍事対応を実施するという二面的政策を採用。この矛盾は欧州が人道的要請と国境管理のジレンマに直面していることを示し、今後の移民政策は地域ごとに分裂し、国家主義的対抗とEU統一原則の緊張が高まる。",
+      "alert_title_en": "Spain's contradictory migration strategy signals EU policy fracture",
+      "description_en": "Spain's simultaneous expansion of migrant legal status while militarizing Ceuta borders represents a contradiction reflecting deeper EU policy divisions. This trend suggests future immigration governance will fragment regionally, with rising tensions between national sovereignty and EU harmonization."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
-      "topic": "senior fellow",
-      "mentions": 107,
+      "topic": "teens turning",
+      "mentions": 67,
       "categories": [
-        "Political",
-        "Economic",
         "Social"
       ],
-      "alert_title": "AI政策の議会証言拡大",
-      "description": "AI Now研究員による議会証言と高齢者ケアロボット規制が初出（107件）。※ノイズの可能性が有る。AI倫理・労働・高齢化対応の複合的政策課題が議会レベルで検討中。ただし単一シンクタンク出現が多く、独立した市場兆候の確実性に疑問。",
-      "alert_title_en": "AI Ethics and Senior Care Regulation in Policy Focus",
-      "description_en": "※Moderate noise probability. AI Now fellows' congressional testimony on workforce protection and senior wellness robots appeared 107 times. Signals emerging policy debates on AI ethics and aging care, though concentrated in single institution."
+      "alert_title": "十代層の心理健康危機の新局面",
+      "description": "「teens turning」というフレーズが初出で67回出現。思春期の若者がチャットボットへの心理相談シフトが急速に進行。メンタルヘルスプロバイダーの不足とAI技術の急速普及が組み合わさり、未成年者のメンタルケアが規制なき民間技術に依存する危険な状況が浮上。今後は若年層の心理健康データが企業に蓄積され、新たなプライバシーとセキュリティ危機が発生する可能性がある。",
+      "alert_title_en": "Adolescents increasingly relying on AI chatbots for mental health support",
+      "description_en": "Teenagers are rapidly turning to AI chatbots for mental health support due to provider shortages, creating risks of unregulated psychological care. This trend foreshadows growing concerns about minor data protection, AI algorithmic bias in mental health, and regulatory gaps in digital mental health services."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
-      "topic": "canada geothermal",
-      "mentions": 102,
+      "topic": "alone won",
+      "mentions": 65,
+      "categories": [
+        "Social",
+        "Political",
+        "Economic"
+      ],
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。「alone won」というフレーズは文脈が不明であり、記事タイトルの断片的引用。「GDP alone won't decide」「defense alone won't work」など異なる記事の単語マッチングである可能性が高く、実質的なニュース兆候ではなく偶然の言葉の結合。",
+      "alert_title_en": "Ambiguous phrase matching without coherent news signal",
+      "description_en": "※High likelihood of noise. The phrase 'alone won' appears to result from fragmented word matching across disparate articles rather than a coherent news theme, representing algorithmic false positive in pattern detection."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "foundation reimagining",
+      "mentions": 60,
+      "categories": [
+        "Economic"
+      ],
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。「foundation reimagining」は「New Economics Foundation（新経済財団）」の活動情報の反復出現が主。単一組織の40周年記念コンテンツ集約であり、グローバルニュース的な新兆候ではなく、NGOサイトの検索結果増加を捕捉している。",
+      "alert_title_en": "Single foundation content repetition without broader trend signal",
+      "description_en": "※High likelihood of noise. This reflects anniversary content from a single foundation rather than a global economic trend, showing automated indexing of organization-specific information rather than emerging market or policy signals."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "reimagining economy",
+      "mentions": 60,
+      "categories": [
+        "Economic"
+      ],
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。「reimagining economy」も「New Economics Foundation」の同一ページの反復出現。6件中4件が同一URLであり、実質は単一テーマの重複インデックスであって、経済構造の変革を示す兆候ではない。",
+      "alert_title_en": "Duplicate webpage indexing mistaken for economic trend",
+      "description_en": "※High likelihood of noise. This represents multiple indexing of the same webpage rather than a distinct economic trend, with 67% of citations pointing to identical content, indicating algorithmic over-detection."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "coalitions willing",
+      "mentions": 60,
       "categories": [
         "Environmental"
       ],
-      "alert_title": "カナダ地熱エネルギー可能性",
-      "description": "カナダの地熱利用可能性が環境分野で初出（102件）。※ノイズの可能性がある。同一記事の重複出現が多く、実質的な政策推進兆候か単なる報道の集約かが不明確。地熱は低炭素エネルギー転換の選択肢だが、商業化段階への進行状況の確認が必要。",
-      "alert_title_en": "Canada's Geothermal Energy Development Potential",
-      "description_en": "※Moderate noise probability. Canada geothermal opportunity appeared 102 times with high duplication. May indicate emerging low-carbon energy transition interest, but commercialization readiness remains unclear."
+      "alert_title": "気候変動対策の新形態へ転換",
+      "description": "「coalitions willing」という初出トピックが60回出現。従来型のグローバル気候協定ではなく、「有志連合」による化石燃料段階的廃止という新しいガバナンスモデルが提唱されている。これは多国籍環境条約から柔軟な地域別連携へのパラダイムシフトを示唆し、今後は気候戦略が先進国・途上国の二項対立から複数の利害共同体による実装段階へ移行することを予示している。",
+      "alert_title_en": "Climate governance shifting toward flexible coalitions of willing nations",
+      "description_en": "A new climate governance model based on 'coalitions of the willing' for fossil fuel phase-out is emerging as an alternative to traditional multilateral agreements. This signals a paradigm shift toward flexible, interest-aligned climate alliances that bypass stalled global negotiations."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "willing fossil",
+      "mentions": 60,
+      "categories": [
+        "Environmental"
+      ],
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。「willing fossil」は前アラート「coalitions willing」の同一コンテンツ重複出現。基本的には化石燃料段階廃止に関する同一記事のタイトル異なり検出であり、新規トピック出現ではなく単語分割の問題。",
+      "alert_title_en": "Duplicate climate phase-out content with variant word segmentation",
+      "description_en": "※High likelihood of noise. This is technical fragmentation of the same climate governance content as Alert 24, with 67% identical URL citations, representing algorithmic word-boundary detection rather than a distinct emerging issue."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "need rules",
+      "mentions": 59,
+      "categories": [
+        "Social"
+      ],
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。「need rules」は複数の無関連な記事のマッチングのようで、廃棄物管理から医療用大麻CBDまで脈絡のない組み合わせ。共通の政策兆候や市場変化を示さず、単なる言葉の表面的な出現パターン。",
+      "alert_title_en": "Unrelated topic phrase matching across disparate sectors",
+      "description_en": "※High likelihood of noise. This reflects phrase matching across unrelated topics (waste management, CBD regulation, chatbot ethics) without coherent policy or market signals, representing spurious pattern detection."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "rules safe",
+      "mentions": 59,
+      "categories": [
+        "Social"
+      ],
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。「rules safe」はアラート26の「need rules」と類似の脈絡なき言葉マッチング。循環経済規制からチャットボット規制、移民規制など異なる政策領域の単語表層的集約。実質的な新規兆候を示さない。",
+      "alert_title_en": "Regulatory language clustering across unrelated policy domains",
+      "description_en": "※High likelihood of noise. This represents surface-level phrase matching across disparate regulatory domains (waste, AI, immigration) without coherent thematic signal, indicating false positive pattern detection."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "mexicans view",
+      "mentions": 59,
+      "categories": [
+        "Political"
+      ],
+      "alert_title": "メキシコ移民政策の国際化",
+      "description": "「mexicans view」というフレーズが初出で59回出現。メキシコがICE拘禁中の死亡事案で米国を刑事告発する一方、国内のシェインバウム大統領支持率が低下するという矛盾した状況。これはメキシコが対米外交で強硬姿勢を取る一方で、国内の政治基盤が動揺していることを示唆し、今後は北米地域での移民政策が外交紛争化する可能性がある。",
+      "alert_title_en": "Mexico escalating diplomatic pressure on US immigration enforcement",
+      "description_en": "Mexico is pursuing criminal complaints against the US while experiencing domestic political turbulence, signaling a hardening stance on bilateral immigration issues. This trend suggests North American migration policy will increasingly become a flashpoint for diplomatic confrontation."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "recovery resilience",
+      "mentions": 57,
+      "categories": [
+        "Environmental",
+        "Economic"
+      ],
+      "alert_title": "EU回復戦略の制度化と評価段階へ",
+      "description": "「recovery resilience」が初出で57回出現。EUの回復・レジリエンス基金が実装段階から事後評価段階に移行。循環経済、E廃棄物回収、重要鉱物再利用など個別プロジェクトの実績評価が進行中。これは短期的な危機対応から中期的な構造転換への政策アップグレードを示唆し、今後は気候・循環経済への資本投下が加速し、それに伴う産業再編が必然化する。",
+      "alert_title_en": "EU Recovery Facility transitioning from implementation to impact evaluation",
+      "description_en": "The EU's Recovery and Resilience Facility is shifting from deployment to assessment phase, with evaluations of circular economy and critical mineral recovery projects underway. This indicates policy maturation toward structural economic transformation, foreshadowing accelerated green investment and industrial reorganization."
     }
   ]
 }
