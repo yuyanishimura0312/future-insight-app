@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-04T02:32:56.456304+00:00",
-  "total_articles_analyzed": 506685,
+  "generated_at": "2026-09-05T22:09:13.878423+00:00",
+  "total_articles_analyzed": 509529,
   "alert_counts": {
     "emergence": 12,
     "surge": 12,
@@ -12,8 +12,8 @@
       "type": "SURGE",
       "level": "high",
       "topic": "ceuta",
-      "mentions": 633,
-      "ratio": 53594.0,
+      "mentions": 636,
+      "ratio": 53848.0,
       "historical_avg": 0.0,
       "categories": [
         "Social",
@@ -22,16 +22,16 @@
         "Political"
       ],
       "alert_title": "セウタ移民危機の急増",
-      "description": "スペイン領北アフリカのセウタへの不規則移民流入が過去最高水準に達している。モロッコとスペイン間の外交課題となり、軍事的増強と国境管理強化が進行中。今後、地中海沿岸全域の移民・難民政策や欧州の国境管理体制が再構築される可能性が高い。",
-      "alert_title_en": "Ceuta Migration Crisis Reaches Critical Levels",
-      "description_en": "Irregular migration flows to Spanish Ceuta have surged dramatically, becoming a major diplomatic issue between Morocco and Spain with military reinforcements deployed. This trend signals intensifying pressure on Mediterranean migration routes and may reshape European border policies and North African geopolitical dynamics."
+      "description": "スペイン領北アフリカ飛び地セウタへの不法移民流入が過去平均の約5万倍に増加。モロッコの犯罪ネットワークが関与し、2週間で1500人以上が到着。スペインは領土主権侵害と主張し、両国政府が対応に追われている。今後、地中海沿岸のより広域な移民危機へと拡大する可能性があり、EU全体の境界管理戦略に影響する兆候。",
+      "alert_title_en": "Surge in Ceuta Migration Crisis",
+      "description_en": "Irregular migration to Spanish Ceuta has surged dramatically, with over 1,500 arrivals in two weeks and criminal networks facilitating mass crossing attempts. This represents a critical strain on European border security and regional relations between Spain and Morocco, signaling potential escalation in Mediterranean migration patterns and geopolitical tensions over territorial integrity."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "jetro",
-      "mentions": 578,
-      "ratio": 2159.0,
+      "mentions": 608,
+      "ratio": 2271.1,
       "historical_avg": 0.1,
       "categories": [
         "Social",
@@ -41,17 +41,17 @@
         "Economic",
         "Technological"
       ],
-      "alert_title": "JETRO情報の横断的増加",
-      "description": "日本貿易振興機構（JETRO）関連情報が全PESTLE分野に急増。知的財産権保護やコンプライアンス、医療機器供給など多領域での日本企業の国際展開動向が強まっている。※重複記事が多く、信号の信度は相対的に低いが、日本の海外進出支援需要の高まりを示唆している。",
-      "alert_title_en": "JETRO Information Surges Across Multiple PESTLE Domains",
-      "description_en": "References to Japan External Trade Organization (JETRO) have surged across all PESTLE categories, reflecting increased Japanese corporate expansion in markets with intellectual property and compliance challenges. Note: High article repetition suggests moderate signal reliability, though overall trend indicates growing demand for Japanese overseas business support."
+      "alert_title": "JETRO関連情報の急激な増加",
+      "description": "※ノイズの可能性が高い。日本貿易振興機構(JETRO)関連の情報出現が2271倍に増加しているが、記事タイトルは単なるポータルサイトの掲載通知やカテゴリーページの重複である。実質的なニュース価値より、ウェブスクレイピングやサイト構造の変化による技術的ノイズと判断される。",
+      "alert_title_en": "JETRO References Spike in News Monitoring",
+      "description_en": "※Likely noise. The surge in JETRO mentions appears to be technical artifacts from website indexing and content categorization rather than substantive news events; repeated titles suggest portal page duplication rather than meaningful policy shifts."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "burnham",
-      "mentions": 568,
-      "ratio": 2424.7,
+      "mentions": 577,
+      "ratio": 2463.2,
       "historical_avg": 0.1,
       "categories": [
         "Social",
@@ -60,16 +60,16 @@
         "Economic",
         "Technological"
       ],
-      "alert_title": "アンディ・バーナム政治動向",
-      "description": "英国労働党のアンディ・バーナム議員関連ニュースが大幅増加。防衛費や地域経済戦略に関する報道が集中。彼の政策提案や政府内での役割拡大が示唆され、英国の地域分権型経済政策や防衛予算配分に影響を与える可能性がある。",
-      "alert_title_en": "Andy Burnham's Growing Political Influence",
-      "description_en": "News coverage of Labour MP Andy Burnham has surged dramatically, focusing on defence spending and regional economic strategy. His rising prominence suggests potential influence on UK devolved economic policy and defence budget allocation in coming years."
+      "alert_title": "アンディ・バーナム英政治の台頭",
+      "description": "英労働党のアンディ・バーナム(マンチェスター市長)が地政学的外交課題の中心的人物として2463倍の報道増加。「ノー10ノース」(北部首相府構想)、防衛投資、経済改革など複数の政策領域で急速に注目を集めている。UK地域主義とグローバル戦略のバランスを象徴する新しい政治的アクターの浮上を示唆。",
+      "alert_title_en": "Andy Burnham's Rising Geopolitical Profile",
+      "description_en": "Manchester's mayor Andy Burnham has emerged as a central figure in Labour's geopolitical strategy, with coverage surging 2,463-fold across defense spending, regional devolution, and economic policy debates. His rising prominence signals a potential shift toward regional power distribution and North England-focused foreign policy influence within UK governance."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "compliance",
-      "mentions": 421,
+      "mentions": 425,
       "categories": [
         "Economic",
         "Environmental",
@@ -79,35 +79,16 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "コンプライアンス規制の全域浸透",
-      "description": "コンプライアンス関連情報が経済・法律・技術・社会・政治・環境の6領域全てに同時出現。データ保護、CBD・医療品規制、証券不正など多様な産業での規制対応が急速に進行。企業のコンプライアンス体制構築が戦略的課題に転換する兆しを示す。",
-      "alert_title_en": "Compliance Requirements Penetrate Across All Sectors",
-      "description_en": "Compliance-related content simultaneously appears across all six PESTLE domains, spanning data protection, pharmaceutical regulation, and securities fraud. This signals rapid regulatory intensification and the emerging strategic importance of robust compliance infrastructure across industries."
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "high",
-      "topic": "vietnam",
-      "mentions": 335,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 6,
-      "alert_title": "ベトナムの全領域発展",
-      "description": "ベトナム関連のニュースが全6領域に横断的に出現。外交、循環経済、高齢者介護、AI人材育成など多分野での発展が同時進行。ベトナムが単一産業国から多角的発展を遂行する途上国として地政学的・経済的重要性を急速に高めている。",
-      "alert_title_en": "Vietnam's Multi-Sector Development Advances",
-      "description_en": "Vietnam-related news spans all PESTLE domains simultaneously, covering diplomacy, circular economy, healthcare, and AI talent development. This signals Vietnam's rapid transition from single-sector reliance to comprehensive national development, enhancing its geopolitical and economic significance."
+      "alert_title": "コンプライアンス要件の多領域化",
+      "description": "規制遵守(compliance)が全6つのPESTLE分野に横断的に出現(425回)。データ保護、金融規制、CBD商品規制、医薬品承認プロセスなど異業種を貫く共通の法務課題化している。企業が直面する規制環境が個別分野を超えて統合化・複雑化している兆候であり、今後はコンプライアンス機能の戦略的重要性がさらに高まる。",
+      "alert_title_en": "Cross-Sector Compliance Requirements Intensify",
+      "description_en": "Compliance issues appear simultaneously across all six PESTLE domains (425 occurrences), spanning data protection, securities fraud, CBD/hemp regulations, and pharmaceutical approval. This signals a systemic shift where regulatory requirements increasingly transcend industry silos, forcing companies to adopt integrated compliance strategies that address interconnected legal, technical, and operational challenges."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "jetro",
-      "mentions": 326,
+      "mentions": 356,
       "categories": [
         "Economic",
         "Environmental",
@@ -117,31 +98,69 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "JETRO国際支援ネットワーク拡大",
-      "description": "JETROの全領域横断的情報出現は、日本企業の国際進出支援体制の高度化を反映。知財保護、輸出管理、米国進出支援など多元的なニーズに対応する支援プログラムが急速に拡充中。日本の経済外交戦略の重要な柱として機能しつつある。",
-      "alert_title_en": "JETRO Expands Cross-Sector International Support Network",
-      "description_en": "JETRO's presence across all PESTLE domains reflects Japan's expanding and sophisticated international business support infrastructure, including IP protection, export controls, and US market entry programs. This signals JETRO's growing role as a strategic economic diplomacy instrument."
+      "alert_title": "日本企業の多面的国際対応",
+      "description": "JETRO関連情報が全6分野に横断出現(356回)。日本の海外進出企業支援が知的財産権保護、輸出管理、米国州政府との連携、ガバナンス構築など多層的な課題に直面していることを示唆。地政学的リスク高まりの中で、日本企業のグローバルサプライチェーン・コンプライアンス体制の強化が急務となっている。",
+      "alert_title_en": "Japanese Firms Navigating Complex Global Compliance",
+      "description_en": "JETRO support activities span all six PESTLE domains (356 occurrences), addressing IP protection, export controls, US state-level partnerships, and governance frameworks. This reflects intensifying complexity in Japanese overseas investment as geopolitical tensions and regulatory fragmentation demand integrated compliance and risk management strategies across multiple jurisdictions."
     },
     {
-      "type": "SURGE",
+      "type": "CROSSOVER",
       "level": "high",
-      "topic": "migration crisis",
-      "mentions": 270,
-      "ratio": 4286.2,
-      "historical_avg": 0.0,
+      "topic": "vietnam",
+      "mentions": 338,
       "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
         "Social",
-        "Political"
+        "Technological"
       ],
-      "alert_title": "移民危機のグローバル深刻化",
-      "description": "地中海、ベネズエラなど複数地域の移民危機が同時に報道される急増。宗教指導者による呼びかけやSADC地域紛争との連関が浮上。今後5年間、気候変動と地政学的不安定化に伴う大規模な移民・難民圧力が欧州・アフリカ・ラテンアメリカで同時激化する可能性。",
-      "alert_title_en": "Global Migration Crisis Intensifies Across Regions",
-      "description_en": "Multiple migration crises in Mediterranean, Venezuela, and other regions are simultaneously surging with increased religious and geopolitical attention. This trend suggests climate change and geopolitical instability will drive unprecedented multi-regional migration pressures affecting Europe, Africa, and Latin America."
+      "n_categories": 6,
+      "alert_title": "ベトナムの多領域政策展開",
+      "description": "ベトナムが全6分野に横断的に出現(338回)。高齢者介護、生物多様性保全、コミュニティ開発、女性リーダーシップ、AI活用などが統合的に報道。外交、経済社会政策の包括的な国内改革と国際協調が同時進行している。デジタル化と高齢化に対応する東南アジアの先進的モデル構築を示唆している。",
+      "alert_title_en": "Vietnam's Integrated Policy Agenda Across Domains",
+      "description_en": "Vietnam appears simultaneously across all six PESTLE domains (338 occurrences), addressing aging care, biodiversity, circular economy, female leadership in AI, and diplomatic initiatives. This suggests Vietnam is positioning itself as a comprehensive development model balancing digitalization, sustainability, and social inclusion—offering a potential template for Southeast Asian peer nations."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "innovation",
+      "mentions": 275,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "alert_title": "イノベーション推進の複層化",
+      "description": "「イノベーション」が全6分野に横断出現(275回)。AIガバナンス、アフリカのクリエイティブ経済、データ保護サンドボックス、医療収益管理など、技術革新が規制・倫理・社会価値と不可分に結びついている。単なる技術進展ではなく、社会的責任と統治を組み込んだイノベーション観の成熟を示唆。",
+      "alert_title_en": "Innovation Integration with Governance and Ethics",
+      "description_en": "Innovation appears across all six PESTLE domains (275 occurrences), encompassing AI ethics, regulatory sandboxes, creative economy development, and impact-driven technology. This reflects a maturing global consensus that innovation must be embedded within governance, ethical, and social frameworks rather than pursued autonomously—a critical shift in how organizations approach R&D strategy."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "migration crisis",
+      "mentions": 272,
+      "ratio": 4318.0,
+      "historical_avg": 0.0,
+      "categories": [
+        "Social",
+        "Political"
+      ],
+      "alert_title": "南米移民危機の深刻化",
+      "description": "移民危機(migration crisis)の報道が4318倍に増加(272回)。ベネズエラの地震後の危機深刻化、教皇の欧州への警告、南部アフリカ地域の構造的問題など多発生地での同時性が顕著。地政学的紛争、気候災害、経済崩壊が複合的に移民圧力を増加させている。2026年の中米からの大規模移動流の可能性が高まっている。",
+      "alert_title_en": "Global Migration Crisis Intensifies Across Regions",
+      "description_en": "Migration crisis coverage surges 4,318-fold (272 occurrences), with simultaneous crises in Venezuela, Mediterranean routes, and Southern Africa amplified by earthquakes, economic collapse, and geopolitical instability. The convergence suggests 2026 may witness unprecedented displacement pressures, requiring coordinated international migration policy responses and humanitarian capacity."
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "regulatory",
       "mentions": 266,
       "categories": [
         "Economic",
@@ -152,66 +171,47 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "イノベーション規制の複合化",
-      "description": "イノベーション関連ニュースが全領域に横断出現。アフリカの創造経済、AI倫理ガバナンス、プライバシーサンドボックス等、規制と革新の両立が全球的課題化。技術進展と社会的規制要請のバランス取りが今後の競争力を決定する重要要因に。",
-      "alert_title_en": "Innovation and Regulatory Framework Converge Globally",
-      "description_en": "Innovation-related content simultaneously appears across all PESTLE domains, addressing Africa's creative economy, AI ethics, and privacy-sensitive innovation. This convergence indicates that balancing technological advancement with regulatory compliance will determine future competitiveness globally."
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "high",
-      "topic": "regulatory",
-      "mentions": 257,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 6,
-      "alert_title": "規制体制の多次元化",
-      "description": "規制（Regulatory）関連情報が全領域に同時出現。SEC中小企業対応、医薬品コンプライアンス、CBD規制、仮想資産戦略など多業種での規制強化が並行中。規制環境の複雑化と国境横断的なハーモナイゼーション動きが加速。",
-      "alert_title_en": "Multi-Dimensional Regulatory Framework Expansion",
-      "description_en": "Regulatory content spans all PESTLE domains, covering SEC guidance, pharmaceutical compliance, CBD regulations, and virtual asset strategies. This signals accelerating regulatory complexity and cross-border harmonization efforts across diverse industries."
+      "alert_title": "規制環境の統合的複雑化",
+      "description": "規制(regulatory)課題が全6分野に横断出現(266回)。証券詐欺、FDA食品規制、医薬品承認、グローバル法務戦略の各局面で共通の課題が浮上。企業の規制対応が単一分野専門では不十分となり、クロスファンクショナルなリスク管理体制の構築が急務。技術進展と規制の非対称性が経営課題化。",
+      "alert_title_en": "Regulatory Complexity Becomes Cross-Functional",
+      "description_en": "Regulatory issues permeate all six PESTLE domains (266 occurrences), from securities fraud and FDA oversight to pharmaceutical compliance and multi-jurisdictional governance. Organizations increasingly face asymmetric regulatory risk requiring integrated, enterprise-wide compliance architectures that bridge legal, operational, technical, and strategic functions."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "ceuta migration",
-      "mentions": 180,
+      "mentions": 181,
       "categories": [
         "Social"
       ],
-      "alert_title": "セウタ移民問題の新焦点",
-      "description": "セウタ移民問題が過去2年で初出現。スペイン・モロッコ間の国境管理が新たな国際的焦点に。大規模な移民流入、軍事強化、領土完全性の言及が同時に報道され、地中海安全保障と欧州内部政治が再編される兆し。",
-      "alert_title_en": "Ceuta Migration Issue Emerges as New Policy Focus",
-      "description_en": "The Ceuta migration issue appears for the first time in the monitoring period, highlighting Spain-Morocco border management as a new international focal point. Simultaneous reporting of large-scale inflows, military reinforcement, and territorial integrity concerns signals potential restructuring of Mediterranean security dynamics."
+      "alert_title": "セウタ移民問題の深刻化",
+      "description": "セウタ移民(ceuta migration)が初出で181回出現。スペイン北部領土への不規則な移民到着、モロッコ政府の関与、スペイン軍の増強、領土主権問題に発展している。EU-北アフリカ関係の試金石となり、今後の欧州移民政策と地中海安保の方針決定を左右する可能性が高い。",
+      "alert_title_en": "Ceuta Migration Crisis Emerges as New Policy Driver",
+      "description_en": "The Ceuta migration issue (181 new references) represents an emerging flashpoint between Spain and Morocco over territorial control and irregular migration flows. This signals potential EU-North Africa policy realignment and may catalyze broader Mediterranean security strategies in response to coordinated cross-border movement patterns."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "breach lawsuit",
-      "mentions": 174,
-      "ratio": 4652.2,
+      "mentions": 175,
+      "ratio": 4678.9,
       "historical_avg": 0.0,
       "categories": [
         "Social",
         "Legal",
         "Technological"
       ],
-      "alert_title": "データ漏洩訴訟の多発化",
-      "description": "※ノイズの可能性が高い。Fidelity投資データ漏洩と無関係な記事が混在し、「Mshale」上の同一見出しが繰り返される。実質的なデータ漏洩事件（Locus、医療機関等）は存在するが、アラート内容の信度は低い。",
-      "alert_title_en": "Data Breach Lawsuits Proliferate Across Sectors",
-      "description_en": "※High likelihood of noise. Fidelity-related articles mix with unrelated content and show excessive repetition on Mshale. While genuine data breaches exist (Locus, healthcare organizations), overall alert reliability is low."
+      "alert_title": "データ侵害訴訟の急増",
+      "description": "データ侵害訴訟(breach lawsuit)が4679倍に増加(175回)。フィデリティ投資、ロカステクノロジー、医療機関など多業種での個人情報漏洩に関する集団訴訟が頻発。企業の情報管理体制の脆弱性が露呈し、サイバーセキュリティ投資の不足が法的リスクに転化している。データ保護規制の厳格化とともに企業責任が急速に拡大。",
+      "alert_title_en": "Data Breach Litigation Surge Signals Security Crisis",
+      "description_en": "Data breach lawsuit filings surge 4,679-fold (175 cases), spanning financial services, healthcare, and technology sectors. This reflects a critical gap between cyber threats and organizational defenses, signaling that regulatory fines and litigation costs may soon exceed security investment ROI—forcing enterprises to prioritize information protection as a core business imperative."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "cgtn",
-      "mentions": 169,
-      "ratio": 2525.1,
+      "mentions": 171,
+      "ratio": 2554.9,
       "historical_avg": 0.0,
       "categories": [
         "Social",
@@ -221,17 +221,17 @@
         "Economic",
         "Technological"
       ],
-      "alert_title": "中国メディアCGTNの拡散",
-      "description": "中国国営メディア（CGTN）の記事参照が急増。コロンビア選挙、社会主義市場経済、高齢者政策、地政学的言及など広範。※記事件数増加は媒体プレゼンス増加を示すが、ノイズ混在の可能性あり。中国のメディア外交強化の傾向として注視。",
-      "alert_title_en": "CGTN Chinese State Media Visibility Surges",
-      "description_en": "References to China's CGTN media surge across geopolitical and social policy topics. While increased coverage reflects expanded media presence, noise contamination is possible. Trend indicates intensifying Chinese media diplomacy efforts warranting ongoing monitoring."
+      "alert_title": "中国メディア報道の拡大",
+      "description": "中国国営メディア(CGTN)が2555倍に増加(171回)。習近平とコロンビア大統領会談、中国式社会主義経済説、高齢者ケア、地域安保など政治経済メッセージの多面的発信が顕著。中国の国際政治プレゼンス構築とグローバル・ナラティブ競争の強化を示唆している。",
+      "alert_title_en": "China Expands Global Media Messaging Campaign",
+      "description_en": "CGTN coverage surges 2,555-fold (171 occurrences), promoting China's political narratives on socialism, aging population policy, and regional security to global audiences. This reflects China's strategic pivot toward narrative competition and soft power diplomacy, positioning itself as an alternative development model amid geopolitical tensions."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "cgtn com",
-      "mentions": 164,
-      "ratio": 3204.3,
+      "mentions": 165,
+      "ratio": 3223.8,
       "historical_avg": 0.0,
       "categories": [
         "Social",
@@ -241,10 +241,10 @@
         "Economic",
         "Technological"
       ],
-      "alert_title": "CGTNドメイン参照の増加",
-      "description": "※ノイズの可能性が高い。アラート内容が空白で、記事タイトルデータがない。CGTNメディアプラットフォームそのものへの参照急増と見られるが、分析対象として不適切。",
-      "alert_title_en": "CGTN Domain References Increase Without Clear Content",
-      "description_en": "※High noise probability. Alert contains no analysis content and lacks article titles. While CGTN platform references surge, insufficient data prevents meaningful analysis."
+      "alert_title": "データ侵害訴訟プラットフォームの拡大",
+      "description": "※ノイズの可能性が高い。「Claim Depot」などの訴訟支援ポータルサイトの記事が4064倍に増加(160回)しているが、内容の重複が著しく、実質的なニュース価値より検索エンジン最適化やコンテンツ農場化の兆候。データ侵害訴訟自体の増加は真実だが、この特定アラートはノイズ。",
+      "alert_title_en": "※Noise Alert: Litigation Portal Site Content Duplication",
+      "description_en": "※Likely noise. The surge in 'Claim Depot' and similar litigation portal references (4,064-fold increase) appears driven by content duplication and SEO optimization rather than substantive legal developments; while data breach litigation is increasing, this specific signal reflects indexing artifacts."
     },
     {
       "type": "SURGE",
@@ -259,10 +259,10 @@
         "Political",
         "Technological"
       ],
-      "alert_title": "データ漏洩訴訟サイト増加",
-      "description": "※ノイズの可能性が高い。「Claim Depot」は訴訟情報集約サイトであり、実際の漏洩事件より記事リンク増加を反映。複数の医療機関・企業の実漏洩は確認できるが、アラート自体は報道件数増加のみを示す。",
-      "alert_title_en": "Data Breach Lawsuit Aggregation Site Traffic Increases",
-      "description_en": "※High noise probability. Claim Depot surge reflects increased article linking rather than actual breach incidents. Real breaches exist, but alert primarily captures aggregation site visibility rather than new incidents."
+      "alert_title": "ウクライナのゼレンスキー外交強化",
+      "description": "ゼレンスキー大統領の報道が3487倍に増加(151回)。NATO加盟交渉、フランスとの協調、ロシア制裁強化、政府改造など外交・政治活動の多角化を示唆。ウクライナの国際的立場の急速な変化と、NATO統合への対ロシア抑止戦略が強化されている。2026年のウクライナ紛争の国際化および多国間関与の深化を予示。",
+      "alert_title_en": "Zelenskyy's Diplomatic Campaign Intensifies Internationally",
+      "description_en": "Zelenskyy coverage surges 3,487-fold (151 occurrences) amid NATO accession negotiations, French coordination, and personnel reshuffles. This signals Ukraine's accelerating international positioning and deepening great-power involvement in conflict resolution, suggesting 2026 may see formalized NATO-Ukraine security frameworks and expanded multilateral diplomatic engagement."
     },
     {
       "type": "SURGE",
@@ -276,10 +276,10 @@
         "Legal",
         "Technological"
       ],
-      "alert_title": "漏洩訴訟通知の多発",
-      "description": "※ノイズの可能性が高い。前述アラート同様、「Claim Depot」での訴訟通知記事リンク数増加を示すのみ。実質的な新規漏洩事件の情報としては信度が低い。",
-      "alert_title_en": "Data Breach Lawsuit Investigation Notices Proliferate",
-      "description_en": "※High noise probability. Similar to previous alerts, reflects increased article linking on aggregation sites rather than substantive new breach incidents. Low reliability as signal of actual security threats."
+      "alert_title": "スペイン移民政策の転換",
+      "description": "スペイン・セウタ移民(Spain ceuta)が初出で81回出現。スペインが移民の法的地位を拡大する一方で、セウタへの不法流入に軍事対応する矛盾した対応を示唆。EU内での移民政策の多様化と、国家主権vs.人道的対応の葛藤が先鋭化している。今後のEU移民枠組み交渉の主要争点となる可能性。",
+      "alert_title_en": "Spain's Contradictory Migration Policy Stance Emerges",
+      "description_en": "Spain's migration policy appears contradictory (81 new references): expanding legal status while militarizing Ceuta borders. This reflects deepening EU-level tensions between humanitarian obligations and national sovereignty, suggesting 2026 negotiations on common migration frameworks will intensify amid member-state policy divergence."
     },
     {
       "type": "SURGE",
@@ -293,10 +293,10 @@
         "Legal",
         "Technological"
       ],
-      "alert_title": "訴訟調査記事の量的増加",
-      "description": "※ノイズの可能性が高い。前アラートと重複。「Claim Depot」での記事リンク増加のみを示す無実質的なシグナル。",
-      "alert_title_en": "Investigation Claim Article Volume Increases",
-      "description_en": "※High noise probability. Duplicate of previous alerts showing only aggregation site article link increases. Lacks substantive signal value."
+      "alert_title": "十代のチャットボット依存と規制",
+      "description": "十代のチャットボット利用(teens turning chatbots)が初出で69回出現。心理サポートをAIに求める若年層の行動変化と、安全性規制の必要性が同時に報道。デジタルネイティブ世代のメンタルヘルス対応が医療・技術・倫理の複合領域課題となっている。未成年保護の国際規制枠組み構築が急務。",
+      "alert_title_en": "Youth Mental Health Reliance on AI Demands Urgent Safeguards",
+      "description_en": "Teens using chatbots for mental health support (69 new references) highlights a critical gap in AI safety regulation for vulnerable populations. This signals an urgent need for international frameworks protecting minors from algorithmic mental health risks, suggesting major regulatory initiatives in 2026 across EU, US, and Asian markets."
     },
     {
       "type": "SURGE",
@@ -310,10 +310,10 @@
         "Legal",
         "Technological"
       ],
-      "alert_title": "ゼレンスキー大統領の外交活動",
-      "description": "ウクライナのゼレンスキー大統領関連ニュースが急増。NATO加盟交渉、ロシアとの和平協議、政府再編など重大な政治動向が同時報道。ウクライナ戦争の今後の外交局面転換と東欧・北大西洋地政学の大きな変動を示唆している。",
-      "alert_title_en": "President Zelenskyy's Diplomatic Activities Intensify",
-      "description_en": "Coverage of Ukrainian President Zelenskyy surges dramatically, focusing on NATO accession negotiations, peace talks with Russia, and government reshuffles. This signals potential diplomatic phase shifts in the Ukraine conflict and major restructuring of Eastern European and NATO geopolitics."
+      "alert_title": "経済戦略の単独行動限界論",
+      "description": "※ノイズの可能性がある。「alone won」のキーワード抽出が不正確。関連記事は経済政策、ERP導入、循環経済などの文脈で「単独では不十分」という意味だが、統一的なトレンドより散発的な個別記事。より詳細なテーマ分析が必要。",
+      "alert_title_en": "※Noise: Imprecise Keyword Extraction on Economic Strategy",
+      "description_en": "※Likely noise. The 'alone won' extraction appears to be a false pattern from disparate articles on economic policy, ERP systems, and circular economy; the phrase's context varies too widely to constitute a coherent emerging theme or policy signal."
     },
     {
       "type": "SURGE",
@@ -325,10 +325,10 @@
       "categories": [
         "Political"
       ],
-      "alert_title": "スペイン・セウタ移民問題",
-      "description": "スペインのセウタ地域における移民関連政策が初出現。移民の法的地位拡大とセウタ移民危機が同時進行。スペイン国内の移民統合政策と北アフリカ情勢が相互連動する新局面を示す。",
-      "alert_title_en": "Spain Ceuta Migration Policy Emerges as New Issue",
-      "description_en": "Spain-Ceuta migration issues appear for the first time, linking migrant legal status expansion with border crisis. This signals new interdependencies between Spanish domestic immigration policy and North African geopolitics."
+      "alert_title": "バーナムの外交政策の台頭",
+      "description": "バーナムの外交政策関連(burnham foreign)が初出で64回出現。マンチェスター市長から国家外交戦略の中心人物へのポジション変化を示唆。UK防衛予算の地域配分と外交における北部イングランドの発言力拡大が示唆される。ポスト中央集権的な英国政治の地政学的転換を予示。",
+      "alert_title_en": "Burnham's Emerging Foreign Policy Role Signals UK Shift",
+      "description_en": "Burnham's foreign policy involvement appears in 64 new references, indicating a potential shift toward devolved geopolitical authority within the UK governance structure. This suggests post-2026 UK defense and diplomatic strategy may increasingly reflect regional interests, particularly Northern England's economic and security concerns."
     },
     {
       "type": "EMERGENCE",
@@ -340,10 +340,10 @@
         "Legal",
         "Environmental"
       ],
-      "alert_title": "青少年のチャットボット依存",
-      "description": "ティーンエイジャーがAIチャットボットにメンタルヘルス相談する傾向が初出現・急増。規制の必要性が同時に報道される。デジタル世代の心理健康管理と技術リスクが新たな社会課題として浮上し、保護者・教育機関・テック企業の対応が急務に。",
-      "alert_title_en": "Teens Increasingly Turn to Chatbots for Mental Health",
-      "description_en": "Teen use of AI chatbots for mental health support emerges as new phenomenon with simultaneous calls for regulatory safeguards. This signals digital generation mental health management and tech-related psychological risks as emerging societal priorities requiring urgent stakeholder action."
+      "alert_title": "経済観の根本的再構想",
+      "description": "新経済基金の40年(foundation reimagining)が初出で63回出現。伝統的GDP中心の経済指標体系に対する批判と、幸福度、環境影響を含む包括的経済指標への転換が主流化。グローバル経済機構の価値観転換を示唆し、企業ESG戦略と公共政策の抜本的見直しが迫られている。",
+      "alert_title_en": "Economic Paradigm Shift: Beyond GDP Metrics",
+      "description_en": "The New Economics Foundation's 40-year legacy (63 new references) signals mainstream acceptance that GDP-centric models are inadequate, driving global shift toward inclusive welfare metrics. Organizations must prepare for 2026-2027 policy environments where environmental impact, social wellbeing, and equity become primary economic performance indicators."
     },
     {
       "type": "EMERGENCE",
@@ -353,51 +353,60 @@
       "categories": [
         "Social"
       ],
-      "alert_title": "経済戦略の単要素主義批判",
-      "description": "※ノイズの可能性が中程度。「GDP単独では勝敗決定できない」との記事が初出現・増加。循環経済、ESG、多指標評価への関心上昇を反映。経済評価指標の複合化と持続可能性重視への転換を示唆している。",
-      "alert_title_en": "Economic Strategy Beyond Single Metrics Gains Attention",
-      "description_en": "Articles critiquing GDP-only economic assessment emerge and surge, reflecting growing interest in circular economy, ESG, and multi-metric evaluation. This signals a shift toward composite economic indicators and sustainability-focused performance measurement."
+      "alert_title": "経済再想像の政策運動",
+      "description": "経済の再想像(reimagining economy)が初出で63回出現。経済指標の多元化、循環型経済、企業社会責任の統合化など、資本主義の根本的な価値観変容を示唆。この運動は学術界から政策決定層へ拡大しており、2026年以降の企業戦略・投資判断基準の転換が必至。",
+      "alert_title_en": "Global Movement for Radical Economic Reimagination",
+      "description_en": "The 'reimagining economy' movement (63 new references) represents a maturing challenge to capitalism's foundational metrics, driving policy adoption across governments and institutions. Organizations must anticipate that post-2026 investor expectations, regulatory frameworks, and stakeholder demands will reflect a fundamentally different economic value system centered on sustainability and equity."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "alone won",
-      "mentions": 67,
+      "mentions": 68,
       "categories": [
         "Social",
         "Political",
         "Economic"
       ],
-      "alert_title": "経済の再想像と再構築",
-      "description": "※ノイズの可能性が中程度。「経済システムの再想像」をテーマにした初出記事が増加。新経済基金（NEF）40周年関連が反復報道される。既存経済パラダイムへの根本的批判と代替システム設計の関心が政策層で高まっている兆し。",
-      "alert_title_en": "Reimagining Economic Systems Gains Policy Traction",
-      "description_en": "Articles on economic system reimagining emerge and multiply, with New Economics Foundation's 40th anniversary coverage featuring prominently. This signals growing policy-level interest in fundamental alternatives to conventional economic paradigms."
+      "alert_title": "AI時代の安全規制が急務",
+      "description": "チャットボット安全規制(need rules safe)が初出で61回出現。AI推進と利用者保護のバランスが急速に政策課題化している。特に未成年、労働規制、環境保全など複数領域でAIに対する安全・倫理基準設定の必要性が認識される。2026年のAI規制枠組み(EU AI Act等)の実装と国際標準化が急加速する見込み。",
+      "alert_title_en": "AI Safety Regulation Emerges as Critical Policy Priority",
+      "description_en": "AI safety regulation requirements (61 new references) span youth protection, labor standards, and environmental safeguards, signaling governments' urgency to establish baselines before systems deployment expands. This suggests 2026 will see accelerated implementation of AI governance frameworks globally, with significant impacts on corporate AI strategy, investment, and operational compliance."
+    },
+    {
+      "type": "EMERGENCE",
+      "level": "high",
+      "topic": "burnham foreign",
+      "mentions": 64,
+      "categories": [
+        "Political"
+      ],
+      "alert_title": "化石燃料フェーズアウトの新枠組み",
+      "description": "有志国連合の化石燃料廃止(coalitions willing fossil)が初出で60回出現。パリ協定の強制的枠組みを超えた国家間の自発的脱炭素同盟が形成されている。気候ガバナンスの多層化と先進国による牽引型の気候行動が強化される兆候。エネルギー転換の加速と産業再編が2026年以降の主要テーマ化。",
+      "alert_title_en": "Coalitions of Willing Nations Accelerate Fossil Fuel Phase-Out",
+      "description_en": "Emerging coalitions of willing nations on fossil fuel phase-out (60 new references) signal a shift toward voluntary, coalition-based climate governance beyond Paris Agreement frameworks. This portends accelerated energy transitions and significant industrial restructuring post-2026, likely creating both competitive advantages and disruption risks for carbon-intensive sectors."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "foundation reimagining",
-      "mentions": 62,
+      "mentions": 63,
       "categories": [
         "Economic"
       ],
-      "alert_title": "規制ガバナンスと安全性",
-      "description": "※ノイズの可能性が中程度。「規制が必要」というテーマが初出現。チャットボット倫理、循環経済、iGaming等多領域でのルール構築要求が同時報道。技術進展に伴う新領域での先制的規制需要の高まりを示す。",
-      "alert_title_en": "Regulatory Governance and Safety Frameworks Urgently Needed",
-      "description_en": "Calls for regulatory frameworks emerge across multiple domains including chatbot ethics, circular economy, and iGaming. This reflects growing proactive demand for regulatory infrastructure in new technology and business model areas."
+      "alert_title": "メキシコの米国移民政策批判",
+      "description": "メキシコの国民感情(mexicans view)が初出で59回出現。移民取り締まり中の死亡事例への刑事告発、シェインバウム大統領の支持率変動が同時報道。メキシコ国内の米国移民政策への反発と、国内政治の脆弱化が示唆される。2026年の米国大統領選に向けた米墨関係の再構成と移民問題の国際化が予想。",
+      "alert_title_en": "Mexico Challenges US Immigration Enforcement Deaths",
+      "description_en": "Mexican public opinion shifts (59 new references) reflect rising friction over ICE custody deaths and Sheinbaum administration credibility, signaling deeper US-Mexico migration policy conflict. This suggests 2026 US-Mexico relations will be strained by migration and sovereignty issues, potentially reshaping North American security arrangements and bilateral diplomatic strategies."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "reimagining economy",
-      "mentions": 62,
+      "mentions": 63,
       "categories": [
         "Economic"
-      ],
-      "alert_title": "規制ルールと安全保障の融合",
-      "description": "※ノイズの可能性が中程度。前アラート同様「ルール構築」の必要性が強調される。金属スクラップ輸出規制、仮想資産ルール、移民規則変更など多領域での規制強化が初出現・並行。規制当局の権限強化と市民・企業の安全性向上要求が政策を駆動。",
-      "alert_title_en": "Safety Rules and Regulatory Frameworks Strengthen Across Sectors",
-      "description_en": "Emphasis on regulatory rule-building persists across scrap metal exports, virtual assets, and migration policies. This indicates simultaneous regulatory tightening across sectors driven by safety requirements and stakeholder demands."
+      ]
     },
     {
       "type": "EMERGENCE",
@@ -406,11 +415,7 @@
       "mentions": 61,
       "categories": [
         "Social"
-      ],
-      "alert_title": "バーナムの地政学的課題",
-      "description": "アンディ・バーナムが地政学的難題に直面する傾向が初出現。北部イングランド経済戦略と国防費拡大の両立が政治課題化。地方分権と国家戦略の統合が英国政治の新焦点。",
-      "alert_title_en": "Burnham Confronts Geopolitical Strategic Challenges",
-      "description_en": "Andy Burnham emerges as facing geopolitical complexities linking Northern England economic strategy with defence spending expansion. This signals devolution-national strategy integration as new UK political focal point."
+      ]
     },
     {
       "type": "EMERGENCE",
@@ -419,24 +424,7 @@
       "mentions": 61,
       "categories": [
         "Social"
-      ],
-      "alert_title": "有志連合による化石燃料廃止",
-      "description": "気候変動対策として「有志国家連合」による化石燃料段階廃止モデルが初出現・反復報道。従来の全員合意型から柔軟な連合型へのガバナンス転換を示唆。パリ協定後の気候外交が新段階へ移行する兆し。",
-      "alert_title_en": "Coalitions of the Willing Pursue Fossil Fuel Phase-Out",
-      "description_en": "A new climate governance model using 'coalitions of the willing' for fossil fuel phase-out emerges and gains repeated coverage. This signals transition from consensus-based to flexible coalition-based climate diplomacy post-Paris Agreement."
-    },
-    {
-      "type": "EMERGENCE",
-      "level": "high",
-      "topic": "burnham foreign",
-      "mentions": 61,
-      "categories": [
-        "Political"
-      ],
-      "alert_title": "化石燃料廃止への条件付き協力",
-      "description": "前アラート同様、「有志による化石燃料廃止」をテーマに、ヒートウェーブ死亡との関連報道が並行。気候変動の即時的危害と政策対応の緊急性が強調される。グラスルーツから政策層への圧力が高まる傾向。",
-      "alert_title_en": "Conditional Coalition Efforts on Fossil Fuel Elimination",
-      "description_en": "Continued emphasis on willing coalitions for fossil fuel action, linked with heatwave mortality reporting. This signals mounting pressure from grassroots to policymakers on climate urgency and immediate harms of inaction."
+      ]
     },
     {
       "type": "EMERGENCE",
@@ -445,11 +433,7 @@
       "mentions": 60,
       "categories": [
         "Environmental"
-      ],
-      "alert_title": "メキシコの死亡事件と外交紛争",
-      "description": "メキシコ国民が米国ICE（移民・関税取締局）拘束中に死亡した事件が初出現。メキシコ政府が刑事告発を検討。移民執行の人権問題が米国・メキシコ間の外交的焦点化。今後、両国の移民政策と人権・司法協力が再交渉される可能性。",
-      "alert_title_en": "Mexicans' Deaths in US Immigration Custody Trigger Diplomatic Friction",
-      "description_en": "Deaths of Mexican nationals in US ICE custody emerge as major issue, with Mexican government considering criminal complaints. This signals human rights concerns in immigration enforcement becoming a US-Mexico diplomatic negotiation point with implications for bilateral cooperation."
+      ]
     },
     {
       "type": "EMERGENCE",
