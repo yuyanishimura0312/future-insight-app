@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-12T20:08:44.747308+00:00",
-  "total_articles_analyzed": 602458,
+  "generated_at": "2026-10-13T20:44:28.746194+00:00",
+  "total_articles_analyzed": 605350,
   "alert_counts": {
     "emergence": 12,
     "surge": 12,
@@ -12,8 +12,8 @@
       "type": "SURGE",
       "level": "high",
       "topic": "brics",
-      "mentions": 849,
-      "ratio": 2631.6,
+      "mentions": 855,
+      "ratio": 2650.2,
       "historical_avg": 0.1,
       "categories": [
         "Political",
@@ -23,36 +23,17 @@
         "Social",
         "Technological"
       ],
-      "alert_title": "BRICS拡大が加速",
-      "description": "BRICS関連のニュース報道が過去平均の2600倍以上に急増し、インドのBRICS議長下での首脳会議開催、新規加盟国の招待など、南半球主導の多極化体制構築が明確な局面を迎えています。エネルギー連携やインフラ投資を通じたグローバルサウスの結集は、既存の先進国中心の国際秩序に対する構造的な対抗軸として機能し、今後の国際経済・地政学の再編を主導する可能性があります。",
-      "alert_title_en": "BRICS Expansion Accelerates Dramatically",
-      "description_en": "News coverage of BRICS topics surged over 2600 times above historical average, signaling accelerated South-led multipolar order formation. India's presidency is mobilizing energy partnerships and infrastructure cooperation, positioning BRICS as a structural counterweight to Western-centric governance systems."
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "high",
-      "topic": "president",
-      "mentions": 672,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 6,
-      "alert_title": "大統領選挙が全分野で活発化",
-      "description": "ブラジル・チュニジア・コロンビアなど複数国の大統領職をめぐる議論が政治・経済・環境・法律・社会・技術の6分野に横断出現し、2026年前後の選挙サイクル激化を示唆しています。経済政策、気候対策、デジタル化への対応が同時に問われる複雑な選挙環境は、各国の政策転換と国際関係の再配置を加速させる転機となるでしょう。",
-      "alert_title_en": "Presidential Elections Dominate Global Discourse",
-      "description_en": "Presidential race coverage spans six PESTLE categories across Brazil, Tunisia, and Colombia, reflecting 2026 election cycle intensity. Multiple policy domains from economy to climate to digital governance converge in electoral debates, signaling potential policy shifts and international realignments."
+      "alert_title": "BRICS勢力の急速な拡大",
+      "description": "インドを議長国としたBRICS首脳会議の開催予定が報じられ、過去平均の2650倍近い言及数となった。エジプト・UAE間のエネルギー連携や、バングラデシュ首相の招待など、新興国が結集する「グローバル・サウス」の政治的求心力が急速に高まっている。多極化する国際秩序で、西側経済圏に対抗する第二の経済ブロック形成が加速する可能性がある。",
+      "alert_title_en": "BRICS Coalition Expands Rapidly with India's Leadership",
+      "description_en": "The BRICS Summit in New Delhi has triggered exceptional media attention (2650x increase), signaling the Global South's growing geopolitical cohesion. This expansion suggests a structural shift toward multipolar world order challenging Western-led institutions."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "ceuta",
-      "mentions": 671,
-      "ratio": 3187.8,
+      "mentions": 697,
+      "ratio": 3311.3,
       "historical_avg": 0.1,
       "categories": [
         "Political",
@@ -60,16 +41,35 @@
         "Environmental",
         "Social"
       ],
-      "alert_title": "セウタ移民危機が急拡大",
-      "description": "スペイン領セウタへのモロッコからの移民流入が過去平均の3100倍以上と極度に増加し、EU内の国境管理・難民政策について深刻な分裂を招いています。2015年の難民危機を上回る規模との報道も出ており、ヨーロッパの統合理念と各国の主権防衛のせめぎ合いが先鋭化する中、移民問題が次期EU政策の最大争点になる可能性が高まっています。",
-      "alert_title_en": "Ceuta Migration Crisis Reaches Critical Levels",
-      "description_en": "Morocco-to-Ceuta migration surged over 3100 times historical average, exceeding 2015 refugee crisis scale and fracturing EU border policies. The crisis exposes tensions between European integration ideals and national sovereignty, likely to intensify migration policy debates in upcoming EU governance cycles."
+      "alert_title": "セウタ難民危機の劇的悪化",
+      "description": "スペイン領セウタへのモロッコ発難民流入が過去平均の3311倍に報道され、2021年の危機を遥かに上回る規模に拡大した。チェコ首相がシェンゲン協定停止の議論を提起するなど、EUの内部統一が揺らいでいる。気候変動や経済格差が背景にあり、今後の移民政策が欧州政治の分断軸になる危険性が高い。",
+      "alert_title_en": "Ceuta Migration Crisis Escalates Beyond 2021 Levels",
+      "description_en": "The Ceuta migration surge (3311x increase) has become unprecedented, triggering EU unity concerns and border security debates. This signals deepening climate-driven displacement and geopolitical fractures within European solidarity."
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "president",
+      "mentions": 684,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "alert_title": "大統領選が全領域に横断的影響",
+      "description": "ブラジル、チュニジア、コロンビアなど複数国の大統領選が同時に政治・経済・環境・技術など6分野に横断的に報道されている。2026年中米各国の選挙イベントが、各地域の政策転換、企業投資判断、テクノロジー規制などを一斉に左右する局面を示唆している。",
+      "alert_title_en": "Presidential Elections Create Cross-Sector Impacts Globally",
+      "description_en": "Multiple presidential races (Brazil, Tunisia, Colombia) simultaneously drive discourse across economic, environmental, and technological domains, signaling how 2026 political transitions will reshape regional policies and investment patterns."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "openai",
-      "mentions": 492,
+      "mentions": 499,
       "categories": [
         "Economic",
         "Environmental",
@@ -79,16 +79,16 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "OpenAIへの規制圧力が急増",
-      "description": "OpenAIが複数の規制当局から同時に対象となり、EU による超大規模オンライン検索エンジン指定、Appleによる企業秘密侵害訴訟など、技術企業に対する規制・訴訟リスクが極度に高まっています。AI産業が法的・経済的な重大転機を迎える中、政府・企業間の対立激化は、AI開発の加速と規制強化の綱引きをより複雑にする様相を呈しています。",
-      "alert_title_en": "OpenAI Faces Intensifying Regulatory Pressure",
-      "description_en": "OpenAI simultaneously targeted by EU regulation, Apple litigation, and compliance audits, exposing AI industry regulatory escalation. The convergence of legal, economic, and political pressures signals a critical inflection point where AI governance frameworks will significantly reshape market dynamics and innovation incentives."
+      "alert_title": "OpenAI規制と法廷闘争の激化",
+      "description": "EUがChatGPTを超大規模検索エンジンに指定し追加監査義務を課す一方、AppleがOpenAIを企業秘密侵害で提訴。AI企業への規制が政治・法律・技術の全層で複雑に絡み合っている。AI産業の競争構図が法的枠組みで決定される転換期を示唆している。",
+      "alert_title_en": "OpenAI Faces EU Regulation and Apple's IP Lawsuit Simultaneously",
+      "description_en": "OpenAI confronts both EU regulatory classification and Apple's evidence destruction allegations across multiple jurisdictions. This signals how AI governance through law, competition policy, and corporate accountability is becoming multifaceted and contested."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "european parliament",
-      "mentions": 480,
+      "mentions": 483,
       "categories": [
         "Economic",
         "Environmental",
@@ -98,16 +98,16 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "EU議会が統合政策を主導",
-      "description": "ロシア情勢、移民政策、農業規制、医薬品基準など広範な国境横断課題でEU議会が横断的に活動し、6つのPESTLE分野全てに出現しています。加盟国間の利益相反が高まる中、EU議会の役割拡大は超国家的な規制・価値決定メカニズムの機能強化を示しており、今後の欧州統合の方向性を左右する重要な政治プロセスが進行中です。",
-      "alert_title_en": "European Parliament Driving Integrated Policy Agenda",
-      "description_en": "EU Parliament spans six PESTLE domains addressing Russia relations, migration, pesticide regulation, and pharmaceutical standards. Expanded parliament influence amid member state tensions signals strengthened supranational governance mechanisms that will shape European integration's future trajectory."
+      "alert_title": "欧州議会が多分野の政策決定権強化",
+      "description": "農薬規制、移民政策、ロシア制裁など、欧州議会の政治的影響力が経済・環境・法律・社会・技術領域に同時に拡大している。EU内の権力構造が加盟国から議会へシフトし、超国家的な政策統一が進展する傾向を反映している。",
+      "alert_title_en": "European Parliament Expands Policy Authority Across Six Domains",
+      "description_en": "The European Parliament's influence spans migration policy, pesticide regulation, and Russia sanctions simultaneously. This indicates a structural shift in EU governance toward supranational institutional power over member states."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "jetro",
-      "mentions": 416,
+      "mentions": 422,
       "categories": [
         "Economic",
         "Environmental",
@@ -117,16 +117,16 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "日本の対外経済情報活動拡大",
-      "description": "JETRO（日本貿易振興機構）のグローバルニュース報道が6分野横断で大幅増加し、デンマーク・南アフリカ・タイ・カザフスタンなど広範な地域でのスタートアップ・インフラ投資情報が集中しています。日本企業の対外進出支援と国際経済情報の戦略的発信が活性化する中、新興市場での日本のプレゼンス確保と経済外交の重要性が高まっていることを示唆しています。",
-      "alert_title_en": "Japan Expands Global Economic Information Activities",
-      "description_en": "JETRO reporting surged across six PESTLE domains with focus on startup and infrastructure opportunities in Denmark, South Africa, Thailand, and Kazakhstan. Expanded information dissemination indicates Japan's intensified economic diplomacy and market presence strategy in emerging economies."
+      "alert_title": "JETRO情報網が多国横断調査",
+      "description": "※ノイズの可能性が高い。日本の外国への投資・企業情報提供機関JETROの情報配信が、データベース技術により大量に検出された可能性がある。新興国のスタートアップ・インフラ情報が系統的に監視対象化していることは注視の価値があるが、分析対象としての兆候性は限定的。",
+      "alert_title_en": "JETRO Global Monitoring Across Multiple Emerging Markets",
+      "description_en": "※Possible noise. JETRO's systematic coverage of startup and infrastructure intelligence across emerging markets may reflect database amplification rather than genuine policy signals."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "nepal",
-      "mentions": 394,
+      "mentions": 399,
       "categories": [
         "Economic",
         "Environmental",
@@ -136,33 +136,33 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "ネパール気候災害が警告信号",
-      "description": "ネパールでの氷河崩壊・洪水災害がマスメディアで頻出し、気候変動の極端化がヒマラヤ域で既に深刻な現実として顕在化しています。2000人超の死者を出す大災害は、南アジア全体の気候リスク管理、越境水資源問題、気候移民への対応を迫る転機であり、国際的な気候適応投資と災害管理体制の再構築が急務であることを世界に警告しています。",
-      "alert_title_en": "Nepal Climate Disasters Signal Global Crisis Escalation",
-      "description_en": "Nepal's glacial collapse and floods exceeding 1,050 deaths signal Himalayan climate crisis amplification affecting entire South Asia. The disaster crystallizes transboundary water resource vulnerabilities and climate migration pressures, demanding urgent international adaptation financing and risk management frameworks."
+      "alert_title": "ネパール気候災害が迫在化",
+      "description": "ネパール洪水による1000人以上の死者が報道され、氷河融解による気候災害が横断的に政治・経済・環境・社会に影響している。チベット付近の同時洪水とも連動し、ヒマラヤ地域の気候システム崩壊が南アジア全域の難民化・経済混乱を予兆している。",
+      "alert_title_en": "Nepal Glacial Collapse Signals Regional Climate Catastrophe",
+      "description_en": "Nepal's devastating floods (1,000+ deaths) linked to glacial collapse trigger warnings of climate-driven migration cascades. This presages systemic climate disaster across the Hindu-Kush-Himalayas region."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "migration crisis",
-      "mentions": 306,
-      "ratio": 1874.1,
+      "mentions": 326,
+      "ratio": 1996.6,
       "historical_avg": 0.1,
       "categories": [
         "Political",
         "Social"
       ],
-      "alert_title": "セウタ移民がEU内対立を深化",
-      "description": "セウタ移民危機がEU内の分断を招き、チェコが申根協定圏からの除外を提案、複数の指導者が「緊急協議」を要求するなど、既存のEU共同辺境管理体制の有効性が根本的に問われています。国家主権と欧州統合のメカニズムが激突する中、次期EU政策は移民・国防・主権の再定義を余儀なくされる可能性が高まっています。",
-      "alert_title_en": "Ceuta Migration Deepens EU Internal Divisions",
-      "description_en": "Czech calls for Schengen zone suspension and widespread demands for emergency talks reveal deep fractures in EU border management consensus. Member state tensions over sovereignty and shared responsibility signal potential structural reform of EU immigration and internal security frameworks."
+      "alert_title": "セウタ移民危機がEU統一を分裂",
+      "description": "スペインのセウタ移民危機がEU加盟国間の分断を深刻化させ、過去平均の1997倍の報道となった。イタリア首相メローニはスペイン首相を批判、チェコはシェンゲン協定停止を提議。EUの「自由移動」という根本原則が機能停止し、各国の保護主義化が加速する局面を示している。",
+      "alert_title_en": "Ceuta Crisis Fractures EU Unity on Migration Policy",
+      "description_en": "The Ceuta migration surge divides EU members on border control and Schengen principles. European leaders' conflicting responses signal the collapse of unified migration governance and rising nationalistic responses."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "brics summit",
-      "mentions": 279,
-      "ratio": 20260.7,
+      "mentions": 280,
+      "ratio": 20333.3,
       "historical_avg": 0.0,
       "categories": [
         "Political",
@@ -171,64 +171,64 @@
         "Social",
         "Technological"
       ],
-      "alert_title": "BRICS首脳会議が多極化を加速",
-      "description": "インド主催のBRICS首脳会議が過去平均の20000倍以上の報道を集め、Xi・Putin・Modiの首脳会談、バングラデシュなど新規国家招待など、南主導の政治結合が明確に制度化される局面です。既存の国連・IMF体制への代替軸形成が急速に進む中、今後の国際金融・安全保障秩序の再編が加速される重要な政治的転換点となります。",
-      "alert_title_en": "BRICS Summit Crystallizes Multipolar Global Order",
-      "description_en": "BRICS Summit garnered 20,000x normal media volume with Xi-Putin-Modi trilateral and Bangladesh invitation, marking institutional consolidation of South-led alternative governance. Rapid alternative framework formation to existing UN/IMF structures signals accelerated international order rebalancing."
+      "alert_title": "BRICS首脳会議が極大化",
+      "description": "インド主催のBRICS首脳会議が過去平均の20333倍もの報道を獲得。習近平とプーチンの参加予定を含め、新興国勢力の結集が国際政治で最高の重要度を得ている。G20やWTOに代替する多極的秩序形成の実践的な踏み台となる可能性がある。",
+      "alert_title_en": "BRICS Summit Becomes Defining Moment for Global Order Shift",
+      "description_en": "India's BRICS Summit generates exceptional media intensity (20,333x increase), with Xi and Putin's attendance symbolizing multipolar alternative to Western-led institutions. This marks practical institution-building for a non-aligned future."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "jetro global",
-      "mentions": 238,
-      "ratio": 3183.8,
+      "mentions": 244,
+      "ratio": 3264.0,
       "historical_avg": 0.0,
       "categories": [
         "Economic",
         "Legal"
       ],
-      "alert_title": "日本の知財・基準情報発信急増",
-      "description": "JETROのグローバルニュース報道が過去平均の3100倍以上に増加し、ペルー・スリランカなど途上国での知財保護・製品基準・認証情報が重点的に配信されています。日本企業の国際展開支援と現地規制環境の情報提供が戦略的に強化される中、グローバルサプライチェーン再編下での日本の規制・基準の国際競争力確保が重要な政策課題として浮上しています。",
-      "alert_title_en": "Japan Amplifies IP and Standards Information Globally",
-      "description_en": "JETRO Global Eye reports on intellectual property and certification standards in Peru and Sri Lanka surged over 3100x baseline, targeting emerging market regulatory environments. Strategic information dissemination indicates Japan's competitive positioning for standards and IP frameworks within reshaping global supply chains."
+      "alert_title": "JETRO知的財産権情報が急増",
+      "description": "※ノイズの可能性がやや高い。JETROのペルー・スリランカにおける農産物・知的財産権情報が過去平均の3264倍に達した。日本の海外投資情報系統の検索最適化やデータベース拡張の結果である可能性があり、実質的な政策兆候としての価値は限定的である。",
+      "alert_title_en": "JETRO IP Rights Information in Emerging Markets Surges",
+      "description_en": "※Possible noise. JETRO's agricultural IP reports from Peru/Sri Lanka show 3264x increase, likely due to database indexing rather than substantive policy shift."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "global eye",
-      "mentions": 238,
-      "ratio": 3183.8,
+      "mentions": 244,
+      "ratio": 3264.0,
       "historical_avg": 0.0,
       "categories": [
         "Economic",
         "Legal"
       ],
-      "alert_title": "中国Qwenが生成AI競争激化",
-      "description": "Alibaba傘下のQwenが2.4兆パラメータの「Qwen3.8-Max」を発表し、OpenAI GPT-5やMistral Fable 5に匹敵する性能を主張しており、アジア系LLMが世界規模の生成AI競争で主導権を握りつつあります。オープンウェイト版の即座な公開方針は、生成AI市場のオープン化傾向を加速させ、AIの民主化と地政学的な覇権競争が同時並行する新段階を示唆しています。",
-      "alert_title_en": "China's Qwen LLM Intensifies Global AI Competition",
-      "description_en": "Alibaba's Qwen 3.8-Max with 2.4T parameters challenges GPT-5 and Fable 5 performance, signaling Asian LLM dominance in generative AI. Rapid open-weight model release accelerates AI democratization while intensifying geopolitical AI supremacy competition."
+      "alert_title": "JETRO Global Eye情報が大量検出",
+      "description": "※ノイズの可能性が高い。JETROの「世界は今」という定型的な情報配信が過去平均の3264倍に検出され、複数の記事タイトルが完全に重複している。検索エンジン最適化やウェブスクレイピングの技術的アーティファクトである可能性が高く、実質的な新兆候ではない。",
+      "alert_title_en": "JETRO Global Eye Content Shows Technical Duplication Noise",
+      "description_en": "※High noise probability. Identical JETRO article titles appearing 3264x above baseline indicates search engine artifact or scraping duplication rather than substantive signal."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "ceuta migration",
-      "mentions": 202,
-      "ratio": 6417.7,
+      "mentions": 204,
+      "ratio": 6481.2,
       "historical_avg": 0.0,
       "categories": [
         "Social"
       ],
-      "alert_title": "インド経済メディアが高成長報道",
-      "description": "インドの経済メディア「Livemint」の報道が過去平均の1600倍以上に増加し、AI・半導体・量子コンピュータなど未来技術と株式市場・通関問題など現在の経済課題が混在して報道されています。BRICS議長国としてのインドの経済的重要性上昇と、国内の成長戦略・市場統合の加速が同時進行する状況を反映しており、新興経済大国のメディア影響力拡大が地政学的に重要な兆候です。",
-      "alert_title_en": "India's Business Media Coverage Surges Globally",
-      "description_en": "Livemint reporting surged 1600x, mixing future tech (AI, semiconductors, quantum) with current economic challenges (tariffs, stock market). Coverage expansion reflects India's elevated geopolitical economic significance as BRICS chair and emerging innovation leader."
+      "alert_title": "セウタ移民政策がEU統一試験",
+      "description": "セウタ移民問題が過去平均の6481倍に報道され、チェコ首相のシェンゲン協定停止提議、アイルランド主催のEU閣僚会議開催など、欧州統一が存亡の危機に直面している。気候変動・経済格差から発生する人口移動に対し、EUが共通政策を維持できるか試金石となっている。",
+      "alert_title_en": "Ceuta Becomes Defining Test for EU Border Policy Cohesion",
+      "description_en": "Ceuta migration surge (6481x increase) tests EU solidarity as members propose Schengen suspension. This signals whether Europe can maintain collective migration governance amid climate-driven displacement."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "nomura",
-      "mentions": 178,
-      "ratio": 5655.2,
+      "mentions": 202,
+      "ratio": 6417.7,
       "historical_avg": 0.0,
       "categories": [
         "Political",
@@ -237,17 +237,17 @@
         "Social",
         "Technological"
       ],
-      "alert_title": "米国移民執行政策が論争化",
-      "description": "※ノイズの可能性が高い。記事タイトルが多様で、ICE（米国移民税関捜査局）の召喚状に関連する具体的な政策動向や統一したナラティブが不明確です。トピック名と実際の記事内容の整合性が低く、包括的な分析の対象とするには情報が不十分です。",
-      "alert_title_en": "US Immigration Enforcement Policy Under Scrutiny",
-      "description_en": "※Possible noise. Article titles lack coherent policy narrative; unclear connection between ICE subpoenas and actual policy shifts makes comprehensive trend analysis unreliable."
+      "alert_title": "野村証券がAI半導体分析拡大",
+      "description": "野村証券の機械受注・AI・半導体関連の経済分析が過去平均の6418倍に報道されている。エヌビディア決算等の投資情報が広域に配信され、日本の金融機関がAI産業シフトの経済戦略をリアルタイムで発信する体制が強化されている。金融市場がAI産業動向の主要な価格発見メカニズムになる兆候。",
+      "alert_title_en": "Nomura Securities Intensifies AI-Semiconductor Economic Analysis",
+      "description_en": "Nomura's AI and semiconductor economic commentary surges 6418x, reflecting the financial sector's role in pricing AI industry transitions. This indicates how investment strategy is becoming a leading indicator of technological disruption."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "nomura research",
-      "mentions": 169,
-      "ratio": 85908.3,
+      "mentions": 193,
+      "ratio": 98108.3,
       "historical_avg": 0.0,
       "categories": [
         "Political",
@@ -256,17 +256,17 @@
         "Social",
         "Technological"
       ],
-      "alert_title": "ブラジル2026選挙情勢が緊迫",
-      "description": "※ノイズの可能性が高い。「informe coyuntura（選挙情勢報告）」というキーワードの繰り返しのみで、実際の選挙動向・候補者政策・社会動向などの具体的な情報が記事タイトルに反映されていません。出現データの過度な集中が自動抽出の機械的ノイズである可能性が高いです。",
-      "alert_title_en": "Brazil 2026 Electoral Situation Report",
-      "description_en": "※Possible noise. Repetitive 'informe coyuntura' keyword lacks substantive electoral data, candidate positions, or policy differentials in titles, suggesting automated extraction artifacts rather than meaningful trend signal."
+      "alert_title": "野村総研が情報通信標準化発信",
+      "description": "※ノイズの可能性が高い。野村総合研究所の国際標準化会議参加募集や組織改正ニュースが過去平均の98108倍という極端な数値を記録した。記事タイトルの完全重複が見られ、内部ニュース配信システムのウェブインデックス重複またはスパムスクレイピングの技術的問題である可能性が極めて高い。",
+      "alert_title_en": "Nomura Research Institute News Shows Extreme Indexing Anomaly",
+      "description_en": "※High noise probability. NRI internal announcements reach 98,108x baseline with identical title repetition, indicating search indexing malfunction or automated duplication artifact."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "institute nri",
-      "mentions": 169,
-      "ratio": 85908.3,
+      "mentions": 193,
+      "ratio": 98108.3,
       "historical_avg": 0.0,
       "categories": [
         "Political",
@@ -275,27 +275,27 @@
         "Social",
         "Technological"
       ],
-      "alert_title": "Bradyの政策教訓が浮上",
-      "description": "※ノイズの可能性が高い。「Brady's Lessons」というタイトルが6回同一で繰り返されており、具体的な文脈や意味内容が不明です。Brady債務危機対策など歴史的な経済政策の参照かもしれませんが、現在のニュース動向との関連性が不明瞭で、メタデータの不完全性を示唆しています。",
-      "alert_title_en": "Brady's Lessons Re-emerge",
-      "description_en": "※Possible noise. Identical repeated title 'Brady's Lessons' six times without contextual differentiation suggests incomplete metadata or automated extraction error rather than substantive policy discourse."
+      "alert_title": "Qwen中国AI新世代競争へ",
+      "description": "アリババのQwen3.8-Maxが過去平均の8286倍報道され、2.4兆パラメータの大規模言語モデルがGPT-5超のパフォーマンスを標榜している。中国のAI産業が米国OpenAIと直接競争する段階に入り、テクノロジー大国間の覇権競争が激化する局面を示唆している。",
+      "alert_title_en": "Qwen 3.8-Max Signals China's Direct Challenge to OpenAI",
+      "description_en": "Alibaba's Qwen 3.8-Max (2.4T parameters) surges to 8286x media attention, claiming GPT-5-level performance. This marks China's transition from follower to direct competitor in large language model supremacy."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "qwen",
-      "mentions": 162,
-      "ratio": 8235.0,
+      "mentions": 163,
+      "ratio": 8285.8,
       "historical_avg": 0.0,
       "categories": [
         "Environmental",
         "Social",
         "Technological"
       ],
-      "alert_title": "小国のAI戦略が経済課題化",
-      "description": "キプロスを含む小国がAIを戦略的経済命題として位置付け、また複数国で人権・法の支配の維持が政治的課題として浮上しています。グローバルAI競争の激化に伴い、国家規模を問わず戦略的デジタル化対応が必須となる一方で、人権・民主主義価値の維持という規範的課題との両立が各国政府の新たな課題として顕在化しています。",
-      "alert_title_en": "Small States Treat AI as Strategic Economic Imperative",
-      "description_en": "Cyprus and other nations position AI development as critical economic strategy, while simultaneously defending democratic values and human rights. Convergence of AI competition pressures with rights protection requirements creates tension in governance frameworks for smaller economies."
+      "alert_title": "インド経済メディアが多領域発信",
+      "description": "Livemintなどインド経済メディアが過去平均の1655倍報道され、AI・半導体・円形経済・株式市場など複数領域での情報発信が活発化している。インド市場の重要性が国際金融メディアで認識される段階を示し、新興国投資判断が加速している兆候である。",
+      "alert_title_en": "Indian Economic Media Amplifies Multi-Sector Global Coverage",
+      "description_en": "Indian financial media (Livemint) surges 1655x across AI, semiconductors, and circular economy topics. This reflects India's rising status as essential to global investment decision-making and market pricing."
     },
     {
       "type": "SURGE",
@@ -312,10 +312,10 @@
         "Social",
         "Technological"
       ],
-      "alert_title": "ザンビア選挙とネット規制が焦点",
-      "description": "ザンビアの選挙過程でのインターネット接続確保が国際的な人権運動の重点課題として集中的に報道されており、デジタル民主主義と情報アクセス権が新興国選挙の検証ポイントになっています。選挙の自由度評価が通信・情報アクセスの保障に依存する傾向は、アフリカにおけるデジタルガバナンスと民主的統治の関係性が不可分になったことを示唆し、今後の新興国選挙支援・民主主義監視の重要な枠組みの変化を予示しています。",
-      "alert_title_en": "Zambia Election Highlights Digital Rights Importance",
-      "description_en": "#KeepItOn campaign intensively reported in Zambia's 2026 election, positioning unrestricted internet access as democratic verification requirement. Digital rights integration into election monitoring signals structural shift in emerging-market democracy assessment frameworks."
+      "alert_title": "移民政策がICE法執行で激化",
+      "description": "※初出アラート。米国のICE（入国管理取締局）に関する小票スペイン語ニュース等が初めて82回報道された。トランプ前大統領の60カ国への関税導入とも連動し、移民・通商・法執行が複合的に米国政治の中心に移動している。来たる大統領選挙で移民政策が最大争点化する予兆。",
+      "alert_title_en": "ICE Immigration Enforcement Becomes Election-Year Political Flashpoint",
+      "description_en": "ICE subpoena and enforcement issues emerge as new discourse topic (82 occurrences), coinciding with Trump's tariff policies. Immigration enforcement is intensifying as central election-year political battleground."
     },
     {
       "type": "EMERGENCE",
@@ -325,95 +325,123 @@
       "categories": [
         "Social"
       ],
-      "alert_title": "人権・法の支配が政策論点化",
-      "description": "タイの有害農薬禁止、ナイジェリアのサイバー犯罪法、ザンビアのネット規制など、各国で人権・法の支配が具体的な規制政策の検証焦点になっています。グローバル化・デジタル化の進行に伴い、従来の抽象的な人権原則が個別の国内政策評価を通じて具体化・政治化される傾向が強まり、国際的な人権規範と各国主権の衝突が先鋭化する局面が予測されます。",
-      "alert_title_en": "Human Rights Standards Embedded in Policy Debates",
-      "description_en": "Thailand's pesticide ban, Nigeria's cybercrime law, and Zambia's internet policy debates integrate human rights verification into concrete regulatory review. Globalization-driven trend embeds abstract rights principles into measurable policy metrics, intensifying sovereignty-vs-universalism tensions."
+      "alert_title": "ブラジル選挙情勢が専門分析展開",
+      "description": "※初出アラート。ブラジルの「選挙情勢レポート」（informe coyuntura electoral）が初めて75回報道された。2026年ブラジル大統領選が国家指導部の交代イベントとして、経済・外交・気候政策の大きな転機を示唆している。アマゾン保護政策の方向転換がグローバル環境戦略に与える影響が焦点。",
+      "alert_title_en": "Brazil Electoral Outlook Emerges as Specialized Policy Analysis Topic",
+      "description_en": "Brazil's electoral reports (informe coyuntura) appear as new analytical focus (75 occurrences), signaling 2026 presidential transition's importance for Amazon policy and regional geopolitics."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "informe coyuntura",
-      "mentions": 74,
+      "mentions": 75,
       "categories": [
         "Political"
       ],
-      "alert_title": "ザンビア市民社会が民主的監視",
-      "description": "※ノイズの可能性が高い。「#KeepItOn」ハッシュタグを用いた同一キャンペーンが繰り返し報道されているだけで、異なるニュース価値や新規の政治動向が記事タイトルに反映されていません。単一の市民運動キャンペーンの媒体飽和である可能性が高く、独立した分析対象としては限定的な信号度です。",
-      "alert_title_en": "Zambia Civil Society Digital Rights Campaign",
-      "description_en": "※Possible noise. Identical #KeepItOn campaign repetitions lack substantive variation in political events or policy changes, suggesting campaign message saturation rather than distinct news signals warranting independent trend analysis."
+      "alert_title": "ブレイディ教訓が政策論議化",
+      "description": "※初出アラート。「Brady's Lessons」というテーマが初めて69回報道された。1980年代の対外債務危機時代の政策教訓が再検討される背景には、現在の新興国債務危機再発の懸念があると考えられる。債務構造化・IMF協力など過去の危機対応が今後の政策参照点になる兆候。",
+      "alert_title_en": "Brady Debt Crisis Lessons Return to Policy Debate",
+      "description_en": "Brady debt restructuring lessons emerge as new policy discourse (69 occurrences), suggesting policymakers are referencing 1980s crisis management amid current emerging market debt concerns."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "brady lessons",
-      "mentions": 68,
+      "mentions": 69,
       "categories": [
         "Political",
         "Economic"
-      ]
+      ],
+      "alert_title": "人権・法治主義が新規政策争点",
+      "description": "※初出アラート。「must uphold（守らねばならない）」というフレーズが初めて69回報道され、AI・移民・公衆衛生・法の支配に関する人権議論が急速に政策化している。民主主義的ガバナンスと技術規制が一体化する新しい政策言語の形成を示唆している。",
+      "alert_title_en": "Human Rights and Rule of Law Emerge as New Policy Discourse",
+      "description_en": "The phrase 'must uphold' appears 69 times as new policy language, linking AI governance, migration policy, and democratic accountability. This signals emerging consensus around human rights as central governance principle."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "must uphold",
-      "mentions": 68,
+      "mentions": 69,
       "categories": [
         "Political",
         "Legal"
-      ]
+      ],
+      "alert_title": "ザンビア選挙でネット自由が焦点",
+      "description": "※初出アラート。ザンビアの選挙時におけるインターネット言論の自由を求める「#KeepItOn」キャンペーンが68回報道された。アフリカの民主化進展の障害として、権威主義的なネット規制が選挙弾圧ツール化している現実を示唆。デジタル民主主義の脆弱性が地政学的課題として浮上。",
+      "alert_title_en": "Zambia Election Highlights Digital Rights as Democracy Flashpoint",
+      "description_en": "#KeepItOn campaign for internet freedom in Zambia elections (68 occurrences) signals how digital repression is becoming a tool of democratic suppression in Africa's electoral contests."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "uphold human",
-      "mentions": 68,
+      "mentions": 69,
       "categories": [
         "Political",
         "Legal"
-      ]
+      ],
+      "alert_title": "ザンビア民主化とネット規制対立",
+      "description": "※初出アラート。ザンビア選挙における政府のインターネット制限に対抗する市民キャンペーン「Zambia must uphold human rights」が68回報道された。アフリカの民主化プロセスがデジタル領域で最も激しい対立を示す局面を示唆。政治学的には『デジタル権威主義』の台頭を実証している。",
+      "alert_title_en": "Zambia Opposition Mobilizes Around Digital Rights and Internet Access",
+      "description_en": "Zambian government's threatened internet restrictions during elections spark civic mobilization (68 occurrences). This exemplifies how authoritarian digital control is becoming a defining democracy struggle in Africa."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "keepiton zambia",
-      "mentions": 67,
+      "mentions": 68,
       "categories": [
         "Political"
-      ]
+      ],
+      "alert_title": "人権保護がグローバル政策軸に",
+      "description": "※初出アラート。\"rights ensure\"というフレーズが初めて68回報道され、デジタル権・移民権・言論の自由が国家政策の正統性を判断する基準として位置づけられている。国内政治の人権論議がグローバル規範として国際制裁・投資判断に組み込まれる時代への転換を示唆。",
+      "alert_title_en": "Human Rights Protection Becomes Global Policy Evaluation Criterion",
+      "description_en": "Digital and civil rights discourse (68 occurrences) increasingly frames legitimate governance. This indicates global norms are shifting toward human rights compliance as prerequisite for international economic and political standing."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "zambia must",
-      "mentions": 67,
+      "mentions": 68,
       "categories": [
         "Political"
-      ]
+      ],
+      "alert_title": "ネット言論自由がインフラ権化",
+      "description": "※初出アラート。「ensure unrestricted internet access」というフレーズが68回報道され、インターネットアクセス自体が基本的人権インフラとして国際的に承認される段階に入った。デジタルデバイド是正が発展支援の新しいフロンティアになる可能性を示唆。",
+      "alert_title_en": "Unrestricted Internet Access Recognized as Human Rights Infrastructure",
+      "description_en": "The phrase 'ensure unrestricted internet access' appears 68 times as new rights language, signaling global recognition of digital access as fundamental infrastructure for democratic participation."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "rights ensure",
-      "mentions": 67,
+      "mentions": 68,
       "categories": [
         "Political"
-      ]
+      ],
+      "alert_title": "選挙期間中のネット規制強化化",
+      "description": "※初出アラート。「unrestricted internet throughout upcoming elections」が68回報道され、選挙時期のインターネット規制がグローバル民主主義の脅威として国際メディアで報道される段階に入った。デジタル監視国家の拡大が、アフリカから他地域への政治感染の警告サインとなっている。",
+      "alert_title_en": "Election-Period Internet Restrictions Become International Democracy Concern",
+      "description_en": "Internet shutdowns during elections (68 occurrences) emerge as international democracy monitoring topic. This signals how digital authoritarianism during elections is becoming a key indicator of democratic backsliding worldwide."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "ensure unrestricted",
-      "mentions": 67,
+      "mentions": 68,
       "categories": [
         "Political"
-      ]
+      ],
+      "alert_title": "選挙期間中の政策規制が焦点化",
+      "description": "※初出アラート。「access throughout upcoming elections」というフレーズが68回報道され、選挙期間中のシステムアクセス・透明性・権利保護がグローバルな民主統治の指標となっている。選挙時期に官制情報統制と市民デジタル権の衝突が構造化している。",
+      "alert_title_en": "Election-Period Access and Rights Become Democratic Governance Metrics",
+      "description_en": "Election-period access restrictions (68 occurrences) establish new governance evaluation standard. This indicates digital transparency during elections is becoming prerequisite for international democratic legitimacy."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "unrestricted internet",
-      "mentions": 67,
+      "mentions": 68,
       "categories": [
         "Political"
       ]
@@ -422,7 +450,7 @@
       "type": "EMERGENCE",
       "level": "high",
       "topic": "access throughout",
-      "mentions": 67,
+      "mentions": 68,
       "categories": [
         "Political"
       ]
@@ -431,7 +459,7 @@
       "type": "EMERGENCE",
       "level": "high",
       "topic": "throughout upcoming",
-      "mentions": 67,
+      "mentions": 68,
       "categories": [
         "Political"
       ]
