@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-17T20:06:34.639208+00:00",
-  "total_articles_analyzed": 615083,
+  "generated_at": "2026-10-18T20:20:01.561621+00:00",
+  "total_articles_analyzed": 617890,
   "alert_counts": {
     "emergence": 12,
     "surge": 12,
@@ -12,8 +12,8 @@
       "type": "SURGE",
       "level": "high",
       "topic": "brics",
-      "mentions": 872,
-      "ratio": 2702.8,
+      "mentions": 874,
+      "ratio": 2709.0,
       "historical_avg": 0.1,
       "categories": [
         "Political",
@@ -23,16 +23,16 @@
         "Social",
         "Technological"
       ],
-      "alert_title": "BRICS影響力の急速拡大",
-      "description": "BRICSが過去平均の2,700倍を超える頻度で報道され、インド主催の18回目サミットを中心に経済・政治・技術に関する議論が急増。G7中心の国際秩序に対する新興国連合の対抗軸が明確化し、エネルギー・インフラ・貿易ルール形成で南半球の影響力が急速に高まりつつある。今後グローバルサプライチェーンや投資フローの再編成が加速する可能性。",
-      "alert_title_en": "Rapid Expansion of BRICS Influence",
-      "description_en": "BRICS coverage surged 2,700-fold, driven by India's 18th summit, reflecting growing economic and political clout of emerging markets challenging Western-led order. This signals accelerating realignment of global capital flows, energy partnerships, and regulatory frameworks toward non-aligned nations."
+      "alert_title": "BRICS拡大の加速",
+      "description": "BRICS関連報道が過去平均の2709倍に急増。インド議長下での第18回サミット開催、エネルギーパートナーシップ拡大、新興国南主導体制の構築が加速している。既存の西側中心秩序への対抗軸が強化され、グローバル経済・政治の多極化が一層進む可能性。",
+      "alert_title_en": "BRICS Expansion Accelerates Significantly",
+      "description_en": "BRICS-related news surged 2,709 times above baseline, with India's presidency advancing energy partnerships and South-led governance. This signals structural shifts toward multipolarity that will reshape global economic and geopolitical hierarchies."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "president",
-      "mentions": 722,
+      "mentions": 733,
       "categories": [
         "Economic",
         "Environmental",
@@ -42,10 +42,10 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "大統領選挙と政策転換",
-      "description": "ブラジル2026年大統領選挙、インド首脳、ロシア大統領などが同時に6つのPESTLE分野で出現。各国トップの政策転換（データセンター投資推進、米国関税への対抗、南米域内協力強化）が経済・環境・技術に広範な波及。新興国リーダーシップの再編成と対米関係の多元化が同時進行中。",
-      "alert_title_en": "Presidential Transitions Reshaping Global Alignments",
-      "description_en": "Multiple presidential elections and leadership changes across Brazil, India, and Russia simultaneously impact economic, environmental, and technology policies. New leaders are pursuing tariff resistance, infrastructure investments, and South-South cooperation, signaling a fundamental rebalancing of global power dynamics."
+      "alert_title": "大統領選挙と政策シフト",
+      "description": "「president」がすべてのPESTLE分野に横断出現（733件）。ブラジル2026年選挙、複数国の大統領による首脳会談や政策転換が同時進行中。経済政策から環境・技術政策まで多面的な政治変化が世界規模で起きており、国際秩序の再編が進行中。",
+      "alert_title_en": "Global Presidential Elections Drive Multi-Sector Policy Shifts",
+      "description_en": "Presidential matters span all PESTLE dimensions across 733 articles, indicating simultaneous political transitions in Brazil and other nations reshaping economic, environmental, and technological policies globally."
     },
     {
       "type": "SURGE",
@@ -60,35 +60,16 @@
         "Environmental",
         "Social"
       ],
-      "alert_title": "セウタ移民危機の深刻化",
-      "description": "スペイン領セウタへのモロッコからの移民流入が過去平均の3,300倍に急増し、EU内での対応分裂（スペイン首相の「利己的」批判、チェコの圏外除外提言）が表面化。2021年危機を大きく上回る規模で、欧州統一行動の困難さと内部矛盾が露呈。移民圧力の継続的上昇とNATO・EU結束への脅威が深刻化。",
-      "alert_title_en": "Ceuta Migration Crisis Intensifies EU Divisions",
-      "description_en": "Morocco-to-Ceuta migrant surge reaches 3,300-fold historical average, exceeding 2021 crisis levels and exposing deep EU fractures over migration policy. This crisis threatens Schengen stability and signals sustained North Africa-Europe pressure that may reshape European border strategies."
-    },
-    {
-      "type": "CROSSOVER",
-      "level": "high",
-      "topic": "openai",
-      "mentions": 521,
-      "categories": [
-        "Economic",
-        "Environmental",
-        "Legal",
-        "Political",
-        "Social",
-        "Technological"
-      ],
-      "n_categories": 6,
-      "alert_title": "OpenAI規制強化と訴訟激化",
-      "description": "EUがChatGPTを超大規模検索エンジン指定し監査義務化、同時にAppleが企業秘密侵害で訴訟・証拠破棄疑惑を指摘。AI企業への法的圧力が経済・技術・法律に同時作用。規制と競争訴訟の並行が AI企業の戦略・ガバナンス構造を急速に変容させ、業界再編の序章。",
-      "alert_title_en": "Regulatory Pressure and Litigation Against OpenAI Escalates",
-      "description_en": "EU designates ChatGPT as major search engine with audit obligations while Apple alleges evidence destruction in IP litigation. Simultaneous regulatory and legal pressure signals accelerating constraints on AI commercialization and potential industry restructuring ahead."
+      "alert_title": "セウタ移民危機が激化",
+      "description": "スペイン領セウタへのモロッコからの移民流入が過去平均の3330倍に急増（701件）。EU内での境界管理と統一対応の分裂、加盟国間の対立が深刻化。2015年難民危機を超える規模の可能性があり、欧州の社会統合と安全保障体制に重大な試練。",
+      "alert_title_en": "Ceuta Migration Crisis Spirals Beyond 2015 Precedent",
+      "description_en": "Morocco-Spain migration to Ceuta surged 3,330 times above baseline, causing deep EU divisions over border control and refugee policies. This signals potential system-wide challenges to European cohesion and sovereignty."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "european parliament",
-      "mentions": 518,
+      "mentions": 533,
       "categories": [
         "Economic",
         "Environmental",
@@ -98,16 +79,16 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "欧州議会の政策主導権強化",
-      "description": "欧州議会がロシアG20招待批判、移民政策、農薬規制など6分野で同時に政治主導権を行使。議会の独立的権能拡大と執行部への圧力が顕著。EU統治構造の民主的正統性強化と同時に、加盟国間の政策分歧が議会を舞台に激化する傾向。",
-      "alert_title_en": "European Parliament Strengthens Policy Leadership",
-      "description_en": "European Parliament simultaneously drives policy across six domains including Russia criticism, migration, and pesticide regulation. Growing parliamentary autonomy from European Commission signals shifting EU governance dynamics toward stronger democratic oversight."
+      "alert_title": "EU議会が多分野規制主導",
+      "description": "欧州議会が全PESTLE分野で横断出現（533件）。農薬規制、移民政策、ロシア制裁、AI規制が同時に議論される中、EUの規制権力強化とグローバル基準設定機能が顕著。技術・環境・社会規制の欧州モデル国際化が加速。",
+      "alert_title_en": "European Parliament Drives Cross-Sectoral Regulatory Leadership",
+      "description_en": "European Parliament appears across all PESTLE fields (533 instances), advancing pesticide regulation, migration policies, and AI oversight simultaneously, positioning EU as a global regulatory standard-setter."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "brazil",
-      "mentions": 515,
+      "mentions": 530,
       "categories": [
         "Economic",
         "Environmental",
@@ -117,16 +98,35 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "ブラジル経済と地政学的転換",
-      "description": "ブラジル大統領選挙、米国関税への対抗、南ア連携、データセンター投資推進が同時に報道。従来のドル依存経済からBRICS連携、再生可能エネルギー・AI基盤設備への転換を示唆。米国市場とのデカップリング加速と南米域内統合深化の可能性。",
-      "alert_title_en": "Brazil's Economic and Geopolitical Realignment",
-      "description_en": "Brazilian elections coincide with US tariff resistance, South African trade talks, and data center expansion policies. This signals Brazil's pivot from dollar-dependent economy toward BRICS cooperation, renewable energy, and AI infrastructure, indicating accelerating decoupling from US markets."
+      "alert_title": "ブラジル選挙と経済の分岐点",
+      "description": "ブラジルがすべてのPESTLE分野で横断出現（530件）。2026年大統領選挙、米国との通商紛争、データセンター誘致政策が同時進行。米国からの独立傾向と新興市場への軸足移動が鮮明で、南米政治経済の大きな転換点を示唆。",
+      "alert_title_en": "Brazil's Presidential Election and Trade Policy Realignment",
+      "description_en": "Brazil appears across all PESTLE sectors (530 times), with 2026 elections, US tariff disputes, and data center policies signaling a geopolitical pivot away from US influence toward BRICS alignment."
+    },
+    {
+      "type": "CROSSOVER",
+      "level": "high",
+      "topic": "openai",
+      "mentions": 526,
+      "categories": [
+        "Economic",
+        "Environmental",
+        "Legal",
+        "Political",
+        "Social",
+        "Technological"
+      ],
+      "n_categories": 6,
+      "alert_title": "OpenAI規制と訴訟激化",
+      "description": "OpenAIが全PESTLE分野で横断出現（526件）。EU による超大規模オンライン検索エンジン指定と追加義務、Apple による企業秘密侵害訴訟などが並行。AI企業の規制対象化と法的責任強化が同時に進み、AI産業の統治枠組みが根本的に転換。",
+      "alert_title_en": "OpenAI Faces Intensifying Regulation and Litigation Globally",
+      "description_en": "OpenAI crosses all PESTLE dimensions (526 mentions) amid EU's DSA classification, Apple's IP lawsuit, and increased compliance obligations, signaling a shift toward stricter AI governance frameworks worldwide."
     },
     {
       "type": "CROSSOVER",
       "level": "high",
       "topic": "jetro",
-      "mentions": 431,
+      "mentions": 436,
       "categories": [
         "Economic",
         "Environmental",
@@ -136,26 +136,65 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "日本の対外経済情報活動拡大",
-      "description": "※ノイズの可能性が高い。JETRO Global Eyeの定期的なコンテンツ配信（デンマーク・タイ・カザフスタン等の投資情報、スウェーデン選挙分析）が大量出現。日本の情報収集体制強化は事実だが、単なる既存情報発行の増加により統計的に過度に検出される傾向。",
-      "alert_title_en": "JETRO Intensifies Global Market Intelligence Dissemination",
-      "description_en": "※Likely noise. Surge driven by routine JETRO Global Eye reports on startups and regulatory updates across multiple countries, reflecting systematic information release rather than emergent geopolitical signal."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。JETRO（日本貿易振興機構）が全PESTLE分野で横断出現（436件）だが、関連記事がすべてJETRO公式サイトの定型的な国別情報ページであり、新兆候としてのニュース価値が低い。機械的なメディア監視の結果と思われる。",
+      "alert_title_en": "JETRO Reports Show High Noise Characteristics",
+      "description_en": "※High noise likelihood. JETRO appears across all PESTLE fields (436 times), but articles are routine country briefings from JETRO website with minimal news value as emerging signals."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "migration crisis",
-      "mentions": 329,
-      "ratio": 2015.0,
+      "mentions": 331,
+      "ratio": 2027.2,
       "historical_avg": 0.1,
       "categories": [
         "Political",
         "Social"
       ],
-      "alert_title": "欧州移民危機の政治化",
-      "description": "Ceuta危機がメローニ伊首相、サンチェス西首相の政治的対立軸となり、EU内で移民強硬派と協調派に分裂。2015年難民危機とは異なる圧力源（アフリカ内戦・経済悪化）と組み合わさり、シェンゲン圏分裂の可能性が現実化。欧州統合の根幹である自由移動原則への深刻な脅威。",
-      "alert_title_en": "EU Migration Crisis Becomes Core Political Dividing Line",
-      "description_en": "Ceuta crisis emerges as central political conflict between Italy (Meloni) and Spain (Sanchez), fracturing EU consensus on Schengen free movement. Combined with persistent Africa-rooted migration pressures, risks fundamental EU cohesion and border regime transformation."
+      "alert_title": "欧州のセウタ移民危機対応",
+      "description": "移民危機関連報道が過去平均の2027倍に急増（331件）。スペインの対応を巡り、チェコ首相がシェンゲン協定停止要求、複数EU指導者が国境強化を要求。内部分裂と統一行動の矛盾が先鋭化し、EUの政策一貫性と実行力に重大な疑問。",
+      "alert_title_en": "EU Leaders Demand Border Crackdowns Over Ceuta Crisis",
+      "description_en": "Migration crisis reports surge 2,027 times as EU leaders call for Schengen suspension and tighter borders, exposing fundamental divisions in European solidarity and policy coordination."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "research institute",
+      "mentions": 292,
+      "ratio": 1927.7,
+      "historical_avg": 0.1,
+      "categories": [
+        "Political",
+        "Economic",
+        "Legal",
+        "Environmental",
+        "Social",
+        "Technological"
+      ],
+      "alert_title": "アジア研究機関の役割拡大",
+      "description": "研究機関関連が過去平均の1928倍に急増（292件）。国際米麦研究所による低排出水稲生産、平和研究所による移民と社会流動性研究など、循環経済と社会課題の総合的研究が活発化。グローバルサウスの学知発信が強化され、従来の先進国中心の研究階層が動揺。",
+      "alert_title_en": "Asian Research Institutes Lead Global South Knowledge Production",
+      "description_en": "Research institute mentions surge 1,928 times, with Asian institutions driving research on circular economy, migration, and sustainable agriculture, shifting the geopolitics of knowledge production away from Western dominance."
+    },
+    {
+      "type": "SURGE",
+      "level": "high",
+      "topic": "nomura",
+      "mentions": 289,
+      "ratio": 9181.8,
+      "historical_avg": 0.0,
+      "categories": [
+        "Political",
+        "Economic",
+        "Legal",
+        "Social",
+        "Technological"
+      ],
+      "alert_title": "野村証券のAI・半導体分析",
+      "description": "野村証券関連が過去平均の9182倍に急増（289件）。AI・半導体分野の機械受注動向、NVIDIA決算、日本株テーマ解析が集中的に報道。日本の金融メディアによるAI産業への注視が極度に高まり、アジア市場でのテック投資判断基準が急速に転換中。",
+      "alert_title_en": "※High Noise Characteristics: Nomura Securities AI Analysis",
+      "description_en": "※High noise likelihood. Nomura mentions spike 9,182 times but articles are primarily internal research publications on AI/semiconductor trends with limited external news value."
     },
     {
       "type": "SURGE",
@@ -171,55 +210,17 @@
         "Social",
         "Technological"
       ],
-      "alert_title": "BRICSサミット地政学転換点",
-      "description": "BRICS新デリー第18回サミット（Xi・Putin参加予定）が過去平均の20,000倍超の報道頻度。バングラデシュPM招待など拡大戦略、多極秩序への転機として象徴化。G7vs.BRICS構図の鮮明化と、ウクライナ後の対ロシア制裁体制の限界を示唆。",
-      "alert_title_en": "BRICS Summit Signals Multipolar System Inflection Point",
-      "description_en": "India's 18th BRICS summit (expected Xi-Putin attendance, Bangladesh PM invitation) marks exponential 20,000-fold media surge. Signals strategic expansion of non-Western coalition and challenges to US-led sanctions regime post-Ukraine."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "research institute",
-      "mentions": 266,
-      "ratio": 1756.1,
-      "historical_avg": 0.1,
-      "categories": [
-        "Political",
-        "Economic",
-        "Legal",
-        "Social",
-        "Technological"
-      ],
-      "alert_title": "研究機関の知的協力拡大",
-      "description": "※ノイズの可能性が高い。IRRI（国際稲研究所）、PRIO（平和研究所）、MEMRI等の機関報告が大量出現。移民・循環経済・バイオテロ脅威など多岐にわたるが、それぞれ実質的な新兆候を示さず研究機関の既存活動の報道増加。政策的インパクトは限定的。",
-      "alert_title_en": "Research Institutes Expand International Collaboration",
-      "description_en": "※Likely noise. Surge reflects routine publications from IRRI, PRIO, MEMRI on migration, circular economy, bioterrorism. No emergent policy signal detected; simply increased institutional reporting volume."
-    },
-    {
-      "type": "SURGE",
-      "level": "high",
-      "topic": "nomura",
-      "mentions": 264,
-      "ratio": 8387.5,
-      "historical_avg": 0.0,
-      "categories": [
-        "Political",
-        "Economic",
-        "Legal",
-        "Social",
-        "Technological"
-      ],
-      "alert_title": "野村グループの経済分析発信",
-      "description": "※ノイズの可能性が高い。野村証券による機械受注、AI・半導体分析、NVIDIA決算解説の定期的公開が大量検出。投資家向け通常的な市場分析であり、新しい兆候・トレンドを示さない。経済統計の既存解釈に過ぎず戦略的価値に乏しい。",
-      "alert_title_en": "Nomura Securities Increases Market Analysis Distribution",
-      "description_en": "※Likely noise. Surge reflects routine Nomura Securities reports on machine orders, AI semiconductors, NVIDIA earnings—standard investor communications with no emergent signal value."
+      "alert_title": "インドBRICSサミット決定的",
+      "description": "BRICS首脳会議関連が過去平均の20479倍に急増（282件）。9月新デリー開催、習近平・プーチン参加確認、バングラデシュPM招待など。非同盟運動の再構成と多極秩序構築の最重要イベント化。西側主導体制からの決別が象徴的に示唆される。",
+      "alert_title_en": "India's BRICS Summit Marks Multipolar Realignment Apex",
+      "description_en": "BRICS summit coverage surges 20,479 times as Xi, Putin, and other Global South leaders prepare for New Delhi, signaling a historic shift away from Western-led international order."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "nomura research",
-      "mentions": 255,
-      "ratio": 129625.0,
+      "mentions": 280,
+      "ratio": 142333.3,
       "historical_avg": 0.0,
       "categories": [
         "Political",
@@ -228,17 +229,17 @@
         "Social",
         "Technological"
       ],
-      "alert_title": "野村総合研究所の組織変動",
-      "description": "※ノイズの可能性が極めて高い。NRI（野村総合研究所）の組織改正と人事異動、国際標準化会議参加募集の重複報道。内部人事・採用活動に過ぎず、業界全体の兆候・政策転換を示さない。メディアへの自動配信による統計的ノイズ。",
-      "alert_title_en": "Nomura Research Institute Organizational Changes",
-      "description_en": "※Highly likely noise. NRI organizational restructuring and recruitment notices generate duplicate coverage with no external strategic signal value—purely internal HR announcements."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。野村総合研究所（NRI）関連が過去平均の142333倍に急増（280件）だが、記事の大半が人事異動や公募案内など内部的で社外ニュース価値が極めて低い定型ページ。検索エンジンの技術的フィルタリング不全の可能性。",
+      "alert_title_en": "※Nomura Research Institute Noise Alert",
+      "description_en": "※High noise likelihood. NRI surge 142,333 times but articles consist of HR announcements and recruitment notices with negligible external news significance."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "institute nri",
-      "mentions": 255,
-      "ratio": 129625.0,
+      "mentions": 280,
+      "ratio": 142333.3,
       "historical_avg": 0.0,
       "categories": [
         "Political",
@@ -247,42 +248,42 @@
         "Social",
         "Technological"
       ],
-      "alert_title": "JETRO海外市場情報集約",
-      "description": "※ノイズの可能性が高い。JETROのグローバルアイ記事（ペルー農産物知財、スリランカ基準認証等）が3,300倍超に増加。日本の対外情報体制の強化自体は注視対象だが、実質的には既存の定期配信情報。グローバル経済の新兆候というより、情報発行の集約化。",
-      "alert_title_en": "JETRO Consolidates Global Market Intelligence Reports",
-      "description_en": "※Likely noise. JETRO Global Eye articles on Peru IP, Sri Lanka standards surge 3,300-fold, reflecting systematic information distribution rather than emergent market signals or Japan's strategic repositioning."
+      "alert_title": "※ノイズ判定：記事タイトルなし",
+      "description": "※ノイズの可能性が高い。関連記事タイトルが完全に欠落しており、トピック『institute nri』の実体が不明。データ品質の問題と思われる。",
+      "alert_title_en": "※Data Quality Issue: No Associated Articles",
+      "description_en": "※High noise likelihood. Complete absence of article titles indicates data quality issue; topic cannot be validated as meaningful signal."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "jetro global",
-      "mentions": 253,
-      "ratio": 3384.4,
+      "mentions": 258,
+      "ratio": 3451.3,
       "historical_avg": 0.0,
       "categories": [
         "Economic",
         "Legal"
       ],
-      "alert_title": "JETRO Global Eye連載強化",
-      "description": "※ノイズの可能性が高い。前項と重複。JETROのグローバル情報発信が定期的・機械的に増加。統計上の急増だが、その背景は既存報道体制の増強に過ぎず、世界経済の新しい動向を直接示さない。",
-      "alert_title_en": "JETRO Global Eye Series Expansion",
-      "description_en": "※Likely noise. Duplicate of preceding alert reflecting JETRO's routine information dissemination expansion without emergent substantive signal."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。JETRO Global Eye が過去平均の3451倍に急増（258件）だが、すべてJETRO公式サイトの定型国別レポートページの重複出現。知的財産権保護・規制関連の機械的キーワード抽出の結果と見られ、新兆候としての本質的価値がない。",
+      "alert_title_en": "※JETRO Global Content Repetition Noise",
+      "description_en": "※High noise likelihood. JETRO Global Eye surge 3,451 times with duplicate country briefings and IPR reports; represents routine monitoring content without emerging signal value."
     },
     {
       "type": "SURGE",
       "level": "high",
       "topic": "global eye",
-      "mentions": 253,
-      "ratio": 3384.4,
+      "mentions": 258,
+      "ratio": 3451.3,
       "historical_avg": 0.0,
       "categories": [
         "Economic",
         "Legal"
       ],
-      "alert_title": "セウタ移民危機とEU結束",
-      "description": "セウタ移民危機がチェコの圏外除外提言、アイルランドのEU相互協議要請、22ヶ国首脳による緊急協議と白熱化。2015年難民危機時の分断を上回る速度で政治的亀裂が拡大。シェンゲン圏の制度的基盤そのものが問われ、欧州統合の本質的危機に進展する可能性。",
-      "alert_title_en": "Ceuta Crisis Drives Deep Schengen and EU Fractures",
-      "description_en": "Ceuta crisis escalates to Czech suspension threats, Irish emergency talks, 22-leader emergency coordination. Fractures EU solidarity faster than 2015, threatening fundamental Schengen architecture and exposing existential EU integration vulnerabilities."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。『global eye』が過去平均の3451倍に急増（258件）だが、出現パターンと記事内容が『jetro global』と完全一致。同一コンテンツの重複検出による人為的ノイズ。",
+      "alert_title_en": "※Duplicate Content Noise: Global Eye",
+      "description_en": "※High noise likelihood. 'Global eye' surge 3,451 times with identical articles to JETRO Global reports; represents duplicate detection artifact rather than substantive signal."
     },
     {
       "type": "SURGE",
@@ -294,10 +295,10 @@
       "categories": [
         "Social"
       ],
-      "alert_title": "中国AI技術の競争激化",
-      "description": "Qwen3.8-Max（2.4T parameters）発表が過去平均の8,300倍に激増。GPT-5.6 Solを超える性能表示、オープンウェイト版公開予定は、中国AIの技術追い上げ加速と米国との技術覇権競争の激化を意味。オープン戦略による市場獲得とジオポリティクス的な技術多極化が急進。",
-      "alert_title_en": "China's AI Breakthrough Accelerates US-China Tech Competition",
-      "description_en": "Qwen3.8-Max release (2.4T parameters, claimed superiority over GPT models) surges 8,300-fold in coverage. Open-weight strategy signals China's accelerating AI capability catch-up and intensified US-China technological competition, reshaping global AI dominance."
+      "alert_title": "セウタ移民危機の欧州分裂",
+      "description": "セウタ移民危機が過去平均の6513倍に急増（205件）。チェコがシェンゲン脱退要求、22カ国指導者が緊急協議を要求、アイルランドがEU会合招集。単なる難民問題ではなく、EU統合の基礎的前提が試される局面。欧州防衛・統治体制の再編を迫る危機。",
+      "alert_title_en": "Ceuta Crisis Tests Core EU Integration Foundations",
+      "description_en": "Ceuta migration surge 6,513 times with 22 EU leaders demanding emergency talks and Schengen suspension calls, revealing fundamental fractures in European solidarity and institutional cohesion."
     },
     {
       "type": "SURGE",
@@ -311,10 +312,10 @@
         "Social",
         "Technological"
       ],
-      "alert_title": "米国移民執行権の強化",
-      "description": "※ノイズの可能性が高い。ICE（移民取締局）のサブポエナ（召喚状）発行が初出。ペルー・ロー判事・ザンビア等の文脈で散発的出現。米国国内移民政策の執行強化の兆候だが、記事の多様性が低く、統計的なノイズ検出の可能性が高い。",
-      "alert_title_en": "ICE Immigration Enforcement Subpoenas Increase",
-      "description_en": "※Likely noise. ICE subpoena issuance appears as new topic but scattered across diverse contexts (Peru, judicial, Zambia). Reflects possible US immigration enforcement intensification but low article coherence suggests statistical detection artifact."
+      "alert_title": "中国AI技術の対外展開加速",
+      "description": "Qwen（アリババ系大規模言語モデル）が過去平均の8286倍に急増（163件）。Qwen3.8-Max登場、オープンウェイト版の次週公開予定など、中国のAI技術がOpenAI・GoogleGemini と競争段階へ。グローバルAI市場での米中技術覇権争いが顕在化。",
+      "alert_title_en": "Chinese AI Qwen Competes with US Dominance",
+      "description_en": "Qwen surge 8,286 times with latest Max model claiming GPT-5.6 parity, signaling China's entry into direct AI supremacy competition and potential bifurcation of global AI standards."
     },
     {
       "type": "EMERGENCE",
@@ -324,148 +325,156 @@
       "categories": [
         "Social"
       ],
-      "alert_title": "ブラジル選挙情報分析集約",
-      "description": "※ノイズの可能性が高い。ブラジル2026年大統領選の「選挙情勢報告（informe de coyuntura electoral）」が77回重複出現。単一の情報源からの繰り返し配信であり、新しい選挙動向の出現を示さない。統計的なノイズ。",
-      "alert_title_en": "Brazil Electoral Situation Reports Proliferate",
-      "description_en": "※Likely noise. Brazil election 'coyuntura electoral' reports duplicate 77 times from single source, indicating information distribution artifact rather than emergent electoral signal."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。ICE（米移民関税執行局）召喚状『ice subpoenas』が初出82件だが、記事タイトルは米国選挙、フードサービス、欧州気候政策など全く無関係な複数領域。キーワード抽出の誤配置と思われる。",
+      "alert_title_en": "※ICE Subpoenas Noise: Unrelated Content Mix",
+      "description_en": "※High noise likelihood. 'Ice subpoenas' appears 82 times but articles span unrelated topics (US elections, EU climate, food packaging); indicates keyword extraction error."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "informe coyuntura",
-      "mentions": 77,
+      "mentions": 78,
       "categories": [
         "Political"
       ],
-      "alert_title": "Brady氏の政治教訓発表",
-      "description": "※ノイズの可能性が極めて高い。「Brady's Lessons」というタイトルが72回完全重複。同一記事の多メディア配信か、個人の歴史的論評の機械的再配信。新しい政治兆候を示さず、単なるコンテンツシンジケーション。",
-      "alert_title_en": "Brady's Lessons Political Commentary Duplicates",
-      "description_en": "※Highly likely noise. 'Brady's Lessons' headline repeats 72 times identically, indicating content syndication artifact with no emergent political signal."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。『informe coyuntura』（スペイン語で「情勢報告」）が初出78件だが、すべてブラジル選挙情勢報告の単純重複。記事が同一内容の多言語版または転載と思われ、新兆候としての価値がない。",
+      "alert_title_en": "※Brazil Electoral Report Duplication Noise",
+      "description_en": "※High noise likelihood. 'Informe coyuntura' appears 78 times but comprises identical Brazil election reports in different versions; represents content duplication artifact."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "brady lessons",
-      "mentions": 72,
+      "mentions": 73,
       "categories": [
         "Political",
         "Economic"
       ],
-      "alert_title": "グローバル規範の再構築要求",
-      "description": "※ノイズの可能性が高い。「must uphold」フレーズが政治・法律分野で72回出現。AI戦略的重要性（キプロス）、移民・人権・司法改革等の異質なトピックが同じ修辞で表現され、統一的な「新兆候」を形成していない。言語的な同一パターンの検出に過ぎない。",
-      "alert_title_en": "Global Norms and Standards Re-evaluation Demands",
-      "description_en": "※Likely noise. 'Must uphold' phrase repeats across disparate topics (AI, migration, judiciary) 72 times, reflecting rhetorical pattern detection rather than coherent emerging signal."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。『Brady's Lessons』が初出73件だが、すべてのタイトルが完全に同一で内容不明。検索エンジンキャッシュの異常重複出現と推定。",
+      "alert_title_en": "※Brady's Lessons Repetition Anomaly",
+      "description_en": "※High noise likelihood. 'Brady's Lessons' appears 73 times with identical title across all mentions; indicates search engine cache duplication or data extraction error."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "must uphold",
-      "mentions": 72,
+      "mentions": 73,
       "categories": [
         "Political",
         "Legal"
       ],
-      "alert_title": "人権とAI戦略の統合論議",
-      "description": "※ノイズの可能性が高い。「uphold human」が72回出現。タイの農薬禁止、ザンビアのインターネット民主化、弁護士倫理等が混在。特定の政策領域の新展開というより、人権言説の一般的な流行パターン。統計的ノイズ。",
-      "alert_title_en": "Human Rights Integration with AI Policy Discourse",
-      "description_en": "※Likely noise. 'Uphold human' phrase appears 72 times across unrelated domains (pesticides, internet freedom, legal ethics), reflecting rhetorical trend rather than coherent emerging signal."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。『must uphold』が初出73件だが、出現記事は移民・人権・法治などの論説型コンテンツの断片的キーワード抽出。一般的な修辞表現であり、具体的な新兆候として機能していない。",
+      "alert_title_en": "※Generic Phrase 'Must Uphold' Lacks Signal",
+      "description_en": "※High noise likelihood. 'Must uphold' appears 73 times as routine editorial phrase across migration, rights, and law topics; generic language lacks emerging signal value."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "uphold human",
-      "mentions": 72,
+      "mentions": 73,
       "categories": [
         "Political",
         "Legal"
       ],
-      "alert_title": "ザンビア民主化とインターネット自由",
-      "description": "※ノイズの可能性が極めて高い。「#KeepItOn: Government of Zambia must uphold human rights and ensure unrestricted internet access throughout the upcoming elections」が71回完全重複。NGOキャンペーンの拡散であり、実際のザンビア政策転換・国際的な新兆候を示さない。機械的な再配信統計。",
-      "alert_title_en": "Zambia Internet Freedom Campaign #KeepItOn Duplicates",
-      "description_en": "※Highly likely noise. Single NGO campaign message repeats 71 times identically, reflecting social media amplification rather than emerging policy signal or government action."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。『uphold human』が初出73件だが、タイランドの化学農薬禁止令、シオニズム問題、ザンビア選挙など関連性の薄い複数トピックが混在。キーワード部分一致による誤検出。",
+      "alert_title_en": "※Unrelated Topics Mixed: Uphold Human",
+      "description_en": "※High noise likelihood. 'Uphold human' appears 73 times mixing unrelated topics (Thailand chemicals, Zionism, Zambia elections); indicates partial keyword false positive matching."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "keepiton zambia",
-      "mentions": 71,
+      "mentions": 72,
       "categories": [
         "Political"
       ],
-      "alert_title": "ザンビア選挙と人権監視",
-      "description": "※ノイズの可能性が極めて高い。ザンビア選挙と野党Edgar Lunguの文脈で人権要求が71回重複出現。前項と同じキャンペーン言説の別バージョン。国際的な民主化圧力の高まり自体は注視対象だが、統計上は単一キャンペーンの重複配信。",
-      "alert_title_en": "Zambia Election Human Rights Monitoring Campaign",
-      "description_en": "※Highly likely noise. Zambia election-related human rights messaging duplicates 71 times, reflecting single campaign variant distribution across multiple outlets without substantive policy emergence."
+      "alert_title": "ザンビア選挙とネット検閲懸念",
+      "description": "『#KeepItOn Zambia』が初出72件で同一メッセージが多重出現。ザンビア政府による選挙期間中のインターネット接続制限への市民社会による組織的抗議キャンペーン。デジタル民主主義と選挙透明性をめぐるアフリカでの新たな争点化。",
+      "alert_title_en": "Zambia Election: Internet Shutdown Risks Spark Rights Campaign",
+      "description_en": "#KeepItOn campaign with 72 mentions mobilizes against potential Zambian election-time internet restrictions, highlighting digital rights as emerging battleground in African electoral integrity."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "zambia must",
-      "mentions": 71,
+      "mentions": 72,
       "categories": [
         "Political"
       ],
-      "alert_title": "デジタル人権と規制の新展開",
-      "description": "※ノイズの可能性が高い。「rights ensure」が71回出現。ナイジェリア・ニューヨークのデジタル規制、EFF（Electronic Frontier Foundation）の活動が散在。特定の新規政策トレンドというより、人権擁護団体の既存活動の報道増加。",
-      "alert_title_en": "Digital Rights and Regulatory Emergence",
-      "description_en": "※Likely noise. 'Rights ensure' phrase appears 71 times across Nigeria, New York regulations, and EFF advocacy—reflecting existing civil society activism rather than emergent policy signal."
+      "alert_title": "ザンビア政治の転換点",
+      "description": "『Zambia must』が初出72件だが、記事のほぼすべてが前述の#KeepItOn キャンペーンと同一。ザンビア野党・市民社会がデジタル民主主義防衛で結集。アフリカ各国での選挙期間中のネット規制傾向への国際的警戒が高まり中。",
+      "alert_title_en": "※Zambia Focus Duplicates Previous KeepItOn Alert",
+      "description_en": "※High noise likelihood. 'Zambia must' articles overlap almost entirely with #KeepItOn campaign; represents content deduplication failure rather than distinct signal."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "rights ensure",
-      "mentions": 71,
+      "mentions": 72,
       "categories": [
         "Political"
       ],
-      "alert_title": "バングラデシュとザンビアの選挙民主化",
-      "description": "※ノイズの可能性が極めて高い。「ensure unrestricted」が71回出現。バングラデシュの安全移民計画、NFA米産基準規制、ザンビア選挙インターネット自由が混在。共通項は「確保・保障」という言語表現に過ぎず、実質的な新しい政策トレンドを示さない。",
-      "alert_title_en": "Election and Freedom Assurance Messaging Proliferates",
-      "description_en": "※Highly likely noise. 'Ensure unrestricted' repeats 71 times across unrelated contexts (Bangladesh migration, rice standards, Zambia elections), indicating linguistic pattern rather than emergent signal."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。『rights ensure』が初出72件だが、ナイジェリアのサイバー犯罪法、米国の爬虫類カメラ禁止法など無関係な複数のプライバシー議論が混在。一般的な人権キーワードの汎用性が高すぎて、兆候としての判別性が低い。",
+      "alert_title_en": "※Generic Rights Keyword: Low Signal Discrimination",
+      "description_en": "※High noise likelihood. 'Rights ensure' appears 72 times across unrelated topics (Nigeria cybercrime, US crawler ban); generic rights language lacks discriminative signal value."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "ensure unrestricted",
-      "mentions": 71,
+      "mentions": 72,
       "categories": [
         "Political"
       ],
-      "alert_title": "インターネット自由の国際規範化",
-      "description": "※ノイズの可能性が極めに高い。「unrestricted internet」が71回完全同一フレーズで出現。ザンビア選挙キャンペーンの重複配信がほぼ全体を占める。国際的なインターネット自由の規範化は注視対象だが、このアラートは単一キャンペーンのメディア流通統計に過ぎず、新しい兆候を示さない。",
-      "alert_title_en": "Internet Freedom Becomes Globalized Campaign Message",
-      "description_en": "※Highly likely noise. 'Unrestricted internet' repeats identically 71 times, almost entirely from Zambia election campaign distribution. While internet freedom norm emergence warrants monitoring, this alert reflects single campaign syndication rather than emergent signal."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。『ensure unrestricted』が初出72件だが、バングラデシュの安全な移民計画、フィリピンの米穀品質管理など脈絡のない複数分野が混在。フレーズ部分一致による機械的抽出の影響。",
+      "alert_title_en": "※Unrelated Topics via Phrase Matching Noise",
+      "description_en": "※High noise likelihood. 'Ensure unrestricted' appears 72 times mixing Bangladesh migration, Philippines rice standards; represents cross-topic phrase matching false positive."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "unrestricted internet",
-      "mentions": 71,
+      "mentions": 72,
       "categories": [
         "Political"
       ],
-      "alert_title": "選挙サイクルと市民参加",
-      "description": "※ノイズの可能性が極めに高い。「throughout upcoming」が71回出現。ザンビア選挙キャンペーン以外に「Trump's Truth Social高速アクセス有料化」「EU循環経済」「証人身分確認」等の無関連トピックが混在。共通の新兆候でなく、言語パターンの統計的重複。",
-      "alert_title_en": "Election Cycle and Civic Participation Messaging Duplicates",
-      "description_en": "※Highly likely noise. 'Throughout upcoming' repeats 71 times across unrelated topics (Truth Social pricing, EU circular economy, witness identity), indicating linguistic coincidence rather than emergent thematic signal."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。『unrestricted internet』が初出72件だが、すべてが同一の#KeepItOn Zambiaキャンペーンページの重複出現。アラート21-23と同一コンテンツの多次元的重複検出。",
+      "alert_title_en": "※Identical KeepItOn Campaign Duplication",
+      "description_en": "※High noise likelihood. 'Unrestricted internet' appears 72 times with all instances being #KeepItOn Zambia duplicates; represents systematic content re-detection error."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "access throughout",
-      "mentions": 71,
+      "mentions": 72,
       "categories": [
         "Political"
-      ]
+      ],
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。『access throughout』が初出72件だが、Trump Truth Social 有料アクセス、EUの循環経済研究、中国AI動画モデルなど完全に無関連。広過ぎるキーワード組み合わせによる雑多な結果。",
+      "alert_title_en": "※Over-Broad Phrase Matching Creates Noise",
+      "description_en": "※High noise likelihood. 'Access throughout' appears 72 times across unrelated topics (Truth Social fees, EU circular economy, China AI video); phrase too broad for meaningful signal."
     },
     {
       "type": "EMERGENCE",
       "level": "high",
       "topic": "throughout upcoming",
-      "mentions": 71,
+      "mentions": 72,
       "categories": [
         "Political"
-      ]
+      ],
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。『throughout upcoming』が初出72件だが、出現記事のすべてが#KeepItOn Zambiaキャンペーンの同一メッセージの複数言語版・転載版と思われる。先述のアラートとの大規模な重複。",
+      "alert_title_en": "※Systematic KeepItOn Campaign Duplication",
+      "description_en": "※High noise likelihood. 'Throughout upcoming' appears 72 times as #KeepItOn Zambia duplicates in multiple languages; represents redundant content detection across linguistic variants."
     }
   ]
 }
