@@ -449,7 +449,7 @@ def _generate_signal_batch(headlines_text: str, config: dict, existing_signals: 
 JSON配列で返してください。各要素:
 {{
   "signal": "シグナルの名称（短く印象的に、日本語）",
-  "description": "このシグナルの説明（2-3文、日本語）。見出しに書かれた出来事、なぜそれが未来にとって重要か、外れる条件か別の読み方を、この文数の中に含めること",
+  "description": "このシグナルの説明（2-3文、日本語、全体で120字以内）。見出しに書かれた出来事、なぜそれが未来にとって重要か、外れる条件か別の読み方を、この文数と字数の中に含めること",
   "related_headlines": ["関連する見出し1", "関連する見出し2", "関連する見出し3"],
   "pestle_categories": ["関連するPESTLE分野（政治/経済/社会/技術/法律/環境から選択）"],
   "potential_impact": "high/medium/low",
