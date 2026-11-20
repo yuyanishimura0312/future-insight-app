@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-16T20:07:52.573356+00:00",
-  "total_articles_analyzed": 682303,
+  "generated_at": "2026-11-20T03:28:09.720782+00:00",
+  "total_articles_analyzed": 683468,
   "alert_counts": {
     "emergence": 12,
     "surge": 12,
@@ -23,10 +23,10 @@
         "Technological",
         "Legal"
       ],
-      "alert_title": "研究機関の急速な制度化",
-      "description": "グローバルニュースで「institute」の出現が過去平均の1144倍に急増し、産業政策から環境研究まで多岐にわたる機関設立が報道されています。グローバルサウスの経済的自立やカーボンニュートラル研究など、各国が独自の政策遂行機関の構築を急いでいる状況を示唆しており、今後の国家戦略の具体化と国際競争の激化が予想されます。",
-      "alert_title_en": "Rapid institutionalization of research frameworks globally",
-      "description_en": "The term 'institute' has surged 1144x, reflecting accelerated establishment of policy research centers worldwide for industrial policy, climate, and standards development. This signals emerging economies building autonomous governance capacity, intensifying global competition in strategic planning and setting standards for future technology and sustainability frameworks."
+      "alert_title": "研究機関への関心が急増",
+      "description": "全PESTLE分野にまたがるニュース報道で「institute」が1246回と過去平均の1144倍に急増。グローバルサウスの産業政策、カーボンニュートラル研究、国際標準化など多領域で研究機関の重要性が認識されている。これは先進国中心の知識体系から多極化する世界への転換を示唆し、今後は地域密着型研究機関への投資が増加する可能性がある。",
+      "alert_title_en": "Surge in Research Institute Coverage",
+      "description_en": "The keyword 'institute' surged 1,144-fold across all PESTLE domains, appearing 1,246 times in reports on industrial policy, carbon neutrality, and standardization efforts. This reflects a global shift toward decentralized research capacity and emerging-market knowledge institutions, signaling increased investment in regional research centers."
     },
     {
       "type": "SURGE",
@@ -43,10 +43,10 @@
         "Technological",
         "Legal"
       ],
-      "alert_title": "研究機関ネットワークの全分野展開",
-      "description": "「research institute」が過去平均の6283倍に急増し、政治・経済・社会・技術・法律・環境の全PESTLE分野に横断出現しています。野生動物追跡から法務研究、気候金融まで、研究機関が政策立案の中核となり、各国政府と民間が知識基盤の構築競争に突入している新段階を示しています。",
-      "alert_title_en": "Research institutes emerging as multi-domain policy infrastructure",
-      "description_en": "Research institutes have emerged across all six PESTLE domains at 6283x baseline increase, indicating a structural shift toward knowledge-based governance. Organizations are positioning themselves at the intersection of climate finance, legal innovation, and technology standards, reshaping how policy decisions are informed globally."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。野村総合研究所(NRI)の公募終了と組織改正が重複報道されたことで、「research institute」が6283倍に急増。検出されたニュースは実質的に同一内容の繰り返しであり、真の新兆候ではなく、ニュースフィードの技術的アーティファクト。",
+      "alert_title_en": "Research Institute Detection Noise",
+      "description_en": "※High noise probability. The keyword 'research institute' surged 6,283-fold due to repetitive reporting of Nomura Research Institute's recruitment closure and organizational changes. This represents data duplication artifacts rather than genuine emerging signals."
     },
     {
       "type": "SURGE",
@@ -63,10 +63,10 @@
         "Technological",
         "Legal"
       ],
-      "alert_title": "野村研究所の組織拡大と人材育成",
-      "description": "野村研究所（NRI）が情報通信分野の国際標準化会議参加者募集や組織改正を重ねて報道され、過去平均の21887倍の出現率を記録しています。日本の有力シンクタンクが次世代人材獲得と国際標準策定に向けた戦略的な組織再編を進めており、デジタル技術と標準化競争における日本の影響力維持への取り組みが窺えます。",
-      "alert_title_en": "Nomura Research Institute's strategic expansion in standards and talent",
-      "description_en": "NRI's recruitment campaigns for international standardization meetings and organizational restructuring represent Japan's proactive positioning in ICT standards development. This reflects competitive pressure to shape global technology standards and secure talent for future digital governance frameworks."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。「nomura」が21887倍に急増したのは、野村総合研究所の組織改正ニュースが同じ出版社から複数回配信されたことが原因。同じプレスリリースの重複転載によるノイズであり、市場における実質的な新兆候ではない。",
+      "alert_title_en": "Nomura Coverage Duplication Noise",
+      "description_en": "※High noise probability. The 'nomura' keyword surge (21,887-fold) results from duplicate distribution of a single organizational restructuring announcement. This represents publishing artifact noise, not genuine market signals."
     },
     {
       "type": "SURGE",
@@ -83,9 +83,9 @@
         "Legal"
       ],
       "alert_title": "※ノイズの可能性が高い",
-      "description": "※ノイズの可能性が高い。アラート4は「nomura research」の組合せキーワードで、アラート3の野村研究所の報道がフレーズ検出の閾値に引っかかったものと考えられ、独立した新兆候の価値は低い。",
-      "alert_title_en": "※Likely noise detection",
-      "description_en": "※This alert appears to be a compound keyword echo of Alert 3, with no distinct analytical value."
+      "description": "※ノイズの可能性が高い。「nomura research」が523761倍に急増したのは前述の組織改正ニュースの機械的な重複検出。検出記事がすべて同一の終了公募であり、テキスト抽出のアーティファクト。",
+      "alert_title_en": "Nomura Research Keyword Noise",
+      "description_en": "※High noise probability. The 523,761-fold surge in 'nomura research' stems from automated duplication detection of a single organizational announcement repeated across feeds."
     },
     {
       "type": "SURGE",
@@ -102,9 +102,9 @@
         "Legal"
       ],
       "alert_title": "※ノイズの可能性が高い",
-      "description": "※ノイズの可能性が高い。アラート5は「institute nri」というキーワード組合せで、アラート2・3・4の派生的な検出であり、実質的な新兆候の情報を含みません。タイトル情報が存在しないことからもノイズと判断されます。",
-      "alert_title_en": "※Duplicate keyword combination with no news value",
-      "description_en": "※Alert 5 represents a derivative keyword combination lacking independent analytical substance or supporting article titles."
+      "description": "※ノイズの可能性が高い。「institute nri」が523761倍に急増しているが、記事タイトルが一切提示されておらず、前述のNRI重複報道に属するノイズアラートと考えられる。",
+      "alert_title_en": "Institute NRI Keyword Noise",
+      "description_en": "※High noise probability. The 'institute nri' alert (523,761-fold) provides no article titles and appears to be duplication noise from the Nomura Research Institute coverage."
     },
     {
       "type": "CROSSOVER",
@@ -120,10 +120,10 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "研究機関の全領域横断化",
-      "description": "「research institute」が全6つのPESTLE分野に横断出現（886回）し、蝶の生態追跡から気候投資、法務研究まで多様な領域で研究機関の役割が拡大しています。知識生成と政策執行の融合が進み、公的研究機関がグローバルな社会課題解決の中心プレイヤーとして再定位されている状況を示唆しています。",
-      "alert_title_en": "Research institutions becoming cross-domain policy integration hubs",
-      "description_en": "Research institutes now span all PESTLE domains simultaneously, from monarch migration tracking to climate finance and copyright law, signaling a structural transformation in how global challenges are addressed through integrated knowledge and governance frameworks."
+      "alert_title": "研究機関の全領域展開",
+      "description": "「research institute」が全6分野に横断的に出現(886回)。野生生物保護、法律研究、気候投資、消費動向、流通経済など多様な領域で研究機関の重要性が同時に認識されている。これは複雑な課題解決に向けた学際的協力体制の構築が進行していることを示唆し、今後は企業・行政・学界の連携強化が加速する可能性がある。",
+      "alert_title_en": "Cross-Domain Research Institute Emergence",
+      "description_en": "The 'research institute' keyword appeared across all six PESTLE domains (886 occurrences), spanning wildlife conservation, legal research, climate investment, and circular economy. This signals growing interdisciplinary collaboration for complex problem-solving."
     },
     {
       "type": "CROSSOVER",
@@ -139,10 +139,10 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "ブラジルの複合的な政治危機",
-      "description": "ブラジルが全6つのPESTLE分野に横断出現（787回）し、大統領選挙戦とオンラインギャンブル規制、気候投資の同時進行を映しています。ルーラ対ボルソナーロの対立軸が経済政策・環境規制・債務問題に広がり、南米における政治分極化と経済的脆弱性の露呈が、今後のグローバルサプライチェーンと気候政策に影響する可能性があります。",
-      "alert_title_en": "Brazil's multidimensional political and economic turmoil",
-      "description_en": "Brazil's simultaneous exposure across all PESTLE domains reflects converging crises: electoral polarization, climate finance challenges, and rising household debt linked to online gambling. This signals broader instability in emerging markets affecting global supply chains and climate commitments."
+      "alert_title": "ブラジル情勢の全領域影響",
+      "description": "ブラジルが全PESTLE分野に横断的に出現(787回)。選挙戦、オンラインギャンブル規制、気候投資など経済・政治・法律・社会が同時に揺動している。ルラとボルソナロの対立軸が単なる政治事案を超えて、気候・金融・技術規制まで波及。今後のブラジルの政策転換は南米全体の経済・環保方針に影響を与える可能性が高い。",
+      "alert_title_en": "Brazil's Multi-Domain Political Impact",
+      "description_en": "Brazil appears across all six PESTLE domains (787 occurrences), with presidential elections intersecting with climate finance, online gambling regulation, and capital mobilization. Policy shifts could reshape South American economic and environmental frameworks."
     },
     {
       "type": "SURGE",
@@ -159,10 +159,10 @@
         "Technological",
         "Legal"
       ],
-      "alert_title": "BRICS圏域の地政学的再編",
-      "description": "BRICS関連ニュースが過去平均の1151倍に急増（778回）し、インド・ロシア・中国の協力強化と2026年サミット開催予定が集中報道されています。SCOプラットフォーム利用による関係構築と米国との対抗軸の明確化が進み、ドル基軸体制への挑戦と非西側同盟の実質化が今後5年の地政学的リスク要因となります。",
-      "alert_title_en": "BRICS realignment as anti-Western geopolitical pivot",
-      "description_en": "BRICS coverage surged 1151x, capturing India's hosting of the 2026 summit and Russia-China-India coordination strengthening. This reflects accelerating de-dollarization efforts and institutional alternatives to Western-led multilateralism, reshaping global trade and technology governance."
+      "alert_title": "BRICS台頭と多極化加速",
+      "description": "「BRICS」が全6分野で1151倍に急増(778回)。2026年インド開催のBRICS首脳会談を軸に、ロシア・中国・インド間の経済・政治連携が深化している。米国との対抗軸としてのBRICS勢力が相対的に強まり、ドル中心の国際秩序への挑戦が具体化。今後は非西側新興国による平行的な金融・貿易圏の確立が加速する可能性が高い。",
+      "alert_title_en": "BRICS Emergence as Geopolitical Counterweight",
+      "description_en": "The 'BRICS' keyword surged 1,151-fold (778 occurrences) amid 2026 Delhi Summit preparations involving India-Russia-China alignment. This signals an acceleration of parallel economic frameworks challenging dollar-centric international order."
     },
     {
       "type": "CROSSOVER",
@@ -178,10 +178,10 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "欧州議会の循環経済規制強化",
-      "description": "欧州議会が全6つのPESTLE分野に横断出現（734回）し、附則修正や廃棄物資源化、水産養殖を含む円形経済の制度化を主導しています。EU規制統一による市場統合と企業負担の増加が進行中で、欧州基準がグローバル標準化される流れの中で、非欧州企業の適応コスト増加と産業再編が不可避になります。",
-      "alert_title_en": "European Parliament's circular economy regulatory momentum",
-      "description_en": "The European Parliament's coordinated efforts across all PESTLE domains show accelerating circular economy implementation through regulatory amendments and aquaculture standards. This positions EU frameworks as de facto global standards, forcing non-European companies to adopt compliance costs and threatening regional supply chain autonomy."
+      "alert_title": "EU循環経済の規制枠組み強化",
+      "description": "「European Parliament」が全6分野に横断出現(734回)。循環経済政策、REACH規制修正、海域水産業が同時に議論される。EUが単なる環境規制を超えて、産業転換・国際協力・技術標準まで包括する統合的枠組みを構築中。これは2026年以降、EUの産業競争力維持戦略として循環経済がコア政策化されることを示唆している。",
+      "alert_title_en": "EU's Integrated Circular Economy Governance",
+      "description_en": "The European Parliament appears across all domains (734 occurrences) debating circular economy policy, chemical regulations, and aquaculture. This signals EU-wide systemic transformation toward integrated industrial and environmental governance."
     },
     {
       "type": "CROSSOVER",
@@ -197,10 +197,10 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "マルチステークホルダー必須要件の浸透",
-      "description": "「must」が全6つのPESTLE分野に横断出現（432回）し、AIの運用化証明、メタン削減、適正住宅供給など、各領域で規制的強制性が言説化されています。ステークホルダーに対する要件が法令・市場・社会規範の三層で同時に構築されており、コンプライアンスコスト増加と経営戦略の制約が急速に進む見通しです。",
-      "alert_title_en": "Mandatory compliance emerging as universal governance principle",
-      "description_en": "The term 'must' saturates all six PESTLE domains, signaling convergence of regulatory, market, and social norm enforcement. Organizations face triple-layered compliance pressures on AI operationalization, methane reductions, and housing policy, creating systemic cost burdens and strategic inflexibility."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。「must」が全6分野に432回出現。これは助動詞としての一般的な英文用法であり、実質的なトピック性を持たない。検出アルゴリズムの過検出であり、市場シグナルとしての価値は低い。",
+      "alert_title_en": "Generic Modal Auxiliary Noise",
+      "description_en": "※High noise probability. The keyword 'must' (432 occurrences across domains) reflects common English grammar rather than substantive topics, indicating algorithmic over-detection."
     },
     {
       "type": "SURGE",
@@ -217,10 +217,10 @@
         "Technological",
         "Legal"
       ],
-      "alert_title": "米国中間選挙前の投票規制紛争",
-      "description": "米国の中間選挙関連ニュースが過去平均の1365倍に急増（354回）し、不法移民投票詐欺対策と郵送投票制限が激化しています。トランプ政権の投票アクセス制限が最高裁判所に持ち込まれ、民主主義的正当性そのものが争点化する異常な状況を示唆しており、政治分極化の深刻化と選挙制度への信頼低下が全球的な民主主義機能を蝕む懸念が浮上しています。",
-      "alert_title_en": "US midterm elections amid voter access and fraud-prevention conflicts",
-      "description_en": "Midterm coverage surged 1365x amid escalating disputes over mail-in voting restrictions and noncitizen voter fraud investigations. This reflects deepening democratic legitimacy crises where electoral administration itself becomes a battleground, threatening institutional trust and international democratic standards."
+      "alert_title": "米国中間選挙と投票規制の政治化",
+      "description": "「midterms」が1365倍に急増(354回)。資金調達回避、不法滞在者投票追及、郵便投票制限など、基盤的な民主主義制度そのものが政治化している。選挙制度の信頼性が分断主義的に再構成される可能性があり、今後の米国内政は投票アクセス巡る法廷闘争がさらに激化する可能性がある。",
+      "alert_title_en": "US Midterm Election Politicization",
+      "description_en": "The 'midterms' keyword surged 1,365-fold (354 occurrences) amid debates over mail-in voting restrictions and voter eligibility enforcement. This signals deepening political fragmentation of core democratic institutions."
     },
     {
       "type": "CROSSOVER",
@@ -236,10 +236,10 @@
         "Technological"
       ],
       "n_categories": 6,
-      "alert_title": "規制ルール体系の全領域制度化",
-      "description": "「rules」が全6つのPESTLE分野に横断出現（312回）し、移民市民権基準から著作権訴訟、融資規制まで多層的な法制度が同時構築されています。国家・産業・テック企業による規制権の分散と競合が激化し、グローバルルール体系の断裂化が進んで統一的な国際秩序の形成が困難になる構図が浮き彫りになっています。",
-      "alert_title_en": "Fragmented regulatory frameworks competing across all domains",
-      "description_en": "The term 'rules' spans all PESTLE domains, revealing competing rulemaking among nation-states, industries, and tech platforms. This regulatory fragmentation is undermining unified international governance, creating compliance arbitrage opportunities and institutional chaos for multinational operations."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。「rules」が全6分野に312回出現。これは移民市民権規則、著作権規則、金融コンプライアンス規則など多領域での言及ですが、「rules」は過度に汎用的な単語であり、個別トピック性が希薄。",
+      "alert_title_en": "Generic Regulatory Keyword Noise",
+      "description_en": "※High noise probability. The 'rules' keyword (312 occurrences across domains) lacks topical coherence due to its overly generic usage in regulatory contexts."
     },
     {
       "type": "SURGE",
@@ -252,10 +252,10 @@
         "Political",
         "Legal"
       ],
-      "alert_title": "マルビナス問題の再燃化",
-      "description": "アルゼンチン大統領ミレイがマルビナス（フォークランド）問題での全国放送を実施し、過去平均の5456倍に急増（268回）して報道されています。トランプの発言をきっかけとした領土主権の再争点化は、南米地域主義の復活と米国多国籍主義の不安定化を象徴しており、南大西洋でのエネルギー資源争奪と地政学的緊張の新段階を示唆します。",
-      "alert_title_en": "Falkland Islands sovereignty dispute resurfaces amid Trump remarks",
-      "description_en": "Argentine President Milei's broadcast response to Trump's Malvinas comment generated 5456x baseline surge, signaling territory disputes reemerging as electoral mobilization tools. This suggests weakening international territorial consensus and new flashpoints for resource competition in the South Atlantic."
+      "alert_title": "マルビナス問題の再燃",
+      "description": "「malvinas」が5456倍に急増(268回)。トランプ大統領のマルビナス返還提議が、アルゼンチン・ミレイ政権から国民放送による反応を引き出した。領土紛争が米国トランプ政権の対南米政策転換を機に再点火。今後はフォークランド領有権紛争が南米統一の求心力として機能し、ブラジルやBRICS陣営との連携がさらに強化される可能性がある。",
+      "alert_title_en": "Malvinas Territory Dispute Reignited",
+      "description_en": "The 'malvinas' keyword surged 5,456-fold (268 occurrences) after Trump's remarks triggered Argentina's Milei government response. This territorial flashpoint may strengthen Latin American bloc unity within BRICS alignment."
     },
     {
       "type": "SURGE",
@@ -271,10 +271,10 @@
         "Social",
         "Technological"
       ],
-      "alert_title": "BRICS首脳会合の地政学的転換点",
-      "description": "BRICS首脳会議報道が過去平均の2949倍に急増（255回）し、2026年インド開催の重要性が強調されています。米国・イラン対立下でBRICSの求心力が試されており、非西側国家連合の実質化と機関統合の加速が、今後の通貨・投資体制と国際安全保障秩序を再編する分岐点となる可能性があります。",
-      "alert_title_en": "BRICS Summit 2026 as inflection point in global order realignment",
-      "description_en": "BRICS Summit coverage surged 2949x amid US-Iran tensions, highlighting India's hosting role in consolidating non-Western bloc coordination. Success or failure at this summit will determine whether BRICS evolves into a functional alternative to Western-led institutions or remains a symbolic coalition."
+      "alert_title": "BRICS首脳会議の戦略重要性",
+      "description": "「BRICS summit」が2949倍に急増(255回)。2026年インド開催の首脳会談が、米国とのイラン紛争の中での多極化戦略として位置付けられている。資本動員、技術標準、気候投資など経済的協力枠組みの高度化が期待される。この会議がどこまで実行可能な共同政策を打ち出せるかが、今後の非西側ブロック形成の試金石となる。",
+      "alert_title_en": "BRICS Summit as Strategic Bloc Formation",
+      "description_en": "The 'BRICS summit' keyword surged 2,949-fold (255 occurrences) with India's 2026 hosting amid US-Iran tensions. This represents a critical moment for formulating coordinated economic and technology policies."
     },
     {
       "type": "SURGE",
@@ -289,10 +289,10 @@
         "Social",
         "Legal"
       ],
-      "alert_title": "ブラジル政治への腐敗捜査の波紋",
-      "description": "ボルソナーロ一族（特にフラビオ）への汚職捜査が過去平均の6587倍に急増（220回）し、大統領選挙戦の不透明化が深刻化しています。政権交代期における司法捜査の政治的中立性が問われ、ラテンアメリカの民主主義制度における権力分立の脆弱性が露出し、政治暴力リスクと投資心理悪化の懸念が高まっています。",
-      "alert_title_en": "Flavio Bolsonaro corruption probe roiling Brazil's electoral legitimacy",
-      "description_en": "Coverage of Bolsonaro family corruption investigations surged 6587x, coinciding with the presidential runoff and raising questions about judicial independence. This signals systematic risks to institutional checks in emerging democracies, raising political violence and capital flight risks."
+      "alert_title": "ボルソナロ派の汚職捜査加速",
+      "description": "「Flavio Bolsonaro」が6587倍に急増(220回)。ジャイール・ボルソナロの息子フラヴィオが汚職疑惑で捜査対象となり、ブラジル選挙戦が法廷戦へ転化。ボルソナロ派の権力継承構図が司法介入により不確実化し、ルーラ政権の再選可能性が高まる一方、右翼陣営の反発も激化。今後はブラジル司法の中立性をめぐる国際的監視が強まる可能性がある。",
+      "alert_title_en": "Bolsonaro Family Corruption Investigation Escalates",
+      "description_en": "Flávio Bolsonaro's corruption probe surged 6,587-fold (220 occurrences), transforming Brazil's election into a judicial battle. This judicial intervention may reshape succession dynamics and intensify political polarization."
     },
     {
       "type": "SURGE",
@@ -305,10 +305,10 @@
         "Political",
         "Social"
       ],
-      "alert_title": "オオカバマダラ蝶の監視システム拡大",
-      "description": "※ノイズの可能性が高い。オオカバマダラ蝶の季節移動に関するニュースが過去平均の1136倍（163回）に増加していますが、ほぼ定期的な自然現象の季節報道であり、政策・経済・技術的な新兆候としての意義に乏しいと判断されます。",
-      "alert_title_en": "※Likely noise: Monarch butterfly seasonal migration reporting",
-      "description_en": "※While monarch migration coverage surged 1136x, this represents routine seasonal natural phenomena reporting rather than emergent policy, economic, or technological signals warranting strategic attention."
+      "alert_title": "※ノイズの可能性が高い",
+      "description": "※ノイズの可能性が高い。「monarch」が1136倍に急増(163回)。これは北米のオオカバマダラ蝶の季節回遊に関する観光・市民参加ニュースが集中した結果。生態学的には重要だが、政治経済や規制の新兆候ではなく、季節性の高い周期的報道。",
+      "alert_title_en": "Monarch Butterfly Migration Media Coverage",
+      "description_en": "※Noise probability: Medium-High. The 'monarch' surge (1,136-fold, 163 occurrences) reflects seasonal tourism and citizen science reporting on North American butterfly migration, not policy or economic signals."
     },
     {
       "type": "SURGE",
@@ -321,10 +321,10 @@
         "Political",
         "Environmental"
       ],
-      "alert_title": "ブラジル選挙戦の米国との対立軸",
-      "description": "ブラジル大選が過去平均の2101倍に急増（161回）報道され、ルーラがトランプへの対抗姿勢を強調しています。米州内での米国覇権への異議申し立てと左派政権への回帰傾向が顕著になり、ドル圏内での政治分極化とBRICS連携強化による通貨戦争の可能性が高まっています。",
-      "alert_title_en": "Brazil election as proxy for US-Latin America alignment fracture",
-      "description_en": "Brazil's election coverage surged 2101x, with Lula's confrontational stance toward Trump signaling broader US hegemonic decline in the hemisphere. This portends intensified currency competition within the dollar zone and accelerated BRICS alternatives development."
+      "alert_title": "ブラジル選挙戦の激化",
+      "description": "「Brazil election」が2101倍に急増(161回)。ルーラとフラヴィオ・ボルソナロの支持率が接近し、反貧困実績vs反トランプ対抗軸の対立構図が先鋭化。選挙戦が単なる国内政治を超えてBRICS陣営内での位置付けも争点化。今後は投票日に向けて社会分断がさらに深刻化し、選挙後の国家統合が大きな課題となる可能性が高い。",
+      "alert_title_en": "Brazil Presidential Election Intensifies",
+      "description_en": "The 'Brazil election' keyword surged 2,101-fold (161 occurrences) with Lula and Flávio Bolsonaro in tight polling, raising stakes for Brazil's BRICS alignment and domestic social cohesion post-election."
     },
     {
       "type": "EMERGENCE",
@@ -335,10 +335,10 @@
         "Political",
         "Legal"
       ],
-      "alert_title": "メタン排出規制の政策化本格化",
-      "description": "メタン規制が初出ながら119回出現し、気候目標達成の必須手段として法制化が急速化しています。石油・ガス・農業部門への規制強化が不可避になり、エネルギー転換コストの上昇と産業再編が加速します。メタン削減が1.5℃目標の最後の有効手段と認識される中、今後の環境規制強化は産業構造転換の鍵となります。",
-      "alert_title_en": "Methane regulation emerging as critical climate policy instrument",
-      "description_en": "Methane regulation appeared 119 times as a novel policy domain, signaling acceleration of mandatory emissions reductions in oil, gas, and agriculture sectors. This marks a tipping point where climate policy shifts from voluntary commitments to enforced structural transformation, with significant cost implications for energy and food systems."
+      "alert_title": "メタン排出規制の国際的義務化",
+      "description": "「methane regulation」が初出で119回出現。1.5℃目標維持に向けたメタン削減が気候交渉における新要件として浮上。農業・エネルギー・廃棄物セクターでの排出規制が国際ルール化される動き。今後は農業先進国とEUを中心に強制規制が導入され、農業経済と気候政策のトレードオフがさらに顕在化する可能性が高い。",
+      "alert_title_en": "Methane Regulation Becomes International Norm",
+      "description_en": "The keyword 'methane regulation' emerged with 119 occurrences, signaling new climate policy requirements to keep warming below 1.5°C. This will likely trigger mandatory sectoral restrictions affecting agriculture and energy, creating economic-climate policy tensions."
     },
     {
       "type": "EMERGENCE",
@@ -350,10 +350,10 @@
         "Economic",
         "Technological"
       ],
-      "alert_title": "日本の防衛予算と金融市場への衝撃",
-      "description": "野村研究所が平時としては異例の143兆円の予算要求分析を重ねて報道（初出117回）し、日本の防衛支出急増が金融市場に構造的影響をもたらす兆候を示しています。地政学的緊張の高まりに対応した日本の軍事支出拡大が、アジア太平洋地域での軍拡競争を加速させ、対中国包囲網の経済的負担が日本の中期成長を抑制する可能性があります。",
-      "alert_title_en": "Japan's record defense budget signals regional militarization acceleration",
-      "description_en": "NRI's analysis of Japan's unprecedented ¥143 trillion budget request signals structural economic reorientation toward defense spending. This amplifies regional militarization dynamics and indicates Japan's strategic pivot toward containment postures, with potential growth headwinds and financial market volatility."
+      "alert_title": "日本の防衛予算と金融市場影響",
+      "description": "「NRI Nomura」が初出で117回出現。日本の概算要求が平時としては過去最大143兆円規模に膨張する事態が、野村総合研究所で繰り返し指摘される。防衛費増加が金融市場に構造的影響を与える局面が、2026年予算編成で明確化。今後は防衛・インフラ投資と財政再建のトレードオフが日本の中期経済政策の最大争点となる可能性がある。",
+      "alert_title_en": "Japan's Record Defense Budget Signals Fiscal Shift",
+      "description_en": "NRI analysis identifies Japan's unprecedented 143 trillion yen budget request as a structural market inflection point. This defense spending surge signals major fiscal policy reorientation with long-term capital market implications."
     },
     {
       "type": "EMERGENCE",
@@ -364,10 +364,10 @@
         "Political",
         "Legal"
       ],
-      "alert_title": "※ノイズの可能性が高い",
-      "description": "※ノイズの可能性が高い。アラート20は「amending methane」というキーワード検出で、欧州議会の附則修正文書の自動抽出に過ぎず、実質的な政策転換の兆候ではなく、文書管理システムの形式的出力と判断されます。",
-      "alert_title_en": "※Likely noise: Document amendment procedural detection",
-      "description_en": "※Alert 20 appears to be automated extraction of European Parliament resolution procedures rather than substantive policy signal regarding methane regulation."
+      "alert_title": "EU化学物質規制の体系的修正",
+      "description": "「amending methane」が初出で114回出現。欧州議会がメタン関連規制を含むAnnex修正案を集中的に議論。単なる化学物質規制を超えて、産業排出・廃棄物処理・農業セクターまでを統合的に規制する体系的転換。今後はEUの統合規制モデルが国際標準化され、非EU企業のEU市場参入障壁がさらに上昇する可能性がある。",
+      "alert_title_en": "EU Chemical Regulation Systematic Amendment",
+      "description_en": "The 'amending methane' phrase emerged in 114 occurrences as European Parliament debates integrated regulatory amendments. This signals EU's systematic industrial and environmental governance restructuring, potentially raising market entry barriers."
     },
     {
       "type": "EMERGENCE",
@@ -378,10 +378,10 @@
         "Social",
         "Legal"
       ],
-      "alert_title": "ドイツ極右AFDの選挙勝利",
-      "description": "ドイツAFDの州選挙勝利が初出として99回報道され、移民問題を不交渉条件とした極右政党の躍進が明確化しています。欧州民主主義内での民族主義の再拡大と既成政党秩序の崩壊が進行中で、EU統合への求心力喪失とポピュリズムの制度化による民主的回廊の狭隘化が、今後の欧州政治安定性の最大リスク要因となります。",
-      "alert_title_en": "Germany's AfD state election victory signals European democratic realignment",
-      "description_en": "AfD's state victory debut at 99 reports marks normalization of far-right electoral viability in core EU member. This signals structural erosion of post-Cold War democratic consensus and institutionalization of anti-immigration populism, threatening EU cohesion and multilateral governance capacity."
+      "alert_title": "ドイツ極右政党の州選挙勝利",
+      "description": "「victory court」が初出で99回出現。ドイツのAfD(選択肢のためのドイツ)が州選挙で勝利宣言を繰り返し報道。移民政策の非協議性を掲げる極右が地方議会で多数派化する事態。これはEU内での民族主義的分裂を加速させ、今後のドイツ政治が連邦政府とのねじれ状態に陥り、EU統合に対する求心力が低下する可能性が高い。",
+      "alert_title_en": "Germany's Far-Right AfD Regional Victory",
+      "description_en": "The 'victory court' phrase emerged (99 occurrences) covering AfD's repeated victory declarations in German state elections on anti-migration platforms. This signals potential European fragmentation and EU cohesion risks."
     },
     {
       "type": "EMERGENCE",
@@ -392,9 +392,9 @@
         "Legal"
       ],
       "alert_title": "※ノイズの可能性が高い",
-      "description": "※ノイズの可能性が高い。アラート22の「site blocking」は、カーボンニュートラル資金配分、ウェブサイト脆弱性、反移民デモなど無関連なコンテンツの機械的集約であり、一貫した政策兆候やニュース価値を欠いています。検索キーワードの意味的曖昧性によるノイズ検出と判断されます。",
-      "alert_title_en": "※Likely noise: Unrelated keyword collision across domains",
-      "description_en": "※Alert 22's 'site blocking' aggregates disparate topics (carbon funding, WordPress vulnerabilities, anti-migration protests) lacking coherent policy or business signal."
+      "description": "※ノイズの可能性が高い。「site blocking」が初出で90回出現。記事内容はWordPressプラグイン脆弱性、テキサス・カリフォルニア裁判所設置、反移民デモなど無関連の混在。トピック結合が不適切で、実質的なポリシー信号ではなく、キーワード抽出の誤差。",
+      "alert_title_en": "Site Blocking Keyword Noise",
+      "description_en": "※High noise probability. The 'site blocking' phrase (90 occurrences) conflates unrelated content (WordPress vulnerabilities, court locations, anti-migration protests), indicating weak topical coherence."
     },
     {
       "type": "EMERGENCE",
@@ -404,10 +404,10 @@
       "categories": [
         "Environmental"
       ],
-      "alert_title": "気候クライシスの学術言説化",
-      "description": "「insights climate」が初出として83回出現し、循環経済フォーラムから廃棄物エネルギー化まで、気候課題が専門家ネットワークを通じた知識体系として制度化されています。気候危機の政治化から技術化への移行が進み、学術・産業・政策の連携によるナレッティブ統一が起きており、将来の気候政策は科学的正当性を最大限に活用した制約的施策へシフトする見通しです。",
-      "alert_title_en": "Climate crisis emerging as institutionalized expert knowledge domain",
-      "description_en": "Climate-related insights appeared 99 times as new discourse, spanning circular economy forums to pyrolysis and hydrogen technologies. This signals transition from political climate debate to technocratic expert governance, where scientific credibility is weaponized to enforce transformation pathways with limited democratic contestation."
+      "alert_title": "気候変動分析の実装フェーズ化",
+      "description": "「insights climate」が初出で83回出現。循環経済、プラスチック廃棄物の水素化、リサイクル技術など気候・循環経済分析が政策実装段階へ転進。シンポジウム・フォーラム開催で知見共有が加速。今後は学術的洞察が企業・自治体の実装基準へ直結し、気候テックの産業化が大幅に加速する可能性がある。",
+      "alert_title_en": "Climate Insights Moving to Implementation Phase",
+      "description_en": "The 'insights climate' phrase emerged (83 occurrences) as climate and circular economy analysis transitions into policy implementation. Industry forums accelerate practical technology deployment."
     },
     {
       "type": "EMERGENCE",
@@ -418,9 +418,9 @@
         "Environmental"
       ],
       "alert_title": "※ノイズの可能性が高い",
-      "description": "※ノイズの可能性が高い。アラート24・25・26・27・28・29は、トマス・ホーマー=ディクソンのビクトリア・フォーラムでの講演に関する同一イベントの重複報道（71回）です。複数のキーワード組み合わせバリエーションが同一ニュースソースから自動生成されたもので、個別の新兆候ではなく、単一イベントのメタデータノイズと判断されます。",
-      "alert_title_en": "※Likely noise: Duplicate event coverage metadata proliferation",
-      "description_en": "※Alerts 24-29 all derive from Homer-Dixon's Victoria Forum polycrisis speech, with 71 repetitions across keyword combinations. This represents metadata bloat from single-source coverage rather than distinct emerging signals."
+      "description": "※ノイズの可能性が高い。「dixon delivers」が初出で71回出現。これはThomas Homer-Dixon氏の Victoria Forum 講演内容の重複報道。検出記事がすべて同じ講演についての反復転載であり、ニュースイベントの機械的増幅。",
+      "alert_title_en": "Homer-Dixon Speech Coverage Duplication",
+      "description_en": "※High noise probability. The 'dixon delivers' phrase (71 occurrences) results from repetitive coverage of a single Victoria Forum plenary speech, indicating publishing duplication artifacts."
     },
     {
       "type": "EMERGENCE",
@@ -431,9 +431,9 @@
         "Environmental"
       ],
       "alert_title": "※ノイズの可能性が高い",
-      "description": "※ノイズの可能性が高い。アラート25は「delivers victoria」というフレーズ検出で、アラート24の派生的キーワード抽出であり、同一ニュースイベントの重複検出に過ぎません。",
-      "alert_title_en": "※Duplicate keyword extraction from single event",
-      "description_en": "※Alert 25 is a derivative phrase extraction from Alert 24's underlying event, adding no new analytical value."
+      "description": "※ノイズの可能性が高い。「delivers victoria」が初出で71回出現。前述と同様、Homer-Dixon講演の重複報道。同一イベントの複数媒体転載による検出アーティファクト。",
+      "alert_title_en": "Victoria Forum Coverage Duplication",
+      "description_en": "※High noise probability. The 'delivers victoria' phrase (71 occurrences) duplicates the Homer-Dixon speech coverage across multiple outlets, representing news distribution artifacts."
     },
     {
       "type": "EMERGENCE",
@@ -444,9 +444,9 @@
         "Environmental"
       ],
       "alert_title": "※ノイズの可能性が高い",
-      "description": "※ノイズの可能性が高い。アラート26は「victoria forum」というキーワード組み合わせで、アラート24・25と同一のホーマー=ディクソン講演イベントの重複報道です。メタデータの機械的再組み合わせに過ぎず、独立した兆候ではありません。",
-      "alert_title_en": "※Keyword recombination of single event coverage",
-      "description_en": "※Alert 26 replicates Alerts 24-25 from the same Homer-Dixon event through keyword recombination, representing metadata noise rather than distinct signals."
+      "description": "※ノイズの可能性が高い。「victoria forum」が初出で71回出現。同様に Homer-Dixon講演のイベント名繰り返し。",
+      "alert_title_en": "Victoria Forum Event Noise",
+      "description_en": "※High noise probability. The 'victoria forum' phrase (71 occurrences) reflects duplication of a single conference event across news outlets."
     },
     {
       "type": "EMERGENCE",
@@ -457,9 +457,9 @@
         "Environmental"
       ],
       "alert_title": "※ノイズの可能性が高い",
-      "description": "※ノイズの可能性が高い。アラート27は「forum plenary」というキーワード検出で、BRICS学術フォーラムなど別イベント言及もありますが、主体はホーマー=ディクソンのプレナリー講演と同一です。複数イベントの機械的集約によるノイズと判断されます。",
-      "alert_title_en": "※Multi-event keyword collision producing metadata noise",
-      "description_en": "※Alert 27 aggregates 'forum plenary' across different events, but predominantly reflects the same Homer-Dixon speech detection, representing false-positive keyword clustering."
+      "description": "※ノイズの可能性が高い。「forum plenary」が初出で71回出現。同様の Homer-Dixon講演報道の繰り返し。",
+      "alert_title_en": "Forum Plenary Coverage Noise",
+      "description_en": "※High noise probability. The 'forum plenary' phrase (71 occurrences) duplicates the same conference plenary coverage across sources."
     },
     {
       "type": "EMERGENCE",
@@ -470,9 +470,9 @@
         "Environmental"
       ],
       "alert_title": "※ノイズの可能性が高い",
-      "description": "※ノイズの可能性が高い。アラート28の「plenary polycrisis」は、ホーマー=ディクソン講演の特定フレーズ検出であり、アラート24-27と同じイベントの極めて詳細なメタデータ抽出です。複雑系危機論を専門とする講演の形式的キーワードに過ぎず、新兆候としての価値を持ちません。",
-      "alert_title_en": "※Single-phrase extraction from same event",
-      "description_en": "※Alert 28 isolates the specific 'polycrisis' terminology from Homer-Dixon's talk, representing granular metadata extraction without independent analytical meaning."
+      "description": "※ノイズの可能性が高い。「plenary polycrisis」が初出で71回出現。前述の同一講演内容の機械的繰り返し検出。",
+      "alert_title_en": "Polycrisis Plenary Duplication Noise",
+      "description_en": "※High noise probability. The 'plenary polycrisis' phrase (71 occurrences) reflects automated duplication of a single lecture topic across news feeds."
     },
     {
       "type": "EMERGENCE",
@@ -483,9 +483,9 @@
         "Environmental"
       ],
       "alert_title": "※ノイズの可能性が高い",
-      "description": "※ノイズの可能性が高い。アラート29の「polycrisis hope」も、ホーマー=ディクソン講演の講演タイトル要素の抽出であり、アラート24-28と完全に同一イベントの別のメタデータ切片です。検出システムの過度な細粒度キーワード分割によるノイズと判断されます。",
-      "alert_title_en": "※Presentation title element extraction as false-positive alert",
-      "description_en": "※Alert 29 represents the final metadata fragment of the same Homer-Dixon event, derived from presentation title parsing rather than independent news emergence."
+      "description": "※ノイズの可能性が高い。「polycrisis hope」が初出で71回出現。Homer-Dixon講演「polycrisis and hope」というタイトル要素の抽出重複。",
+      "alert_title_en": "Polycrisis Hope Topic Duplication",
+      "description_en": "※High noise probability. The 'polycrisis hope' phrase (71 occurrences) results from extraction duplication of the speech title 'polycrisis and hope' across news distribution channels."
     }
   ]
 }
